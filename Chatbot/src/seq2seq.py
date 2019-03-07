@@ -16,7 +16,7 @@ dic_len = len(num_dic)
 # 영어를 한글로 번역하기 위한 학습 데이터
 seq_data = [['word', '단어'], ['wood', '나무'],
             ['game', '놀이'], ['girl', '소녀'],
-            ['kiss', '키스'], ['love', '사랑'],['work','작업']]
+            ['kiss', '키스'], ['love', '사랑'], ['work', '작업']]
 
 
 def make_batch(seq_data):
@@ -146,4 +146,3 @@ print('loev ->', translate('loev'))
 print('girl ->', translate('girl'))
 print('game ->', translate('game'))
 print('work ->', translate('work'))
-
