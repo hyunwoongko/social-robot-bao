@@ -4,9 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Capstone-Project.iml" filepath="$PROJECT_DIR$/Capstone-Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chatbot/chatbot.iml" filepath="$PROJECT_DIR$/chatbot/chatbot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat/chat.iml" filepath="$PROJECT_DIR$/chat/chat.iml" />
       <module fileurl="file://$PROJECT_DIR$/emotion/emotion.iml" filepath="$PROJECT_DIR$/emotion/emotion.iml" />
       <module fileurl="file://$PROJECT_DIR$/instantapp/instantapp.iml" filepath="$PROJECT_DIR$/instantapp/instantapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/painting/painting.iml" filepath="$PROJECT_DIR$/painting/painting.iml" />
     </modules>
   </component>
 </project>
