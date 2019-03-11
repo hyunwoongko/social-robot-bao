@@ -75,7 +75,6 @@ def train_vector_model(str_buf):
 
 
 model = train_vector_model(train_data_list)
-print(model)
 
 
 def load_csv(data_path):
@@ -217,9 +216,3 @@ def predict(test_data):
 def get_intent(text):
     prediction = predict(np.array(inference_embed(tokenize(text))).flatten())
     return prediction
-
-
-train()
-res = get_intent("반가워")
-print(intent_mapping)
-print(res)
