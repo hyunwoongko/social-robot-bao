@@ -9,6 +9,7 @@ question,answer,emotion,intent
 반가워,안녕하세요 기분이 안좋나요?,angry,인사
 안녕하세요,반가워요,angry,인사
 배고파,음식을 먹어봐요,normal,잡담
+배고프군,맛있는 음식을 먹어봐요,normal,잡담
 졸려,졸릴땐 누워서 한 숨 자도 좋아요,normal,잡담
 목 말라,목이마르시군요 물을 마시면 좋을거에요,normal,잡담
 노래 들려줘,노래를 재생해줄게요,normal,노래

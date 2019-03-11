@@ -3,7 +3,7 @@ import os
 import numpy as np
 import pandas as pd
 import tensorflow as tf
-from gensim.models import Word2Vec
+from gensim.models import FastText
 from konlpy.tag import Okt
 
 
@@ -13,7 +13,7 @@ def tokenize(sentence):
     pos = tokenizer.pos(sentence, stem=True, norm=True)
 
     for word, tag in pos:
-        if tag == 'Josa' or tag == 'Adverb' or tag == 'Punctuation':
+        if tag == 'Josa' or tag == 'Adverb':
             continue
         else:
             word_bag.append(word)
@@ -63,7 +63,7 @@ def train_vector_model():
     pos1 = mecab.pos(''.join(str_buf))
     pos2 = ' '.join(list(map(lambda x: '\n' if x[1] in ['Punctuation'] else x[0], pos1))).split('\n')
     morphs = list(map(lambda x: mecab.morphs(x), pos2))
-    model = Word2Vec(size=vector_size,
+    model = FastText(size=vector_size,
                      window=2,
                      workers=8,
                      min_count=1,
