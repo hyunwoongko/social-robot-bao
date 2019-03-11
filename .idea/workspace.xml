@@ -9,31 +9,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f2ff807-e7e1-4931-91f5-40600ab735ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chat/assets/BiLSTM그림.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/assets/NER결과.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/assets/NER결과Classificaiton_report.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/assets/NER모델그림.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/assets/캐릭터임베딩수정.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/data/char_vocab_ko_NER.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/data/cnn_bilstm_tagger-179-400_f1_0.8739_maxf1_0.8739_100_200_2.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/data/gazette/korean_gazette" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/data/gazette/lex_dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/data/lex_dict.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/data/my_test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/data/pos_vocab_ko_NER.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/data/vocab_ko_NER.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/data/word2vec/ko_word2vec_100.model" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/model/CNN_BiLSTM.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/util/data_loader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/util/data_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/intent_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/intent_finder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/assets/BiLSTM그림.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/assets/NER결과.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/assets/NER결과Classificaiton_report.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/assets/NER모델그림.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/assets/캐릭터임베딩수정.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/data/char_vocab_ko_NER.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/data/cnn_bilstm_tagger-179-400_f1_0.8739_maxf1_0.8739_100_200_2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/data/gazette/korean_gazette" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/data/gazette/lex_dict" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/data/lex_dict.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/data/my_test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/data/pos_vocab_ko_NER.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/data/vocab_ko_NER.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/data/word2vec/ko_word2vec_100.model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/model/.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/chat/model/.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/model/.index" beforeDir="false" afterPath="$PROJECT_DIR$/chat/model/.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/chat/train.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/model/CNN_BiLSTM.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/util/data_loader.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/util/data_utils.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +88,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSV" value="115" />
-          <entry key="Python" value="2479" />
+          <entry key="Python" value="2490" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -102,8 +96,8 @@
           <entry key="CSV" value="3" />
           <entry key="IPNB" value="1" />
           <entry key="Image" value="1" />
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="11" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="Python" value="12" />
           <entry key="PythonStub" value="1" />
         </counts>
       </usages-collector>
@@ -112,105 +106,38 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/entity_recognizer.py">
+        <entry file="file://$PROJECT_DIR$/chat/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="180">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chat/model/checkpoint">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chat/word_dict.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chat/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/intent_finder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1950">
-              <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+            <state relative-caret-position="240">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/util/data_utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/smart_open/smart_open_lib.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="180" selection-start-line="180" selection-end-line="180" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/gensim/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="425" selection-start-line="425" selection-end-line="425" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/gensim/models/base_any2vec.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="602" selection-start-line="602" selection-end-line="602" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/gensim/models/word2vec.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="1329" selection-start-line="1329" selection-end-line="1329" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/model/CNN_BiLSTM.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="22" column="94" selection-start-line="22" selection-start-column="94" selection-end-line="22" selection-end-column="94" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/util/data_loader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -299,8 +226,9 @@
         <option value="$PROJECT_DIR$/chat/CNN_BiLSTM.py" />
         <option value="$PROJECT_DIR$/chat/util/data_loader.py" />
         <option value="$PROJECT_DIR$/chat/data_loader.py" />
-        <option value="$PROJECT_DIR$/chat/main.py" />
         <option value="$PROJECT_DIR$/chat/entity_recognizer.py" />
+        <option value="$PROJECT_DIR$/chat/model/CNN_BiLSTM.py" />
+        <option value="$PROJECT_DIR$/chat/main.py" />
       </list>
     </option>
   </component>
@@ -311,8 +239,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="22" />
+    <option name="x" value="955" />
+    <option name="y" value="30" />
     <option name="width" value="974" />
     <option name="height" value="1057" />
   </component>
@@ -339,49 +267,6 @@
               <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="chat" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="gensim" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="gensim" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="smart_open" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -392,7 +277,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552288949697" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552291154215" />
     <property name="device.picker.selection" value="" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.6 (Capstone-Project)" />
     <property name="last_opened_file_path" value="$USER_HOME$/IntelliJIDEAProjects/MyApplication" />
@@ -703,7 +588,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69870000" />
+    <option name="totallyTimeSpent" value="70835000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -716,8 +601,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13995726" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13995726" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -730,7 +616,7 @@
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3293348" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32829374" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.7061966" visible="true" weight="0.44816414" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.7061966" visible="true" weight="0.17170626" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -892,16 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/word_dict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-176">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chat/C.Bi-LSTM_Simple.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -926,9 +802,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/model/.index">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/model/checkpoint">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/data_out/results.txt">
@@ -970,7 +843,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/util/data_loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-90">
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
@@ -986,22 +859,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/model/CNN_BiLSTM.py">
+    <entry file="file://$PROJECT_DIR$/chat/word_dict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="22" column="94" selection-start-line="22" selection-start-column="94" selection-end-line="22" selection-end-column="94" />
+        <state relative-caret-position="480">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/intent_finder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1017,10 +880,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="180">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/model/checkpoint">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/model/CNN_BiLSTM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2430">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
           <folding>
-            <element signature="e#0#48#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/intent_finder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
