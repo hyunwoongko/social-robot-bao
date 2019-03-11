@@ -13,7 +13,7 @@ def tokenize(sentence):
     pos = tokenizer.pos(sentence, stem=True, norm=True)
 
     for word, tag in pos:
-        if tag == 'Josa' or tag == 'Adverb':
+        if tag == 'Josa' or tag == 'Adverb' or tag == 'Punctuation':
             continue
         else:
             word_bag.append(word)
@@ -57,7 +57,7 @@ learning_step = 2500
 learning_rate = 0.0005
 
 
-def train_vector_model(str_buf):
+def train_vector_model():
     mecab = Okt()
     str_buf = train_data_list['encode']
     pos1 = mecab.pos(''.join(str_buf))
@@ -74,7 +74,7 @@ def train_vector_model(str_buf):
     return model
 
 
-model = train_vector_model(train_data_list)
+model = train_vector_model()
 
 
 def load_csv(data_path):
