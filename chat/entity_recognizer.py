@@ -9,26 +9,25 @@ from kor_model.data_embed_model import word2vec
 from kor_model.data_embed_model import data_utils
 import os
 
-# (2) Word2Vec 를 이용하여 단어 단위로 Embedding Vector 를 구성
+# Word2Vec 를 이용하여 단어 단위로 Embedding Vector 를 구성
 embed_model = word2vec.train_w2v(config)
 
-
-# (3) Generators Class 생성 Iterator
+# Generators Class 생성 Iterator
 dev   = CoNLLDataset(config.dev_filename, max_iter=config.max_iter)
 test  = CoNLLDataset(config.test_filename, max_iter=config.max_iter)
 train = CoNLLDataset(config.train_filename, max_iter=config.max_iter)
 
-# (4) Data Set 에서 Word 와 Tag Distinct Value 를 추출
+# Data Set 에서 Word 와 Tag Distinct Value 를 추출
 vocab_words, vocab_tags = data_utils.get_vocabs([train, dev, test])
 
-# (5) Word Embedding 에 등록된 Dict 와 훈련 Data Set 에 공통으로 있는 것만 사용
+# Word Embedding 에 등록된 Dict 와 훈련 Data Set 에 공통으로 있는 것만 사용
 vocab = vocab_words & set(embed_model.wv.index2word)
 vocab.add(data_utils.UNK)
 
-# (6) 훈련 데이터에서 Char Dict 추출
+# 훈련 데이터에서 Char Dict 추출
 vocab_chars = data_utils.get_char_vocab(train)
 
-# (7) 모든 Dict 리스트 및 Vector 파일을 저장함
+# 모든 Dict 리스트 및 Vector 파일을 저장함
 # Char, Word, Tag 3가지에 대하여 Vector 변환을 위한 데이터
 data_utils.write_char_embedding(vocab_chars, config.charembed_filename)
 data_utils.write_vocab(vocab_chars, config.chars_filename)
@@ -36,14 +35,14 @@ data_utils.write_vocab(vocab, config.words_filename)
 data_utils.write_vocab(vocab_tags, config.tags_filename)
 data_utils.export_trimmed_glove_vectors(vocab, embed_model, config.trimmed_filename)
 
-# (8) 위에서 저장한 파일들을 로드
+# 위에서 저장한 파일들을 로드
 embeddings = data_utils.get_trimmed_glove_vectors(config.trimmed_filename)
 char_embedding = data_utils.get_trimmed_glove_vectors(config.charembed_filename)
 vocab_words = data_utils.load_vocab(config.words_filename)
 vocab_tags = data_utils.load_vocab(config.tags_filename)
 vocab_chars = data_utils.load_vocab(config.chars_filename)
 
-# (9) 데이터 필터링 작업을 위한 Method
+# 데이터 필터링 작업을 위한 Method
 processing_word = data_utils.get_processing_word(vocab_words,
                                                  vocab_chars,
                                                  lowercase=config.lowercase,
