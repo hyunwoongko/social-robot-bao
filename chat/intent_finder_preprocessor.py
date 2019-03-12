@@ -1,10 +1,10 @@
 from gensim.models import FastText
 from konlpy.tag import Okt
 
-from data_loader import train_data
+from data_loader import sentence_data
 from tokenizer import tokenize
 
-data = train_data()
+data = sentence_data()
 intent_mapping = {
     '인사': 0,
     '잡담': 1,

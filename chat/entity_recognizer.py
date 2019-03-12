@@ -9,9 +9,6 @@ from kor_model.data_embed_model import word2vec
 from kor_model.data_embed_model import data_utils
 import os
 
-# (1) Train 파일을 Mecab 으로 Sentence Spliting & Morphing 작업 수행
-#mecab.tockenizer(config.train_filename, config.pos_path)
-
 # (2) Word2Vec 를 이용하여 단어 단위로 Embedding Vector 를 구성
 embed_model = word2vec.train_w2v(config)
 
@@ -65,6 +62,9 @@ model.build()
 model.train(train, dev, vocab_tags)
 model.evaluate(test, vocab_tags)
 
-model.predict(vocab_tags, processing_word, "오늘 날짜 호텔 예약 해줄래")
-model.predict(vocab_tags, processing_word, "판교로 오늘 피자 주문 해줄래")
-model.predict(vocab_tags, processing_word, "오늘 날짜 판교 여행 정보 알려줘")
+model.predict(vocab_tags, processing_word, "오늘 7시에 노래 틀어줄래")
+model.predict(vocab_tags, processing_word, "내일 12시에 알람 맞춰주라")
+model.predict(vocab_tags, processing_word, "이따 동요 틀어줘")
+model.predict(vocab_tags, processing_word, "모레 알람 7시에 맞춰줄래")
+model.predict(vocab_tags, processing_word, "이따 7시에 노래 틀어줄래")
+

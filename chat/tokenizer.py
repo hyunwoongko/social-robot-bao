@@ -7,7 +7,7 @@ def tokenize(sentence):
     pos = tokenizer.pos(sentence, stem=True, norm=True)
 
     for word, tag in pos:
-        if tag == 'Josa' or tag == 'Adverb':
+        if tag == 'Josa' or tag == 'Adverb' or tag == 'Punctuation':
             continue
         else:
             word_bag.append(word)

@@ -10,9 +10,9 @@ class config():
     words_filename = "./data/processed/kor/words.txt"
     tags_filename = "./data/processed/kor/tags.txt"
     chars_filename = "./data/processed/kor/chars.txt"
-    dev_filename = "./data/coNLL/kor/kor.testa.iob"
-    test_filename = "./data/coNLL/kor/kor.testb.iob"
-    train_filename = "./data/coNLL/kor/kor.train.iob"
+    dev_filename = "./train_entity.csv"
+    test_filename = "./train_entity.csv"
+    train_filename = "./train_entity.csv"
     dim = 300
     dim_char = 120
     max_iter = None
