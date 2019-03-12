@@ -1,7 +1,9 @@
-import pandas as pd
 from gensim.models import FastText
 
-input_data = pd.read_csv('voca.csv').values
+from data_loader import voca_data
+from tokenizer import tokenize
+
+input_data = voca_data()
 word_dict = [sentence[0].split() for sentence in input_data]
 
 model = FastText(word_dict,
@@ -16,6 +18,6 @@ model.init_sims(replace=True)
 
 
 def get_similar_words(word, topn=5):
-    similarity = model.wv.most_similar(word, topn=topn)
+    similarity = model.wv.most_similar(tokenize(word), topn=topn)
     similar_words = [word[0] for word in similarity]
     return similar_words

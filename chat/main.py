@@ -1,4 +1,5 @@
-from intent_finder import get_intent, intent_mapping, train
+from intent_finder_CNN import get_intent, train
+from intent_finder_preprocessor import intent_mapping
 
 train()
 print(intent_mapping)

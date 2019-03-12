@@ -3,77 +3,19 @@ import os
 import numpy as np
 import pandas as pd
 import tensorflow as tf
-from gensim.models import FastText
 from konlpy.tag import Okt
 
-
-def tokenize(sentence):
-    tokenizer = Okt()
-    word_bag = []
-    pos = tokenizer.pos(sentence, stem=True, norm=True)
-
-    for word, tag in pos:
-        if tag == 'Josa' or tag == 'Adverb':
-            continue
-        else:
-            word_bag.append(word)
-    result = ' '.join(word_bag)
-    return result
-
-
-def preprocess(train_data, intent_mapping):
-    train_data = train_data.drop('answer', axis=1)
-    train_data = train_data.drop('emotion', axis=1)
-    train_data['intent'] = train_data['intent'].map(intent_mapping)
-    for i in train_data['question']:
-        train_data.replace(i, tokenize(i), regex=True, inplace=True)
-
-    encode = []
-    decode = []
-    for q, i in train_data.values:
-        encode.append(q)
-        decode.append(i)
-
-    return {'encode': encode, 'decode': decode}
-
-
-intent_mapping = {
-    '인사': 0,
-    '잡담': 1,
-    '노래': 2
-}
-
-# 데이터 로드
-data = pd.read_csv('train.csv')
-train_data_list = preprocess(data, intent_mapping)
+from intent_finder_preprocessor import intent_size, vector_size, preprocess, train_vector_model
+from tokenizer import tokenize
 
 # 파라미터 세팅
-vector_size = 64
+train_data_list = preprocess()
 encode_length = 4
-label_size = len(intent_mapping)
+label_size = intent_size()
 filter_sizes = [2, 3, 4, 2, 3, 4, 2, 3, 4]
 num_filters = len(filter_sizes)
 learning_step = 2500
 learning_rate = 0.0005
-
-
-def train_vector_model():
-    mecab = Okt()
-    str_buf = train_data_list['encode']
-    pos1 = mecab.pos(''.join(str_buf))
-    pos2 = ' '.join(list(map(lambda x: '\n' if x[1] in ['Punctuation'] else x[0], pos1))).split('\n')
-    morphs = list(map(lambda x: mecab.morphs(x), pos2))
-    model = FastText(size=vector_size,
-                     window=2,
-                     workers=8,
-                     min_count=1,
-                     sg=1,
-                     iter=300)
-    model.build_vocab(morphs)
-    model.train(morphs, total_examples=model.corpus_count, epochs=model.epochs)
-    return model
-
-
 model = train_vector_model()
 
 
