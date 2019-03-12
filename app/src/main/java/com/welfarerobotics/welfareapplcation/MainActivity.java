@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
     private final int PERMISSION = 1;
     private TextToSpeech tts;
     private ImageView img;
+    private String speech;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,9 +96,8 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         public void onResults(Bundle results) {
             ArrayList<String> matches =
                     results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
-            for (String match : matches) {
-                tv.setText(match);
-            }
+            speech = matches.get(0).replace(" ", "");
+            tv.setText(speech);
             tts = new TextToSpeech(MainActivity.this, MainActivity.this);
         }
 
@@ -114,10 +114,10 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
 
     @Override
     public void onInit(int status) {
-        if (tv.getText().toString().matches(".*안녕하세요.*")) {
+        if (speech.matches(".*안녕하세요.*")) {
             img.setImageResource(R.drawable.face2t);
             tts.speak("안녕하세요", TextToSpeech.QUEUE_FLUSH, null, null);
-        } else if (tv.getText().toString().matches(".*안녕히계세요.*")) {
+        } else if (speech.matches(".*안녕히계세요.*")) {
             img.setImageResource(R.drawable.face2t);
             tts.speak("안녕히 가세요", TextToSpeech.QUEUE_FLUSH, null, null);
         }
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
                         mRecognizer.startListening(i);
                         img.setImageResource(R.drawable.face1t);
                     }
-                }, 2000);
+                }, 1000);
             }
         }
     };
@@ -143,8 +143,10 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
     @Override
     protected void onDestroy() {
         unregisterReceiver(m_br);
-        tts.stop();
-        tts.shutdown();
+        if (tts != null) {
+            tts.stop();
+            tts.shutdown();
+        }
         super.onDestroy();
     }
 }
