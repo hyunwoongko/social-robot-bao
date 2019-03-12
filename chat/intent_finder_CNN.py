@@ -6,7 +6,7 @@ import tensorflow as tf
 from konlpy.tag import Okt
 
 from intent_finder_preprocessor import intent_size, vector_size, preprocess, train_vector_model
-from tokenizer import tokenize
+from util_tokenizer import tokenize
 
 # 파라미터 세팅
 train_data_list = preprocess()
@@ -155,6 +155,8 @@ def predict(test_data):
         sess.close()
 
 
-def get_intent(text):
+def get_intent(text, is_train):
+    if is_train:
+        train()
     prediction = predict(np.array(inference_embed(tokenize(text))).flatten())
     return prediction
