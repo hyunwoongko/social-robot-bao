@@ -2,13 +2,16 @@ from gensim.models import FastText
 from konlpy.tag import Okt
 
 from data_loader import sentence_data
-from util_tokenizer import tokenize
+from disintegreator import tokenize
 
 data = sentence_data()
 intent_mapping = {
     '인사': 0,
-    '잡담': 1,
-    '노래': 2
+    '날씨': 1,
+    '위키': 2,
+    '먼지': 3,
+    '배고파': 4,
+    '고민': 5
 }
 
 vector_size = 64
@@ -19,15 +22,13 @@ def intent_size():
 
 
 def preprocess():
-    train_datas = data.drop('answer', axis=1)
-    train_datas = train_datas.drop('emotion', axis=1)
-    train_datas['intent'] = train_datas['intent'].map(intent_mapping)
-    for i in train_datas['question']:
-        train_datas.replace(i, tokenize(i), regex=True, inplace=True)
+    data['intent'] = data['intent'].map(intent_mapping)
+    for i in data['question']:
+        data.replace(i, tokenize(i), regex=True, inplace=True)
 
     encode = []
     decode = []
-    for q, i in train_datas.values:
+    for q, i in data.values:
         encode.append(q)
         decode.append(i)
 

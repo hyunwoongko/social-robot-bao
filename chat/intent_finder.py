@@ -5,8 +5,8 @@ import pandas as pd
 import tensorflow as tf
 from konlpy.tag import Okt
 
-from intent_finder_preprocessor import intent_size, vector_size, preprocess, train_vector_model
-from util_tokenizer import tokenize
+from disintegreator import tokenize
+from intent_preprocessor import intent_size, vector_size, preprocess, train_vector_model, intent_mapping
 
 # 파라미터 세팅
 train_data_list = preprocess()
@@ -15,7 +15,7 @@ label_size = intent_size()
 filter_sizes = [2, 3, 4, 2, 3, 4, 2, 3, 4]
 num_filters = len(filter_sizes)
 learning_step = 2500
-learning_rate = 0.0005
+learning_rate = 0.003
 model = train_vector_model()
 
 
@@ -159,4 +159,6 @@ def get_intent(text, is_train):
     if is_train:
         train()
     prediction = predict(np.array(inference_embed(tokenize(text))).flatten())
-    return prediction
+    for mapping, num in intent_mapping.items():
+        if int(prediction) == num:
+            return mapping

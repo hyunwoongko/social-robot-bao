@@ -1,6 +1,6 @@
 import pandas as pd
 
-TRAIN_PATH = 'train_sentence.csv'
+TRAIN_PATH = 'train_intent.csv'
 
 
 def sentence_data():
