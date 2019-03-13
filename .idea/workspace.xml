@@ -9,23 +9,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f2ff807-e7e1-4931-91f5-40600ab735ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chat/data/SentiWord_info.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/emotion_engine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/tone_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/train_intent.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/context_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/disintegreator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/data_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/intent_finder_CNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/intent_finder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/intent_finder_preprocessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/intent_preprocessor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/disintegreator.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/disintegreator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/intent_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/intent_finder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/intent_preprocessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/intent_preprocessor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/model/.data-00000-of-00001" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/model/.index" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/model/.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/model/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/scenario_song.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/train_sentence.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/util_tokenizer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/response_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/seq2seq.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/tone_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/모델구축예상도.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/train_intent.csv" beforeDir="false" afterPath="$PROJECT_DIR$/chat/train_intent.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,9 +57,10 @@
     <SUITE FILE_PATH="coverage/Capstone_Project$01___GAN.coverage" NAME="01 - GAN Coverage Results" MODIFIED="1552000878270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/painting/src" />
     <SUITE FILE_PATH="coverage/Capstone_Project$data_loader__1_.coverage" NAME="data_loader (1) Coverage Results" MODIFIED="1552362638468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/data" />
     <SUITE FILE_PATH="coverage/Capstone_Project$emotion_engine.coverage" NAME="emotion_engine Coverage Results" MODIFIED="1552492565374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$response_generator.coverage" NAME="response_generator Coverage Results" MODIFIED="1552498240702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
     <SUITE FILE_PATH="coverage/Capstone_Project$intent_finder_preprocessor__1_.coverage" NAME="intent_finder_preprocessor (1) Coverage Results" MODIFIED="1552362775208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
     <SUITE FILE_PATH="coverage/Capstone_Project$eval.coverage" NAME="eval Coverage Results" MODIFIED="1552122320322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$main.coverage" NAME="main Coverage Results" MODIFIED="1552497772514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$main.coverage" NAME="main Coverage Results" MODIFIED="1552504460585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
     <SUITE FILE_PATH="coverage/Capstone_Project$02___GAN2.coverage" NAME="02 - GAN2 Coverage Results" MODIFIED="1552017782081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/painting/src" />
     <SUITE FILE_PATH="coverage/Capstone_Project$intent_finder_SVM.coverage" NAME="intent_finder_SVM Coverage Results" MODIFIED="1552366181542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
     <SUITE FILE_PATH="coverage/Capstone_Project$iGAN.coverage" NAME="iGAN Coverage Results" MODIFIED="1552000666669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/painting/src" />
@@ -130,9 +126,9 @@
     <session id="-1234030949">
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSV" value="1994" />
-          <entry key="PLAIN_TEXT" value="81" />
-          <entry key="Python" value="6559" />
+          <entry key="CSV" value="3974" />
+          <entry key="PLAIN_TEXT" value="1247" />
+          <entry key="Python" value="6805" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -142,8 +138,8 @@
           <entry key="IPNB" value="7" />
           <entry key="Image" value="1" />
           <entry key="JSON" value="1" />
-          <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Python" value="91" />
+          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="Python" value="96" />
           <entry key="PythonStub" value="1" />
         </counts>
       </usages-collector>
@@ -163,11 +159,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/intent_finder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="134" selection-start-line="134" selection-end-line="134" />
+            <state relative-caret-position="480">
+              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chat/data_loader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/core/fromnumeric.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="533" selection-start-line="533" selection-end-line="533" />
             </state>
           </provider>
         </entry>
@@ -175,8 +189,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+            <state relative-caret-position="345">
+              <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -185,15 +199,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/tone_generator.py">
+        <entry file="file://$PROJECT_DIR$/chat/모델구축예상도.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="850">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chat/seq2seq.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/entity_recognizer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="61" selection-end-column="17" />
+            <state relative-caret-position="30">
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -201,11 +224,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chat/intent_preprocessor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="390">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -214,47 +237,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/train_entity.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="209">
-              <caret line="96" column="9" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
+        <entry file="file://$PROJECT_DIR$/chat/disintegreator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
             </state>
-          </provider>
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" rowLines="3" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/emotion_engine.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chat/train_intent.csv">
           <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="1579">
-              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+            <state relative-caret-position="369">
+              <caret line="191" lean-forward="true" selection-start-line="191" selection-end-line="191" />
             </state>
           </provider>
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" rowLines="3" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/data_loader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
           </provider>
         </entry>
       </file>
@@ -273,13 +272,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>,</find>
       <find />
       <find>fit</find>
       <find>open</find>
       <find>self.</find>
       <find>FastText</find>
-      <find>model</find>
       <find>os</find>
       <find>Punc</find>
       <find>Fas</find>
@@ -290,6 +287,8 @@
       <find>train</find>
       <find>train_data</find>
       <find />
+      <find>,</find>
+      <find>model</find>
       <find>,</find>
     </findStrings>
     <replaceStrings>
@@ -322,9 +321,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chat/voca.csv" />
-        <option value="$PROJECT_DIR$/chat/eval.py" />
-        <option value="$PROJECT_DIR$/chat/train.py" />
         <option value="$PROJECT_DIR$/chat/multi_class_data_loader.py" />
         <option value="$PROJECT_DIR$/chat/text_cnn.py" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
@@ -365,13 +361,16 @@
         <option value="$PROJECT_DIR$/chat/intent_finder_CNN.py" />
         <option value="$PROJECT_DIR$/chat/intent_finder_preprocessor.py" />
         <option value="$PROJECT_DIR$/chat/context_memory.py" />
-        <option value="$PROJECT_DIR$/chat/disintegreator.py" />
         <option value="$PROJECT_DIR$/chat/emotion_engine.py" />
         <option value="$PROJECT_DIR$/chat/tone_generator.py" />
         <option value="$PROJECT_DIR$/chat/train_sentence.csv" />
-        <option value="$PROJECT_DIR$/chat/intent_finder.py" />
+        <option value="$PROJECT_DIR$/chat/response_generator.py" />
+        <option value="$PROJECT_DIR$/chat/disintegreator.py" />
+        <option value="$PROJECT_DIR$/chat/Seq2Seq.py" />
         <option value="$PROJECT_DIR$/chat/main.py" />
+        <option value="$PROJECT_DIR$/chat/intent_finder.py" />
         <option value="$PROJECT_DIR$/chat/intent_preprocessor.py" />
+        <option value="$PROJECT_DIR$/chat/모델구축예상도.txt" />
         <option value="$PROJECT_DIR$/chat/train_intent.csv" />
       </list>
     </option>
@@ -419,7 +418,37 @@
             <path>
               <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="emotion" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="numpy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="numpy" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -432,7 +461,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552497732661" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552504218998" />
     <property name="device.picker.selection" value="" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.6 (Capstone-Project)" />
     <property name="last_opened_file_path" value="$USER_HOME$/IntelliJIDEAProjects/MyApplication" />
@@ -532,28 +561,6 @@
       <option name="ipnbPort" value="8888" />
       <method v="2" />
     </configuration>
-    <configuration name="disintegreator" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="chat" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chat" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chat/disintegreator.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="emotion_engine" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="chat" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -612,6 +619,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chat/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="response_generator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="chat" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chat" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chat/response_generator.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -708,18 +737,18 @@
       <item itemvalue="Android App.app" />
       <item itemvalue="Jupyter Notebook.Jupyter" />
       <item itemvalue="Python.scenario_song" />
-      <item itemvalue="Python.disintegreator" />
       <item itemvalue="Python.emotion_engine" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.intent_finder" />
+      <item itemvalue="Python.response_generator" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.response_generator" />
         <item itemvalue="Python.intent_finder" />
         <item itemvalue="Python.emotion_engine" />
         <item itemvalue="Python.scenario_song" />
-        <item itemvalue="Python.disintegreator" />
       </list>
     </recent_temporary>
   </component>
@@ -745,12 +774,12 @@
       <workItem from="1552376180701" duration="6090000" />
       <workItem from="1552399495131" duration="6860000" />
       <workItem from="1552408838346" duration="2850000" />
-      <workItem from="1552487082418" duration="9304000" />
+      <workItem from="1552487082418" duration="15717000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105916000" />
+    <option name="totallyTimeSpent" value="112329000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -778,7 +807,7 @@
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3293348" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32829374" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.7061966" visible="true" weight="0.17278618" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.7061966" visible="true" weight="0.31317493" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -806,7 +835,7 @@
       <window_info anchor="right" id="Graphical Navigator" order="7" type="SLIDING" />
       <window_info anchor="right" id="Database" order="8" weight="0.32959402" />
       <window_info anchor="right" id="Maven Projects" order="9" />
-      <window_info anchor="right" id="SciView" order="10" weight="0.09508547" />
+      <window_info anchor="right" id="SciView" order="10" visible="true" weight="0.059294872" />
       <window_info anchor="right" id="Palette&#9;" order="11" />
       <window_info anchor="right" id="Theme Preview" order="12" />
       <window_info anchor="right" id="Bean Validation" order="13" />
@@ -840,28 +869,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chat/model/.data-00000-of-00001" />
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pandas/io/parsers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="1852" selection-start-line="1852" selection-end-line="1852" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/gensim/models/base_any2vec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="1199" selection-start-line="1199" selection-end-line="1199" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/svm/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="195" selection-start-line="195" selection-end-line="195" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chat/5.Text_Classification_SVM.ipynb" />
     <entry file="file://$PROJECT_DIR$/chat/intent_finder_SVM.py" />
     <entry file="file://$PROJECT_DIR$/chat/intent_finder_Ensembles.py" />
@@ -998,32 +1005,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/disintegreator.py">
+    <entry file="file://$PROJECT_DIR$/chat/scenario_song.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/response_generator.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/entity_recognizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="61" selection-end-column="17" />
+        <state relative-caret-position="210">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/data_loader.py">
+    <entry file="file://$PROJECT_DIR$/chat/response_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="735">
+          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+          <folding>
+            <element signature="e#24#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/tone_generator.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/emotion_engine.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1035,13 +1038,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/tone_generator.py">
+    <entry file="file://$PROJECT_DIR$/chat/모델구축예상도">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/train_entity.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="209">
+        <state relative-caret-position="279">
           <caret line="96" column="9" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/disintegreator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/seq2seq.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/entity_recognizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/core/fromnumeric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="533" selection-start-line="533" selection-end-line="533" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/data_loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/모델구축예상도.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/train_intent.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="369">
+          <caret line="191" lean-forward="true" selection-start-line="191" selection-end-line="191" />
         </state>
       </provider>
       <provider editor-type-id="csv-table-editor">
@@ -1050,28 +1114,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/intent_finder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="134" selection-start-line="134" selection-end-line="134" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/scenario_song.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        <state relative-caret-position="480">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -1080,22 +1124,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/intent_preprocessor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="390">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/train_intent.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="1579">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" rowLines="3" />
       </provider>
     </entry>
   </component>

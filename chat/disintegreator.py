@@ -4,7 +4,7 @@ from konlpy.tag import Okt
 def tokenize(sentence):
     tokenizer = Okt()
     word_bag = []
-    pos = tokenizer.pos(sentence, stem=True)
+    pos = tokenizer.pos(sentence)
 
     for word, tag in pos:
         if tag == 'Josa' or tag == 'Punctuation' or tag == 'Eomi':
@@ -18,7 +18,7 @@ def tokenize(sentence):
 def disintegrate(sentence):
     tokenizer = Okt()
     word_bag = []
-    pos = tokenizer.pos(sentence, stem=True)
+    pos = tokenizer.pos(sentence)
     for word, tag in pos:
         word_bag.append(word)
     result = ' '.join(word_bag)
