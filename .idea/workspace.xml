@@ -10,25 +10,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6f2ff807-e7e1-4931-91f5-40600ab735ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/data/processed/kor/char.trimmed.npz" beforeDir="false" afterPath="$PROJECT_DIR$/chat/data/processed/kor/char.trimmed.npz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/data/processed/kor/chars.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/data/processed/kor/chars.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/data/processed/kor/tags.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/data/processed/kor/tags.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/data/processed/kor/words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/data/processed/kor/words.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/data/w2v/model" beforeDir="false" afterPath="$PROJECT_DIR$/chat/data/w2v/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/disintegreator.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/disintegreator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/intent_preprocessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/intent_preprocessor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/kor_model/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/kor_model/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/kor_model/ner_model/lstmcrf_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/kor_model/ner_model/lstmcrf_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/model/.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/chat/model/.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/model/.index" beforeDir="false" afterPath="$PROJECT_DIR$/chat/model/.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/model/.meta" beforeDir="false" afterPath="$PROJECT_DIR$/chat/model/.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/results/crf4/model.weights/.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/chat/results/crf4/model.weights/.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/results/crf4/model.weights/.index" beforeDir="false" afterPath="$PROJECT_DIR$/chat/results/crf4/model.weights/.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/results/crf4/model.weights/.meta" beforeDir="false" afterPath="$PROJECT_DIR$/chat/results/crf4/model.weights/.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/train_intent.csv" beforeDir="false" afterPath="$PROJECT_DIR$/chat/train_intent.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/모델구축예상도.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/모델구축예상도.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/face1t.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/face1t.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,41 +23,41 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Capstone_Project$model.coverage" NAME="model Coverage Results" MODIFIED="1552099926608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$scenario_song.coverage" NAME="scenario_song Coverage Results" MODIFIED="1552490568154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$BiLSTM.coverage" NAME="BiLSTM Coverage Results" MODIFIED="1552381646960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$disintegreator.coverage" NAME="disintegreator Coverage Results" MODIFIED="1552530394712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$seq2seq.coverage" NAME="seq2seq Coverage Results" MODIFIED="1552048028890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/src" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$context_analyzer.coverage" NAME="context_analyzer Coverage Results" MODIFIED="1552018879956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/src" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$word_data_processor.coverage" NAME="word_data_processor Coverage Results" MODIFIED="1552122286025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$intent_finder_CNN.coverage" NAME="intent_finder_CNN Coverage Results" MODIFIED="1552363113814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$intent_finder_preprocessor.coverage" NAME="intent_finder_preprocessor Coverage Results" MODIFIED="1552362713416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/intent_finder" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$data_loader.coverage" NAME="data_loader Coverage Results" MODIFIED="1552403794919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$seq2seq__1_.coverage" NAME="seq2seq (1) Coverage Results" MODIFIED="1552057476794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$word_dict.coverage" NAME="word_dict Coverage Results" MODIFIED="1552214036104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$mecab.coverage" NAME="mecab Coverage Results" MODIFIED="1552374281568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/kor_model/data_crawler" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$Jupyter.coverage" NAME="Jupyter Coverage Results" MODIFIED="1552381486867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$intent_finder.coverage" NAME="intent_finder Coverage Results" MODIFIED="1552495366119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$test_context_analyzier.coverage" NAME="test_context_analyzier Coverage Results" MODIFIED="1552019230651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/test" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$song.coverage" NAME="song Coverage Results" MODIFIED="1552411371533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/scenario" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1552106855890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$text_cnn.coverage" NAME="text_cnn Coverage Results" MODIFIED="1552122280520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$train.coverage" NAME="train Coverage Results" MODIFIED="1552122358965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$similar_word_extractor.coverage" NAME="similar_word_extractor Coverage Results" MODIFIED="1552404618434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$entity_recognizer.coverage" NAME="entity_recognizer Coverage Results" MODIFIED="1552538617726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$intent_analyzer.coverage" NAME="intent_analyzer Coverage Results" MODIFIED="1552038478463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/src" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$tokenizer.coverage" NAME="tokenizer Coverage Results" MODIFIED="1552403749119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$01.coverage" NAME="01 Coverage Results" MODIFIED="1552039264348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/src" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$01___GAN.coverage" NAME="01 - GAN Coverage Results" MODIFIED="1552000878270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/painting/src" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$data_loader__1_.coverage" NAME="data_loader (1) Coverage Results" MODIFIED="1552362638468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/data" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$emotion_engine.coverage" NAME="emotion_engine Coverage Results" MODIFIED="1552492565374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$response_generator.coverage" NAME="response_generator Coverage Results" MODIFIED="1552498240702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$intent_finder_preprocessor__1_.coverage" NAME="intent_finder_preprocessor (1) Coverage Results" MODIFIED="1552362775208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$eval.coverage" NAME="eval Coverage Results" MODIFIED="1552122320322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$main.coverage" NAME="main Coverage Results" MODIFIED="1552539000121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$02___GAN2.coverage" NAME="02 - GAN2 Coverage Results" MODIFIED="1552017782081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/painting/src" />
     <SUITE FILE_PATH="coverage/Capstone_Project$intent_finder_SVM.coverage" NAME="intent_finder_SVM Coverage Results" MODIFIED="1552366181542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
     <SUITE FILE_PATH="coverage/Capstone_Project$iGAN.coverage" NAME="iGAN Coverage Results" MODIFIED="1552000666669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/painting/src" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$Jupyter.coverage" NAME="Jupyter Coverage Results" MODIFIED="1552381486867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$data_loader.coverage" NAME="data_loader Coverage Results" MODIFIED="1552403794919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$test_context_analyzier.coverage" NAME="test_context_analyzier Coverage Results" MODIFIED="1552019230651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/test" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$model.coverage" NAME="model Coverage Results" MODIFIED="1552099926608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$seq2seq__1_.coverage" NAME="seq2seq (1) Coverage Results" MODIFIED="1552057476794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$tokenizer.coverage" NAME="tokenizer Coverage Results" MODIFIED="1552403749119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$song.coverage" NAME="song Coverage Results" MODIFIED="1552411371533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/scenario" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$data_loader__1_.coverage" NAME="data_loader (1) Coverage Results" MODIFIED="1552362638468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/data" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$word_data_processor.coverage" NAME="word_data_processor Coverage Results" MODIFIED="1552122286025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$scenario_song.coverage" NAME="scenario_song Coverage Results" MODIFIED="1552490568154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$intent_analyzer.coverage" NAME="intent_analyzer Coverage Results" MODIFIED="1552038478463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/src" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$emotion_engine.coverage" NAME="emotion_engine Coverage Results" MODIFIED="1552492565374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$word_dict.coverage" NAME="word_dict Coverage Results" MODIFIED="1552214036104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$similar_word_extractor.coverage" NAME="similar_word_extractor Coverage Results" MODIFIED="1552404618434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$entity_recognizer.coverage" NAME="entity_recognizer Coverage Results" MODIFIED="1552538617726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$text_cnn.coverage" NAME="text_cnn Coverage Results" MODIFIED="1552122280520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$intent_finder_preprocessor__1_.coverage" NAME="intent_finder_preprocessor (1) Coverage Results" MODIFIED="1552362775208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$02___GAN2.coverage" NAME="02 - GAN2 Coverage Results" MODIFIED="1552017782081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/painting/src" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$eval.coverage" NAME="eval Coverage Results" MODIFIED="1552122320322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$01___GAN.coverage" NAME="01 - GAN Coverage Results" MODIFIED="1552000878270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/painting/src" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$intent_finder.coverage" NAME="intent_finder Coverage Results" MODIFIED="1552495366119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$mecab.coverage" NAME="mecab Coverage Results" MODIFIED="1552374281568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/kor_model/data_crawler" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$disintegreator.coverage" NAME="disintegreator Coverage Results" MODIFIED="1552530394712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$seq2seq.coverage" NAME="seq2seq Coverage Results" MODIFIED="1552048028890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/src" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$main.coverage" NAME="main Coverage Results" MODIFIED="1552539000121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1552106855890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$01.coverage" NAME="01 Coverage Results" MODIFIED="1552039264348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/src" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$response_generator.coverage" NAME="response_generator Coverage Results" MODIFIED="1552498240702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$intent_finder_CNN.coverage" NAME="intent_finder_CNN Coverage Results" MODIFIED="1552363113814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$BiLSTM.coverage" NAME="BiLSTM Coverage Results" MODIFIED="1552381646960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$context_analyzer.coverage" NAME="context_analyzer Coverage Results" MODIFIED="1552018879956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/src" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$intent_finder_preprocessor.coverage" NAME="intent_finder_preprocessor Coverage Results" MODIFIED="1552362713416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/intent_finder" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$train.coverage" NAME="train Coverage Results" MODIFIED="1552122358965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -130,62 +116,37 @@
       </state>
     </system>
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1234030949">
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSV" value="4905" />
-          <entry key="PLAIN_TEXT" value="1345" />
-          <entry key="Python" value="7868" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSV" value="15" />
-          <entry key="IDEA_MODULE" value="2" />
-          <entry key="IPNB" value="7" />
-          <entry key="Image" value="1" />
-          <entry key="JSON" value="1" />
-          <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Python" value="106" />
-          <entry key="PythonStub" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="4" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/intent_finder.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="157" column="29" selection-start-line="157" selection-start-column="21" selection-end-line="157" selection-end-column="29" />
+            <state relative-caret-position="169">
+              <caret line="111" column="53" lean-forward="true" selection-start-line="111" selection-start-column="53" selection-end-line="111" selection-end-column="53" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#2309#2495#0" expanded="true" />
+                <element signature="e#2494#2495#0" expanded="true" />
+                <element signature="e#2153#2627#0" expanded="true" />
+                <element signature="e#2255#2808#0" expanded="true" />
+                <element signature="e#2807#2808#0" expanded="true" />
+                <element signature="e#2626#2627#0" expanded="true" />
+                <element signature="e#5180#5784#0" expanded="true" />
+                <element signature="e#5500#5746#0" expanded="true" />
+                <element signature="e#5745#5746#0" expanded="true" />
+                <element signature="e#5783#5784#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chat/main.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="317">
+              <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -201,18 +162,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/tensorflow/python/training/saver.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="843" selection-start-line="843" selection-end-line="843" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/kor_model/ner_model/lstmcrf_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
+            <state relative-caret-position="7581">
               <caret line="368" selection-start-line="368" selection-end-line="368" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -224,7 +176,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/kor_model/data_embed_model/data_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="21">
               <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="e#20#44#0" expanded="true" />
@@ -235,32 +187,18 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/train_entity.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="485">
-              <caret line="96" column="9" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
-            </state>
-          </provider>
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" rowLines="3" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/train_intent.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="456">
-              <caret line="205" column="16" selection-start-line="205" selection-start-column="16" selection-end-line="205" selection-end-column="16" />
-            </state>
-          </provider>
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" rowLines="3" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/intent_preprocessor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
+            <state relative-caret-position="378">
               <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
@@ -272,7 +210,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/kor_model/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
+            <state relative-caret-position="672">
               <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
             </state>
           </provider>
@@ -307,14 +245,13 @@
       <find>dev_filename</find>
       <find>train</find>
       <find>train_data</find>
-      <find />
       <find>,</find>
       <find>model</find>
-      <find>,</find>
       <find>옛날</find>
       <find>save</find>
       <find>saver</find>
       <find>노래</find>
+      <find>des</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -324,32 +261,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleLocalSettings">
-    <option name="modificationStamps">
-      <map>
-        <entry key="$PROJECT_DIR$" value="10863488391141" />
-        <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/app/build.gradle" value="3498007772" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="3526497115" />
-        <entry key="$PROJECT_DIR$/emotion/build.gradle" value="2370003263" />
-        <entry key="$PROJECT_DIR$/gradle.properties" value="3241497683" />
-        <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2083459160" />
-        <entry key="$PROJECT_DIR$/settings.gradle" value="928378213" />
-      </map>
-    </option>
-    <option name="projectSyncType">
-      <map>
-        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
-      </map>
-    </option>
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chat/text_cnn.py" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/chat/train.csv" />
         <option value="$PROJECT_DIR$/chat/CNN_BiLSTM.py" />
@@ -397,23 +312,15 @@
         <option value="$PROJECT_DIR$/chat/entity_recognizer.py" />
         <option value="$PROJECT_DIR$/chat/train_intent.csv" />
         <option value="$PROJECT_DIR$/chat/main.py" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/MainActivity.java" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/venv/Lib/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/package.json" />
-    </packageJsonPaths>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-101" />
-    <option name="y" value="73" />
+    <option name="x" value="-1" />
+    <option name="y" value="-19" />
     <option name="width" value="1936" />
     <option name="height" value="1066" />
   </component>
@@ -425,9 +332,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -438,6 +344,85 @@
             <path>
               <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="drawable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="raw" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="values" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="chat" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -445,13 +430,6 @@
               <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="chat" type="462c0819:PsiDirectoryNode" />
               <item name="kor_model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="kor_model" type="462c0819:PsiDirectoryNode" />
-              <item name="data_embed_model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
@@ -460,66 +438,23 @@
               <item name="kor_model" type="462c0819:PsiDirectoryNode" />
               <item name="ner_model" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="tensorflow" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="tensorflow" type="462c0819:PsiDirectoryNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="tensorflow" type="462c0819:PsiDirectoryNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-              <item name="training" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="pos_path&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.profiler.active" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552538694414" />
-    <property name="device.picker.selection" value="" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552580428116" />
+    <property name="device.picker.selection" value="ce05160579ec052e05" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.6 (Capstone-Project)" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IntelliJIDEAProjects/MyApplication" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IntelliJIDEAProjects/IsTriangle" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Problems" />
@@ -553,7 +488,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Android App.app">
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="LEININGEN" />
+      <module name="" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="0" />
+      <module name="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="AndroidJUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="app" />
       <option name="DEPLOY" value="true" />
@@ -579,24 +539,6 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" />
       </method>
-    </configuration>
-    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
-      <setting name="replType" value="NREPL" />
-      <setting name="execution" value="LEININGEN" />
-      <module name="" />
-      <setting name="jvmArgs" value="" />
-      <setting name="parameters" value="" />
-      <setting name="workingDir" value="" />
-      <setting name="profiles" value="" />
-      <setting name="aliases" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
-      <setting name="host" value="" />
-      <setting name="port" value="0" />
-      <setting name="replType" value="0" />
-      <module name="" />
-      <method v="2" />
     </configuration>
     <configuration name="Jupyter" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="Capstone-Project" />
@@ -830,11 +772,13 @@
       <workItem from="1552399495131" duration="6860000" />
       <workItem from="1552408838346" duration="2850000" />
       <workItem from="1552487082418" duration="20783000" />
+      <workItem from="1552541785263" duration="618000" />
+      <workItem from="1552573294060" duration="7292000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117395000" />
+    <option name="totallyTimeSpent" value="125305000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -846,10 +790,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21901709" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13050483" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -862,21 +805,21 @@
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3293348" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32829374" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.7061966" visible="true" weight="0.3488121" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.7061966" weight="0.3478261" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49946582" weight="0.32937366" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.29380342" side_tool="true" weight="0.83585316" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49946293" weight="0.3296582" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5042965" side_tool="true" weight="0.32998884" />
       <window_info anchor="bottom" id="Sequence" order="11" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="15" sideWeight="0.49839744" weight="0.3293348" />
-      <window_info anchor="bottom" id="Build" order="16" sideWeight="0.4962963" weight="0.36609071" />
-      <window_info anchor="bottom" id="Android Profiler" order="17" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Android Profiler" order="16" weight="0.3296582" />
+      <window_info anchor="bottom" id="Build" order="17" sideWeight="0.49570355" weight="0.3645485" />
       <window_info anchor="bottom" id="Logcat" order="18" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="19" sideWeight="0.49946582" weight="0.32937366" />
       <window_info anchor="bottom" id="Docker" order="20" show_stripe_button="false" />
@@ -907,9 +850,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <default-breakpoints>
@@ -924,35 +864,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chat/intent_finder_SVM.py" />
-    <entry file="file://$PROJECT_DIR$/chat/intent_finder_Ensembles.py" />
-    <entry file="file://$PROJECT_DIR$/chat/train.csv" />
-    <entry file="file://$PROJECT_DIR$/chat/voca.csv" />
-    <entry file="file://$PROJECT_DIR$/chat/kor_model/data_embed_model/model.vec">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/kor_model/step3.py" />
-    <entry file="file://$PROJECT_DIR$/chat/bilstm_kor_process.ipynb" />
     <entry file="file://$PROJECT_DIR$/chat/C.Bi-LSTM_Simple.ipynb" />
     <entry file="file://$PROJECT_DIR$/chat/9.Bi-LSTM CRF/bilstm_kor_process.ipynb" />
     <entry file="file://$PROJECT_DIR$/chat/BiLSTM.py" />
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/gensim/models/fasttext.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16350">
-          <caret line="559" column="41" selection-start-line="559" selection-start-column="41" selection-end-line="559" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/tensorflow/_api/v1/keras/datasets/mnist/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/chat.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/gensim/models/fasttext.py" />
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/tensorflow/_api/v1/keras/datasets/mnist/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/chat/chat.iml" />
     <entry file="file://$PROJECT_DIR$/chat/kor_model/run_all.py" />
     <entry file="file://$PROJECT_DIR$/chat/kor_model/data_embed_model/fast_text.py" />
     <entry file="file://$PROJECT_DIR$/chat/kor_model/__init__.py" />
@@ -967,20 +884,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/tensorflow/python/framework/op_def_library.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="262" selection-start-line="262" selection-end-line="262" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/tensorflow/python/ops/rnn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="442" selection-start-line="442" selection-end-line="442" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/tensorflow/python/framework/op_def_library.py" />
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/tensorflow/python/ops/rnn.py" />
     <entry file="file://$PROJECT_DIR$/chat/kor_model/data_embed_model/word2vec.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-365">
@@ -1008,26 +913,10 @@
     <entry file="file://$PROJECT_DIR$/chat/train_entity.iob" />
     <entry file="file://$PROJECT_DIR$/chat/train_voca.csv" />
     <entry file="file://$PROJECT_DIR$/chat/similar_word_extractor.py" />
-    <entry file="file://$PROJECT_DIR$/chat/tokenizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/context_parser.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/context_memory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/knowledge_engine.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/tokenizer.py" />
+    <entry file="file://$PROJECT_DIR$/chat/context_parser.py" />
+    <entry file="file://$PROJECT_DIR$/chat/context_memory.py" />
+    <entry file="file://$PROJECT_DIR$/chat/knowledge_engine.py" />
     <entry file="file://$PROJECT_DIR$/chat/data/SentiWord_info.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2224642">
@@ -1035,39 +924,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/scenario_song.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/response_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
-          <folding>
-            <element signature="e#24#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/tone_generator.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/모델구축예상도">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/core/fromnumeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="533" selection-start-line="533" selection-end-line="533" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/scenario_song.py" />
+    <entry file="file://$PROJECT_DIR$/chat/response_generator.py" />
+    <entry file="file://$PROJECT_DIR$/chat/tone_generator.py" />
+    <entry file="file://$PROJECT_DIR$/chat/모델구축예상도" />
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/core/fromnumeric.py" />
     <entry file="file://$PROJECT_DIR$/chat/data_loader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1102,43 +963,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/kor_model/data_embed_model/data_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#20#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/kor_model/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/tensorflow/python/training/saver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="843" selection-start-line="843" selection-end-line="843" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/kor_model/ner_model/lstmcrf_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="368" selection-start-line="368" selection-end-line="368" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/tensorflow/python/training/saver.py" />
     <entry file="file://$PROJECT_DIR$/chat/intent_finder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
+        <state relative-caret-position="3129">
           <caret line="157" column="29" selection-start-line="157" selection-start-column="21" selection-end-line="157" selection-end-column="29" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -1146,12 +974,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/intent_preprocessor.py">
+    <entry file="file://$PROJECT_DIR$/chat/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        <state relative-caret-position="252">
+          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1166,32 +994,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/train_entity.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="485">
-          <caret line="96" column="9" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
+    <entry file="file://$PROJECT_DIR$/chat/kor_model/ner_model/lstmcrf_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7581">
+          <caret line="368" selection-start-line="368" selection-end-line="368" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" rowLines="3" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/kor_model/data_embed_model/data_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#20#44#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/train_entity.csv">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/train_intent.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="456">
-          <caret line="205" column="16" selection-start-line="205" selection-start-column="16" selection-end-line="205" selection-end-column="16" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/intent_preprocessor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" rowLines="3" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/kor_model/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/main.py">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/face1t.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        <state relative-caret-position="210">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="747" selection-start-line="747" selection-end-line="747" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="111" column="53" lean-forward="true" selection-start-line="111" selection-start-column="53" selection-end-line="111" selection-end-column="53" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#2309#2495#0" expanded="true" />
+            <element signature="e#2494#2495#0" expanded="true" />
+            <element signature="e#2153#2627#0" expanded="true" />
+            <element signature="e#2255#2808#0" expanded="true" />
+            <element signature="e#2807#2808#0" expanded="true" />
+            <element signature="e#2626#2627#0" expanded="true" />
+            <element signature="e#5180#5784#0" expanded="true" />
+            <element signature="e#5500#5746#0" expanded="true" />
+            <element signature="e#5745#5746#0" expanded="true" />
+            <element signature="e#5783#5784#0" expanded="true" />
           </folding>
         </state>
       </provider>
