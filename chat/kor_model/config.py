@@ -18,7 +18,7 @@ class config():
     max_iter = None
     lowercase = True
     train_embeddings = False
-    nepochs = 100
+    nepochs = 50
     dropout = 0.5
     batch_size = 10
     lr = 0.03

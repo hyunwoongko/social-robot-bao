@@ -7,13 +7,12 @@ def tokenize(sentence):
     pos = tokenizer.pos(sentence)
 
     for word, tag in pos:
-        if tag == 'Josa' or tag == 'Punctuation' or tag == 'Eomi':
+        if tag == 'Josa' or tag == 'Punctuation' or tag == 'Eomi' or tag == "Foreign":
             continue
         else:
             word_bag.append(word)
     result = ' '.join(word_bag)
     return result
-
 
 def disintegrate(sentence):
     tokenizer = Okt()

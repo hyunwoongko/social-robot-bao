@@ -1,7 +1,9 @@
 import logging
 import os
+
 import numpy as np
 import tensorflow as tf
+
 from kor_model.data_embed_model.data_utils import minibatches, pad_sequences, get_chunks
 from kor_model.general_utils import Progbar
 
@@ -28,7 +30,6 @@ class NERModel(object):
 
         self.logger = logger
 
-
     def add_placeholders(self):
         """
         Adds placeholders to self
@@ -36,30 +37,29 @@ class NERModel(object):
 
         # shape = (batch size, max length of sentence in batch)
         self.word_ids = tf.placeholder(tf.int32, shape=[None, None],
-                        name="word_ids")
+                                       name="word_ids")
 
         # shape = (batch size)
         self.sequence_lengths = tf.placeholder(tf.int32, shape=[None],
-                        name="sequence_lengths")
+                                               name="sequence_lengths")
 
         # shape = (batch size, max length of sentence, max length of word)
         self.char_ids = tf.placeholder(tf.int32, shape=[None, None, None],
-                        name="char_ids")
+                                       name="char_ids")
 
         # shape = (batch_size, max_length of sentence)
         self.word_lengths = tf.placeholder(tf.int32, shape=[None, None],
-                        name="word_lengths")
+                                           name="word_lengths")
 
         # shape = (batch size, max length of sentence in batch)
         self.labels = tf.placeholder(tf.int32, shape=[None, None],
-                        name="labels")
+                                     name="labels")
 
         # hyper parameters
         self.dropout = tf.placeholder(dtype=tf.float32, shape=[],
-                        name="dropout")
+                                      name="dropout")
         self.lr = tf.placeholder(dtype=tf.float32, shape=[],
-                        name="lr")
-
+                                 name="lr")
 
     def get_feed_dict(self, words, labels=None, lr=None, dropout=None):
         """
@@ -103,16 +103,15 @@ class NERModel(object):
 
         return feed, sequence_lengths
 
-
     def add_word_embeddings_op(self):
         """
         Adds word embeddings to self
         """
         with tf.variable_scope("words"):
             _word_embeddings = tf.Variable(self.embeddings, name="_word_embeddings", dtype=tf.float32,
-                                trainable=self.config.train_embeddings)
+                                           trainable=self.config.train_embeddings)
             word_embeddings = tf.nn.embedding_lookup(_word_embeddings, self.word_ids,
-                name="word_embeddings")
+                                                     name="word_embeddings")
 
         with tf.variable_scope("chars"):
             if self.config.chars:
@@ -122,21 +121,21 @@ class NERModel(object):
                                                    trainable=self.config.train_embeddings)
                     char_embeddings = tf.nn.embedding_lookup(_char_embeddings, self.char_ids,
                                                              name="char_embeddings")
-                else :
+                else:
                     # get embeddings matrix
                     _char_embeddings = tf.get_variable(name="_char_embeddings", dtype=tf.float32,
-                        shape=[self.nchars, self.config.dim_char])
+                                                       shape=[self.nchars, self.config.dim_char])
                     char_embeddings = tf.nn.embedding_lookup(_char_embeddings, self.char_ids,
-                        name="char_embeddings")
+                                                             name="char_embeddings")
                 # put the time dimension on axis=1
                 s = tf.shape(char_embeddings)
                 char_embeddings = tf.reshape(char_embeddings, shape=[-1, s[-2], self.config.dim_char])
                 word_lengths = tf.reshape(self.word_lengths, shape=[-1])
                 # bi lstm on chars
                 lstm_frod_cell = tf.contrib.rnn.LSTMCell(self.config.char_hidden_size,
-                                                    state_is_tuple=True)
+                                                         state_is_tuple=True)
                 lstm_back_cell = tf.contrib.rnn.LSTMCell(self.config.char_hidden_size,
-                                                    state_is_tuple=True)
+                                                         state_is_tuple=True)
                 _, ((_, output_fw), (_, output_bw)) = tf.nn.bidirectional_dynamic_rnn(lstm_frod_cell,
                                                                                       lstm_back_cell,
                                                                                       char_embeddings,
@@ -144,12 +143,11 @@ class NERModel(object):
                                                                                       dtype=tf.float32)
                 output = tf.concat([output_fw, output_bw], axis=-1)
                 # shape = (batch size, max sentence length, char hidden size)
-                output = tf.reshape(output, shape=[-1, s[1], 2*self.config.char_hidden_size])
+                output = tf.reshape(output, shape=[-1, s[1], 2 * self.config.char_hidden_size])
 
                 word_embeddings = tf.concat([word_embeddings, output], axis=-1)
 
-        self.word_embeddings =  tf.nn.dropout(word_embeddings, self.dropout)
-
+        self.word_embeddings = tf.nn.dropout(word_embeddings, self.dropout)
 
     def add_logits_op(self):
         """
@@ -167,14 +165,14 @@ class NERModel(object):
             output = tf.nn.dropout(output, self.dropout)
 
         with tf.variable_scope("proj"):
-            W = tf.get_variable("W", shape=[2*self.config.hidden_size, self.ntags],
-                dtype=tf.float32)
+            W = tf.get_variable("W", shape=[2 * self.config.hidden_size, self.ntags],
+                                dtype=tf.float32)
 
             b = tf.get_variable("b", shape=[self.ntags], dtype=tf.float32,
-                initializer=tf.zeros_initializer())
+                                initializer=tf.zeros_initializer())
 
             ntime_steps = tf.shape(output)[1]
-            output = tf.reshape(output, [-1, 2*self.config.hidden_size])
+            output = tf.reshape(output, [-1, 2 * self.config.hidden_size])
             pred = tf.matmul(output, W) + b
             self.logits = tf.reshape(pred, [-1, ntime_steps, self.ntags])
 
@@ -191,7 +189,7 @@ class NERModel(object):
         """
         if self.config.crf:
             log_likelihood, self.transition_params = tf.contrib.crf.crf_log_likelihood(
-            self.logits, self.labels, self.sequence_lengths)
+                self.logits, self.labels, self.sequence_lengths)
             self.loss = tf.reduce_mean(-log_likelihood)
         else:
             losses = tf.nn.sparse_softmax_cross_entropy_with_logits(logits=self.logits, labels=self.labels)
@@ -202,7 +200,6 @@ class NERModel(object):
         # for tensorboard
         tf.summary.scalar("loss", self.loss)
 
-
     def add_train_op(self):
         """
         Add train_op to self
@@ -211,16 +208,13 @@ class NERModel(object):
             optimizer = tf.train.AdamOptimizer(self.lr)
             self.train_op = optimizer.minimize(self.loss)
 
-
     def add_init_op(self):
         self.init = tf.global_variables_initializer()
-
 
     def add_summary(self, sess):
         # tensorboard stuff
         self.merged = tf.summary.merge_all()
         self.file_writer = tf.summary.FileWriter(self.config.output_path, sess.graph)
-
 
     def build(self):
         self.add_placeholders()
@@ -230,8 +224,6 @@ class NERModel(object):
         self.add_loss_op()
         self.add_train_op()
         self.add_init_op()
-
-
 
     def predict_batch(self, sess, words):
         """
@@ -273,7 +265,7 @@ class NERModel(object):
             tags: {tag: index} dictionary
             epoch: (int) number of the epoch
         """
-        try :
+        try:
             nbatches = (len(train) + self.config.batch_size - 1) / self.config.batch_size
             prog = Progbar(target=nbatches)
             for i, (words, labels) in enumerate(minibatches(train, self.config.batch_size)):
@@ -290,8 +282,8 @@ class NERModel(object):
             acc, f1 = self.run_evaluate(sess, dev, tags)
             self.logger.info("- dev acc {:04.2f} - f1 {:04.2f}".format(100 * acc, 100 * f1))
             return acc, f1
-        except Exception as e :
-            print ("Exception on run_epoch {0}".format(e))
+        except Exception as e:
+            print("Exception on run_epoch {0}".format(e))
 
     def run_evaluate(self, sess, test, tags):
         """
@@ -360,8 +352,6 @@ class NERModel(object):
                         os.makedirs(self.config.model_output)
                     saver.save(sess, self.config.model_output)
                     best_score = f1
-                    self.logger.info("- new best score!")
-
                 else:
                     nepoch_no_imprv += 1
                     if nepoch_no_imprv >= self.config.nepoch_no_imprv:
@@ -388,8 +378,4 @@ class NERModel(object):
                 words = zip(*words)
             pred_ids, _ = self.predict_batch(sess, [words])
             preds = list(map(lambda idx: idx_to_tag[idx], list(pred_ids[0])))
-            print(words_raw)
-            print(preds)
-
-
-
+            return words_raw, preds
