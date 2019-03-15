@@ -127,7 +127,7 @@ def train():
                                           feed_dict={x: data_filter_train, y_target: labels_train, keep_prob: 1})
                 print("step %d, training accuracy: %.3f" % (i, train_accuracy))
 
-        path = './model/'
+        path = './intent_classifier/model/'
         if not os.path.exists(path):
             os.makedirs(path)
         saver.save(sess, path)
@@ -144,7 +144,7 @@ def predict(test_data):
         _, x, _, _, _, y, _, _ = create_graph(train=False)
         sess.run(tf.global_variables_initializer())
         saver = tf.train.Saver()
-        path = './model/'
+        path = './intent_classifier/model/'
         if os.path.exists(path):
             saver.restore(sess, path)
         y = sess.run([y], feed_dict={x: np.array([test_data])})

@@ -1,5 +1,0 @@
-B-ALARM
-O
-B-TIME
-B-SONG
-B-DATE
