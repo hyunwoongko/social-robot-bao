@@ -1,10 +1,10 @@
+import pandas as pd
 from gensim.models import FastText
 from konlpy.tag import Okt
 
-from data_loader import sentence_data
 from util.tokenizer import tokenize
 
-data = sentence_data()
+data = pd.read_csv('train_intent.csv')
 intent_mapping = {
     '인사': 0,
     '날씨': 1,
