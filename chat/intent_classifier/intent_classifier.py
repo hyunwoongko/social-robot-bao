@@ -5,8 +5,8 @@ import pandas as pd
 import tensorflow as tf
 from konlpy.tag import Okt
 
-from disintegreator import tokenize
-from intent_preprocessor import intent_size, vector_size, preprocess, train_vector_model, intent_mapping
+from util.tokenizer import tokenize
+from intent_classifier.intent_preprocessor import intent_size, vector_size, preprocess, train_vector_model, intent_mapping
 
 # 파라미터 세팅
 train_data_list = preprocess()

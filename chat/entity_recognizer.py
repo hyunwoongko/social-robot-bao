@@ -1,4 +1,4 @@
-from disintegreator import tokenize
+from util.tokenizer import tokenize
 from kor_model.config import config
 from kor_model.data_embed_model import data_utils
 from kor_model.data_embed_model import word2vec
@@ -9,10 +9,6 @@ from kor_model.ner_model.lstmcrf_model import NERModel
 def embed_model():
     return word2vec.train_w2v(config)
 
-
-# Word2Vec 를 이용하여 단어 단위로 Embedding Vector 를 구성
-
-# Generators Class 생성 Iterator
 def data_iterator():
     dev = CoNLLDataset(config.dev_filename, max_iter=config.max_iter)
     test = CoNLLDataset(config.test_filename, max_iter=config.max_iter)

@@ -4,7 +4,7 @@ from konlpy.tag import Okt
 
 
 def __get_emotion(wordname):
-    with open('data/SentiWord_info.json', encoding='utf-8-sig', mode='r') as f:
+    with open('emotion_engine/SentiWord_info.json', encoding='utf-8-sig', mode='r') as f:
         data = json.load(f)
     result = ['0', 0]
     for i in range(0, len(data)):

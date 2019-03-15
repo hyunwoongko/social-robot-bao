@@ -2,7 +2,7 @@ from gensim.models import FastText
 from konlpy.tag import Okt
 
 from data_loader import sentence_data
-from disintegreator import tokenize
+from util.tokenizer import tokenize
 
 data = sentence_data()
 intent_mapping = {
