@@ -1,99 +1,79 @@
-지금 B-TIME
-노래 B-SONG
-틀어 O
-줄래 O
-
-내일 B-DATE
-12시 B-TIME
-노래 B-SONG
-주라 O
+슬픈 B-SONG
+노래 I-SONG
+틀어주라 O
 
 오늘 B-DATE
 날짜 O
-알람 B-ALARM
-줄래 O
+알람 O
+맞춰줘 O
 
 오늘 B-DATE
-날짜 O
-노래 B-SONG
-줄래 O
-
-내일 B-DATE
-12시 O
-알람 B-ALARM
-해줘 O
-
-내일 B-DATE
-11시 O
-알람 B-ALARM
-줄래 O
+4시 B-TIME
+깨워줘 O
 
 오늘 B-DATE
-10시 O
-알람 B-ALARM
-줄래 O
+2시 B-TIME
+깨워주라 O
 
-이따 O
-노래 B-SONG
-틀어 O
+내일 B-DATE
+12시 B-TIME
+알람 O
+맞춰줘 O
+
+모레 B-DATE
+11시 B-TIME
+알람 O
 줘 O
 
 내일 B-DATE
-노래 B-SONG
-틀어 O
-줘 O
+11시 B-TIME
+알람 O
+줄래 O
+
+오늘 B-DATE
+10시 B-TIME
+알람 O
+맞춰줄래 O
+
+좋아하는 B-SONG
+음악 I-SONG
+들려줘 O
+
+신나는 B-SONG
+노래 I-SONG
+틀어줘 O
 
 내일 B-DATE
 12시 B-TIME
-알람 B-ALARM
-줄래 O
+알람 O
+맞춰줘 O
 
 모레 B-DATE
 12시 B-TIME
-알람 B-ALARM
-줄래 O
+알람 O
+맞춰줘 O
 
-내일 B-DATE
-3시 B-TIME
-노래 B-SONG
-주라 O
+신나는 B-SING
+노래 I-SONG
+재생해줘 O
 
-모레 B-DATE
-12시 B-TIME
+신나는 B-SING
+EDM I-SONG
+들려줘 O
+
+신나는 B-SING
+EDM I-SONG
+들려주라 O
+
 동요 B-SONG
-줄래 O
+들려줄래 O
 
-오늘 B-DATE
-6시 B-TIME
 동요 B-SONG
-줘 O
+들려주라 O
 
-이따 O
-7시 B-TIME
-노래 B-SONG
-줄래 O
+동요 B-SONG
+들려주세요 O
 
-모레 B-DATE
-알람 B-ALARM
-7시 B-TIME
-주라 O
-
-어제 B-DATE
-알람 B-ALARM
-7시 B-TIME
-니 O
-
-매일 B-DATE
-알람 B-ALARM
-7시 B-TIME
-줘 O
-
-오늘 B-DATE
-노래 B-SONG
-7시 B-TIME
-니 O
-
-오늘 B-DATE
-7시 B-TIME
-노래 B-SONG
-니 O
+신나는 B-SONG
+동요 I-SONG
+들려줘 O

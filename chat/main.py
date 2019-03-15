@@ -5,9 +5,9 @@ def run_app():
         question = fix(question)
         question = tokenize(question)
 
-        print("\n 전처리 문장 : "+question)
-        print('발화 의도 : ', get_intent(question, False))
-        print('개체 분류 : ', get_entity(question, False))
+        print("\n전처리 문장 : ", question)
+        print('발화 의도 : ', get_intent(question, is_train=False))
+        print('개체 분류 : ', get_entity(question, is_train=False))
         print('감정 지수 (-2 ~ 2) : ', get_emotion(question))
 
 

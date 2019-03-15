@@ -25,10 +25,10 @@ class config():
     lr_decay = 0.9
     nepoch_no_imprv = 300
     use_crawler = False
-    hidden_size = 300
-    char_hidden_size = 100
+    hidden_size = 512
+    char_hidden_size = 128
     crf = True # size one is not allowed
     chars = True # if char embedding, training is 3.5x slower
-    output_path = "entity_recognizer/results/crf4/"
+    output_path = "entity_recognizer/results/crf/"
     model_output = output_path + "model.weights/"
     log_path = output_path + "log.txt"

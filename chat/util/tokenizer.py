@@ -4,7 +4,7 @@ from konlpy.tag import Okt
 def tokenize(sentence):
     tokenizer = Okt()
     word_bag = []
-    pos = tokenizer.pos(sentence,stem=True)
+    pos = tokenizer.pos(sentence, norm=True)
 
     for word, tag in pos:
         if tag == 'Josa' or tag == 'Punctuation' or tag == 'Eomi' or tag == "Foreign" or tag == "바오":
