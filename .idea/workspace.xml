@@ -9,42 +9,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f2ff807-e7e1-4931-91f5-40600ab735ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chat/generative_model/configs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/generative_model/data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/generative_model/data_in/ChatBotData.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/generative_model/data_in/ChatBotData.csv_short" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/generative_model/data_in/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/generative_model/data_out/vocabularyData.voc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/generative_model/images/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/generative_model/images/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/generative_model/images/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/generative_model/images/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/generative_model/images/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/generative_model/images/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/generative_model/images/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/generative_model/images/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/generative_model/model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/generative_model/predict.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/generative_model/temp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/generative_model/train.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/api/api_weather.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/api/api_weather.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/data/processed/kor/char.trimmed.npz" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/data/processed/kor/char.trimmed.npz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/data/processed/kor/chars.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/data/processed/kor/chars.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/data/processed/kor/tags.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/data/processed/kor/tags.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/data/processed/kor/words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/data/processed/kor/words.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/data/w2v/model" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/data/w2v/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/results/crf/events.out.tfevents.1552701278.DESKTOP-7N91TGT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/results/crf/model.weights/.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/results/crf/model.weights/.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/results/crf/model.weights/.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/results/crf/model.weights/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/hanspell/spell_checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/hanspell/spell_checker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/intent_classifier/model/.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/chat/intent_classifier/model/.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/intent_classifier/model/.index" beforeDir="false" afterPath="$PROJECT_DIR$/chat/intent_classifier/model/.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/train_entity.csv" beforeDir="false" afterPath="$PROJECT_DIR$/chat/train_entity.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/train_intent.csv" beforeDir="false" afterPath="$PROJECT_DIR$/chat/train_intent.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/generative_model/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/generative_model/configs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/generative_model/data_in/ChatBotData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/chat/generative_model/data_in/ChatBotData.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/generative_model/data_out/check_point/checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/chat/generative_model/data_out/check_point/checkpoint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/generative_model/data_out/check_point/graph.pbtxt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/generative_model/data_out/check_point/graph.pbtxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/generative_model/data_out/check_point/model.ckpt-15958.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/generative_model/data_out/check_point/model.ckpt-15958.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/generative_model/data_out/check_point/model.ckpt-15958.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/generative_model/data_out/check_point/model.ckpt-16975.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/generative_model/data_out/check_point/model.ckpt-16975.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/generative_model/data_out/check_point/model.ckpt-16975.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/generative_model/data_out/check_point/model.ckpt-20000.meta" beforeDir="false" afterPath="$PROJECT_DIR$/chat/generative_model/data_out/check_point/model.ckpt-20000.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/generative_model/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/generative_model/predict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/generative_model/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/generative_model/train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +32,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Capstone_Project$model.coverage" NAME="model Coverage Results" MODIFIED="1552099926608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$predict.coverage" NAME="predict Coverage Results" MODIFIED="1552727419243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/generative_model" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$predict.coverage" NAME="predict Coverage Results" MODIFIED="1552729067454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/generative_model" />
     <SUITE FILE_PATH="coverage/Capstone_Project$scenario_song.coverage" NAME="scenario_song Coverage Results" MODIFIED="1552490568154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
     <SUITE FILE_PATH="coverage/Capstone_Project$BiLSTM.coverage" NAME="BiLSTM Coverage Results" MODIFIED="1552381646960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
     <SUITE FILE_PATH="coverage/Capstone_Project$disintegreator.coverage" NAME="disintegreator Coverage Results" MODIFIED="1552530394712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
@@ -62,7 +40,7 @@
     <SUITE FILE_PATH="coverage/Capstone_Project$context_analyzer.coverage" NAME="context_analyzer Coverage Results" MODIFIED="1552018879956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/src" />
     <SUITE FILE_PATH="coverage/Capstone_Project$word_data_processor.coverage" NAME="word_data_processor Coverage Results" MODIFIED="1552122286025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
     <SUITE FILE_PATH="coverage/Capstone_Project$intent_finder_CNN.coverage" NAME="intent_finder_CNN Coverage Results" MODIFIED="1552363113814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$data.coverage" NAME="data Coverage Results" MODIFIED="1552710568125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/generative_model" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$data.coverage" NAME="data Coverage Results" MODIFIED="1552728909411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/generative_model" />
     <SUITE FILE_PATH="coverage/Capstone_Project$intent_finder_preprocessor.coverage" NAME="intent_finder_preprocessor Coverage Results" MODIFIED="1552362713416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/intent_finder" />
     <SUITE FILE_PATH="coverage/Capstone_Project$data_loader.coverage" NAME="data_loader Coverage Results" MODIFIED="1552649798563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/util" />
     <SUITE FILE_PATH="coverage/Capstone_Project$seq2seq__1_.coverage" NAME="seq2seq (1) Coverage Results" MODIFIED="1552057476794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
@@ -75,8 +53,8 @@
     <SUITE FILE_PATH="coverage/Capstone_Project$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1552709132821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
     <SUITE FILE_PATH="coverage/Capstone_Project$text_cnn.coverage" NAME="text_cnn Coverage Results" MODIFIED="1552122280520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
     <SUITE FILE_PATH="coverage/Capstone_Project$train__1_.coverage" NAME="train (1) Coverage Results" MODIFIED="1552708376690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$train.coverage" NAME="train Coverage Results" MODIFIED="1552645718908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/generative_model" />
     <SUITE FILE_PATH="coverage/Capstone_Project$w_test.coverage" NAME="w_test Coverage Results" MODIFIED="1552657821016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/api" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$train.coverage" NAME="train Coverage Results" MODIFIED="1552728942598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/generative_model" />
     <SUITE FILE_PATH="coverage/Capstone_Project$similar_word_extractor.coverage" NAME="similar_word_extractor Coverage Results" MODIFIED="1552404618434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
     <SUITE FILE_PATH="coverage/Capstone_Project$entity_recognizer.coverage" NAME="entity_recognizer Coverage Results" MODIFIED="1552538617726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat" />
     <SUITE FILE_PATH="coverage/Capstone_Project$intent_analyzer.coverage" NAME="intent_analyzer Coverage Results" MODIFIED="1552038478463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/src" />
@@ -173,9 +151,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSV" value="4850" />
+          <entry key="CSV" value="4899" />
           <entry key="PLAIN_TEXT" value="77" />
-          <entry key="Python" value="6854" />
+          <entry key="Python" value="6989" />
         </counts>
       </usages-collector>
     </session>
@@ -184,7 +162,11 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/generative_model/data_in/ChatBotData.csv">
-          <provider selected="true" editor-type-id="csv-text-editor" />
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="337">
+              <caret line="11825" column="22" selection-start-line="11825" selection-start-column="22" selection-end-line="11825" selection-end-column="22" />
+            </state>
+          </provider>
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" rowLines="3" />
           </provider>
@@ -214,8 +196,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/generative_model/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+            <state relative-caret-position="327">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -235,8 +217,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/generative_model/configs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+            <state relative-caret-position="180">
+              <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -253,10 +235,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chat/generative_model/predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+            <state relative-caret-position="297">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
               <folding>
-                <element signature="e#0#23#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -293,7 +275,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fit</find>
       <find>open</find>
       <find>self.</find>
       <find>FastText</find>
@@ -323,6 +304,7 @@
       <find>모레 I-DATE</find>
       <find>경상북도 I-LOCATION</find>
       <find />
+      <find>\.</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -344,7 +326,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chat/intent_finder_CNN.py" />
         <option value="$PROJECT_DIR$/chat/intent_finder_preprocessor.py" />
         <option value="$PROJECT_DIR$/chat/context_memory.py" />
         <option value="$PROJECT_DIR$/chat/emotion_engine.py" />
@@ -390,11 +371,12 @@
         <option value="$PROJECT_DIR$/chat/generative_model/model.py" />
         <option value="$PROJECT_DIR$/chat/train_intent.csv" />
         <option value="$PROJECT_DIR$/chat/generative_model/main.py" />
-        <option value="$PROJECT_DIR$/chat/generative_model/train.py" />
         <option value="$PROJECT_DIR$/chat/generative_model/temp.py" />
-        <option value="$PROJECT_DIR$/chat/generative_model/configs.py" />
         <option value="$PROJECT_DIR$/chat/generative_model/data.py" />
+        <option value="$PROJECT_DIR$/chat/generative_model/train.py" />
         <option value="$PROJECT_DIR$/chat/generative_model/predict.py" />
+        <option value="$PROJECT_DIR$/chat/generative_model/configs.py" />
+        <option value="$PROJECT_DIR$/chat/generative_model/data_in/ChatBotData.csv" />
       </list>
     </option>
   </component>
@@ -510,7 +492,7 @@
     <property name="android.profiler.active" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552727068705" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552728534943" />
     <property name="device.picker.selection" value="ce05160579ec052e05" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.6 (Capstone-Project)" />
     <property name="last_opened_file_path" value="$USER_HOME$/IntelliJIDEAProjects/IsTriangle" />
@@ -634,28 +616,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="chat" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chat" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chat/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="chat" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -714,6 +674,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chat/generative_model/temp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="chat" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chat/generative_model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chat/generative_model/train.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -787,19 +769,19 @@
     <list>
       <item itemvalue="Android App.app" />
       <item itemvalue="Jupyter Notebook.Jupyter" />
-      <item itemvalue="Python.main (1)" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.data" />
       <item itemvalue="Python.predict" />
       <item itemvalue="Python.temp" />
+      <item itemvalue="Python.train" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.predict" />
+        <item itemvalue="Python.train" />
+        <item itemvalue="Python.data" />
         <item itemvalue="Python.temp" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.data" />
-        <item itemvalue="Python.main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -832,7 +814,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181543000" />
+    <option name="totallyTimeSpent" value="183219000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -845,7 +827,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13728632" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -860,7 +841,7 @@
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3293348" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32829374" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.8120879" visible="true" weight="0.3574514" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.8120879" visible="true" weight="0.39740822" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1208,31 +1189,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/generative_model/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/generative_model/data_out/vocabularyData.voc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30420" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/generative_model/data_in/ChatBotData.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/generative_model/temp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chat/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
@@ -1247,10 +1203,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/generative_model/configs.py">
+    <entry file="file://$PROJECT_DIR$/chat/generative_model/temp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+        <state relative-caret-position="214">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1264,22 +1220,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/chat/generative_model/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/generative_model/data_out/vocabularyData.voc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30420" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/generative_model/configs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chat/generative_model/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+        <state relative-caret-position="327">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/chat/generative_model/data_in/ChatBotData.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="337">
+          <caret line="11825" column="22" selection-start-line="11825" selection-start-column="22" selection-end-line="11825" selection-end-column="22" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chat/generative_model/predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        <state relative-caret-position="297">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

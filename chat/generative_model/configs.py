@@ -5,7 +5,7 @@ run_config = tf.estimator.RunConfig().replace(
     session_config=tf.ConfigProto(log_device_placement=True,
                                   device_count={'GPU': 0}))
 tf.app.flags.DEFINE_integer('batch_size', 64, 'batch size')  # 배치 크기
-tf.app.flags.DEFINE_integer('train_steps', 20000, 'train steps')  # 학습 에포크
+tf.app.flags.DEFINE_integer('train_steps', 100, 'train steps')  # 학습 에포크
 tf.app.flags.DEFINE_float('dropout_width', 0.5, 'dropout width')  # 드롭아웃 크기
 tf.app.flags.DEFINE_integer('hidden_size', 128, 'weights size')  # 가중치 크기 # 논문 512 사용
 tf.app.flags.DEFINE_float('learning_rate', 1e-3, 'learning rate')  # 학습률

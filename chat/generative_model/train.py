@@ -10,6 +10,7 @@ DATA_OUT_PATH = 'data_out/'
 
 
 def main(self):
+    saved_answer = ''
     data_out_path = os.path.join(os.getcwd(), DATA_OUT_PATH)
     os.makedirs(data_out_path, exist_ok=True)
     char2idx, idx2char, vocabulary_length = data.load_vocabulary()
@@ -43,7 +44,7 @@ def main(self):
     eval_result = classifier.evaluate(input_fn=lambda: data.eval_input_fn(
         eval_input_enc, eval_output_dec, eval_target_dec, DEFINES.batch_size))
     print('\nEVAL set accuracy: {accuracy:0.3f}\n'.format(**eval_result))
-    predic_input_enc, predic_input_enc_length = data.enc_processing(["여자친구 만나고싶다"], char2idx)
+    predic_input_enc, predic_input_enc_length = data.enc_processing(["안녕"], char2idx)
     predic_output_dec, predic_output_decLength = data.dec_output_processing([""], char2idx)
     predic_target_dec = data.dec_target_processing([""], char2idx)
 
@@ -56,7 +57,13 @@ def main(self):
             input_fn=lambda: data.eval_input_fn(predic_input_enc, predic_output_dec, predic_target_dec, 1))
 
         answer = data.pred_next_string(predictions, idx2char)
+        if len(answer) == len(saved_answer):
+            break
+        else:
+            saved_answer = answer
+
     print("answer: ", answer)
+
 
 
 if __name__ == '__main__':
