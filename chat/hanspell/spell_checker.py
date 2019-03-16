@@ -114,6 +114,13 @@ def check(text):
 
 
 def fix(text):
+    text = exception(text)  # 예외처리
     result = check(text)
     result.as_dict()  # dict로 출력
     return result[2]
+
+
+def exception(text):
+    if '내 일 모레' in text:
+        return text.replace('내 일 모레', '내일 모레')  # konlpy가 실수함.
+    return text

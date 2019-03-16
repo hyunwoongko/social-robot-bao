@@ -48,8 +48,18 @@
 알람 O
 맞춰줘 O
 
-모레 B-DATE
+내일모레 B-DATE
 12시 B-TIME
+알람 O
+맞춰줘 O
+
+내일모레 B-DATE
+2시 B-TIME
+알람 O
+맞춰줘 O
+
+내일모레 B-DATE
+4시 B-TIME
 알람 O
 맞춰줘 O
 
@@ -77,3 +87,1048 @@ EDM I-SONG
 신나는 B-SONG
 동요 I-SONG
 들려줘 O
+
+다음 B-DATE
+주 I-DATE
+전주 B-LOCATION
+날씨 O
+알려줘 O
+
+이번 B-DATE
+주 I-DATE
+덕진구 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+부산 B-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+금천구 B-LOCATION
+날씨 O
+알려줄래 O
+
+금천구 B-LOCATION
+날씨 O
+알려줘 O
+
+반월동 B-LOCATION
+날씨 O
+알려줄래 O
+
+날씨 O
+알려줘 O
+
+날씨 O
+뭐야 O
+
+날씨 O
+알려줄래 O
+
+모레 B-DATE
+대구 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+미룡동 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+관악구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+마포구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+날씨 O
+알려줘 O
+
+모레 B-DATE
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+날씨 O
+알려줘 O
+
+내일 B-DATE
+서초구 B-LOCATION
+날씨 O
+알려줘 O
+
+관악구 B-LOCATION
+날씨 O
+알려줘 O
+
+조촌동 B-LOCATION
+날씨 O
+알려줘 O
+
+금암동 B-LOCATION
+날씨 O
+
+내일 B-DATE
+서초구 B-LOCATION
+날씨 O
+말해줘 O
+
+모레 B-DATE
+서초구 B-LOCATION
+날씨 O
+
+
+오늘 B-DATE
+관악구 B-LOCATION
+날씨 O
+말해주라 O
+
+이번 B-DATE
+주 I-DATE
+날씨 O
+
+
+다음 B-DATE
+주 I-DATE
+날씨 O
+뭐야 O
+
+이번 B-DATE
+달 I-DATE
+날씨 O
+말해줘 O
+
+다음 B-DATE
+달 I-DATE
+날씨 O
+알려주세요 O
+
+이번 B-DATE
+주 I-DATE
+강남구 B-LOCATION
+날씨 O
+
+
+오늘 B-DATE
+경기도 B-LOCATION
+구리 I-LOCATION
+날씨 O
+
+
+내일 B-DATE
+경기도 B-LOCATION
+부천 I-LOCATION
+날씨 O
+말해줘 O
+
+모레 B-DATE
+경기도 B-LOCATION
+의정부 I-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+제주도 B-LOCATION
+날씨 O
+뭐야 O
+
+오늘 B-DATE
+울릉도 B-LOCATION
+날씨 O
+뭐야 O
+
+오늘 B-DATE
+강원도 B-LOCATION
+날씨 O
+말해줘 O
+
+내일모레 B-DATE
+강원도 B-LOCATION
+강릉 I-LOCATION
+날씨 O
+말해줘 O
+
+모레 B-DATE
+강릉 B-LOCATION
+날씨 O
+말해줘 O
+
+이번 B-DATE
+주 I-DATE
+강릉 B-LOCATION
+날씨 O
+말해줘 O
+
+이번 B-DATE
+주 I-DATE
+강원도 B-LOCATION
+원주 I-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+삼척 B-LOCATION
+날씨 O
+말해줘 O
+
+내일모레 B-DATE
+강원도 B-LOCATION
+삼척 I-LOCATION
+날씨 O
+말해줘 O
+
+이번 B-DATE
+주 I-DATE
+강원도 B-LOCATION
+춘천 I-LOCATION
+날씨 O
+말해줘 O
+
+내일모레 B-DATE
+전라북도 B-LOCATION
+전주 I-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+날짜 O
+경기도 B-LOCATION
+고양 I-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+날짜 O
+경기도 B-LOCATION
+안양 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+경기도 B-LOCATION
+안양 I-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+안양 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+경기 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+경기 B-LOCATION
+동두천 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+날짜 O
+동두천 B-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+동두천 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+의정부 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+나운동 B-LOCATION
+날씨 O
+말해줘 O
+
+내일모레 B-DATE
+송천동 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+화순 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+전라남도 B-LOCATION
+여수 I-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+전라남도 B-LOCATION
+여수 I-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+광양 B-LOCATION
+날씨 O
+말해줘 O
+
+내일모레 B-DATE
+전라남도 B-LOCATION
+순천 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+전라북도 B-LOCATION
+부안 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+날씨 O
+알려줘 O
+
+내일 B-DATE
+날씨 O
+알려줘 O
+
+모레 B-DATE
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+부산 B-LOCATION
+날씨 O
+알려줘 O
+
+인천 B-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+서울특별시 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+광주 B-LOCATION
+날씨 O
+알려줘 O
+
+광주광역시 B-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+대구광역시 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+대구 B-LOCATION
+날씨 O
+알려줘 O
+
+이번 B-DATE
+주 I-DATE
+대구광역시 B-LOCATION
+날씨 O
+알려줘 O
+
+이번 B-DATE
+주 I-DATE
+대구 B-LOCATION
+날씨 O
+
+내일모레 B-DATE
+주 I-DATE
+울산 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+울산 B-LOCATION
+날씨 O
+뭐야 O
+
+내일 B-DATE
+울산광역시 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+서울특별시 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+날짜 O
+울산광역시 B-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+대구광역시 B-LOCATION
+날씨 O
+알려줘 O
+
+다음 B-DATE
+주 I-DATE
+대구 B-LOCATION
+날씨 O
+말해줄래 O
+
+내일 B-DATE
+춘천 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+충청북도 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+충청북도 B-LOCATION
+청주 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+청주 B-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+청주 B-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+청주 B-LOCATION
+날씨 O
+말해주라 O
+
+이번 B-DATE
+주 I-DATE
+청주 B-LOCATION
+날씨 O
+말해주라 O
+
+내일 B-DATE
+부안 B-LOCATION
+날씨 O
+말해주라 O
+
+오늘 B-DATE
+고양 B-LOCATION
+날씨 O
+말해주라 O
+
+이번 B-DATE
+주 I-DATE
+청주 B-LOCATION
+날씨 O
+말해주라 O
+
+내일모레 B-DATE
+양주 B-LOCATION
+날씨 O
+말해주라 O
+
+내일 B-DATE
+화성 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+화성 B-LOCATION
+날씨 O
+말해주라 O
+
+내일 B-DATE
+김포 B-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+광명 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+시흥 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+시흥 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+김포 B-LOCATION
+날씨 O
+알려줄래 O
+
+모레 B-DATE
+광명 B-LOCATION
+날씨 O
+알려줄래 O
+
+모레 B-DATE
+평택 B-LOCATION
+날씨 O
+알려줄래 O
+
+모레 B-DATE
+안산 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+김포 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+용인 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+김포 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+의정부 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+주 I-DATE
+김포 B-LOCATION
+날씨 O
+알려줄래 O
+
+이번 B-DATE
+주 I-DATE
+의정부 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+구리 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+하남 B-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+하남 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+여주 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+이천 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+이천 B-LOCATION
+날씨 O
+알려주라 O
+
+오늘 B-DATE
+오산 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+안성 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+평택 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+오산 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+안성 B-LOCATION
+날씨 O
+알려줘 O
+
+이번 B-DATE
+주 I-DATE
+평택 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+수원 B-LOCATION
+날씨 O
+알려줘 O
+
+이번 B-DATE
+주 I-DATE
+의왕 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+의왕 B-LOCATION
+날씨 O
+알려주세요 O
+
+내일 B-DATE
+안성 B-LOCATION
+날씨 O
+알려줘 O
+
+이번 B-DATE
+주 I-DATE
+평택 B-LOCATION
+날씨 O
+알려주세요 O
+
+이번 B-DATE
+주 I-DATE
+평택 B-LOCATION
+날씨 O
+알려주세요 O
+
+이번 B-DATE
+주 I-DATE
+용인 B-LOCATION
+날씨 O
+알려주세요 O
+
+오늘 B-DATE
+성남 B-LOCATION
+날씨 O
+알려주세요 O
+
+오늘 B-DATE
+수원 B-LOCATION
+날씨 O
+알려주세요 O
+
+오늘 B-DATE
+성남 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+가평 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+과천 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+남양주 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+화남 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+화남 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+남양주 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+경기도 B-LOCATION
+화남 I-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+경기도 B-LOCATION
+남양주 I-LOCATION
+날씨 O
+좀 O
+알려줘 O
+
+모레 B-DATE
+구리 B-LOCATION
+날씨 O
+좀 O
+알려줄 O
+수 O
+있니 O
+
+모레 B-DATE
+경기도 B-LOCATION
+구리 I-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+경기도 B-LOCATION
+구리 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+구리 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+경기도 B-LOCATION
+안산 I-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+경기도 B-LOCATION
+평택 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+안성 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+경기도 B-LOCATION
+수원 I-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+경기도 B-LOCATION
+성남 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+안동 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+성남 B-LOCATION
+날씨 O
+좀 O
+알려줄 O
+수 O
+있니 O
+
+내일 B-DATE
+서울 B-LOCATION
+종로구 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+서울 B-LOCATION
+구로구 I-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+서울 B-LOCATION
+마포구 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+서울 B-LOCATION
+광동구 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+종로구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+마포구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+광동구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+은평구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+중구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+종로구 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+용산구 I-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+용산구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+서울시 B-LOCATION
+영등포구 I-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+영등포구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+동대문구 I-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+동대문구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+송파구 I-LOCATION
+날씨 O
+말해줘 O
+
+모레 B-DATE
+송파구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+광진구 I-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+광진구 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+강북구 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+강북구 I-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+강북구 B-LOCATION
+날씨 O
+알려줘 O
+
+
+내일모레 B-DATE
+광진구 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+성북구 I-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+강북구 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+동작구 I-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+동작구 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+도봉구 I-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+도봉구 B-LOCATION
+날씨 O
+말해줘 O
+
+내일모레 B-DATE
+서울시 B-LOCATION
+서대분구 I-LOCATION
+날씨 O
+알려줄래 O
+
+모레 B-DATE
+서대문구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+금천구 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+양천구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+구로구 I-LOCATION
+날씨 O
+알려줄래 O
+
+모레 B-DATE
+서초구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+서울시 B-LOCATION
+성북구 I-LOCATION
+날씨 O
+알려줄래 O
+
+모레 B-DATE
+광진구 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+노원구 I-LOCATION
+날씨 O
+말해줘 O
+
+모레 B-DATE
+청주 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+충청북도 B-LOCATION
+진천 I-LOCATION
+날씨 O
+말해줘 O
+
+모레 B-DATE
+진천시 B-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+광진구 B-LOCATION
+날씨 O
+말해줘 O
+
+모레 B-DATE
+서울시 B-LOCATION
+노원구 I-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+광진구 B-LOCATION
+날씨 O
+알려줄 O
+수 O
+있니 O
+
+내일모레 B-DATE
+서울시 B-LOCATION
+노원구 I-LOCATION
+날씨 O
+알려줄 O
+수 O
+있겠니 O
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

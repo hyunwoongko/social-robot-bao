@@ -1,5 +1,7 @@
 from konlpy.tag import Okt
 
+from hanspell.spell_checker import fix
+
 
 def tokenize(sentence):
     tokenizer = Okt()

@@ -14,8 +14,8 @@ encode_length = 9
 label_size = intent_size()
 filter_sizes = [2, 3, 4, 2, 3, 4, 2, 3, 4]
 num_filters = len(filter_sizes)
-learning_step = 300
-learning_rate = 0.003
+learning_step = 500
+learning_rate = 0.002
 model = train_vector_model()
 
 

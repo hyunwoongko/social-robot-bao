@@ -1,4 +1,3 @@
-from util.tokenizer import tokenize
 from entity_recognizer.kor_model.config import config
 from entity_recognizer.kor_model.data_embed_model import word2vec, data_utils
 from entity_recognizer.kor_model.data_embed_model.data_utils import CoNLLDataset
@@ -82,10 +81,10 @@ def get_entity(sentence, is_train):
         model.build()
         model.train(get_train(), get_dev(), get_vocab_tags())
         model.evaluate(get_test(), get_vocab_tags())
-        return model.predict(get_vocab_tags(), get_processing_word(), tokenize(sentence))
+        return model.predict(get_vocab_tags(), get_processing_word(), sentence)
     else:
         model = NERModel(config, get_embeddings(), ntags=len(get_vocab_tags()), nchars=len(get_vocab_chars()),
                          logger=None,
                          char_embed=get_char_embedding())
         model.build()
-        return model.predict(get_vocab_tags(), get_processing_word(), tokenize(sentence))
+        return model.predict(get_vocab_tags(), get_processing_word(), sentence)

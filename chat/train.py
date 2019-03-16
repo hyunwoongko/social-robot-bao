@@ -11,14 +11,14 @@ def train_entity():
 
 
 def train_all():
-    get_intent('', True)
-    get_entity('', True)
+    get_intent('오늘 날씨', True)
+    get_entity('오늘 날씨', True)
 
 
 if __name__ == '__main__':
     from os import environ; environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
     import tensorflow as tf; tf.logging.set_verbosity(tf.logging.ERROR)
 
-    # train_intent()
+    train_intent()
     # train_entity()
-    train_all()
+    # train_all()
