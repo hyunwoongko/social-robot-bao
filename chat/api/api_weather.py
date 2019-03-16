@@ -52,14 +52,15 @@ def today_weather(location):
                       ' 현재 온도는 ' + temperature + '로' + weather[1].replace('˚', '도')
         elif weather[0] == '흐리고 가끔 비':
             weather = '오늘은 우산을 챙겨야 할지도 몰라요. 오늘 ' + location + '에는 ' + '비가 올 수 있고 흐린 날씨에요.' + \
-                  ' 현재 온도는 ' + temperature + '로' + weather[1].replace('˚', '도')
+                      ' 현재 온도는 ' + temperature + '로' + weather[1].replace('˚', '도')
 
         template_msg = '오늘 ' + location + ' 날씨를 알려드릴게요. ' + weather
 
     except:
         template_msg = '죄송해요. 아직 배우고 있는 중이라 ' + location + "의 날씨는 알 수 없어요. 지역의 이름을 말하시면 알려드릴게요."
 
-    return template_msg  # 네이버 맞춤법 크롤러
+    return template_msg
+# 네이버 맞춤법 크롤러
 
 
 def tomorrow_weather(location):
@@ -151,7 +152,7 @@ def tomorrow_weather(location):
     except:
         template_msg = '죄송해요. 아직 배우고 있는 중이라 ' + location + "의 날씨는 알 수 없어요. 지역의 이름을 말하시면 알려드릴게요."
 
-    return template_msg  # 네이버 맞춤법 크롤러
+    return template_msg
 
 
 def after_tomorrow_weather(location):
@@ -247,4 +248,4 @@ def after_tomorrow_weather(location):
     except:
         template_msg = '죄송해요. 아직 배우고 있는 중이라 ' + location + "의 날씨는 알 수 없어요. 지역의 이름을 말하시면 알려드릴게요."
 
-    return template_msg  # 네이버 맞춤법 크롤러
+    return template_msg

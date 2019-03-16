@@ -114,10 +114,12 @@ def check(text):
 
 
 def fix(text):
-    text = exception(text)  # 예외처리
-    result = check(text)
-    result.as_dict()  # dict로 출력
-    return result[2]
+    if text is not None:
+        text = exception(text)  # 예외처리
+        result = check(text)
+        result.as_dict()  # dict로 출력
+        return result[2]
+    return text
 
 
 def exception(text):
