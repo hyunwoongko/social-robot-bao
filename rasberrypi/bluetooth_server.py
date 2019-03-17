@@ -9,7 +9,7 @@ import re
 wpa_supplicant_conf = "/etc/wpa_supplicant/wpa_supplicant.conf"
 sudo_mode = "sudo "
 
-
+command =""
 
 class SerialComm:
     def __init__(self):
@@ -118,6 +118,8 @@ class ShellWrapper:
 
 
 def start():
+    global command
+    
     shell = ShellWrapper()
     invalidCommand = []
     ble_comm = None
@@ -137,6 +139,7 @@ def start():
             print("waiting for connection")
             ble_comm = None
             isConnected = False
+            time.sleep(3)
             
 
 

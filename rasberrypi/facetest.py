@@ -16,10 +16,9 @@ img_url = 'facecapture.jpg'
 font = cv2.FONT_ITALIC
 emotion_judge =""
 emotion_late = 0
-command = "wjsdurqustn"
 
 
-def faceEmotion():
+def faceEmotion(emotion_judge,emotion_late):
 
         faces = CF.face.detect(img_url, face_id=True, landmarks=False, attributes='emotion')
         for face in faces:
@@ -36,7 +35,7 @@ def blueTooth():
  
  
 def faceDetect(emotion_judge,emotion_late):
-    global command
+    
     eye_detect = True
     face_cascade = cv2.CascadeClassifier("./haarcascade_frontalface_default.xml")  # 얼굴찾기 haar 파일
     eye_cascade = cv2.CascadeClassifier("./haarcascade_eye.xml") # 눈찾기 haar 파일
@@ -66,9 +65,21 @@ def faceDetect(emotion_judge,emotion_late):
         cv2.imshow("frame", frame)
         k=cv2.waitKey(30)
         #실행 중 키보드 i 를 누르면 눈찾기를 on, off한다.
-        if  command == COMMAND :
-            print(command)
-             
+        if  BS.command == COMMAND :
+            #faceEmotion(emotion_judge,emotion_late)
+            print(BS.command)
+            cv2.imwrite('facecapture.jpg',frame)
+            faces = CF.face.detect(img_url, face_id=True, landmarks=False, attributes='emotion')
+            emotion_judge =""
+            emotion_late =0
+            BS.command=""
+            for face in faces:
+                    for emotion in face['faceAttributes']['emotion']:
+                        print(emotion,face['faceAttributes']['emotion'][emotion])
+                        
+                        if emotion_late< float(face['faceAttributes']['emotion'][emotion]):
+                            emotion_judge = emotion
+                            emotion_late = float(face['faceAttributes']['emotion'][emotion]) 
         if k ==ord("i") :
             cv2.imwrite('facecapture.jpg',frame)
             faces = CF.face.detect(img_url, face_id=True, landmarks=False, attributes='emotion')
