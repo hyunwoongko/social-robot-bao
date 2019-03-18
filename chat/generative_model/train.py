@@ -1,4 +1,5 @@
 import os
+import shutil
 
 import tensorflow as tf
 
@@ -18,14 +19,14 @@ def main(self):
     train_input, train_label, eval_input, eval_label = data.load_data()
 
     # 훈련셋 인코딩 만드는 부분이다.
-    train_input_enc, train_input_enc_length = data.enc_processing(train_input, char2idx,'train')
+    train_input_enc, train_input_enc_length = data.enc_processing(train_input, char2idx, 'train')
     # 훈련셋 디코딩 입력 부분 만드는 부분이다.
     train_output_dec, train_output_dec_length = data.dec_output_processing(train_label, char2idx)
     # 훈련셋 디코딩 출력 부분 만드는 부분이다.
     train_target_dec = data.dec_target_processing(train_label, char2idx)
 
     # 평가셋 인코딩 만드는 부분이다.
-    eval_input_enc, eval_input_enc_length = data.enc_processing(eval_input, char2idx,'train')
+    eval_input_enc, eval_input_enc_length = data.enc_processing(eval_input, char2idx, 'train')
     # 평가셋 인코딩 만드는 부분이다.
     eval_output_dec, eval_output_dec_length = data.dec_output_processing(eval_label, char2idx)
     # 평가셋 인코딩 만드는 부분이다.
@@ -61,6 +62,11 @@ def main(self):
     eval_result = classifier.evaluate(input_fn=lambda: data.eval_input_fn(
         eval_input_enc, eval_output_dec, eval_target_dec, DEFINES.batch_size))
     print('\nEVAL set accuracy: {accuracy:0.3f}\n'.format(**eval_result))
+
+    filename = 'test.txt'
+    src = '/home/banana/'
+    dir = '/home/banana/txt/'
+    shutil.move(src + filename, dir + filename)
 
 
 if __name__ == '__main__':

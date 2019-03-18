@@ -5,13 +5,12 @@ import generative_model.model as ml
 from generative_model.configs import DEFINES
 from hanspell.spell_checker import fix
 
-tf.logging.set_verbosity(tf.logging.ERROR)
-char2idx, idx2char, vocabulary_length = data.load_vocabulary('predict')
-
 
 def generate_answer(text):
     saved_answer = ''
-    predic_input_enc, predic_input_enc_length = data.enc_processing([text], char2idx, 'predict')
+    tf.logging.set_verbosity(tf.logging.ERROR)
+    char2idx, idx2char, vocabulary_length = data.load_vocabulary('train')
+    predic_input_enc, predic_input_enc_length = data.enc_processing([text], char2idx, 'train')
     predic_output_dec, predic_output_dec_length = data.dec_output_processing([""], char2idx)
     predic_target_dec = data.dec_target_processing([""], char2idx)
     classifier = tf.estimator.Estimator(
@@ -41,7 +40,3 @@ def generate_answer(text):
             saved_answer = answer
 
     return fix(answer)
-
-
-if __name__ == '__main__':
-    raise Exception('이 파일 실행하지 마시고 위의 함수 실행하세요')

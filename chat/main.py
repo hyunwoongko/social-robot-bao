@@ -1,7 +1,8 @@
 print("깨어나는 중입니다.")
-from os import environ;environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+import shutil
+import os; os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import tensorflow as tf;tf.logging.set_verbosity(tf.logging.ERROR)
-import answer_generator.answer_generator as generative
+from generative_model.answer_generator import generate_answer
 import scenario.scenario_translation as translation
 import scenario.scenario_weather as weather
 import scenario.scenario_wiki as wiki
@@ -10,6 +11,11 @@ from entity_recognizer.entity_recognizer import get_entity
 from hanspell.spell_checker import fix
 from intent_classifier.intent_classifier import get_intent
 from util.tokenizer import tokenize
+
+if os.path.isdir('data_out'):
+    shutil.rmtree('data_out')
+shutil.copytree('generative_model/data_out', 'data_out')
+# 생성모델 데이터 밖으로 빼내기
 
 while True:
     print("\n> 입력 하세요 : ", end='')
@@ -33,6 +39,6 @@ while True:
     elif intent == '위키':
         print('> ' + wiki.response(entity))
     elif intent == '잡담':
-        print('> ' + fix(generative.generate_answer(question)))
+        print('> ' + fix(generate_answer(question)))
     else:
-        print('> ' + fix(generative.generate_answer(question)))
+        print('> ' + fix(generate_answer(question)))

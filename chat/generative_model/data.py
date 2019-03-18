@@ -325,13 +325,11 @@ def load_vocabulary(mode):
     path = DEFINES.vocabulary_path
     if mode == 'train':
         path = DEFINES.vocabulary_path
-        PAD = "<PADDING>"
     elif mode == 'data':
         path = DEFINES.vocabulary_path
-        PAD = "<PADDING>"
     elif mode == 'predict':
         path = 'generative_model/' + DEFINES.vocabulary_path
-        PAD = "<PADDING>"
+
 
     # 사전을 담을 배열 준비한다.
     vocabulary_list = []
