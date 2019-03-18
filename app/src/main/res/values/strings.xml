@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Welfareapplcation</string>
+    <string name="kakao_app_key">0d5adb7f4c140d28185aaaf48a0eac4b</string>
 </resources>
