@@ -9,7 +9,6 @@ def train_intent():
 def train_entity():
     get_entity('', True)
 
-
 def train_all():
     get_intent('오늘 날씨', True)
     get_entity('오늘 날씨', True)

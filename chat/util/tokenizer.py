@@ -9,7 +9,7 @@ def tokenize(sentence):
     pos = tokenizer.pos(sentence, norm=True)
 
     for word, tag in pos:
-        if tag == 'Josa' or tag == 'Punctuation' or tag == 'Eomi' or tag == "Foreign" or tag == "바오":
+        if tag == 'Josa' or tag == 'Punctuation' or tag == "Foreign" or tag == "바오":
             continue
         else:
             word_bag.append(word)

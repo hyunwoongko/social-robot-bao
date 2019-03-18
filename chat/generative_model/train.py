@@ -63,14 +63,12 @@ def main(self):
         eval_input_enc, eval_output_dec, eval_target_dec, DEFINES.batch_size))
     print('\nEVAL set accuracy: {accuracy:0.3f}\n'.format(**eval_result))
 
-    filename = 'test.txt'
-    src = '/home/banana/'
-    dir = '/home/banana/txt/'
-    shutil.move(src + filename, dir + filename)
-
-
 if __name__ == '__main__':
+    if os.path.exists('data_out/vocabularyData.voc'):
+        shutil.rmtree('data_out/vocabularyData.voc')
+    char2idx, idx2char, vocabulary_length = data.load_vocabulary('data')
     tf.logging.set_verbosity(tf.logging.INFO)
     tf.app.run(main)
+
 
 tf.logging.set_verbosity

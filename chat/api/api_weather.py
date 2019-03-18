@@ -60,6 +60,8 @@ def today_weather(location):
         template_msg = '죄송해요. 아직 배우고 있는 중이라 ' + location + "의 날씨는 알 수 없어요. 지역의 이름을 말하시면 알려드릴게요."
 
     return template_msg
+
+
 # 네이버 맞춤법 크롤러
 
 
@@ -116,7 +118,6 @@ def tomorrow_weather(location):
             weather_morning[0] = '우박이 떨어지고'
         elif weather_morning[0] == "흐리고 가끔 비":
             weather_morning[0] = '흐리고 가끔 비가 내릴 수 있으며'
-
         if weather_noon[0] == "흐림":
             weather_noon[0] = '흐리고'
         elif weather_noon[0] == "맑음":
@@ -212,7 +213,6 @@ def after_tomorrow_weather(location):
             weather_morning[0] = '우박이 떨어지고'
         elif weather_morning[0] == "흐리고 가끔 비":
             weather_morning[0] = '흐리고 가끔 비가 내릴 수 있으며'
-
         if weather_noon[0] == "흐림":
             weather_noon[0] = '흐리고'
         elif weather_noon[0] == "맑음":
@@ -238,10 +238,8 @@ def after_tomorrow_weather(location):
 
         if '비가 내' in template_msg:
             template_msg += ' 모레는 우산을 챙기는게 좋을 것 같아요.'
-
         elif '눈이 내' in template_msg:
             template_msg += ' 모레 나가신다면 따뜻하게 입고 나가시는게 좋을 것 같아요.'
-
         elif '우박이' in template_msg:
             template_msg += ' 모레는 우박을 꼭 조심하세요!'
 
@@ -249,3 +247,55 @@ def after_tomorrow_weather(location):
         template_msg = '죄송해요. 아직 배우고 있는 중이라 ' + location + "의 날씨는 알 수 없어요. 지역의 이름을 말하시면 알려드릴게요."
 
     return template_msg
+
+
+def weather_specific(location, date):
+    try:
+        enc_location = urllib.parse.quote(location + date + ' 날씨')
+        url = 'https://www.google.com/search?q=' + enc_location
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+            'referer': 'http://google.com'}
+        req = Request(url, headers=headers)
+        page = urlopen(req)
+        html = page.read()
+        soup = bs4.BeautifulSoup(html, 'html.parser')
+
+        weather = soup.find('span', {'id': 'wob_dc'}).text
+        temp = soup.find('span', class_='wob_t').text
+        response = location + '의 날씨를 알려드릴게요. ' + location + '의 ' + date + ' 날씨는 ' + weather + ' 이고 온도는 ' + temp + '도입니다.'
+    except:
+        response = '죄송해요. 아직 배우고 있는 중이라 ' + location + "의 날씨는 알 수 없어요. 지역의 이름을 말하시면 알려드릴게요."
+    return response
+
+
+def weather_this_week(location):
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+            'referer': 'http://google.com'}
+
+        days = ['월', '화', '수', '목', '금', '토', '일']
+        templete_msg = location + '의 이번주 날씨를 알려드릴게요. '
+        response = []
+        response.append(templete_msg)
+
+        for i in days:
+            loc = urllib.parse.quote(location + ' ' + i + '요일' + ' 날씨')
+            url = 'https://www.google.com/search?q=' + loc
+            req = Request(url, headers=headers)
+            page = urlopen(req)
+            html = page.read()
+            soup = bs4.BeautifulSoup(html, 'html.parser')
+            weather = soup.find('span', {'id': 'wob_dc'}).text
+            temp = soup.find('span', class_='wob_t').text
+            weather = i + '요일은 ' + weather + '이고 온도는 ' + temp + '도 입니다. '
+            response.append(weather)
+    except:
+        response = '죄송해요. 아직 배우고 있는 중이라 ' + location + "의 날씨는 알 수 없어요. 지역의 이름을 말하시면 알려드릴게요."
+
+    return ' '.join(response)
+
+
+a = weather_this_week('전주시')
+print(a)

@@ -24,19 +24,23 @@ while True:
     question = fix(question)
 
     intent = get_intent(question, is_train=False)
-    entity = get_entity(question, is_train=False)
     emotion = get_emotion(question)
 
     print("\n전처리 문장 : ", question)
     print('발화 의도 : ', intent)
-    print('개체 분류 : ', entity)
     print('감정 지수 (-2 ~ 2) : ', emotion)
 
     if intent == '날씨':
+        entity = get_entity(question, is_train=False)
+        print('개체 분류 : ', entity)
         print('> ' + fix(weather.response(entity)))
     elif intent == '번역':
+        entity = get_entity(question, is_train=False)
+        print('개체 분류 : ', entity)
         print('> ' + translation.response(entity))
     elif intent == '위키':
+        entity = get_entity(question, is_train=False)
+        print('개체 분류 : ', entity)
         print('> ' + wiki.response(entity))
     elif intent == '잡담':
         print('> ' + fix(generate_answer(question)))
