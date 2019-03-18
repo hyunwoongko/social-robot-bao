@@ -3787,3 +3787,6674 @@
 남구 I-LOCATION
 날씨 O
 알려줄래 O
+
+다음 B-DATE
+주 I-DATE
+전주 B-LOCATION
+날씨 O
+알려줘 O
+
+이번 B-DATE
+주 I-DATE
+덕진구 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+부산 B-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+금천구 B-LOCATION
+날씨 O
+알려줄래 O
+
+금천구 B-LOCATION
+날씨 O
+알려줘 O
+
+반월동 B-LOCATION
+날씨 O
+알려줄래 O
+
+날씨 O
+알려줘 O
+
+날씨 O
+뭐야 O
+
+날씨 O
+알려줄래 O
+
+모레 B-DATE
+대구 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+미룡동 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+관악구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+마포구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+날씨 O
+알려줘 O
+
+모레 B-DATE
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+날씨 O
+알려줘 O
+
+내일 B-DATE
+서초구 B-LOCATION
+날씨 O
+알려줘 O
+
+관악구 B-LOCATION
+날씨 O
+알려줘 O
+
+조촌동 B-LOCATION
+날씨 O
+알려줘 O
+
+금암동 B-LOCATION
+날씨 O
+
+내일 B-DATE
+서초구 B-LOCATION
+날씨 O
+말해줘 O
+
+모레 B-DATE
+서초구 B-LOCATION
+날씨 O
+
+
+오늘 B-DATE
+관악구 B-LOCATION
+날씨 O
+말해주라 O
+
+이번 B-DATE
+주 I-DATE
+날씨 O
+
+
+다음 B-DATE
+주 I-DATE
+날씨 O
+뭐야 O
+
+이번 B-DATE
+달 I-DATE
+날씨 O
+말해줘 O
+
+다음 B-DATE
+달 I-DATE
+날씨 O
+알려주세요 O
+
+이번 B-DATE
+주 I-DATE
+강남구 B-LOCATION
+날씨 O
+
+
+오늘 B-DATE
+경기도 B-LOCATION
+구리 I-LOCATION
+날씨 O
+
+
+내일 B-DATE
+경기도 B-LOCATION
+부천 I-LOCATION
+날씨 O
+말해줘 O
+
+모레 B-DATE
+경기도 B-LOCATION
+의정부 I-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+제주도 B-LOCATION
+날씨 O
+뭐야 O
+
+오늘 B-DATE
+울릉도 B-LOCATION
+날씨 O
+뭐야 O
+
+오늘 B-DATE
+강원도 B-LOCATION
+날씨 O
+말해줘 O
+
+내일모레 B-DATE
+강원도 B-LOCATION
+강릉 I-LOCATION
+날씨 O
+말해줘 O
+
+모레 B-DATE
+강릉 B-LOCATION
+날씨 O
+말해줘 O
+
+이번 B-DATE
+주 I-DATE
+강릉 B-LOCATION
+날씨 O
+말해줘 O
+
+이번 B-DATE
+주 I-DATE
+강원도 B-LOCATION
+원주 I-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+삼척 B-LOCATION
+날씨 O
+말해줘 O
+
+내일모레 B-DATE
+강원도 B-LOCATION
+삼척 I-LOCATION
+날씨 O
+말해줘 O
+
+이번 B-DATE
+주 I-DATE
+강원도 B-LOCATION
+춘천 I-LOCATION
+날씨 O
+말해줘 O
+
+내일모레 B-DATE
+전라북도 B-LOCATION
+전주 I-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+날짜 O
+경기도 B-LOCATION
+고양 I-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+날짜 O
+경기도 B-LOCATION
+안양 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+경기도 B-LOCATION
+안양 I-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+안양 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+경기 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+경기 B-LOCATION
+동두천 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+날짜 O
+동두천 B-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+동두천 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+의정부 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+나운동 B-LOCATION
+날씨 O
+말해줘 O
+
+내일모레 B-DATE
+송천동 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+화순 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+전라남도 B-LOCATION
+여수 I-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+전라남도 B-LOCATION
+여수 I-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+광양 B-LOCATION
+날씨 O
+말해줘 O
+
+내일모레 B-DATE
+전라남도 B-LOCATION
+순천 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+전라북도 B-LOCATION
+부안 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+날씨 O
+알려줘 O
+
+내일 B-DATE
+날씨 O
+알려줘 O
+
+모레 B-DATE
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+부산 B-LOCATION
+날씨 O
+알려줘 O
+
+인천 B-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+서울특별시 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+광주 B-LOCATION
+날씨 O
+알려줘 O
+
+광주광역시 B-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+대구광역시 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+대구 B-LOCATION
+날씨 O
+알려줘 O
+
+이번 B-DATE
+주 I-DATE
+대구광역시 B-LOCATION
+날씨 O
+알려줘 O
+
+이번 B-DATE
+주 I-DATE
+대구 B-LOCATION
+날씨 O
+
+내일모레 B-DATE
+주 I-DATE
+울산 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+울산 B-LOCATION
+날씨 O
+뭐야 O
+
+내일 B-DATE
+울산광역시 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+서울특별시 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+날짜 O
+울산광역시 B-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+대구광역시 B-LOCATION
+날씨 O
+알려줘 O
+
+다음 B-DATE
+주 I-DATE
+대구 B-LOCATION
+날씨 O
+말해줄래 O
+
+내일 B-DATE
+춘천 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+충청북도 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+충청북도 B-LOCATION
+청주 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+청주 B-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+청주 B-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+청주 B-LOCATION
+날씨 O
+말해주라 O
+
+이번 B-DATE
+주 I-DATE
+청주 B-LOCATION
+날씨 O
+말해주라 O
+
+내일 B-DATE
+부안 B-LOCATION
+날씨 O
+말해주라 O
+
+오늘 B-DATE
+고양 B-LOCATION
+날씨 O
+말해주라 O
+
+이번 B-DATE
+주 I-DATE
+청주 B-LOCATION
+날씨 O
+말해주라 O
+
+내일모레 B-DATE
+양주 B-LOCATION
+날씨 O
+말해주라 O
+
+내일 B-DATE
+화성 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+화성 B-LOCATION
+날씨 O
+말해주라 O
+
+내일 B-DATE
+김포 B-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+광명 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+시흥 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+시흥 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+김포 B-LOCATION
+날씨 O
+알려줄래 O
+
+모레 B-DATE
+광명 B-LOCATION
+날씨 O
+알려줄래 O
+
+모레 B-DATE
+평택 B-LOCATION
+날씨 O
+알려줄래 O
+
+모레 B-DATE
+안산 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+김포 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+용인 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+김포 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+의정부 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+주 I-DATE
+김포 B-LOCATION
+날씨 O
+알려줄래 O
+
+이번 B-DATE
+주 I-DATE
+의정부 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+구리 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+하남 B-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+하남 B-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+여주 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+이천 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+이천 B-LOCATION
+날씨 O
+알려주라 O
+
+오늘 B-DATE
+오산 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+안성 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+평택 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+오산 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+안성 B-LOCATION
+날씨 O
+알려줘 O
+
+이번 B-DATE
+주 I-DATE
+평택 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+수원 B-LOCATION
+날씨 O
+알려줘 O
+
+이번 B-DATE
+주 I-DATE
+의왕 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+의왕 B-LOCATION
+날씨 O
+알려주세요 O
+
+내일 B-DATE
+안성 B-LOCATION
+날씨 O
+알려줘 O
+
+이번 B-DATE
+주 I-DATE
+평택 B-LOCATION
+날씨 O
+알려주세요 O
+
+이번 B-DATE
+주 I-DATE
+평택 B-LOCATION
+날씨 O
+알려주세요 O
+
+이번 B-DATE
+주 I-DATE
+용인 B-LOCATION
+날씨 O
+알려주세요 O
+
+오늘 B-DATE
+성남 B-LOCATION
+날씨 O
+알려주세요 O
+
+오늘 B-DATE
+수원 B-LOCATION
+날씨 O
+알려주세요 O
+
+오늘 B-DATE
+성남 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+가평 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+과천 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+남양주 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+화남 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+화남 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+남양주 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+경기도 B-LOCATION
+화남 I-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+경기도 B-LOCATION
+남양주 I-LOCATION
+날씨 O
+좀 O
+알려줘 O
+
+모레 B-DATE
+구리 B-LOCATION
+날씨 O
+좀 O
+알려줄 O
+수 O
+있니 O
+
+모레 B-DATE
+경기도 B-LOCATION
+구리 I-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+경기도 B-LOCATION
+구리 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+구리 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+경기도 B-LOCATION
+안산 I-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+경기도 B-LOCATION
+평택 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+안성 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+경기도 B-LOCATION
+수원 I-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+경기도 B-LOCATION
+성남 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+안동 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+성남 B-LOCATION
+날씨 O
+좀 O
+알려줄 O
+수 O
+있니 O
+
+내일 B-DATE
+서울 B-LOCATION
+종로구 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+서울 B-LOCATION
+구로구 I-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+서울 B-LOCATION
+마포구 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+서울 B-LOCATION
+광동구 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+종로구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+마포구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+광동구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+은평구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+중구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+종로구 I-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+용산구 I-LOCATION
+날씨 O
+말해줘 O
+
+서울 B-LOCATION
+용산구 I-LOCATION
+날씨 O
+말해줘 O
+
+용산 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+용산구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+서울시 B-LOCATION
+영등포구 I-LOCATION
+날씨 O
+알려줘 O
+
+영등포구 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+영등포 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+영등포구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+동대문구 I-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+동대문구 B-LOCATION
+날씨 O
+알려줘 O
+
+송파구 I-LOCATION
+날씨 O
+말해줘 O
+
+송파 I-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+송파구 I-LOCATION
+날씨 O
+말해줘 O
+
+모레 B-DATE
+송파구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+광진구 I-LOCATION
+날씨 O
+알려줘 O
+
+광진구 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+광진구 B-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+강북구 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+강북구 I-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+강북구 B-LOCATION
+날씨 O
+알려줘 O
+
+광진구 B-LOCATION
+날씨 O
+말해줘 O
+
+내일모레 B-DATE
+광진구 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+성북구 I-LOCATION
+날씨 O
+알려줘 O
+
+강북구 B-LOCATION
+날씨 O
+말해줘 O
+
+내일모레 B-DATE
+강북구 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+동작구 I-LOCATION
+날씨 O
+알려줘 O
+
+서울 B-LOCATION
+금천구 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+동작구 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+도봉구 I-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+서울 B-LOCATION
+도봉구 I-LOCATION
+날씨 O
+알려줄래 O
+
+모레 B-DATE
+도봉구 B-LOCATION
+날씨 O
+말해줘 O
+
+내일모레 B-DATE
+서울시 B-LOCATION
+서대분구 I-LOCATION
+날씨 O
+알려줄래 O
+
+오늘 B-DATE
+서울 B-LOCATION
+서대문구 I-LOCATION
+날씨 O
+알려줄래 O
+
+모레 B-DATE
+서대문구 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+서울 B-LOCATION
+금천구 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+서울시 B-LOCATION
+금천구 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+양천구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+서울 B-LOCATION
+구로구 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+서울시 B-LOCATION
+구로구 I-LOCATION
+날씨 O
+알려줄래 O
+
+모레 B-DATE
+서초구 B-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+서울시 B-LOCATION
+성북구 I-LOCATION
+날씨 O
+알려줄래 O
+
+모레 B-DATE
+광진구 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+서울시 B-LOCATION
+노원구 I-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+서울 B-LOCATION
+노원구 I-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충북 B-LOCATION
+청주 I-LOCATION
+날씨 O
+말해줘 O
+
+모레 B-DATE
+청주 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+충북 B-LOCATION
+진천 I-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청북도 B-LOCATION
+진천 I-LOCATION
+날씨 O
+말해줘 O
+
+모레 B-DATE
+진천시 B-LOCATION
+날씨 O
+알려줘 O
+
+내일모레 B-DATE
+광진구 B-LOCATION
+날씨 O
+말해줘 O
+
+모레 B-DATE
+서울 B-LOCATION
+노원구 I-LOCATION
+날씨 O
+알려줘 O
+
+모레 B-DATE
+서울시 B-LOCATION
+노원구 I-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+광진구 B-LOCATION
+날씨 O
+알려줄 O
+수 O
+있니 O
+
+내일모레 B-DATE
+서울시 B-LOCATION
+노원구 I-LOCATION
+날씨 O
+알려줄 O
+수 O
+있겠니 O
+
+내일모레 B-DATE
+화천 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+화천군 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+강원도 B-LOCATION
+화천군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+홍천 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+홍천군 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+강원 B-LOCATION
+홍천군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+강원도 B-LOCATION
+홍천군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+횡성 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+횡성군 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+강원도 B-LOCATION
+횡성군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+강원 B-LOCATION
+횡성군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+원주 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+원주시 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+강원 B-LOCATION
+원주시 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+강원도 B-LOCATION
+원주시 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+인제 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+인제군 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+강원 B-LOCATION
+인제군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+강원도 B-LOCATION
+인제군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+태백 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+태백시 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+강원도 B-LOCATION
+태백시 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+동해 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+동해시 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+강원 B-LOCATION
+동해시 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+강원도 B-LOCATION
+동해시 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+영월 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+영월군 B-LOCATION
+날씨 O
+알려줘 O
+
+강원 B-LOCATION
+영월군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+강원도 B-LOCATION
+영월군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+정성 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+정성군 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+강원 B-LOCATION
+정선군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+강원도 B-LOCATION
+정선군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+평창 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+평창군 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+강원 B-LOCATION
+평창군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+강원도 B-LOCATION
+평창군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+속초 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+속초시 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+강원 B-LOCATION
+속초시 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+강원 B-LOCATION
+속초 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+강원도 B-LOCATION
+속초시 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+삼척 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+삼척시 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+강원도 B-LOCATION
+삼척시 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+고성 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+고성군 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+강원도 B-LOCATION
+고성군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+강원 B-LOCATION
+고성 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+강원도 B-LOCATION
+고성군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+양구 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+양구군 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+강원도 B-LOCATION
+양구군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+강원 B-LOCATION
+양구 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+양양 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+양양군 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+강원도 B-LOCATION
+양양군 I-LOCATION
+날씨 O
+알려줄래 O
+
+양양군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+강원 B-LOCATION
+양양군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+횡성 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+횡성군 B-LOCATION
+날씨 O
+알려줘 O
+
+횡성군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+강원도 B-LOCATION
+횡성군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+강원 B-LOCATION
+횡성군 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일모레 B-DATE
+삼철 B-LOCATION
+날씨 O
+말해줘 O
+
+삼척시 B-LOCATION
+날씨 O
+알려줘 O
+
+오늘 B-DATE
+삼척시 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+강원도 B-LOCATION
+삼척시 I-LOCATION
+날씨 O
+알려줄래 O
+
+내일 B-DATE
+강원 B-LOCATION
+삼척시 I-LOCATION
+날씨 O
+알려줄래 O
+
+강원 B-LOCATION
+삼척시 I-LOCATION
+날씨 O
+알려줄래 O
+
+모레 B-DATE
+제천 B-LOCATION
+날씨 O
+말해줘 O
+
+오늘 B-DATE
+제천시 B-LOCATION
+날씨 O
+알려줘 O
+
+내일 B-DATE
+충청북도 B-LOCATION
+괴산군 I-LOCATION
+날씨 O
+알려줄래 O
+
+충북 B-LOCATION
+괴산 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+괴산군 B-LOCATION
+날씨 O
+뭐야 O
+
+괴산 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청북도 B-LOCATION
+보은군 I-LOCATION
+날씨 O
+알려줄래 O
+
+충북 B-LOCATION
+보은 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+보은군 B-LOCATION
+날씨 O
+뭐야 O
+
+보은 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청북도 B-LOCATION
+영동군 I-LOCATION
+날씨 O
+알려줄래 O
+
+충북 B-LOCATION
+영동 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+영동군 B-LOCATION
+날씨 O
+뭐야 O
+
+영동 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청북도 B-LOCATION
+옥천군 I-LOCATION
+날씨 O
+알려줄래 O
+
+충북 B-LOCATION
+옥천 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+옥천군 B-LOCATION
+날씨 O
+뭐야 O
+
+옥천 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청북도 B-LOCATION
+음성군 I-LOCATION
+날씨 O
+알려줄래 O
+
+충북 B-LOCATION
+음성 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+음성군 B-LOCATION
+날씨 O
+뭐야 O
+
+음성 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청북도 B-LOCATION
+단양군 I-LOCATION
+날씨 O
+알려줄래 O
+
+충북 B-LOCATION
+단양 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+단양군 B-LOCATION
+날씨 O
+뭐야 O
+
+단양 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청북도 B-LOCATION
+증평군 I-LOCATION
+날씨 O
+알려줄래 O
+
+충북 B-LOCATION
+증평 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+증평군 B-LOCATION
+날씨 O
+뭐야 O
+
+증평 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청남도 B-LOCATION
+태안군 I-LOCATION
+날씨 O
+알려줄래 O
+
+충남 B-LOCATION
+태안 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+태안군 B-LOCATION
+날씨 O
+뭐야 O
+
+태안 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청남도 B-LOCATION
+공주시 I-LOCATION
+날씨 O
+알려줄래 O
+
+충남 B-LOCATION
+공주 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+공주시 B-LOCATION
+날씨 O
+뭐야 O
+
+공주 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청남도 B-LOCATION
+부여군 I-LOCATION
+날씨 O
+알려줄래 O
+
+충남 B-LOCATION
+부여 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+부여군 B-LOCATION
+날씨 O
+뭐야 O
+
+부여 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청남도 B-LOCATION
+금산군 I-LOCATION
+날씨 O
+알려줄래 O
+
+충남 B-LOCATION
+금산 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+금산군 B-LOCATION
+날씨 O
+뭐야 O
+
+금산 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청남도 B-LOCATION
+서천군 I-LOCATION
+날씨 O
+알려줄래 O
+
+충남 B-LOCATION
+서천 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+서천군 B-LOCATION
+날씨 O
+뭐야 O
+
+서천 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+군산시 B-LOCATION
+미룡동 I-LOCATION
+날씨 O
+알려줄래 O
+
+군산시 B-LOCATION
+미룡동 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+미룡동 B-LOCATION
+날씨 O
+뭐야 O
+
+미룡동 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+군산시 B-LOCATION
+옥서면 I-LOCATION
+날씨 O
+알려줄래 O
+
+군산시 B-LOCATION
+옥서면 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+옥서면 B-LOCATION
+날씨 O
+뭐야 O
+
+옥서면 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+군산시 B-LOCATION
+옥구읍 I-LOCATION
+날씨 O
+알려줄래 O
+
+군산시 B-LOCATION
+옥구 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+옥구읍 B-LOCATION
+날씨 O
+뭐야 O
+
+옥구 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청남도 B-LOCATION
+청양군 I-LOCATION
+날씨 O
+알려줄래 O
+
+충남 B-LOCATION
+청양 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+청양군 B-LOCATION
+날씨 O
+뭐야 O
+
+청양 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청남도 B-LOCATION
+논산시 I-LOCATION
+날씨 O
+알려줄래 O
+
+충남 B-LOCATION
+논산 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+논산시 B-LOCATION
+날씨 O
+뭐야 O
+
+논산 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청남도 B-LOCATION
+당진시 I-LOCATION
+날씨 O
+알려줄래 O
+
+충남 B-LOCATION
+당진 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+당진시 B-LOCATION
+날씨 O
+뭐야 O
+
+당진 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청남도 B-LOCATION
+보령시 I-LOCATION
+날씨 O
+알려줄래 O
+
+충남 B-LOCATION
+보령 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+보령시 B-LOCATION
+날씨 O
+뭐야 O
+
+보령 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청남도 B-LOCATION
+예산군 I-LOCATION
+날씨 O
+알려줄래 O
+
+충남 B-LOCATION
+예산 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+예산군 B-LOCATION
+날씨 O
+뭐야 O
+
+예산 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청남도 B-LOCATION
+아산시 I-LOCATION
+날씨 O
+알려줄래 O
+
+충남 B-LOCATION
+아산 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+아산시 B-LOCATION
+날씨 O
+뭐야 O
+
+아산 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청남도 B-LOCATION
+천안시 I-LOCATION
+날씨 O
+알려줄래 O
+
+충남 B-LOCATION
+천안 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+천안시 B-LOCATION
+날씨 O
+뭐야 O
+
+천안 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청남도 B-LOCATION
+당진 I-LOCATION
+날씨 O
+알려줄래 O
+
+충남 B-LOCATION
+당진 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+당진시 B-LOCATION
+날씨 O
+뭐야 O
+
+당진 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청남도 B-LOCATION
+홍성군 I-LOCATION
+날씨 O
+알려줄래 O
+
+충남 B-LOCATION
+홍성 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+홍성군 B-LOCATION
+날씨 O
+뭐야 O
+
+홍성 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청남도 B-LOCATION
+계룡시 I-LOCATION
+날씨 O
+알려줄래 O
+
+충남 B-LOCATION
+계룡 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+계룡시 B-LOCATION
+날씨 O
+뭐야 O
+
+계룡 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+충청남도 B-LOCATION
+서천시 I-LOCATION
+날씨 O
+알려줄래 O
+
+충남 B-LOCATION
+서천 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+서천시 B-LOCATION
+날씨 O
+뭐야 O
+
+서천 B-LOCATION
+날씨 O
+말해줘 O
+
+군산 B-LOCATION
+대야 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+대야면 B-LOCATION
+날씨 O
+뭐야 O
+
+대야 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+전라북도 B-LOCATION
+임실군 I-LOCATION
+날씨 O
+알려줄래 O
+
+전북 B-LOCATION
+임실 I-LOCATION
+날씨 O
+말해줄래 O
+
+오늘 B-DATE
+임실군 B-LOCATION
+날씨 O
+뭐야 O
+
+임실 B-LOCATION
+날씨 O
+말해줘 O
+
+내일 B-DATE
+전라북도 B-LOCATION
+장수군 I-LOCATION
+날씨 O
+알려줄래 O
+
+전북 B-LOCATION
+무주군 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+완주군 B-LOCATION
+날씨 O
+알려주라 O
+
+정읍 B-LOCATION
+날씨 O
+뭐야 O
+
+내일 B-DATE
+전라북도 B-LOCATION
+장수군 I-LOCATION
+날씨 O
+알려줄래 O
+
+전북 B-LOCATION
+무주군 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+완주군 B-LOCATION
+날씨 O
+알려주라 O
+
+정읍 B-LOCATION
+날씨 O
+뭐야 O
+
+내일 B-DATE
+전라북도 B-LOCATION
+익산시 I-LOCATION
+날씨 O
+알려줄래 O
+
+전북 B-LOCATION
+고창군 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+완주군 B-LOCATION
+날씨 O
+알려주라 O
+
+고창군 B-LOCATION
+날씨 O
+뭐야 O
+
+내일 B-DATE
+전라북도 B-LOCATION
+남원시 I-LOCATION
+날씨 O
+알려줄래 O
+
+전북 B-LOCATION
+군산시 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+순창군 B-LOCATION
+날씨 O
+알려주라 O
+
+익산 B-LOCATION
+날씨 O
+뭐야 O
+
+내일 B-DATE
+전라북도 B-LOCATION
+군산 I-LOCATION
+날씨 O
+알려줄래 O
+
+전북 B-LOCATION
+김제 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+김제시 B-LOCATION
+날씨 O
+알려주라 O
+
+부안 B-LOCATION
+날씨 O
+뭐야 O
+
+내일 B-DATE
+전라북도 B-LOCATION
+진안 I-LOCATION
+날씨 O
+알려줄래 O
+
+전북 B-LOCATION
+진안군 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+무주군 B-LOCATION
+날씨 O
+알려주라 O
+
+무주 B-LOCATION
+날씨 O
+뭐야 O
+
+내일 B-DATE
+전라북도 B-LOCATION
+무주군 I-LOCATION
+날씨 O
+알려줄래 O
+
+전북 B-LOCATION
+진안군 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+무주군 B-LOCATION
+날씨 O
+알려주라 O
+
+진안 B-LOCATION
+날씨 O
+뭐야 O
+
+내일 B-DATE
+전라북도 B-LOCATION
+부안군 I-LOCATION
+날씨 O
+알려줄래 O
+
+전북 B-LOCATION
+순창군 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+순창군 B-LOCATION
+날씨 O
+알려주라 O
+
+부안 B-LOCATION
+날씨 O
+뭐야 O
+
+
+내일 B-DATE
+전라북도 B-LOCATION
+김제시 I-LOCATION
+날씨 O
+알려줄래 O
+
+전북 B-LOCATION
+김제 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+익산시 B-LOCATION
+날씨 O
+알려주라 O
+
+김제 B-LOCATION
+날씨 O
+뭐야 O
+
+
+내일 B-DATE
+전라북도 B-LOCATION
+무주군 I-LOCATION
+날씨 O
+알려줄래 O
+
+전북 B-LOCATION
+장수군 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+장수군 B-LOCATION
+날씨 O
+알려주라 O
+
+장수 B-LOCATION
+날씨 O
+뭐야 O
+
+
+내일 B-DATE
+전라북도 B-LOCATION
+순창군 I-LOCATION
+날씨 O
+알려줄래 O
+
+전북 B-LOCATION
+고창군 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+부안군 B-LOCATION
+날씨 O
+알려주라 O
+
+임실 B-LOCATION
+날씨 O
+뭐야 O
+
+
+내일 B-DATE
+전라북도 B-LOCATION
+남원시 I-LOCATION
+날씨 O
+알려줄래 O
+
+전북 B-LOCATION
+김제시 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+고창군 B-LOCATION
+날씨 O
+알려주라 O
+
+익산 B-LOCATION
+날씨 O
+뭐야 O
+
+
+내일 B-DATE
+전라남도 B-LOCATION
+진도군 I-LOCATION
+날씨 O
+알려줄래 O
+
+전남 B-LOCATION
+진도군 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+완도군 B-LOCATION
+날씨 O
+알려주라 O
+
+완도 B-LOCATION
+날씨 O
+뭐야 O
+
+내일 B-DATE
+전라남도 B-LOCATION
+완도군 I-LOCATION
+날씨 O
+알려줄래 O
+
+전남 B-LOCATION
+완도군 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+진도군 B-LOCATION
+날씨 O
+알려주라 O
+
+진도 B-LOCATION
+날씨 O
+뭐야 O
+
+내일 B-DATE
+전라남도 B-LOCATION
+곡성군 I-LOCATION
+날씨 O
+알려줄래 O
+
+전남 B-LOCATION
+여수시 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+보성군 B-LOCATION
+날씨 O
+알려주라 O
+
+해남 B-LOCATION
+날씨 O
+뭐야 O
+
+
+내일 B-DATE
+전라남도 B-LOCATION
+단양군 I-LOCATION
+날씨 O
+알려줄래 O
+
+전남 B-LOCATION
+장성군 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+영광군 B-LOCATION
+날씨 O
+알려주라 O
+
+신안 B-LOCATION
+날씨 O
+뭐야 O
+
+내일 B-DATE
+광주시 B-LOCATION
+날씨 O
+알려줄래 O
+
+전남 B-LOCATION
+나주시 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+나주시 B-LOCATION
+날씨 O
+알려주라 O
+
+나주 B-LOCATION
+날씨 O
+뭐야 O
+
+내일 B-DATE
+전라남도 B-LOCATION
+광양시 I-LOCATION
+날씨 O
+알려줄래 O
+
+전남 B-LOCATION
+광양시 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+구례군 B-LOCATION
+날씨 O
+알려주라 O
+
+구례 B-LOCATION
+날씨 O
+뭐야 O
+
+내일 B-DATE
+전라남도 B-LOCATION
+장성군 I-LOCATION
+날씨 O
+알려줄래 O
+
+전남 B-LOCATION
+함평시 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+화순군 B-LOCATION
+날씨 O
+알려주라 O
+
+함평 B-LOCATION
+날씨 O
+뭐야 O
+
+내일 B-DATE
+전라남도 B-LOCATION
+고흥군 I-LOCATION
+날씨 O
+알려줄래 O
+
+전남 B-LOCATION
+고흥군 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+고흥군 B-LOCATION
+날씨 O
+알려주라 O
+
+고흥 B-LOCATION
+날씨 O
+뭐야 O
+
+
+내일 B-DATE
+전라남도 B-LOCATION
+영광군 I-LOCATION
+날씨 O
+알려줄래 O
+
+전남 B-LOCATION
+영광시 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+영광군 B-LOCATION
+날씨 O
+알려주라 O
+
+영광 B-LOCATION
+날씨 O
+뭐야 O
+
+
+내일 B-DATE
+전라남도 B-LOCATION
+목포시 I-LOCATION
+날씨 O
+알려줄래 O
+
+전남 B-LOCATION
+목포시 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+담양군 B-LOCATION
+날씨 O
+알려주라 O
+
+담양 B-LOCATION
+날씨 O
+뭐야 O
+
+내일 B-DATE
+전라남도 B-LOCATION
+해남시 I-LOCATION
+날씨 O
+알려줄래 O
+
+전남 B-LOCATION
+함평군 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+무안군 B-LOCATION
+날씨 O
+알려주라 O
+
+목포 B-LOCATION
+날씨 O
+뭐야 O
+
+
+내일 B-DATE
+전라남도 B-LOCATION
+장성시 I-LOCATION
+날씨 O
+알려줄래 O
+
+전남 B-LOCATION
+화산시 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+곡성군 B-LOCATION
+날씨 O
+알려주라 O
+
+담양 B-LOCATION
+날씨 O
+뭐야 O
+
+
+내일 B-DATE
+전라남도 B-LOCATION
+보성군 I-LOCATION
+날씨 O
+알려줄래 O
+
+전남 B-LOCATION
+무안군 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+무안군 B-LOCATION
+날씨 O
+알려주라 O
+
+무안 B-LOCATION
+날씨 O
+뭐야 O
+
+
+내일 B-DATE
+전라남도 B-LOCATION
+나주 I-LOCATION
+날씨 O
+알려줄래 O
+
+전남 B-LOCATION
+나주시 I-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+완도군 B-LOCATION
+날씨 O
+알려주라 O
+
+진도 B-LOCATION
+날씨 O
+뭐야 O
+
+내일 B-DATE
+경북 B-LOCATION
+고령군 I-LOCATION
+날씨 O
+어때 O
+
+경상북도 B-LOCATION
+고령군 I-LOCATION
+날씨 O
+어떤지 O
+말해주세요 O
+
+오늘 B-DATE
+고령군 B-LOCATION
+날씨 O
+뭔지 O
+알아 O
+
+고령 B-LOCATION
+날씨 O
+알려주세요 O
+
+내일 B-DATE
+경북 B-LOCATION
+예천군 I-LOCATION
+날씨 O
+어때 O
+
+경상북도 B-LOCATION
+예천군 I-LOCATION
+날씨 O
+어떤지 O
+말해주세요 O
+
+오늘 B-DATE
+경산시 B-LOCATION
+날씨 O
+뭔지 O
+알아 O
+
+경산 B-LOCATION
+날씨 O
+알려주세요 O
+
+
+내일 B-DATE
+경북 B-LOCATION
+상주시 I-LOCATION
+날씨 O
+어때 O
+
+경상북도 B-LOCATION
+구미시 I-LOCATION
+날씨 O
+어떤지 O
+말해주세요 O
+
+오늘 B-DATE
+구미시 B-LOCATION
+날씨 O
+뭔지 O
+알아 O
+
+구미 B-LOCATION
+날씨 O
+알려주세요 O
+
+
+내일 B-DATE
+경북 B-LOCATION
+칠곡군 I-LOCATION
+날씨 O
+어때 O
+
+경상북도 B-LOCATION
+김천 I-LOCATION
+날씨 O
+어떤지 O
+말해주세요 O
+
+오늘 B-DATE
+김천시 B-LOCATION
+날씨 O
+뭔지 O
+알아 O
+
+칠곡 B-LOCATION
+날씨 O
+알려주세요 O
+
+
+내일 B-DATE
+경북 B-LOCATION
+고령군 I-LOCATION
+날씨 O
+어때 O
+
+경상북도 B-LOCATION
+고령군 I-LOCATION
+날씨 O
+어떤지 O
+말해주세요 O
+
+오늘 B-DATE
+고령군 B-LOCATION
+날씨 O
+뭔지 O
+알아 O
+
+고령 B-LOCATION
+날씨 O
+알려주세요 O
+
+
+내일 B-DATE
+경북 B-LOCATION
+경주 I-LOCATION
+날씨 O
+어때 O
+
+경상북도 B-LOCATION
+포항시 I-LOCATION
+날씨 O
+어떤지 O
+말해주세요 O
+
+오늘 B-DATE
+포항시 B-LOCATION
+날씨 O
+뭔지 O
+알아 O
+
+포항 B-LOCATION
+날씨 O
+알려주세요 O
+
+
+내일 B-DATE
+경북 B-LOCATION
+문경시 I-LOCATION
+날씨 O
+어때 O
+
+경상북도 B-LOCATION
+문경 I-LOCATION
+날씨 O
+어떤지 O
+말해주세요 O
+
+오늘 B-DATE
+대구광역시 B-LOCATION
+날씨 O
+뭔지 O
+알아 O
+
+대구 B-LOCATION
+날씨 O
+알려주세요 O
+
+
+내일 B-DATE
+경상북도 B-LOCATION
+울진군 I-LOCATION
+날씨 O
+어때 O
+
+경상북도 B-LOCATION
+봉화군 I-LOCATION
+날씨 O
+어떤지 O
+말해주세요 O
+
+오늘 B-DATE
+울릉군 B-LOCATION
+날씨 O
+뭔지 O
+알아 O
+
+봉화 B-LOCATION
+날씨 O
+알려주세요 O
+
+
+내일 B-DATE
+경상북도 B-LOCATION
+영양군 I-LOCATION
+날씨 O
+어때 O
+
+경상북도 B-LOCATION
+울진군 I-LOCATION
+날씨 O
+어떤지 O
+말해주세요 O
+
+오늘 B-DATE
+울진군 B-LOCATION
+날씨 O
+뭔지 O
+알아 O
+
+울진 B-LOCATION
+날씨 O
+알려주세요 O
+
+
+내일 B-DATE
+경북 B-LOCATION
+예천군 I-LOCATION
+날씨 O
+어때 O
+
+경상북도 B-LOCATION
+의성군 I-LOCATION
+날씨 O
+어떤지 O
+말해주세요 O
+
+오늘 B-DATE
+군위군 B-LOCATION
+날씨 O
+뭔지 O
+알아 O
+
+경산 B-LOCATION
+날씨 O
+알려주세요 O
+
+
+내일 B-DATE
+경상북도 B-LOCATION
+문경시 I-LOCATION
+날씨 O
+어때 O
+
+경상북도 B-LOCATION
+청도군 I-LOCATION
+날씨 O
+어떤지 O
+말해주세요 O
+
+오늘 B-DATE
+성주군 B-LOCATION
+날씨 O
+뭔지 O
+알아 O
+
+구미 B-LOCATION
+날씨 O
+알려주세요 O
+
+
+내일 B-DATE
+경북 B-LOCATION
+봉화군 I-LOCATION
+날씨 O
+어때 O
+
+경상북도 B-LOCATION
+청송군 I-LOCATION
+날씨 O
+어떤지 O
+말해주세요 O
+
+오늘 B-DATE
+청송군 B-LOCATION
+날씨 O
+뭔지 O
+알아 O
+
+양천시 B-LOCATION
+날씨 O
+알려주세요 O
+
+
+내일 B-DATE
+경북 B-LOCATION
+영덕군 I-LOCATION
+날씨 O
+어때 O
+
+경상북도 B-LOCATION
+영덕군 I-LOCATION
+날씨 O
+어떤지 O
+말해주세요 O
+
+오늘 B-DATE
+청도군 B-LOCATION
+날씨 O
+뭔지 O
+알아 O
+
+청도 B-LOCATION
+날씨 O
+알려주세요 O
+
+
+내일 B-DATE
+경상북도 B-LOCATION
+예천군 I-LOCATION
+날씨 O
+어때 O
+
+경상북도 B-LOCATION
+날씨 O
+어떤지 O
+말해주세요 O
+
+오늘 B-DATE
+청송군 B-LOCATION
+날씨 O
+뭔지 O
+알아 O
+
+영덕 B-LOCATION
+날씨 O
+알려주세요 O
+
+
+내일 B-DATE
+경상북도 B-LOCATION
+예천군 I-LOCATION
+날씨 O
+어때 O
+
+경상북도 B-LOCATION
+성주군 B-LOCATION
+날씨 O
+어떤지 O
+말해주세요 O
+
+오늘 B-DATE
+군위군 B-LOCATION
+날씨 O
+뭔지 O
+알아 O
+
+군위 B-LOCATION
+날씨 O
+알려주세요 O
+
+내일 B-DATE
+경상북도 B-LOCATION
+구미시 I-LOCATION
+날씨 O
+어때 O
+
+경상북도 B-LOCATION
+문경시 B-LOCATION
+날씨 O
+어떤지 O
+말해주세요 O
+
+오늘 B-DATE
+울진군 B-LOCATION
+날씨 O
+뭔지 O
+알아 O
+
+울진 B-LOCATION
+날씨 O
+알려주세요 O
+
+
+
+내일 B-DATE
+경상북도 B-LOCATION
+고령군 I-LOCATION
+날씨 O
+어때 O
+
+경상북도 B-LOCATION
+영주시 B-LOCATION
+날씨 O
+어떤지 O
+말해주세요 O
+
+오늘 B-DATE
+포항시 B-LOCATION
+날씨 O
+뭔지 O
+알아 O
+
+포항 B-LOCATION
+날씨 O
+알려주세요 O
+
+내일 B-DATE
+경남 B-LOCATION
+김해 I-LOCATION
+날씨 O
+어떠니 O
+
+경상남도 B-LOCATION
+통영시 B-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+고성군 B-LOCATION
+날씨 O
+뭔지 O
+알고있니 O
+
+진주 B-LOCATION
+날씨 O
+알려줄 O
+수 O
+있니 O
+
+
+내일 B-DATE
+경남 B-LOCATION
+의령 I-LOCATION
+날씨 O
+어떠니 O
+
+경상남도 B-LOCATION
+의령군 B-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+함안군 B-LOCATION
+날씨 O
+뭔지 O
+알고있니 O
+
+거제 B-LOCATION
+날씨 O
+알려줄 O
+수 O
+있니 O
+
+
+내일 B-DATE
+경남 B-LOCATION
+거창 I-LOCATION
+날씨 O
+어떠니 O
+
+경상남도 B-LOCATION
+산청군 B-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+하동 B-LOCATION
+날씨 O
+뭔지 O
+알고있니 O
+
+하동군 B-LOCATION
+날씨 O
+알려줄 O
+수 O
+있니 O
+
+
+내일 B-DATE
+경남 B-LOCATION
+양산 I-LOCATION
+날씨 O
+어떠니 O
+
+경상남도 B-LOCATION
+창원 B-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+사천 B-LOCATION
+날씨 O
+뭔지 O
+알고있니 O
+
+남해 B-LOCATION
+날씨 O
+알려줄 O
+수 O
+있니 O
+
+
+내일 B-DATE
+경남 B-LOCATION
+창녕 I-LOCATION
+날씨 O
+어떠니 O
+
+경상남도 B-LOCATION
+창녕군 B-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+함양군 B-LOCATION
+날씨 O
+뭔지 O
+알고있니 O
+
+통영 B-LOCATION
+날씨 O
+알려줄 O
+수 O
+있니 O
+
+
+내일 B-DATE
+경남 B-LOCATION
+함양 I-LOCATION
+날씨 O
+어떠니 O
+
+경상남도 B-LOCATION
+합천군 B-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+오늘 B-DATE
+양산시 B-LOCATION
+날씨 O
+뭔지 O
+알고있니 O
+
+창원 B-LOCATION
+날씨 O
+알려줄 O
+수 O
+있니 O
+
+
+내일 B-DATE
+경남 B-LOCATION
+창녕 I-LOCATION
+날씨 O
+어떠니 O
+
+경상남도 B-LOCATION
+양산시 B-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+모레 B-DATE
+하동군 B-LOCATION
+날씨 O
+뭔지 O
+알고있니 O
+
+진주 B-LOCATION
+날씨 O
+알려줄 O
+수 O
+있니 O
+
+내일 B-DATE
+경남 B-LOCATION
+창원 I-LOCATION
+날씨 O
+어떠니 O
+
+경상남도 B-LOCATION
+밀양시 B-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+모레 B-DATE
+산청군 B-LOCATION
+날씨 O
+뭔지 O
+알고있니 O
+
+산청 B-LOCATION
+날씨 O
+알려줄 O
+수 O
+있니 O
+
+내일 B-DATE
+경남 B-LOCATION
+창녕 I-LOCATION
+날씨 O
+어떠니 O
+
+경상남도 B-LOCATION
+양산시 B-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+모레 B-DATE
+하동군 B-LOCATION
+날씨 O
+뭔지 O
+알고있니 O
+
+진주 B-LOCATION
+날씨 O
+알려줄 O
+수 O
+있니 O
+
+내일 B-DATE
+경남 B-LOCATION
+밀양 I-LOCATION
+날씨 O
+어떠니 O
+
+경상남도 B-LOCATION
+거제시 B-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+모레 B-DATE
+함안군 B-LOCATION
+날씨 O
+뭔지 O
+알고있니 O
+
+하동 B-LOCATION
+날씨 O
+알려줄 O
+수 O
+있니 O
+
+내일 B-DATE
+경남 B-LOCATION
+사천 I-LOCATION
+날씨 O
+어떠니 O
+
+경상남도 B-LOCATION
+의령군 B-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+모레 B-DATE
+의령군 B-LOCATION
+날씨 O
+뭔지 O
+알고있니 O
+
+밀양 B-LOCATION
+날씨 O
+알려줄 O
+수 O
+있니 O
+
+내일 B-DATE
+경남 B-LOCATION
+김해시 I-LOCATION
+날씨 O
+어떠니 O
+
+경상남도 B-LOCATION
+의령군 B-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+모레 B-DATE
+사천시 B-LOCATION
+날씨 O
+뭔지 O
+알고있니 O
+
+사천 B-LOCATION
+날씨 O
+알려줄 O
+수 O
+있니 O
+
+내일 B-DATE
+경남 B-LOCATION
+밀양시 I-LOCATION
+날씨 O
+어떠니 O
+
+경상남도 B-LOCATION
+합천군 B-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+모레 B-DATE
+부산시 B-LOCATION
+날씨 O
+뭔지 O
+알고있니 O
+
+부산 B-LOCATION
+날씨 O
+알려줄 O
+수 O
+있니 O
+
+내일 B-DATE
+경남 B-LOCATION
+거창 I-LOCATION
+날씨 O
+어떠니 O
+
+경상남도 B-LOCATION
+의령군 B-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+모레 B-DATE
+산청군 B-LOCATION
+날씨 O
+뭔지 O
+알고있니 O
+
+통영 B-LOCATION
+날씨 O
+알려줄 O
+수 O
+있니 O
+
+내일 B-DATE
+제주 B-LOCATION
+서귀포 I-LOCATION
+날씨 O
+어떠니 O
+
+제주도 B-LOCATION
+서귀포시 B-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+모레 B-DATE
+안덕면 B-LOCATION
+날씨 O
+뭔지 O
+알고있니 O
+
+대정읍 B-LOCATION
+날씨 O
+알려줄 O
+수 O
+있니 O
+
+
+내일 B-DATE
+제주 B-LOCATION
+조전읍 I-LOCATION
+날씨 O
+어떠니 O
+
+제주도 B-LOCATION
+성산읍 B-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+모레 B-DATE
+표선면 B-LOCATION
+날씨 O
+뭔지 O
+알고있니 O
+
+남원읍 B-LOCATION
+날씨 O
+알려줄 O
+수 O
+있니 O
+
+
+내일 B-DATE
+제주 B-LOCATION
+한경면 I-LOCATION
+날씨 O
+어떠니 O
+
+제주도 B-LOCATION
+한림읍 B-LOCATION
+날씨 O
+좀 O
+말해주세요 O
+
+모레 B-DATE
+애월읍 B-LOCATION
+날씨 O
+뭔지 O
+알고있니 O
+
+구좌읍 B-LOCATION
+날씨 O
+알려줘요 O
+
+제주도 B-LOCATION
+한림읍 B-LOCATION
+날씨 O
+말해주세요 O
+
+모레 B-DATE
+애월읍 B-LOCATION
+날씨 O
+알고있니 O
+
+구좌읍 B-LOCATION
+날씨 O
+알려줘 O
+
+인천 B-LOCATION
+청라2동 B-LOCATION
+날씨 O
+알려줘요 O
+
+인천시 B-LOCATION
+원당동 I-LOCATION
+날씨 O
+말해주세요 O
+
+모레 B-DATE
+당하동 B-LOCATION
+날씨 O
+알고있니 O
+
+오류황길동 B-LOCATION
+날씨 O
+알려줘 O
+
+인천 B-LOCATION
+연희동 B-LOCATION
+날씨 O
+알려줘요 O
+
+인천시 B-LOCATION
+검암경서동 I-LOCATION
+날씨 O
+말해주세요 O
+
+모레 B-DATE
+불로대곡동 B-LOCATION
+날씨 O
+알고있니 O
+
+검단동 B-LOCATION
+날씨 O
+알려줘 O
+
+
+인천 B-LOCATION
+계양구 B-LOCATION
+날씨 O
+알려줘요 O
+
+인천시 B-LOCATION
+동구 I-LOCATION
+날씨 O
+말해주세요 O
+
+모레 B-DATE
+서구 B-LOCATION
+날씨 O
+알고있니 O
+
+인천 B-LOCATION
+날씨 O
+알려줘 O
+
+
+인천 B-LOCATION
+부평구 B-LOCATION
+날씨 O
+알려줘요 O
+
+인천시 B-LOCATION
+남동구 I-LOCATION
+날씨 O
+말해주세요 O
+
+모레 B-DATE
+중구 B-LOCATION
+날씨 O
+알고있니 O
+
+인천 B-LOCATION
+날씨 O
+알려줘 O
+
+인천 B-LOCATION
+대청동 I-LOCATION
+날씨 O
+알려줘요 O
+
+인천시 B-LOCATION
+효동 I-LOCATION
+날씨 O
+말해주세요 O
+
+모레 B-DATE
+산내동 B-LOCATION
+날씨 O
+알고있니 O
+
+인천 B-LOCATION
+날씨 O
+알려줘 O
+
+전주 B-LOCATION
+평화동 I-LOCATION
+날씨 O
+알려줘요 O
+
+인천시 B-LOCATION
+북구 I-LOCATION
+날씨 O
+말해주세요 O
+
+모레 B-DATE
+송천동 B-LOCATION
+날씨 O
+알고있니 O
+
+덕진동 B-LOCATION
+날씨 O
+알려줘 O
+
+광주 B-LOCATION
+서구 I-LOCATION
+날씨 O
+알려줘요 O
+
+광주시 B-LOCATION
+동구 I-LOCATION
+날씨 O
+말해주세요 O
+
+모레 B-DATE
+남구 B-LOCATION
+날씨 O
+알고있니 O
+
+광산구 B-LOCATION
+날씨 O
+알려줘 O
+
+
+광주 B-LOCATION
+북구 I-LOCATION
+날씨 O
+알려줘요 O
+
+광주시 B-LOCATION
+남구 I-LOCATION
+날씨 O
+말해주세요 O
+
+모레 B-DATE
+남구 B-LOCATION
+날씨 O
+알고있니 O
+
+광산구 B-LOCATION
+날씨 O
+알려줘 O
+
+부산 B-LOCATION
+해운대구 I-LOCATION
+날씨 O
+알려줘요 O
+
+부산시 B-LOCATION
+영도구 I-LOCATION
+날씨 O
+말해주세요 O
+
+모레 B-DATE
+사하구 B-LOCATION
+날씨 O
+알고있니 O
+
+강서구 B-LOCATION
+날씨 O
+알려줘 O
+
+부산 B-LOCATION
+해연제구구 I-LOCATION
+날씨 O
+알려줘요 O
+
+부산시 B-LOCATION
+동래구 I-LOCATION
+날씨 O
+말해주세요 O
+
+모레 B-DATE
+수영구 B-LOCATION
+날씨 O
+알고있니 O
+
+사상구 B-LOCATION
+날씨 O
+알려줘 O
+
+부산 B-LOCATION
+중구구 I-LOCATION
+날씨 O
+알려줘요 O
+
+부산시 B-LOCATION
+사상구 I-LOCATION
+날씨 O
+말해주세요 O
+
+모레 B-DATE
+부산진구 B-LOCATION
+날씨 O
+알고있니 O
+
+남구구 B-LOCATION
+날씨 O
+알려줘 O
+
+부산 B-LOCATION
+보수동 I-LOCATION
+날씨 O
+알려줘요 O
+
+부산시 B-LOCATION
+중앙동 I-LOCATION
+날씨 O
+말해주세요 O
+
+모레 B-DATE
+제송동 B-LOCATION
+날씨 O
+알고있니 O
+
+송정동 B-LOCATION
+날씨 O
+알려줘 O
+
+부산 B-LOCATION
+영주동 I-LOCATION
+날씨 O
+알려줘요 O
+
+부산시 B-LOCATION
+동광동 I-LOCATION
+날씨 O
+말해주세요 O
+
+모레 B-DATE
+광복동 B-LOCATION
+날씨 O
+알고있니 O
+
+남포동 B-LOCATION
+날씨 O
+알려줘 O
+
+대구 B-LOCATION
+동구 I-LOCATION
+날씨 O
+알려줘요 O
+
+대구시 B-LOCATION
+달성군 I-LOCATION
+날씨 O
+말해주세요 O
+
+모레 B-DATE
+수성구 B-LOCATION
+날씨 O
+알고있니 O
+
+대구 B-LOCATION
+중구 I-LOCATION
+날씨 O
+알려줘요 O
+
+대구시 B-LOCATION
+달서구 I-LOCATION
+날씨 O
+말해주세요 O
+
+모레 B-DATE
+달성군 B-LOCATION
+날씨 O
+알고있니 O
+
+대구 B-LOCATION
+북구 I-LOCATION
+날씨 O
+알려줘요 O
+
+대구시 B-LOCATION
+중구 I-LOCATION
+날씨 O
+말해주세요 O
+
+대전 B-LOCATION
+대덕구 I-LOCATION
+날씨 O
+알려줘요 O
+
+대전시 B-LOCATION
+동구 I-LOCATION
+날씨 O
+말해주세요 O
+
+대전시 B-LOCATION
+날씨 O
+말해주세요 O
+
+
+대전 B-LOCATION
+중구 I-LOCATION
+날씨 O
+알려줘요 O
+
+대전시 B-LOCATION
+대덕구 I-LOCATION
+날씨 O
+말해주세요 O
+
+유성구 B-LOCATION
+날씨 O
+말해주세요 O
+
+
+세종특별자치시 B-LOCATION
+날씨 O
+알려줘요 O
+
+세종 B-LOCATION
+날씨 O
+말해주세요 O
+
+세종시 B-LOCATION
+날씨 O
+말해주세요 O
+
+울산시 B-LOCATION
+울주군 I-LOCATION
+날씨 O
+알려줄래 O
+
+세종 B-LOCATION
+날씨 O
+말해주세요 O
+
+울산시 B-LOCATION
+날씨 O
+말해주세요 O
+
+울산시 B-LOCATION
+북구 I-LOCATION
+날씨 O
+알려줄래 O
+
+울산시 B-LOCATION
+남구 I-LOCATION
+날씨 O
+알려줄래 O
+
+사랑해 B-WORD
+일본어 B-LANG
+뭐야 O
+
+사랑해 B-WORD
+일본어 B-LANG
+알려줘 O
+
+사랑해 B-WORD
+일본어 B-LANG
+뭐니 O
+
+일본어 B-LANG
+알려줘 O
+
+바보 B-WORD
+일본어 B-LANG
+말해줘 O
+
+이상 B-WORD
+일본어 B-LANG
+말해줄래 O
+
+게임 B-WORD
+일본어 B-LANG
+뭔데 O
+
+자전거 B-WORD
+일본어 B-LANG
+뭔지 O
+알아 O
+
+이거 O
+일본어 B-LANG
+뭔지 O
+알려줄래 O
+
+미안해 B-WORD
+일본어 B-LANG
+번역 O
+
+사랑해 B-WORD
+일본어 B-LANG
+번역해줘 O
+
+일본어 B-LANG
+번역해줘 O
+
+일본어 B-LANG
+번역해줄래 O
+
+일본어 B-LANG
+말해줘 O
+
+지구 B-WORD
+일본어로 B-LANG
+말해주라 O
+
+미안해 B-WORD
+일본어 B-LANG
+뭐야 O
+
+가위 B-WORD
+일본어 B-LANG
+알려줘 O
+
+동전 B-WORD
+일본어 B-LANG
+뭐니 O
+
+등산 B-WORD
+일본어로 B-LANG
+뭔지 O
+알려줘 O
+
+사나이 B-WORD
+일본어 B-LANG
+말해줘 O
+
+남자 B-WORD
+일본어 B-LANG
+말해줄래 O
+
+오징어 B-WORD
+일본어 B-LANG
+뭔데 O
+
+문어 B-WORD
+일본어 B-LANG
+뭔지 O
+알아 O
+
+돼지 B-WORD
+일본어 B-LANG
+뭔지 O
+알려줄래 O
+
+사과 B-WORD
+일본어 B-LANG
+번역 O
+
+배가 B-WORD
+뭔지 O
+일본어 B-LANG
+번역해줘 O
+
+이불 B-WORD
+번역해줘 O
+
+해파리 B-WORD
+일본어로 B-LANG
+번역 O
+해줄래 O
+
+이 O
+문장 O
+일본어로 B-LANG
+말해줘 O
+
+이 O
+단어 O
+일본어로 B-LANG
+말해주라 O
+
+일본어 LANG
+알려줘 O
+
+돈까스 B-WORD
+일본말 B-LANG
+뭐야 O
+
+물고기 B-WORD
+일본말 B-LANG
+알려줘 O
+
+기타 B-WORD
+일본말 B-LANG
+뭐니 O
+
+모자 B-WORD
+일본말 B-LANG
+알려줘 O
+
+바보 B-WORD
+일본말 B-LANG
+말해줘 O
+
+상장 B-WORD
+일본말 B-LANG
+말해줄래 O
+
+필통 B-WORD
+일본말 B-LANG
+뭔데 O
+
+자동차 B-WORD
+일본말 B-LANG
+뭔지 O
+알아 O
+
+이거 O
+일본말 B-LANG
+뭔지 O
+알려줄래 O
+
+고마워 B-WORD
+일본말 B-LANG
+번역 O
+
+서랍 B-WORD
+일본말 B-LANG
+번역해줘 O
+
+일본말 B-LANG
+번역해줘 O
+
+일본말 B-LANG
+번역해줄래 O
+
+일본말 B-LANG
+말해줘 O
+
+화성 B-WORD
+일본말로 B-LANG
+말해주라 O
+
+섬 B-WORD
+일본말 B-LANG
+뭐야 O
+
+거위 B-WORD
+일본말 B-LANG
+알려줘 O
+
+지폐 B-WORD
+일본말 B-LANG
+뭐니 O
+
+동기 B-WORD
+일본말로 B-LANG
+뭔지 O
+알려줘 O
+
+여자 B-WORD
+일본말 B-LANG
+말해줘 O
+
+사람 B-WORD
+일본말 B-LANG
+말해줄래 O
+
+한국 B-WORD
+일본말 B-LANG
+뭔데 O
+
+수육 B-WORD
+일본말 B-LANG
+뭔지 O
+알아 O
+
+소고기 B-WORD
+일본말 B-LANG
+뭔지 O
+알려줄래 O
+
+참외 B-WORD
+일본말 B-LANG
+번역 O
+
+오리 B-WORD
+뭔지 O
+일본말 B-LANG
+번역해줘 O
+
+이불 B-WORD
+번역해줘 O
+
+일본말로 B-LANG
+호랑이 B-WORD
+번역 O
+해줄래 O
+
+이 O
+문장 O
+일본말로 B-LANG
+말해줘 O
+
+이 O
+단어 O
+일본말로 B-LANG
+말해주라 O
+
+일본말 LANG
+알려줘 O
+
+사랑합니다 B-WORD
+일본말 B-LANG
+뭐야 O
+
+당신을 B-WORD
+사랑합니다 I-WORD
+일본어로 B-LANG
+알려줘 O
+
+일본어로 B-LANG
+소풍을 B-WORD
+떠나요 I-WORD
+뭐니 O
+
+당신을 B-WORD
+생각하고 I-WORD
+있어요 I-WORD
+일본어로 B-LANG
+알려줘 O
+
+일본어로 B-LANG
+바보 B-WORD
+같은 I-WORD
+녀석 I-WORD
+말해줘 O
+
+저는 B-WORD
+학교에 I-WORD
+가요 I-WORD
+일본말 B-LANG
+말해줄래 O
+
+음악을 B-WORD
+들어요 I-WORD
+일본말 B-LANG
+뭔데 O
+
+일본어로 B-LANG
+자동차 B-WORD
+타다 I-WORD
+뭔지 O
+알아 O
+
+사랑합니다 B-WORD
+이거 O
+일본말 B-LANG
+뭔지 O
+알려줄래 O
+
+꽃 B-WORD
+한송이가 I-WORD
+피었습니다 I-WORD
+일본어로 B-LANG
+번역 O
+해줘 O
+
+일본말로 B-LANG
+문을 B-WORD
+열어요 I-WORD
+번역해줘 O
+
+일본말 B-LANG
+번역해줘 O
+
+일본말 B-LANG
+번역해줄래 O
+
+일본말 B-LANG
+말해줘 O
+
+화가 B-WORD
+났어요 I-WORD
+일본말로 B-LANG
+말해주라 O
+
+배를 B-WORD
+타고 I-WORD
+떠나요 I-WORD
+일본말 B-LANG
+뭐야 O
+
+가족들과 B-WORD
+여행을 I-WORD
+떠나요 I-WORD
+일본말 B-LANG
+알려줘 O
+
+일본어로 B-LANG
+지폐 B-WORD
+세고있어요 I-WORD
+뭐니 O
+
+늘 B-WORD
+당신만을 I-WORD
+바라볼래요 I-WORD
+일본말로 B-LANG
+뭔지 O
+알려줘 O
+
+일본어로 B-LANG
+여자친구 B-WORD
+보고싶어요 I-WORD
+번역 O
+해줄래 O
+
+일본말 B-LANG
+사람들과 B-WORD
+함께 I-WORD
+사는 I-WORD
+삶 I-WORD
+말해줄래 O
+
+한국 B-WORD
+일본말로 B-LANG
+뭐라고 O
+하니 O
+
+수육 B-WORD
+먹고싶다 I-WORD
+일본말 B-LANG
+뭔지 O
+알아 O
+
+일본어로 B-LANG
+소고기 B-WORD
+덮밥을 I-WORD
+뭐라고 O
+하는지 O
+알려줄래 O
+
+영화를 B-WORD
+보아요 I-WORD
+일본말 B-LANG
+번역 O
+해줘 O
+
+오리 B-WORD
+무슨 O
+말인지 O
+일본말 B-LANG
+번역해줘 O
+
+이불 B-WORD
+뭔지 O
+일본어로 I-WORD
+번역해줘 O
+
+일본말로 B-LANG
+호랑이 B-WORD
+뭔지 O
+번역 O
+해줄래 O
+
+당신을 B-WORD
+사랑합니다 I-WORD
+이 O
+문장 O
+일본말로 B-LANG
+말해줘 O
+
+이 O
+단어 O
+일본말로 B-LANG
+말해주라 O
+
+일본말 LANG
+알려줘 O
+
+너를 B-WORD
+좋아해 I-WORD
+영어 B-LANG
+뭐야 O
+
+사랑해 B-WORD
+영어 B-LANG
+알려줘 O
+
+행복 B-WORD
+영어 B-LANG
+뭐니 O
+
+행복해요 B-WORD
+영어 B-LANG
+알려줘 O
+
+또라이 B-WORD
+영어 B-LANG
+말해줘 O
+
+시간 B-WORD
+흐른다 I-WORD
+영어 B-LANG
+말해줄래 O
+
+영어 B-LANG
+시간 B-WORD
+흐른다 I-WORD
+말해줄래 O
+
+게임 B-WORD
+영어 B-LANG
+뭔데 O
+
+요트 B-WORD
+영어 B-LANG
+뭔지 O
+알아 O
+
+이거 O
+영어 B-LANG
+뭔지 O
+알려줄래 O
+
+감사함 B-WORD
+영어 B-LANG
+번역 O
+
+신발끈 B-WORD
+영어 B-LANG
+번역해줘 O
+
+영어 B-LANG
+번역해줘 O
+
+영어 B-LANG
+번역해줄래 O
+
+영어 B-LANG
+말해줘 O
+
+복성이 B-WORD
+영어로 B-LANG
+뭔지 O
+알고있니 O
+
+정말 B-WORD
+고마워 I-WORD
+영어 B-LANG
+뭐야 O
+
+집게 B-WORD
+영어 B-LANG
+알려줘 O
+
+조개 B-WORD
+영어 B-LANG
+뭐니 O
+
+등본을 B-WORD
+영어로 B-LANG
+뭔지 O
+알려줘 O
+
+군인 B-WORD
+영어 B-LANG
+말해줘 O
+
+오빠 B-WORD
+영어 B-LANG
+말해줄래 O
+
+이삿짐 B-WORD
+영어 B-LANG
+뭔데 O
+
+꽃게 B-WORD
+영어 B-LANG
+뭔지 O
+알아 O
+
+토끼 B-WORD
+영어 B-LANG
+뭔지 O
+알려줄래 O
+
+멜론 B-WORD
+영어 B-LANG
+번역 O
+
+분장 B-WORD
+뭔지 O
+영어 B-LANG
+번역해줘 O
+
+침대 B-WORD
+번역해줘 O
+
+물고기 B-WORD
+영어로 B-LANG
+번역 O
+해줄래 O
+
+행복한 B-WORD
+이 O
+문장 O
+영어로 B-LANG
+말해줘 O
+
+즐거운 B-WORD
+이 O
+단어 O
+영어로 B-LANG
+말해주라 O
+
+영어 LANG
+알려줘 O
+
+찌개 B-WORD
+영어 B-LANG
+뭐야 O
+
+배게 B-WORD
+영어 B-LANG
+알려줘 O
+
+하모니카 B-WORD
+영어 B-LANG
+뭐니 O
+
+바이올린 B-WORD
+영어 B-LANG
+알려줘 O
+
+멍청한 B-WORD
+영어 B-LANG
+말해줘 O
+
+상상 B-WORD
+영어 B-LANG
+말해줄래 O
+
+필기구 B-WORD
+영어 B-LANG
+뭔데 O
+
+연필 B-WORD
+영어 B-LANG
+뭔지 O
+알아 O
+
+소통하다 B-WORD
+이거 O
+영어 B-LANG
+뭔지 O
+알려줄래 O
+
+임신 B-WORD
+영어 B-LANG
+번역 O
+
+승리하다 B-WORD
+영어 B-LANG
+번역해줘 O
+
+영어 B-LANG
+번역해줘 O
+
+영어 B-LANG
+번역해줄래 O
+
+영어 B-LANG
+말해줘 O
+
+정신 B-WORD
+영어로 B-LANG
+말해주라 O
+
+성 B-WORD
+영어 B-LANG
+뭐야 O
+
+분기 B-WORD
+영어 B-LANG
+알려줘 O
+
+지수 B-WORD
+영어 B-LANG
+뭐니 O
+
+장애 B-WORD
+영어로 B-LANG
+뭔지 O
+알려줘 O
+
+자폐 B-WORD
+영어 B-LANG
+말해줘 O
+
+정상 B-WORD
+영어 B-LANG
+말해줄래 O
+
+발달하다 B-WORD
+영어 B-LANG
+뭔데 O
+
+송어 B-WORD
+영어 B-LANG
+뭔지 O
+알아 O
+
+연어 B-WORD
+영어 B-LANG
+뭔지 O
+알려줄래 O
+
+초장 B-WORD
+영어 B-LANG
+번역 O
+
+된장 B-WORD
+뭔지 O
+영어 B-LANG
+번역해줘 O
+
+외투 B-WORD
+번역해줘 O
+
+영어로 B-LANG
+밥솥 B-WORD
+번역 O
+해줄래 O
+
+이 O
+문장 O
+영어로 B-LANG
+말해줘 O
+
+크레파스 B-WORD
+이 O
+단어 O
+영어로 B-LANG
+말해주라 O
+
+영어 LANG
+알려줘 O
+
+좋아합니다 B-WORD
+영어 B-LANG
+뭐야 O
+
+너를 B-WORD
+존경합니다 I-WORD
+영어로 B-LANG
+알려줘 O
+
+영어로 B-LANG
+음악을 B-WORD
+재생해요 I-WORD
+뭐니 O
+
+선생님을 B-WORD
+쳐다보고 I-WORD
+있어요 I-WORD
+영어로 B-LANG
+알려줘 O
+
+영어로 B-LANG
+천재 B-WORD
+같은 I-WORD
+친구 I-WORD
+말해줘 O
+
+친구랑 B-WORD
+놀러 I-WORD
+가요 I-WORD
+영어 B-LANG
+말해줄래 O
+
+노래를 B-WORD
+불러요 I-WORD
+영어 B-LANG
+뭔데 O
+
+영어로 B-LANG
+비행기 B-WORD
+타다 I-WORD
+뭔지 O
+알아 O
+
+고맙습니다 B-WORD
+이거 O
+영어 B-LANG
+뭔지 O
+알려줄래 O
+
+장미 B-WORD
+한 I-WORD
+송이가 I-WORD
+피었습니다 I-WORD
+영어로 B-LANG
+번역 O
+해줘 O
+
+영어로 B-LANG
+창문을 B-WORD
+열어요 I-WORD
+번역해줘 O
+
+영어 B-LANG
+번역해줘 O
+
+영어 B-LANG
+번역해줄래 O
+
+영어 B-LANG
+말해줘 O
+
+여드름이 B-WORD
+났어요 I-WORD
+영어로 B-LANG
+말해주라 O
+
+기차를 B-WORD
+타고 I-WORD
+떠나요 I-WORD
+영어 B-LANG
+뭐야 O
+
+아이들과 B-WORD
+여행을 I-WORD
+떠나요 I-WORD
+영어 B-LANG
+알려줘 O
+
+영어로 B-LANG
+동전을 B-WORD
+세고있어요 I-WORD
+뭐니 O
+
+오늘도 B-WORD
+당신만을 I-WORD
+함께할래요 I-WORD
+영어로 B-LANG
+뭔지 O
+알려줘 O
+
+영어로 B-LANG
+여자친구 B-WORD
+보고싶어요 I-WORD
+번역 O
+해줄래 O
+
+영어 B-LANG
+꿈꾸는 B-WORD
+아이들 I-WORD
+말해줄래 O
+
+일본을 B-WORD
+영어로 B-LANG
+뭐라고 O
+하니 O
+
+보쌈 B-WORD
+먹고싶네 I-WORD
+영어 B-LANG
+뭔지 O
+알아 O
+
+영어로 B-LANG
+시카고 B-WORD
+피자를 I-WORD
+먹고싶다 I-WORD
+뭐라고 O
+하는지 O
+알려줄래 O
+
+드라마를 B-WORD
+보아요 I-WORD
+영어 B-LANG
+번역 O
+해줘 O
+
+철새가 B-WORD
+무슨 O
+말인지 O
+영어 B-LANG
+번역해줘 O
+
+멀티탭 B-WORD
+뭔지 O
+영어로 I-WORD
+번역해줘 O
+
+영어로 B-LANG
+컴퓨터 B-WORD
+뭔지 O
+번역 O
+해줄래 O
+
+나를 B-WORD
+믿는 I-WORD
+마음 I-WORD
+이 O
+문장 O
+영어로 B-LANG
+말해줘 O
+
+이 O
+단어 O
+영어로 B-LANG
+말해주라 O
+
+영어 LANG
+알려줘 O
+
+너를 B-WORD
+좋아해 I-WORD
+영어 B-LANG
+뭐야 O
+
+좋아해 B-WORD
+프랑스어 B-LANG
+알려줘 O
+
+자유 B-WORD
+프랑스어 B-LANG
+뭐니 O
+
+희망적인 B-WORD
+프랑스어 B-LANG
+알려줘 O
+
+박애 B-WORD
+프랑스어 B-LANG
+말해줘 O
+
+달팽이가 B-WORD
+지나간다 I-WORD
+프랑스어 B-LANG
+말해줄래 O
+
+프랑스어 B-LANG
+에펠탑 B-WORD
+가고싶다 I-WORD
+말해줄래 O
+
+수학 B-WORD
+프랑스어 B-LANG
+뭔데 O
+
+바나나 B-WORD
+프랑스어 B-LANG
+뭔지 O
+알아 O
+
+자동으로 B-WORD
+열리다 I-WORD
+이거 O
+프랑스어 B-LANG
+뭔지 O
+알려줄래 O
+
+감자칩 B-WORD
+프랑스어 B-LANG
+번역 O
+
+손목 B-WORD
+프랑스어 B-LANG
+번역해줘 O
+
+프랑스어 B-LANG
+번역해줘 O
+
+프랑스어 B-LANG
+번역해줄래 O
+
+프랑스어 B-LANG
+말해줘 O
+
+시계 B-WORD
+프랑스어로 B-LANG
+뭔지 O
+알고있니 O
+
+그가 B-WORD
+국수를 I-WORD
+먹었다 I-WORD
+프랑스어 B-LANG
+뭐야 O
+
+햄버거 B-WORD
+프랑스어 B-LANG
+알려줘 O
+
+관자 B-WORD
+프랑스어 B-LANG
+뭐니 O
+
+등갈비를 B-WORD
+프랑스어로 B-LANG
+뭔지 O
+알려줘 O
+
+자장면을 B-WORD
+프랑스어 B-LANG
+뭐라고 O
+하니 O
+
+언니 B-WORD
+프랑스어 B-LANG
+말해줄래 O
+
+기찻길 B-WORD
+프랑스어 B-LANG
+뭔데 O
+
+나무 B-WORD
+프랑스어 B-LANG
+뭔지 O
+알아 O
+
+숲이 B-WORD
+프랑스어 B-LANG
+뭔지 O
+알려줄래 O
+
+멜론 B-WORD
+프랑스어 B-LANG
+번역 O
+
+분수대 B-WORD
+뭔지 O
+프랑스어 B-LANG
+번역해줘 O
+
+친구 B-WORD
+번역해줘 O
+
+돌고래 B-WORD
+프랑스어로 B-LANG
+번역 O
+해줄래 O
+
+사랑스러운 B-WORD
+당신 I-WORD
+이 O
+문장 O
+프랑스어로 B-LANG
+말해줘 O
+
+자유로운 B-WORD
+이 O
+단어 O
+프랑스어로 B-LANG
+말해주라 O
+
+프랑스어 LANG
+알려줘 O
+
+김치찌개 B-WORD
+프랑스어 B-LANG
+뭐야 O
+
+스피커 B-WORD
+프랑스어 B-LANG
+알려줘 O
+
+첼로 B-WORD
+프랑스어 B-LANG
+뭐니 O
+
+화이트보드 B-WORD
+프랑스어 B-LANG
+알려줘 O
+
+불리한 B-WORD
+프랑스어 B-LANG
+말해줘 O
+
+시원한 B-WORD
+프랑스어 B-LANG
+말해줄래 O
+
+노트북 B-WORD
+프랑스어 B-LANG
+뭔데 O
+
+공책 B-WORD
+프랑스어 B-LANG
+뭔지 O
+알아 O
+
+고대하다 B-WORD
+이거 O
+프랑스어 B-LANG
+뭔지 O
+알려줄래 O
+
+결혼 B-WORD
+프랑스어 B-LANG
+번역 O
+
+패배하다 B-WORD
+프랑스어 B-LANG
+번역해줘 O
+
+프랑스어 B-LANG
+번역해줘 O
+
+프랑스어 B-LANG
+번역해줄래 O
+
+프랑스어 B-LANG
+말해줘 O
+
+마음 B-WORD
+프랑스어로 B-LANG
+말해주라 O
+
+심장이 B-WORD
+뛰다 I-WORD
+프랑스어 B-LANG
+뭐야 O
+
+분개하다 B-WORD
+프랑스어 B-LANG
+알려줘 O
+
+회계 B-WORD
+프랑스어 B-LANG
+뭐니 O
+
+조우하다 B-WORD
+프랑스어로 B-LANG
+뭔지 O
+알려줘 O
+
+조아리다 B-WORD
+프랑스어 B-LANG
+말해줘 O
+
+종이 B-WORD
+프랑스어 B-LANG
+말해줄래 O
+
+청소하다 B-WORD
+프랑스어 B-LANG
+뭔데 O
+
+방어 B-WORD
+프랑스어 B-LANG
+뭔지 O
+알아 O
+
+멸치 B-WORD
+프랑스어 B-LANG
+뭔지 O
+알려줄래 O
+
+명치 B-WORD
+프랑스어 B-LANG
+번역 O
+
+뭉치 B-WORD
+뭔지 O
+프랑스어 B-LANG
+번역해줘 O
+
+오타 B-WORD
+번역해줘 O
+
+프랑스어로 B-LANG
+공기청정기 B-WORD
+번역 O
+해줄래 O
+
+이 O
+문장 O
+프랑스어로 B-LANG
+말해줘 O
+
+크레용 B-WORD
+이 O
+단어 O
+프랑스어로 B-LANG
+말해주라 O
+
+프랑스어 LANG
+알려줘 O
+
+드래곤 B-WORD
+프랑스어 B-LANG
+뭐야 O
+
+오늘은 B-WORD
+당신을 I-WORD
+믿어요 I-WORD
+꼭 I-WORD
+지켜주세요 I-WORD
+프랑스어로 B-LANG
+알려줘 O
+
+프랑스어로 B-LANG
+클래식을 B-WORD
+좋아해요 I-WORD
+뭐니 O
+
+교수님을 B-WORD
+지켜보고 I-WORD
+있어요 I-WORD
+프랑스어로 B-LANG
+알려줘 O
+
+프랑스어로 B-LANG
+우리 B-WORD
+같은 I-WORD
+사람들 I-WORD
+말해줘 O
+
+엄마랑 B-WORD
+식사해서 I-WORD
+신나요 I-WORD
+프랑스어 B-LANG
+말해줄래 O
+
+모래를 B-WORD
+쌓아요 I-WORD
+프랑스어 B-LANG
+뭔데 O
+
+프랑스어로 B-LANG
+방을 B-WORD
+탈출하다 I-WORD
+뭔지 O
+알아 O
+
+재밌는 B-WORD
+영화를 I-WORD
+볼래요 I-WORD
+이거 O
+프랑스어 B-LANG
+뭔지 O
+알려줄래 O
+
+튤립 B-WORD
+세 I-WORD
+송이가 I-WORD
+피었습니다 I-WORD
+프랑스어로 B-LANG
+번역 O
+해줘 O
+
+프랑스어로 B-LANG
+칠판을 B-WORD
+닦아요 I-WORD
+번역해줘 O
+
+프랑스어 B-LANG
+번역해줘 O
+
+프랑스어 B-LANG
+번역해줄래 O
+
+프랑스어 B-LANG
+말해줘 O
+
+상처가 B-WORD
+나았어요 I-WORD
+프랑스어로 B-LANG
+말해주라 O
+
+아이를 B-WORD
+낳고 I-WORD
+있어요 I-WORD
+프랑스어 B-LANG
+뭐야 O
+
+아버지와 B-WORD
+함께 I-WORD
+목욕해요 I-WORD
+프랑스어 B-LANG
+알려줘 O
+
+프랑스어로 B-LANG
+둥근 B-WORD
+해가 I-WORD
+떴어요 I-WORD
+뭐니 O
+
+다음 B-WORD
+주에도 I-WORD
+유치원에 I-WORD
+갈거에요 I-WORD
+프랑스어로 B-LANG
+뭔지 O
+알려줘 O
+
+프랑스어로 B-LANG
+남자친구 B-WORD
+보고싶어요 I-WORD
+번역 O
+해줄래 O
+
+프랑스어 B-LANG
+새파란 B-WORD
+하늘 I-WORD
+말해줄래 O
+
+저녁 B-WORD
+노을을 I-WORD
+프랑스어로 B-LANG
+뭐라고 O
+하니 O
+
+라면 B-WORD
+먹고싶어 I-WORD
+프랑스어 B-LANG
+뭔지 O
+알아 O
+
+프랑스어로 B-LANG
+봉골레 B-WORD
+파스타가 I-WORD
+먹고싶다 I-WORD
+뭐라고 O
+하는지 O
+알려줄래 O
+
+연속극을 B-WORD
+보아요 I-WORD
+프랑스어 B-LANG
+번역 O
+해줘 O
+
+참새가 B-WORD
+무슨 O
+말인지 O
+프랑스어 B-LANG
+번역해줘 O
+
+앵무새가 B-WORD
+무슨 O
+말인지 O
+프랑스어 B-LANG
+번역해줘 O
+
+까마귀가 B-WORD
+무슨 O
+말인지 O
+프랑스어 B-LANG
+번역해줘 O
+
+암탉 B-WORD
+무슨 O
+말인지 O
+프랑스어 B-LANG
+번역해줘 O
+
+수탉 B-WORD
+무슨 O
+말인지 O
+프랑스어 B-LANG
+번역해줘 O
+
+무기징역 B-WORD
+뭔지 O
+프랑스어로 I-WORD
+번역해줘 O
+
+프랑스어로 B-LANG
+감옥 B-WORD
+뭔지 O
+번역 O
+해줄래 O
+
+그녀를 B-WORD
+혐오하는 I-WORD
+생각 I-WORD
+이 O
+문장 O
+프랑스어로 B-LANG
+말해줘 O
+
+이 O
+단어 O
+프랑스어로 B-LANG
+말해주라 O
+
+프랑스어 LANG
+알려줘 O
+
+
+좋아해 B-WORD
+프랑스어 B-LANG
+알려줘 O
+
+자유 B-WORD
+프랑스어 B-LANG
+뭐니 O
+
+희망적인 B-WORD
+프랑스어 B-LANG
+알려줘 O
+
+박애 B-WORD
+프랑스어 B-LANG
+말해줘 O
+
+달팽이가 B-WORD
+지나간다 I-WORD
+프랑스어 B-LANG
+말해줄래 O
+
+프랑스어 B-LANG
+에펠탑 B-WORD
+가고싶다 I-WORD
+말해줄래 O
+
+수학 B-WORD
+프랑스어 B-LANG
+뭔데 O
+
+바나나 B-WORD
+프랑스어 B-LANG
+뭔지 O
+알아 O
+
+자동으로 B-WORD
+열리다 I-WORD
+이거 O
+프랑스어 B-LANG
+뭔지 O
+알려줄래 O
+
+감자칩 B-WORD
+프랑스어 B-LANG
+번역 O
+
+손목 B-WORD
+프랑스어 B-LANG
+번역해줘 O
+
+독어 B-LANG
+번역해줘 O
+
+프랑스어 B-LANG
+번역해줄래 O
+
+독어 B-LANG
+말해줘 O
+
+시계 B-WORD
+프랑스어로 B-LANG
+뭔지 O
+알고있니 O
+
+그가 B-WORD
+국수를 I-WORD
+먹었다 I-WORD
+독어 B-LANG
+뭐야 O
+
+햄버거 B-WORD
+프랑스어 B-LANG
+알려줘 O
+
+관자 B-WORD
+독어 B-LANG
+뭐니 O
+
+등갈비를 B-WORD
+프랑스어로 B-LANG
+뭔지 O
+알려줘 O
+
+자장면을 B-WORD
+중국어 B-LANG
+뭐라고 O
+하니 O
+
+언니 B-WORD
+프랑스어 B-LANG
+말해줄래 O
+
+기찻길 B-WORD
+중국어 B-LANG
+뭔데 O
+
+나무 B-WORD
+프랑스어 B-LANG
+뭔지 O
+알아 O
+
+숲이 B-WORD
+중국어 B-LANG
+뭔지 O
+알려줄래 O
+
+멜론 B-WORD
+프랑스어 B-LANG
+번역 O
+
+분수대 B-WORD
+뭔지 O
+프랑스어 B-LANG
+번역해줘 O
+
+친구 B-WORD
+번역해줘 O
+
+돌고래 B-WORD
+프랑스어로 B-LANG
+번역 O
+해줄래 O
+
+사랑스러운 B-WORD
+당신 I-WORD
+이 O
+문장 O
+프랑스어로 B-LANG
+말해줘 O
+
+자유로운 B-WORD
+이 O
+단어 O
+프랑스어로 B-LANG
+말해주라 O
+
+프랑스어 LANG
+알려줘 O
+
+김치찌개 B-WORD
+프랑스어 B-LANG
+뭐야 O
+
+스피커 B-WORD
+프랑스어 B-LANG
+알려줘 O
+
+첼로 B-WORD
+프랑스어 B-LANG
+뭐니 O
+
+화이트보드 B-WORD
+프랑스어 B-LANG
+알려줘 O
+
+불리한 B-WORD
+프랑스어 B-LANG
+말해줘 O
+
+시원한 B-WORD
+프랑스어 B-LANG
+말해줄래 O
+
+노트북 B-WORD
+프랑스어 B-LANG
+뭔데 O
+
+공책 B-WORD
+프랑스어 B-LANG
+뭔지 O
+알아 O
+
+고대하다 B-WORD
+이거 O
+프랑스어 B-LANG
+뭔지 O
+알려줄래 O
+
+결혼 B-WORD
+프랑스어 B-LANG
+번역 O
+
+패배하다 B-WORD
+프랑스어 B-LANG
+번역해줘 O
+
+프랑스어 B-LANG
+번역해줘 O
+
+프랑스어 B-LANG
+번역해줄래 O
+
+독어 B-LANG
+말해줘 O
+
+마음 B-WORD
+독어로 B-LANG
+말해주라 O
+
+심장이 B-WORD
+뛰다 I-WORD
+독어 B-LANG
+뭐야 O
+
+분개하다 B-WORD
+독어 B-LANG
+알려줘 O
+
+회계 B-WORD
+독어 B-LANG
+뭐니 O
+
+조우하다 B-WORD
+독어로 B-LANG
+뭔지 O
+알려줘 O
+
+조아리다 B-WORD
+독어 B-LANG
+말해줘 O
+
+종이 B-WORD
+독어 B-LANG
+말해줄래 O
+
+청소하다 B-WORD
+독어 B-LANG
+뭔데 O
+
+방어 B-WORD
+독어 B-LANG
+뭔지 O
+알아 O
+
+멸치 B-WORD
+독어 B-LANG
+뭔지 O
+알려줄래 O
+
+명치 B-WORD
+독어 B-LANG
+번역 O
+
+뭉치 B-WORD
+뭔지 O
+독어 B-LANG
+번역해줘 O
+
+오타 B-WORD
+번역해줘 O
+
+독어로 B-LANG
+공기청정기 B-WORD
+번역 O
+해줄래 O
+
+이 O
+문장 O
+독어로 B-LANG
+말해줘 O
+
+크레용 B-WORD
+이 O
+단어 O
+독어로 B-LANG
+말해주라 O
+
+독어 LANG
+알려줘 O
+
+드래곤 B-WORD
+독어 B-LANG
+뭐야 O
+
+오늘은 B-WORD
+당신을 I-WORD
+믿어요 I-WORD
+꼭 I-WORD
+지켜주세요 I-WORD
+독어로 B-LANG
+알려줘 O
+
+독어로 B-LANG
+클래식을 B-WORD
+좋아해요 I-WORD
+뭐니 O
+
+교수님을 B-WORD
+지켜보고 I-WORD
+있어요 I-WORD
+독어로 B-LANG
+알려줘 O
+
+독어로 B-LANG
+우리 B-WORD
+같은 I-WORD
+사람들 I-WORD
+말해줘 O
+
+엄마랑 B-WORD
+식사해서 I-WORD
+신나요 I-WORD
+독어 B-LANG
+말해줄래 O
+
+모래를 B-WORD
+쌓아요 I-WORD
+독어 B-LANG
+뭔데 O
+
+독어로 B-LANG
+방을 B-WORD
+탈출하다 I-WORD
+뭔지 O
+알아 O
+
+재밌는 B-WORD
+영화를 I-WORD
+볼래요 I-WORD
+이거 O
+독어 B-LANG
+뭔지 O
+알려줄래 O
+
+튤립 B-WORD
+세 I-WORD
+송이가 I-WORD
+피었습니다 I-WORD
+독어로 B-LANG
+번역 O
+해줘 O
+
+독어로 B-LANG
+칠판을 B-WORD
+닦아요 I-WORD
+번역해줘 O
+
+독어 B-LANG
+번역해줘 O
+
+중국어 B-LANG
+번역해줄래 O
+
+중국어 B-LANG
+말해줘 O
+
+상처가 B-WORD
+나았어요 I-WORD
+중국어로 B-LANG
+말해주라 O
+
+아이를 B-WORD
+낳고 I-WORD
+있어요 I-WORD
+중국어 B-LANG
+뭐야 O
+
+아버지와 B-WORD
+함께 I-WORD
+목욕해요 I-WORD
+중국어 B-LANG
+알려줘 O
+
+중국어로 B-LANG
+둥근 B-WORD
+해가 I-WORD
+떴어요 I-WORD
+뭐니 O
+
+다음 B-WORD
+주에도 I-WORD
+유치원에 I-WORD
+갈거에요 I-WORD
+중국어로 B-LANG
+뭔지 O
+알려줘 O
+
+중국어로 B-LANG
+남자친구 B-WORD
+보고싶어요 I-WORD
+번역 O
+해줄래 O
+
+중국어 B-LANG
+새파란 B-WORD
+하늘 I-WORD
+말해줄래 O
+
+저녁 B-WORD
+노을을 I-WORD
+중국어로 B-LANG
+뭐라고 O
+하니 O
+
+라면 B-WORD
+먹고싶어 I-WORD
+독일어 B-LANG
+뭔지 O
+알아 O
+
+독일어로 B-LANG
+봉골레 B-WORD
+파스타가 I-WORD
+먹고싶다 I-WORD
+뭐라고 O
+하는지 O
+알려줄래 O
+
+연속극을 B-WORD
+보아요 I-WORD
+독일어 B-LANG
+번역 O
+해줘 O
+
+참새가 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+앵무새가 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+까마귀가 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+암탉 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+수탉 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+무기징역 B-WORD
+뭔지 O
+독일어로 I-WORD
+번역해줘 O
+
+독일어로 B-LANG
+감옥 B-WORD
+뭔지 O
+번역 O
+해줄래 O
+
+그녀를 B-WORD
+혐오하는 I-WORD
+생각 I-WORD
+이 O
+문장 O
+독일어로 B-LANG
+말해줘 O
+
+이 O
+단어 O
+독일어로 B-LANG
+말해주라 O
+
+독일어 LANG
+알려줘 O
+
+고대하다 B-WORD
+이거 O
+독일어 B-LANG
+뭔지 O
+알려줄래 O
+
+결혼 B-WORD
+독일어 B-LANG
+번역 O
+
+패배하다 B-WORD
+독일어 B-LANG
+번역해줘 O
+
+독일어 B-LANG
+번역해줘 O
+
+독일어 B-LANG
+번역해줄래 O
+
+독일어 B-LANG
+말해줘 O
+
+마음 B-WORD
+독일어로 B-LANG
+말해주라 O
+
+심장이 B-WORD
+뛰다 I-WORD
+독일어 B-LANG
+뭐야 O
+
+분개하다 B-WORD
+독일어 B-LANG
+알려줘 O
+
+회계 B-WORD
+독일어 B-LANG
+뭐니 O
+
+조우하다 B-WORD
+독일어로 B-LANG
+뭔지 O
+알려줘 O
+
+조아리다 B-WORD
+독일어 B-LANG
+말해줘 O
+
+종이 B-WORD
+독일어 B-LANG
+말해줄래 O
+
+청소하다 B-WORD
+독일어 B-LANG
+뭔데 O
+
+방어 B-WORD
+독일어 B-LANG
+뭔지 O
+알아 O
+
+멸치 B-WORD
+독일어 B-LANG
+뭔지 O
+알려줄래 O
+
+명치 B-WORD
+독일어 B-LANG
+번역 O
+
+뭉치 B-WORD
+뭔지 O
+독일어 B-LANG
+번역해줘 O
+
+오타 B-WORD
+번역해줘 O
+
+독일어로 B-LANG
+공기청정기 B-WORD
+번역 O
+해줄래 O
+
+이 O
+문장 O
+독일어로 B-LANG
+말해줘 O
+
+크레용 B-WORD
+이 O
+단어 O
+독일어로 B-LANG
+말해주라 O
+
+독일어 LANG
+알려줘 O
+
+드래곤 B-WORD
+독일어 B-LANG
+뭐야 O
+
+오늘은 B-WORD
+당신을 I-WORD
+믿어요 I-WORD
+꼭 I-WORD
+지켜주세요 I-WORD
+독일어로 B-LANG
+알려줘 O
+
+독일어로 B-LANG
+클래식을 B-WORD
+좋아해요 I-WORD
+뭐니 O
+
+교수님을 B-WORD
+지켜보고 I-WORD
+있어요 I-WORD
+독일어로 B-LANG
+알려줘 O
+
+독일어로 B-LANG
+우리 B-WORD
+같은 I-WORD
+사람들 I-WORD
+말해줘 O
+
+엄마랑 B-WORD
+식사해서 I-WORD
+신나요 I-WORD
+독일어 B-LANG
+말해줄래 O
+
+모래를 B-WORD
+쌓아요 I-WORD
+독일어 B-LANG
+뭔데 O
+
+독일어로 B-LANG
+방을 B-WORD
+탈출하다 I-WORD
+뭔지 O
+알아 O
+
+재밌는 B-WORD
+영화를 I-WORD
+볼래요 I-WORD
+이거 O
+독일어 B-LANG
+뭔지 O
+알려줄래 O
+
+튤립 B-WORD
+세 I-WORD
+송이가 I-WORD
+피었습니다 I-WORD
+독일어로 B-LANG
+번역 O
+해줘 O
+
+독일어로 B-LANG
+칠판을 B-WORD
+닦아요 I-WORD
+번역해줘 O
+
+독일어 B-LANG
+번역해줘 O
+
+독일어 B-LANG
+번역해줄래 O
+
+독일어 B-LANG
+말해줘 O
+
+상처가 B-WORD
+나았어요 I-WORD
+독일어로 B-LANG
+말해주라 O
+
+아이를 B-WORD
+낳고 I-WORD
+있어요 I-WORD
+독일어 B-LANG
+뭐야 O
+
+아버지와 B-WORD
+함께 I-WORD
+목욕해요 I-WORD
+독일어 B-LANG
+알려줘 O
+
+독일어로 B-LANG
+둥근 B-WORD
+해가 I-WORD
+떴어요 I-WORD
+뭐니 O
+
+다음 B-WORD
+주에도 I-WORD
+유치원에 I-WORD
+갈거에요 I-WORD
+독일어로 B-LANG
+뭔지 O
+알려줘 O
+
+독일어로 B-LANG
+남자친구 B-WORD
+보고싶어요 I-WORD
+번역 O
+해줄래 O
+
+독일어 B-LANG
+새파란 B-WORD
+하늘 I-WORD
+말해줄래 O
+
+저녁 B-WORD
+노을을 I-WORD
+독일어로 B-LANG
+뭐라고 O
+하니 O
+
+라면 B-WORD
+먹고싶어 I-WORD
+독일어 B-LANG
+뭔지 O
+알아 O
+
+독일어로 B-LANG
+봉골레 B-WORD
+파스타가 I-WORD
+먹고싶다 I-WORD
+뭐라고 O
+하는지 O
+알려줄래 O
+
+연속극을 B-WORD
+보아요 I-WORD
+독일어 B-LANG
+번역 O
+해줘 O
+
+참새가 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+앵무새가 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+까마귀가 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+암탉 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+수탉 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+무기징역 B-WORD
+뭔지 O
+독일어로 I-WORD
+번역해줘 O
+
+독일어로 B-LANG
+감옥 B-WORD
+뭔지 O
+번역 O
+해줄래 O
+
+그녀를 B-WORD
+혐오하는 I-WORD
+생각 I-WORD
+이 O
+문장 O
+독일어로 B-LANG
+말해줘 O
+
+이 O
+단어 O
+독일어로 B-LANG
+말해주라 O
+
+독일어 LANG
+알려줘 O
+
+수동으로 B-WORD
+열리다 I-WORD
+이거 O
+중국어 B-LANG
+뭔지 O
+알려줄래 O
+
+감자튀김 B-WORD
+중국어 B-LANG
+번역 O
+
+발목 B-WORD
+중국어 B-LANG
+번역해줘 O
+
+중국어 B-LANG
+번역해줘 O
+
+중국어 B-LANG
+번역해줄래 O
+
+중국어 B-LANG
+말해줘 O
+
+울타리 B-WORD
+중국어로 B-LANG
+뭔지 O
+알고있니 O
+
+잘사는 B-WORD
+동네 I-WORD
+입니다 I-WORD
+중국어 B-LANG
+뭐야 O
+
+치안 B-WORD
+중국어 B-LANG
+알려줘 O
+
+저도 B-WORD
+돈이 I-WORD
+없으니까 I-WORD
+중국어 B-LANG
+뭐니 O
+
+시차 B-WORD
+적응이 I-WORD
+안돼요 I-WORD
+중국어로 B-LANG
+뭔지 O
+알려줘 O
+
+마당에 B-WORD
+놓고 I-WORD
+가다 I-WORD
+중국어 B-LANG
+뭐라고 O
+하니 O
+
+그런 B-WORD
+문제점 I-WORD
+존재하다 I-WORD
+중국어 B-LANG
+말해줄래 O
+
+드론을 B-WORD
+떨어뜨리다 I-WORD
+중국어 B-LANG
+뭔데 O
+
+인공지능 B-WORD
+기술의 I-WORD
+성장 I-WORD
+중국어 B-LANG
+뭔지 O
+알아 O
+
+현재 B-WORD
+시장에는 I-WORD
+완구로 I-WORD
+활용된다 I-WORD
+중국어 B-LANG
+뭔지 O
+알려줄래 O
+
+가령 B-WORD
+이런 I-WORD
+문장은 I-WORD
+문법에 I-WORD
+맞나요 I-WORD
+중국어 B-LANG
+번역 O
+
+아이디 B-WORD
+카드 I-WORD
+제시해주세요 I-WORD
+뭔지 O
+중국어 B-LANG
+번역해줘 O
+
+친구 B-WORD
+만나러 I-WORD
+갑니다 I-WORD
+번역해줘 O
+
+죽었다 B-WORD
+깨어나도 I-WORD
+못할걸 I-WORD
+중국어로 B-LANG
+번역 O
+해줄래 O
+
+보고싶은 B-WORD
+당신 I-WORD
+이 O
+문장 O
+중국어로 B-LANG
+말해줘 O
+
+사과 B-WORD
+나무 I-WORD
+이 O
+단어 O
+중국어로 B-LANG
+말해주라 O
+
+중국어 LANG
+알려줘 O
+
+곱창 B-WORD
+전골 I-WORD
+중국어 B-LANG
+뭐야 O
+
+에이아이 B-WORD
+스피커 I-WORD
+중국어 B-LANG
+알려줘 O
+
+창의적인 B-WORD
+아이템 I-WORD
+중국어 B-LANG
+뭐니 O
+
+츄리닝 B-WORD
+입어라 I-WORD
+중국어 B-LANG
+알려줘 O
+
+따뜻한 B-WORD
+코코아 I-WORD
+한 I-WORD
+잔 I-WORD
+마셔 I-WORD
+중국어 B-LANG
+말해줘 O
+
+뜨거운 B-WORD
+중국어 B-LANG
+말해줄래 O
+
+계란 B-WORD
+중국어 B-LANG
+뭔데 O
+
+오늘 B-WORD
+하루도 I-WORD
+힘내자 I-WORD
+중국어 B-LANG
+뭔지 O
+알아 O
+
+상대하다 B-WORD
+이거 O
+중국어 B-LANG
+뭔지 O
+알려줄래 O
+
+문법을 B-WORD
+주고 I-WORD
+만들어라 I-WORD
+중국어 B-LANG
+번역 O
+
+성공하다 B-WORD
+중국어 B-LANG
+번역해줘 O
+
+중국어 B-LANG
+번역해줘 O
+
+중국어 B-LANG
+번역해줄래 O
+
+중국어 B-LANG
+말해줘 O
+
+공격하세요 B-WORD
+중국어로 B-LANG
+말해주라 O
+
+적군을 B-WORD
+총으로 I-WORD
+쏘다 I-WORD
+중국어 B-LANG
+뭐야 O
+
+중계하다 B-WORD
+독어 B-LANG
+알려줘 O
+
+비계 B-WORD
+독어 B-LANG
+뭐니 O
+
+조리하다 B-WORD
+독어로 B-LANG
+뭔지 O
+알려줘 O
+
+구부리다 B-WORD
+독어 B-LANG
+말해줘 O
+
+우의 B-WORD
+독어 B-LANG
+말해줄래 O
+
+신박하다 B-WORD
+독어 B-LANG
+뭔데 O
+
+방어 B-WORD
+독어 B-LANG
+뭔지 O
+알아 O
+
+망치 B-WORD
+독어 B-LANG
+뭔지 O
+알려줄래 O
+
+뭉치 B-WORD
+독어 B-LANG
+번역 O
+
+꽁치 B-WORD
+뭔지 O
+독어 B-LANG
+번역해줘 O
+
+이타적인 B-WORD
+번역해줘 O
+
+독어로 B-LANG
+공기 B-WORD
+번역 O
+해줄래 O
+
+이 O
+문장 O
+독어로 B-LANG
+말해줘 O
+
+기린 B-WORD
+이 O
+단어 O
+독어로 B-LANG
+말해주라 O
+
+독어 LANG
+알려줘 O
+
+용가리 B-WORD
+독어 B-LANG
+뭐야 O
+
+다음 B-WORD
+달은 I-WORD
+휴가를 I-WORD
+꼭 I-WORD
+갈거야 I-WORD
+독어로 B-LANG
+알려줘 O
+
+독어로 B-LANG
+팝송을 B-WORD
+싫어해요 I-WORD
+뭐니 O
+
+교수님을 B-WORD
+지켜보고 I-WORD
+있어요 I-WORD
+독어로 B-LANG
+알려줘 O
+
+독어로 B-LANG
+우리 B-WORD
+같은 I-WORD
+사람들 I-WORD
+말해줘 O
+
+엄마랑 B-WORD
+식사해서 I-WORD
+신나요 I-WORD
+독어 B-LANG
+말해줄래 O
+
+모래를 B-WORD
+쌓아요 I-WORD
+독어 B-LANG
+뭔데 O
+
+독어로 B-LANG
+방을 B-WORD
+탈출하다 I-WORD
+뭔지 O
+알아 O
+
+재밌는 B-WORD
+영화를 I-WORD
+볼래요 I-WORD
+이거 O
+독어 B-LANG
+뭔지 O
+알려줄래 O
+
+튤립 B-WORD
+세 I-WORD
+송이가 I-WORD
+피었습니다 I-WORD
+독어로 B-LANG
+번역 O
+해줘 O
+
+독어로 B-LANG
+칠판을 B-WORD
+닦아요 I-WORD
+번역해줘 O
+
+독어 B-LANG
+번역해줘 O
+
+독어 B-LANG
+번역해줄래 O
+
+독어 B-LANG
+말해줘 O
+
+상처가 B-WORD
+나았어요 I-WORD
+독어로 B-LANG
+말해주라 O
+
+아이를 B-WORD
+낳고 I-WORD
+있어요 I-WORD
+독어 B-LANG
+뭐야 O
+
+아버지와 B-WORD
+함께 I-WORD
+목욕해요 I-WORD
+독어 B-LANG
+알려줘 O
+
+독어로 B-LANG
+둥근 B-WORD
+해가 I-WORD
+떴어요 I-WORD
+뭐니 O
+
+다음 B-WORD
+주에도 I-WORD
+유치원에 I-WORD
+갈거에요 I-WORD
+독어로 B-LANG
+뭔지 O
+알려줘 O
+
+독어로 B-LANG
+남자친구 B-WORD
+보고싶어요 I-WORD
+번역 O
+해줄래 O
+
+독어 B-LANG
+새파란 B-WORD
+하늘 I-WORD
+말해줄래 O
+
+저녁 B-WORD
+노을을 I-WORD
+독어로 B-LANG
+뭐라고 O
+하니 O
+
+라면 B-WORD
+먹고싶어 I-WORD
+독일어 B-LANG
+뭔지 O
+알아 O
+
+독일어로 B-LANG
+봉골레 B-WORD
+파스타가 I-WORD
+먹고싶다 I-WORD
+뭐라고 O
+하는지 O
+알려줄래 O
+
+연속극을 B-WORD
+보아요 I-WORD
+독일어 B-LANG
+번역 O
+해줘 O
+
+참새가 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+앵무새가 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+까마귀가 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+암탉 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+수탉 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+무기징역 B-WORD
+뭔지 O
+독일어로 I-WORD
+번역해줘 O
+
+독일어로 B-LANG
+감옥 B-WORD
+뭔지 O
+번역 O
+해줄래 O
+
+그녀를 B-WORD
+혐오하는 I-WORD
+생각 I-WORD
+이 O
+문장 O
+독일어로 B-LANG
+말해줘 O
+
+이 O
+단어 O
+독일어로 B-LANG
+말해주라 O
+
+독일어 LANG
+알려줘 O
+
+고대하다 B-WORD
+이거 O
+독일어 B-LANG
+뭔지 O
+알려줄래 O
+
+결혼 B-WORD
+독일어 B-LANG
+번역 O
+
+패배하다 B-WORD
+독일어 B-LANG
+번역해줘 O
+
+독일어 B-LANG
+번역해줘 O
+
+독일어 B-LANG
+번역해줄래 O
+
+독일어 B-LANG
+말해줘 O
+
+마음 B-WORD
+독일어로 B-LANG
+말해주라 O
+
+심장이 B-WORD
+뛰다 I-WORD
+독일어 B-LANG
+뭐야 O
+
+분개하다 B-WORD
+독일어 B-LANG
+알려줘 O
+
+회계 B-WORD
+독일어 B-LANG
+뭐니 O
+
+조우하다 B-WORD
+독일어로 B-LANG
+뭔지 O
+알려줘 O
+
+조아리다 B-WORD
+독일어 B-LANG
+말해줘 O
+
+종이 B-WORD
+독일어 B-LANG
+말해줄래 O
+
+청소하다 B-WORD
+독일어 B-LANG
+뭔데 O
+
+방어 B-WORD
+독일어 B-LANG
+뭔지 O
+알아 O
+
+멸치 B-WORD
+독일어 B-LANG
+뭔지 O
+알려줄래 O
+
+명치 B-WORD
+독일어 B-LANG
+번역 O
+
+뭉치 B-WORD
+뭔지 O
+독일어 B-LANG
+번역해줘 O
+
+오타 B-WORD
+번역해줘 O
+
+독일어로 B-LANG
+공기청정기 B-WORD
+번역 O
+해줄래 O
+
+이 O
+문장 O
+독일어로 B-LANG
+말해줘 O
+
+크레용 B-WORD
+이 O
+단어 O
+독일어로 B-LANG
+말해주라 O
+
+독일어 LANG
+알려줘 O
+
+드래곤 B-WORD
+독일어 B-LANG
+뭐야 O
+
+오늘은 B-WORD
+당신을 I-WORD
+믿어요 I-WORD
+꼭 I-WORD
+지켜주세요 I-WORD
+독일어로 B-LANG
+알려줘 O
+
+독일어로 B-LANG
+클래식을 B-WORD
+좋아해요 I-WORD
+뭐니 O
+
+교수님을 B-WORD
+지켜보고 I-WORD
+있어요 I-WORD
+독일어로 B-LANG
+알려줘 O
+
+독일어로 B-LANG
+우리 B-WORD
+같은 I-WORD
+사람들 I-WORD
+말해줘 O
+
+엄마랑 B-WORD
+식사해서 I-WORD
+신나요 I-WORD
+독일어 B-LANG
+말해줄래 O
+
+모래를 B-WORD
+쌓아요 I-WORD
+독일어 B-LANG
+뭔데 O
+
+독일어로 B-LANG
+방을 B-WORD
+탈출하다 I-WORD
+뭔지 O
+알아 O
+
+재밌는 B-WORD
+영화를 I-WORD
+볼래요 I-WORD
+이거 O
+독일어 B-LANG
+뭔지 O
+알려줄래 O
+
+튤립 B-WORD
+세 I-WORD
+송이가 I-WORD
+피었습니다 I-WORD
+독일어로 B-LANG
+번역 O
+해줘 O
+
+독일어로 B-LANG
+칠판을 B-WORD
+닦아요 I-WORD
+번역해줘 O
+
+독일어 B-LANG
+번역해줘 O
+
+독일어 B-LANG
+번역해줄래 O
+
+독일어 B-LANG
+말해줘 O
+
+상처가 B-WORD
+나았어요 I-WORD
+독일어로 B-LANG
+말해주라 O
+
+아이를 B-WORD
+낳고 I-WORD
+있어요 I-WORD
+독일어 B-LANG
+뭐야 O
+
+아버지와 B-WORD
+함께 I-WORD
+목욕해요 I-WORD
+독일어 B-LANG
+알려줘 O
+
+독일어로 B-LANG
+둥근 B-WORD
+해가 I-WORD
+떴어요 I-WORD
+뭐니 O
+
+다음 B-WORD
+주에도 I-WORD
+유치원에 I-WORD
+갈거에요 I-WORD
+독일어로 B-LANG
+뭔지 O
+알려줘 O
+
+독일어로 B-LANG
+남자친구 B-WORD
+보고싶어요 I-WORD
+번역 O
+해줄래 O
+
+독일어 B-LANG
+새파란 B-WORD
+하늘 I-WORD
+말해줄래 O
+
+저녁 B-WORD
+노을을 I-WORD
+독일어로 B-LANG
+뭐라고 O
+하니 O
+
+라면 B-WORD
+먹고싶어 I-WORD
+독일어 B-LANG
+뭔지 O
+알아 O
+
+독일어로 B-LANG
+봉골레 B-WORD
+파스타가 I-WORD
+먹고싶다 I-WORD
+뭐라고 O
+하는지 O
+알려줄래 O
+
+연속극을 B-WORD
+보아요 I-WORD
+독일어 B-LANG
+번역 O
+해줘 O
+
+참새가 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+앵무새가 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+까마귀가 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+암탉 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+수탉 B-WORD
+무슨 O
+말인지 O
+독일어 B-LANG
+번역해줘 O
+
+무기징역 B-WORD
+뭔지 O
+독일어로 I-WORD
+번역해줘 O
+
+독일어로 B-LANG
+규격 B-WORD
+뭔지 O
+번역 O
+해줄래 O
+
+그 B-WORD
+사람을 I-WORD
+사랑해 I-WORD
+이 O
+문장 O
+독일어로 B-LANG
+말해줘 O
+
+이 O
+단어 O
+독일어로 B-LANG
+말해주라 O
+
+독일어 LANG
+알려줘 O

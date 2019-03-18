@@ -1,15 +1,17 @@
-from konlpy.tag import Twitter
-import pandas as pd
-import tensorflow as tf
-import enum
 import os
 import re
-from sklearn.model_selection import train_test_split
+
 import numpy as np
+import pandas as pd
+import tensorflow as tf
+from konlpy.tag import Twitter
+from sklearn.model_selection import train_test_split
+from tqdm import tqdm
+
 from generative_model.configs import DEFINES
 
-from tqdm import tqdm
 FILTERS = "([~.,!?\"':;)(])"
+
 PAD = "<PADDING>"
 STD = "<START>"
 END = "<END>"
@@ -31,7 +33,8 @@ def load_data():
     question, answer = list(data_df['Q']), list(data_df['A'])
     # skleran에서 지원하는 함수를 통해서 학습 셋과 
     # 테스트 셋을 나눈다.
-    train_input, eval_input, train_label, eval_label = train_test_split(question, answer, test_size=0.33, random_state=42)
+    train_input, eval_input, train_label, eval_label = train_test_split(question, answer, test_size=0.33,
+                                                                        random_state=42)
     # 그 값을 리턴한다.
     return train_input, train_label, eval_input, eval_label
 
@@ -58,8 +61,8 @@ def prepro_like_morphlized(data):
 
 # 인덱스화 할 value와 키가 워드이고 
 # 값이 인덱스인 딕셔너리를 받는다.
-def enc_processing(value, dictionary):
-    # 인덱스 값들을 가지고 있는 
+def enc_processing(value, dictionary, mode):
+    # 인덱스 값들을 가지고 있는
     # 배열이다.(누적된다.)
     sequences_input_index = []
     # 하나의 인코딩 되는 문장의 
@@ -97,7 +100,8 @@ def enc_processing(value, dictionary):
         # max_sequence_length보다 문장 길이가 
         # 작다면 빈 부분에 PAD(0)를 넣어준다.
         sequence_index += (DEFINES.max_sequence_length - len(sequence_index)) * [dictionary[PAD]]
-        # 인덱스화 되어 있는 값을 
+
+        # 인덱스화 되어 있는 값을
         # sequences_input_index에 넣어 준다.
         sequences_input_index.append(sequence_index)
     # 인덱스화된 일반 배열을 넘파이 배열로 변경한다. 
@@ -177,7 +181,7 @@ def dec_target_processing(value, dictionary):
             # 문장 제한 길이보다 길어질 경우 뒤에 토큰을 자르고 있다.
             # 그리고 END 토큰을 넣어 준다
             if len(sequence_index) >= DEFINES.max_sequence_length:
-                sequence_index = sequence_index[:DEFINES.max_sequence_length-1] + [dictionary[END]]
+                sequence_index = sequence_index[:DEFINES.max_sequence_length - 1] + [dictionary[END]]
             else:
                 sequence_index += [dictionary[END]]
             # max_sequence_length보다 문장 길이가
@@ -221,6 +225,7 @@ def pred2string(value, dictionary):
     print(answer)
     return answer
 
+
 def pred_next_string(value, dictionary):
     # 텍스트 문장을 보관할 배열을 선언한다.
     sentence_string = []
@@ -228,7 +233,7 @@ def pred_next_string(value, dictionary):
     for v in value:
         # 딕셔너리에 있는 단어로 변경해서 배열에 담는다.
         sentence_string = [dictionary[index] for index in v['indexs']]
-    
+
     answer = ""
     # 패딩값도 담겨 있으므로 패딩은 모두 스페이스 처리 한다.
     for word in sentence_string:
@@ -316,7 +321,18 @@ def data_tokenizer(data):
     return [word for word in words if word]
 
 
-def load_vocabulary():
+def load_vocabulary(mode):
+    path = DEFINES.vocabulary_path
+    if mode == 'train':
+        path = DEFINES.vocabulary_path
+        PAD = "<PADDING>"
+    elif mode == 'data':
+        path = DEFINES.vocabulary_path
+        PAD = "<PADDING>"
+    elif mode == 'predict':
+        path = 'generative_model/' + DEFINES.vocabulary_path
+        PAD = "<PADDING>"
+
     # 사전을 담을 배열 준비한다.
     vocabulary_list = []
     # 사전을 구성한 후 파일로 저장 진행한다. 
@@ -356,15 +372,15 @@ def load_vocabulary():
             # END = "<END>"
             # UNK = "<UNKNWON>"     
             words[:0] = MARKER
-        # 사전을 리스트로 만들었으니 이 내용을 
-        # 사전 파일을 만들어 넣는다.
-        with open(DEFINES.vocabulary_path, 'w') as vocabulary_file:
-            for word in words:
-                vocabulary_file.write(word + '\n')
+            # 사전을 리스트로 만들었으니 이 내용을
+            # 사전 파일을 만들어 넣는다.
+            with open(path, 'w', encoding="utf-8") as vocabulary_file:
+                for word in words:
+                    vocabulary_file.write(word + '\n')
 
     # 사전 파일이 존재하면 여기에서 
     # 그 파일을 불러서 배열에 넣어 준다.
-    with open(DEFINES.vocabulary_path, 'r', encoding='utf-8') as vocabulary_file:
+    with open(path, 'r', encoding='utf-8') as vocabulary_file:
         for line in vocabulary_file:
             vocabulary_list.append(line.strip())
 
@@ -388,7 +404,7 @@ def make_vocabulary(vocabulary_list):
 
 
 def main(self):
-    char2idx, idx2char, vocabulary_length = load_vocabulary()
+    char2idx, idx2char, vocabulary_length = load_vocabulary('data')
 
 
 if __name__ == '__main__':

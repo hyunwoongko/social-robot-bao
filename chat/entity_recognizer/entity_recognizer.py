@@ -2,10 +2,11 @@ from entity_recognizer.kor_model.config import config
 from entity_recognizer.kor_model.data_embed_model import word2vec, data_utils
 from entity_recognizer.kor_model.data_embed_model.data_utils import CoNLLDataset
 from entity_recognizer.kor_model.ner_model.lstmcrf_model import NERModel
-
+import tensorflow as tf
 
 def embed_model():
     return word2vec.train_w2v(config)
+
 
 def data_iterator():
     dev = CoNLLDataset(config.dev_filename, max_iter=config.max_iter)
@@ -83,6 +84,7 @@ def get_entity(sentence, is_train):
         model.evaluate(get_test(), get_vocab_tags())
         return model.predict(get_vocab_tags(), get_processing_word(), sentence)
     else:
+        tf.reset_default_graph()
         model = NERModel(config, get_embeddings(), ntags=len(get_vocab_tags()), nchars=len(get_vocab_chars()),
                          logger=None,
                          char_embed=get_char_embedding())

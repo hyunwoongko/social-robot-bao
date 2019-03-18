@@ -140,7 +140,7 @@ class NERModel(object):
                                                                                       lstm_back_cell,
                                                                                       char_embeddings,
                                                                                       sequence_length=word_lengths,
-                                                                                      dtype=tf.float32)
+                                                                                      dtype=tf.float32,)
                 output = tf.concat([output_fw, output_bw], axis=-1)
                 # shape = (batch size, max sentence length, char hidden size)
                 output = tf.reshape(output, shape=[-1, s[1], 2 * self.config.char_hidden_size])

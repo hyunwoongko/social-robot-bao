@@ -1,24 +1,24 @@
 class config():
 
     embedding = "facebook" #fasttext, word2vec, facebook
-    embedding_model_path = "./entity_recognizer/data/w2v"
-    crawler_path = "./entity_recognizer/data/crawler/"
+    embedding_model_path = "entity_recognizer/data/w2v"
+    crawler_path = "entity_recognizer/data/crawler/"
     crawler_file = 'entity_recognizer/source.txt'
-    pos_path = "./entity_recognizer/data/crawler/pos.txt"
-    trimmed_filename = "./entity_recognizer/data/processed/kor/w2v.trimmed.npz"
-    charembed_filename = "./entity_recognizer/data/processed/kor/char.trimmed.npz"
-    words_filename = "./entity_recognizer/data/processed/kor/words.txt"
-    tags_filename = "./entity_recognizer/data/processed/kor/tags.txt"
-    chars_filename = "./entity_recognizer/data/processed/kor/chars.txt"
-    dev_filename = "./train_entity.csv"
-    test_filename = "./train_entity.csv"
-    train_filename = "./train_entity.csv"
+    pos_path = "entity_recognizer/data/crawler/pos.txt"
+    trimmed_filename = "entity_recognizer/data/processed/kor/w2v.trimmed.npz"
+    charembed_filename = "entity_recognizer/data/processed/kor/char.trimmed.npz"
+    words_filename = "entity_recognizer/data/processed/kor/words.txt"
+    tags_filename = "entity_recognizer/data/processed/kor/tags.txt"
+    chars_filename = "entity_recognizer/data/processed/kor/chars.txt"
+    dev_filename = "train_entity.csv"
+    test_filename = "train_entity.csv"
+    train_filename = "train_entity.csv"
     dim = 300
     dim_char = 120
     max_iter = None
     lowercase = True
     train_embeddings = False
-    nepochs = 50
+    nepochs = 35
     dropout = 0.5
     batch_size = 10
     lr = 0.03
