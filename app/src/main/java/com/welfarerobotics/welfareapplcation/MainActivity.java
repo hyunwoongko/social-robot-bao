@@ -5,16 +5,21 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
+import android.os.Looper;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.*;
 import com.kakao.sdk.newtoneapi.SpeechRecognizeListener;
+import com.kakao.sdk.newtoneapi.SpeechRecognizerActivity;
 import com.kakao.sdk.newtoneapi.SpeechRecognizerClient;
 import com.kakao.sdk.newtoneapi.SpeechRecognizerManager;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -30,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
     private VideoView vv;
     private final int PERMISSION = 1;
     private STTRepeatListener mSTTRepeatListener;
-
+    private SpeechRecognizerClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +50,8 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
         //권한 확인
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.INTERNET,
                 Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                Manifest.permission.ACCESS_NETWORK_STATE, Manifest.permission.WAKE_LOCK}, PERMISSION);
+                Manifest.permission.ACCESS_NETWORK_STATE, Manifest.permission.WAKE_LOCK,
+                Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION);
 
         //전체화면
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -57,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
         //STT 클라이언트 생성
         SpeechRecognizerClient.Builder builder = new SpeechRecognizerClient.Builder().
                 setServiceType(SpeechRecognizerClient.SERVICE_TYPE_DICTATION);
-        final SpeechRecognizerClient client = builder.build();
+        client = builder.build();
 
         //비디오(눈 깜빡임)
         MediaController mediaController = new MediaController(MainActivity.this);
@@ -91,27 +97,26 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
         };
 
         client.setSpeechRecognizeListener(this);
-        client.startRecording(true);
+        client.startRecording(false);
+
 
         mSTTRepeatListener = new STTRepeatListener() {
             @Override
             public void onReceivedEvent() {
                 System.out.println("이벤트받음++++++++++++++++++++++++++++++++++++++++++++");
-                new Handler().postDelayed(new Runnable() {
+                Handler mHandler = new Handler(Looper.getMainLooper());
+                mHandler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        client.startRecording(true);
+                        client.startRecording(false);
                     }
-                },200);
+                }, 100);
             }
         };
     }
 
-    public void setOnSTTRepeatListener(STTRepeatListener listener) {
-        mSTTRepeatListener = listener;
-    }
 
-    //STT 콜백 메소드
+    //STT가 자동 생성한 콜백 메소드
     @Override
     public void onReady() {
         runOnUiThread(new Runnable() {
@@ -149,23 +154,25 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
     }
 
     @Override
-    public void onResults(Bundle results) {
+    public synchronized void onResults(Bundle results) {
         ArrayList<String> matches =
                 results.getStringArrayList(SpeechRecognizerClient.KEY_RECOGNITION_RESULTS);
         speech = matches.get(0).replace(" ", ""); //0번이 가장 다듬어진 문장
         tv.bringToFront();
         tv.setText(speech);
-        if (lang == null) {
-            if (speech.equals("안녕하세요")) {
-                System.out.println("음성처리 시작");
-                new Thread() {
-                    public void run() {
-                        new CSSAPI("반갑습니다", "mijin");
+        new Thread() {
+            public void run() {
+                if (lang == null) {
+                    if (speech.equals("안녕하세요")) {
+                        new CSSAPI("반가워요", "mijin");
+                        TTSPlayback();
+                    } else if (speech.equals("안녕히계세요")) {
+                        new CSSAPI("잘가요", "mijin");
+                        TTSPlayback();
                     }
-                }.start();
+                }
             }
-        }
-        mSTTRepeatListener.onReceivedEvent();
+        }.start();
     }
 
     @Override
@@ -178,65 +185,48 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
 
     }
 
-    //어플리케이션 종료
+    public synchronized void TTSPlayback() {
+        //바로 재생
+        String tempname = "navercssfile";
+        String Path_to_file = Environment.getExternalStorageDirectory() +
+                File.separator + "NaverCSS/" + tempname + ".mp3";
+        MediaPlayer audioplay = new MediaPlayer();
+        try {
+            audioplay.setDataSource(Path_to_file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            audioplay.prepare();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        audioplay.start();
+
+        //재생 종료 리스너
+        audioplay.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                Handler mHandler = new Handler(Looper.getMainLooper());
+                mHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        client.startRecording(false);
+                    }
+                }, 100);
+            }
+        });
+    }
+
+    //어플리케이션 종료시
     @Override
     protected void onDestroy() {
-        super.onDestroy();
         SpeechRecognizerManager.getInstance().finalizeLibrary();
+        mSTTRepeatListener=null;
         if (timer != null) {
             timer.cancel();
         }
+        super.onDestroy();
     }
 }
-
-/*
-
-    private RecognitionListener listener = new RecognitionListener() {
-
-       }
-
-        @Override
-        public void onError(int error) {
-
-            mRecognizer.startListening(i);
-        }
-
-        @Override
-        public void onResults(Bundle results) {
-            ArrayList<String> matches =
-                    results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
-            speech = matches.get(0).replace(" ", ""); //0번이 가장 다듬어진 문장
-            tv.bringToFront();
-            tv.setText(speech);
-            new CSSAPI(speech);
-        }
-
-        @Override
-        public void onPartialResults(Bundle partialResults) {
-
-        }
-
-        @Override
-        public void onEvent(int eventType, Bundle params) {
-
-        }
-    };
-
- /*   private BroadcastReceiver m_br = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            String act = intent.getAction();
-            if (act.equals(TextToSpeech.ACTION_TTS_QUEUE_PROCESSING_COMPLETED)) {
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        timer.schedule(ttListen, 5000, 5000);
-                        img.setImageResource(R.drawable.face1t);
-                    }
-                }, 1000);
-            }
-        }
-    };
-*/
 
