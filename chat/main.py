@@ -1,5 +1,8 @@
 print("깨어나는 중입니다.")
 import shutil
+import logging
+logger = logging.getLogger('chardet')
+logger.setLevel(logging.CRITICAL)
 import os; os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import tensorflow as tf;tf.logging.set_verbosity(tf.logging.ERROR)
 from generative_model.answer_generator import generate_answer

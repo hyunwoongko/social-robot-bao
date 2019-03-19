@@ -3,11 +3,11 @@ from intent_classifier.intent_classifier import get_intent
 
 
 def train_intent():
-    get_intent('', True)
+    get_intent('오늘 날씨', True)
 
 
 def train_entity():
-    get_entity('', True)
+    get_entity('오늘 날씨', True)
 
 def train_all():
     get_intent('오늘 날씨', True)
@@ -22,6 +22,6 @@ if __name__ == '__main__':
 
     tf.logging.set_verbosity(tf.logging.ERROR)
 
-    # train_intent()
-    # train_entity()
+    train_intent()
+    train_entity()
     # train_all()

@@ -263,9 +263,10 @@ def weather_specific(location, date):
 
         weather = soup.find('span', {'id': 'wob_dc'}).text
         temp = soup.find('span', class_='wob_t').text
-        response = location + '의 날씨를 알려드릴게요. ' + location + '의 ' + date + ' 날씨는 ' + weather + ' 이고 온도는 ' + temp + '도입니다.'
+        if weather == '비': weather = '비가 오고'
+        response = date + ' 날씨를 알려드릴게요. ' + location + '의 ' + date + ' 날씨는 ' + weather + ' 온도는 ' + temp + '도입니다.'
     except:
-        response = '죄송해요. 아직 배우고 있는 중이라 ' + location + "의 날씨는 알 수 없어요. 지역의 이름을 말하시면 알려드릴게요."
+        response = '죄송해요. 아직 배우고 있는 중이라 ' + date + "의 날씨는 알 수 없어요."
     return response
 
 
@@ -289,13 +290,10 @@ def weather_this_week(location):
             soup = bs4.BeautifulSoup(html, 'html.parser')
             weather = soup.find('span', {'id': 'wob_dc'}).text
             temp = soup.find('span', class_='wob_t').text
-            weather = i + '요일은 ' + weather + '이고 온도는 ' + temp + '도 입니다. '
+            if weather == '비': weather = '비가 오고'
+            weather = i + '요일의 날씨는 ' + weather + ' 온도는 ' + temp + '도 입니다. '
             response.append(weather)
     except:
         response = '죄송해요. 아직 배우고 있는 중이라 ' + location + "의 날씨는 알 수 없어요. 지역의 이름을 말하시면 알려드릴게요."
 
     return ' '.join(response)
-
-
-a = weather_this_week('전주시')
-print(a)
