@@ -76,8 +76,6 @@ def wiki(question):
             result_set = [i.text.split(sep='.', maxsplit=1)[1] for i in result]
             response_text = ' 또는 '.join(result_set)
         except:
-            response_text = '죄송해요 그 단어는 알 수 없어요'
+            response_text = '죄송해요 ' + question + '은 아직 공부중이에요.'
     return response_text
 
-
-print(wiki("바보"))

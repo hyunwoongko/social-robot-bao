@@ -64,9 +64,6 @@ def main(self):
     print('\nEVAL set accuracy: {accuracy:0.3f}\n'.format(**eval_result))
 
 if __name__ == '__main__':
-    if os.path.exists('data_out/vocabularyData.voc'):
-        shutil.rmtree('data_out/vocabularyData.voc')
-    char2idx, idx2char, vocabulary_length = data.load_vocabulary('data')
     tf.logging.set_verbosity(tf.logging.INFO)
     tf.app.run(main)
 

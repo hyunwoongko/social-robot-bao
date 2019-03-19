@@ -28,18 +28,15 @@ def response(named_entity):
             if lang is not None and lang.replace(' ', '') != '':
                 lang.append(lang_input)
 
-    if len(lang) > 1:
-        return '죄송합니다. 잘 못알아 들었어요.'
-    elif len(lang) == 0:
-        if '일본' in lang:
-            lang = 'ja'
-        elif '영어' in lang:
-            lang = 'en'
-        elif '스페인' in lang:
-            lang = 'sp'
-        elif '중국어' in lang:
-            lang = 'ch'
-        else:
-            return lang[0] + '은 아직 배우고있답니다.'
+    if '영어' in lang:
+        lang = 'en'
+    elif '일본어' in lang or '일본' in lang:
+        lang = 'ja'
+    elif '중국어' in lang or '중국' in lang:
+        lang = 'zh-CN'
+    elif '스페인어' in lang or '스페인' in lang:
+        lang = 'es'
+    else:
+        return lang[0] + '은 아직 배우고있답니다.'
 
     return translate(' '.join(target), lang)

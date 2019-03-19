@@ -1,3 +1,5 @@
+from api.api_issue import get_issue
+
 print("깨어나는 중입니다.")
 import shutil
 import logging
@@ -45,6 +47,8 @@ while True:
         entity = get_entity(question, is_train=False)
         print('개체 분류 : ', entity)
         print('> ' + wiki.response(entity))
+    elif intent == '이슈':
+        print('>' + get_issue())
     elif intent == '잡담':
         print('> ' + fix(generate_answer(question)))
     else:
