@@ -5,6 +5,8 @@ import serial
 import time
 import json
 import re
+import Command
+import threading
 
 wpa_supplicant_conf = "/etc/wpa_supplicant/wpa_supplicant.conf"
 sudo_mode = "sudo "
@@ -12,6 +14,17 @@ sudo_mode = "sudo "
 command =""
 
 class SerialComm:
+    
+    @classmethod
+    def __getInstance(cls):
+        return cls.__instance
+
+    @classmethod
+    def instance(cls, *args, **kargs):
+        cls.__instance = cls(*args, **kargs)
+        cls.instance = cls.__getInstance
+        return cls.__instance
+
     def __init__(self):
         self.port = serial.Serial("/dev/rfcomm0", baudrate=9600, timeout=1)
 
@@ -117,6 +130,7 @@ class ShellWrapper:
             return None
 
 
+
 def start():
     global command
     
@@ -125,16 +139,18 @@ def start():
     ble_comm = None
     isConnected = False
     print("startserver")
-
+    
 
     while True:
       
         try:
-            ble_comm = SerialComm()
+            ble_comm = SerialComm().instance()
             out = ble_comm.read_serial()
             for ble_line in out:
                 print(ble_line.decode('utf-8'))
                 command =ble_line.decode('utf-8')
+                Command.StartCommand(command)
+                
         except serial.SerialException:
             print("waiting for connection")
             ble_comm = None
@@ -143,6 +159,6 @@ def start():
             
 
 
-
-    
-
+server_thread = threading.Thread(target=start)
+server_thread.daemon = True
+server_thread.start()
