@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "906869256910",
+    "firebase_url": "https://social-robot-bao.firebaseio.com",
+    "project_id": "social-robot-bao",
+    "storage_bucket": "social-robot-bao.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:906869256910:android:47e8b6004693945a",
+        "android_client_info": {
+          "package_name": "com.welfarerobotics.welfareapplcation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "906869256910-3kgc3vmj9gm07hva9eakfvg4r5ur0jpu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.welfarerobotics.welfareapplcation",
+            "certificate_hash": "d9e10eeeaf637b75792326e9226337bdb4476b33"
+          }
+        },
+        {
+          "client_id": "906869256910-84qocj95rqdrbbb0v8qfn963mpbejolc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCed8BAPKZKXEGA-TQT3u3I-SPF6xgaSpE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "906869256910-84qocj95rqdrbbb0v8qfn963mpbejolc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
