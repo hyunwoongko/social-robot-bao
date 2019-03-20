@@ -25,7 +25,7 @@ def response(named_entity):
         while lang is None or len(lang) == 0:
             print('> ' + fix('어떤 언어로 말해드릴까요 : '), end='')
             lang_input = input()
-            if lang is not None and lang.replace(' ', '') != '':
+            if lang_input is not None and lang_input.replace(' ', '') != '':
                 lang.append(lang_input)
 
     if '영어' in lang:

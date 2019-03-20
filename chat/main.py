@@ -11,6 +11,7 @@ from generative_model.answer_generator import generate_answer
 import scenario.scenario_translation as translation
 import scenario.scenario_weather as weather
 import scenario.scenario_wiki as wiki
+import scenario.scenario_dust as dust
 from emotion_engine.emotion_engine import get_emotion
 from entity_recognizer.entity_recognizer import get_entity
 from hanspell.spell_checker import fix
@@ -47,6 +48,10 @@ while True:
         entity = get_entity(question, is_train=False)
         print('개체 분류 : ', entity)
         print('> ' + wiki.response(entity))
+    elif intent == '먼지':
+        entity = get_entity(question, is_train=False)
+        print('개체 분류 : ', entity)
+        print('> ' + dust.response(entity))
     elif intent == '이슈':
         print('>' + get_issue())
     elif intent == '잡담':
