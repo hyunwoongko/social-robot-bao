@@ -1,4 +1,5 @@
 from api.api_translation import translate
+from requester import request
 from hanspell.spell_checker import fix
 
 
@@ -17,14 +18,14 @@ def response(named_entity):
     if len(target) == 0:
         while len(target) == 0:
             print('> ' + fix('어떤 말을 알려드릴까요 : '), end='')
-            target_input = input()
+            target_input = request()
             if target_input is not None and target_input.replace(' ', '') != '':
                 target.append(target_input)
 
     if lang is None or len(lang) == 0:
         while lang is None or len(lang) == 0:
             print('> ' + fix('어떤 언어로 말해드릴까요 : '), end='')
-            lang_input = input()
+            lang_input = request()
             if lang_input is not None and lang_input.replace(' ', '') != '':
                 lang.append(lang_input)
 

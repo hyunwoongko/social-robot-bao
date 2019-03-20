@@ -15501,9 +15501,147 @@
 상태 O
 어떠니 O
 
+슬픈 B-WORD
+노래 I-WORD
+들려줘 O
 
+신나는 B-WORD
+노래 I-WORD
+틀어줘 O
 
+즐거운 B-WORD
+음악 I-WORD
+들려 O
+주라 O
 
+우울한 B-WORD
+노래 I-WORD
+틀어 O
+주라 O
+
+슬픈 B-WORD
+노래 I-WORD
+들려줘 O
+
+신나는 B-WORD
+노래 I-WORD
+틀어줘 O
+
+즐거운 B-WORD
+음악 I-WORD
+들려 O
+주라 O
+
+우울한 B-WORD
+노래 I-WORD
+틀어 O
+주라 O
+
+슬픈 B-WORD
+노래 I-WORD
+들려줘 O
+
+신나는 B-WORD
+노래 I-WORD
+틀어줘 O
+
+즐거운 B-WORD
+음악 I-WORD
+들려 O
+주라 O
+
+우울한 B-WORD
+노래 I-WORD
+틀어 O
+주라 O
+
+애드 B-WORD
+시어런의 I-WORD
+노래 I-WORD
+들려줘 O
+
+애드 B-WORD
+시어런의 I-WORD
+노래 I-WORD
+추천 O
+해줘 O
+
+애드 B-WORD
+시어런의 I-WORD
+쉐이프 I-WORD
+오브 I-WORD
+유 I-WORD
+들려 O
+주라 O
+
+걸스데이 B-WORD
+마이 I-WORD
+달링 I-WORD
+들려 O
+주라 O
+
+아이유 B-WORD
+좋은 I-WORD
+날 I-WORD
+들려 O
+주라 O
+
+슈퍼주니어 B-WORD
+쏘리쏘리 I-WORD
+들려 O
+주라 O
+
+빅뱅 B-WORD
+위 I-WORD
+라이크 I-WORD
+투 I-WORD
+파티 I-WORD
+이 O
+거 O
+들려 O
+주라 O
+
+버즈 B-WORD
+가시 I-WORD
+들려 O
+주라 O
+
+에이핑크 B-WORD
+응응 I-WORD
+들려 O
+주라 O
+
+민경훈 B-WORD
+나쁜 I-WORD
+가슴 I-WORD
+들려 O
+주라 O
+
+백예린 B-WORD
+그건 I-WORD
+아마 I-WORD
+우리의 I-WORD
+잘못은 I-WORD
+아닐 I-WORD
+거 I-WORD
+들려 O
+주라 O
+
+에픽하이 B-WORD
+일분 I-WORD
+일초 I-WORD
+들려 O
+줄래 O
+
+에픽하이 B-WORD
+노래 I-WORD
+추천 O
+해줘 O
+
+에픽하이 B-WORD
+노래 I-WORD
+추천 O
+해줘 O
 
 
 
