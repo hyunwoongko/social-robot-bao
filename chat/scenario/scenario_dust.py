@@ -1,4 +1,5 @@
 import api.api_dust as dust
+from requester import request
 from hanspell.spell_checker import fix
 
 
@@ -20,7 +21,7 @@ def response(named_entity):
     if len(location) == 0:
         while len(location) == 0:
             print('> ' + fix('지역을 말해주세요 : '), end='')
-            loc = input()
+            loc = request()
             if loc is not None and loc.replace(' ', '') != '':
                 location.append(loc)
 

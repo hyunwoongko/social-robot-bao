@@ -1,60 +1,17 @@
-from api.api_issue import get_issue
-
-print("깨어나는 중입니다.")
-import shutil
 import logging
+import os
+
+import tensorflow as tf
+
+import chat
+from requester import request
+
 logger = logging.getLogger('chardet')
 logger.setLevel(logging.CRITICAL)
-import os; os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-import tensorflow as tf;tf.logging.set_verbosity(tf.logging.ERROR)
-from generative_model.answer_generator import generate_answer
-import scenario.scenario_translation as translation
-import scenario.scenario_weather as weather
-import scenario.scenario_wiki as wiki
-import scenario.scenario_dust as dust
-from emotion_engine.emotion_engine import get_emotion
-from entity_recognizer.entity_recognizer import get_entity
-from hanspell.spell_checker import fix
-from intent_classifier.intent_classifier import get_intent
-from util.tokenizer import tokenize
-
-if os.path.isdir('data_out'):
-    shutil.rmtree('data_out')
-shutil.copytree('generative_model/data_out', 'data_out')
-# 생성모델 데이터 밖으로 빼내기
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+tf.logging.set_verbosity(tf.logging.ERROR)
 
 while True:
-    print("\n> 입력 하세요 : ", end='')
-    question = input()
-    question = tokenize(question)
-    question = fix(question)
-
-    intent = get_intent(question, is_train=False)
-    emotion = get_emotion(question)
-
-    print("\n전처리 문장 : ", question)
-    print('발화 의도 : ', intent)
-    print('감정 지수 (-2 ~ 2) : ', emotion)
-
-    if intent == '날씨':
-        entity = get_entity(question, is_train=False)
-        print('개체 분류 : ', entity)
-        print('> ' + fix(weather.response(entity)))
-    elif intent == '번역':
-        entity = get_entity(question, is_train=False)
-        print('개체 분류 : ', entity)
-        print('> ' + translation.response(entity))
-    elif intent == '위키':
-        entity = get_entity(question, is_train=False)
-        print('개체 분류 : ', entity)
-        print('> ' + wiki.response(entity))
-    elif intent == '먼지':
-        entity = get_entity(question, is_train=False)
-        print('개체 분류 : ', entity)
-        print('> ' + dust.response(entity))
-    elif intent == '이슈':
-        print('>' + get_issue())
-    elif intent == '잡담':
-        print('> ' + fix(generate_answer(question)))
-    else:
-        print('> ' + fix(generate_answer(question)))
+    Q = request()
+    A = chat.main(Q)
+    print(A)
