@@ -100,18 +100,10 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
         client.startRecording(false);
 
 
-        mSTTRepeatListener = new STTRepeatListener() {
-            @Override
-            public void onReceivedEvent() {
-                System.out.println("이벤트받음++++++++++++++++++++++++++++++++++++++++++++");
-                Handler mHandler = new Handler(Looper.getMainLooper());
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        client.startRecording(false);
-                    }
-                }, 100);
-            }
+        mSTTRepeatListener = () -> {
+            System.out.println("이벤트받음++++++++++++++++++++++++++++++++++++++++++++");
+            Handler mHandler = new Handler(Looper.getMainLooper());
+            mHandler.postDelayed(() -> client.startRecording(false), 100);
         };
     }
 
@@ -119,12 +111,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
     //STT가 자동 생성한 콜백 메소드
     @Override
     public void onReady() {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(getApplicationContext(), "음성인식 시작", Toast.LENGTH_SHORT).show();
-            }
-        });
+        runOnUiThread(() -> Toast.makeText(getApplicationContext(), "음성인식 시작", Toast.LENGTH_SHORT).show());
 
     }
 
