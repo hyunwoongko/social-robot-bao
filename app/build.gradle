@@ -43,4 +43,4 @@ dependencies {
     implementation group: 'org.jsoup', name: 'jsoup', version: '1.9.1'
 }
 
-//apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.gms.google-services'
