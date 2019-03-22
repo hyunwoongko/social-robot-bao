@@ -140,7 +140,7 @@ class NERModel(object):
                                                                                       lstm_back_cell,
                                                                                       char_embeddings,
                                                                                       sequence_length=word_lengths,
-                                                                                      dtype=tf.float32,)
+                                                                                      dtype=tf.float32, )
                 output = tf.concat([output_fw, output_bw], axis=-1)
                 # shape = (batch size, max sentence length, char hidden size)
                 output = tf.reshape(output, shape=[-1, s[1], 2 * self.config.char_hidden_size])
@@ -350,7 +350,7 @@ class NERModel(object):
                     nepoch_no_imprv = 0
                     if not os.path.exists(self.config.model_output):
                         os.makedirs(self.config.model_output)
-                    saver.save(sess, self.config.model_output)
+                    saver.save(sess, self.config.model_output + 'ner_model.ckpt')
                     best_score = f1
                 else:
                     nepoch_no_imprv += 1
@@ -363,7 +363,7 @@ class NERModel(object):
         saver = tf.train.Saver()
         with tf.Session() as sess:
             self.logger.info("Testing model over test set")
-            saver.restore(sess, self.config.model_output)
+            saver.restore(sess, self.config.model_output + 'ner_model.ckpt')
             acc, f1 = self.run_evaluate(sess, test, tags)
             self.logger.info("- test acc {:04.2f} - f1 {:04.2f}".format(100 * acc, 100 * f1))
 
@@ -371,7 +371,7 @@ class NERModel(object):
         idx_to_tag = {idx: tag for tag, idx in iter(tags.items())}
         saver = tf.train.Saver()
         with tf.Session() as sess:
-            saver.restore(sess, self.config.model_output)
+            saver.restore(sess, self.config.model_output + 'ner_model.ckpt')
             words_raw = sentence.strip().split(" ")
             words = list(map(lambda x: processing_word(x), words_raw))
             if type(words[0]) == tuple:

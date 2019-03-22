@@ -1,2 +1,2 @@
-model_checkpoint_path: "."
-all_model_checkpoint_paths: "."
+model_checkpoint_path: "intent_model.ckpt"
+all_model_checkpoint_paths: "intent_model.ckpt"

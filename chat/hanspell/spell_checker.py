@@ -115,14 +115,15 @@ def check(text):
 
 def fix(text):
     if text is not None:
-        text = exception(text)  # 예외처리
         result = check(text)
         result.as_dict()  # dict로 출력
-        return result[2]
+        return exception(result[2])
     return text
 
 
 def exception(text):
     if '내 일 모레' in text:
         return text.replace('내 일 모레', '내일 모레')  # konlpy가 실수함.
+    if '어벤저스' in text:
+        return text.replace('어벤저스', '어벤져스')  # konlpy가 실수함.
     return text

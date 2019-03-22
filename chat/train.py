@@ -16,13 +16,12 @@ def train_all():
 
 
 if __name__ == '__main__':
-    from os import environ;
+    from os import environ
+    import tensorflow as tf
 
-    environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-    import tensorflow as tf;
-
+    environ['TF_CPP_M IN_LOG_LEVEL'] = '3'
     tf.logging.set_verbosity(tf.logging.ERROR)
 
     # train_intent()
-    # train_entity()
-    train_all()
+    train_entity()
+    # train_all()

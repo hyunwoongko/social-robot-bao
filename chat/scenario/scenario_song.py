@@ -11,4 +11,4 @@ def response(entity):
         if k[1] != 'O':
             words_list.append(k[0])
 
-    return song.get_youtube_video(' '.join(words_list))
+    return song.get_youtube(' '.join(words_list))

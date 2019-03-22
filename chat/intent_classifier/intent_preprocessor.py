@@ -18,10 +18,11 @@ intent_mapping = {
     '심심': 9,
     '농담': 10,
     '번역': 11,
-    '명언': 12
+    '명언': 12,
+    '시간': 13
 }
 
-vector_size = 64
+vector_size = 128
 
 
 def intent_size():
@@ -49,11 +50,11 @@ def train_vector_model():
     pos2 = ' '.join(list(map(lambda x: '\n' if x[1] in ['Punctuation'] else x[0], pos1))).split('\n')
     morphs = list(map(lambda x: mecab.morphs(x), pos2))
     model = FastText(size=vector_size,
-                     window=2,
+                     window=3,
                      workers=8,
                      min_count=1,
                      sg=1,
-                     iter=300)
+                     iter=500)
     model.build_vocab(morphs)
     model.train(morphs, total_examples=model.corpus_count, epochs=model.epochs)
     return model

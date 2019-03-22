@@ -61,7 +61,7 @@ def tomorrow_dust(location):
     return dust
 
 
-def second_tomorrow_dust(location):
+def after_tomorrow_dust(location):
     enc_location = urllib.parse.quote(location + '+ 내일 미세먼지')
     url = 'https://search.naver.com/search.naver?ie=utf8&query=' + enc_location
 

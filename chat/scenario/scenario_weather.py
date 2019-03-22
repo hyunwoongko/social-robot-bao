@@ -1,5 +1,5 @@
 import api.api_weather as weather
-from requester import request
+from requester import chat_request
 from hanspell.spell_checker import fix
 
 
@@ -21,7 +21,7 @@ def response(named_entity):
     if len(location) == 0:
         while len(location) == 0:
             print('> ' + fix('지역을 말해주세요 : '), end='')
-            loc = request()
+            loc = chat_request()
             if loc is not None and loc.replace(' ', '') != '':
                 location.append(loc)
 

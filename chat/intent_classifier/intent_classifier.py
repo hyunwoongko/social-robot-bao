@@ -5,8 +5,8 @@ import pandas as pd
 import tensorflow as tf
 from konlpy.tag import Okt
 
-from util.tokenizer import tokenize
-from intent_classifier.intent_preprocessor import intent_size, vector_size, preprocess, train_vector_model, intent_mapping
+from intent_classifier.intent_preprocessor import intent_size, vector_size, preprocess, train_vector_model, \
+    intent_mapping
 
 # 파라미터 세팅
 train_data_list = preprocess()
@@ -14,8 +14,8 @@ encode_length = 9
 label_size = intent_size()
 filter_sizes = [2, 3, 4, 2, 3, 4, 2, 3, 4]
 num_filters = len(filter_sizes)
-learning_step = 4000
-learning_rate = 0.0003
+learning_step = 1000
+learning_rate = 0.0005
 model = train_vector_model()
 
 
@@ -127,10 +127,11 @@ def train():
                                           feed_dict={x: data_filter_train, y_target: labels_train, keep_prob: 1})
                 print("step %d, training accuracy: %.3f" % (i, train_accuracy))
 
-        path = './intent_classifier/model/'
+        path = './intent_classifier/model'
         if not os.path.exists(path):
             os.makedirs(path)
-        saver.save(sess, path)
+        saver.save(sess, path + '/intent_model.ckpt')
+
     except Exception as e:
         raise Exception("error on training: {0}".format(e))
     finally:
@@ -144,9 +145,9 @@ def predict(test_data):
         _, x, _, _, _, y, _, _ = create_graph(train=False)
         sess.run(tf.global_variables_initializer())
         saver = tf.train.Saver()
-        path = './intent_classifier/model/'
+        path = './intent_classifier/model'
         if os.path.exists(path):
-            saver.restore(sess, path)
+            saver.restore(sess, path + '/intent_model.ckpt')
         y = sess.run([y], feed_dict={x: np.array([test_data])})
         return format(np.argmax(y))
     except Exception as e:
@@ -158,7 +159,7 @@ def predict(test_data):
 def get_intent(text, is_train):
     if is_train:
         train()
-    prediction = predict(np.array(inference_embed(tokenize(text))).flatten())
+    prediction = predict(np.array(inference_embed(text)).flatten())
     for mapping, num in intent_mapping.items():
         if int(prediction) == num:
             return mapping

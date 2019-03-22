@@ -1,5 +1,5 @@
 import api.api_dust as dust
-from requester import request
+from requester import chat_request
 from hanspell.spell_checker import fix
 
 
@@ -21,7 +21,7 @@ def response(named_entity):
     if len(location) == 0:
         while len(location) == 0:
             print('> ' + fix('지역을 말해주세요 : '), end='')
-            loc = request()
+            loc = chat_request()
             if loc is not None and loc.replace(' ', '') != '':
                 location.append(loc)
 
@@ -30,6 +30,6 @@ def response(named_entity):
     elif date[0] == '내일':
         return dust.tomorrow_dust(' '.join(location))
     elif '모레' in date or '내일모레' in date:
-        return dust.second_tomorrow_dust(' '.join(location))
+        return dust.after_tomorrow_dust(' '.join(location))
     else:
         return '오늘, 내일, 모레의 미세먼지 상태만 알 수 있어요'

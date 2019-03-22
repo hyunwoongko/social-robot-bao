@@ -26,20 +26,26 @@ def main(question):
     question = tokenize(question)
     question = fix(question)
     intent = get_intent(question, is_train=False)
+    print("발화 의도 : " + intent)
     if intent == '날씨':
         entity = get_entity(question, is_train=False)
+        print(entity)
         return fix(weather.response(entity))
     elif intent == '번역':
         entity = get_entity(question, is_train=False)
+        print(entity)
         return '> ' + translation.response(entity)
     elif intent == '위키':
         entity = get_entity(question, is_train=False)
+        print(entity)
         return '> ' + wiki.response(entity)
     elif intent == '먼지':
         entity = get_entity(question, is_train=False)
+        print(entity)
         return '> ' + dust.response(entity)
     elif intent == '노래':
         entity = get_entity(question, is_train=False)
+        print(entity)
         return '>' + song.response(entity)
     elif intent == '이슈':
         return '>' + get_issue()

@@ -5,6 +5,46 @@ from urllib.request import urlopen, Request
 import bs4
 
 
+def __tone_maker(weather_morning, weather_noon):
+    if weather_morning[0] == "흐림":
+        weather_morning[0] = '흐리고'
+    elif weather_morning[0] == "맑음":
+        weather_morning[0] = '맑고'
+    elif weather_morning[0] == "구름조금":
+        weather_morning[0] = '구름이 조금 끼었고'
+    elif weather_morning[0] == "구름많음":
+        weather_morning[0] = '구름이 많이 끼었고'
+    elif weather_morning[0] == "구름많고 한때 비":
+        weather_morning[0] = '구름이 많이 끼고 한때 비가 내릴 수 있으며'
+    elif weather_morning[0] == "비":
+        weather_morning[0] = '비가 내리고'
+    elif weather_morning[0] == "눈":
+        weather_morning[0] = '눈이 내리고'
+    elif weather_morning[0] == "우박":
+        weather_morning[0] = '우박이 떨어지고'
+    elif weather_morning[0] == "흐리고 가끔 비":
+        weather_morning[0] = '흐리고 가끔 비가 내릴 수 있으며'
+    if weather_noon[0] == "흐림":
+        weather_noon[0] = '흐리고'
+    elif weather_noon[0] == "맑음":
+        weather_noon[0] = '맑고'
+    elif weather_noon[0] == "구름조금":
+        weather_noon[0] = '구름이 조금 끼었고'
+    elif weather_noon[0] == "구름많음":
+        weather_noon[0] = '구름이 많이 끼었고'
+    elif weather_noon[0] == "구름많고 한때 비":
+        weather_noon[0] = '구름이 많이 끼고 한때 비가 내릴 수 있으며'
+    elif weather_noon[0] == "비":
+        weather_noon[0] = '비가 내리고'
+    elif weather_noon[0] == "눈":
+        weather_noon[0] = '눈이 내리고'
+    elif weather_noon[0] == "우박":
+        weather_noon[0] = '우박이 떨어지고'
+    elif weather_noon[0] == "흐리고 가끔 비":
+        weather_noon[0] = '흐리고 가끔 비가 내릴 수 있으며'
+    return weather_morning, weather_noon
+
+
 def today_weather(location):
     enc_location = urllib.parse.quote(location + '+ 오늘 날씨')
     url = 'https://search.naver.com/search.naver?ie=utf8&query=' + enc_location
@@ -62,9 +102,6 @@ def today_weather(location):
     return template_msg
 
 
-# 네이버 맞춤법 크롤러
-
-
 def tomorrow_weather(location):
     enc_location = urllib.parse.quote(location + ' 내일 날씨')
     url = 'https://search.naver.com/search.naver?ie=utf8&query=' + enc_location
@@ -100,43 +137,7 @@ def tomorrow_weather(location):
         if weather_morning[0] == weather_noon[0]:
             glue = '에도'
 
-        if weather_morning[0] == "흐림":
-            weather_morning[0] = '흐리고'
-        elif weather_morning[0] == "맑음":
-            weather_morning[0] = '맑고'
-        elif weather_morning[0] == "구름조금":
-            weather_morning[0] = '구름이 조금 끼었고'
-        elif weather_morning[0] == "구름많음":
-            weather_morning[0] = '구름이 많이 끼었고'
-        elif weather_morning[0] == "구름많고 한때 비":
-            weather_morning[0] = '구름이 많이 끼고 한때 비가 내릴 수 있으며'
-        elif weather_morning[0] == "비":
-            weather_morning[0] = '비가 내리고'
-        elif weather_morning[0] == "눈":
-            weather_morning[0] = '눈이 내리고'
-        elif weather_morning[0] == "우박":
-            weather_morning[0] = '우박이 떨어지고'
-        elif weather_morning[0] == "흐리고 가끔 비":
-            weather_morning[0] = '흐리고 가끔 비가 내릴 수 있으며'
-        if weather_noon[0] == "흐림":
-            weather_noon[0] = '흐리고'
-        elif weather_noon[0] == "맑음":
-            weather_noon[0] = '맑고'
-        elif weather_noon[0] == "구름조금":
-            weather_noon[0] = '구름이 조금 끼었고'
-        elif weather_noon[0] == "구름많음":
-            weather_noon[0] = '구름이 많이 끼었고'
-        elif weather_noon[0] == "구름많고 한때 비":
-            weather_noon[0] = '구름이 많이 끼고 한때 비가 내릴 수 있으며'
-        elif weather_noon[0] == "비":
-            weather_noon[0] = '비가 내리고'
-        elif weather_noon[0] == "눈":
-            weather_noon[0] = '눈이 내리고'
-        elif weather_noon[0] == "우박":
-            weather_noon[0] = '우박이 떨어지고'
-        elif weather_noon[0] == "흐리고 가끔 비":
-            weather_noon[0] = '흐리고 가끔 비가 내릴 수 있으며'
-
+        weather_morning, weather_noon = __tone_maker(weather_morning, weather_noon)
         template_msg = '내일 ' + location + ' 날씨를 알려드릴게요.' + ' 내일 오전엔 ' + weather_morning[
             0] + ' 기온은 ' + temperature_morning + '에요. 오후' + glue + ' ' + weather_noon[
                            0] + ' 기온은 ' + temperature_noon + '입니다.'
@@ -195,43 +196,7 @@ def after_tomorrow_weather(location):
         if weather_morning[0] == weather_noon[0]:
             glue = '에도'
 
-        if weather_morning[0] == "흐림":
-            weather_morning[0] = '흐리고'
-        elif weather_morning[0] == "맑음":
-            weather_morning[0] = '맑고'
-        elif weather_morning[0] == "구름조금":
-            weather_morning[0] = '구름이 조금 끼었고'
-        elif weather_morning[0] == "구름많음":
-            weather_morning[0] = '구름이 많이 끼었고'
-        elif weather_morning[0] == "구름많고 한때 비":
-            weather_morning[0] = '구름이 많이 끼고 한때 비가 내릴 수 있으며'
-        elif weather_morning[0] == "비":
-            weather_morning[0] = '비가 내리고'
-        elif weather_morning[0] == "눈":
-            weather_morning[0] = '눈이 내리고'
-        elif weather_morning[0] == "우박":
-            weather_morning[0] = '우박이 떨어지고'
-        elif weather_morning[0] == "흐리고 가끔 비":
-            weather_morning[0] = '흐리고 가끔 비가 내릴 수 있으며'
-        if weather_noon[0] == "흐림":
-            weather_noon[0] = '흐리고'
-        elif weather_noon[0] == "맑음":
-            weather_noon[0] = '맑고'
-        elif weather_noon[0] == "구름조금":
-            weather_noon[0] = '구름이 조금 끼었고'
-        elif weather_noon[0] == "구름많음":
-            weather_noon[0] = '구름이 많이 끼었고'
-        elif weather_noon[0] == "구름많고 한때 비":
-            weather_noon[0] = '구름이 많이 끼고 한때 비가 내릴 수 있으며'
-        elif weather_noon[0] == "비":
-            weather_noon[0] = '비가 내리고'
-        elif weather_noon[0] == "눈":
-            weather_noon[0] = '눈이 내리고'
-        elif weather_noon[0] == "우박":
-            weather_noon[0] = '우박이 떨어지고'
-        elif weather_noon[0] == "흐리고 가끔 비":
-            weather_noon[0] = '흐리고 가끔 비가 내릴 수 있으며'
-
+        weather_morning, weather_noon = __tone_maker(weather_morning, weather_noon)
         template_msg = '모레 ' + location + ' 날씨를 알려드릴게요.' + ' 모레 오전엔 ' + weather_morning[
             0] + ' 기온은 ' + temperature_morning + '에요. 오후' + glue + ' ' + weather_noon[
                            0] + ' 기온은 ' + temperature_noon + '입니다.'
@@ -249,7 +214,7 @@ def after_tomorrow_weather(location):
     return template_msg
 
 
-def weather_specific(location, date):
+def specific_weather(location, date):
     try:
         enc_location = urllib.parse.quote(location + date + ' 날씨')
         url = 'https://www.google.com/search?q=' + enc_location
@@ -270,7 +235,7 @@ def weather_specific(location, date):
     return response
 
 
-def weather_this_week(location):
+def this_week_weather(location):
     try:
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',

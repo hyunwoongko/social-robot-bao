@@ -18,10 +18,10 @@ class config():
     max_iter = None
     lowercase = True
     train_embeddings = False
-    nepochs = 50
+    nepochs = 20
     dropout = 0.5
     batch_size = 10
-    lr = 0.02
+    lr = 0.04
     lr_decay = 0.9
     nepoch_no_imprv = 300
     use_crawler = False
