@@ -19,8 +19,8 @@ public final class ModelApi {
      * @return 발화 의도
      */
     public String getIntent(String text) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/intent/" + URLEncoder
-                .encode(text, ApiServer.UTF8))
+        return Jsoup.connect(ApiServer.SERVER_URL + "/intent/" + Encoder
+                .utf8(text))
                 .get()
                 .body()
                 .text();
@@ -34,8 +34,8 @@ public final class ModelApi {
      * @return 단어와 개체명이 포함된 Map
      */
     public String getEntity(String text) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/entity/" + URLEncoder
-                .encode(text, ApiServer.UTF8))
+        return Jsoup.connect(ApiServer.SERVER_URL + "/entity/" + Encoder
+                .utf8(text))
                 .get()
                 .body()
                 .text();
@@ -49,8 +49,8 @@ public final class ModelApi {
      * @return Transformer의 출력 문장
      */
     public String generateAnswer(String text) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/generate_answer/" + URLEncoder
-                .encode(text, ApiServer.UTF8))
+        return Jsoup.connect(ApiServer.SERVER_URL + "/generate_answer/" + Encoder
+                .utf8(text))
                 .get()
                 .body()
                 .text();

@@ -20,8 +20,8 @@ public class WikiApi {
      * @return 단어의 정보
      */
     public String getWiki(String text) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/wiki/" + URLEncoder
-                .encode(text, ApiServer.UTF8))
+        return Jsoup.connect(ApiServer.SERVER_URL + "/wiki/" + Encoder
+                .utf8(text))
                 .get()
                 .body()
                 .text();

@@ -19,8 +19,8 @@ public class YoutubeApi {
      * @return 유튜브 동영상 URL
      */
     public String getAfterTomorrowDust(String song) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/youtube/" + URLEncoder
-                .encode(song, ApiServer.UTF8))
+        return Jsoup.connect(ApiServer.SERVER_URL + "/youtube/" + Encoder
+                .utf8(song))
                 .get()
                 .body()
                 .text();

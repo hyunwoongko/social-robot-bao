@@ -19,8 +19,8 @@ public final class PreprocessorApi {
      * @return 조사, 특수문자등이 잘린 문장
      */
     public String tokenize(String text) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/tokenize/" + URLEncoder
-                .encode(text, ApiServer.UTF8))
+        return Jsoup.connect(ApiServer.SERVER_URL + "/tokenize/" + Encoder
+                .utf8(text))
                 .get()
                 .body()
                 .text();
@@ -34,8 +34,8 @@ public final class PreprocessorApi {
      * @return 맞춤법이 교정된 문장
      */
     public String fix(String text) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/fix/" + URLEncoder
-                .encode(text, ApiServer.UTF8))
+        return Jsoup.connect(ApiServer.SERVER_URL + "/fix/" + Encoder
+                .utf8(text))
                 .get()
                 .body()
                 .text();

@@ -9,63 +9,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f2ff807-e7e1-4931-91f5-40600ab735ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ApiServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/DustApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/IssueApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ModelApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/PreprocessorApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/TrainerApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/TranslatorApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WeatherApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WikiApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WiseApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/YoutubeApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/scenario/scenario_time.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/ASUS.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/ASUS.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/Encoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/api/api_dust.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/api/api_dust.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/api/api_weather.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/api/api_weather.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/api/api_youtube.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/api/api_youtube.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/chat.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/chat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/data/processed/kor/char.trimmed.npz" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/data/processed/kor/char.trimmed.npz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/data/processed/kor/chars.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/data/processed/kor/chars.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/data/processed/kor/tags.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/data/processed/kor/tags.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/data/processed/kor/words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/data/processed/kor/words.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/data/w2v/model" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/data/w2v/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/kor_model/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/kor_model/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/kor_model/ner_model/lstmcrf_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/kor_model/ner_model/lstmcrf_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/results/crf/events.out.tfevents.1552955593.DESKTOP-7N91TGT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/results/crf/events.out.tfevents.1552983599.DESKTOP-7N91TGT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/results/crf/events.out.tfevents.1553044517.DESKTOP-7N91TGT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/results/crf/events.out.tfevents.1553045523.DESKTOP-7N91TGT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/results/crf/events.out.tfevents.1553047368.DESKTOP-7N91TGT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/results/crf/model.weights/.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/results/crf/model.weights/.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/results/crf/model.weights/.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/results/crf/model.weights/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/generative_model/data_in/ChatBotData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/chat/generative_model/data_in/ChatBotData.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/hanspell/spell_checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/hanspell/spell_checker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/intent_classifier/intent_classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/intent_classifier/intent_classifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/intent_classifier/intent_preprocessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/intent_classifier/intent_preprocessor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/intent_classifier/model/.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/intent_classifier/model/.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/intent_classifier/model/.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/intent_classifier/model/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/requester.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/requester.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/scenario/scenario_dust.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/scenario/scenario_dust.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/scenario/scenario_song.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/scenario/scenario_song.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/scenario/scenario_translation.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/scenario/scenario_translation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/scenario/scenario_weather.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/scenario/scenario_weather.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/temp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/train_intent.csv" beforeDir="false" afterPath="$PROJECT_DIR$/chat/train_intent.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ApiServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ApiServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/DustApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/DustApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ModelApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ModelApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/PreprocessorApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/PreprocessorApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/TranslatorApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/TranslatorApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WeatherApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WeatherApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WikiApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WikiApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/YoutubeApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/YoutubeApi.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -155,16 +109,16 @@
           <entry key="CSV" value="4" />
           <entry key="Groovy" value="2" />
           <entry key="Image" value="2" />
-          <entry key="JAVA" value="30" />
+          <entry key="JAVA" value="44" />
           <entry key="PLAIN_TEXT" value="13" />
-          <entry key="Python" value="106" />
+          <entry key="Python" value="108" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSV" value="795" />
           <entry key="Groovy" value="2" />
-          <entry key="JAVA" value="2922" />
+          <entry key="JAVA" value="3327" />
           <entry key="PLAIN_TEXT" value="193" />
           <entry key="Python" value="1981" />
         </counts>
@@ -174,91 +128,118 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/scenario/scenario_weather.py">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ModelApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-466">
-              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+            <state relative-caret-position="142">
+              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
               <folding>
-                <element signature="e#0#33#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/chat.py">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1124">
-              <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+            <state relative-caret-position="262">
+              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/IssueApi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/scenario/scenario_wise.py">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/PreprocessorApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/scenario/scenario_translation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+            <state relative-caret-position="197">
+              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/scenario/scenario_dust.py">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/TrainerApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+            <state relative-caret-position="-420">
+              <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
               <folding>
-                <element signature="e#0#27#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/scenario/scenario_dance.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/TranslatorApi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WeatherApi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="85" column="41" lean-forward="true" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WikiApi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WiseApi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="28">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chat/scenario/scenario_ fairytale.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/scenario/scenario_time.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/scenario/scenario_wiki.py">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/YoutubeApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/scenario/scenario_song.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+            <state relative-caret-position="464">
+              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -279,7 +260,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>자유</find>
       <find>프랑스어</find>
       <find>===</find>
       <find>====</find>
@@ -309,6 +289,7 @@
       <find>Sav</find>
       <find>saver</find>
       <find>static</find>
+      <find>.encode(location, ApiServer.UTF8)</find>
     </findStrings>
     <replaceStrings>
       <replace>중국어</replace>
@@ -340,6 +321,7 @@
       <replace>공기 상태</replace>
       <replace>하늘 맑은지</replace>
       <replace>날씨</replace>
+      <replace>Encoder</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -4342,8 +4324,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chat/intent_classifier/intent_preprocessor.py" />
-        <option value="$PROJECT_DIR$/chat/scenario/scenario_time.py" />
         <option value="$PROJECT_DIR$/chat/chat.py" />
         <option value="$PROJECT_DIR$/chat/server/Server.java" />
         <option value="$PROJECT_DIR$/chat/temp.py" />
@@ -4376,23 +4356,25 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/AIModule.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/Server.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ServerUrl.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ApiServer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/DeepLearningApi.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/TrainingApi.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/PredictorApi.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/IssueApi.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ModelApi.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/TrainerApi.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/PreprocessorApi.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/DustApi.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WikiApi.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/TranslatorApi.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WeatherApi.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WiseApi.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/YoutubeApi.java" />
         <option value="$PROJECT_DIR$/chat/scenario/scenario_translation.py" />
         <option value="$PROJECT_DIR$/chat/scenario/scenario_song.py" />
         <option value="$PROJECT_DIR$/chat/scenario/scenario_dust.py" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/Main.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ApiServer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/DustApi.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/Encoder.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ModelApi.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/PreprocessorApi.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/TranslatorApi.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WeatherApi.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WikiApi.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/YoutubeApi.java" />
       </list>
     </option>
   </component>
@@ -4512,6 +4494,12 @@
               <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="chat" type="462c0819:PsiDirectoryNode" />
+              <item name="hanspell" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="chat" type="462c0819:PsiDirectoryNode" />
               <item name="scenario" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -4558,7 +4546,7 @@
     <property name="android.profiler.active" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553235507354" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553236835525" />
     <property name="device.picker.selection" value="ce05160579ec052e05" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.6 (Capstone-Project)" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/BrainTraining-for-Kakao-master" />
@@ -4597,7 +4585,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ModelApi">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="app" />
       <option name="DEPLOY" value="true" />
@@ -4622,6 +4610,19 @@
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.welfarerobotics.welfareapplcation.chat_api.Main" />
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.welfarerobotics.welfareapplcation.chat_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ModelApi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -4717,28 +4718,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="temp" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="chat" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chat" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chat/temp.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="chat" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -4826,19 +4805,19 @@
     <list>
       <item itemvalue="Jupyter Notebook.Jupyter" />
       <item itemvalue="Android App.app" />
-      <item itemvalue="Python.temp" />
       <item itemvalue="Python.server" />
       <item itemvalue="Python.train" />
       <item itemvalue="Python.server (1)" />
       <item itemvalue="Application.ModelApi" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.ModelApi" />
         <item itemvalue="Python.server (1)" />
         <item itemvalue="Python.train" />
         <item itemvalue="Python.server" />
-        <item itemvalue="Python.temp" />
       </list>
     </recent_temporary>
   </component>
@@ -4870,12 +4849,12 @@
       <workItem from="1552811379587" duration="105948000" />
       <workItem from="1553059719156" duration="10753000" />
       <workItem from="1553136337504" duration="300000" />
-      <workItem from="1553137075233" duration="37204000" />
+      <workItem from="1553137075233" duration="38727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="337424000" />
+    <option name="totallyTimeSpent" value="338947000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -4903,7 +4882,7 @@
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3293348" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32829374" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.8120879" visible="true" weight="0.21706264" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.8120879" visible="true" weight="0.23434125" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.33261338" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -4956,17 +4935,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chat/entity_recognizer/results/crf/model.weights/checkpoint">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/entity_recognizer/data/crawler/pos.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/entity_recognizer/kor_model/data_embed_model/model.vec">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2875" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chat/util/tokenizer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -5136,23 +5104,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ApiServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ModelApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="50" column="12" lean-forward="true" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
@@ -5164,106 +5115,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WikiApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WiseApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WeatherApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-376">
-          <caret line="64" column="32" lean-forward="true" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/TranslatorApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/TrainerApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-106">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/PreprocessorApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/IssueApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/DustApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="43" selection-start-line="43" selection-end-line="56" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/YoutubeApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="137" column="29" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -5363,6 +5214,147 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/scenario/scenario_ fairytale.py">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/hanspell/spell_checker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="115" column="4" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ApiServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/DustApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/Encoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/IssueApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ModelApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/PreprocessorApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/TrainerApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-420">
+          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/TranslatorApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WeatherApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="85" column="41" lean-forward="true" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WikiApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WiseApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/YoutubeApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

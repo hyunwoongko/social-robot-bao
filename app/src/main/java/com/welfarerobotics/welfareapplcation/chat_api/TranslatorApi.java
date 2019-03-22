@@ -21,9 +21,9 @@ public final class TranslatorApi {
      * @return 해당 언어로 번역된 문장
      */
     public String translate(String lang, String text) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/translate/" + URLEncoder
-                .encode(lang, ApiServer.UTF8) + "/" + URLEncoder
-                .encode(text, ApiServer.UTF8))
+        return Jsoup.connect(ApiServer.SERVER_URL + "/translate/" + Encoder
+                .utf8(lang) + "/" + Encoder
+                .utf8(text))
                 .get()
                 .body()
                 .text();

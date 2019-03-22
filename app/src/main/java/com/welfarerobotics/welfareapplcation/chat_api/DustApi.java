@@ -4,6 +4,7 @@ import org.jsoup.Jsoup;
 
 import java.io.IOException;
 import java.net.URLEncoder;
+import java.util.Base64;
 
 /**
  * @Author : Hyunwoong
@@ -19,8 +20,8 @@ public class DustApi {
      * @return 오늘의 지역별 미세먼지 상황
      */
     public String getTodayDust(String location) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/today_dust/" + URLEncoder
-                .encode(location, ApiServer.UTF8))
+        return Jsoup.connect(ApiServer.SERVER_URL + "/today_dust/" + Encoder
+                .utf8(location))
                 .get()
                 .body()
                 .text();
@@ -34,8 +35,8 @@ public class DustApi {
      * @return 내일의 지역별 미세먼지 상황
      */
     public String getTomorrowDust(String location) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/tomorrow_dust/" + URLEncoder
-                .encode(location, ApiServer.UTF8))
+        return Jsoup.connect(ApiServer.SERVER_URL + "/tomorrow_dust/" + Encoder
+                .utf8(location))
                 .get()
                 .body()
                 .text();
@@ -49,8 +50,8 @@ public class DustApi {
      * @return 모레의 지역별 미세먼지 상황
      */
     public String getAfterTomorrowDust(String location) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/after_tomorrow_dust/" + URLEncoder
-                .encode(location, ApiServer.UTF8))
+        return Jsoup.connect(ApiServer.SERVER_URL + "/after_tomorrow_dust/" + Encoder
+                .utf8(location))
                 .get()
                 .body()
                 .text();

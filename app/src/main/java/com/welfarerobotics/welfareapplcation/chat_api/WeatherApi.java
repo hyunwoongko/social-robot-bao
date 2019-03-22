@@ -21,8 +21,8 @@ public final class WeatherApi {
      * @return 오늘의 지역별 날씨 상황
      */
     public String getTodayWeather(String location) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/today_weather/" + URLEncoder
-                .encode(location, ApiServer.UTF8))
+        return Jsoup.connect(ApiServer.SERVER_URL + "/today_weather/" + Encoder
+                .utf8(location))
                 .get()
                 .body()
                 .text();
@@ -36,8 +36,8 @@ public final class WeatherApi {
      * @return 내일의 지역별 날씨 상황
      */
     public String getTomorrowWeather(String location) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/tomorrow_weather/" + URLEncoder
-                .encode(location, ApiServer.UTF8))
+        return Jsoup.connect(ApiServer.SERVER_URL + "/tomorrow_weather/" + Encoder
+                .utf8(location))
                 .get()
                 .body()
                 .text();
@@ -51,8 +51,8 @@ public final class WeatherApi {
      * @return 모레의 지역별 날씨 상황
      */
     public String getAfterTomorrowWeather(String location) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/after_tomorrow_weather/" + URLEncoder
-                .encode(location, ApiServer.UTF8))
+        return Jsoup.connect(ApiServer.SERVER_URL + "/after_tomorrow_weather/" + Encoder
+                .utf8(location))
                 .get()
                 .body()
                 .text();
@@ -66,8 +66,8 @@ public final class WeatherApi {
      * @return 이번 주의 지역별 날씨 상황
      */
     public String getThisWeekWeather(String location) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/this_week_weather/" + URLEncoder
-                .encode(location, ApiServer.UTF8))
+        return Jsoup.connect(ApiServer.SERVER_URL + "/this_week_weather/" + Encoder
+                .utf8(location))
                 .get()
                 .body()
                 .text();
@@ -82,9 +82,9 @@ public final class WeatherApi {
      * @return 특정 날짜의 지역별 날씨 상황
      */
     public String getSpecificWeather(String location, String date) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/specific_weather/" + URLEncoder
-                .encode(location, ApiServer.UTF8) + URLEncoder
-                .encode(date, ApiServer.UTF8))
+        return Jsoup.connect(ApiServer.SERVER_URL + "/specific_weather/" + Encoder
+                .utf8(location) + Encoder
+                .utf8(date))
                 .get()
                 .body()
                 .text();
