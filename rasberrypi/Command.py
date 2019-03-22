@@ -12,7 +12,8 @@ import serial
 import time
 import json
 import re
-
+from functools import singledispatch
+import Wifi_Configer as WIFI
 
 KEY = 'b6889d34f1184378bfc045cd6b8a92a9'  #a valid subscription key (keeping the quotes in place).
 CF.Key.set(KEY)
@@ -71,18 +72,40 @@ def Commands(command=""):
        EmotionCheck()
         
     if command == "Dance" :   
-       bluetooth_server.send_serial("gooood~"+"l")
+      SerialComm.instance().send_serial("gooood~"+"l")
       
-      
+def JsonCommands(SSID,PASS):
+    interface_name = "wlan0" # i. e wlp2s0
+    print(SSID,PASS)
+    
+    F =WIFI.Finder(server_name=SSID,
+            password=PASS,
+            interface=interface_name)
+    F.run()
+    #from bluetooth_server import SerialComm
+    #serialComm = SerialComm().instance()
+   
 
-        
+       
+       
+
+      
 def StartCommand(command=""):
     server_thread = threading.Thread(target=Commands,args=(command,))
     server_thread.daemon = True
     server_thread.start()        
                 
-                      
-                      
+                    
+def JsonStartCommand(command):
+    print("(json)",command)#wifi connect
+    ssid = command['SSID']
+    password = command['PWD']
+    print(type(ssid),ssid)
+    print(type(password),password)
+    
+    server_thread = threading.Thread(target=JsonCommands,args=(ssid,password))
+    server_thread.daemon = True
+    server_thread.start()   
                       
                       
 class SerialComm:

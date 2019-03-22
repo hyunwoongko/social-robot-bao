@@ -6,7 +6,6 @@ import time
 import json
 import re
 import Command
-import threading
 
 wpa_supplicant_conf = "/etc/wpa_supplicant/wpa_supplicant.conf"
 sudo_mode = "sudo "
@@ -14,17 +13,6 @@ sudo_mode = "sudo "
 command =""
 
 class SerialComm:
-    
-    @classmethod
-    def __getInstance(cls):
-        return cls.__instance
-
-    @classmethod
-    def instance(cls, *args, **kargs):
-        cls.__instance = cls(*args, **kargs)
-        cls.instance = cls.__getInstance
-        return cls.__instance
-
     def __init__(self):
         self.port = serial.Serial("/dev/rfcomm0", baudrate=9600, timeout=1)
 
@@ -40,7 +28,7 @@ class SerialComm:
 
     def is_json(self, mJson):
         try:
-            #print(type(mJson),mJson)
+            print(type(mJson),mJson)
             json_object = json.loads(mJson)
             if isinstance(json_object, int):
                 return False
@@ -49,7 +37,7 @@ class SerialComm:
                 
                 return False
         except ValueError as e:
-            #print(type(mJson),mJson)
+            print(type(mJson),mJson)
             return False
         return True
 
@@ -129,12 +117,6 @@ class ShellWrapper:
         else:
             return None
 
-    
-def CommandStart(command):
-    json_object = json.loads(ble_line)
-    
-       
-        
 
 def start():
     global command
@@ -144,20 +126,16 @@ def start():
     ble_comm = None
     isConnected = False
     print("startserver")
-    
+
+
     while True:
       
         try:
-            ble_comm = SerialComm().instance()
+            ble_comm = SerialComm()
             out = ble_comm.read_serial()
             for ble_line in out:
-                #print(ble_line.decode('utf-8'))
+                print(ble_line.decode('utf-8'))
                 command =ble_line.decode('utf-8')
-                if(ble_comm.is_json(command)):
-                    print(json.loads(command))
-                    Command.JsonStartCommand(json.loads(command))
-                else:
-                    Command.StartCommand(command)
         except serial.SerialException:
             print("waiting for connection")
             ble_comm = None
@@ -166,6 +144,6 @@ def start():
             
 
 
-server_thread = threading.Thread(target=start)
-server_thread.daemon = True
-server_thread.start()
+
+    
+
