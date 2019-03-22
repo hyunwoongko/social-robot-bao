@@ -14,7 +14,9 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
@@ -31,7 +33,7 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Objects;
 
-public class UserSettingActivity extends AppCompatActivity {
+public class UserSettingActivity extends BaseActivity {
     private final int REQUEST_TAKE_PICTURE = 1;
     private ImageView iv_UserPhoto;
     private String mCurrentPhotoPath;
