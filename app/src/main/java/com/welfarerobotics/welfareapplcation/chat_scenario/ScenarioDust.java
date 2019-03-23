@@ -12,9 +12,9 @@ import java.util.List;
  * @Homepage : https://github.com/gusdnd852
  */
 public class ScenarioDust {
-    public String response(List<String[]> entity) throws IOException {
-        String[] kewordGroup = entity.get(0);
-        String[] entityGroup = entity.get(1);
+    public String response(String[][] entity) throws IOException {
+        String[] kewordGroup = entity[0];
+        String[] entityGroup = entity[1];
         List<String> date = new ArrayList<>();
         List<String> location = new ArrayList<>();
         DustApi api = new DustApi();
@@ -43,7 +43,7 @@ public class ScenarioDust {
         for (String one : location) {
             loc.append(one);
         }
-        
+
         if (date.contains("오늘")) {
             return api.getTodayDust(loc.toString());
         } else if (date.contains("모레") || date.contains("내일모레")) {

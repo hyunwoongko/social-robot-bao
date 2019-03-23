@@ -3,7 +3,9 @@ package com.welfarerobotics.welfareapplcation.chat_api;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
-import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @Author : Hyunwoong
@@ -21,6 +23,7 @@ public final class ModelApi {
     public String getIntent(String text) throws IOException {
         return Jsoup.connect(ApiServer.SERVER_URL + "/intent/" + Encoder
                 .utf8(text))
+                .timeout(20000)
                 .get()
                 .body()
                 .text();
@@ -33,12 +36,26 @@ public final class ModelApi {
      * @param text 개체명을 인식할 문장
      * @return 단어와 개체명이 포함된 Map
      */
-    public String getEntity(String text) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/entity/" + Encoder
+    public String[][] getEntity(String text) throws IOException {
+        String entityString = Jsoup.connect(ApiServer.SERVER_URL + "/entity/" + Encoder
                 .utf8(text))
+                .timeout(20000)
                 .get()
                 .body()
                 .text();
+
+        String[] splitedEntityString = entityString.split("\\[");
+        List<String[]> splitEntityStringSet = new ArrayList<>();
+        for (int i = 1; i < splitedEntityString.length; i++) {
+            splitEntityStringSet.add(splitedEntityString[i]
+                    .replace("\'", "")
+                    .replace(",", "")
+                    .replace("]", "")
+                    .replace(")", "")
+                    .split(" "));
+        }
+
+        return splitEntityStringSet.toArray(new String[0][]);
     }
 
     /**
@@ -51,6 +68,7 @@ public final class ModelApi {
     public String generateAnswer(String text) throws IOException {
         return Jsoup.connect(ApiServer.SERVER_URL + "/generate_answer/" + Encoder
                 .utf8(text))
+                .timeout(20000)
                 .get()
                 .body()
                 .text();

@@ -7,7 +7,6 @@ import com.welfarerobotics.welfareapplcation.chat_scenario.Voice;
 
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * @Author : Hyunwoong
@@ -38,7 +37,7 @@ public class ChatApi {
             // 유저의 발화의도 파악
 
             if (intent.equals("먼지")) {
-                List<String[]> recognizedEntity = modelApi.getEntity(usersSaying);
+                String[][] recognizedEntity = modelApi.getEntity(usersSaying);
                 for (String[] one : recognizedEntity) System.out.println("개체명 인식 : " + Arrays.toString(one));
                 Voice.tts(dust.response(recognizedEntity));
                 //일단 미세먼지 시나리오만 구현함
