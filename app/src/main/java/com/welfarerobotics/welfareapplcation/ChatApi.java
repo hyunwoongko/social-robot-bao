@@ -19,10 +19,8 @@ public class ChatApi {
     public static void main(String[] args) throws IOException {
         ScenarioDust dust = new ScenarioDust();
         // 시나리오 생성
-
         PreprocessorApi preprocessor = new PreprocessorApi();
         // 프리프로세서 생성
-
         ModelApi modelApi = new ModelApi();
         // 모델 생성
 
@@ -37,7 +35,7 @@ public class ChatApi {
             // 유저의 발화의도 파악
 
             if (intent.equals("먼지")) {
-                String[][] recognizedEntity = modelApi.getEntity(usersSaying);
+                String[][] recognizedEntity = modelApi.getEntity("dust", usersSaying);
                 for (String[] one : recognizedEntity) System.out.println("개체명 인식 : " + Arrays.toString(one));
                 Voice.tts(dust.response(recognizedEntity));
                 //일단 미세먼지 시나리오만 구현함

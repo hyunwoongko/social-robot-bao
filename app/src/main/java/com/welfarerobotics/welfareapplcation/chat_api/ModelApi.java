@@ -4,7 +4,6 @@ import org.jsoup.Jsoup;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -33,11 +32,12 @@ public final class ModelApi {
      * BiLSTM - CRF 개체명 인식기 API
      * 문장을 입력하면 개체명을 인식함
      *
+     * @param kind 개체 종류
      * @param text 개체명을 인식할 문장
      * @return 단어와 개체명이 포함된 Map
      */
-    public String[][] getEntity(String text) throws IOException {
-        String entityString = Jsoup.connect(ApiServer.SERVER_URL + "/entity/" + Encoder
+    public String[][] getEntity(String kind, String text) throws IOException {
+        String entityString = Jsoup.connect(ApiServer.SERVER_URL + "/entity_" + kind + "/" + Encoder
                 .utf8(text))
                 .timeout(20000)
                 .get()

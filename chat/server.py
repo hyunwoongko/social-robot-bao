@@ -11,7 +11,11 @@ from api.api_weather import today_weather, tomorrow_weather, after_tomorrow_weat
 from api.api_wiki import wiki
 from api.api_wise import get_wise
 from api.api_youtube import get_youtube
-from entity_recognizer.entity_recognizer import get_entity
+from entity_recognizer.dust.entity_recognizer import get_dust_entity
+from entity_recognizer.song.entity_recognizer import get_song_entity
+from entity_recognizer.translate.entity_recognizer import get_translate_entity
+from entity_recognizer.weather.entity_recognizer import get_weather_entity
+from entity_recognizer.wiki.entity_recognizer import get_wiki_entity
 from generative_model.answer_generator import generate_answer
 from hanspell.spell_checker import fix
 from intent_classifier.intent_classifier import get_intent
@@ -32,10 +36,6 @@ def init():
 ##################################
 ######### DEEP LEARNING MODEL #########
 ##################################
-@app.route('/entity/<text>', methods=['GET', 'POST'])
-def server_entity(text):
-    return str(get_entity(text, False))
-
 
 @app.route('/intent/<text>', methods=['GET', 'POST'])
 def server_intent(text):
@@ -45,16 +45,6 @@ def server_intent(text):
 @app.route('/generate_answer/<text>', methods=['GET', 'POST'])
 def server_generate_answer(text):
     return generate_answer(text)
-
-
-@app.route('/train_entity', methods=['GET', 'POST'])
-def train_entity():
-    return get_entity("안녕하세요", True)
-
-
-@app.route('/train_intent', methods=['GET', 'POST'])
-def train_intent():
-    return get_intent("안녕하세요", True)
 
 
 ##################################
@@ -73,6 +63,11 @@ def server_fix(text):
 ##################################
 ############# API : DUST #############
 ##################################
+@app.route('/entity_dust/<text>', methods=['GET', 'POST'])
+def server_dust_entity(text):
+    return str(get_dust_entity(text, False))
+
+
 @app.route('/today_dust/<location>', methods=['GET', 'POST'])
 def server_today_dust(location):
     return today_dust(location)
@@ -99,6 +94,11 @@ def server_issue():
 ##################################
 ########### API : TRANSLATE ###########
 ##################################
+@app.route('/entity_translate/<text>', methods=['GET', 'POST'])
+def server_translate_entity(text):
+    return str(get_translate_entity(text, False))
+
+
 @app.route('/translate/<lang>/<text>', methods=['GET', 'POST'])
 def server_translate(lang, text):
     return translate(lang=lang, text=text)
@@ -107,6 +107,11 @@ def server_translate(lang, text):
 ##################################
 ############# API : WIKI #############
 ##################################
+@app.route('/entity_wiki/<text>', methods=['GET', 'POST'])
+def server_wiki_entity(text):
+    return str(get_wiki_entity(text, False))
+
+
 @app.route('/wiki/<text>', methods=['GET', 'POST'])
 def server_wiki(text):
     return wiki(text)
@@ -115,6 +120,11 @@ def server_wiki(text):
 ##################################
 ########### API : WEATHER ############
 ##################################
+@app.route('/entity_weather/<text>', methods=['GET', 'POST'])
+def server_weather_entity(text):
+    return str(get_weather_entity(text, False))
+
+
 @app.route('/today_weather/<location>', methods=['GET', 'POST'])
 def server_today_weather(location):
     return today_weather(location)
@@ -151,6 +161,11 @@ def server_wise():
 ##################################
 ############ API : YOUTUBE ############
 ##################################
+@app.route('/entity_song/<text>', methods=['GET', 'POST'])
+def server_song_entity(text):
+    return str(get_song_entity(text, False))
+
+
 @app.route('/youtube/<text>', methods=['GET', 'POST'])
 def server_youtube(text):
     return get_youtube(text)

@@ -9,7 +9,7 @@ import scenario.scenario_weather as weather
 import scenario.scenario_wiki as wiki
 import scenario.scenario_wise as wise
 from api.api_issue import get_issue
-from entity_recognizer.entity_recognizer import get_entity
+from entity_recognizer import get_entity
 from generative_model.answer_generator import generate_answer
 from hanspell.spell_checker import fix
 from intent_classifier.intent_classifier import get_intent
