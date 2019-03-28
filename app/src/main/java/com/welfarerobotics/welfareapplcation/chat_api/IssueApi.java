@@ -16,8 +16,9 @@ public class IssueApi {
      *
      * @return 오늘의 이슈 5개
      */
-    public String getIssue() throws IOException {
+    public static String getIssue() throws IOException {
         return Jsoup.connect(ApiServer.SERVER_URL + "/issue")
+                .timeout(20000)
                 .get()
                 .body()
                 .text();

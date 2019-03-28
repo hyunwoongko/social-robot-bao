@@ -9,6 +9,8 @@
         <!-- Remove Title Bar -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <!-- Full Screen Mode -->
+        <item name="android:windowFullscreen">true</item>
     </style>
 
 </resources>

@@ -3,7 +3,6 @@ package com.welfarerobotics.welfareapplcation.chat_api;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
-import java.net.URLEncoder;
 
 /**
  * @Author : Hyunwoong
@@ -20,9 +19,10 @@ public final class WeatherApi {
      * @param location 날씨 상태를 확인할 지역
      * @return 오늘의 지역별 날씨 상황
      */
-    public String getTodayWeather(String location) throws IOException {
+    public static String getTodayWeather(String location) throws IOException {
         return Jsoup.connect(ApiServer.SERVER_URL + "/today_weather/" + Encoder
                 .utf8(location))
+                .timeout(20000)
                 .get()
                 .body()
                 .text();
@@ -35,9 +35,10 @@ public final class WeatherApi {
      * @param location 날씨 상태를 확인할 지역
      * @return 내일의 지역별 날씨 상황
      */
-    public String getTomorrowWeather(String location) throws IOException {
+    public static String getTomorrowWeather(String location) throws IOException {
         return Jsoup.connect(ApiServer.SERVER_URL + "/tomorrow_weather/" + Encoder
                 .utf8(location))
+                .timeout(20000)
                 .get()
                 .body()
                 .text();
@@ -50,9 +51,10 @@ public final class WeatherApi {
      * @param location 날씨 상태를 확인할 지역
      * @return 모레의 지역별 날씨 상황
      */
-    public String getAfterTomorrowWeather(String location) throws IOException {
+    public static String getAfterTomorrowWeather(String location) throws IOException {
         return Jsoup.connect(ApiServer.SERVER_URL + "/after_tomorrow_weather/" + Encoder
                 .utf8(location))
+                .timeout(20000)
                 .get()
                 .body()
                 .text();
@@ -65,9 +67,10 @@ public final class WeatherApi {
      * @param location 날씨 상태를 확인할 지역
      * @return 이번 주의 지역별 날씨 상황
      */
-    public String getThisWeekWeather(String location) throws IOException {
+    public static String getThisWeekWeather(String location) throws IOException {
         return Jsoup.connect(ApiServer.SERVER_URL + "/this_week_weather/" + Encoder
                 .utf8(location))
+                .timeout(20000)
                 .get()
                 .body()
                 .text();
@@ -81,10 +84,11 @@ public final class WeatherApi {
      * @param date     날씨를 확인할 날짜
      * @return 특정 날짜의 지역별 날씨 상황
      */
-    public String getSpecificWeather(String location, String date) throws IOException {
+    public static String getSpecificWeather(String location, String date) throws IOException {
         return Jsoup.connect(ApiServer.SERVER_URL + "/specific_weather/" + Encoder
-                .utf8(location) + Encoder
+                .utf8(location) + "/" + Encoder
                 .utf8(date))
+                .timeout(20000)
                 .get()
                 .body()
                 .text();

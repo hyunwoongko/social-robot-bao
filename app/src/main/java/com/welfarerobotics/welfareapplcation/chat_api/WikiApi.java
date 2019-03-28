@@ -3,7 +3,6 @@ package com.welfarerobotics.welfareapplcation.chat_api;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
-import java.net.URLEncoder;
 
 /**
  * @Author : Hyunwoong
@@ -19,9 +18,10 @@ public class WikiApi {
      * @param text 정보를 확인할 단어
      * @return 단어의 정보
      */
-    public String getWiki(String text) throws IOException {
+    public static String getWiki(String text) throws IOException {
         return Jsoup.connect(ApiServer.SERVER_URL + "/wiki/" + Encoder
                 .utf8(text))
+                .timeout(20000)
                 .get()
                 .body()
                 .text();

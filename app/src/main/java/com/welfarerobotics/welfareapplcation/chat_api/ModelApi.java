@@ -19,7 +19,7 @@ public final class ModelApi {
      * @param text 발화 의도를 파악할 문장
      * @return 발화 의도
      */
-    public String getIntent(String text) throws IOException {
+    public static String getIntent(String text) throws IOException {
         return Jsoup.connect(ApiServer.SERVER_URL + "/intent/" + Encoder
                 .utf8(text))
                 .timeout(20000)
@@ -36,7 +36,7 @@ public final class ModelApi {
      * @param text 개체명을 인식할 문장
      * @return 단어와 개체명이 포함된 Map
      */
-    public String[][] getEntity(String kind, String text) throws IOException {
+    public static String[][] getEntity(String kind, String text) throws IOException {
         String entityString = Jsoup.connect(ApiServer.SERVER_URL + "/entity_" + kind + "/" + Encoder
                 .utf8(text))
                 .timeout(20000)
@@ -65,7 +65,7 @@ public final class ModelApi {
      * @param text 입력문장
      * @return Transformer의 출력 문장
      */
-    public String generateAnswer(String text) throws IOException {
+    public static String generateAnswer(String text) throws IOException {
         return Jsoup.connect(ApiServer.SERVER_URL + "/generate_answer/" + Encoder
                 .utf8(text))
                 .timeout(20000)

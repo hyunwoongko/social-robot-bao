@@ -1,3 +1,2 @@
-I-WORD
+WORD
 O
-B-WORD

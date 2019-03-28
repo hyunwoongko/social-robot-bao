@@ -3,7 +3,6 @@ package com.welfarerobotics.welfareapplcation.chat_api;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
-import java.net.URLEncoder;
 
 /**
  * @Author : Hyunwoong
@@ -18,9 +17,10 @@ public class YoutubeApi {
      * @param song 검색할 노래 키워드
      * @return 유튜브 동영상 URL
      */
-    public String getAfterTomorrowDust(String song) throws IOException {
+    public static String getYoutube(String song) throws IOException {
         return Jsoup.connect(ApiServer.SERVER_URL + "/youtube/" + Encoder
                 .utf8(song))
+                .timeout(20000)
                 .get()
                 .body()
                 .text();

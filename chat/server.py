@@ -5,13 +5,19 @@ import tensorflow as tf
 from flask import Flask
 
 from api.api_dust import today_dust, tomorrow_dust, after_tomorrow_dust
+from api.api_exchange import get_exchange
 from api.api_issue import get_issue
+from api.api_news import get_news, get_keyword_news
+from api.api_restaurant import recommend_restaurant
 from api.api_translation import translate
 from api.api_weather import today_weather, tomorrow_weather, after_tomorrow_weather, this_week_weather, specific_weather
 from api.api_wiki import wiki
 from api.api_wise import get_wise
 from api.api_youtube import get_youtube
 from entity_recognizer.dust.entity_recognizer import get_dust_entity
+from entity_recognizer.exchange.entity_recognizer import get_exchange_entity
+from entity_recognizer.news.entity_recognizer import get_news_entity
+from entity_recognizer.restaurant.entity_recognizer import get_restaurant_entity
 from entity_recognizer.song.entity_recognizer import get_song_entity
 from entity_recognizer.translate.entity_recognizer import get_translate_entity
 from entity_recognizer.weather.entity_recognizer import get_weather_entity
@@ -171,5 +177,49 @@ def server_youtube(text):
     return get_youtube(text)
 
 
+##################################
+############ API : NEWS ############
+##################################
+@app.route('/entity_news/<text>', methods=['GET', 'POST'])
+def server_news_entity(text):
+    return str(get_news_entity(text, False))
+
+
+@app.route('/news/', methods=['GET', 'POST'])
+def server_news():
+    return get_news()
+
+
+@app.route('/keyword_news/<keyword>', methods=['GET', 'POST'])
+def server_keyword_news(keyword):
+    return get_keyword_news(keyword)
+
+
+##################################
+############ API : RESTAURANT ############
+##################################
+@app.route('/entity_restaurant/<text>', methods=['GET', 'POST'])
+def server_restaurant_entity(text):
+    return str(get_restaurant_entity(text, False))
+
+
+@app.route('/restaurant/<text>', methods=['GET', 'POST'])
+def server_restaurant(text):
+    return recommend_restaurant(text)
+
+
+##################################
+############ API : EXCHANGE ############
+##################################
+@app.route('/entity_exchange/<text>', methods=['GET', 'POST'])
+def server_exchange_entity(text):
+    return str(get_exchange_entity(text, False))
+
+
+@app.route('/exchange/<text>', methods=['GET', 'POST'])
+def server_exchange(text):
+    return get_exchange(text)
+
+
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=9892)

@@ -16,8 +16,9 @@ public class WiseApi {
      *
      * @return 랜덤 명언
      */
-    public String getWise() throws IOException {
+    public static String getWise() throws IOException {
         return Jsoup.connect(ApiServer.SERVER_URL + "/wise")
+                .timeout(20000)
                 .get()
                 .body()
                 .text();

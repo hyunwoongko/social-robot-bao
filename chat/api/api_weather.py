@@ -46,7 +46,7 @@ def __tone_maker(weather_morning, weather_noon):
 
 
 def today_weather(location):
-    enc_location = urllib.parse.quote(location + '+ 오늘 날씨')
+    enc_location = urllib.parse.quote(location + '오늘 날씨')
     url = 'https://search.naver.com/search.naver?ie=utf8&query=' + enc_location
 
     req = Request(url)

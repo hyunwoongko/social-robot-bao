@@ -1,141 +1,192 @@
-슬픈 B-WORD
-노래 I-WORD
+슬픈 WORD
+노래 WORD
 들려줘 O
 
-신나는 B-WORD
-노래 I-WORD
+신나는 WORD
+노래 WORD
 틀어줘 O
 
-즐거운 B-WORD
-음악 I-WORD
+즐거운 WORD
+음악 WORD
 들려 O
 주라 O
 
-우울한 B-WORD
-노래 I-WORD
+우울한 WORD
+노래 WORD
 틀어 O
 주라 O
 
-슬픈 B-WORD
-노래 I-WORD
+슬픈 WORD
+노래 WORD
 들려줘 O
 
-신나는 B-WORD
-노래 I-WORD
+신나는 WORD
+노래 WORD
 틀어줘 O
 
-즐거운 B-WORD
-음악 I-WORD
+즐거운 WORD
+음악 WORD
 들려 O
 주라 O
 
-우울한 B-WORD
-노래 I-WORD
+우울한 WORD
+노래 WORD
 틀어 O
 주라 O
 
-슬픈 B-WORD
-노래 I-WORD
+슬픈 WORD
+노래 WORD
 들려줘 O
 
-신나는 B-WORD
-노래 I-WORD
+신나는 WORD
+노래 WORD
 틀어줘 O
 
-즐거운 B-WORD
-음악 I-WORD
+즐거운 WORD
+음악 WORD
 들려 O
 주라 O
 
-우울한 B-WORD
-노래 I-WORD
+우울한 WORD
+노래 WORD
 틀어 O
 주라 O
 
-애드 B-WORD
-시어런의 I-WORD
-노래 I-WORD
+애드 WORD
+시어런의 WORD
+노래 WORD
 들려줘 O
 
-애드 B-WORD
-시어런의 I-WORD
-노래 I-WORD
+애드 WORD
+시어런의 WORD
+노래 WORD
 추천 O
 해줘 O
 
-애드 B-WORD
-시어런의 I-WORD
-쉐이프 I-WORD
-오브 I-WORD
-유 I-WORD
+애드 WORD
+시어런의 WORD
+쉐이프 WORD
+오브 WORD
+유 WORD
 들려 O
 주라 O
 
-걸스데이 B-WORD
-마이 I-WORD
-달링 I-WORD
+걸스데이 WORD
+마이 WORD
+달링 WORD
 들려 O
 주라 O
 
-아이유 B-WORD
-좋은 I-WORD
-날 I-WORD
+아이유 WORD
+좋은 WORD
+날 WORD
 들려 O
 주라 O
 
-슈퍼주니어 B-WORD
-쏘리쏘리 I-WORD
+슈퍼주니어 WORD
+쏘리쏘리 WORD
 들려 O
 주라 O
 
-빅뱅 B-WORD
-위 I-WORD
-라이크 I-WORD
-투 I-WORD
-파티 I-WORD
+빅뱅 WORD
+위 WORD
+라이크 WORD
+투 WORD
+파티 WORD
 이 O
 거 O
 들려 O
 주라 O
 
-버즈 B-WORD
-가시 I-WORD
+버즈 WORD
+가시 WORD
 들려 O
 주라 O
 
-에이핑크 B-WORD
-응응 I-WORD
+에이핑크 WORD
+응응 WORD
 들려 O
 주라 O
 
-민경훈 B-WORD
-나쁜 I-WORD
-가슴 I-WORD
+민경훈 WORD
+나쁜 WORD
+가슴 WORD
 들려 O
 주라 O
 
-백예린 B-WORD
-그건 I-WORD
-아마 I-WORD
-우리의 I-WORD
-잘못은 I-WORD
-아닐 I-WORD
-거 I-WORD
+백예린 WORD
+그건 WORD
+아마 WORD
+우리의 WORD
+잘못은 WORD
+아닐 WORD
+거 WORD
 들려 O
 주라 O
 
-에픽하이 B-WORD
-일분 I-WORD
-일초 I-WORD
+에픽하이 WORD
+일분 WORD
+일초 WORD
 들려 O
 줄래 O
 
-에픽하이 B-WORD
-노래 I-WORD
+에픽하이 WORD
+노래 WORD
+들려 O
+줘 O
+
+에픽하이 WORD
+노래 WORD
 추천 O
 해줘 O
 
-에픽하이 B-WORD
-노래 I-WORD
+
+소나무 WORD
+노래 WORD
+들려 O
+줘 O
+
+걸스데이 WORD
+노래 WORD
+추천 O
+해줘 O
+
+마이클잭슨 WORD
+노래 WORD
+들려 O
+줘 O
+
+김장훈 WORD
+노래 WORD
+추천 O
+해줘 O
+
+준케이 WORD
+노래 WORD
+들려 O
+줘 O
+
+에리베넷 WORD
+노래 WORD
+추천 O
+해줘 O
+
+더블에스오공일 WORD
+노래 WORD
+들려 O
+줘 O
+
+샤이니 WORD
+노래 WORD
+추천 O
+해줘 O
+
+아이오아이 WORD
+노래 WORD
+들려 O
+줘 O
+
+워너원 WORD
+노래 WORD
 추천 O
 해줘 O

@@ -20,10 +20,11 @@ public final class TranslatorApi {
      * @param text 번역할 문장
      * @return 해당 언어로 번역된 문장
      */
-    public String translate(String lang, String text) throws IOException {
+    public static String translate(String lang, String text) throws IOException {
         return Jsoup.connect(ApiServer.SERVER_URL + "/translate/" + Encoder
                 .utf8(lang) + "/" + Encoder
                 .utf8(text))
+                .timeout(20000)
                 .get()
                 .body()
                 .text();

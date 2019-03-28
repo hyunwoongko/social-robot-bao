@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="설정"/>
+
+    <Preference
+            android:key="ConnectWifi"
+            android:title="Wi-Fi 연결"/>
+    <PreferenceScreen
+            android:key="TeachSentencesMenu"
+            android:title="말 학습시키기">
+        <PreferenceCategory android:title="말 학습시키기"/>
+        <Preference
+                android:key="TeachSentences"
+                android:title="말 학습시키기"/>
+        <Preference
+                android:key="ManageSentences"
+                android:title="학습 내용 관리"/>
+    </PreferenceScreen>
+    <PreferenceScreen
+            android:key="InitConversationMenu"
+            android:title="먼저 말걸기">
+        <PreferenceCategory android:title="먼저 말걸기"/>
+        <SwitchPreference
+                android:defaultValue="false"
+                android:key="ToggleInitConversation"
+                android:title="말걸기 기능 전환"
+                android:summaryOff="말걸기 기능이 꺼져 있습니다"
+                android:summaryOn="말걸기 기능이 켜져 있습니다"/>
+    </PreferenceScreen>
+
+</PreferenceScreen>

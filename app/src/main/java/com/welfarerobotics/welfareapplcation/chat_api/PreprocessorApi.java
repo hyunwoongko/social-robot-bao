@@ -3,7 +3,6 @@ package com.welfarerobotics.welfareapplcation.chat_api;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
-import java.net.URLEncoder;
 
 /**
  * @Author : Hyunwoong
@@ -18,9 +17,10 @@ public final class PreprocessorApi {
      * @param text 형태소를 분석할 문장
      * @return 조사, 특수문자등이 잘린 문장
      */
-    public String tokenize(String text) throws IOException {
+    public static String tokenize(String text) throws IOException {
         return Jsoup.connect(ApiServer.SERVER_URL + "/tokenize/" + Encoder
                 .utf8(text))
+                .timeout(20000)
                 .get()
                 .body()
                 .text();
@@ -33,11 +33,19 @@ public final class PreprocessorApi {
      * @param text 맞춤법을 교정할 문장
      * @return 맞춤법이 교정된 문장
      */
-    public String fix(String text) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/fix/" + Encoder
+    public static String fix(String text) throws IOException {
+        String fix = Jsoup.connect(ApiServer.SERVER_URL + "/fix/" + Encoder
                 .utf8(text))
+                .timeout(20000)
                 .get()
                 .body()
                 .text();
+
+        // 예외처리
+        if (fix.contains("빈") && fix.contains("지노")) {
+            fix = fix.replace("빈", "");
+            fix = fix.replace("지노", "빈지노");
+        }
+        return fix;
     }
 }

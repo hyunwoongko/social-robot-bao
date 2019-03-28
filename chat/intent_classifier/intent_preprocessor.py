@@ -5,6 +5,7 @@ from konlpy.tag import Okt
 from util.tokenizer import tokenize
 
 data = pd.read_csv('train_intent.csv')
+data = data.dropna()
 intent_mapping = {
     '잡담': 0,
     '날씨': 1,
@@ -19,7 +20,16 @@ intent_mapping = {
     '농담': 10,
     '번역': 11,
     '명언': 12,
-    '시간': 13
+    '시간': 13,
+    '날짜': 14,
+    '맛집': 15,
+    '배고파': 16,
+    '환율': 17,
+    '뉴스': 18,
+    '날씨먼지문맥': 19,
+    "번역환율문맥": 20,
+    '날씨문맥전환': 21,
+    '먼지문맥전환': 22
 }
 
 vector_size = 128
@@ -30,7 +40,9 @@ def intent_size():
 
 
 def preprocess():
+
     data['intent'] = data['intent'].map(intent_mapping)
+
     for i in data['question']:
         data.replace(i, tokenize(i), regex=True, inplace=True)
 
