@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:visibility="visible">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:layout_weight="4.15">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:id="@+id/TextView7" android:layout_weight="6"/>
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" app:srcCompat="@drawable/back_button"
+                        android:id="@+id/back_imageView" android:layout_weight="5.85"/>
+                <TextView
+                        android:text="   Bluetooth"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:id="@+id/bluetooth"
+                        android:textSize="28sp" android:layout_weight="1.5"/>
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" app:srcCompat="@drawable/next_button"
+                        android:id="@+id/next_imageView" android:layout_weight="5.85"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:id="@+id/textView8" android:layout_weight="6"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:layout_weight="4">
+                <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:theme="@style/SwitchTheme"
+                        android:id="@+id/bl_switch" android:layout_weight="1"
+                        android:text="     사용 안함"
+                />
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:layout_weight="1">
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:layout_weight="1">
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:layout_weight="8">
+                        <TextView
+                                android:text="    연결가능한 기기"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" android:id="@+id/bl_textView"
+                                android:layout_weight="8"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/bl_state"
+                                android:gravity="right"
+                                android:layout_weight="8"/>
+                    </LinearLayout>
+                    <ListView
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent" android:id="@+id/searched_list"
+                            android:visibility="visible"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView
+                            android:text="    등록된 기기"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:id="@+id/registered_textView"
+                            android:layout_weight="8"/>
+                    <ListView
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:id="@+id/paired_list"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

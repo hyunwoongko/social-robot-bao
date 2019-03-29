@@ -18,245 +18,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f2ff807-e7e1-4931-91f5-40600ab735ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/MenuActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/ServerModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/SettingActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/ThreadPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/WifiActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ExchangeApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/NewsApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/RestaurantApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_scenario/ChatApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_scenario/DustScenario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_scenario/ExchangeScenario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_scenario/NewsScenario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_scenario/RestaurantScenario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_scenario/TranslateScenario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_scenario/WeatherScenario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_scenario/WikiScenario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_scenario/YoutubeScenario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/menu_commonsense.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/menu_followbao.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/menu_listensong.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/menu_playart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/menu_playcard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/menu_playlang.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/menu_settings.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_wifi.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/settings_preference.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/api/api_exchange.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/api/api_news.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/api/api_restaurant.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/api/chromedriver.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/dust/results/crf/events.out.tfevents.1553661250.MYCOM1-PC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/data/coNLL/kor/kor.train.iob" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/data/crawler/pos.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/data/processed/kor/char.trimmed.npz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/data/processed/kor/chars.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/data/processed/kor/tags.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/data/processed/kor/w2v.trimmed.npz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/data/processed/kor/w2v3.trimmed.npz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/data/processed/kor/words.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/data/w2v/model" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/entity_recognizer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/kor_model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/kor_model/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/kor_model/data_crawler/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/kor_model/data_crawler/mecab.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/kor_model/data_embed_model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/kor_model/data_embed_model/build_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/kor_model/data_embed_model/data_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/kor_model/data_embed_model/model.vec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/kor_model/data_embed_model/word2vec.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/kor_model/general_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/kor_model/ner_model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/kor_model/ner_model/lstmcrf_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/results/crf/events.out.tfevents.1553220388.DESKTOP-7N91TGT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/results/crf/events.out.tfevents.1553220705.DESKTOP-7N91TGT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/results/crf/events.out.tfevents.1553308854.DESKTOP-7N91TGT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/results/crf/events.out.tfevents.1553325943.DESKTOP-7N91TGT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/results/crf/events.out.tfevents.1553328373.DESKTOP-7N91TGT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/results/crf/events.out.tfevents.1553661311.MYCOM1-PC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/results/crf/model.weights/checkpoint" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/results/crf/model.weights/ner_model.ckpt.data-00000-of-00001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/results/crf/model.weights/ner_model.ckpt.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/results/crf/model.weights/ner_model.ckpt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/exchange/train_entity.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/data/coNLL/kor/kor.train.iob" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/data/crawler/pos.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/data/processed/kor/char.trimmed.npz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/data/processed/kor/chars.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/data/processed/kor/tags.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/data/processed/kor/w2v.trimmed.npz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/data/processed/kor/w2v3.trimmed.npz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/data/processed/kor/words.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/data/w2v/model" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/entity_recognizer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/kor_model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/kor_model/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/kor_model/data_crawler/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/kor_model/data_crawler/mecab.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/kor_model/data_embed_model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/kor_model/data_embed_model/build_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/kor_model/data_embed_model/data_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/kor_model/data_embed_model/model.vec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/kor_model/data_embed_model/word2vec.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/kor_model/general_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/kor_model/ner_model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/kor_model/ner_model/lstmcrf_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/results/crf/events.out.tfevents.1553220388.DESKTOP-7N91TGT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/results/crf/events.out.tfevents.1553220705.DESKTOP-7N91TGT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/results/crf/events.out.tfevents.1553308854.DESKTOP-7N91TGT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/results/crf/events.out.tfevents.1553325634.DESKTOP-7N91TGT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/results/crf/events.out.tfevents.1553325740.DESKTOP-7N91TGT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/results/crf/events.out.tfevents.1553328374.DESKTOP-7N91TGT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/results/crf/events.out.tfevents.1553661371.MYCOM1-PC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/results/crf/events.out.tfevents.1553674224.MYCOM1-PC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/results/crf/events.out.tfevents.1553741163.MYCOM1-PC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/results/crf/model.weights/checkpoint" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/results/crf/model.weights/ner_model.ckpt.data-00000-of-00001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/results/crf/model.weights/ner_model.ckpt.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/results/crf/model.weights/ner_model.ckpt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/news/train_entity.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/data/coNLL/kor/kor.train.iob" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/data/crawler/pos.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/data/processed/kor/char.trimmed.npz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/data/processed/kor/chars.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/data/processed/kor/tags.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/data/processed/kor/w2v.trimmed.npz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/data/processed/kor/w2v3.trimmed.npz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/data/processed/kor/words.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/data/w2v/model" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/entity_recognizer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/kor_model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/kor_model/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/kor_model/data_crawler/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/kor_model/data_crawler/mecab.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/kor_model/data_embed_model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/kor_model/data_embed_model/build_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/kor_model/data_embed_model/data_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/kor_model/data_embed_model/model.vec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/kor_model/data_embed_model/word2vec.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/kor_model/general_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/kor_model/ner_model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/kor_model/ner_model/lstmcrf_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/results/crf/events.out.tfevents.1553220388.DESKTOP-7N91TGT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/results/crf/events.out.tfevents.1553220705.DESKTOP-7N91TGT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/results/crf/events.out.tfevents.1553308854.DESKTOP-7N91TGT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/results/crf/events.out.tfevents.1553325634.DESKTOP-7N91TGT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/results/crf/events.out.tfevents.1553325740.DESKTOP-7N91TGT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/results/crf/events.out.tfevents.1553328374.DESKTOP-7N91TGT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/results/crf/events.out.tfevents.1553665199.MYCOM1-PC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/results/crf/model.weights/checkpoint" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/results/crf/model.weights/ner_model.ckpt.data-00000-of-00001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/results/crf/model.weights/ner_model.ckpt.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/results/crf/model.weights/ner_model.ckpt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/restaurant/train_entity.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/song/results/crf/events.out.tfevents.1553661432.MYCOM1-PC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/translate/results/crf/events.out.tfevents.1553661445.MYCOM1-PC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/weather/results/crf/events.out.tfevents.1553661358.MYCOM1-PC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/wiki/results/crf/events.out.tfevents.1553660966.MYCOM1-PC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/entity_recognizer/wiki/results/crf/events.out.tfevents.1553661850.MYCOM1-PC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/train_dust.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/train_exchange.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/train_intent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/train_news.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/train_restaurant.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/train_song.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/train_translate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/train_weather.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/train_wiki.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/BaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/BaseActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/CSSAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_scenario/CssApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ApiServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ApiServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/DustApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/DustApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/IssueApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/IssueApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ModelApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ModelApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/PreprocessorApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/PreprocessorApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/TranslatorApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/TranslatorApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WeatherApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WeatherApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WikiApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WikiApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WiseApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WiseApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/YoutubeApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/YoutubeApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/Frag_Bluetooth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/Frag_Tutorial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/Frag_User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/Frag_Wifi.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/frag_bluetooth_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/frag_tutorial_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/frag_user_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/frag_wifi_layout.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/api/api_dust.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/api/api_dust.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/api/api_weather.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/api/api_weather.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/chat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/dust/data/processed/kor/char.trimmed.npz" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/dust/data/processed/kor/char.trimmed.npz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/dust/data/processed/kor/chars.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/dust/data/processed/kor/chars.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/dust/data/processed/kor/tags.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/dust/data/processed/kor/tags.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/dust/data/processed/kor/words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/dust/data/processed/kor/words.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/dust/data/w2v/model" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/dust/data/w2v/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/dust/results/crf/model.weights/ner_model.ckpt.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/dust/results/crf/model.weights/ner_model.ckpt.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/dust/results/crf/model.weights/ner_model.ckpt.index" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/dust/results/crf/model.weights/ner_model.ckpt.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/dust/results/crf/model.weights/ner_model.ckpt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/dust/results/crf/model.weights/ner_model.ckpt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/dust/train_entity.csv" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/dust/train_entity.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/song/data/processed/kor/char.trimmed.npz" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/song/data/processed/kor/char.trimmed.npz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/song/data/processed/kor/chars.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/song/data/processed/kor/chars.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/song/data/processed/kor/tags.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/song/data/processed/kor/tags.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/song/data/w2v/model" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/song/data/w2v/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/song/results/crf/model.weights/ner_model.ckpt.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/song/results/crf/model.weights/ner_model.ckpt.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/song/results/crf/model.weights/ner_model.ckpt.index" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/song/results/crf/model.weights/ner_model.ckpt.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/song/results/crf/model.weights/ner_model.ckpt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/song/results/crf/model.weights/ner_model.ckpt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/song/train_entity.csv" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/song/train_entity.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/translate/data/processed/kor/char.trimmed.npz" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/translate/data/processed/kor/char.trimmed.npz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/translate/data/processed/kor/chars.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/translate/data/processed/kor/chars.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/translate/data/processed/kor/tags.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/translate/data/processed/kor/tags.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/translate/data/processed/kor/words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/translate/data/processed/kor/words.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/translate/data/w2v/model" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/translate/data/w2v/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/translate/results/crf/model.weights/ner_model.ckpt.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/translate/results/crf/model.weights/ner_model.ckpt.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/translate/results/crf/model.weights/ner_model.ckpt.index" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/translate/results/crf/model.weights/ner_model.ckpt.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/translate/results/crf/model.weights/ner_model.ckpt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/translate/results/crf/model.weights/ner_model.ckpt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/translate/train_entity.csv" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/translate/train_entity.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/weather/data/processed/kor/char.trimmed.npz" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/weather/data/processed/kor/char.trimmed.npz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/weather/data/processed/kor/chars.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/weather/data/processed/kor/chars.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/weather/data/processed/kor/tags.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/weather/data/processed/kor/tags.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/weather/data/processed/kor/words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/weather/data/processed/kor/words.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/weather/data/w2v/model" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/weather/data/w2v/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/weather/results/crf/model.weights/ner_model.ckpt.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/weather/results/crf/model.weights/ner_model.ckpt.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/weather/results/crf/model.weights/ner_model.ckpt.index" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/weather/results/crf/model.weights/ner_model.ckpt.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/weather/results/crf/model.weights/ner_model.ckpt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/weather/results/crf/model.weights/ner_model.ckpt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/weather/train_entity.csv" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/weather/train_entity.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/wiki/data/processed/kor/char.trimmed.npz" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/wiki/data/processed/kor/char.trimmed.npz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/wiki/data/processed/kor/chars.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/wiki/data/processed/kor/chars.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/wiki/data/processed/kor/tags.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/wiki/data/processed/kor/tags.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/wiki/data/w2v/model" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/wiki/data/w2v/model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/wiki/results/crf/model.weights/ner_model.ckpt.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/wiki/results/crf/model.weights/ner_model.ckpt.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/wiki/results/crf/model.weights/ner_model.ckpt.index" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/wiki/results/crf/model.weights/ner_model.ckpt.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/wiki/results/crf/model.weights/ner_model.ckpt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/wiki/results/crf/model.weights/ner_model.ckpt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/entity_recognizer/wiki/train_entity.csv" beforeDir="false" afterPath="$PROJECT_DIR$/chat/entity_recognizer/wiki/train_entity.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/intent_classifier/intent_classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/intent_classifier/intent_classifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/intent_classifier/intent_preprocessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/intent_classifier/intent_preprocessor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/intent_classifier/model/intent_model.ckpt.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/chat/intent_classifier/model/intent_model.ckpt.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/intent_classifier/model/intent_model.ckpt.index" beforeDir="false" afterPath="$PROJECT_DIR$/chat/intent_classifier/model/intent_model.ckpt.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/intent_classifier/model/intent_model.ckpt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/chat/intent_classifier/model/intent_model.ckpt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/requester.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/scenario/scenario_ fairytale.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/scenario/scenario_dance.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/scenario/scenario_dust.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/scenario/scenario_song.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/scenario/scenario_time.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/api/output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/scenario/scenario_translation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/scenario/scenario_weather.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/scenario/scenario_wiki.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/scenario/scenario_wise.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/temp.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/train.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/train_intent.csv" beforeDir="false" afterPath="$PROJECT_DIR$/chat/train_intent.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasberrypi/Streamer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasberrypi/StreamingServer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasberrypi/camWebServer/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasberrypi/camWebServer/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasberrypi/camWebServer/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasberrypi/camWebServer/.idea/other.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasberrypi/camWebServer/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasberrypi/camWebServer/Server.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasberrypi/camWebServer/appCam.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasberrypi/camWebServer/camera_pi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasberrypi/camWebServer/static/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasberrypi/camWebServer/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasberrypi/path.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasberrypi/stest.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -294,25 +83,7 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Capstone-Project" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Capstone-Project" type="f1a62948:ProjectNode" />
-                <item name=":app" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Capstone-Project" type="f1a62948:ProjectNode" />
-                <item name=":app" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Capstone-Project" type="f1a62948:ProjectNode" />
-                <item name=":app" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
+                <item name="Capstone_Project" type="f1a62948:ProjectNode" />
               </path>
             </expand>
             <select />
@@ -323,117 +94,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/MenuActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-manifest" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_scenario/CssApi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-72">
-              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ApiServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/MainActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="54" column="72" selection-start-line="54" selection-start-column="72" selection-end-line="54" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/ServerModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+            <state relative-caret-position="255">
+              <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
               <folding>
-                <element signature="e#210#211#0" expanded="true" />
-                <element signature="e#248#249#0" expanded="true" />
-                <element signature="e#278#279#0" expanded="true" />
-                <element signature="e#310#311#0" expanded="true" />
-                <element signature="e#338#339#0" expanded="true" />
-                <element signature="e#380#381#0" expanded="true" />
-                <element signature="e#414#415#0" expanded="true" />
-                <element signature="e#450#451#0" expanded="true" />
-                <element signature="e#482#483#0" expanded="true" />
-                <element signature="e#532#533#0" expanded="true" />
-                <element signature="e#574#575#0" expanded="true" />
+                <element signature="e#1377#1395#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_scenario/ChatApi.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/initial_user_setup/Device.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/initial_user_setup/BlActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5632">
-              <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+            <state relative-caret-position="76">
+              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WiseApi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/SettingActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/ChatApi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/emotion/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest" />
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -525,12 +216,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/TrainingApi.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/PredictorApi.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/IssueApi.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/TrainerApi.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WiseApi.java" />
-        <option value="$PROJECT_DIR$/chat/scenario/scenario_translation.py" />
         <option value="$PROJECT_DIR$/chat/scenario/scenario_song.py" />
         <option value="$PROJECT_DIR$/chat/scenario/scenario_dust.py" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/Main.java" />
@@ -545,7 +230,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/YoutubeApi.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/UserSettingActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/user_setting.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/ChatApi.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_setting.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/BaseActivity.java" />
@@ -571,34 +255,40 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_wifi.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/SettingActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/WifiActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_scenario/CssApi.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/ApiServer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/ServerModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/inital_user_setup/BaseActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/inital_user_setup/UserActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/inital_user_setup/TutorialActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/inital_user_setup/WifiActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/inital_user_setup/BlActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/initial_user_setup/BlActivity.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="y" value="35" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-12" />
+    <option name="y" value="34" />
     <option name="width" value="1737" />
-    <option name="height" value="985" />
+    <option name="height" value="986" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="AndroidView" proportions="" version="1">
       <flattenPackages ProjectPane="false" />
       <showMembers ProjectPane="false" />
       <autoscrollFromSource ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -700,6 +390,77 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
+            </path>
+            <path>
+              <item name="Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="welfareapplcation" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="welfareapplcation" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="initial_user_setup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="font" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
+              <item name="emotion" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -708,8 +469,8 @@
     <property name="android.profiler.active" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553747160622" />
-    <property name="device.picker.selection" value="ce05160579ec052e05" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553874475196" />
+    <property name="device.picker.selection" value="LGMX600L7e73e09d" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.6 (Capstone-Project)" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -728,11 +489,11 @@
       <recent name="C:\Users\ASUS\Github\Capstone-Project\chat\api\api_kktm" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\Capstone\Capstone_Project\app\src\main\java\com\welfarerobotics\welfareapplcation\inital_user_setup" />
+      <recent name="C:\Users\Admin\Desktop\Capstone\Capstone_Project\app\src\main\res\layout" />
       <recent name="C:\Users\dlgus\Documents\Capstone-Project\app\src\main\res\drawable" />
       <recent name="C:\Users\dlgus\Documents\Capstone-Project\app\src\main\res\drawable\menu" />
       <recent name="C:\Users\ASUS\Github\Capstone-Project\chat" />
-      <recent name="C:\Users\ASUS\Github\Capstone-Project\chat\generative_model" />
-      <recent name="C:\Users\ASUS\Github\Capstone-Project\chat\util" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -764,6 +525,68 @@
       <setting name="port" value="0" />
       <setting name="replType" value="0" />
       <module name="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Twisted Trial">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="AndroidJUnit">
@@ -909,76 +732,10 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_regexPattern" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Twisted Trial">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="py.test">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Android App.app" />
       <item itemvalue="Application.ModelApi" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Jupyter Notebook.Jupyter" />
-      <item itemvalue="Python.server" />
-      <item itemvalue="Python.server (1)" />
-      <item itemvalue="Python.train" />
     </list>
     <recent_temporary>
       <list>
@@ -1024,11 +781,12 @@
       <workItem from="1553576434788" duration="6917000" />
       <workItem from="1553613355599" duration="5403000" />
       <workItem from="1553668667465" duration="12104000" />
+      <workItem from="1553848422636" duration="8659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="408096000" />
+    <option name="totallyTimeSpent" value="417590000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1040,9 +798,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="311" y="57" width="946" height="630" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17615467" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31715575" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1069,8 +827,8 @@
       <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="15" sideWeight="0.49839744" weight="0.32829374" />
       <window_info anchor="bottom" id="Android Profiler" order="16" weight="0.32924107" />
-      <window_info anchor="bottom" id="Build" order="17" sideWeight="0.49519232" weight="0.30769232" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="18" visible="true" weight="0.32998884" />
+      <window_info anchor="bottom" id="Build" order="17" sideWeight="0.49519232" visible="true" weight="0.07444668" />
+      <window_info anchor="bottom" id="Logcat" order="18" weight="0.3285968" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="19" sideWeight="0.49946582" weight="0.32937366" />
       <window_info anchor="bottom" id="Docker" order="20" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1160,93 +918,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/Frag_Bluetooth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/Frag_User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/DustApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c2d192d8de962baa9c36ff9c04c569c3/res/values/values.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_setting.xml" />
-    <entry file="file://$PROJECT_DIR$/app/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/filepaths.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/BaseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="35" column="6" lean-forward="true" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/UserSettingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/user_setting.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/push_settings.png" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/settings.9.png" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/menu_settings.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ibselector.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/settings_preference.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="2" selection-start-column="2" selection-end-column="2" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -1264,29 +942,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/colors.xml" />
+    <entry file="file://$PROJECT_DIR$/../../colors.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/network_list.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/header.xml" />
-    <entry file="file://$USER_HOME$/Desktop/WifiFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="365" column="1" selection-start-line="2" selection-end-line="365" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/WifiFragment.java" />
+    <entry file="file://$PROJECT_DIR$/../../WifiFragment.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/WifiScanAdapter.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/footer.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="53" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1301,30 +962,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_wifi.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/connect.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="8" selection-end-column="41" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/connect.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_wifi.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/MenuActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1334,25 +980,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/WifiFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="56" column="28" lean-forward="true" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1155#1662#0" expanded="true" />
-            <element signature="e#1661#1662#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/WifiFragment.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/WifiActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="651">
@@ -1363,17 +998,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_wifi.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_action_wifi.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_wifi.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_action_wifi.png" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/SettingActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -1384,35 +1010,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/ChatApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/CSSAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="62" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_scenario/ChatApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5632">
-          <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/ChatApi.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/CSSAPI.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_scenario/ChatApi.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_api/WiseApi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1430,16 +1030,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_scenario/CssApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/chat_scenario/CssApi.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/ServerModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -1460,10 +1051,132 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/widget/Adapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/initial_user_setup/Device.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/initial_wifi.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="93" column="46" selection-start-line="93" selection-start-column="46" selection-end-line="93" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/base.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="54" column="72" selection-start-line="54" selection-start-column="72" selection-end-line="54" selection-end-column="72" />
+        <state relative-caret-position="82">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/Frag_Bluetooth.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/BaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/UserSettingActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1578">
+          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/inital_user_setup/UserSettingActivity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/inital_user_setup/BaseActivity.java" />
+    <entry file="file://$PROJECT_DIR$/emotion/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/initial_user_setup/FirebaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/initial_user_setup/WifiActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/initial_user.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="45" column="50" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/initial_tutorial.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/initial_bluetooth.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="33" column="55" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/initial_user_setup/UserActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="45" selection-start-line="45" selection-end-line="58" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/initial_user_setup/TutorialActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="17" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/initial_user_setup/BlActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+          <folding>
+            <element signature="e#1377#1395#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
