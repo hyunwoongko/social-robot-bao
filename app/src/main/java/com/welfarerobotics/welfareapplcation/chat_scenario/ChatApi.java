@@ -363,6 +363,7 @@ public class ChatApi {
             } // 대화 세션
 
         } catch (IOException e) {
+            e.printStackTrace();
             CssApi.get().play("죄송해요. 아직 배우는 중이라, 잘 이해하지 못했어요. 다시 말씀해주시겠어요?", "jinho");
         }
     }
