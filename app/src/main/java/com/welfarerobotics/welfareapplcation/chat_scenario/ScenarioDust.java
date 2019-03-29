@@ -17,9 +17,7 @@ public class ScenarioDust {
         String[] entityGroup = entity[1];
         List<String> date = new ArrayList<>();
         List<String> location = new ArrayList<>();
-        DustApi api = new DustApi();
-
-
+  
         for (int i = 0; i < entityGroup.length; i++) {
             if (entityGroup[i].contains("DATE")) {
                 date.add(kewordGroup[i]);
@@ -45,11 +43,11 @@ public class ScenarioDust {
         }
 
         if (date.contains("오늘")) {
-            return api.getTodayDust(loc.toString());
+            return DustApi.getTodayDust(loc.toString());
         } else if (date.contains("모레") || date.contains("내일모레")) {
-            return api.getAfterTomorrowDust(loc.toString());
+            return DustApi.getAfterTomorrowDust(loc.toString());
         } else if (date.contains("내일")) {
-            return api.getTomorrowDust(loc.toString());
+            return DustApi.getTomorrowDust(loc.toString());
         } else {
             return "오늘, 내일, 모레의 공기 상태만 알 수 있어요";
         }
