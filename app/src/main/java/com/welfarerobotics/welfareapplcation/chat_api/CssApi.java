@@ -1,10 +1,9 @@
-package com.welfarerobotics.welfareapplcation.chat_scenario;
+package com.welfarerobotics.welfareapplcation.chat_api;
 
 import android.media.MediaPlayer;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
-import com.welfarerobotics.welfareapplcation.chat_api.ApiServer;
 
 import java.io.*;
 import java.net.HttpURLConnection;

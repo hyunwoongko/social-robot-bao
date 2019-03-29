@@ -21,8 +21,8 @@ import com.kakao.sdk.newtoneapi.SpeechRecognizeListener;
 import com.kakao.sdk.newtoneapi.SpeechRecognizerClient;
 import com.kakao.sdk.newtoneapi.SpeechRecognizerManager;
 import com.welfarerobotics.welfareapplcation.chat_api.ApiServer;
-import com.welfarerobotics.welfareapplcation.chat_scenario.ChatApi;
-import com.welfarerobotics.welfareapplcation.chat_scenario.CssApi;
+import com.welfarerobotics.welfareapplcation.chat_api.ChatApi;
+import com.welfarerobotics.welfareapplcation.chat_api.CssApi;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                 ApiServer.SERVER_URL = model.getUrl();
                 ApiServer.clientId = model.getCssid();
                 ApiServer.clientSecret = model.getCsssecret();
-
 
                 //전체화면
                 getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,

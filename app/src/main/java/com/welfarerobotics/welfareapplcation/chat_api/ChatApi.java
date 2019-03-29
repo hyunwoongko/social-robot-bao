@@ -1,9 +1,6 @@
-package com.welfarerobotics.welfareapplcation.chat_scenario;
+package com.welfarerobotics.welfareapplcation.chat_api;
 
-import com.welfarerobotics.welfareapplcation.chat_api.IssueApi;
-import com.welfarerobotics.welfareapplcation.chat_api.ModelApi;
-import com.welfarerobotics.welfareapplcation.chat_api.PreprocessorApi;
-import com.welfarerobotics.welfareapplcation.chat_api.WiseApi;
+import com.welfarerobotics.welfareapplcation.chat_scenario.*;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
