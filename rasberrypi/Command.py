@@ -57,7 +57,9 @@ def EmotionCheck():
     serialSend=SerialComm.instance()
     serialSend.send_serial(emotion_judge)
     
-    
+
+def SendEmotion(emotion=""):
+    SerialComm.instance().send_serial(emotion)
 
 def Commands(command=""):
     print(command)

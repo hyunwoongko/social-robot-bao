@@ -2,6 +2,7 @@ import time
 import picamera
 import cognitive_face as CF
 import threading
+import Command
 
 KEY = 'b6889d34f1184378bfc045cd6b8a92a9'  #a valid subscription key (keeping the quotes in place).
 CF.Key.set(KEY)
@@ -13,15 +14,16 @@ def FaceCheck(img_url, late):
     #img_url ="a.jpg"  
    
     while(True):
-     try:  
-        time.sleep(late)
-        with picamera.PiCamera() as camera:
-             camera.capture(img_url)
-             print(img_url,late)
-    
+     try:
+        try:
+          with picamera.PiCamera() as camera:
+               time.sleep(1)
+               camera.capture("face.jpg")
+        except:
+          pass
 
 
-
+        time.sleep(0.5)
         faces = CF.face.detect(img_url, face_id=True, landmarks=False, attributes='emotion')
         emotion_judge ="None"
         emotion_late =0
@@ -37,13 +39,18 @@ def FaceCheck(img_url, late):
                     emotion_late = float(face['faceAttributes']['emotion'][emotion])
                     
         print(emotion_judge)
+        Command.SendEmotion(emotion_judge)
      except:
-         print("h")
+       print("error")
 
 
-face_thread = threading.Thread(target=FaceCheck, args=('face.jpg', 1))
-face_thread.daemon = True
-face_thread.start()
-face_thread2 = threading.Thread(target=FaceCheck, args=('face2.jpg', 1.53))
-face_thread2.daemon = True
-face_thread2.start()
+
+def face_check(url):
+    face_thread = threading.Thread(target=FaceCheck, args=(url, 1))
+    face_thread.daemon = True
+    face_thread.start()
+    
+    
+    
+    
+face_check("face.jpg")
