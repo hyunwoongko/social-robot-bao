@@ -15,6 +15,16 @@ public class ChatApi {
 
     private static ChatApi api = null;
     private Random random = new Random();
+    private String emotionType = "";
+    private String emotionRate = "";
+
+    public void setEmotionType(String emotionType) {
+        this.emotionType = emotionType;
+    }
+
+    public void setEmotionRate(String emotionRate) {
+        this.emotionRate = emotionRate;
+    }
 
     // 플래그
     private boolean questionMode = false;
@@ -354,6 +364,9 @@ public class ChatApi {
                     contextGeneratedAnswer = "오늘 날짜는 " + time2 + " 입니다.";
                     CssApi.get().play(contextGeneratedAnswer, "jinho");
                 } else if (intent.equals("잡담")) {
+                    contextGeneratedAnswer = PreprocessorApi.fix(ModelApi.generateAnswer(speech));
+                    CssApi.get().play(contextGeneratedAnswer, "jinho");
+                } else {
                     contextGeneratedAnswer = PreprocessorApi.fix(ModelApi.generateAnswer(speech));
                     CssApi.get().play(contextGeneratedAnswer, "jinho");
                 }

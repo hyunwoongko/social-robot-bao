@@ -1,7 +1,7 @@
 import tensorflow as tf
 
 import generative_model.data as data
-import generative_model.model as ml
+import generative_model.transformer_model as ml
 from generative_model.configs import DEFINES
 from hanspell.spell_checker import fix
 

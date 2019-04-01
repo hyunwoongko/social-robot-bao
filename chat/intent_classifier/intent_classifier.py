@@ -10,12 +10,12 @@ from intent_classifier.intent_preprocessor import intent_size, vector_size, prep
 
 # 파라미터 세팅
 train_data_list = preprocess()
-encode_length = 9
+encode_length = 12
 label_size = intent_size()
-filter_sizes = [2, 3, 4, 2, 3, 4, 2, 3, 4]
+filter_sizes = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
 num_filters = len(filter_sizes)
-learning_step = 2000
-learning_rate = 0.0004
+learning_step = 4000
+learning_rate = 0.0003
 model = train_vector_model()
 
 

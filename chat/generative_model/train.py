@@ -4,8 +4,9 @@ import shutil
 import tensorflow as tf
 
 import generative_model.data as data
-import generative_model.model as ml
+import generative_model.transformer_model as ml
 from generative_model.configs import DEFINES
+from generative_model.markov_engine import apply_markov
 
 DATA_OUT_PATH = './data_out/'
 
@@ -55,6 +56,8 @@ def main(self):
 
         })
 
+    apply_markov("", True)
+
     # 학습 실행
     classifier.train(input_fn=lambda: data.train_input_fn(
         train_input_enc, train_output_dec, train_target_dec, DEFINES.batch_size), steps=DEFINES.train_steps)
@@ -63,9 +66,9 @@ def main(self):
         eval_input_enc, eval_output_dec, eval_target_dec, DEFINES.batch_size))
     print('\nEVAL set accuracy: {accuracy:0.3f}\n'.format(**eval_result))
 
+
 if __name__ == '__main__':
     tf.logging.set_verbosity(tf.logging.INFO)
     tf.app.run(main)
-
 
 tf.logging.set_verbosity

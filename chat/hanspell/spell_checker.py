@@ -126,4 +126,6 @@ def exception(text):
         return text.replace('내 일 모레', '내일 모레')  # konlpy가 실수함.
     if '어벤저스' in text:
         return text.replace('어벤저스', '어벤져스')  # konlpy가 실수함.
+    if '보일' in text:
+        return text.replace('보일', '보이루')  # konlpy가 실수함.
     return text

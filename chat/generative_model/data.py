@@ -53,6 +53,7 @@ def prepro_like_morphlized(data):
         # Twitter.morphs 함수를 통해 토크나이즈 된
         # 리스트 객체를 받고 다시 공백문자를 기준으로
         # 하여 문자열로 재구성 해줍니다.
+        print(seq)
         morphlized_seq = " ".join(morph_analyzer.morphs(seq.replace(' ', '')))
         result_data.append(morphlized_seq)
 
@@ -313,6 +314,7 @@ def data_tokenizer(data):
         # FILTERS = "([~.,!?\"':;)(])"
         # 위 필터와 같은 값들을 정규화 표현식을 
         # 통해서 모두 "" 으로 변환 해주는 부분이다.
+        print(sentence)
         sentence = re.sub(CHANGE_FILTER, "", sentence)
         for word in sentence.split():
             words.append(word)

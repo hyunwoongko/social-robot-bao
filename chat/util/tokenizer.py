@@ -1,15 +1,13 @@
 from konlpy.tag import Okt
 
-from hanspell.spell_checker import fix
-
 
 def tokenize(sentence):
     tokenizer = Okt()
     word_bag = []
-    pos = tokenizer.pos(sentence, norm=True)
-
+    pos = tokenizer.pos(sentence)
     for word, tag in pos:
-        if tag == 'Josa' or tag == 'Punctuation' or tag == "Foreign" or tag == "바오":
+        if (tag == 'Josa' and (word == '은' or word == '는' or word == '이' or word == '가' or
+                               word == '로' or word == '으로' or word == '을' or word == '를')) or tag == 'Punctuation':
             continue
         else:
             word_bag.append(word)

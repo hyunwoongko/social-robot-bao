@@ -99,7 +99,7 @@ def recommend_restaurant(location):
     else:
         description = ''
 
-    msg = info + ' ' + name + ' 에 가보는 건 어떨까요? '
+    msg = info + ' , ' + name + ' 에 가보는 건 어떨까요? '
 
     if description != ' ':
         msg += description

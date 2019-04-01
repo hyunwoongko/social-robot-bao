@@ -1,9 +1,11 @@
 import logging
 import os
+import random
+import shutil
 
 import tensorflow as tf
-from flask import Flask
-
+from flask import Flask, render_template, Response
+from camera_pi import Camera
 from api.api_dust import today_dust, tomorrow_dust, after_tomorrow_dust
 from api.api_exchange import get_exchange
 from api.api_issue import get_issue
@@ -23,9 +25,14 @@ from entity_recognizer.translate.entity_recognizer import get_translate_entity
 from entity_recognizer.weather.entity_recognizer import get_weather_entity
 from entity_recognizer.wiki.entity_recognizer import get_wiki_entity
 from generative_model.answer_generator import generate_answer
+from generative_model.markov_engine import apply_markov
 from hanspell.spell_checker import fix
 from intent_classifier.intent_classifier import get_intent
 from util.tokenizer import tokenize
+
+if os.path.isdir('data_out'):
+    shutil.rmtree('data_out')
+shutil.copytree('generative_model/data_out', 'data_out')
 
 logger = logging.getLogger('chardet')
 logger.setLevel(logging.CRITICAL)
@@ -50,7 +57,13 @@ def server_intent(text):
 
 @app.route('/generate_answer/<text>', methods=['GET', 'POST'])
 def server_generate_answer(text):
-    return generate_answer(text)
+    mkq = apply_markov(text, False)  # 사람에게 말을 배우는 과정
+    normal = generate_answer(text)
+    changed = apply_markov(normal, False)
+    answer = [mkq, mkq, mkq, normal, normal, changed, changed]
+    result = random.choice(answer)
+    return result
+    # 마르코프 모델을 적용해 더 복잡한 대화를 나눔
 
 
 ##################################
@@ -221,5 +234,26 @@ def server_exchange(text):
     return get_exchange(text)
 
 
+@app.route('/eye')
+def eye():
+    """Video streaming home page."""
+    return render_template('index.html')
+
+
+def gen(camera):
+    """Video streaming generator function."""
+    while True:
+        frame = camera.get_frame()
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+
+
+@app.route('/video_feed')
+def video_feed():
+    """Video streaming route. Put this in the src attribute of an img tag."""
+    return Response(gen(Camera()),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
+
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=9892)
+    app.run(host='0.0.0.0', port=9892, threaded=True)
