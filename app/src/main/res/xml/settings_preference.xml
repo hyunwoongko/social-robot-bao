@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="설정"/>
-
     <Preference
-            android:key="ConnectWifi"
-            android:title="Wi-Fi 연결"/>
+            android:key="BackButton"
+            android:title="←  설정"/>
+    <Preference
+            android:key="SetupWifi"
+            android:title="Wi-Fi 설정"/>
     <PreferenceScreen
             android:key="TeachSentencesMenu"
             android:title="말 학습시키기">

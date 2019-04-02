@@ -5,6 +5,7 @@ public class ServerModel {
     private String url;
     private String cssid;
     private String csssecret;
+    private String youtubekey;
 
     public String getUrl() {
         return url;
@@ -29,4 +30,13 @@ public class ServerModel {
     public void setCsssecret(String csssecret) {
         this.csssecret = csssecret;
     }
+
+    public String getYoutubekey() {
+        return youtubekey;
+    }
+
+    public void setYoutubekey(String youtubekey) {
+        this.youtubekey = youtubekey;
+    }
+
 }

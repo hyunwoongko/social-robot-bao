@@ -1,6 +1,7 @@
 package com.welfarerobotics.welfareapplcation;
 
 import android.Manifest;
+import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                 ApiServer.SERVER_URL = model.getUrl();
                 ApiServer.clientId = model.getCssid();
                 ApiServer.clientSecret = model.getCsssecret();
+                ApiServer.youtubeKey = model.getYoutubekey();
 
                 //전체화면
                 getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -91,6 +93,9 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                     Handler mHandler = new Handler(Looper.getMainLooper());
                     mHandler.postDelayed(() -> client.startRecording(false), 300);
                 };
+
+                ttBlink = BlinkTimerTask();
+                timer.schedule(ttBlink, 7000);
             }
 
             @Override
@@ -109,9 +114,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
 
     @Override
     public void onBeginningOfSpeech() {
-        if (ttBlink != null) {
-            ttBlink.cancel();
-        }
+
     }
 
     @Override
@@ -124,8 +127,6 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
     public void onError(int errorCode, String errorMsg) {
         System.out.println("========에러 번호 : " + errorCode);
         System.out.println(errorMsg);
-        ttBlink = BlinkTimerTask();
-        timer.schedule(ttBlink, 7000);
         mSTTRepeatListener.onReceivedEvent();
         conversationMode = false;
     }
@@ -143,9 +144,9 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
     public synchronized void onResults(Bundle results) {
         ArrayList<String> matches =
                 results.getStringArrayList(SpeechRecognizerClient.KEY_RECOGNITION_RESULTS);
-        speech = matches.get(0).replace(" ", ""); //0번이 가장 다듬어진 문장
+        speech = matches.get(0); //0번이 가장 다듬어진 문장
         ThreadPool.executor.execute(() -> {
-            ChatApi.get().chat(speech);
+            ChatApi.get(this).chat(speech);
             CssApi.get().stop(() -> client.startRecording(false));
         });
     }
@@ -167,11 +168,11 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
         return new TimerTask() {
             @Override
             public void run() {
-                runOnUiThread(() -> {
+                ThreadPool.executor.execute(() -> runOnUiThread(() -> {
                     System.out.println("video playback");
                     vv.bringToFront();
                     vv.start();
-                });
+                }));
             }
         };
     }

@@ -1,8 +1,14 @@
 package com.welfarerobotics.welfareapplcation.chat_api;
 
+import android.app.Activity;
+import android.app.Application;
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import com.welfarerobotics.welfareapplcation.YoutubeActivity;
 import com.welfarerobotics.welfareapplcation.chat_scenario.*;
 
 import java.io.IOException;
+import java.lang.ref.WeakReference;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -17,6 +23,7 @@ public class ChatApi {
     private Random random = new Random();
     private String emotionType = "";
     private String emotionRate = "";
+    private WeakReference<Activity> activityWeakReference;
 
     public void setEmotionType(String emotionType) {
         this.emotionType = emotionType;
@@ -46,11 +53,12 @@ public class ChatApi {
     private String[] borings = {"노래", "동화", "댄스", "농담"};
     private String[] danceMents = {"이 춤은 어떤가요?", "전 이 춤이 좋더군요.", "댄스! 댄스!", "이 춤 정말 신나지 않나요?"};
 
-    private ChatApi() {
+    private ChatApi(Activity activity) {
+        activityWeakReference = new WeakReference<>(activity);
     }
 
-    public static ChatApi get() {
-        if (api == null) api = new ChatApi();
+    public static ChatApi get(Activity activity) {
+        if (api == null) api = new ChatApi(activity);
         return api;
     }
 
@@ -324,7 +332,11 @@ public class ChatApi {
                     String[][] entity = ModelApi.getEntity("song", speech);
                     List<String> song = YoutubeScenario.seperateEntity(entity);
                     String youtubeUrl = YoutubeScenario.response(song);
-                    /*TODO 안드로이드 팀 - 유튜브 재생 기능 구현해야함*/
+                    System.out.println(youtubeUrl);
+                    Intent youtubeIntent = new Intent(
+                            activityWeakReference.get().getApplicationContext(), YoutubeActivity.class);
+                    youtubeIntent.putExtra("url", youtubeUrl);
+                    activityWeakReference.get().startActivity(youtubeIntent);
                 } else if (intent.equals("알람")) {
                     /*TODO 인공지능 - 알람 시간 및 메모 텍스트 추출 구현해야함*/
                     /*TODO 안드로이드 팀 - 알람 기능 구현해야함*/
@@ -383,5 +395,6 @@ public class ChatApi {
         date.clear();
         word.clear();
         lang.clear();
+        activityWeakReference = null;
     }
 }
