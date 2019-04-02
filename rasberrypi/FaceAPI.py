@@ -15,15 +15,8 @@ def FaceCheck(img_url, late):
    
     while(True):
      try:
-        try:
-          with picamera.PiCamera() as camera:
-               time.sleep(1)
-               camera.capture("face.jpg")
-        except:
-          pass
-
-
-        time.sleep(0.5)
+        time.sleep(1)
+      
         faces = CF.face.detect(img_url, face_id=True, landmarks=False, attributes='emotion')
         emotion_judge ="None"
         emotion_late =0
@@ -41,7 +34,7 @@ def FaceCheck(img_url, late):
         print(emotion_judge)
         Command.SendEmotion(emotion_judge)
      except:
-       print("error")
+       pass
 
 
 
@@ -53,4 +46,4 @@ def face_check(url):
     
     
     
-face_check("face.jpg")
+#face_check("face.jpg")
