@@ -14,8 +14,9 @@ encode_length = 12
 label_size = intent_size()
 filter_sizes = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
 num_filters = len(filter_sizes)
-learning_step = 4000
-learning_rate = 0.0003
+learning_step = 5000
+learning_rate = 0.0001
+print("===RUN WORD2VEC===")
 model = train_vector_model()
 
 
@@ -158,6 +159,7 @@ def predict(test_data):
 
 def get_intent(text, is_train):
     if is_train:
+        print("===START TRAINING===")
         train()
     prediction = predict(np.array(inference_embed(text)).flatten())
     for mapping, num in intent_mapping.items():

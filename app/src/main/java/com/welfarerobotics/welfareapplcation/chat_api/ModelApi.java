@@ -62,11 +62,12 @@ public final class ModelApi {
      * Transformer 문장 생성기 API
      * 입력 문장을 입력하면 학습된 단어를 이어붙여 문장을 생성함
      *
-     * @param text 입력문장
+     * @param userid 유저 아이디
+     * @param text   입력문장
      * @return Transformer의 출력 문장
      */
-    public static String generateAnswer(String text) throws IOException {
-        return Jsoup.connect(ApiServer.SERVER_URL + "/generate_answer/" + Encoder
+    public static String generateAnswer(String userid, String text) throws IOException {
+        return Jsoup.connect(ApiServer.SERVER_URL + "/generate_answer/" + userid + "/" + Encoder
                 .utf8(text))
                 .timeout(20000)
                 .get()

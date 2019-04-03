@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
     private STTRepeatListener mSTTRepeatListener;
     private SpeechRecognizerClient client;
     private boolean conversationMode = false;
+    private UserModel userModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,13 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
         vv = findViewById(R.id.videoview);
         ttBlink = BlinkTimerTask();
         timer = new Timer();
+
+        userModel = new UserModel();
+        userModel.setLocation("전주");
+        userModel.setUserId("user1");
+        userModel.setUserName("현웅");
+        // 나중에 파이어베이스에서 받아와야함 지금은 임시로 이렇게 넣어놓음
+        // 사용자의 이름 지역 아이디가 들어있는 데이터모델임.
 
         //권한 확인
         ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CAMERA,
@@ -146,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                 results.getStringArrayList(SpeechRecognizerClient.KEY_RECOGNITION_RESULTS);
         speech = matches.get(0); //0번이 가장 다듬어진 문장
         ThreadPool.executor.execute(() -> {
-            ChatApi.get(this).chat(speech);
+            ChatApi.get(this).chat(speech, userModel);
             CssApi.get().stop(() -> client.startRecording(false));
         });
     }

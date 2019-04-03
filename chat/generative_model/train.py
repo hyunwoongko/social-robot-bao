@@ -6,7 +6,6 @@ import tensorflow as tf
 import generative_model.data as data
 import generative_model.transformer_model as ml
 from generative_model.configs import DEFINES
-from generative_model.markov_engine import apply_markov
 
 DATA_OUT_PATH = './data_out/'
 
@@ -55,8 +54,6 @@ def main(self):
             'max_sequence_length': DEFINES.max_sequence_length,
 
         })
-
-    apply_markov("", True)
 
     # 학습 실행
     classifier.train(input_fn=lambda: data.train_input_fn(

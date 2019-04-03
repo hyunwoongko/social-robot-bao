@@ -2,10 +2,10 @@
 import tensorflow as tf
 
 tf.app.flags.DEFINE_integer('batch_size', 100, 'batch size')  # 배치 크기
-tf.app.flags.DEFINE_integer('train_steps', 2000, 'train steps')  # 학습 에포크
+tf.app.flags.DEFINE_integer('train_steps', 5000, 'train steps')  # 학습 에포크
 tf.app.flags.DEFINE_float('dropout_width', 0.5, 'dropout width')  # 드롭아웃 크기
 tf.app.flags.DEFINE_integer('hidden_size', 200, 'weights size')  # 가중치 크기 # 논문 512 사용
-tf.app.flags.DEFINE_float('learning_rate', 0.0007, 'learning rate')  # 학습률
+tf.app.flags.DEFINE_float('learning_rate', 0.0002, 'learning rate')  # 학습률
 tf.app.flags.DEFINE_integer('shuffle_seek', 1000, 'shuffle random seek')  # 셔플 시드값
 tf.app.flags.DEFINE_integer('max_sequence_length', 15, 'max sequence length')  # 시퀀스 길이
 tf.app.flags.DEFINE_integer('embedding_size', 200, 'embedding size')  # 임베딩 크기 # 논문 512 사용 학습 속도 및 성능 튜닝

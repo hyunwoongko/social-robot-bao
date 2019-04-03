@@ -33,6 +33,10 @@
         <activity android:name=".MainActivity" android:screenOrientation="landscape">
         </activity>
         <activity android:name=".initial_user_setup.TutorialActivity" android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity android:name=".initial_user_setup.BlActivity" android:screenOrientation="landscape">
         </activity>
@@ -46,10 +50,6 @@
         <activity android:name=".settings.WifiActivity" android:screenOrientation="landscape">
         </activity>
         <activity android:name=".MenuActivity" android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".settings.SettingActivity" android:screenOrientation="landscape">
 
