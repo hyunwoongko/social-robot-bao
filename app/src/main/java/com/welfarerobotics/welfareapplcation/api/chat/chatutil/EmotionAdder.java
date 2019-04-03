@@ -45,4 +45,7 @@ public final class EmotionAdder {
     public static void setEmotion(String emotion) {
         EmotionAdder.emotion = emotion;
     }
+    public static String getEmotion() {
+        return  EmotionAdder.emotion;
+    }
 }

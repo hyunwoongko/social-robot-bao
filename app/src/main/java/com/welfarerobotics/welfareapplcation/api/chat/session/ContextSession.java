@@ -12,13 +12,16 @@ import java.util.List;
  * @Author : Hyunwoong
  * @When : 4/3/2019 11:45 AM
  * @Homepage : https://github.com/gusdnd852
- *
+ * <p>
  * 문맥판단 세션
  */
 public final class ContextSession {
-    public static void contextProcess() throws IOException {
-        if (!ChatState.intent.contains("문맥")) ChatState.contextIntent = ChatState.intent; // 문맥관련 의도가 아닐경우에만 이전 의도를 저장
-        else if (ChatState.intent.equals("날씨먼지문맥")) {
+    public static boolean contextProcess() throws IOException {
+        if (!ChatState.intent.contains("문맥")) {
+            ChatState.contextIntent = ChatState.intent; // 문맥관련 의도가 아닐경우에만 이전 의도를 저장
+        } else if (ChatState.intent.equals("날씨먼지문맥")) {
+
+
             if (ChatState.contextIntent.equals("먼지")) {
                 String[][] entity = ModelApi.getEntity("dust", ChatState.tokenizeSpeech);
                 List<String>[] entityList = DustScenario.contextEntity(entity);
@@ -39,6 +42,7 @@ public final class ContextSession {
             } else {
                 ChatState.intent = "날씨";
             }
+            return true;
         } else if (ChatState.intent.equals("번역환율문맥")) {
             if (!ChatState.contextIntent.equals("환율")) {
                 String[][] entity = ModelApi.getEntity("translate", ChatState.tokenizeSpeech);
@@ -71,6 +75,9 @@ public final class ContextSession {
             } else {
                 ChatState.intent = "번역";
             }
+            return true;
+
+
         } else if (ChatState.intent.equals("날씨문맥전환")) {
             if (ChatState.contextIntent.equals("먼지")) {
                 WeatherScenario.response(ChatState.location, ChatState.date);
@@ -78,6 +85,7 @@ public final class ContextSession {
             } else {
                 ChatState.intent = "날씨";
             }
+            return true;
         } else if (ChatState.intent.equals("먼지문맥전환")) {
             if (ChatState.contextIntent.equals("날씨")) {
                 DustScenario.response(ChatState.location, ChatState.date);
@@ -85,6 +93,8 @@ public final class ContextSession {
             } else {
                 ChatState.intent = "먼지";
             }
+            return true;
         }
+        return false;
     }
 }
