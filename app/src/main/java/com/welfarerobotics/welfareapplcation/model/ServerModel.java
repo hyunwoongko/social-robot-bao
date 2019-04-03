@@ -31,9 +31,7 @@ public class ServerModel {
         this.csssecret = csssecret;
     }
 
-    public String getYoutubekey() {
-        return youtubekey;
-    }
+    public String getYoutubekey() { return youtubekey; }
 
     public void setYoutubekey(String youtubekey) {
         this.youtubekey = youtubekey;

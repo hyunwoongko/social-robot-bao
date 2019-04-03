@@ -44,7 +44,7 @@
         </activity>
         <activity android:name=".ui.initial.UserActivity" android:screenOrientation="landscape">
         </activity>
-        <activity android:name=".ui.youtube.YoutubeActivity" android:screenOrientation="landscape"
+        <activity android:name=".ui.youtube.YoutubeActivity"
                 android:theme="@android:style/Theme.Dialog">
         </activity>
         <activity android:name=".ui.settings.WifiActivity" android:screenOrientation="landscape">

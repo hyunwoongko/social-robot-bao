@@ -210,7 +210,11 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                 mediaController.setVisibility(View.GONE);
                 vv.setMediaController(mediaController);
                 vv.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.close));
-                vv.start(); //최초 재생시 끊김이 있으므로 미리 화면 뒤쪽에서 한번 재생시킴
+                ThreadPool.executor.execute(() ->
+                        runOnUiThread(() -> {
+                            vv.start(); //최초 재생시 끊김이 있으므로 미리 화면 뒤쪽에서 한번 재생시킴
+                        })
+                );
 
                 //비디오 재생 후 표정이 화면의 맨 앞에 위치
                 vv.setOnCompletionListener(mediaPlayer -> img.bringToFront());
@@ -218,9 +222,8 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                 client.setSpeechRecognizeListener(MainActivity.this);
                 client.startRecording(false);
                 mSTTRepeatListener = () -> {
-                    System.out.println("이벤트받음++++++++++++++++++++++++++++++++++++++++++++");
                     Handler mHandler = new Handler(Looper.getMainLooper());
-                    mHandler.postDelayed(() -> client.startRecording(false), 300);
+                    mHandler.postDelayed(() -> client.startRecording(false), 100);
                 };
 
                 ttBlink = BlinkTimerTask();
@@ -491,6 +494,22 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                 }));
             }
         };
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if(client != null){
+            client.cancelRecording();}
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(client != null) {
+            Handler mHandler = new Handler(Looper.getMainLooper());
+            mHandler.postDelayed(() -> client.startRecording(false), 100);
+        }
     }
 
     @Override

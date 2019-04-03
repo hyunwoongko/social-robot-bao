@@ -6,25 +6,10 @@
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.youtube.player.YouTubePlayerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="200dp"
+            android:layout_height="110dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:visibility="invisible"
+            app:layout_constraintTop_toTopOf="parent"
             android:id="@+id/YoutubeView"/>
-
-    <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/music_stopbutton"
-            android:scaleType="fitCenter"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:background="#00ffffff"
-            android:id="@+id/MusicStopButton"/>
 
 </android.support.constraint.ConstraintLayout>
