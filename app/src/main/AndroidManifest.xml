@@ -30,31 +30,31 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme"
         tools:targetApi="m">
-        <activity android:name=".MainActivity" android:screenOrientation="landscape">
+        <activity android:name=".ui.main.MainActivity" android:screenOrientation="landscape">
         </activity>
-        <activity android:name=".initial_user_setup.TutorialActivity" android:screenOrientation="landscape">
+        <activity android:name=".ui.initial.TutorialActivity" android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".initial_user_setup.BlActivity" android:screenOrientation="landscape">
+        <activity android:name=".ui.initial.BlActivity" android:screenOrientation="landscape">
         </activity>
-        <activity android:name=".initial_user_setup.WifiActivity" android:screenOrientation="landscape">
+        <activity android:name=".ui.initial.WifiActivity" android:screenOrientation="landscape">
         </activity>
-        <activity android:name=".initial_user_setup.UserActivity" android:screenOrientation="landscape">
+        <activity android:name=".ui.initial.UserActivity" android:screenOrientation="landscape">
         </activity>
-        <activity android:name=".YoutubeActivity" android:screenOrientation="landscape"
+        <activity android:name=".ui.youtube.YoutubeActivity" android:screenOrientation="landscape"
                 android:theme="@android:style/Theme.Dialog">
         </activity>
-        <activity android:name=".settings.WifiActivity" android:screenOrientation="landscape">
+        <activity android:name=".ui.settings.WifiActivity" android:screenOrientation="landscape">
         </activity>
-        <activity android:name=".MenuActivity" android:screenOrientation="landscape">
+        <activity android:name=".ui.menu.MenuActivity" android:screenOrientation="landscape">
         </activity>
-        <activity android:name=".settings.SettingActivity" android:screenOrientation="landscape">
+        <activity android:name=".ui.settings.SettingActivity" android:screenOrientation="landscape">
 
         </activity>
-        <activity android:name=".settings.LocSettingsActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".ui.settings.LocSettingsActivity" android:screenOrientation="landscape"/>
 
 
         <provider

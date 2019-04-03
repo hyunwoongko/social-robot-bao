@@ -1,1 +1,1 @@
-include ':app', ':emotion', ':emotion', ':instantapp'
+include ':app', ':instantapp'
