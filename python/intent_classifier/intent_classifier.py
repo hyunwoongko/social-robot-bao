@@ -5,17 +5,19 @@ import pandas as pd
 import tensorflow as tf
 from konlpy.tag import Okt
 
-from intent_classifier.intent_preprocessor import intent_size, vector_size, preprocess, train_vector_model, \
+from intent_classifier.configs import IntentConfigs
+from intent_classifier.intent_preprocessor import vector_size, preprocess, train_vector_model, \
     intent_mapping
 
+configs = IntentConfigs()
 # 파라미터 세팅
 train_data_list = preprocess()
-encode_length = 12
-label_size = intent_size()
-filter_sizes = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
-num_filters = len(filter_sizes)
-learning_step = 5000
-learning_rate = 0.0001
+encode_length = configs.encode_length
+label_size = configs.label_size
+filter_sizes = configs.filter_sizes
+num_filters = configs.num_filters
+learning_step = configs.learning_step
+learning_rate = configs.learning_rate
 print("===RUN WORD2VEC===")
 model = train_vector_model()
 
@@ -112,7 +114,7 @@ def create_graph(train=True):
     return accuracy, x, y_target, keep_prob, train_step, y, cross_entropy, W_conv1
 
 
-def train():
+def train_intent():
     try:
         labels_train, labels_test, data_filter_train, data_filter_test = get_test_data()
         tf.reset_default_graph()
@@ -157,10 +159,7 @@ def predict(test_data):
         sess.close()
 
 
-def get_intent(text, is_train):
-    if is_train:
-        print("===START TRAINING===")
-        train()
+def get_intent(text):
     prediction = predict(np.array(inference_embed(text)).flatten())
     for mapping, num in intent_mapping.items():
         if int(prediction) == num:

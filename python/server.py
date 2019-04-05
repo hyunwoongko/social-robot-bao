@@ -54,7 +54,7 @@ def init():
 
 @app.route('/intent/<text>', methods=['GET', 'POST'])
 def server_intent(text):
-    return get_intent(text, False)
+    return get_intent(text)
 
 
 @app.route('/generate_answer/<userid>/<text>', methods=['GET', 'POST'])
