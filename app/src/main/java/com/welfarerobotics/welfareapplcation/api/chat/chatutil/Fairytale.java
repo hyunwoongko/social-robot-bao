@@ -85,7 +85,7 @@ public final class Fairytale {
             "집도 돈도 패물도 모두 뺏기고 실컷 두들겨 맞아 앓고 있는 놀부 내외를 흥부가 데리러 왔습니다.",
             "형님, 저희가 도와 드릴테니 걱정마세요.",
             "그 뒤 놀부는 잘못을 깨닫고 흥부와 사이좋게 지냈습니다."};
-
+/*
     public Fairytale play() {
         String selector = titleArray[randomint.nextInt(titleArray.length)];
         switch (selector) {
@@ -104,4 +104,5 @@ public final class Fairytale {
     public void stop() {
         audioPlayer.stop();
     }
+ */
 }

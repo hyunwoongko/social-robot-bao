@@ -1,6 +1,5 @@
 package com.welfarerobotics.welfareapplcation.ui.main;
 
-import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
@@ -13,7 +12,6 @@ import android.os.Looper;
 import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -52,7 +50,6 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
     private Timer timer;
     private TimerTask ttBlink;
     private VideoView vv;
-    private final int PERMISSION = 1;
     private STTRepeatListener mSTTRepeatListener;
     private SpeechRecognizerClient client;
     private boolean conversationMode = false;
@@ -564,5 +561,4 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
             timer.cancel();
         }
     }
-
 }

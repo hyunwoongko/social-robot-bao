@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.*;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Toast;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -19,7 +17,6 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
 
     private YouTubePlayerView playerView;
     private String url;
-    private ImageView img;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

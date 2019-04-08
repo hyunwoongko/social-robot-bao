@@ -9,7 +9,6 @@ import android.view.MotionEvent;
 import android.view.Window;
 import android.view.WindowManager;
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.api.chat.CssApi;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.Fairytale;
 
 public class FairytaleActivity extends AppCompatActivity {
@@ -31,7 +30,7 @@ public class FairytaleActivity extends AppCompatActivity {
         getWindow().getAttributes().width = width;
         getWindow().getAttributes().height = height;
 
-        Fairytale.get().play();
+//        Fairytale.get().play();
         }
 
     @Override
@@ -52,6 +51,6 @@ public class FairytaleActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Fairytale.get().stop();
+     //   Fairytale.get().stop();
     }
 }
