@@ -28,27 +28,27 @@ public final class NonProposedTalkingSession {
                 CssApi.get().play("혹시 지금 기분이 안 좋으신가요? , 제가 재밌는 이야기를 들려드릴게요. , " + joke, "jinho");
                 //TODO : 농담 API 연결
             } else {
-                ChatState.contextGeneratedAnswer = PreprocessorApi.fix(ModelApi.generateAnswer(model.getUserId(), ChatState.fixedSpeech));
+                ChatState.contextGeneratedAnswer = PreprocessorApi.fix(ModelApi.generateAnswer(model.getId(), ChatState.fixedSpeech));
                 ChatState.contextGeneratedAnswer = NameReplacer.replaceName(model, ChatState.contextGeneratedAnswer);
                 CssApi.get().play(ChatState.contextGeneratedAnswer, "jinho");
             }
         } else if (ChatState.contextIntent.equals("양자택일")) {
             if (ChatState.intent.equals("긍정대답")) {
-                ChatState.contextGeneratedAnswer = PreprocessorApi.fix(ModelApi.generateAnswer(model.getUserId(), ChatState.fixedSpeech));
+                ChatState.contextGeneratedAnswer = PreprocessorApi.fix(ModelApi.generateAnswer(model.getId(), ChatState.fixedSpeech));
                 ChatState.contextGeneratedAnswer = NameReplacer.replaceName(model, ChatState.contextGeneratedAnswer);
                 CssApi.get().play(ChatState.contextGeneratedAnswer + " , 그래서 결정은 하셨나요?", "jinho");
             } else if (ChatState.intent.equals("부정대답")) {
-                ChatState.contextGeneratedAnswer = PreprocessorApi.fix(ModelApi.generateAnswer(model.getUserId(), ChatState.fixedSpeech));
+                ChatState.contextGeneratedAnswer = PreprocessorApi.fix(ModelApi.generateAnswer(model.getId(), ChatState.fixedSpeech));
                 ChatState.contextGeneratedAnswer = NameReplacer.replaceName(model, ChatState.contextGeneratedAnswer);
                 CssApi.get().play(ChatState.contextGeneratedAnswer + " , 그래서 아직 결정 못하셨나요?", "jinho");
             } else {
-                ChatState.contextGeneratedAnswer = PreprocessorApi.fix(ModelApi.generateAnswer(model.getUserId(), ChatState.fixedSpeech));
+                ChatState.contextGeneratedAnswer = PreprocessorApi.fix(ModelApi.generateAnswer(model.getId(), ChatState.fixedSpeech));
                 ChatState.contextGeneratedAnswer = NameReplacer.replaceName(model, ChatState.contextGeneratedAnswer);
                 ChatState.contextGeneratedAnswer = EmotionAdder.applyEmotion(ChatState.contextGeneratedAnswer);
                 CssApi.get().play(ChatState.contextGeneratedAnswer, "jinho");
             }
         } else {
-            ChatState.contextGeneratedAnswer = PreprocessorApi.fix(ModelApi.generateAnswer(model.getUserId(), ChatState.fixedSpeech));
+            ChatState.contextGeneratedAnswer = PreprocessorApi.fix(ModelApi.generateAnswer(model.getId(), ChatState.fixedSpeech));
             ChatState.contextGeneratedAnswer = NameReplacer.replaceName(model, ChatState.contextGeneratedAnswer);
             ChatState.contextGeneratedAnswer = EmotionAdder.applyEmotion(ChatState.contextGeneratedAnswer);
             CssApi.get().play(ChatState.contextGeneratedAnswer, "jinho");

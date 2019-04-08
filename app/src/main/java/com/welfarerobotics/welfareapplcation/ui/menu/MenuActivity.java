@@ -16,13 +16,17 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         ImageButton ibSettings = findViewById(R.id.settings);
+        ImageButton ibplaylang = findViewById(R.id.playlang);
         ActivityCompat.requestPermissions(MenuActivity.this, new String[]{Manifest.permission.CAMERA,
                 Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.ACCESS_COARSE_LOCATION,
         Manifest.permission.ACCESS_FINE_LOCATION}, 1);
-
         ibSettings.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(), SettingActivity.class);
+            startActivity(intent);
+        });
+        ibplaylang.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), ConversationEdit.class);
             startActivity(intent);
         });
     }

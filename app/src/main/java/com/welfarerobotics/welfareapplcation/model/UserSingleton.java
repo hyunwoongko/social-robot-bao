@@ -1,14 +1,31 @@
 package com.welfarerobotics.welfareapplcation.model;
 
 import java.util.ArrayList;
-import java.util.List;
 
-/**
- * @Author : Hyunwoong
- * @When : 4/3/2019 7:39 AM
- * @Homepage : https://github.com/gusdnd852
- */
-public class UserModel {
+public class UserSingleton {
+    private static UserSingleton instance = null;
+
+    private UserSingleton() {
+    }
+
+    public synchronized static UserSingleton getInstance() {
+        if (instance == null) {
+            instance = new UserSingleton();
+        }
+        return instance;
+    }
+
+    public static UserSingleton setInstance(UserModel model) {
+        if (instance == null) {
+            instance = new UserSingleton();
+        }
+        instance.setId(model.getId());
+        instance.setName(model.getName());
+        instance.setDict(model.getDict());
+        instance.setLocation(model.getLocation());
+        instance.setPhoto(model.getPhoto());
+        return instance;
+    }
 
     private String id;
     private String name;

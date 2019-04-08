@@ -1,6 +1,7 @@
 package com.welfarerobotics.welfareapplcation.ui.initial;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -12,7 +13,12 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
+import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
@@ -20,62 +26,98 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.welfarerobotics.welfareapplcation.model.UserModel;
+import com.welfarerobotics.welfareapplcation.model.UserSingleton;
 import com.welfarerobotics.welfareapplcation.ui.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.ui.main.MainActivity;
 import com.welfarerobotics.welfareapplcation.R;
+import com.welfarerobotics.welfareapplcation.util.Preference;
+import com.welfarerobotics.welfareapplcation.util.UUID;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-import java.util.Objects;
+import java.util.*;
 
 public class UserSettingActivity extends BaseActivity {
-    private final int REQUEST_TAKE_PICTURE = 1;
-    private ImageView iv_UserPhoto;
+    private ArrayList<ImageView> iv_UserPhotos;
     private String mCurrentPhotoPath;
     private Uri photoURI;
     private FirebaseStorage storage;
-
+    private ArrayList<String> photos = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.user_setting);
-        storage = FirebaseStorage.getInstance();
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.initial_user);
 
-        iv_UserPhoto = this.findViewById(R.id.imageView);
-        iv_UserPhoto.setOnClickListener(view -> {
-            int permissionCheck = ContextCompat.checkSelfPermission(UserSettingActivity.this, Manifest.permission.CAMERA);
-            if (permissionCheck == PackageManager.PERMISSION_DENIED) {
-                //권한없음
-                ActivityCompat.requestPermissions(UserSettingActivity.this, new String[]{Manifest.permission.CAMERA
-                        , Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);
-                //ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},0);
+        storage = FirebaseStorage.getInstance();
+        ImageView nextButton = findViewById(R.id.next_imageView_userScreen);
+
+        iv_UserPhotos = new ArrayList<>();
+        iv_UserPhotos.add((ImageView) findViewById(R.id.imageView3));
+        iv_UserPhotos.add((ImageView) findViewById(R.id.imageView4));
+        iv_UserPhotos.add((ImageView) findViewById(R.id.imageView5));
+
+        iv_UserPhotos.get(0).setOnClickListener(view -> captureImage(0));
+        iv_UserPhotos.get(1).setOnClickListener(view -> captureImage(1));
+        iv_UserPhotos.get(2).setOnClickListener(view -> captureImage(2));
+        nextButton.setOnClickListener(v -> {
+            if (photos.size() < 3) {
+                Toast.makeText(UserSettingActivity.this, "사용자의 사진 3장을 업로드 해주세요.", Toast.LENGTH_SHORT).show();
             } else {
-                //권한있음
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, 1);
+                String id = UUID.getId(this);
+                UserModel model = new UserModel();
+                model.setId(id);
+                model.setName(((EditText) findViewById(R.id.editusernameView)).getText().toString());
+                model.setLocation("전주"); // TODO : 지역 Spinner 구현해야함
+                model.setPhoto(photos);
+                UserSingleton.setInstance(model);
+                // 싱글톤 업로드
+
+                FirebaseDatabase.getInstance()
+                        .getReference("user")
+                        .child(id)
+                        .setValue(model);
+                // 디비 업로드
+
+                Preference.get(UserSettingActivity.this).setBoolean("firstUser", false);
+                startActivity(new Intent(UserSettingActivity.this, MainActivity.class));
+                finish();
             }
         });
     }
 
+    private void captureImage(int rqCode) {
+        int permissionCheck = ContextCompat.checkSelfPermission(UserSettingActivity.this, Manifest.permission.CAMERA);
+        if (permissionCheck == PackageManager.PERMISSION_DENIED) {
+            //권한없음
+            ActivityCompat.requestPermissions(UserSettingActivity.this, new String[]{Manifest.permission.CAMERA
+                    , Manifest.permission.WRITE_EXTERNAL_STORAGE}, rqCode);
+            //ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},0);
+        } else {
+            //권한있음
+            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(intent, rqCode);
+        }
+    }
+
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResult) {
-        if (requestCode == 0) {
-            if (grantResult[0] == 0) {
-                Toast.makeText(this, "권한이 승인되었습니다", Toast.LENGTH_SHORT).show();
-                doTakePhotoAction();
-            } else {
-                //권한이 거절된경우
-                Toast.makeText(this, "카메라권한이 거절되었습니다." +
-                        " 카메라를 이용하려면 권한을 승낙하여야합니다.", Toast.LENGTH_SHORT).show();
-            }
+        if (grantResult[0] == 0) {
+            Toast.makeText(this, "권한이 승인되었습니다", Toast.LENGTH_SHORT).show();
+            doTakePhotoAction(requestCode);
+        } else {
+            //권한이 거절된경우
+            Toast.makeText(this, "카메라권한이 거절되었습니다." +
+                    " 카메라를 이용하려면 권한을 승낙하여야합니다.", Toast.LENGTH_SHORT).show();
         }
     }
 
     //카메라에서 사진촬영
-    private void doTakePhotoAction()// 카메라 찰영후 이미지가져오기
+    private void doTakePhotoAction(int rqCode)// 카메라 찰영후 이미지가져오기
     {
         String state = Environment.getExternalStorageState();
         if (Environment.MEDIA_MOUNTED.equals(state)) {
@@ -88,7 +130,7 @@ public class UserSettingActivity extends BaseActivity {
                     //누가(7.0)이상부터는 file://로 시작되는 Uri의 값을 주고받기 불가능
                     photoURI = FileProvider.getUriForFile(this, "패키지명", photoFile);
                     takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
-                    startActivityForResult(takePictureIntent, REQUEST_TAKE_PICTURE);
+                    startActivityForResult(takePictureIntent, rqCode);
                 }
             } else {
                 Toast.makeText(UserSettingActivity.this, "외장메모리 미 지원", Toast.LENGTH_SHORT).show();
@@ -114,37 +156,30 @@ public class UserSettingActivity extends BaseActivity {
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        final Bundle extras = data.getExtras();
+        assert extras == null;
+        //Bitmap photo = ImageUtil.cropCenter(extras.getParcelable("data")); centor crop기능 (extras.getParcelable("data"));
+        Bitmap photo = extras.getParcelable("data");
+        iv_UserPhotos.get(requestCode).setImageBitmap(photo);
+        Toast.makeText(getApplicationContext(), "촬영 성공", Toast.LENGTH_SHORT).show();
 
-        if (resultCode != RESULT_OK)
-            return;
-        if (requestCode == REQUEST_TAKE_PICTURE) {
-            final Bundle extras = data.getExtras();
-            assert extras == null;
-            //Bitmap photo = ImageUtil.cropCenter(extras.getParcelable("data")); centor crop기능 (extras.getParcelable("data"));
-            Bitmap photo = extras.getParcelable("data");
-            iv_UserPhoto.setImageBitmap(photo);
-            Toast.makeText(getApplicationContext(), "촬영 성공", Toast.LENGTH_SHORT).show();
+        StorageReference storageRef = storage.getReference()
+                .child(UUID.getId(this))
+                .child("userPhoto" + requestCode);
 
-            StorageReference storageRef = storage.getReference("social-robot-bao.appspot.com");
-            iv_UserPhoto.setDrawingCacheEnabled(true);
-            iv_UserPhoto.buildDrawingCache();
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            Objects.requireNonNull(photo).compress(Bitmap.CompressFormat.JPEG, 100, baos);
-            byte[] datas = baos.toByteArray();
+        iv_UserPhotos.get(requestCode).setDrawingCacheEnabled(true);
+        iv_UserPhotos.get(requestCode).buildDrawingCache();
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        Objects.requireNonNull(photo).compress(Bitmap.CompressFormat.JPEG, 100, baos);
+        byte[] datas = baos.toByteArray();
 
-            UploadTask uploadTask = storageRef.putBytes(datas);
-            uploadTask.addOnFailureListener(exception -> {
-                Toast.makeText(this, "업로드 실패", Toast.LENGTH_SHORT).show();
-            }).addOnSuccessListener(taskSnapshot -> {
-                Toast.makeText(getApplicationContext(), taskSnapshot.getDownloadUrl().toString(), Toast.LENGTH_SHORT).show();
-                //이미지 URI을 RealTime Database에 upload
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference("message");
-                myRef.setValue(taskSnapshot.getDownloadUrl().toString());
-                Intent intent = new Intent(this, MainActivity.class);
-                startActivity(intent);
-            });
-
-        }
+        UploadTask uploadTask = storageRef.putBytes(datas);
+        uploadTask.addOnFailureListener(exception -> {
+            Toast.makeText(this, "사진 업로드에 실패였습니다", Toast.LENGTH_SHORT).show();
+        }).addOnSuccessListener(taskSnapshot -> {
+            Toast.makeText(getApplicationContext(), "사진을 업로드 하였습니다.", Toast.LENGTH_SHORT).show();
+            //이미지 URI을 RealTime Database에 upload
+            photos.add(taskSnapshot.getDownloadUrl().toString());
+        });
     }
 }

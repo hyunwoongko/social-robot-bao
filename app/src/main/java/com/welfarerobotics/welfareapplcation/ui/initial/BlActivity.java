@@ -79,12 +79,14 @@ public class BlActivity extends BaseActivity {
         selectDevice = -1;
         //블루투스 지원 유무 확인
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+
+
         back_imageView.setOnClickListener(view -> {
             Intent intent = new Intent(this, TutorialActivity.class);
             startActivity(intent);
         });
         next_imageView.setOnClickListener(view -> {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, UserSettingActivity.class);
             startActivity(intent);
         });
         //블루투스를 지원하지 않으면 null을 리턴한다
@@ -214,39 +216,6 @@ public class BlActivity extends BaseActivity {
                 }
             }
         });
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode,
-                                           String permissions[], int[] grantResults) {
-        switch (requestCode) {
-            case ACCESS_COARSE_LOCATION_CODE: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    // permission was granted, yay! Do the
-                    // contacts-related task you need to do.
-                } else {
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
-                }
-                return;
-            }
-            case ACCESS_FINE_LOCATION_CODE: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    // permission was granted, yay! Do the
-                    // contacts-related task you need to do.
-                } else {
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
-                }
-                return;
-            }
-            // other 'case' lines to check for other
-            // permissions this app might request
-        }
     }
 
     public void visibleMyBluetooth() { //내 블루투스를 다른 핸드폰이 보도록 하기

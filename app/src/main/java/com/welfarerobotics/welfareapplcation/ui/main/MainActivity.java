@@ -1,10 +1,9 @@
 package com.welfarerobotics.welfareapplcation.ui.main;
 
+import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
-import android.content.Context;
 import android.graphics.Color;
-import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,9 +11,9 @@ import android.os.Looper;
 import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -27,13 +26,13 @@ import com.kakao.sdk.newtoneapi.SpeechRecognizeListener;
 import com.kakao.sdk.newtoneapi.SpeechRecognizerClient;
 import com.kakao.sdk.newtoneapi.SpeechRecognizerManager;
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.api.chat.ChatApi;
-import com.welfarerobotics.welfareapplcation.api.chat.CssApi;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.EmotionAdder;
 import com.welfarerobotics.welfareapplcation.model.ServerModel;
 import com.welfarerobotics.welfareapplcation.model.UserModel;
+import com.welfarerobotics.welfareapplcation.model.UserSingleton;
 import com.welfarerobotics.welfareapplcation.util.ApiKeys;
-import com.welfarerobotics.welfareapplcation.util.OnSwipeTouchListener;
+import com.welfarerobotics.welfareapplcation.api.chat.ChatApi;
+import com.welfarerobotics.welfareapplcation.api.chat.CssApi;
 import com.welfarerobotics.welfareapplcation.util.STTRepeatListener;
 import com.welfarerobotics.welfareapplcation.util.ThreadPool;
 import org.json.JSONException;
@@ -50,12 +49,10 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
     private Timer timer;
     private TimerTask ttBlink;
     private VideoView vv;
+    private final int PERMISSION = 1;
     private STTRepeatListener mSTTRepeatListener;
     private SpeechRecognizerClient client;
     private boolean conversationMode = false;
-    private OnSwipeTouchListener onSwipeTouchListener;
-    private AudioManager audioManager;
-    private UserModel userModel;
     //블루투스 송수신간에 필요한것들
     private static final String TAG = "BluetoothChatActivity";
     private String emtion_status;
@@ -171,35 +168,8 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
 
         img = findViewById(R.id.face);
         vv = findViewById(R.id.videoview);
-        audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         ttBlink = BlinkTimerTask();
         timer = new Timer();
-
-        userModel = new UserModel();
-        userModel.setLocation("전주");
-        userModel.setUserId("user1");
-        userModel.setUserName("현웅");
-        // 나중에 파이어베이스에서 받아와야함 지금은 임시로 이렇게 넣어놓음
-        // 사용자의 이름 지역 아이디가 들어있는 데이터모델임.
-
-        onSwipeTouchListener = new OnSwipeTouchListener(MainActivity.this) {
-            @Override
-            public void onSwipeTop() {
-                audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_RAISE, AudioManager.FLAG_SHOW_UI);
-            }
-
-            @Override
-            public void onSwipeBottom(){
-                audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC,AudioManager.ADJUST_LOWER,AudioManager.FLAG_SHOW_UI);
-            }
-        };
-
-        /*
-        //권한 확인
-        ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CAMERA,
-                Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION);
-        */
 
         FirebaseDatabase.getInstance().getReference("server").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -215,9 +185,6 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                 //전체화면
                 getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                         WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-                //화면 항상 켜짐
-                getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
                 //STT 초기화
                 SpeechRecognizerManager.getInstance().initializeLibrary(MainActivity.this);
@@ -250,7 +217,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
 
                 ttBlink = BlinkTimerTask();
                 timer.schedule(ttBlink, 7000);
-                            }
+            }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -491,7 +458,14 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                 results.getStringArrayList(SpeechRecognizerClient.KEY_RECOGNITION_RESULTS);
         speech = matches.get(0); //0번이 가장 다듬어진 문장
         ThreadPool.executor.execute(() -> {
-            ChatApi.get().chat(speech, userModel, this);
+            UserModel model = new UserModel();
+            model.setName(UserSingleton.getInstance().getName());
+            model.setId(UserSingleton.getInstance().getId());
+            model.setPhoto(UserSingleton.getInstance().getPhoto());
+            model.setLocation(UserSingleton.getInstance().getLocation());
+            ArrayList dictArray = UserSingleton.getInstance().getDict();
+            model.setDict(dictArray == null ? new ArrayList<>() : dictArray);
+            ChatApi.get().chat(speech, model, this);
             CssApi.get().stop(() -> client.startRecording(false));
         });
     }
@@ -537,12 +511,6 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
             Handler mHandler = new Handler(Looper.getMainLooper());
             mHandler.postDelayed(() -> client.startRecording(false), 100);
         }
-    }
-
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent ev) {
-        onSwipeTouchListener.getGestureDetector().onTouchEvent(ev);
-        return super.dispatchTouchEvent(ev);
     }
 
     @Override

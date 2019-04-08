@@ -10,7 +10,7 @@ import com.welfarerobotics.welfareapplcation.model.UserModel;
 public final class NameReplacer {
     public static String replaceName(UserModel model, String input) {
         if (input.contains("당신")) {
-            return input.replace("당신", model.getUserName() + " 님");
+            return input.replace("당신", model.getName() + " 님");
         }
         return input;
     }
