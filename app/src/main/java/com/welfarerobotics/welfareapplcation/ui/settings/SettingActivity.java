@@ -23,6 +23,7 @@ public class SettingActivity extends PreferenceActivity{
             onBackPressed();
             return false;
         });
+
         SetupWifi.setOnPreferenceClickListener(preference -> {
             manager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
             if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
@@ -34,6 +35,7 @@ public class SettingActivity extends PreferenceActivity{
                 startActivity(intent);
             }
             return false;
+
         });
     }
 }

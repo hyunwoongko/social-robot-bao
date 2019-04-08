@@ -10,6 +10,7 @@ import com.welfarerobotics.welfareapplcation.api.chat.crawler.PreprocessorApi;
 import com.welfarerobotics.welfareapplcation.api.chat.crawler.WiseApi;
 import com.welfarerobotics.welfareapplcation.api.chat.scenario.*;
 import com.welfarerobotics.welfareapplcation.model.UserModel;
+import com.welfarerobotics.welfareapplcation.ui.fairytale.FairytaleActivity;
 import com.welfarerobotics.welfareapplcation.ui.youtube.YoutubeActivity;
 import com.welfarerobotics.welfareapplcation.util.RandomModule;
 
@@ -132,11 +133,9 @@ public final class ProposedTalkingSession {
             String[][] entity = ModelApi.getEntity("song", ChatState.tokenizeSpeech);
             List<String> song = YoutubeScenario.seperateEntity(entity);
             String youtubeUrl = YoutubeScenario.response(song);
-            System.out.println("노래 들어옴");
             //Youtube URL에서 ID만 추출
             int UrlIdIndex = youtubeUrl.indexOf("=");
             youtubeUrl = youtubeUrl.substring(UrlIdIndex + 1);
-            System.out.println("proposedTalking의 Url" + youtubeUrl);
             //YoutubeActivity 실행 및 URL 전달
             Intent youtubeIntent = new Intent(activity.getApplicationContext(), YoutubeActivity.class);
             youtubeIntent.putExtra("url", youtubeUrl);
@@ -155,6 +154,8 @@ public final class ProposedTalkingSession {
         } else if (ChatState.intent.equals("동화")) {
             String fairyTale = "";
             CssApi.get().play("동화를 들려드릴게요. , " + fairyTale, "jinho");
+            //Intent fairytaleIntent = new Intent(activity.getApplicationContext(), FairytaleActivity.class);
+            //activity.startActivity(fairytaleIntent);
             return true;
             //TODO : 동화 API 연결
         } else if (ChatState.intent.equals("농담")) {

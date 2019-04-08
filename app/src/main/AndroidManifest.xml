@@ -55,6 +55,7 @@
 
         </activity>
         <activity android:name=".ui.settings.LocSettingsActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".ui.fairytale.FairytaleActivity"/>
 
 
         <provider

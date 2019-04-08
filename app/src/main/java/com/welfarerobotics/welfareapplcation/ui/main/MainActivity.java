@@ -3,7 +3,9 @@ package com.welfarerobotics.welfareapplcation.ui.main;
 import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.content.Context;
 import android.graphics.Color;
+import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -14,6 +16,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -26,12 +29,13 @@ import com.kakao.sdk.newtoneapi.SpeechRecognizeListener;
 import com.kakao.sdk.newtoneapi.SpeechRecognizerClient;
 import com.kakao.sdk.newtoneapi.SpeechRecognizerManager;
 import com.welfarerobotics.welfareapplcation.R;
+import com.welfarerobotics.welfareapplcation.api.chat.ChatApi;
+import com.welfarerobotics.welfareapplcation.api.chat.CssApi;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.EmotionAdder;
 import com.welfarerobotics.welfareapplcation.model.ServerModel;
 import com.welfarerobotics.welfareapplcation.model.UserModel;
 import com.welfarerobotics.welfareapplcation.util.ApiKeys;
-import com.welfarerobotics.welfareapplcation.api.chat.ChatApi;
-import com.welfarerobotics.welfareapplcation.api.chat.CssApi;
+import com.welfarerobotics.welfareapplcation.util.OnSwipeTouchListener;
 import com.welfarerobotics.welfareapplcation.util.STTRepeatListener;
 import com.welfarerobotics.welfareapplcation.util.ThreadPool;
 import org.json.JSONException;
@@ -52,6 +56,8 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
     private STTRepeatListener mSTTRepeatListener;
     private SpeechRecognizerClient client;
     private boolean conversationMode = false;
+    private OnSwipeTouchListener onSwipeTouchListener;
+    private AudioManager audioManager;
     private UserModel userModel;
     //블루투스 송수신간에 필요한것들
     private static final String TAG = "BluetoothChatActivity";
@@ -99,15 +105,15 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
 
         // Get local Bluetooth adapter
         mOutStringBuffer = new StringBuffer("");
-        mConversationArrayAdapter = new ArrayAdapter<String>(this,R.layout.message){
+        mConversationArrayAdapter = new ArrayAdapter<String>(this, R.layout.message) {
             @NonNull
             @Override
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
                 View view = super.getView(position, convertView, parent);
                 TextView tView = (TextView) view.findViewById(R.id.listItem);
-                if(isRead){
+                if (isRead) {
                     tView.setTextColor(Color.BLUE);
-                }else{
+                } else {
                     tView.setTextColor(Color.RED);
                 }
                 return view;
@@ -120,13 +126,13 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
 
         BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);
         // Attempt to connect to the device'
-        try{
+        try {
             mChatService = new BluetoothChatService(this, mHandler);
             mChatService.connect(device, true);
             final Timer bttimer;
             TimerTask timerTask;
 
-            final long time= 30000;
+            final long time = 30000;
             final long lastTime = System.currentTimeMillis();
             bttimer = new Timer();
             timerTask = new TimerTask() {
@@ -140,22 +146,23 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                         try {
                             Thread.sleep(1000);
                             sendMessage("emotion");
-                        }catch(Exception e){
+                        } catch (Exception e) {
 
                         }
                     }
                 }
+
                 @Override
                 public boolean cancel() {
-                    Log.v("","타이머 종료");
+                    Log.v("", "타이머 종료");
                     return super.cancel();
                 }
             };
             bttimer.schedule(timerTask, 0, 3000);
 
-        }catch (Exception e){
+        } catch (Exception e) {
 
-            System.out.println(e+"에러 종류가 뭐냐");
+            System.out.println(e + "에러 종류가 뭐냐");
 
         }
 
@@ -167,6 +174,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
 
         img = findViewById(R.id.face);
         vv = findViewById(R.id.videoview);
+        audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         ttBlink = BlinkTimerTask();
         timer = new Timer();
 
@@ -177,10 +185,24 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
         // 나중에 파이어베이스에서 받아와야함 지금은 임시로 이렇게 넣어놓음
         // 사용자의 이름 지역 아이디가 들어있는 데이터모델임.
 
+        onSwipeTouchListener = new OnSwipeTouchListener(MainActivity.this) {
+            @Override
+            public void onSwipeTop() {
+                audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_RAISE, AudioManager.FLAG_SHOW_UI);
+            }
+
+            @Override
+            public void onSwipeBottom(){
+                audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC,AudioManager.ADJUST_LOWER,AudioManager.FLAG_SHOW_UI);
+            }
+        };
+
+        /*
         //권한 확인
         ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CAMERA,
                 Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION);
+        */
 
         FirebaseDatabase.getInstance().getReference("server").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -196,6 +218,9 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                 //전체화면
                 getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                         WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+                //화면 항상 켜짐
+                getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
                 //STT 초기화
                 SpeechRecognizerManager.getInstance().initializeLibrary(MainActivity.this);
@@ -228,7 +253,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
 
                 ttBlink = BlinkTimerTask();
                 timer.schedule(ttBlink, 7000);
-            }
+                            }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -236,6 +261,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
             }
         });
     }
+
     /**
      * Set up the UI and background operations for chat.
      */
@@ -249,6 +275,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
         // Initialize the buffer for outgoing messages
         mOutStringBuffer = new StringBuffer("");
     }
+
     /**
      * Sends a message.
      *
@@ -286,8 +313,8 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
             // Get the message bytes and tell the BluetoothChatService to write
             JSONObject mJson = new JSONObject();
             try {
-                mJson.put("SSID",SSID);
-                mJson.put("PWD",PWD);
+                mJson.put("SSID", SSID);
+                mJson.put("PWD", PWD);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -300,6 +327,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
             Toast.makeText(this, mOutStringBuffer, Toast.LENGTH_SHORT).show();
         }
     }
+
     private final Runnable watchDogTimeOut = new Runnable() {
         @Override
         public void run() {
@@ -346,25 +374,25 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
 //                     construct a string from the valid bytes in the buffer
 //                    String readMessage = new String(readBuf, 0, msg.arg1);
 //                    String readMessage = new String(readBuf);
-                    String readMessage = (String)msg.obj;
+                    String readMessage = (String) msg.obj;
                     Log.d(TAG, "readMessage = " + readMessage);
                     //TODO: if message is json -> callback from RPi
-                    if(isJson(readMessage)){
+                    if (isJson(readMessage)) {
                         handleCallback(readMessage);
-                    }else{
-                        if(isCountdown){
+                    } else {
+                        if (isCountdown) {
                             mHandler.removeCallbacks(watchDogTimeOut);
                             isCountdown = false;
                         }
 
                         //remove the space at the very end of the readMessage -> eliminate space between items
-                        readMessage = readMessage.substring(0,readMessage.length()-1);
+                        readMessage = readMessage.substring(0, readMessage.length() - 1);
                         //mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
                         mConversationArrayAdapter.add(readMessage);
                         Log.d(TAG, "받은 메세지 = " + readMessage);
                         //라즈베리파이에서 받는 메세지 부분 readMessage
                         EmotionAdder.setEmotion(readMessage);
-                        Log.d(TAG, "감정 메세지 = " +EmotionAdder.getEmotion());
+                        Log.d(TAG, "감정 메세지 = " + EmotionAdder.getEmotion());
                         //바뀜
                     }
 
@@ -396,34 +424,35 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
         return true;
     }
 
-    public void handleCallback(String str){
+    public void handleCallback(String str) {
         String result;
         String ip;
-        if(isCountdown){
+        if (isCountdown) {
             mHandler.removeCallbacks(watchDogTimeOut);
             isCountdown = false;
         }
 
 //        //enable user interaction
 //        mProgressDialog.dismiss();
-        try{
+        try {
             JSONObject mJSON = new JSONObject(str);
-            result = mJSON.getString("result") == null? "" : mJSON.getString("result");
-            ip = mJSON.getString("IP") == null? "" : mJSON.getString("IP");
+            result = mJSON.getString("result") == null ? "" : mJSON.getString("result");
+            ip = mJSON.getString("IP") == null ? "" : mJSON.getString("IP");
             //Toast.makeText(getActivity(), "result: "+result+", IP: "+ip, Toast.LENGTH_LONG).show();
 
-            if(!result.equals("SUCCESS")){
+            if (!result.equals("SUCCESS")) {
                 Toast.makeText(this, "FAIL", Toast.LENGTH_LONG).show();
-            }else{
+            } else {
                 Toast.makeText(this, "SUCCESS", Toast.LENGTH_SHORT).show();
 //                Toast.makeText(getActivity(),getString(R.string.config_success) + ip,Toast.LENGTH_LONG).show();
             }
-        }catch (JSONException e){
+        } catch (JSONException e) {
             // error handling
             Toast.makeText(this, "SOMETHING WENT WRONG", Toast.LENGTH_LONG).show();
         }
 
     }
+
     //STT가 자동 생성한 콜백 메소드
     @Override
     public void onReady() {
@@ -499,17 +528,24 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
     @Override
     protected void onPause() {
         super.onPause();
-        if(client != null){
-            client.cancelRecording();}
+        if (client != null) {
+            client.cancelRecording();
+        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        if(client != null) {
+        if (client != null) {
             Handler mHandler = new Handler(Looper.getMainLooper());
             mHandler.postDelayed(() -> client.startRecording(false), 100);
         }
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        onSwipeTouchListener.getGestureDetector().onTouchEvent(ev);
+        return super.dispatchTouchEvent(ev);
     }
 
     @Override
@@ -528,4 +564,5 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
             timer.cancel();
         }
     }
+
 }
