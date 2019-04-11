@@ -12,10 +12,10 @@ from http import server
 PAGE="""\
 <html>
 <head>
-<title>Raspberry Pi - Surveillance Camera</title>
+<title>Bao_eye</title>
 </head>
 <body>
-<center><h1>Raspberry Pi - Surveillance Camera</h1></center>
+<center><h1>Bao_eye</h1></center>
 <center><img src="stream.mjpg" width="640" height="480"></center>
 </body>
 </html>
@@ -52,7 +52,7 @@ class StreamingHandler(server.BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(content)
         elif self.path == '/stream.mjpg':
-            self.send_response(200)
+            self.w(200)
             self.send_header('Age', 0)
             self.send_header('Cache-Control', 'no-cache, private')
             self.send_header('Pragma', 'no-cache')

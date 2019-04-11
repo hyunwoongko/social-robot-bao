@@ -71,8 +71,9 @@ def Commands(command=""):
  
     if command == "emotion" :
         #faceEmotion(emotion_judge,emotion_late)
-       EmotionCheck()
-        
+       #EmotionCheck()
+        print("")
+       # SerialComm.instance().send_serial("Signal~~~"+"l")
     if command == "Dance" :   
       SerialComm.instance().send_serial("gooood~"+"l")
       

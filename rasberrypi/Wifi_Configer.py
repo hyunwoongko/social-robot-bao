@@ -39,7 +39,7 @@ class Finder:
             os.system("sudo chmod 777 /etc/wpa_supplicant/wpa_supplicant.conf")
             os.system("wpa_passphrase {} {} >> /etc/wpa_supplicant/wpa_supplicant.conf".format(name,
         self.password))
-            
+            os.system("sudo /etc/init.d/networking restart")    
         except:
             raise
         else:

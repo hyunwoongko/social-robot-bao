@@ -32,8 +32,6 @@ parser.add_argument("-timeout", type=int, default=timeout, help="Timeout for cam
 args = vars(parser.parse_args())
 ########################################################################################################################
 def stream():
-    while True:
-
         while True:
             try:
                 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -73,8 +71,8 @@ def stream():
             except ConnectionRefusedError:
                 time.sleep(args["timeout"])
                 logging.error("Cant connect to server, retry for "+str(args["timeout"])+"s.")
-            else:
-                break
+            except Exception:
+                pass
 
 
 streaming = threading.Thread(target=stream)
