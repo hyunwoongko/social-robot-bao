@@ -16,8 +16,8 @@ public class PaintWithActivity extends AppCompatActivity {
 
     @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_paintwith);
-        canvasView = findViewById(R.id.paint_with_canvas);
+//        setContentView(R.layout.activity_paintwith);
+//        canvasView = findViewById(R.id.paint_with_canvas);
 
 
     }

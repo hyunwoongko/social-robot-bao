@@ -58,6 +58,9 @@
                   android:screenOrientation="landscape"
                   android:configChanges="orientation"/>
         <activity android:name=".ui.fairytale.FairytaleActivity"/>
+        <activity android:name=".ui.contents.paintwith.GalleryActivity" />
+        <activity android:name=".ui.contents.paintwith.PaintSelectActivity" />
+        <activity android:name=".ui.contents.paintwith.PaintWithActivity" />
 
         <provider
                 android:name="android.support.v4.content.FileProvider"
