@@ -1,5 +1,6 @@
 from __future__ import division, print_function
 
+import os
 import sys
 
 sys.path.append('./wct/')
@@ -34,14 +35,12 @@ def get_stylize_image(content_fullpath, style_fullpath, output_path,
     save_img(output_path, stylized_rgb)
 
 
-styles = ['anime', 'monet', 'vangogh', 'eastern', 'snow', 'mondrian', 'monk', 'fall', 'light', 'sakura']
-
-
-def main(n):
-    num = str(n)
-    get_stylize_image('1.png', './styles/' + num + '.jpg', '2-' + num + '.png')
+def main():
+    styles = os.listdir('./styles')
+    styles_names = [i.split('.')[0] for i in styles]
+    for idx, name in enumerate(styles):
+        get_stylize_image('1.png', './styles/' + name, '2-' + styles_names[idx] + '.png')
 
 
 if __name__ == '__main__':
-    for i in styles:
-        main(i)
+    main()
