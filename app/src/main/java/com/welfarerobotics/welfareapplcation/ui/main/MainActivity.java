@@ -1,9 +1,11 @@
 package com.welfarerobotics.welfareapplcation.ui.main;
 
-import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
+import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,9 +13,9 @@ import android.os.Looper;
 import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -30,10 +32,11 @@ import com.welfarerobotics.welfareapplcation.api.chat.chatutil.EmotionAdder;
 import com.welfarerobotics.welfareapplcation.model.ServerModel;
 import com.welfarerobotics.welfareapplcation.model.UserModel;
 import com.welfarerobotics.welfareapplcation.model.UserSingleton;
+import com.welfarerobotics.welfareapplcation.ui.menu.MenuActivity;
 import com.welfarerobotics.welfareapplcation.util.ApiKeys;
 import com.welfarerobotics.welfareapplcation.api.chat.ChatApi;
 import com.welfarerobotics.welfareapplcation.api.chat.CssApi;
-import com.welfarerobotics.welfareapplcation.util.STTRepeatListener;
+import com.welfarerobotics.welfareapplcation.util.OnSwipeTouchListener;
 import com.welfarerobotics.welfareapplcation.util.ThreadPool;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -49,10 +52,12 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
     private Timer timer;
     private TimerTask ttBlink;
     private VideoView vv;
-    private final int PERMISSION = 1;
-    private STTRepeatListener mSTTRepeatListener;
+
     private SpeechRecognizerClient client;
+    private OnSwipeTouchListener onSwipeTouchListener;
+    private AudioManager audioManager;
     private boolean conversationMode = false;
+    private Handler STTHandler, BlinkHandler;
     //블루투스 송수신간에 필요한것들
     private static final String TAG = "BluetoothChatActivity";
     private String emtion_status;
@@ -170,6 +175,27 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
         vv = findViewById(R.id.videoview);
         ttBlink = BlinkTimerTask();
         timer = new Timer();
+        audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
+        STTHandler = new Handler(Looper.getMainLooper());
+        BlinkHandler = new Handler();
+
+        onSwipeTouchListener = new OnSwipeTouchListener(MainActivity.this) {
+            @Override
+            public void onSwipeTop() {
+                audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_RAISE, AudioManager.FLAG_SHOW_UI);
+            }
+
+            @Override
+            public void onSwipeBottom() {
+                audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_LOWER, AudioManager.FLAG_SHOW_UI);
+            }
+
+            @Override
+            public void onActivityDoubleTap() {
+                Intent menuIntent = new Intent(getApplicationContext(), MenuActivity.class);
+                startActivity(menuIntent);
+            }
+        };
 
         FirebaseDatabase.getInstance().getReference("server").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -186,6 +212,9 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                 getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                         WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+                //화면 항상 켜짐
+                getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
                 //STT 초기화
                 SpeechRecognizerManager.getInstance().initializeLibrary(MainActivity.this);
 
@@ -199,7 +228,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                 mediaController.setVisibility(View.GONE);
                 vv.setMediaController(mediaController);
                 vv.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.close));
-                ThreadPool.executor.execute(() ->
+                BlinkHandler.post(() ->
                         runOnUiThread(() -> {
                             vv.start(); //최초 재생시 끊김이 있으므로 미리 화면 뒤쪽에서 한번 재생시킴
                         })
@@ -210,10 +239,6 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
 
                 client.setSpeechRecognizeListener(MainActivity.this);
                 client.startRecording(false);
-                mSTTRepeatListener = () -> {
-                    Handler mHandler = new Handler(Looper.getMainLooper());
-                    mHandler.postDelayed(() -> client.startRecording(false), 100);
-                };
 
                 ttBlink = BlinkTimerTask();
                 timer.schedule(ttBlink, 7000);
@@ -439,7 +464,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
     public void onError(int errorCode, String errorMsg) {
         System.out.println("========에러 번호 : " + errorCode);
         System.out.println(errorMsg);
-        mSTTRepeatListener.onReceivedEvent();
+        STTHandler.postDelayed(() -> client.startRecording(false), 100);
         conversationMode = false;
     }
 
@@ -484,49 +509,54 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
     //Timertask(비디오 재생)
     //비디오 재생시 비디오가 화면의 맨 앞에 위치
     private TimerTask BlinkTimerTask() {
-        return new TimerTask() {
+        TimerTask tempTask = new TimerTask() {
             @Override
             public void run() {
-                ThreadPool.executor.execute(() -> runOnUiThread(() -> {
-                    System.out.println("video playback");
-                    vv.bringToFront();
-                    vv.start();
-                }));
+                BlinkHandler.post(() -> runOnUiThread(() -> {
+                            System.out.println("video playback");
+                            vv.bringToFront();
+                            vv.start();
+                        })
+                );
+
             }
         };
+        return tempTask;
     }
 
     @Override
-    protected void onPause() {
-        super.onPause();
-        if (client != null) {
-            client.cancelRecording();
-        }
+    protected void onStop() {
+        super.onStop();
+        audioManager.setMicrophoneMute(true);
+        ttBlink.cancel();
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        if (client != null) {
-            Handler mHandler = new Handler(Looper.getMainLooper());
-            mHandler.postDelayed(() -> client.startRecording(false), 100);
-        }
+    protected void onRestart() {
+        super.onRestart();
+        audioManager.setMicrophoneMute(false);
+        ttBlink.run();
     }
 
     @Override
     public void onBackPressed() {
-        client.cancelRecording();
-        finish();
-        System.exit(0);
+        onDestroy();
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        onSwipeTouchListener.getGestureDetector().onTouchEvent(ev);
+        return super.dispatchTouchEvent(ev);
     }
 
     //어플리케이션 종료시
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        SpeechRecognizerManager.getInstance().finalizeLibrary();
-        if (timer != null) {
-            timer.cancel();
+        audioManager.setMicrophoneMute(false);
+        if (client != null) {
+            client.cancelRecording();
         }
+        SpeechRecognizerManager.getInstance().finalizeLibrary();
     }
 }

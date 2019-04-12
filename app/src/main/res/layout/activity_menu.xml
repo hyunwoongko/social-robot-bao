@@ -9,23 +9,19 @@
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/menu_settings"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="20dp"
             android:background="#00ffffff"
-            android:id="@+id/settings"/>
+            android:id="@+id/backbutton"
+            android:src="@drawable/back_button"/>
 
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/menu_playlang"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/settings"
+            app:layout_constraintTop_toTopOf="@id/playnumber"
+            app:layout_constraintStart_toStartOf="@id/playmem"
             android:foreground="?attr/selectableItemBackgroundBorderless"
             android:background="#00ffffff"
             android:id="@+id/playlang"/>
@@ -33,32 +29,32 @@
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/menu_followbao"
+            app:srcCompat="@drawable/menu_playnumber"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/settings"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/playcard"
             android:foreground="?attr/selectableItemBackgroundBorderless"
             android:background="#00ffffff"
-            android:id="@+id/followbao"/>
+            android:id="@+id/playnumber"/>
 
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/menu_listensong"
-            app:layout_constraintStart_toEndOf="@id/settings"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/settings"
+            app:srcCompat="@drawable/menu_playart"
+            app:layout_constraintStart_toStartOf="@id/commonsense"
+            app:layout_constraintTop_toTopOf="@id/playnumber"
             android:foreground="?attr/selectableItemBackgroundBorderless"
             android:background="#00ffffff"
-            android:id="@+id/listensong"/>
+            android:id="@+id/playart"/>
 
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/menu_playcard"
-            app:layout_constraintStart_toEndOf="@id/settings"
-            app:layout_constraintTop_toTopOf="@id/settings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:foreground="?attr/selectableItemBackgroundBorderless"
             android:background="#00ffffff"
@@ -67,24 +63,57 @@
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/menu_playart"
-            app:layout_constraintEnd_toStartOf="@id/settings"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/settings"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:background="#00ffffff"
-            android:id="@+id/playart"/>
-
-    <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             app:srcCompat="@drawable/menu_commonsense"
-            app:layout_constraintEnd_toStartOf="@id/settings"
-            app:layout_constraintTop_toTopOf="@id/settings"
+            app:layout_constraintStart_toStartOf="@id/playcard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:foreground="?attr/selectableItemBackgroundBorderless"
             android:background="#00ffffff"
             android:id="@+id/commonsense"/>
 
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/menu_playmem"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/playcard"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:background="#00ffffff"
+            android:id="@+id/playmem"/>
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/menu_listensong"
+            app:layout_constraintStart_toStartOf="@id/playmem"
+            app:layout_constraintTop_toTopOf="@id/followbao"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:background="#00ffffff"
+            android:id="@+id/listensong"/>
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/menu_followbao"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/playcard"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:background="#00ffffff"
+            android:id="@+id/followbao"/>
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/menu_settings"
+            app:layout_constraintTop_toTopOf="@id/followbao"
+            app:layout_constraintStart_toStartOf="@id/commonsense"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:background="#00ffffff"
+            android:id="@+id/settings"/>
 
 </android.support.constraint.ConstraintLayout>

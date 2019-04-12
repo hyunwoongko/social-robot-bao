@@ -1,6 +1,8 @@
 package com.welfarerobotics.welfareapplcation.util;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.GestureDetector;
 import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.MotionEvent;
@@ -10,7 +12,6 @@ import android.view.View.OnTouchListener;
 public class OnSwipeTouchListener implements OnTouchListener {
 
     private final GestureDetector gestureDetector;
-
     public OnSwipeTouchListener (Context ctx){
         gestureDetector = new GestureDetector(ctx, new GestureListener());
     }
@@ -28,6 +29,13 @@ public class OnSwipeTouchListener implements OnTouchListener {
 
         private static final int SWIPE_THRESHOLD = 100;
         private static final int SWIPE_VELOCITY_THRESHOLD = 100;
+
+
+        @Override
+        public boolean onDoubleTap(MotionEvent e) {
+            onActivityDoubleTap();
+            return super.onDoubleTap(e);
+        }
 
         @Override
         public boolean onDown(MotionEvent e) {
@@ -75,5 +83,8 @@ public class OnSwipeTouchListener implements OnTouchListener {
     }
 
     public void onSwipeBottom() {
+    }
+
+    public void onActivityDoubleTap(){
     }
 }

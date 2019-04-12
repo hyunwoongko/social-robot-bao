@@ -15,11 +15,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1.25"/>
+
         <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" app:srcCompat="@drawable/welfare_management"
-                tools:layout_editor_absoluteY="0dp" tools:layout_editor_absoluteX="0dp" android:id="@+id/welfare_logo"
-                android:layout_weight="1" android:visibility="visible"/>
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/welfare_management"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="0dp"
+                android:background="#00ffffff"
+                android:id="@+id/welfare_logo"
+                android:layout_weight="1"
+                android:visibility="visible"/>
         <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

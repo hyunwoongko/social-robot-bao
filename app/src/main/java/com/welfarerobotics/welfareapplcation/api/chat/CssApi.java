@@ -107,4 +107,11 @@ public final class CssApi {
             });
         }
     }
+
+    public void cancel(){
+        if (audioPlayer != null){
+            audioPlayer.release();
+            audioPlayer = null;
+        }
+    }
 }

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import com.welfarerobotics.welfareapplcation.api.chat.CssApi;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.ChatState;
+import com.welfarerobotics.welfareapplcation.api.chat.chatutil.Fairytale;
 import com.welfarerobotics.welfareapplcation.api.chat.crawler.IssueApi;
 import com.welfarerobotics.welfareapplcation.api.chat.crawler.ModelApi;
 import com.welfarerobotics.welfareapplcation.api.chat.crawler.PreprocessorApi;
@@ -153,9 +154,8 @@ public final class ProposedTalkingSession {
             return true;
         } else if (ChatState.intent.equals("동화")) {
             String fairyTale = "";
-            CssApi.get().play("동화를 들려드릴게요. , " + fairyTale, "jinho");
-            //Intent fairytaleIntent = new Intent(activity.getApplicationContext(), FairytaleActivity.class);
-            //activity.startActivity(fairytaleIntent);
+            Fairytale.get().play();
+           // CssApi.get().play("동화를 들려드릴게요. , " + fairyTale, "jinho");
             return true;
             //TODO : 동화 API 연결
         } else if (ChatState.intent.equals("농담")) {

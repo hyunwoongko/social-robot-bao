@@ -23,14 +23,13 @@ public class FairytaleActivity extends AppCompatActivity {
         layoutParams.dimAmount = 0.0f; //메인액티비티 투명도 조절
         layoutParams.alpha = 0.0f;
         getWindow().setAttributes(layoutParams);
+        Fairytale.get().play();
 
         Display dp = ((WindowManager) getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
         int width = (int) (dp.getWidth() * 1.0);
         int height = (int) (dp.getHeight() * 1.0);
         getWindow().getAttributes().width = width;
         getWindow().getAttributes().height = height;
-
-//        Fairytale.get().play();
         }
 
     @Override
@@ -38,6 +37,7 @@ public class FairytaleActivity extends AppCompatActivity {
         int action = event.getAction();
         switch (action) {
             case MotionEvent.ACTION_DOWN:
+                Fairytale.get().stop();
                 finish();
                 break;
             case MotionEvent.ACTION_UP:    //화면을 터치했다 땠을때
@@ -51,6 +51,5 @@ public class FairytaleActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-     //   Fairytale.get().stop();
     }
 }

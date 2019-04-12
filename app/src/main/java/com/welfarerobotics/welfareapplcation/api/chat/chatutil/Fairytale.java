@@ -1,9 +1,8 @@
 package com.welfarerobotics.welfareapplcation.api.chat.chatutil;
 
 import com.welfarerobotics.welfareapplcation.api.chat.CssApi;
-import java.util.Random;
 
-import static com.welfarerobotics.welfareapplcation.api.chat.CssApi.*;
+import java.util.Random;
 
 public final class Fairytale {
     private static Fairytale fairytale = null;
@@ -16,9 +15,9 @@ public final class Fairytale {
         if (fairytale == null) fairytale = new Fairytale();
         return fairytale;
     }
-
+    private final int STOP = 9999;
     private Random randomint = new Random();
-
+    private int index;
     private String[] titleArray = {"HungbuNolbu"};
 
     private String[] HungbuNolbu = {
@@ -85,24 +84,25 @@ public final class Fairytale {
             "집도 돈도 패물도 모두 뺏기고 실컷 두들겨 맞아 앓고 있는 놀부 내외를 흥부가 데리러 왔습니다.",
             "형님, 저희가 도와 드릴테니 걱정마세요.",
             "그 뒤 놀부는 잘못을 깨닫고 흥부와 사이좋게 지냈습니다."};
-/*
+
     public Fairytale play() {
         String selector = titleArray[randomint.nextInt(titleArray.length)];
         switch (selector) {
             case "HungbuNolbu":
-                for (int i = 0; i < HungbuNolbu.length; i++) {
-                    CssApi.get().play(HungbuNolbu[i], "jinho");
-                    if(audioPlayer.isPlaying()){
-                        i--;
-                    }
+                for (index = 0; index < HungbuNolbu.length; index++) {
+                    CssApi.get().play(HungbuNolbu[index], "jinho");
+                    System.out.println(HungbuNolbu[index]);
+                    CssApi.get().stop(() -> {});
                 }
                 break;
         }
         return this;
     }
 
-    public void stop() {
-        audioPlayer.stop();
+    public Fairytale stop(){
+        index=STOP;
+        CssApi.get().cancel();
+        return this;
     }
- */
+
 }
