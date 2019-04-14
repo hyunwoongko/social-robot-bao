@@ -14,7 +14,7 @@
             android:layout_margin="20dp"
             android:background="#00ffffff"
             android:id="@+id/backbutton"
-            android:src="@drawable/back_button"/>
+            android:src="@drawable/menu_backbutton"/>
 
     <ImageButton
             android:layout_width="wrap_content"

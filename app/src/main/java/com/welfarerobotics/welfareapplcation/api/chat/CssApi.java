@@ -108,10 +108,18 @@ public final class CssApi {
         }
     }
 
-    public void cancel(){
-        if (audioPlayer != null){
+    public void cancel() {
+        if (audioPlayer != null) {
             audioPlayer.release();
             audioPlayer = null;
+        }
+    }
+
+    public boolean isPlaying() {
+        if (audioPlayer.isPlaying()) {
+            return true;
+        } else {
+            return false;
         }
     }
 }

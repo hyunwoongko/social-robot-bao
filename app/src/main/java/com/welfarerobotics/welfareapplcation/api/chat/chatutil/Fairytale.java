@@ -15,9 +15,11 @@ public final class Fairytale {
         if (fairytale == null) fairytale = new Fairytale();
         return fairytale;
     }
+
     private final int STOP = 9999;
     private Random randomint = new Random();
     private int index;
+    private boolean flag = false;
     private String[] titleArray = {"HungbuNolbu"};
 
     private String[] HungbuNolbu = {
@@ -85,22 +87,28 @@ public final class Fairytale {
             "형님, 저희가 도와 드릴테니 걱정마세요.",
             "그 뒤 놀부는 잘못을 깨닫고 흥부와 사이좋게 지냈습니다."};
 
-    public Fairytale play() {
-        String selector = titleArray[randomint.nextInt(titleArray.length)];
+    public void play() {
+        CssApi.get().play("안녕하세요","jinho");
+        /*String selector = titleArray[randomint.nextInt(titleArray.length)];
         switch (selector) {
             case "HungbuNolbu":
                 for (index = 0; index < HungbuNolbu.length; index++) {
-                    CssApi.get().play(HungbuNolbu[index], "jinho");
-                    System.out.println(HungbuNolbu[index]);
-                    CssApi.get().stop(() -> {});
+                    if (!flag && !CssApi.get().isPlaying()) {
+                        CssApi.get().play(HungbuNolbu[index], "jinho");
+                        flag = true;
+                    } else if (flag && !CssApi.get().isPlaying()) {
+                        flag = false;
+                    } else if (CssApi.get().isPlaying()) {
+                        index--;
+                    }
                 }
-                break;
+            break;
         }
-        return this;
+        */
     }
 
-    public Fairytale stop(){
-        index=STOP;
+    public Fairytale stop() {
+        index = STOP;
         CssApi.get().cancel();
         return this;
     }
