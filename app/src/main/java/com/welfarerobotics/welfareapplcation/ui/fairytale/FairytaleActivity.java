@@ -1,17 +1,18 @@
 package com.welfarerobotics.welfareapplcation.ui.fairytale;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Display;
 import android.view.MotionEvent;
 import android.view.Window;
 import android.view.WindowManager;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.Fairytale;
+import com.welfarerobotics.welfareapplcation.util.ThreadPool;
 
-public class FairytaleActivity extends AppCompatActivity {
+public class FairytaleActivity extends Activity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,14 +24,15 @@ public class FairytaleActivity extends AppCompatActivity {
         layoutParams.dimAmount = 0.0f; //메인액티비티 투명도 조절
         layoutParams.alpha = 0.0f;
         getWindow().setAttributes(layoutParams);
-        Fairytale.get().play();
 
         Display dp = ((WindowManager) getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
         int width = (int) (dp.getWidth() * 1.0);
         int height = (int) (dp.getHeight() * 1.0);
         getWindow().getAttributes().width = width;
         getWindow().getAttributes().height = height;
-        }
+
+        ThreadPool.executor.execute(()-> Fairytale.get().play());
+    }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {

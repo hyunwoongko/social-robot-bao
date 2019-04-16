@@ -97,6 +97,7 @@ public final class CssApi {
         return this;
     }
 
+
     public void stop(Runnable nextAction) {
         if (audioPlayer != null) {
             audioPlayer.setOnCompletionListener(mediaPlayer -> {
@@ -112,14 +113,6 @@ public final class CssApi {
         if (audioPlayer != null) {
             audioPlayer.release();
             audioPlayer = null;
-        }
-    }
-
-    public boolean isPlaying() {
-        if (audioPlayer.isPlaying()) {
-            return true;
-        } else {
-            return false;
         }
     }
 }

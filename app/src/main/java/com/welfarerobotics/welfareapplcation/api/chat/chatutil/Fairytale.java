@@ -1,11 +1,20 @@
 package com.welfarerobotics.welfareapplcation.api.chat.chatutil;
 
-import com.welfarerobotics.welfareapplcation.api.chat.CssApi;
+import android.media.MediaPlayer;
+import android.os.Environment;
+import com.welfarerobotics.welfareapplcation.util.ApiKeys;
 
+import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public final class Fairytale {
     private static Fairytale fairytale = null;
+    private MediaPlayer mediaPlayer = new MediaPlayer();
+    private boolean flag;
 
     private Fairytale() {
 
@@ -16,15 +25,12 @@ public final class Fairytale {
         return fairytale;
     }
 
-    private final int STOP = 9999;
     private Random randomint = new Random();
-    private int index;
-    private boolean flag = false;
-    private String[] titleArray = {"HungbuNolbu"};
+    private String[] titleArray = {"hungbuNolbu", "kingEarsDonkeyEars"};
 
-    private String[] HungbuNolbu = {
+    private String[] hungbuNolbu = {
             "흥부놀부전",
-            "옛날 아주 먼 옛날, 착한 아우와 욕심쟁이 형이 한 마을에 살았습니다.",
+            "옛날 아주 먼 옛날, 착한 아우 와 욕심쟁이 형 이 한 마을에 살았습니다.",
             "아버지가 물려준 재산은 형인 놀부가 몽땅 차지해서 동생인 흥부는 가난하게 살아야 했습니다.",
             "아이가 많은 흥부는 아무리 열심히 일해도 살림이 나아지지 않았습니다.",
             "어느날 먹을 것이 떨어진 흥부는 할 수 없이 놀부를 찾아 갔습니다.",
@@ -87,30 +93,176 @@ public final class Fairytale {
             "형님, 저희가 도와 드릴테니 걱정마세요.",
             "그 뒤 놀부는 잘못을 깨닫고 흥부와 사이좋게 지냈습니다."};
 
-    public void play() {
-        CssApi.get().play("안녕하세요","jinho");
-        /*String selector = titleArray[randomint.nextInt(titleArray.length)];
-        switch (selector) {
-            case "HungbuNolbu":
-                for (index = 0; index < HungbuNolbu.length; index++) {
-                    if (!flag && !CssApi.get().isPlaying()) {
-                        CssApi.get().play(HungbuNolbu[index], "jinho");
-                        flag = true;
-                    } else if (flag && !CssApi.get().isPlaying()) {
-                        flag = false;
-                    } else if (CssApi.get().isPlaying()) {
-                        index--;
-                    }
+    private String[] kingEarsDonkeyEars = {
+            "임금님 귀는 당나귀 귀",
+            "옛날에 아주 큰 귀를 가진 임금님이 있었어요.",
+            "임금님은 당나귀 귀처럼 생긴 커다란 귀가 창피했어요.",
+            "그래서 언제나 커다란 왕관을 써서 가렸답니다.",
+            "근사한 왕관 아래 별난 귀가 숨어 있다는 사실은 아무도 모르는 비밀이었어요.",
+            "단 한 사람, 왕관을 만든 일꾼만 빼고요.",
+            "훌륭한 임금님일수록 큰 왕관을 쓰는거야.",
+            "맞아, 맞아! 우리 임금님은 정말 훌륭해",
+            "백성들은 모두 이렇게 믿었답니다.",
+            "큭큭! 당나귀 같은 귀를 가리려는 건 줄도 모르고!",
+            "일꾼은 혼자서 웃을 뿐입니다.",
+            "다른 사람에게 말해서는 안되니까요.",
+            "하지만 이런 재밌는 얘기를 아무에게도 못 하다니!",
+            "참고 있기가 여간 힘든 일이 아니었어요.",
+            "얘기가 하고 싶어서 입이 간질간질할 정도였지요.",
+            "그러던 어느 날, 좋은 수가 떠올랐습니다.",
+            "그렇지! 그렇게 하면 되겠군!",
+            "일꾼은 집 뒤에 있는 산으로 올라갔어요.",
+            "뒷산에는 빽빽하게 자란 대나무 숲이 있었어요.",
+            "이곳에 다다르자 두 손을 모아 입에 대고는 큰 소리로 외칩니다.",
+            "임금님 귀는 당나귀 귀!~~",
+            "임금님 귀는 당나귀 귀!~~",
+            "일꾼은 목청껏 외쳤어요.",
+            "그동안 참고 참느라 답답했던 마음이 후련하게 풀리는 듯 했습니다.",
+            "그런데 이상한 일이 벌어졌어요.",
+            "일꾼의 목소리가 메아리가 되어 숲을 맴도는 거예요.",
+            "임금님 귀는 당나귀 귀!~~",
+            "임금님 귀는 당나귀 귀!~~",
+            "메아리는 산을 타고 내려와 마을을 떠돌아 다닙니다.",
+            "임금님 귀는 당나귀 귀!~~",
+            "임금님 귀는 당나귀 귀!~~",
+            "사람들의 귀에 똑똑히 들렸어요.",
+            "메아리는 소문을 타고 온 나라에 퍼졌습니다.",
+            "임금님이 머리 끝까지 화가 나는 건 당연한 일이죠.",
+            "임금님은 그 대나무들을 몽땅 베어 버려라! 라고 말했어요.",
+            "신하들은 대나무를 다 베었지만 메아리는 멈추지 않았어요.",
+            "임금님 귀는 당나귀 귀!~~",
+            "임금님 귀는 당나귀 귀!~~",
+            "이제 어떻게 해야 할까요?",
+            "이제 내 귀가 크다는 것을 온 백성이 다 알게 됐는데 애써 귀를 가릴 필요가 없어졌구나!",
+            "임금님은 왕관을 벗어 놓고 백성들 앞에 섰습니다.",
+            "이제는 내 귀를 드러내 놓겠다!",
+            "큰 귀로 백성들의 이야기를 더욱 귀담아 듣겠노라!",
+            "임금님이 말하자 백성들 모두 크게 기뻐했답니다."
+    };
+
+    private void playVoice(MediaPlayer mediaPlayer, String tts) {
+        try {
+
+            String text = URLEncoder.encode(tts, "UTF-8"); // 13자
+            String apiURL = "https://naveropenapi.apigw.ntruss.com/voice/v1/tts";
+            URL url = new URL(apiURL);
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            con.setRequestMethod("POST");
+            con.setRequestProperty("X-NCP-APIGW-API-KEY-ID", ApiKeys.clientId);
+            con.setRequestProperty("X-NCP-APIGW-API-KEY", ApiKeys.clientSecret);
+            // post request
+            String postParams = "speaker=jinho&speed=2.5&text=" + text;
+            con.setDoOutput(true);
+            DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+            wr.writeBytes(postParams);
+            wr.flush();
+            wr.close();
+            int responseCode = con.getResponseCode();
+            BufferedReader br;
+            if (responseCode == 200) { // 정상 호출
+                InputStream is = con.getInputStream();
+                int read = 0;
+                byte[] bytes = new byte[1024];
+                //NaverCSS 폴더 생성
+                File dir = new File(Environment.getExternalStorageDirectory() + "/", "NaverCSS");
+                if (!dir.exists()) {
+                    dir.mkdirs();
                 }
-            break;
+                // 랜덤한 이름으로 mp3 파일 생성
+                String tempname = "navercssfile";
+                File f = new File(Environment.getExternalStorageDirectory() +
+                        File.separator + "NaverCSS/" + tempname + ".mp3");
+                f.createNewFile();
+                OutputStream outputStream = new FileOutputStream(f);
+                while ((read = is.read(bytes)) != -1) {
+                    outputStream.write(bytes, 0, read);
+                }
+                is.close();
+
+            } else {  // 에러 발생
+                br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
+                String inputLine;
+                StringBuffer response = new StringBuffer();
+                while ((inputLine = br.readLine()) != null) {
+                    response.append(inputLine);
+                }
+                br.close();
+                System.out.println(response.toString());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        */
+
+        String tempname = "navercssfile";
+        String Path_to_file = Environment.getExternalStorageDirectory() +
+                File.separator + "NaverCSS/" + tempname + ".mp3";
+
+        try {
+            mediaPlayer.setDataSource(Path_to_file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            mediaPlayer.prepare();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        mediaPlayer.start();
     }
 
-    public Fairytale stop() {
-        index = STOP;
-        CssApi.get().cancel();
-        return this;
+    public void play() {
+        flag = true;
+        String selector = titleArray[randomint.nextInt(titleArray.length)];
+        if (titleArray[0].equals(selector)) {
+            mediaPlayer = new MediaPlayer();
+            playVoice(mediaPlayer, hungbuNolbu[0]);
+            int idx = 0;
+            while (flag) {
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    if (mediaPlayer != null && !mediaPlayer.isPlaying()) {
+                        mediaPlayer.release();
+                        mediaPlayer = new MediaPlayer();
+                        idx++;
+                        playVoice(mediaPlayer, hungbuNolbu[idx]);
+                    }
+                } catch (IllegalStateException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        else if (titleArray[1].equals(selector)) {
+            mediaPlayer = new MediaPlayer();
+            playVoice(mediaPlayer, kingEarsDonkeyEars[0]);
+            int idx = 0;
+            while (flag) {
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    if (mediaPlayer != null && !mediaPlayer.isPlaying()) {
+                        mediaPlayer.release();
+                        mediaPlayer = new MediaPlayer();
+                        idx++;
+                        playVoice(mediaPlayer, kingEarsDonkeyEars[idx]);
+                    }
+                } catch (IllegalStateException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
     }
 
+    public void stop() {
+        mediaPlayer.stop();
+        mediaPlayer.release();
+        flag = false;
+    }
 }

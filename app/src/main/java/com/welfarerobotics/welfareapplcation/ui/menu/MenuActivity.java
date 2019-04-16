@@ -10,8 +10,10 @@ import android.view.MotionEvent;
 import android.widget.ImageButton;
 import android.widget.Toast;
 import com.welfarerobotics.welfareapplcation.R;
+import com.welfarerobotics.welfareapplcation.api.chat.CssApi;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.Fairytale;
 import com.welfarerobotics.welfareapplcation.api.chat.crawler.YoutubeApi;
+import com.welfarerobotics.welfareapplcation.ui.fairytale.FairytaleActivity;
 import com.welfarerobotics.welfareapplcation.ui.settings.SettingActivity;
 import com.welfarerobotics.welfareapplcation.ui.youtube.YoutubeActivity;
 import com.welfarerobotics.welfareapplcation.util.OnSwipeTouchListener;
@@ -25,6 +27,7 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
 
         ImageButton ibbackbtn = findViewById(R.id.backbutton);
         ImageButton ibSettings = findViewById(R.id.settings);
@@ -62,7 +65,8 @@ public class MenuActivity extends AppCompatActivity {
             startActivity(youtubeIntent);
         });
         ibfollowbao.setOnClickListener(view -> {
-            Fairytale.get().play();
+            Intent intent = new Intent(getApplicationContext(), FairytaleActivity.class);
+            startActivity(intent);
         });
     }
 }

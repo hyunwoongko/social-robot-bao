@@ -57,7 +57,8 @@
         <activity android:name=".ui.initial.UserSettingActivity"
                   android:screenOrientation="landscape"
                   android:configChanges="orientation"/>
-        <activity android:name=".ui.fairytale.FairytaleActivity"/>
+        <activity android:name=".ui.fairytale.FairytaleActivity"
+                android:theme="@android:style/Theme.Dialog"/>
         <activity android:name=".ui.contents.paintwith.GalleryActivity" />
         <activity android:name=".ui.contents.paintwith.PaintSelectActivity" />
         <activity android:name=".ui.contents.paintwith.PaintWithActivity" />
