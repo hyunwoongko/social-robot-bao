@@ -11,12 +11,9 @@ public class UUID {
     public static String getId(Activity activity) {
         TelephonyManager tManager = (TelephonyManager) activity.getSystemService(Context.TELEPHONY_SERVICE);
         if (ActivityCompat.checkSelfPermission(activity, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(activity, new String[]{
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE
-            }, 30);
-            return getId(activity);
+            return null;
+        } else {
+            return String.valueOf(tManager.hasCarrierPrivileges());
         }
-        String deviceId = tManager.getDeviceId();
-        return deviceId;
     }
 }
