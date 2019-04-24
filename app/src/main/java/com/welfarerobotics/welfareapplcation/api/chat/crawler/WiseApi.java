@@ -1,6 +1,6 @@
 package com.welfarerobotics.welfareapplcation.api.chat.crawler;
 
-import com.welfarerobotics.welfareapplcation.util.ApiKeys;
+import com.welfarerobotics.welfareapplcation.entity.ServerCache;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
@@ -18,7 +18,7 @@ public final class WiseApi {
      * @return 랜덤 명언
      */
     public static String getWise() throws IOException {
-        return Jsoup.connect(ApiKeys.SERVER_URL + "/wise")
+        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/wise")
                 .timeout(20000)
                 .get()
                 .body()

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="GreetingView">
+
+        <variable
+            name="viewModel"
+            type="com.welfarerobotics.welfareapplcation.core.greeting.GreetingViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:weightSum="3"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <com.welfarerobotics.welfareapplcation.util.TypeWriterView
+            android:id="@+id/greeting_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/baemin" />
+
+        <ImageView
+            android:id="@+id/greeting_next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/next_button"
+            android:onClick="@{viewModel::nextButtonClicked}" />
+    </LinearLayout>
+</layout>

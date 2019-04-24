@@ -1,80 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
-          package="com.welfarerobotics.welfareapplcation">
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <!--블루투스 권한-->
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <!--사진 권한-->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <!--와이파이 권한-->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.welfarerobotics.welfareapplcation">
 
-    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--블루투스 권한-->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--사진 권한-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--와이파이 권한-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 
     <application
-            android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name"
-            android:roundIcon="@mipmap/ic_launcher_round"
-            android:supportsRtl="true"
-            android:usesCleartextTraffic="true"
-            android:theme="@style/AppTheme"
-            tools:targetApi="m">
-        <activity android:name=".ui.main.MainActivity" android:screenOrientation="landscape">
-        </activity>
-        <activity android:name=".ui.initial.TutorialActivity" android:screenOrientation="landscape">
-        </activity>
-        <activity android:name=".ui.initial.BlActivity" android:screenOrientation="landscape">
-        </activity>
-        <activity android:name=".ui.youtube.YoutubeActivity"
-                  android:theme="@android:style/Theme.Dialog">
-        </activity>
-        <activity android:name=".ui.settings.WifiActivity" android:screenOrientation="landscape">
-        </activity>
-        <activity android:name=".ui.menu.MenuActivity" android:screenOrientation="landscape">
-        </activity>
-        <activity android:name=".ui.settings.SettingActivity" android:screenOrientation="landscape">
-        </activity>
-        <activity android:name=".ui.settings.LocSettingsActivity" android:screenOrientation="landscape"/>
-        <activity android:name=".ui.initial.SplashActivity" android:screenOrientation="landscape">
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="m"
+        tools:replace="android:icon">
+
+        <activity
+            android:name=".core.splash.SplashActivity"
+            android:screenOrientation="landscape">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".ui.initial.UserSettingActivity"
-                  android:screenOrientation="landscape"
-                  android:configChanges="orientation"/>
-        <activity android:name=".ui.fairytale.FairytaleActivity"
-                android:theme="@android:style/Theme.Dialog"/>
-        <activity android:name=".ui.contents.paintwith.GalleryActivity" />
-        <activity android:name=".ui.contents.paintwith.PaintSelectActivity" />
-        <activity android:name=".ui.contents.paintwith.PaintWithActivity" />
+        </activity> <!-- 스플래시 -->
+
+
+        <activity
+            android:name=".core.main.MainActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".core.greeting.GreetingActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".core.youtube.YoutubeActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".core.settings.WifiActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".core.menu.MenuActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".core.settings.SettingActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".core.settings.LocSettingsActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".core.initial.UserSettingActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation" />
+        <activity
+            android:name=".core.fairytale.FairytaleActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name=".core.contents.paintwith.GalleryActivity" />
+        <activity android:name=".core.contents.paintwith.PaintSelectActivity" />
+        <activity android:name=".core.contents.paintwith.PaintWithActivity" />
+
 
         <provider
-                android:name="android.support.v4.content.FileProvider"
-                android:authorities="com.bignerdranch.android.test.fileprovider"
-                android:exported="false"
-                android:grantUriPermissions="true">
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.bignerdranch.android.test.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
             <meta-data
-                    android:name="android.support.FILE_PROVIDER_PATHS"
-                    android:resource="@xml/filepaths"/>
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
         </provider>
         <meta-data
-                android:name="com.kakao.sdk.AppKey"
-                android:value="@string/kakao_app_key"/>
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
     </application>
 
 </manifest>

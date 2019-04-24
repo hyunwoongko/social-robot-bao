@@ -8,7 +8,7 @@ import com.welfarerobotics.welfareapplcation.api.chat.crawler.PreprocessorApi;
 import com.welfarerobotics.welfareapplcation.api.chat.scenario.ExchangeScenario;
 import com.welfarerobotics.welfareapplcation.api.chat.scenario.RestaurantScenario;
 import com.welfarerobotics.welfareapplcation.api.chat.scenario.TranslateScenario;
-import com.welfarerobotics.welfareapplcation.model.UserModel;
+import com.welfarerobotics.welfareapplcation.entity.User;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -21,7 +21,7 @@ import java.util.Collections;
  * 질문파악 세션
  */
 public final class QuestionSession {
-    public static void questionProcess(String speech, UserModel model) throws IOException {
+    public static void questionProcess(String speech, User model) throws IOException {
         if (ChatState.intent.equals("환율")) {
             if (ChatState.location.size() == 0) {
                 speech = PreprocessorApi.fix(speech);

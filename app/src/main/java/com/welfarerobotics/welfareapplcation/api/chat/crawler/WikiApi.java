@@ -1,7 +1,7 @@
 package com.welfarerobotics.welfareapplcation.api.chat.crawler;
 
-import com.welfarerobotics.welfareapplcation.util.ApiKeys;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.Encoder;
+import com.welfarerobotics.welfareapplcation.entity.ServerCache;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
@@ -21,7 +21,7 @@ public final class WikiApi {
      * @return 단어의 정보
      */
     public static String getWiki(String text) throws IOException {
-        return Jsoup.connect(ApiKeys.SERVER_URL + "/wiki/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/wiki/" + Encoder
                 .utf8(text))
                 .timeout(20000)
                 .get()

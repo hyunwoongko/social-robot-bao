@@ -1,7 +1,7 @@
 package com.welfarerobotics.welfareapplcation.api.chat.crawler;
 
-import com.welfarerobotics.welfareapplcation.util.ApiKeys;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.Encoder;
+import com.welfarerobotics.welfareapplcation.entity.ServerCache;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
@@ -19,7 +19,7 @@ public final class NewsApi {
      * @return 현재 주요 뉴스
      */
     public static String getNews() throws IOException {
-        return Jsoup.connect(ApiKeys.SERVER_URL + "/news/")
+        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/news/")
                 .timeout(20000)
                 .get()
                 .body()
@@ -34,7 +34,7 @@ public final class NewsApi {
      * @return 키워드별로 추천된 뉴스
      */
     public static String getKeywordNews(String keyword) throws IOException {
-        return Jsoup.connect(ApiKeys.SERVER_URL + "/keyword_news/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/keyword_news/" + Encoder
                 .utf8(keyword))
                 .timeout(20000)
                 .get()

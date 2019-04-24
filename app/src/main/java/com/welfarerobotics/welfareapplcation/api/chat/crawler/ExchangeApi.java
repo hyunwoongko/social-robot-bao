@@ -1,7 +1,7 @@
 package com.welfarerobotics.welfareapplcation.api.chat.crawler;
 
-import com.welfarerobotics.welfareapplcation.util.ApiKeys;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.Encoder;
+import com.welfarerobotics.welfareapplcation.entity.ServerCache;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
@@ -20,7 +20,7 @@ public final class ExchangeApi {
      * @return 환율
      */
     public static String getExchange(String country) throws IOException {
-        return Jsoup.connect(ApiKeys.SERVER_URL + "/exchange/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/exchange/" + Encoder
                 .utf8(country))
                 .timeout(20000)
                 .get()

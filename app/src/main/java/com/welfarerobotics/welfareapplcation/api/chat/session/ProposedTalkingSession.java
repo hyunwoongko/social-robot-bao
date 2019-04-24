@@ -10,9 +10,8 @@ import com.welfarerobotics.welfareapplcation.api.chat.crawler.ModelApi;
 import com.welfarerobotics.welfareapplcation.api.chat.crawler.PreprocessorApi;
 import com.welfarerobotics.welfareapplcation.api.chat.crawler.WiseApi;
 import com.welfarerobotics.welfareapplcation.api.chat.scenario.*;
-import com.welfarerobotics.welfareapplcation.model.UserModel;
-import com.welfarerobotics.welfareapplcation.ui.fairytale.FairytaleActivity;
-import com.welfarerobotics.welfareapplcation.ui.youtube.YoutubeActivity;
+import com.welfarerobotics.welfareapplcation.entity.User;
+import com.welfarerobotics.welfareapplcation.core.youtube.YoutubeActivity;
 import com.welfarerobotics.welfareapplcation.util.RandomModule;
 
 import java.io.IOException;
@@ -36,7 +35,7 @@ public final class ProposedTalkingSession {
             "댄스! 댄스!",
             "이 춤 정말 신나지 않나요?"};
 
-    public static boolean proposedTalk(UserModel model, AppCompatActivity activity) throws IOException {
+    public static boolean proposedTalk(User model, AppCompatActivity activity) throws IOException {
         if (ChatState.intent.equals("먼지")) {
             ChatState.clear();
             String[][] entity = ModelApi.getEntity("dust", ChatState.tokenizeSpeech);

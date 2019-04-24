@@ -1,6 +1,6 @@
 package com.welfarerobotics.welfareapplcation.api.chat.crawler;
 
-import com.welfarerobotics.welfareapplcation.util.ApiKeys;
+import com.welfarerobotics.welfareapplcation.entity.ServerCache;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
@@ -18,7 +18,7 @@ public final class IssueApi {
      * @return 오늘의 이슈 5개
      */
     public static String getIssue() throws IOException {
-        return Jsoup.connect(ApiKeys.SERVER_URL + "/issue")
+        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/issue")
                 .timeout(20000)
                 .get()
                 .body()

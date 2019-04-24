@@ -19,5 +19,4 @@ public class UUID {
         String deviceId = tManager.getDeviceId();
         return deviceId;
     }
-
 }

@@ -1,7 +1,7 @@
 package com.welfarerobotics.welfareapplcation.api.chat.crawler;
 
-import com.welfarerobotics.welfareapplcation.util.ApiKeys;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.Encoder;
+import com.welfarerobotics.welfareapplcation.entity.ServerCache;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
@@ -20,7 +20,7 @@ public final class RestaurantApi {
      * @return 맛집 추천
      */
     public static String recommendRestaurant(String keyword) throws IOException {
-        return Jsoup.connect(ApiKeys.SERVER_URL + "/restaurant/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/restaurant/" + Encoder
                 .utf8(keyword))
                 .timeout(20000)
                 .get()

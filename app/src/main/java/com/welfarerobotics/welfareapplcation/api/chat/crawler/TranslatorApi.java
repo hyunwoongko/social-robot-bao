@@ -1,7 +1,7 @@
 package com.welfarerobotics.welfareapplcation.api.chat.crawler;
 
-import com.welfarerobotics.welfareapplcation.util.ApiKeys;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.Encoder;
+import com.welfarerobotics.welfareapplcation.entity.ServerCache;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
@@ -22,7 +22,7 @@ public final class TranslatorApi {
      * @return 해당 언어로 번역된 문장
      */
     public static String translate(String lang, String text) throws IOException {
-        return Jsoup.connect(ApiKeys.SERVER_URL + "/translate/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/translate/" + Encoder
                 .utf8(lang) + "/" + Encoder
                 .utf8(text))
                 .timeout(20000)

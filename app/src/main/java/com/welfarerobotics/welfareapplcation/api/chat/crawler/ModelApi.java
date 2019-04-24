@@ -1,7 +1,7 @@
 package com.welfarerobotics.welfareapplcation.api.chat.crawler;
 
-import com.welfarerobotics.welfareapplcation.util.ApiKeys;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.Encoder;
+import com.welfarerobotics.welfareapplcation.entity.ServerCache;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
@@ -22,7 +22,7 @@ public final class ModelApi {
      * @return 발화 의도
      */
     public static String getIntent(String text) throws IOException {
-        return Jsoup.connect(ApiKeys.SERVER_URL + "/intent/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/intent/" + Encoder
                 .utf8(text))
                 .timeout(20000)
                 .get()
@@ -39,7 +39,7 @@ public final class ModelApi {
      * @return 단어와 개체명이 포함된 Map
      */
     public static String[][] getEntity(String kind, String text) throws IOException {
-        String entityString = Jsoup.connect(ApiKeys.SERVER_URL + "/entity_" + kind + "/" + Encoder
+        String entityString = Jsoup.connect(ServerCache.getInstance().getUrl() + "/entity_" + kind + "/" + Encoder
                 .utf8(text))
                 .timeout(20000)
                 .get()
@@ -69,7 +69,7 @@ public final class ModelApi {
      * @return Transformer의 출력 문장
      */
     public static String generateAnswer(String userid, String text) throws IOException {
-        return Jsoup.connect(ApiKeys.SERVER_URL + "/generate_answer/" + userid + "/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/generate_answer/" + userid + "/" + Encoder
                 .utf8(text))
                 .timeout(20000)
                 .get()

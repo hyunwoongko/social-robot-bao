@@ -1,7 +1,7 @@
 package com.welfarerobotics.welfareapplcation.api.chat.crawler;
 
-import com.welfarerobotics.welfareapplcation.util.ApiKeys;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.Encoder;
+import com.welfarerobotics.welfareapplcation.entity.ServerCache;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
@@ -20,7 +20,7 @@ public final class PreprocessorApi {
      * @return 조사, 특수문자등이 잘린 문장
      */
     public static String tokenize(String text) throws IOException {
-        return Jsoup.connect(ApiKeys.SERVER_URL + "/tokenize/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/tokenize/" + Encoder
                 .utf8(text))
                 .timeout(20000)
                 .get()
@@ -36,7 +36,7 @@ public final class PreprocessorApi {
      * @return 맞춤법이 교정된 문장
      */
     public static String fix(String text) throws IOException {
-        String fix = Jsoup.connect(ApiKeys.SERVER_URL + "/fix/" + Encoder
+        String fix = Jsoup.connect(ServerCache.getInstance().getUrl() + "/fix/" + Encoder
                 .utf8(text))
                 .timeout(20000)
                 .get()

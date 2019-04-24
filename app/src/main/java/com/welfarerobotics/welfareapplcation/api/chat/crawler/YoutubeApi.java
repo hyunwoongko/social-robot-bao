@@ -1,7 +1,7 @@
 package com.welfarerobotics.welfareapplcation.api.chat.crawler;
 
-import com.welfarerobotics.welfareapplcation.util.ApiKeys;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.Encoder;
+import com.welfarerobotics.welfareapplcation.entity.ServerCache;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
@@ -20,7 +20,7 @@ public final class YoutubeApi {
      * @return 유튜브 동영상 URL
      */
     public static String getYoutube(String song) throws IOException {
-        return Jsoup.connect(ApiKeys.SERVER_URL + "/youtube/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/youtube/" + Encoder
                 .utf8(song))
                 .timeout(20000)
                 .get()

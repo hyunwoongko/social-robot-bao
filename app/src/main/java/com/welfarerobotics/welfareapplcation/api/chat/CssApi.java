@@ -4,7 +4,7 @@ import android.media.MediaPlayer;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
-import com.welfarerobotics.welfareapplcation.util.ApiKeys;
+import com.welfarerobotics.welfareapplcation.entity.ServerCache;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -31,8 +31,8 @@ public final class CssApi {
             URL url = new URL(apiURL);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("POST");
-            con.setRequestProperty("X-NCP-APIGW-API-KEY-ID", ApiKeys.clientId);
-            con.setRequestProperty("X-NCP-APIGW-API-KEY", ApiKeys.clientSecret);
+            con.setRequestProperty("X-NCP-APIGW-API-KEY-ID", ServerCache.getInstance().getCssid());
+            con.setRequestProperty("X-NCP-APIGW-API-KEY", ServerCache.getInstance().getCsssecret());
             // post request
             String postParams = "speaker=" + speaker + "&speed=2.5&text=" + text;
             con.setDoOutput(true);

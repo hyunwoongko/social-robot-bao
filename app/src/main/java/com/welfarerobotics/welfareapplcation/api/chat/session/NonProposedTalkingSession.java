@@ -1,6 +1,6 @@
 package com.welfarerobotics.welfareapplcation.api.chat.session;
 
-import com.welfarerobotics.welfareapplcation.model.UserModel;
+import com.welfarerobotics.welfareapplcation.entity.User;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.ChatState;
 import com.welfarerobotics.welfareapplcation.api.chat.CssApi;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.EmotionAdder;
@@ -20,7 +20,7 @@ import java.io.IOException;
  */
 public final class NonProposedTalkingSession {
     /*TODO : 시나리오 이 것보다 더 많이 짜야함*/
-    public static void nonProposedTalk(UserModel model) throws IOException {
+    public static void nonProposedTalk(User model) throws IOException {
         if (ChatState.intent.equals("우울") || ChatState.intent.equals("슬픔")) {
             int prob = RandomModule.random.nextInt(3);
             if (prob == 1) {

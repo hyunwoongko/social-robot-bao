@@ -3,7 +3,7 @@ package com.welfarerobotics.welfareapplcation.api.chat;
 import android.support.v7.app.AppCompatActivity;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.ChatState;
 import com.welfarerobotics.welfareapplcation.api.chat.session.*;
-import com.welfarerobotics.welfareapplcation.model.UserModel;
+import com.welfarerobotics.welfareapplcation.entity.User;
 
 import java.io.IOException;
 
@@ -23,7 +23,7 @@ public final class ChatApi {
         return api;
     }
 
-    public synchronized void chat(String speech, UserModel model, AppCompatActivity activity) {
+    public synchronized void chat(String speech, User model, AppCompatActivity activity) {
         try {
             if (ChatState.questionMode) QuestionSession.questionProcess(speech, model); // 질문 세션
             else {
