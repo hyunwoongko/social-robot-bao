@@ -2,17 +2,18 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import tensorflow as tf
-import numpy as np
-import argparse
-import json
 import base64
 import io
+import json
 
+import numpy as np
+import tensorflow as tf
 from PIL import Image
 
 
-def pix_translate(input_file, output_file, model_dir='models/pix2pix'):
+def pix_translate(input_file, output_file, model_dir='painter/models/pix2pix'):
+    input_file = 'painter/images/input/' + input_file
+    output_file = 'painter/images/output/' + output_file
     with open(input_file, "rb") as f:
         im = Image.open(input_file)
         im = im.resize((256, 256), Image.ANTIALIAS)
@@ -46,13 +47,4 @@ def pix_translate(input_file, output_file, model_dir='models/pix2pix'):
 
     with open(output_file, "wb") as f:
         f.write(output_data)
-
     return True
-
-
-def main():
-    pix_translate('0.jpg', '1.png')
-
-
-if __name__ == '__main__':
-    main()

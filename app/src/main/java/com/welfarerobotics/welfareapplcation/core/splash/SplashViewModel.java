@@ -8,6 +8,7 @@ import android.view.animation.AnimationUtils;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseViewModel;
 import com.welfarerobotics.welfareapplcation.util.LiveData;
+import com.welfarerobotics.welfareapplcation.util.MethodOnXml;
 import com.welfarerobotics.welfareapplcation.util.Sound;
 import lombok.Getter;
 import rx.Observable;
@@ -46,12 +47,14 @@ public @Getter class SplashViewModel extends BaseViewModel {
                 }).subscribe(); // 구독
     }
 
+    @MethodOnXml
     public void welfareLogoFadeIn(View view) {
-        Animation fadeInAnimation = AnimationUtils.loadAnimation(getContext(),R.anim.logo_fade_in);
+        Animation fadeInAnimation = AnimationUtils.loadAnimation(getContext(), R.anim.logo_fade_in);
         view.startAnimation(fadeInAnimation);
     }
 
-    @Override protected void onCleared() {
+    @Override
+    protected void onCleared() {
         super.onCleared();
     }
 }

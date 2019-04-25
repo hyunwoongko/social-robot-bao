@@ -8,12 +8,12 @@ import android.support.v4.app.ActivityCompat;
 import android.telephony.TelephonyManager;
 
 public class UUID {
+    private static String id = null;
+
     public static String getId(Activity activity) {
         TelephonyManager tManager = (TelephonyManager) activity.getSystemService(Context.TELEPHONY_SERVICE);
-        if (ActivityCompat.checkSelfPermission(activity, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-            return null;
-        } else {
-            return String.valueOf(tManager.hasCarrierPrivileges());
-        }
+        if (ActivityCompat.checkSelfPermission(activity, Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED)
+            id = String.valueOf(tManager.hasCarrierPrivileges());
+        return id;
     }
 }

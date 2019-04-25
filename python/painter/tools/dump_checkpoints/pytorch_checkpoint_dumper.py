@@ -35,7 +35,7 @@ import numpy as np
 
 import torch
 
-from server.tools.dump_checkpoints.checkpoint_dumper import CheckpointDumper
+from server_chat.tools.dump_checkpoints.checkpoint_dumper import CheckpointDumper
 
 class PytorchCheckpointDumper(CheckpointDumper):
 

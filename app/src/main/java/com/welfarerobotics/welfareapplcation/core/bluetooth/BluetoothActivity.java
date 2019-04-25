@@ -18,7 +18,7 @@ import android.widget.*;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.greeting.GreetingActivity;
-import com.welfarerobotics.welfareapplcation.core.initial.UserSettingActivity;
+import com.welfarerobotics.welfareapplcation.core.init_setting.InitialSettingActivity;
 
 import java.lang.reflect.Method;
 import java.util.*;
@@ -88,7 +88,7 @@ public class BluetoothActivity extends BaseActivity {
             startActivity(intent);
         });
         next_imageView.setOnClickListener(view -> {
-            Intent intent = new Intent(this, UserSettingActivity.class);
+            Intent intent = new Intent(this, InitialSettingActivity.class);
             startActivity(intent);
         });
         //블루투스를 지원하지 않으면 null을 리턴한다

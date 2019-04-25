@@ -6,6 +6,7 @@ import android.view.View;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseViewModel;
 import com.welfarerobotics.welfareapplcation.util.LiveData;
+import com.welfarerobotics.welfareapplcation.util.MethodOnXml;
 import com.welfarerobotics.welfareapplcation.util.Sound;
 import com.welfarerobotics.welfareapplcation.util.TypeWriterView;
 import lombok.Getter;
@@ -38,14 +39,11 @@ public @Getter class GreetingViewModel extends BaseViewModel {
         typeWriterView.getValue().setText(msg[msgCount]);
     }
 
+    @MethodOnXml
     public void nextButtonClicked(View view) {
         msgCount++; // 대화 카운트 증가
         Sound.get().effectSound(getContext(), R.raw.click);
         if (msgCount >= msg.length) moveToUserSettingActivityEvent.call();
         else typeWriterView.getValue().write(msg[msgCount], 70);
-    }
-
-    @Override protected void onCleared() {
-        super.onCleared();
     }
 }

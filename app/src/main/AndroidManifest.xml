@@ -67,7 +67,7 @@
             android:name=".core.settings.LocSettingsActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".core.initial.UserSettingActivity"
+            android:name=".core.init_setting.InitialSettingActivity"
             android:screenOrientation="landscape"
             android:configChanges="orientation" />
         <activity

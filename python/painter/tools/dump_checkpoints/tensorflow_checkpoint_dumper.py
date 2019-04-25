@@ -32,7 +32,7 @@ import re
 
 import tensorflow as tf
 
-from server.tools.dump_checkpoints.checkpoint_dumper import CheckpointDumper
+from server_chat.tools.dump_checkpoints.checkpoint_dumper import CheckpointDumper
 
 class TensorflowCheckpointDumper(CheckpointDumper):
 
