@@ -3,15 +3,72 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="distributionType" value="WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/MyScript_ATK-Core-android-component" />
+            <option value="$PROJECT_DIR$/MyScript_ATK-IMCommon-android-component" />
+            <option value="$PROJECT_DIR$/MyScript_ATK-SingleCharWidget-android-widget" />
+            <option value="$PROJECT_DIR$/MyScript_ATK-Text-android-component" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/myscript-certificate" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/MyScript_ATK-Core-android-component" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/MyScript_ATK-Core-android-component" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/MyScript_ATK-IMCommon-android-component" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/MyScript_ATK-IMCommon-android-component" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/MyScript_ATK-SingleCharWidget-android-widget" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/MyScript_ATK-SingleCharWidget-android-widget" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/MyScript_ATK-Text-android-component" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/MyScript_ATK-Text-android-component" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/myscript-certificate" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/mysript-certificate" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/mysript-certificate" />
+          </set>
+        </option>
       </GradleProjectSettings>
     </option>
   </component>

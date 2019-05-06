@@ -1,1 +1,6 @@
-include ':app'
+include ':app', 
+        ':MyScript_ATK-Core-android-component',
+        ':MyScript_ATK-IMCommon-android-component',
+        ':MyScript_ATK-SingleCharWidget-android-widget',
+        ':MyScript_ATK-Text-android-component',
+        ':myscript-certificate'

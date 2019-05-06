@@ -4,5 +4,9 @@
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mysript-certificate_main" target="1.8" />
+      <module name="mysript-certificate_test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -16,9 +16,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    dataBinding {
-        enabled = true
-    }
     compileOptions {
         targetCompatibility 1.8
         sourceCompatibility 1.8
@@ -72,6 +69,13 @@ dependencies {
     implementation 'net.sourceforge.streamsupport:streamsupport-flow:1.6.0'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation group: 'org.jsoup', name: 'jsoup', version: '1.9.1'
+
+    //myscript
+    implementation(name: 'MyScript_ATK-Core-android-component', ext: 'aar')
+    implementation(name: 'MyScript_ATK-Text-android-component', ext: 'aar')
+    implementation(name: 'MyScript_ATK-IMCommon-android-component', ext: 'aar')
+    implementation(name: 'MyScript_ATK-SingleCharWidget-android-widget', ext: 'aar')
+    implementation project(path: ':myscript-certificate')
 }
 
 apply plugin: 'com.google.gms.google-services'

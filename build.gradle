@@ -1,7 +1,6 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
-    
+
     repositories {
         google()
         jcenter()
@@ -14,23 +13,28 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
-
 allprojects {
     repositories {
         google()
         jcenter()
         maven { url "https://jitpack.io" }
         mavenCentral()
+        repositories {
+            flatDir {
+                dirs '../MyScript_ATK-Core-android-component'
+                dirs '../MyScript_ATK-IMCommon-android-component'
+                dirs '../MyScript_ATK-Text-android-component'
+                dirs '../MyScript_ATK-SingleCharWidget-android-widget'
+            }
+        }
     }
 }
-
 subprojects {
     repositories {
         mavenCentral()
         maven { url 'http://devrepo.kakao.com:8088/nexus/content/groups/public/' }
     }
 }
-
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

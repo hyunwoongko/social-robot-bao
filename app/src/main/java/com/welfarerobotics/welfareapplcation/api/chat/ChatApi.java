@@ -1,6 +1,7 @@
 package com.welfarerobotics.welfareapplcation.api.chat;
 
 import android.support.v7.app.AppCompatActivity;
+import com.myscript.certificate.MyCertificate;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.ChatState;
 import com.welfarerobotics.welfareapplcation.api.chat.session.*;
 import com.welfarerobotics.welfareapplcation.entity.User;

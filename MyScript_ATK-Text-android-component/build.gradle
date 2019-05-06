@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('MyScript_ATK-Text-android-component.aar'))

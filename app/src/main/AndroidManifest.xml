@@ -84,6 +84,7 @@
         <activity android:name=".core.contents.paintwith.GalleryActivity" />
         <activity android:name=".core.contents.paintwith.PaintSelectActivity" />
         <activity android:name=".core.contents.paintwith.PaintWithActivity" />
+        <activity android:name=".core.contents.dictation.DictationActivity" />
 
 
         <provider
