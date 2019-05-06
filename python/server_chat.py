@@ -1,39 +1,30 @@
 import logging
 import os
-import random
-import shutil
 
 import tensorflow as tf
 from flask import Flask
 
-from api.api_dust import today_dust, tomorrow_dust, after_tomorrow_dust
-from api.api_exchange import get_exchange
-from api.api_issue import get_issue
-from api.api_news import get_news, get_keyword_news
-from api.api_restaurant import recommend_restaurant
-from api.api_translation import translate
-from api.api_weather import today_weather, tomorrow_weather, after_tomorrow_weather, this_week_weather, specific_weather
-from api.api_wiki import wiki
-from api.api_wise import get_wise
-from api.api_youtube import get_youtube
-from entity_recognizer.dust.entity_recognizer import get_dust_entity
-from entity_recognizer.exchange.entity_recognizer import get_exchange_entity
-from entity_recognizer.news.entity_recognizer import get_news_entity
-from entity_recognizer.restaurant.entity_recognizer import get_restaurant_entity
-from entity_recognizer.song.entity_recognizer import get_song_entity
-from entity_recognizer.translate.entity_recognizer import get_translate_entity
-from entity_recognizer.weather.entity_recognizer import get_weather_entity
-from entity_recognizer.wiki.entity_recognizer import get_wiki_entity
-from generative_model.answer_generator import generate_answer
-from hanspell.spell_checker import fix
-from intent_classifier.intent_classifier import get_intent
-from markov_engine import MarkovEngine
-from util.list_util import mode
-from util.tokenizer import tokenize
-
-if os.path.isdir('data_out'):
-    shutil.rmtree('data_out')
-shutil.copytree('generative_model/data_out', 'data_out')
+from chat.crawler.dust import today_dust, tomorrow_dust, after_tomorrow_dust
+from chat.crawler.exchange import get_exchange
+from chat.crawler.issue import get_issue
+from chat.crawler.news import get_news, get_keyword_news
+from chat.crawler.restaurant import recommend_restaurant
+from chat.crawler.translation import translate
+from chat.crawler.weather import today_weather, tomorrow_weather, after_tomorrow_weather, this_week_weather, \
+    specific_weather
+from chat.crawler.wiki import wiki
+from chat.crawler.wise import get_wise
+from chat.crawler.youtube import get_youtube
+from chat.entity.exchange.entity_recognizer import get_exchange_entity
+from chat.entity.news.entity_recognizer import get_news_entity
+from chat.entity.restaurant.entity_recognizer import get_restaurant_entity
+from chat.entity.song.entity_recognizer import get_song_entity
+from chat.entity.translate.entity_recognizer import get_translate_entity
+from chat.entity.weather.entity_recognizer import get_weather_entity
+from chat.entity.wiki.entity_recognizer import get_wiki_entity
+from chat.hanspell.spell_checker import fix
+from chat.intent.classifier import get_intent
+from chat.util.tokenizer import tokenize
 
 logger = logging.getLogger('chardet')
 logger.setLevel(logging.CRITICAL)
@@ -56,35 +47,6 @@ def server_intent(text):
     return get_intent(text)
 
 
-@app.route('/generate_answer/<userid>/<text>', methods=['GET', 'POST'])
-def server_generate_answer(userid, text):
-    engine = MarkovEngine(userid)
-    normal = fix(generate_answer(text)).rstrip()
-    counter = 0
-    markov_list = []
-    while True:
-        counter += 1
-        markov = engine.apply_markov(text)
-        if markov != text:
-            markov_list.append(markov)
-        if len(markov_list) == 3:
-            break
-        if counter > 5:
-            while True:
-                markov_list.append(markov)
-                if len(markov_list) >= 3:
-                    break
-
-    answer = [normal, normal, fix(engine.apply_markov(normal)), fix(markov_list[0]), fix(markov_list[1]),
-              fix(markov_list[2])]
-    print(answer)  # 전체 답변 후보 출력
-    result = mode(answer)  # 최빈 값 출력
-    if len(answer) == 1:
-        return result[0]  # 최빈 값 출력
-    else:  # 데이터와 마르코프 최빈값의 결과 수 가 같을때
-        return random.choice(result)  # 랜덤 출력
-
-
 ##################################
 ############ PREPROCESS #############
 ##################################
@@ -103,7 +65,7 @@ def server_fix(text):
 ##################################
 @app.route('/entity_dust/<text>', methods=['GET', 'POST'])
 def server_dust_entity(text):
-    return str(get_dust_entity(text, False))
+    return str(get_weather_entity(text, False))
 
 
 @app.route('/today_dust/<location>', methods=['GET', 'POST'])

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/python/entity_recognizer/dust/data/crawler/pos.txt" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/python/entity_recognizer/dust/train_entity.csv" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/python/entity_recognizer/song/data/crawler/pos.txt" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/python/entity_recognizer/song/train_entity.csv" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/python/entity_recognizer/translate/data/crawler/pos.txt" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/python/entity_recognizer/translate/train_entity.csv" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/python/entity_recognizer/weather/data/crawler/pos.txt" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/python/entity_recognizer/weather/train_entity.csv" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/python/entity_recognizer/wiki/data/crawler/pos.txt" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/python/entity_recognizer/wiki/train_entity.csv" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/python/chat/entity/dust/data/crawler/pos.txt" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/python/chat/entity/dust/train_entity.csv" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/python/chat/entity/exchange/train_entity.csv" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/python/chat/entity/song/data/crawler/pos.txt" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/python/chat/entity/song/train_entity.csv" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/python/chat/entity/translate/data/crawler/pos.txt" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/python/chat/entity/translate/train_entity.csv" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/python/chat/entity/weather/data/crawler/pos.txt" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/python/chat/entity/weather/train_entity.csv" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/python/chat/entity/wiki/data/crawler/pos.txt" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/python/chat/entity/wiki/train_entity.csv" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/python/generative_model/data_out/vocabularyData.voc" charset="x-windows-949" />
   </component>
 </project>

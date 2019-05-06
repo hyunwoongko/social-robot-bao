@@ -12,4 +12,5 @@ public @Builder @Data class Server {
     private String cssid;
     private String csssecret;
     private String youtubekey;
+    private boolean state;
 }

@@ -26,10 +26,12 @@ public @Data class ServerCache {
         cache.setCsssecret(server.getCsssecret());
         cache.setYoutubekey(server.getYoutubekey());
         cache.setUrl(server.getUrl());
+        cache.setState(server.isState());
     }
 
     private String url;
     private String cssid;
     private String csssecret;
     private String youtubekey;
+    private boolean state;
 }

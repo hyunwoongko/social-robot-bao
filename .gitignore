@@ -9,3 +9,5 @@ build/
 captures/
 .externalNativeBuild
 /venv
+/.idea/workspace.xml
+../.idea/workspace.xml

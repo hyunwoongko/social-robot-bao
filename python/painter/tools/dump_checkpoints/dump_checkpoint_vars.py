@@ -47,12 +47,12 @@ def get_checkpoint_dumper(model_type, checkpoint_file, output_dir, remove_variab
       If particular model type is not supported
   """
   if model_type == 'tensorflow':
-    from server_chat.tools.dump_checkpoints.tensorflow_checkpoint_dumper import TensorflowCheckpointDumper
+    from server_chat import TensorflowCheckpointDumper
 
     return TensorflowCheckpointDumper(
       checkpoint_file, output_dir, remove_variables_regex)
   elif model_type == 'pytorch':
-    from server_chat.tools.dump_checkpoints.pytorch_checkpoint_dumper import PytorchCheckpointDumper
+    from server_chat import PytorchCheckpointDumper
 
     return PytorchCheckpointDumper(
       checkpoint_file, output_dir, remove_variables_regex)

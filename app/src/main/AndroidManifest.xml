@@ -49,7 +49,7 @@
             android:name=".core.main.MainActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".core.greeting.GreetingActivity"
+            android:name=".core.initial.GreetingActivity"
             android:screenOrientation="landscape" />
         <activity
             android:name=".core.youtube.YoutubeActivity"
@@ -67,12 +67,20 @@
             android:name=".core.settings.LocSettingsActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".core.init_setting.InitialSettingActivity"
+            android:name=".core.initial.InitialSettingActivity"
             android:screenOrientation="landscape"
             android:configChanges="orientation" />
         <activity
             android:name=".core.fairytale.FairytaleActivity"
             android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name=".core.initial.BluetoothActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".core.initial.InitialWifiActivity"
+            android:screenOrientation="landscape" />
+
         <activity android:name=".core.contents.paintwith.GalleryActivity" />
         <activity android:name=".core.contents.paintwith.PaintSelectActivity" />
         <activity android:name=".core.contents.paintwith.PaintWithActivity" />

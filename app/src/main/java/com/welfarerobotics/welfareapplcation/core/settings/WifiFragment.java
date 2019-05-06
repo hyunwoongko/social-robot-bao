@@ -1,11 +1,7 @@
 package com.welfarerobotics.welfareapplcation.core.settings;
 
 import android.Manifest;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.IntentFilter;
+import android.content.*;
 import android.content.pm.PackageManager;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
@@ -25,6 +21,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.welfarerobotics.welfareapplcation.R;
+import com.welfarerobotics.welfareapplcation.util.Sound;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,16 +31,21 @@ import java.util.Map;
 public class WifiFragment extends Fragment {
     public class device {
         CharSequence name;
+
         public String getCapabilities() {
             return capabilities;
         }
+
         public void setCapabilities(String capabilities) {
             this.capabilities = capabilities;
         }
+
         String capabilities;
+
         public void setName(CharSequence name) {
             this.name = name;
         }
+
         public CharSequence getName() {
             return name;
         }
@@ -121,7 +123,7 @@ public class WifiFragment extends Fragment {
         btnScan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Sound.get().effectSound(getActivity(), R.raw.click);
                 wifi.startScan();
                 values.clear();
                 try {

@@ -25,17 +25,9 @@ from __future__ import print_function
 
 from six import iteritems
 
-import argparse
-import os
-import re
-import json
-import string
-
-import numpy as np
-
 import torch
 
-from server_chat.tools.dump_checkpoints.checkpoint_dumper import CheckpointDumper
+from server_chat import CheckpointDumper
 
 class PytorchCheckpointDumper(CheckpointDumper):
 

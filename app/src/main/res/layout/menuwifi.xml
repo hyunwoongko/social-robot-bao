@@ -11,6 +11,7 @@
     <TextView
         android:id="@+id/textViewSSID"
         android:layout_width="wrap_content"
+        android:fontFamily="@font/baemin"
         android:layout_height="wrap_content"
         android:text="SSID"
         tools:layout_editor_absoluteX="35dp"
@@ -28,6 +29,8 @@
         android:id="@+id/textViewPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
+        android:fontFamily="@font/baemin"
         android:text="비밀번호 입력"
         />
 

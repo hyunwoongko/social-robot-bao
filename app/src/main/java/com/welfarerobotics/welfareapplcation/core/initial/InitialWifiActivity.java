@@ -1,0 +1,34 @@
+package com.welfarerobotics.welfareapplcation.core.initial;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
+import com.welfarerobotics.welfareapplcation.R;
+import com.welfarerobotics.welfareapplcation.core.BaseActivity;
+import com.welfarerobotics.welfareapplcation.core.main.MainActivity;
+import com.welfarerobotics.welfareapplcation.core.settings.WifiFragment;
+import com.welfarerobotics.welfareapplcation.util.Sound;
+
+public class InitialWifiActivity extends BaseActivity {
+    private FragmentManager fm;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_initial_wifi);
+
+        fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        WifiFragment wifiFragment = WifiFragment.newInstance();
+        ft.replace(R.id.main_container, wifiFragment);
+        ft.commit();
+
+        findViewById(R.id.next_imageView).setOnClickListener(v -> {
+            Sound.get().effectSound(getApplicationContext(), R.raw.click);
+            startActivity(new Intent(InitialWifiActivity.this, InitialSettingActivity.class));
+            finish();
+        });
+    }
+}

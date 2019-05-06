@@ -25,14 +25,9 @@ from __future__ import print_function
 
 from six import iteritems
 
-import argparse
-import json
-import os
-import re
-
 import tensorflow as tf
 
-from server_chat.tools.dump_checkpoints.checkpoint_dumper import CheckpointDumper
+from server_chat import CheckpointDumper
 
 class TensorflowCheckpointDumper(CheckpointDumper):
 

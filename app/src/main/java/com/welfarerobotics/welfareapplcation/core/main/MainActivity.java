@@ -479,19 +479,24 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                 results.getStringArrayList(SpeechRecognizerClient.KEY_RECOGNITION_RESULTS);
         speech = matches.get(0); //0번이 가장 다듬어진 문장
 
-        Observable.just(null)
-                .subscribeOn(RxSchedulers.networkThread())
-                .map(Null -> User.builder()
-                        .id(UserCache.getInstance().getId())
-                        .name(UserCache.getInstance().getName())
-                        .photo(UserCache.getInstance().getPhoto())
-                        .location(UserCache.getInstance().getLocation())
-                        .dict(UserCache.getInstance().getDict() == null ? new ArrayList<>() : UserCache.getInstance().getDict())
-                        .build())
-                .doOnNext(m -> ChatApi.get().chat(speech, m, this))
-                .doOnNext(m -> CssApi.get().stop(() -> client.startRecording(false)))
-                .observeOn(RxSchedulers.androidThread())
-                .subscribe();
+        if (ServerCache.getInstance().isState()) {
+            Observable.just(null)
+                    .subscribeOn(RxSchedulers.networkThread())
+                    .map(Null -> User.builder()
+                            .id(UserCache.getInstance().getId())
+                            .name(UserCache.getInstance().getName())
+                            .photo(UserCache.getInstance().getPhoto())
+                            .location(UserCache.getInstance().getLocation())
+                            .dict(UserCache.getInstance().getDict() == null ? new ArrayList<>() : UserCache.getInstance().getDict())
+                            .build())
+                    .doOnNext(m -> ChatApi.get().chat(speech, m, this))
+                    .doOnNext(m -> CssApi.get().stop(() -> client.startRecording(false)))
+                    .observeOn(RxSchedulers.androidThread())
+                    .subscribe();
+        } else {
+            CssApi.get().play("현재 서버 점검 중입니다.", "jinho");
+            CssApi.get().stop(() -> client.startRecording(false));
+        }
     }
 
 
