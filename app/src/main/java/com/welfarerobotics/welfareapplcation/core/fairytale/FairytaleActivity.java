@@ -10,8 +10,9 @@ import android.view.Window;
 import android.view.WindowManager;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.Fairytale;
+import com.welfarerobotics.welfareapplcation.core.BaseActivity;
 
-public class FairytaleActivity extends AppCompatActivity {
+public class FairytaleActivity extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

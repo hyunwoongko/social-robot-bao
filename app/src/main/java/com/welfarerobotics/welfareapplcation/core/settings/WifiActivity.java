@@ -7,8 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import com.welfarerobotics.welfareapplcation.R;
+import com.welfarerobotics.welfareapplcation.core.BaseActivity;
 
-public class WifiActivity extends AppCompatActivity {
+public class WifiActivity extends BaseActivity {
     private FragmentManager fm;
     private Toolbar toolbar;
 

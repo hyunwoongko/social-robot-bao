@@ -30,6 +30,7 @@ import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.api.chat.ChatApi;
 import com.welfarerobotics.welfareapplcation.api.chat.CssApi;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.EmotionAdder;
+import com.welfarerobotics.welfareapplcation.core.BaseActivity;
 import com.welfarerobotics.welfareapplcation.core.menu.MenuActivity;
 import com.welfarerobotics.welfareapplcation.entity.Server;
 import com.welfarerobotics.welfareapplcation.entity.ServerCache;
@@ -45,7 +46,7 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MainActivity extends AppCompatActivity implements SpeechRecognizeListener {
+public class MainActivity extends BaseActivity implements SpeechRecognizeListener {
 
     private ImageView img;
     private String speech, lang;

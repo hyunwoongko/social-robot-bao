@@ -14,8 +14,9 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.LocationSettingsRequest;
 import com.google.android.gms.location.LocationSettingsStatusCodes;
+import com.welfarerobotics.welfareapplcation.core.BaseActivity;
 
-public class LocSettingsActivity extends AppCompatActivity
+public class LocSettingsActivity extends BaseActivity
         implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, ResultCallback {
 
     protected GoogleApiClient mGoogleApiClient;
