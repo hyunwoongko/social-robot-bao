@@ -11,3 +11,8 @@ captures/
 /venv
 /.idea/workspace.xml
 ../.idea/workspace.xml
+*.index
+*.meta
+*.data-00000-of-00001
+model
+checkpoint
