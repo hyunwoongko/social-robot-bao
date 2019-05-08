@@ -80,6 +80,9 @@
         <activity
             android:name=".core.initial.InitialWifiActivity"
             android:screenOrientation="landscape" />
+        <activity android:name=".core.contents.tangram.TangramActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"/>
 
         <activity android:name=".core.contents.paintwith.GalleryActivity" />
         <activity android:name=".core.contents.paintwith.PaintSelectActivity" />
