@@ -28,7 +28,7 @@ import java.util.Map;
 
 
 // TODO 블루투스 액티비티 리팩토링 필요
-public class BluetoothActivity extends BaseActivity {
+public class InitialBluetoothActivity extends BaseActivity {
     private Switch sw;
 
     //블루투스 지원 유무 확인
@@ -61,7 +61,7 @@ public class BluetoothActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bluetooth);
+        setContentView(R.layout.activity_init_bluetooth);
         //UI
         listDeviceView = (ListView) findViewById(R.id.searched_list);
         sw = (Switch) findViewById(R.id.bl_switch);
@@ -114,18 +114,18 @@ public class BluetoothActivity extends BaseActivity {
         registerReceiver(mBluetoothScanmodeReceiver, scanmodeFilter);
 
         // 해당 permission체크후 권한이없다면 souldShow 퍼미션 창띄우기
-        if (ContextCompat.checkSelfPermission(BluetoothActivity.this,
+        if (ContextCompat.checkSelfPermission(InitialBluetoothActivity.this,
                 Manifest.permission.ACCESS_COARSE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
             // Should we show an explanation?
-            if (ActivityCompat.shouldShowRequestPermissionRationale(BluetoothActivity.this,
+            if (ActivityCompat.shouldShowRequestPermissionRationale(InitialBluetoothActivity.this,
                     Manifest.permission.ACCESS_COARSE_LOCATION)) {
                 // Show an explanation to the user *asynchronously* -- don't block
                 // this thread waiting for the user's response! After the user
                 // sees the explanation, try again to request the permission.
             } else {
                 // No explanation needed, we can request the permission.
-                ActivityCompat.requestPermissions(BluetoothActivity.this,
+                ActivityCompat.requestPermissions(InitialBluetoothActivity.this,
                         new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, ACCESS_COARSE_LOCATION_CODE);
                 // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
                 // app-defined int constant. The callback method gets the
@@ -133,18 +133,18 @@ public class BluetoothActivity extends BaseActivity {
             }
         }
         // 해당 permission체크후 권한이없다면 souldShow 퍼미션 창띄우기
-        if (ContextCompat.checkSelfPermission(BluetoothActivity.this,
+        if (ContextCompat.checkSelfPermission(InitialBluetoothActivity.this,
                 Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
             // Should we show an explanation?
-            if (ActivityCompat.shouldShowRequestPermissionRationale(BluetoothActivity.this,
+            if (ActivityCompat.shouldShowRequestPermissionRationale(InitialBluetoothActivity.this,
                     Manifest.permission.ACCESS_FINE_LOCATION)) {
                 // Show an explanation to the user *asynchronously* -- don't block
                 // this thread waiting for the user's response! After the user
                 // sees the explanation, try again to request the permission.
             } else {
                 // No explanation needed, we can request the permission.
-                ActivityCompat.requestPermissions(BluetoothActivity.this,
+                ActivityCompat.requestPermissions(InitialBluetoothActivity.this,
                         new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, ACCESS_FINE_LOCATION_CODE);
                 // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
                 // app-defined int constant. The callback method gets the
@@ -276,7 +276,7 @@ public class BluetoothActivity extends BaseActivity {
                     break;
                 //블루투스 디바이스 검색 종료
                 case BluetoothAdapter.ACTION_DISCOVERY_FINISHED:
-                    Toast.makeText(BluetoothActivity.this, "블루투스 검색 종료", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(InitialBluetoothActivity.this, "블루투스 검색 종료", Toast.LENGTH_SHORT).show();
                     mBluetoothAdapter.cancelDiscovery(); // 블루투스 검색 취소
                     txtState.setText("");
 //                    btnSearch.setEnabled(true);
@@ -315,10 +315,10 @@ public class BluetoothActivity extends BaseActivity {
                 case BluetoothAdapter.SCAN_MODE_NONE:
 //                    chkFindme.setChecked(false);
 //                    chkFindme.setEnabled(true);
-                    Toast.makeText(BluetoothActivity.this, "검색응답 모드 종료", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(InitialBluetoothActivity.this, "검색응답 모드 종료", Toast.LENGTH_SHORT).show();
                     break;
                 case BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE:
-                    Toast.makeText(BluetoothActivity.this, "다른 블루투스 기기에서 내 휴대폰을 찾을 수 있습니다.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(InitialBluetoothActivity.this, "다른 블루투스 기기에서 내 휴대폰을 찾을 수 있습니다.", Toast.LENGTH_SHORT).show();
                     break;
             }
         }

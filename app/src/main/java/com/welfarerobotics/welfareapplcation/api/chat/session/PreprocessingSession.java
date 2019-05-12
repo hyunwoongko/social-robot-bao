@@ -18,6 +18,5 @@ public final class PreprocessingSession {
         ChatState.fixedSpeech = PreprocessorApi.fix(speech);
         ChatState.tokenizeSpeech = PreprocessorApi.tokenize(ChatState.fixedSpeech);
         ChatState.tokenizeSpeech = PreprocessorApi.fix(ChatState.tokenizeSpeech);
-        ChatState.intent = ModelApi.getIntent(ChatState.tokenizeSpeech);
     }
 }

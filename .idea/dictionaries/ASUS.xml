@@ -6,6 +6,8 @@
       <w>lstm</w>
       <w>preprocess</w>
       <w>voca</w>
+      <w>날씨to먼지</w>
+      <w>먼지to날씨</w>
     </words>
   </dictionary>
 </component>

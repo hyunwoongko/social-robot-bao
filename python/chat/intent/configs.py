@@ -3,17 +3,17 @@ import pandas as pd
 
 class IntentConfigs:
     encode_length = 16
-    filter_sizes = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
+    filter_sizes = [3, 4, 5, 6, 3, 4, 5, 6, 3, 4, 5, 6, 3, 4, 5, 6]
     num_filters = len(filter_sizes)
-    learning_step = 50000
-    learning_rate = 0.00015
-    vector_size = 256
-
+    learning_step = 20000
+    learning_rate = 0.00005
+    vector_size = 384
+    fallback_score = 2.5
     train_fasttext = False
     tokenizing = True
 
     def __init__(self):
-        self.data = pd.read_csv('../data.csv')
+        self.data = pd.read_csv('./chat/intent/train_intent.csv')
         self.intent_mapping = {}
 
         idx = -1
@@ -22,10 +22,3 @@ class IntentConfigs:
                 idx += 1
             self.intent_mapping[i] = idx
         self.label_size = len(self.intent_mapping)
-
-
-if __name__ == '__main__':
-    c = IntentConfigs()
-    print("의도 : 번호")
-    for k in zip(c.intent_mapping.keys(), c.intent_mapping.values()):
-        print(k[0], ' : ', k[1])

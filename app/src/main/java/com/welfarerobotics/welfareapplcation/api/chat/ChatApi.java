@@ -1,9 +1,10 @@
 package com.welfarerobotics.welfareapplcation.api.chat;
 
 import android.support.v7.app.AppCompatActivity;
-import com.myscript.certificate.MyCertificate;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.ChatState;
-import com.welfarerobotics.welfareapplcation.api.chat.session.*;
+import com.welfarerobotics.welfareapplcation.api.chat.session.ExceptionSession;
+import com.welfarerobotics.welfareapplcation.api.chat.session.PreprocessingSession;
+import com.welfarerobotics.welfareapplcation.api.chat.session.QuestionSession;
 import com.welfarerobotics.welfareapplcation.entity.User;
 
 import java.io.IOException;
@@ -29,11 +30,7 @@ public final class ChatApi {
             if (ChatState.questionMode) QuestionSession.questionProcess(speech, model); // 질문 세션
             else {
                 PreprocessingSession.preprocess(speech); // 전처리 세션
-                if (!ContextSession.contextProcess()) { // 문맥처리 세션
-                    if (!ProposedTalkingSession.proposedTalk(model, activity)) { // 목적대화를 안했다면
-                        NonProposedTalkingSession.nonProposedTalk(model); // 비목적 대화를 시도
-                    }
-                }
+
             }
         } catch (IOException e) {
             ExceptionSession.except(e); // 예외처리 세션

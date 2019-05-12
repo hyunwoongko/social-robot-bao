@@ -8,7 +8,6 @@ import tensorflow as tf
 from gensim.models import FastText
 from konlpy.tag import Okt
 
-from chat.hanspell.spell_checker import fix
 from chat.intent.configs import IntentConfigs
 
 configs = IntentConfigs()
@@ -26,7 +25,7 @@ vector_size = configs.vector_size
 
 def inference_embed(data):
     mecab = Okt()
-    model = FastText.load('./fasttext/model')
+    model = FastText.load('./chat/intent/fasttext/model')
     encode_raw = mecab.morphs(data)
     encode_raw = list(map(lambda x: encode_raw[x] if x < len(encode_raw) else '#', range(encode_length)))
     input = np.array(
@@ -93,7 +92,7 @@ def predict(test_data):
         _, x, _, _, _, y, _, _ = create_graph(train=False)
         sess.run(tf.global_variables_initializer())
         saver = tf.train.Saver()
-        dir = os.listdir("./model")
+        dir = os.listdir("./chat/intent/model")
         num_ckpt = 0
         for i in dir:
             try:
@@ -103,11 +102,14 @@ def predict(test_data):
             except:
                 pass
 
-        saver.restore(sess, './model/check_point-' + str(num_ckpt) + '.ckpt')
+        saver.restore(sess, './chat/intent/model/check_point-' + str(num_ckpt) + '.ckpt')
         y = sess.run([y], feed_dict={x: np.array([test_data])})
         score = y[0][0][np.argmax(y)]
-        print(score)
-        return format(np.argmax(y))
+        print(score, format(np.argmax(y)))
+        if score > configs.fallback_score:
+            return format(np.argmax(y))
+        else:
+            return None
     except Exception as e:
         raise Exception("error on training: {0}".format(e))
     finally:
@@ -116,16 +118,9 @@ def predict(test_data):
 
 def get_intent(text):
     prediction = predict(np.array(inference_embed(text)).flatten())
-    # if prediction is None:
-    #     return "폴백"
-    # else:
-    for mapping, num in intent_mapping.items():
-        if int(prediction) == num:
-            return mapping
-
-
-if __name__ == '__main__':
-    print("입력")
-    while True:
-        res = get_intent(fix(input()))
-        print(res)
+    if prediction is None:
+        return "폴백"
+    else:
+        for mapping, num in intent_mapping.items():
+            if int(prediction) == num:
+                return mapping

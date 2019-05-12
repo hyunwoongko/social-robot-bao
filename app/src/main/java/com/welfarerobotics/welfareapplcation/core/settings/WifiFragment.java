@@ -3,6 +3,7 @@ package com.welfarerobotics.welfareapplcation.core.settings;
 import android.Manifest;
 import android.content.*;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
@@ -20,13 +21,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.kinda.alert.KAlertDialog;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.util.Sound;
+import es.dmoral.toasty.Toasty;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class WifiFragment extends Fragment {
     public class device {
@@ -83,8 +83,8 @@ public class WifiFragment extends Fragment {
         Button btnScan = (Button) getActivity().findViewById(R.id.wifiScan);
         wifi = (WifiManager) getActivity().getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         //Check wifi enabled or not
-        if (wifi.isWifiEnabled() == false) {
-            Toast.makeText(getActivity(), "와이파이를 켜는 중입니다", Toast.LENGTH_LONG).show();
+        if (!wifi.isWifiEnabled()) {
+            Toasty.info(getActivity(), "와이파이를 켜는중입니다.").show();
             wifi.setWifiEnabled(true);
         }
         //register Broadcast receiver
@@ -116,30 +116,16 @@ public class WifiFragment extends Fragment {
                     wifiScanAdapter.notifyDataSetChanged();
                     netCount = netCount - 1;
                 }
+                Collections.reverse(values);
+                wifiScanAdapter.notifyDataSetChanged();
+
             } catch (Exception e) {
                 Log.d("Wifi", e.getMessage());
             }
         }
-        btnScan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Sound.get().effectSound(getActivity(), R.raw.click);
-                wifi.startScan();
-                values.clear();
-                try {
-                    netCount = netCount - 1;
-                    while (netCount >= 0) {
-                        device d = new device();
-                        d.setName(wifiList.get(netCount).SSID.toString());
-                        d.setCapabilities(wifiList.get(netCount).capabilities);
-                        values.add(d);
-                        wifiScanAdapter.notifyDataSetChanged();
-                        netCount = netCount - 1;
-                    }
-                } catch (Exception e) {
-                    Log.d("Wifi", e.getMessage());
-                }
-            }
+        btnScan.setOnClickListener(view -> {
+            Sound.get().effectSound(getActivity(), R.raw.click);
+            scan();
         });
         wifiScanAdapter.setOnClickListener(v -> {
             final device d = (device) v.findViewById(R.id.ssid_name).getTag();
@@ -176,8 +162,34 @@ public class WifiFragment extends Fragment {
 
             // show it
             alertDialog.show();
-
         });
+    }
+
+    private void scan() {
+        wifi.startScan();
+        KAlertDialog pDialog = new KAlertDialog(getActivity(), KAlertDialog.PROGRESS_TYPE);
+        pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+        pDialog.setTitleText("검색중...");
+        pDialog.setCancelable(false);
+        pDialog.show();
+        values.clear();
+        try {
+            netCount = netCount - 1;
+            while (netCount >= 0) {
+                device d = new device();
+                d.setName(wifiList.get(netCount).SSID.toString());
+                d.setCapabilities(wifiList.get(netCount).capabilities);
+                values.add(d);
+                wifiScanAdapter.notifyDataSetChanged();
+                netCount = netCount - 1;
+            }
+            Collections.reverse(values);
+            wifiScanAdapter.notifyDataSetChanged();
+            pDialog.dismissWithAnimation();
+        } catch (Exception e) {
+            Log.d("Wifi", e.getMessage());
+            pDialog.dismissWithAnimation();
+        }
     }
 
     @Override

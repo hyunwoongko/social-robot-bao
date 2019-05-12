@@ -47,7 +47,7 @@ public class GreetingActivity extends BaseActivity {
             msgCount++; // 대화 카운트 증가
             Sound.get().effectSound(getApplicationContext(), R.raw.click);
             if (msgCount >= msg.length) {
-                Intent intent = new Intent(GreetingActivity.this, BluetoothActivity.class);
+                Intent intent = new Intent(GreetingActivity.this, InitialBluetoothActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 finish();

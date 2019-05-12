@@ -1,7 +1,7 @@
 from chat.entity.translate.kor_model.config import config
 from chat.entity.translate.kor_model.data_embed_model import data_utils, word2vec
 from chat.entity.translate.kor_model.data_embed_model.data_utils import CoNLLDataset
-from chat.entity.translate import NERModel
+from chat.entity.translate.kor_model.ner_model.lstmcrf_model import NERModel
 import tensorflow as tf
 
 def embed_model():

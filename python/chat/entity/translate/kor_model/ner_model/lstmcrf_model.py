@@ -4,8 +4,8 @@ import os
 import numpy as np
 import tensorflow as tf
 
-from chat.entity.dust.kor_model import minibatches, pad_sequences, get_chunks
-from chat.entity.dust.kor_model.general_utils import Progbar
+from chat.entity.translate.kor_model.data_embed_model.data_utils import minibatches, pad_sequences, get_chunks
+from chat.entity.translate.kor_model.general_utils import Progbar
 
 
 class NERModel(object):

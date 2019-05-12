@@ -1,13 +1,13 @@
 package com.welfarerobotics.welfareapplcation.core.initial;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.BaseActivity;
-import com.welfarerobotics.welfareapplcation.core.main.MainActivity;
 import com.welfarerobotics.welfareapplcation.core.settings.WifiFragment;
 import com.welfarerobotics.welfareapplcation.util.Sound;
 
@@ -27,7 +27,12 @@ public class InitialWifiActivity extends BaseActivity {
 
         findViewById(R.id.next_imageView).setOnClickListener(v -> {
             Sound.get().effectSound(getApplicationContext(), R.raw.click);
-            startActivity(new Intent(InitialWifiActivity.this, InitialSettingActivity.class));
+            SharedPreferences pref = getSharedPreferences("isFirst", Activity.MODE_PRIVATE);
+            if (pref.getBoolean("isFirst", true)) {
+                startActivity(new Intent(InitialWifiActivity.this, InitialSettingActivity.class));
+            } else {
+                startActivity(new Intent(InitialWifiActivity.this, SplashActivity.class));
+            }
             finish();
         });
     }

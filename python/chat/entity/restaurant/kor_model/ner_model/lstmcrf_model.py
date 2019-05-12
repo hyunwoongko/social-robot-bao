@@ -4,7 +4,7 @@ import os
 import numpy as np
 import tensorflow as tf
 
-from chat.entity.restaurant import minibatches, pad_sequences, get_chunks
+from chat.entity.restaurant.kor_model.data_embed_model.data_utils import minibatches, pad_sequences, get_chunks
 from chat.entity.restaurant.kor_model.general_utils import Progbar
 
 

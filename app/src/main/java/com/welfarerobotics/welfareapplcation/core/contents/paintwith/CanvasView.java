@@ -1,8 +1,16 @@
 package com.welfarerobotics.welfareapplcation.core.contents.paintwith;
 
+
 import android.content.Context;
-import android.graphics.*;
+import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.RectF;
+import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -10,11 +18,11 @@ import android.view.View;
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.List;
+// import android.util.Log;
+// import android.widget.Toast;
 
 /**
- * @Author : Hyunwoong
- * @When : 4/9/2019 1:52 AM
- * @Homepage : https://github.com/gusdnd852
+ * This class defines fields and methods for drawing.
  */
 public class CanvasView extends View {
 
@@ -22,7 +30,7 @@ public class CanvasView extends View {
     public enum Mode {
         DRAW,
         TEXT,
-        ERASER;
+        ERASER
     }
 
     // Enumeration for Drawer
@@ -33,18 +41,18 @@ public class CanvasView extends View {
         CIRCLE,
         ELLIPSE,
         QUADRATIC_BEZIER,
-        QUBIC_BEZIER;
+        QUBIC_BEZIER
     }
 
     private Context context = null;
     private Canvas canvas = null;
     private Bitmap bitmap = null;
 
-    private List<Path> pathLists = new ArrayList<Path>();
-    private List<Paint> paintLists = new ArrayList<Paint>();
+    private List<Path> pathLists = new ArrayList<>();
+    private List<Paint> paintLists = new ArrayList<>();
 
     // for Eraser
-    private int baseColor = Color.WHITE;
+    private int canvasBackgroundColor = Color.WHITE;
 
     // for Undo, Redo
     private int historyPointer = 0;
@@ -58,7 +66,7 @@ public class CanvasView extends View {
     private Paint.Style paintStyle = Paint.Style.STROKE;
     private int paintStrokeColor = Color.BLACK;
     private int paintFillColor = Color.BLACK;
-    private float paintStrokeWidth = 3F;
+    private float paintStrokeWidth = 5F;
     private int opacity = 255;
     private float blur = 0F;
     private Paint.Cap lineCap = Paint.Cap.ROUND;
@@ -140,6 +148,7 @@ public class CanvasView extends View {
         paint.setStrokeWidth(this.paintStrokeWidth);
         paint.setStrokeCap(this.lineCap);
         paint.setStrokeJoin(Paint.Join.MITER);  // fixed
+        paint.setColor(this.paintStrokeColor);
 
         // for Text
         if (this.mode == Mode.TEXT) {
@@ -150,19 +159,11 @@ public class CanvasView extends View {
         }
 
         if (this.mode == Mode.ERASER) {
-            // Eraser
-            paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
-            paint.setARGB(0, 0, 0, 0);
-
-            // paint.setColor(this.baseColor);
-            // paint.setShadowLayer(this.blur, 0F, 0F, this.baseColor);
-        } else {
-            // Otherwise
-            paint.setColor(this.paintStrokeColor);
-            paint.setShadowLayer(this.blur, 0F, 0F, this.paintStrokeColor);
-            paint.setAlpha(this.opacity);
+            paint.setColor(canvasBackgroundColor); // Eraser
         }
 
+        paint.setShadowLayer(this.blur, 0F, 0F, this.paintStrokeColor);
+        paint.setAlpha(this.opacity);
         return paint;
     }
 
@@ -398,7 +399,7 @@ public class CanvasView extends View {
         super.onDraw(canvas);
 
         // Before "drawPath"
-        canvas.drawColor(this.baseColor);
+        canvas.drawColor(this.canvasBackgroundColor);
 
         if (this.bitmap != null) {
             canvas.drawBitmap(this.bitmap, 0F, 0F, new Paint());
@@ -407,7 +408,6 @@ public class CanvasView extends View {
         for (int i = 0; i < this.historyPointer; i++) {
             Path path = this.pathLists.get(i);
             Paint paint = this.paintLists.get(i);
-
             canvas.drawPath(path, paint);
         }
 
@@ -554,8 +554,8 @@ public class CanvasView extends View {
      *
      * @return
      */
-    public int getBaseColor() {
-        return this.baseColor;
+    public int getCanvasBackgroundColor() {
+        return this.canvasBackgroundColor;
     }
 
     /**
@@ -563,8 +563,8 @@ public class CanvasView extends View {
      *
      * @param color
      */
-    public void setBaseColor(int color) {
-        this.baseColor = color;
+    public void setCanvasBackgroundColor(int color) {
+        this.canvasBackgroundColor = color;
     }
 
     /**

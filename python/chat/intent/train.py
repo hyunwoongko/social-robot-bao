@@ -52,7 +52,7 @@ def train_vector_model(datas, train):
         morphs = list(map(lambda x: mecab.morphs(x), pos2))
         print("BUILD MODEL")
         model = FastText(size=vector_size,
-                         window=3,
+                         window=2,
                          workers=8,
                          min_count=1,
                          sg=1,
@@ -64,15 +64,15 @@ def train_vector_model(datas, train):
         model.train(morphs, total_examples=model.corpus_count,
                     epochs=model.epochs,
                     compute_loss=True)
-        if not os.path.exists('./fasttext'):
-            os.makedirs('./fasttext')
+        if not os.path.exists('./chat/intent/fasttext'):
+            os.makedirs('./chat/intent/fasttext')
 
-        model.save('./fasttext/model')
+        model.save('./chat/intent/fasttext/model')
         print("TRAIN COMPLETE")
         return model
     else:
         print("LOAD SAVED MODEL")
-        return FastText.load('./fasttext/model')
+        return FastText.load('./chat/intent/fasttext/model')
 
 
 train_data_list = preprocess_data(tokenizing=configs.tokenizing)
@@ -178,13 +178,13 @@ def train():
     with tf.Session(config=tf.ConfigProto(gpu_options=tf.GPUOptions(allow_growth=True))) as sess:
         labels_train, labels_test, data_filter_train, data_filter_test = get_test_data()
         accuracy, x, y_target, keep_prob, train_step, y, cross_entropy, W_conv1 = create_graph(train=True)
-        path = './model/'
+        path = './chat/intent/model/'
         if not os.path.exists(path):
             os.makedirs(path)
         num_ckpt = 0
-        if len(os.listdir("./model")) > 3:
+        if len(os.listdir("./chat/intent/model")) > 3:
             print('LOAD CNN MODEL')
-            dir = os.listdir("./model")
+            dir = os.listdir("./chat/intent/model")
             for i in dir:
                 try:
                     new_one = int(i.split('-')[1].split('.')[0])
@@ -193,7 +193,7 @@ def train():
                 except:
                     pass
             restorer = tf.train.Saver(tf.all_variables())
-            restorer.restore(sess, './model/check_point-' + str(num_ckpt) + '.ckpt')
+            restorer.restore(sess, './chat/intent/model/check_point-' + str(num_ckpt) + '.ckpt')
         else:
             sess.run(tf.global_variables_initializer())
 
@@ -208,7 +208,3 @@ def train():
                 saver = tf.train.Saver(tf.all_variables())
                 saver.save(sess, path + 'check_point-' + str(index) + '.ckpt')
                 print("Save Models checkpoint : %d" % index)
-
-
-if __name__ == '__main__':
-    train()

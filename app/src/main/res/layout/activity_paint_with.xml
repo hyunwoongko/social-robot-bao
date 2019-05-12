@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:padding="15dp"
+            android:weightSum="3"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/pencil_button"
+                android:text="Pencil"
+                android:textSize="45sp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="Eraser"
+                android:id="@+id/eraser_button"
+                android:textSize="45sp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="Clear"
+                android:id="@+id/clear_button"
+                android:textSize="45sp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <com.welfarerobotics.welfareapplcation.core.contents.paintwith.CanvasView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:id="@+id/canvas_view"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:padding="10dp"
+            android:weightSum="4"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            tools:ignore="NestedWeights">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="Style"
+                android:id="@+id/style_button"
+                android:textSize="45sp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="Galley"
+                android:id="@+id/galley_button"
+                android:textSize="45sp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="Undo"
+                android:id="@+id/undo_button"
+                android:textSize="45sp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="Redo"
+                android:id="@+id/redo_button"
+                android:textSize="45sp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,9 +1,12 @@
 package com.welfarerobotics.welfareapplcation.core.initial;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -22,13 +25,17 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.kinda.alert.KAlertDialog;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.BaseActivity;
 import com.welfarerobotics.welfareapplcation.core.main.MainActivity;
+import com.welfarerobotics.welfareapplcation.entity.Server;
+import com.welfarerobotics.welfareapplcation.entity.ServerCache;
 import com.welfarerobotics.welfareapplcation.entity.User;
 import com.welfarerobotics.welfareapplcation.entity.UserCache;
 import com.welfarerobotics.welfareapplcation.util.DeviceId;
-import com.welfarerobotics.welfareapplcation.util.Preference;
+import com.welfarerobotics.welfareapplcation.util.FirebaseHelper;
+import com.welfarerobotics.welfareapplcation.util.NetworkUtil;
 import com.welfarerobotics.welfareapplcation.util.ToastType;
 
 import java.io.ByteArrayOutputStream;
@@ -56,37 +63,55 @@ public class InitialSettingActivity extends BaseActivity {
 
         storage = FirebaseStorage.getInstance();
         Button nextButton = findViewById(R.id.initial_setting_next_button);
-
         iv_UserPhotos = new ArrayList<>();
         iv_UserPhotos.add((ImageView) findViewById(R.id.user_image_0));
         iv_UserPhotos.add((ImageView) findViewById(R.id.user_image_1));
         iv_UserPhotos.add((ImageView) findViewById(R.id.user_image_2));
-
         iv_UserPhotos.get(0).setOnClickListener(view -> captureImage(0));
         iv_UserPhotos.get(1).setOnClickListener(view -> captureImage(1));
         iv_UserPhotos.get(2).setOnClickListener(view -> captureImage(2));
+
+        if (!NetworkUtil.isOnline(this)) {
+            KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.ERROR_TYPE);
+            pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+            pDialog.changeAlertType(KAlertDialog.ERROR_TYPE);
+            pDialog.setTitleText("네트워크 연결 에러");
+            pDialog.setContentText("와이파이 네트워크에 연결해야\n원활한 사용이 가능합니다.");
+            pDialog.setCancelable(false);
+            pDialog.setConfirmText("확인");
+            pDialog.setConfirmClickListener(kAlertDialog -> startActivity(new Intent(InitialSettingActivity.this, InitialWifiActivity.class)));
+            pDialog.show();
+        }
         nextButton.setOnClickListener(v -> {
             if (photos.size() < 3) {
-                showToast("사용자의 사진 3장을 업로드 해주세요.", ToastType.error);
+                showToast("사용자의 사진 3장을 모두 업로드 해주세요.\n사진은 얼굴인식 기능에 사용됩니다.", ToastType.error);
             } else {
-                String id = DeviceId.getInstance(this).getUUID();
-                User model = new User();
-                model.setId(id);
-                model.setName(((EditText) findViewById(R.id.user_name)).getText().toString());
-                model.setLocation(((EditText) findViewById(R.id.user_address)).getText().toString());
-                model.setPhoto(photos);
-                UserCache.setInstance(model);
-                // 싱글톤 업로드
 
-                FirebaseDatabase.getInstance()
-                        .getReference("user")
-                        .child(id)
-                        .setValue(model);
-                // 디비 업로드
+                FirebaseHelper.get().connect(FirebaseDatabase.getInstance().getReference("server"), snapshot -> {
+                    Server server = snapshot.getValue(Server.class);
+                    ServerCache.setInstance(server);
 
-                Preference.get(InitialSettingActivity.this).setBoolean("firstUser", false);
-                startActivity(new Intent(InitialSettingActivity.this, MainActivity.class));
-                finish();
+                    String id = DeviceId.getInstance(this).getUUID();
+                    User model = new User();
+                    model.setId(id);
+                    model.setName(((EditText) findViewById(R.id.user_name)).getText().toString());
+                    model.setLocation(((EditText) findViewById(R.id.user_address)).getText().toString());
+                    model.setPhoto(photos);
+                    UserCache.setInstance(model);
+                    // 싱글톤 업로드
+
+                    FirebaseDatabase.getInstance()
+                            .getReference("user")
+                            .child(id)
+                            .setValue(model);
+                    // 디비 업로드
+                    SharedPreferences pref = getSharedPreferences("isFirst", Activity.MODE_PRIVATE);
+                    pref.edit()
+                            .putBoolean("isFirst", false)
+                            .apply();
+                    startActivity(new Intent(InitialSettingActivity.this, MainActivity.class));
+                    finish();
+                });
             }
         });
     }
@@ -139,7 +164,6 @@ public class InitialSettingActivity extends BaseActivity {
 
     }
 
-
     private File createImageFile() {
         //이미지 파일 이름 생성
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.KOREA).format(new Date());
@@ -160,7 +184,21 @@ public class InitialSettingActivity extends BaseActivity {
         //Bitmap photo = ImageUtil.cropCenter(extras.getParcelable("data")); centor crop기능 (extras.getParcelable("data"));
         Bitmap photo = extras.getParcelable("data");
         iv_UserPhotos.get(requestCode).setImageBitmap(photo);
-        Toast.makeText(getApplicationContext(), "촬영 성공", Toast.LENGTH_SHORT).show();
+        KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE);
+        pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+        pDialog.setTitleText("사진 업로드 중...");
+        pDialog.setCancelable(false);
+        pDialog.show();
+
+        if (!NetworkUtil.isOnline(this)) {
+            pDialog.changeAlertType(KAlertDialog.ERROR_TYPE);
+            pDialog.setTitleText("네트워크 연결 에러");
+            pDialog.setContentText("와이파이 네트워크에 연결해야\n원활한 사용이 가능합니다.");
+            pDialog.setCancelable(false);
+            pDialog.setConfirmText("확인");
+            pDialog.setConfirmClickListener(kAlertDialog -> startActivity(new Intent(InitialSettingActivity.this, InitialWifiActivity.class)));
+            pDialog.show();
+        }
 
         StorageReference storageRef = storage.getReference()
                 .child(DeviceId.getInstance(this).getUUID())
@@ -174,9 +212,15 @@ public class InitialSettingActivity extends BaseActivity {
 
         UploadTask uploadTask = storageRef.putBytes(datas);
         uploadTask.addOnFailureListener(exception -> {
-            Toast.makeText(this, "사진 업로드에 실패였습니다", Toast.LENGTH_SHORT).show();
+            pDialog.dismissWithAnimation();
+            showToast("사진 업로드에 실패하였습니다. 연결상태를 확인해주세요.", ToastType.error);
+            startActivity(new Intent(this, InitialWifiActivity.class));
         }).addOnSuccessListener(taskSnapshot -> {
-            Toast.makeText(getApplicationContext(), "사진을 업로드 하였습니다.", Toast.LENGTH_SHORT).show();
+            pDialog.changeAlertType(KAlertDialog.SUCCESS_TYPE);
+            pDialog.setTitleText("사진 업로드에 성공했습니다.");
+            pDialog.confirmButtonColor(R.color.confirm_button);
+            pDialog.setConfirmText("확인");
+            pDialog.setConfirmClickListener(KAlertDialog::dismissWithAnimation);
             //이미지 URI을 RealTime Database에 upload
             photos.add(taskSnapshot.getDownloadUrl().toString());
         });

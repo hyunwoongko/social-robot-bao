@@ -4,8 +4,8 @@ import os
 import numpy as np
 import tensorflow as tf
 
-from chat.entity.weather.kor_model.data_embed_model import minibatches, pad_sequences, get_chunks
-from chat.entity.weather.kor_model import Progbar
+from chat.entity.weather.kor_model.data_embed_model.data_utils import minibatches, pad_sequences, get_chunks
+from chat.entity.weather.kor_model.general_utils import Progbar
 
 
 class NERModel(object):

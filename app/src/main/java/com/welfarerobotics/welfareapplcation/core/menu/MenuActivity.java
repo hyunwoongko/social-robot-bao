@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.api.chat.crawler.YoutubeApi;
-import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramActivity;
+import com.welfarerobotics.welfareapplcation.core.contents.paintwith.PaintWithActivity;
 import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleActivity;
 import com.welfarerobotics.welfareapplcation.core.settings.SettingActivity;
 import com.welfarerobotics.welfareapplcation.core.youtube.YoutubeActivity;
@@ -31,7 +31,7 @@ public class MenuActivity extends AppCompatActivity {
         ImageButton ibplaylang = findViewById(R.id.playlang);
         ImageButton ibkidssong = findViewById(R.id.listensong);
         ImageButton ibfollowbao = findViewById(R.id.followbao);
-        ImageButton ibtangram = findViewById(R.id.playnumber);
+        ImageButton iplayart = findViewById(R.id.playart);
 
         ActivityCompat.requestPermissions(MenuActivity.this, new String[]{Manifest.permission.CAMERA,
                 Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE,
@@ -47,8 +47,9 @@ public class MenuActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), ConversationEdit.class);
             startActivity(intent);
         });
-        ibtangram.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), TangramActivity.class);
+
+        iplayart.setOnClickListener(v->{
+            Intent intent = new Intent(MenuActivity.this, PaintWithActivity.class);
             startActivity(intent);
         });
         ibkidssong.setOnClickListener(view -> {
