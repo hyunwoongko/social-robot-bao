@@ -37,6 +37,7 @@ import com.welfarerobotics.welfareapplcation.api.chat.chatutil.EmotionAdder;
 import com.welfarerobotics.welfareapplcation.core.BaseActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramListItem;
 import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramStageCash;
+import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleCache;
 import com.welfarerobotics.welfareapplcation.core.menu.MenuActivity;
 import com.welfarerobotics.welfareapplcation.entity.Server;
 import com.welfarerobotics.welfareapplcation.entity.ServerCache;
@@ -255,6 +256,7 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
 
             }
         });
+        fairytaleDataSetting();
         tangramDataSetting();
     }
 
@@ -452,8 +454,6 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
     //STT가 자동 생성한 콜백 메소드
     @Override
     public void onReady() {
-        runOnUiThread(() ->
-                Toast.makeText(getApplicationContext(), "음성인식 시작", Toast.LENGTH_SHORT).show());
     }
 
     @Override
@@ -637,6 +637,45 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
         }
 
     }
+
+    private void fairytaleDataSetting(){
+        try {
+            FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+            DatabaseReference databaseReference = firebaseDatabase.getReference();
+            databaseReference.child("fairytale").addChildEventListener(new ChildEventListener() {
+                @Override
+                public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                    FairytaleCache.getInstance().addFairytale(dataSnapshot.getValue().toString());
+                }
+
+                @Override
+                public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                    FairytaleCache.getInstance().clear();
+                    fairytaleDataSetting();
+                }
+
+                @Override
+                public void onChildRemoved(DataSnapshot dataSnapshot) {
+                    FairytaleCache.getInstance().clear();
+                    fairytaleDataSetting();
+                }
+
+                @Override
+                public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+        } catch (Throwable a){
+            a.printStackTrace();
+        }
+
+    }
+
     private Bitmap convertUrl(String urlString){
 
         try{

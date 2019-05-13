@@ -3,7 +3,7 @@ package com.welfarerobotics.welfareapplcation.core.contents.tangram;
 import java.util.ArrayList;
 
 public class TangramStageCash {
-    private  static ArrayList<TangramListItem> backImgaes = new ArrayList<>();
+    private static ArrayList<TangramListItem> backImgaes = new ArrayList<>();
     private static TangramStageCash instance;
 
     private TangramStageCash() {
@@ -21,18 +21,10 @@ public class TangramStageCash {
 
     }
     public ArrayList<TangramListItem> getImages(){
-
         return backImgaes;
-
     }
 
     public void clear(){
-
         backImgaes = new ArrayList<>();
-
     }
-
-
-
-
 }
