@@ -16,3 +16,4 @@ captures/
 *.data-00000-of-00001
 model
 checkpoint
+doc2vec_model

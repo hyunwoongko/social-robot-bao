@@ -29,7 +29,7 @@ def preprocess_data(tokenizing):
         count = 0
         for i in data['question']:
             data.replace(i, tokenize(i), regex=True, inplace=True)
-            if count % 50 == 0:
+            if count % 100 == 0:
                 print("CURRENT COLLECT : ", count)
             count += 1
 
@@ -43,6 +43,7 @@ def preprocess_data(tokenizing):
 
 
 def train_vector_model(datas, train):
+    path = configs.fasttext_path
     if train:
         mecab = Okt()
         str_buf = datas['encode']
@@ -64,15 +65,16 @@ def train_vector_model(datas, train):
         model.train(morphs, total_examples=model.corpus_count,
                     epochs=model.epochs,
                     compute_loss=True)
-        if not os.path.exists('./chat/intent/fasttext'):
-            os.makedirs('./chat/intent/fasttext')
 
-        model.save('./chat/intent/fasttext/model')
+        if not os.path.exists(path):
+            os.makedirs(path)
+
+        model.save(path + 'model')
         print("TRAIN COMPLETE")
         return model
     else:
         print("LOAD SAVED MODEL")
-        return FastText.load('./chat/intent/fasttext/model')
+        return FastText.load(path + 'model')
 
 
 train_data_list = preprocess_data(tokenizing=configs.tokenizing)
@@ -174,17 +176,17 @@ def create_graph(train=True):
     return accuracy, x, y_target, keep_prob, train_step, y, cross_entropy, W_conv1
 
 
-def train():
+def train_intent():
     with tf.Session(config=tf.ConfigProto(gpu_options=tf.GPUOptions(allow_growth=True))) as sess:
         labels_train, labels_test, data_filter_train, data_filter_test = get_test_data()
         accuracy, x, y_target, keep_prob, train_step, y, cross_entropy, W_conv1 = create_graph(train=True)
-        path = './chat/intent/model/'
+        path = configs.model_path
         if not os.path.exists(path):
             os.makedirs(path)
         num_ckpt = 0
-        if len(os.listdir("./chat/intent/model")) > 3:
+        if len(os.listdir(path)) > 3:
             print('LOAD CNN MODEL')
-            dir = os.listdir("./chat/intent/model")
+            dir = os.listdir(path)
             for i in dir:
                 try:
                     new_one = int(i.split('-')[1].split('.')[0])
@@ -193,18 +195,18 @@ def train():
                 except:
                     pass
             restorer = tf.train.Saver(tf.all_variables())
-            restorer.restore(sess, './chat/intent/model/check_point-' + str(num_ckpt) + '.ckpt')
+            restorer.restore(sess, configs.model_path + 'check_point-' + str(num_ckpt) + '.ckpt')
         else:
             sess.run(tf.global_variables_initializer())
 
         for i in range(learning_step):
             sess.run(train_step, feed_dict={x: data_filter_train, y_target: labels_train, keep_prob: 0.5})
             index = i + num_ckpt
-            if i % 100 == 0:
+            if i % 50 == 0:
                 train_accuracy = sess.run(accuracy,
                                           feed_dict={x: data_filter_train, y_target: labels_train, keep_prob: 1})
                 print("step %d, training accuracy: %.3f" % (index, train_accuracy))
-            if i != 0 and i % 500 == 0:
+            if i != 0 and i % 50 == 0:
                 saver = tf.train.Saver(tf.all_variables())
                 saver.save(sess, path + 'check_point-' + str(index) + '.ckpt')
                 print("Save Models checkpoint : %d" % index)

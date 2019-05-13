@@ -25,7 +25,7 @@ vector_size = configs.vector_size
 
 def inference_embed(data):
     mecab = Okt()
-    model = FastText.load('./chat/intent/fasttext/model')
+    model = FastText.load(configs.fasttext_path + 'model')
     encode_raw = mecab.morphs(data)
     encode_raw = list(map(lambda x: encode_raw[x] if x < len(encode_raw) else '#', range(encode_length)))
     input = np.array(
@@ -92,7 +92,7 @@ def predict(test_data):
         _, x, _, _, _, y, _, _ = create_graph(train=False)
         sess.run(tf.global_variables_initializer())
         saver = tf.train.Saver()
-        dir = os.listdir("./chat/intent/model")
+        dir = os.listdir(configs.model_path)
         num_ckpt = 0
         for i in dir:
             try:
@@ -102,10 +102,10 @@ def predict(test_data):
             except:
                 pass
 
-        saver.restore(sess, './chat/intent/model/check_point-' + str(num_ckpt) + '.ckpt')
+        saver.restore(sess, configs.model_path + 'check_point-' + str(num_ckpt) + '.ckpt')
         y = sess.run([y], feed_dict={x: np.array([test_data])})
         score = y[0][0][np.argmax(y)]
-        print(score, format(np.argmax(y)))
+        print('목적스코어 : ', score, format(np.argmax(y)))
         if score > configs.fallback_score:
             return format(np.argmax(y))
         else:

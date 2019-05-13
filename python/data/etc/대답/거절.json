@@ -1,0 +1,53 @@
+// adrenalin : 아드레날린 : 흥분, 불안
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 거절 : 코르티솔 분비
+
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "그래 .. 거절할 줄 알았어",
+      "그럴 수도 있지 뭐"
+    ]
+  },
+  "cortisol": {
+    "figures": 1,
+    "answer": [
+      "그래... 알겠어...",
+      "싫은거구나.. 알겠어."
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "헤헤 그럴 수도 있지 뭐",
+      "그래 알았어 헤헤"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "그렇구나. 그럴 수도 있지 뭐.. 알았어!",
+      "헤헤. 그래 알겠어"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "쳇.. 알았어",
+      "칫.. 그래"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "알았어. 괜찮아",
+      "그래 알았어."
+    ]
+  }
+}

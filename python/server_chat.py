@@ -5,7 +5,6 @@ import tensorflow as tf
 from flask import Flask
 
 from chat.crawler.dust import today_dust, tomorrow_dust, after_tomorrow_dust
-from chat.crawler.exchange import get_exchange
 from chat.crawler.issue import get_issue
 from chat.crawler.news import get_news, get_keyword_news
 from chat.crawler.restaurant import recommend_restaurant
@@ -15,14 +14,13 @@ from chat.crawler.weather import today_weather, tomorrow_weather, after_tomorrow
 from chat.crawler.wiki import wiki
 from chat.crawler.wise import get_wise
 from chat.crawler.youtube import get_youtube
-from chat.entity.exchange.entity_recognizer import get_exchange_entity
 from chat.entity.news.entity_recognizer import get_news_entity
 from chat.entity.restaurant.entity_recognizer import get_restaurant_entity
 from chat.entity.song.entity_recognizer import get_song_entity
 from chat.entity.translate.entity_recognizer import get_translate_entity
 from chat.entity.weather.entity_recognizer import get_weather_entity
 from chat.entity.wiki.entity_recognizer import get_wiki_entity
-from chat.hanspell.spell_checker import fix
+from chat.util.hanspell.spell_checker import fix
 from chat.intent.classifier import get_intent
 from chat.util.tokenizer import tokenize
 
@@ -200,19 +198,6 @@ def server_restaurant_entity(text):
 @app.route('/restaurant/<text>', methods=['GET', 'POST'])
 def server_restaurant(text):
     return recommend_restaurant(text)
-
-
-##################################
-############ API : EXCHANGE ############
-##################################
-@app.route('/entity_exchange/<text>', methods=['GET', 'POST'])
-def server_exchange_entity(text):
-    return str(get_exchange_entity(text, False))
-
-
-@app.route('/exchange/<text>', methods=['GET', 'POST'])
-def server_exchange(text):
-    return get_exchange(text)
 
 
 if __name__ == '__main__':

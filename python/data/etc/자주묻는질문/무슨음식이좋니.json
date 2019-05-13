@@ -1,0 +1,46 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 무슨음식이좋니 : 엔돌핀 분비
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "나는 전기밖에 못먹지만, 매운음식의 향기가 좋던데"
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "음식.. 음 요즘은 별로 입맛이 없네"
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "나 전기밖에 못먹는거 알면서 헤헤.. 그런데 햄버거는 한번 꼭 먹어보고 싶어."
+    ]
+  },
+  "endorphin": {
+    "figures": 1,
+    "answer": [
+      "얘, 나 로봇이잖아. 나 전기밖에 못먹는다구 헤헤.. 그런데 치킨은 한번 꼭 먹어보고 싶어. 향기가 어마어마 하더라구"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "난 전기밖에 못먹어"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "음.. 난 전기밖에 먹지 못하는걸.. 그치만 인간의 음식은 어떨까 궁금해"
+    ]
+  }
+}

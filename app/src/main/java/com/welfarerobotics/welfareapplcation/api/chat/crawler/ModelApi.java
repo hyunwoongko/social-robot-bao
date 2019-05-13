@@ -36,7 +36,7 @@ public final class ModelApi {
      *
      * @param kind 개체 종류
      * @param text 개체명을 인식할 문장
-     * @return 단어와 개체명이 포함된 Map
+     * @return 단어와 개체명이 포함된 문자열배열
      */
     public static String[][] getEntity(String kind, String text) throws IOException {
         String entityString = Jsoup.connect(ServerCache.getInstance().getUrl() + "/entity_" + kind + "/" + Encoder
@@ -58,22 +58,5 @@ public final class ModelApi {
         }
 
         return splitEntityStringSet.toArray(new String[0][]);
-    }
-
-    /**
-     * Transformer 문장 생성기 API
-     * 입력 문장을 입력하면 학습된 단어를 이어붙여 문장을 생성함
-     *
-     * @param userid 유저 아이디
-     * @param text   입력문장
-     * @return Transformer의 출력 문장
-     */
-    public static String generateAnswer(String userid, String text) throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/generate_answer/" + userid + "/" + Encoder
-                .utf8(text))
-                .timeout(20000)
-                .get()
-                .body()
-                .text();
     }
 }

@@ -67,37 +67,37 @@ def today_weather(location):
                    .find('p', class_='cast_txt').text).split(',')
 
         if weather[0] == '비':
-            weather = '오늘은 우산을 챙겨야 할지도 몰라요. 오늘 ' + location + '에는 ' + '비가 와요.' + \
+            weather = '오늘은 우산을 챙겨야 할지도 몰라. 오늘 ' + location + '에는 ' + '비가 와.' + \
                       ' 현재 온도는 ' + temperature + '로' + weather[1].replace('˚', '도')
         elif weather[0] == '맑음':
-            weather = '오늘 ' + location + '에는 ' + '해가 떴어요. 아주 맑아요.' + \
+            weather = '오늘 ' + location + '에는 ' + '해가 떴어. 아주 맑아.' + \
                       ' 현재 온도는 ' + temperature + '로' + weather[1].replace('˚', '도')
         elif weather[0] == '흐림':
-            weather = '오늘 ' + location + '에는 ' + '구름이 끼어있을 거에요. 날씨가 꽤나 흐려요.' + \
+            weather = '오늘 ' + location + '에는 ' + '구름이 끼어있을 거야. 날씨가 꽤나 흐려.' + \
                       ' 현재 온도는 ' + temperature + '로' + weather[1].replace('˚', '도')
         elif weather[0] == '구름많고 한때 비':
-            weather = '오늘 ' + location + '에는 ' + '구름이 끼어있고 한때 비가 올 수도 있어요. 날씨가 꽤나 흐려요.' + \
+            weather = '오늘 ' + location + '에는 ' + '구름이 끼어있고 한때 비가 올 수도 있어. 날씨가 꽤나 흐려.' + \
                       ' 현재 온도는 ' + temperature + '로' + weather[1].replace('˚', '도')
         elif weather[0] == '구름많음':
-            weather = '오늘 ' + location + '에는 ' + '구름이 많이 많이 끼어있어요.' + \
+            weather = '오늘 ' + location + '에는 ' + '구름이 많이 많이 끼어있어.' + \
                       ' 현재 온도는 ' + temperature + '로' + weather[1].replace('˚', '도')
         elif weather[0] == '구름조금':
-            weather = '오늘 ' + location + '에는 ' + '구름이 조금 끼어있어요.' + \
+            weather = '오늘 ' + location + '에는 ' + '구름이 조금 끼어있어.' + \
                       ' 현재 온도는 ' + temperature + '로' + weather[1].replace('˚', '도')
         elif weather[0] == '눈':
-            weather = '오늘 ' + location + '에는 ' + '눈이 와요. 추울테니까 옷을 따뜻하게 입고 가요.' + \
+            weather = '오늘 ' + location + '에는 ' + '눈이 와. 추울테니까 옷을 따뜻하게 입고 가야해.' + \
                       ' 현재 온도는 ' + temperature + '로' + weather[1].replace('˚', '도')
         elif weather[0] == '우박':
-            weather = '조심하세요! 오늘 ' + location + '에는 ' + '우박이 내려요.' + \
+            weather = '조심해! 오늘 ' + location + '에는 ' + '우박이 내려.' + \
                       ' 현재 온도는 ' + temperature + '로' + weather[1].replace('˚', '도')
         elif weather[0] == '흐리고 가끔 비':
-            weather = '오늘은 우산을 챙겨야 할지도 몰라요. 오늘 ' + location + '에는 ' + '비가 올 수 있고 흐린 날씨에요.' + \
+            weather = '오늘은 우산을 챙겨야 할지도 몰라. 오늘 ' + location + '에는 ' + '비가 올 수 있고 흐린 날씨야.' + \
                       ' 현재 온도는 ' + temperature + '로' + weather[1].replace('˚', '도')
 
-        template_msg = '오늘 ' + location + ' 날씨를 알려드릴게요. ' + weather
+        template_msg = '오늘 ' + location + ' 날씨를 알려줄게. ' + weather
 
     except:
-        template_msg = '죄송해요. 아직 배우고 있는 중이라 ' + location + "의 날씨는 알 수 없어요. 지역의 이름을 말하시면 알려드릴게요."
+        template_msg = '아직 배우고 있는 중이라  그 곳의 날씨는 알 수 없어'
 
     return template_msg
 
@@ -138,21 +138,21 @@ def tomorrow_weather(location):
             glue = '에도'
 
         weather_morning, weather_noon = __tone_maker(weather_morning, weather_noon)
-        template_msg = '내일 ' + location + ' 날씨를 알려드릴게요.' + ' 내일 오전엔 ' + weather_morning[
-            0] + ' 기온은 ' + temperature_morning + '에요. 오후' + glue + ' ' + weather_noon[
-                           0] + ' 기온은 ' + temperature_noon + '입니다.'
+        template_msg = '내일 ' + location + ' 날씨를 알려줄게.' + ' 내일 오전엔 ' + weather_morning[
+            0] + ' 기온은 ' + temperature_morning + '야. 오후' + glue + ' ' + weather_noon[
+                           0] + ' 기온은 ' + temperature_noon + '야.'
 
         if '비가 내' in template_msg:
-            template_msg += ' 내일은 우산을 챙기는게 좋을 것 같아요.'
+            template_msg += ' 내일은 우산을 챙기는게 좋을 것 같아.'
 
         elif '눈이 내' in template_msg:
-            template_msg += ' 내일 나가신다면 따뜻하게 입고 나가시는게 좋을 것 같아요.'
+            template_msg += ' 내일 나간다면 따뜻하게 입고 나가시는게 좋을 것 같아.'
 
         elif '우박이' in template_msg:
-            template_msg += ' 내일은 우박을 꼭 조심하세요!'
+            template_msg += ' 내일은 우박을 꼭 조심해!'
 
     except:
-        template_msg = '죄송해요. 아직 배우고 있는 중이라 ' + location + "의 날씨는 알 수 없어요. 지역의 이름을 말하시면 알려드릴게요."
+        template_msg = '아직 배우고 있는 중이라  그곳의 날씨는 알 수 없어'
 
     return template_msg
 
@@ -197,19 +197,19 @@ def after_tomorrow_weather(location):
             glue = '에도'
 
         weather_morning, weather_noon = __tone_maker(weather_morning, weather_noon)
-        template_msg = '모레 ' + location + ' 날씨를 알려드릴게요.' + ' 모레 오전엔 ' + weather_morning[
-            0] + ' 기온은 ' + temperature_morning + '에요. 오후' + glue + ' ' + weather_noon[
-                           0] + ' 기온은 ' + temperature_noon + '입니다.'
+        template_msg = '모레 ' + location + ' 날씨를 알려줄게.' + ' 모레 오전엔 ' + weather_morning[
+            0] + ' 기온은 ' + temperature_morning + '야. 오후' + glue + ' ' + weather_noon[
+                           0] + ' 기온은 ' + temperature_noon + '야.'
 
         if '비가 내' in template_msg:
-            template_msg += ' 모레는 우산을 챙기는게 좋을 것 같아요.'
+            template_msg += ' 모레는 우산을 챙기는게 좋을 것 같아.'
         elif '눈이 내' in template_msg:
-            template_msg += ' 모레 나가신다면 따뜻하게 입고 나가시는게 좋을 것 같아요.'
+            template_msg += ' 모레 나간다면 따뜻하게 입고 나가시는게 좋을 것 같아.'
         elif '우박이' in template_msg:
-            template_msg += ' 모레는 우박을 꼭 조심하세요!'
+            template_msg += ' 모레는 우박을 꼭 조심해!'
 
     except:
-        template_msg = '죄송해요. 아직 배우고 있는 중이라 ' + location + "의 날씨는 알 수 없어요. 지역의 이름을 말하시면 알려드릴게요."
+        template_msg = '아직 배우고 있는 중이라  그곳의 날씨는 알 수 없어'
 
     return template_msg
 
@@ -229,9 +229,9 @@ def specific_weather(location, date):
         weather = soup.find('span', {'id': 'wob_dc'}).text
         temp = soup.find('span', class_='wob_t').text
         if weather == '비': weather = '비가 오고'
-        response = date + ' 날씨를 알려드릴게요. ' + location + '의 ' + date + ' 날씨는 ' + weather + ' 온도는 ' + temp + '도입니다.'
+        response = date + ' 날씨를 알려줄게. ' + location + '의 ' + date + ' 날씨는 ' + weather + ' 온도는 ' + temp + '도야.'
     except:
-        response = '죄송해요. 아직 배우고 있는 중이라 ' + date + "의 날씨는 알 수 없어요."
+        response = '잘 못들었는데 다시 말해줄래?'
     return response
 
 
@@ -242,7 +242,7 @@ def this_week_weather(location):
             'referer': 'http://google.com'}
 
         days = ['월', '화', '수', '목', '금', '토', '일']
-        templete_msg = location + '의 이번주 날씨를 알려드릴게요. '
+        templete_msg = location + '의 이번주 날씨를 알려줄게. '
         response = []
         response.append(templete_msg)
 
@@ -256,9 +256,8 @@ def this_week_weather(location):
             weather = soup.find('span', {'id': 'wob_dc'}).text
             temp = soup.find('span', class_='wob_t').text
             if weather == '비': weather = '비가 오고'
-            weather = i + '요일의 날씨는 ' + weather + ' 온도는 ' + temp + '도 입니다. '
+            weather = i + '요일의 날씨는 ' + weather + ' 온도는 ' + temp + '도 야. '
             response.append(weather)
     except:
-        response = '죄송해요. 아직 배우고 있는 중이라 ' + location + "의 날씨는 알 수 없어요. 지역의 이름을 말하시면 알려드릴게요."
-
+        response = '잘 못들었는데 다시 말해줄래?'
     return ' '.join(response)

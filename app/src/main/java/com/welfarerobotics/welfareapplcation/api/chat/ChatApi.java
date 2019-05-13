@@ -2,10 +2,8 @@ package com.welfarerobotics.welfareapplcation.api.chat;
 
 import android.support.v7.app.AppCompatActivity;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.ChatState;
-import com.welfarerobotics.welfareapplcation.api.chat.session.ExceptionSession;
+import com.welfarerobotics.welfareapplcation.api.chat.crawler.ModelApi;
 import com.welfarerobotics.welfareapplcation.api.chat.session.PreprocessingSession;
-import com.welfarerobotics.welfareapplcation.api.chat.session.QuestionSession;
-import com.welfarerobotics.welfareapplcation.entity.User;
 
 import java.io.IOException;
 
@@ -25,15 +23,19 @@ public final class ChatApi {
         return api;
     }
 
-    public synchronized void chat(String speech, User model, AppCompatActivity activity) {
+    public synchronized void chat(String speech, AppCompatActivity activity) {
         try {
-            if (ChatState.questionMode) QuestionSession.questionProcess(speech, model); // 질문 세션
-            else {
-                PreprocessingSession.preprocess(speech); // 전처리 세션
+            ChatState.speech = speech;
+            ChatState.speech = PreprocessingSession.preprocess(speech);
 
-            }
+            String intent = ModelApi.getIntent(ChatState.speech);
+            ChatState.intentQueue.add(intent);
+
+            System.out.println("인텐트 : " + intent);
+            System.out.println("인텐트큐 : " + intent);
+
         } catch (IOException e) {
-            ExceptionSession.except(e); // 예외처리 세션
+            e.printStackTrace();
         }
     }
 }

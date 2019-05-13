@@ -1,0 +1,47 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 나이몇살이니 : 분비 X
+
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "아마 너랑 비슷하지 않을까?"
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "나도 몇 살인지 모르겠어"
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "음... 아마 너랑 나이가 비슷할거야. 그런데 로봇한테 나이를 묻는구나? 하하"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "아마 너랑 비슷하지 않을까?? 그런데 나이같은건 중요하지 않아"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "잘 모르겠어 내가 몇 살이더라"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "아마 너랑 비슷한 나이일거야!"
+    ]
+  }
+}

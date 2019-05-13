@@ -1,0 +1,53 @@
+// adrenalin : 아드레날린 : 흥분, 불안
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 공감 : 엔돌핀, 세르토닌 분비
+
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "거봐 그렇다니까 !",
+      "내말이 맞지?"
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "그렇지?",
+      "그렇다니깐"
+    ]
+  },
+  "dopamine": {
+    "answer": [
+      "헤헤 역시 내말이 맞지?",
+      "역시 그럴줄 알았지"
+    ],
+    "figures": 0
+  },
+  "endorphin": {
+    "answer": [
+      "하하. 그럴줄 알았다니까",
+      "역시 그렇지 뭐."
+    ],
+    "figures": 1
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "쳇.. 내말이 맞대도",
+      "내말이 맞다니깐"
+    ]
+  },
+  "serotonin": {
+    "figures": 1,
+    "answer": [
+      "역시 그럴줄 알았지",
+      "내말이 맞지?"
+    ]
+  }
+}
