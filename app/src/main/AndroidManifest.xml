@@ -59,7 +59,8 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".core.menu.MenuActivity"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape">
+        </activity>
         <activity
             android:name=".core.settings.SettingActivity"
             android:screenOrientation="landscape" />
@@ -73,7 +74,6 @@
         <activity
             android:name=".core.fairytale.FairytaleActivity"
             android:theme="@android:style/Theme.Dialog" />
-
         <activity
             android:name=".core.initial.InitialBluetoothActivity"
             android:screenOrientation="landscape" />
@@ -84,7 +84,6 @@
             android:name=".core.contents.tangram.TangramActivity"
             android:label="@string/app_name"
             android:screenOrientation="landscape" />
-
         <activity
             android:name=".core.contents.paintwith.GalleryActivity"
             android:screenOrientation="landscape" />

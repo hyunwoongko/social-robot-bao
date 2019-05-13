@@ -1,30 +1,38 @@
 package com.welfarerobotics.welfareapplcation.core.menu;
 
-import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageButton;
 import android.widget.Toast;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.api.chat.crawler.YoutubeApi;
 import com.welfarerobotics.welfareapplcation.core.contents.paintwith.PaintWithActivity;
+import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramActivity;
 import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleActivity;
 import com.welfarerobotics.welfareapplcation.core.settings.SettingActivity;
 import com.welfarerobotics.welfareapplcation.core.youtube.YoutubeActivity;
+import me.piruin.quickaction.ActionItem;
+import me.piruin.quickaction.QuickAction;
 
 import java.io.IOException;
 
 public class MenuActivity extends AppCompatActivity {
     private String youtubeUrl;
+    private QuickAction quickActionArt;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        ActionItem aipaintwith = new ActionItem(1,R.drawable.menu_paintwith);
+        ActionItem aitangram = new ActionItem(2,R.drawable.menu_tangram);
+
+        quickActionArt = new QuickAction(this, QuickAction.HORIZONTAL);
+        quickActionArt.addActionItem(aipaintwith);
+        quickActionArt.addActionItem(aitangram);
 
         ImageButton ibbackbtn = findViewById(R.id.backbutton);
         ImageButton ibSettings = findViewById(R.id.settings);
@@ -33,25 +41,22 @@ public class MenuActivity extends AppCompatActivity {
         ImageButton ibfollowbao = findViewById(R.id.followbao);
         ImageButton iplayart = findViewById(R.id.playart);
 
-        ActivityCompat.requestPermissions(MenuActivity.this, new String[]{Manifest.permission.CAMERA,
-                Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.ACCESS_COARSE_LOCATION,
-                Manifest.permission.ACCESS_FINE_LOCATION}, 1);
-
         ibbackbtn.setOnClickListener(view -> onBackPressed());
+
         ibSettings.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(), SettingActivity.class);
             startActivity(intent);
         });
+
         ibplaylang.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(), ConversationEdit.class);
             startActivity(intent);
         });
 
         iplayart.setOnClickListener(v->{
-            Intent intent = new Intent(MenuActivity.this, PaintWithActivity.class);
-            startActivity(intent);
+            quickActionArt.show(v);
         });
+
         ibkidssong.setOnClickListener(view -> {
             try {
                 youtubeUrl = YoutubeApi.getYoutube("동요");
@@ -67,9 +72,20 @@ public class MenuActivity extends AppCompatActivity {
             youtubeIntent.putExtra("url", youtubeUrl);
             startActivity(youtubeIntent);
         });
+
         ibfollowbao.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(), FairytaleActivity.class);
             startActivity(intent);
+        });
+
+        quickActionArt.setOnActionItemClickListener(item -> {
+            if(item == aipaintwith){
+                Intent intent = new Intent(MenuActivity.this, PaintWithActivity.class);
+                startActivity(intent);
+            } else if(item == aitangram){
+                Intent intent = new Intent(MenuActivity.this, TangramActivity.class);
+                startActivity(intent);
+            }
         });
     }
 }
