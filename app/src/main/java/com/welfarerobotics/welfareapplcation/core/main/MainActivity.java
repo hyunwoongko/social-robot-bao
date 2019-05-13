@@ -3,6 +3,8 @@ package com.welfarerobotics.welfareapplcation.core.main;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.media.AudioManager;
 import android.net.Uri;
@@ -12,15 +14,17 @@ import android.os.Looper;
 import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.*;
+
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.kakao.sdk.newtoneapi.SpeechRecognizeListener;
@@ -31,6 +35,8 @@ import com.welfarerobotics.welfareapplcation.api.chat.ChatApi;
 import com.welfarerobotics.welfareapplcation.api.chat.CssApi;
 import com.welfarerobotics.welfareapplcation.api.chat.chatutil.EmotionAdder;
 import com.welfarerobotics.welfareapplcation.core.BaseActivity;
+import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramListItem;
+import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramStageCash;
 import com.welfarerobotics.welfareapplcation.core.menu.MenuActivity;
 import com.welfarerobotics.welfareapplcation.entity.Server;
 import com.welfarerobotics.welfareapplcation.entity.ServerCache;
@@ -42,6 +48,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import rx.Observable;
 
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -246,6 +255,7 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
 
             }
         });
+        tangramDataSetting();
     }
 
     /**
@@ -563,5 +573,88 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
             client.cancelRecording();
         }
         SpeechRecognizerManager.getInstance().finalizeLibrary();
+    }
+
+
+
+    private void tangramDataSetting(){
+        try {
+            FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+            DatabaseReference databaseReference = firebaseDatabase.getReference();
+            databaseReference.child("tangram").child("background").addChildEventListener(new ChildEventListener() {
+                @Override
+                public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+
+
+                    Thread thread = new Thread(()->{
+                        TangramListItem myItem;
+                        System.out.println(dataSnapshot.getValue().toString()+"++++++++++++");
+                        Bitmap stage = convertUrl(dataSnapshot.getValue().toString());
+                        System.out.println(dataSnapshot.getValue().toString()+"++++++++++++");
+                        myItem = new TangramListItem();
+
+                        myItem.setStage(stage);
+                        TangramStageCash.getInstance().addImage(myItem);
+
+                    });
+                    thread.start();
+
+                }
+
+                @Override
+                public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+//                    myAdaterr = new TangramListAdater();
+//                    mListView.setAdapter(myAdaterr);
+//                    itemSet(urlList);
+                      TangramStageCash.getInstance().clear();
+                       tangramDataSetting();
+                }
+
+                @Override
+                public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+//                    Intent intent = new Intent(CheckView.this, CheckView.class);
+//                    intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+//                    finish();
+//                    startActivity(intent);
+                    TangramStageCash.getInstance().clear();
+                    tangramDataSetting();
+
+                }
+
+                @Override
+                public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+        }catch (Throwable a){
+
+        }
+
+    }
+    private Bitmap convertUrl(String urlString){
+
+        try{
+
+            URL url = new URL(urlString);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setDoInput(true); // 서버로 부터 응답 수신
+            conn.connect();
+
+            InputStream is = conn.getInputStream(); // InputStream 값 가져오기
+            // Bitmap으로 변환
+            return BitmapFactory.decodeStream(is);
+        }catch (Exception a){
+            System.out.println("asdfasdf"+a);
+            return null;
+        }
+
+
+
     }
 }

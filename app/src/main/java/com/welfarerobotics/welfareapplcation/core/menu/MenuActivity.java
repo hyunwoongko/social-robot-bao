@@ -9,7 +9,7 @@ import android.widget.Toast;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.api.chat.crawler.YoutubeApi;
 import com.welfarerobotics.welfareapplcation.core.contents.paintwith.PaintWithActivity;
-import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramActivity;
+import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramSelecActivity;
 import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleActivity;
 import com.welfarerobotics.welfareapplcation.core.settings.SettingActivity;
 import com.welfarerobotics.welfareapplcation.core.youtube.YoutubeActivity;
@@ -83,7 +83,7 @@ public class MenuActivity extends AppCompatActivity {
                 Intent intent = new Intent(MenuActivity.this, PaintWithActivity.class);
                 startActivity(intent);
             } else if(item == aitangram){
-                Intent intent = new Intent(MenuActivity.this, TangramActivity.class);
+                Intent intent = new Intent(MenuActivity.this, TangramSelecActivity.class);
                 startActivity(intent);
             }
         });

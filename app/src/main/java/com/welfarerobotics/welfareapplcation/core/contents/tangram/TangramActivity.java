@@ -1,6 +1,7 @@
 package com.welfarerobotics.welfareapplcation.core.contents.tangram;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -41,6 +42,7 @@ public class TangramActivity extends BaseActivity {
 	ImagePuzzle puzzle;
 	ArrayList<ImagePiece> _board;
 	LinearLayout layout;
+	Boolean flag =true;
 	static public Resources r;
 	private int toolboxHeight, displayWidth, displayHeight, scale;//전체 캔버스 크기?
 
@@ -49,7 +51,7 @@ public class TangramActivity extends BaseActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		flag= true;
 		int uiOptions = getWindow().getDecorView().getSystemUiVisibility();
         //getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 		setContentView(R.layout.play_activity);
@@ -80,18 +82,20 @@ public class TangramActivity extends BaseActivity {
 
 		// Recall button
 		// Submit button
+		ImageButton backBtn = findViewById(R.id.backbutton);
+		backBtn.setClickable(true);
+		backBtn.setOnClickListener(view ->{
+			myPanel._thread.setRunning(false);
+		    finish();
+
+
+				});
+
 		ImageButton submitBtn = findViewById(R.id.rotatebtn);
 		submitBtn.setClickable(true);
-		submitBtn.setOnClickListener(new View.OnClickListener() {
+		submitBtn.setOnClickListener(view ->{
+			myPanel.rotate();});
 
-			public void onClick(View v) {
-				// Perform action on click
-
-			myPanel.rotate();
-
-
-			}
-		});
 		Drawable bg = this.getDrawable(R.drawable.background);
 		layout.setBackground(bg);
 		//		layout.setBackgroundColor(Color.BLUE);
@@ -101,7 +105,13 @@ public class TangramActivity extends BaseActivity {
 
 
 	}
+	@Override
+	public void onPause() {
+		super.onPause();
 
+		// Remove the activity when its off the screen
+		finish();
+	}
 	
 	//Disable Back button
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -266,11 +276,12 @@ public class TangramActivity extends BaseActivity {
 		 */
 		public void updateToolbox() {
 			int margin = toolboxHeight/8;
+            int marginvalue = 100;
 			int centerX = 0;
 			int centerY = 0;
 			for (int i = 0; i < _toolbox.size(); i++) {
 				ImagePiece p = _toolbox.get(i);
-				centerX += (p.getWidth() + margin); // add width of Piece + margin
+				centerX += (p.getWidth() + margin+marginvalue); // add width of Piece + margin
 				centerY = toolboxHeight/2;
 				p.moveTo(centerX, centerY);
 			}
