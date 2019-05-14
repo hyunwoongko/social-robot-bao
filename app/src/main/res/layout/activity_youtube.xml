@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
     <android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -14,4 +13,3 @@
             android:id="@+id/YoutubeView"/>
 
     </android.support.constraint.ConstraintLayout>
-</layout>

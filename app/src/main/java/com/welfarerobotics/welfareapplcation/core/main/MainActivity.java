@@ -540,15 +540,15 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
+    protected void onPause() {
+        super.onPause();
         audioManager.setMicrophoneMute(true);
         ttBlink.cancel();
     }
 
     @Override
-    protected void onRestart() {
-        super.onRestart();
+    protected void onResume() {
+        super.onResume();
         audioManager.setMicrophoneMute(false);
         ttBlink.run();
     }
