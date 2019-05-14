@@ -1,7 +1,5 @@
 package com.welfarerobotics.welfareapplcation.core.fairytale;
 
-import com.welfarerobotics.welfareapplcation.api.chat.chatutil.Fairytale;
-
 import java.util.ArrayList;
 
 public class FairytaleCache {

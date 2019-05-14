@@ -14,11 +14,11 @@ def train_doc2vec():
     # build voca
     model = doc2vec.Doc2Vec(min_count=conf.word_min_count,
                             vector_size=conf.vector_size,
-                            alpha=0.025,
+                            alpha=conf.learning_rate,
                             negative=conf.negative_size,
                             epochs=conf.train_epoch,
                             window_size=conf.window_size,
-                            min_alpha=0.025,
+                            min_alpha=conf.learning_rate,
                             seed=1234,
                             workers=conf.worker_count)
 

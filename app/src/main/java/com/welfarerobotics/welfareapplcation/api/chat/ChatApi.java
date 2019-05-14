@@ -1,9 +1,9 @@
 package com.welfarerobotics.welfareapplcation.api.chat;
 
 import android.support.v7.app.AppCompatActivity;
-import com.welfarerobotics.welfareapplcation.api.chat.chatutil.ChatState;
-import com.welfarerobotics.welfareapplcation.api.chat.crawler.ModelApi;
-import com.welfarerobotics.welfareapplcation.api.chat.session.PreprocessingSession;
+import com.welfarerobotics.welfareapplcation.api.chat.tools.ChatState;
+import com.welfarerobotics.welfareapplcation.api.chat.tools.IntentClassifier;
+import com.welfarerobotics.welfareapplcation.api.chat.tools.Preprocessor;
 
 import java.io.IOException;
 
@@ -26,13 +26,9 @@ public final class ChatApi {
     public synchronized void chat(String speech, AppCompatActivity activity) {
         try {
             ChatState.speech = speech;
-            ChatState.speech = PreprocessingSession.preprocess(speech);
+            ChatState.speech = Preprocessor.preprocess(speech);
 
-            String intent = ModelApi.getIntent(ChatState.speech);
-            ChatState.intentQueue.add(intent);
-
-            System.out.println("인텐트 : " + intent);
-            System.out.println("인텐트큐 : " + intent);
+            String intent = IntentClassifier.getIntent(speech);
 
         } catch (IOException e) {
             e.printStackTrace();

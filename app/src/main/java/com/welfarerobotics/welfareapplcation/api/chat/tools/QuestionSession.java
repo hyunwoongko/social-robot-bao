@@ -1,6 +1,4 @@
-package com.welfarerobotics.welfareapplcation.api.chat.session;
-
-import java.io.IOException;
+package com.welfarerobotics.welfareapplcation.api.chat.tools;
 
 /**
  * @Author : Hyunwoong

@@ -53,6 +53,7 @@ if __name__ == '__main__':
 
         intent = get_intent(speech)
         entity = None
+        print('의도 : ' + intent)
         if intent != '폴백':
             entity = get_entity(intent, speech)
         else:

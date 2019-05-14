@@ -9,11 +9,12 @@ import multiprocessing
 class Config:
     cores = multiprocessing.cpu_count()
     vector_size = 300
-    window_size = 4
+    window_size = 8
     word_min_count = 1
     sampling_threshold = 1e-5
-    negative_size = 5
-    train_epoch = 1300
+    negative_size = 6
+    train_epoch = 3000
+    learning_rate = 0.02
     dm = 1  # {0:dbow, 1:dmpv}
     worker_count = cores  # number of parallel processes
 

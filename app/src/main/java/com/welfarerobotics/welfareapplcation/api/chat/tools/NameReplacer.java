@@ -1,4 +1,4 @@
-package com.welfarerobotics.welfareapplcation.api.chat.chatutil;
+package com.welfarerobotics.welfareapplcation.api.chat.tools;
 
 import com.welfarerobotics.welfareapplcation.entity.UserCache;
 

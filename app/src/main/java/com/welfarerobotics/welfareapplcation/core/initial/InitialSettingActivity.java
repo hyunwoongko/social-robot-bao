@@ -71,17 +71,8 @@ public class InitialSettingActivity extends BaseActivity {
         iv_UserPhotos.get(1).setOnClickListener(view -> captureImage(1));
         iv_UserPhotos.get(2).setOnClickListener(view -> captureImage(2));
 
-        if (!NetworkUtil.isOnline(this)) {
-            KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.ERROR_TYPE);
-            pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
-            pDialog.changeAlertType(KAlertDialog.ERROR_TYPE);
-            pDialog.setTitleText("네트워크 연결 에러");
-            pDialog.setContentText("와이파이 네트워크에 연결해야\n원활한 사용이 가능합니다.");
-            pDialog.setCancelable(false);
-            pDialog.setConfirmText("확인");
-            pDialog.setConfirmClickListener(kAlertDialog -> startActivity(new Intent(InitialSettingActivity.this, InitialWifiActivity.class)));
-            pDialog.show();
-        }
+        NetworkUtil.wifiSafe(this); // 네트워크 체크
+
         nextButton.setOnClickListener(v -> {
             if (photos.size() < 3) {
                 showToast("사용자의 사진 3장을 모두 업로드 해주세요.\n사진은 얼굴인식 기능에 사용됩니다.", ToastType.error);
@@ -190,15 +181,7 @@ public class InitialSettingActivity extends BaseActivity {
         pDialog.setCancelable(false);
         pDialog.show();
 
-        if (!NetworkUtil.isOnline(this)) {
-            pDialog.changeAlertType(KAlertDialog.ERROR_TYPE);
-            pDialog.setTitleText("네트워크 연결 에러");
-            pDialog.setContentText("와이파이 네트워크에 연결해야\n원활한 사용이 가능합니다.");
-            pDialog.setCancelable(false);
-            pDialog.setConfirmText("확인");
-            pDialog.setConfirmClickListener(kAlertDialog -> startActivity(new Intent(InitialSettingActivity.this, InitialWifiActivity.class)));
-            pDialog.show();
-        }
+        NetworkUtil.wifiSafe(this); // 네트워크 체크
 
         StorageReference storageRef = storage.getReference()
                 .child(DeviceId.getInstance(this).getUUID())

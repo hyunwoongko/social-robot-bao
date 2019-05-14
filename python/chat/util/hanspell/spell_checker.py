@@ -9,6 +9,7 @@ import time
 import xml.etree.ElementTree as ET
 from collections import OrderedDict
 
+import pandas as pd
 import requests
 
 from .constants import CheckResult
@@ -17,6 +18,11 @@ from .response import Checked
 
 _agent = requests.Session()
 PY3 = sys.version_info[0] == 3
+my_dict = pd.read_csv('chat/util/hanspell/spell_dict.csv')
+spell_dict = {}
+
+for k, v in my_dict.values:
+    spell_dict[k] = v
 
 
 def _remove_tags(text):
@@ -113,19 +119,17 @@ def check(text):
     return result
 
 
+def exception(text):
+    for key, val in spell_dict.items():
+        if key in text:
+            return text.replace(key, val)
+    return text
+
+
 def fix(text):
     if text is not None:
         result = check(text)
         result.as_dict()  # dict로 출력
-        return exception(result[2])
-    return text
-
-
-def exception(text):
-    if '내 일 모레' in text:
-        return text.replace('내 일 모레', '내일 모레')  # konlpy가 실수함.
-    if '어벤저스' in text:
-        return text.replace('어벤저스', '어벤져스')  # konlpy가 실수함.
-    if '보일' in text:
-        return text.replace('보일', '보이루')  # konlpy가 실수함.
+        result = exception(result[2])
+        return result
     return text

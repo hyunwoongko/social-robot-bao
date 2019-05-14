@@ -2,13 +2,13 @@ import pandas as pd
 
 
 class IntentConfigs:
-    encode_length = 16
-    filter_sizes = [3, 4, 5, 6, 3, 4, 5, 6, 3, 4, 5, 6]
+    encode_length = 15
+    filter_sizes = [2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4]
     num_filters = len(filter_sizes)
     learning_step = 3000
     learning_rate = 0.00002
-    vector_size = 256
-    fallback_score = 3
+    vector_size = 300
+    fallback_score = 4
     train_fasttext = True
     tokenizing = True
 

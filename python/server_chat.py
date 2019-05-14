@@ -14,14 +14,15 @@ from chat.crawler.weather import today_weather, tomorrow_weather, after_tomorrow
 from chat.crawler.wiki import wiki
 from chat.crawler.wise import get_wise
 from chat.crawler.youtube import get_youtube
+from chat.doc2vec.similarity import get_similarity
 from chat.entity.news.entity_recognizer import get_news_entity
 from chat.entity.restaurant.entity_recognizer import get_restaurant_entity
 from chat.entity.song.entity_recognizer import get_song_entity
 from chat.entity.translate.entity_recognizer import get_translate_entity
 from chat.entity.weather.entity_recognizer import get_weather_entity
 from chat.entity.wiki.entity_recognizer import get_wiki_entity
-from chat.util.hanspell.spell_checker import fix
 from chat.intent.classifier import get_intent
+from chat.util.hanspell.spell_checker import fix
 from chat.util.tokenizer import tokenize
 
 logger = logging.getLogger('chardet')
@@ -37,7 +38,7 @@ def init():
 
 
 ##################################
-######### DEEP LEARNING MODEL #########
+####### DEEP LEARNING MODEL #######
 ##################################
 
 @app.route('/intent/<text>', methods=['GET', 'POST'])
@@ -45,8 +46,13 @@ def server_intent(text):
     return get_intent(text)
 
 
+@app.route('/similarity/<text>', methods=['GET', 'POST'])
+def server_similarity(text):
+    return get_similarity(text)
+
+
 ##################################
-############ PREPROCESS #############
+######## PREPROCESS ###########
 ##################################
 @app.route('/tokenize/<text>', methods=['GET', 'POST'])
 def server_tokenize(text):
@@ -59,7 +65,7 @@ def server_fix(text):
 
 
 ##################################
-############# API : DUST #############
+########### API : DUST ###########
 ##################################
 @app.route('/entity_dust/<text>', methods=['GET', 'POST'])
 def server_dust_entity(text):
@@ -82,7 +88,7 @@ def server_after_tomorrow_dust(location):
 
 
 ##################################
-############# API : ISSUE #############
+########### API : ISSUE ###########
 ##################################
 @app.route('/issue', methods=['GET', 'POST'])
 def server_issue():
@@ -90,7 +96,7 @@ def server_issue():
 
 
 ##################################
-########### API : TRANSLATE ###########
+######### API : TRANSLATE #########
 ##################################
 @app.route('/entity_translate/<text>', methods=['GET', 'POST'])
 def server_translate_entity(text):
@@ -103,7 +109,7 @@ def server_translate(lang, text):
 
 
 ##################################
-############# API : WIKI #############
+########### API : WIKI ###########
 ##################################
 @app.route('/entity_wiki/<text>', methods=['GET', 'POST'])
 def server_wiki_entity(text):
@@ -116,7 +122,7 @@ def server_wiki(text):
 
 
 ##################################
-########### API : WEATHER ############
+######### API : WEATHER ##########
 ##################################
 @app.route('/entity_weather/<text>', methods=['GET', 'POST'])
 def server_weather_entity(text):
@@ -149,7 +155,7 @@ def server_specific_weather(location, date):
 
 
 ##################################
-############# API : WISE #############
+########### API : WISE ###########
 ##################################
 @app.route('/wise', methods=['GET', 'POST'])
 def server_wise():
@@ -157,7 +163,7 @@ def server_wise():
 
 
 ##################################
-############ API : YOUTUBE ############
+########## API : YOUTUBE ##########
 ##################################
 @app.route('/entity_song/<text>', methods=['GET', 'POST'])
 def server_song_entity(text):
@@ -170,7 +176,7 @@ def server_youtube(text):
 
 
 ##################################
-############ API : NEWS ############
+########## API : NEWS ##########
 ##################################
 @app.route('/entity_news/<text>', methods=['GET', 'POST'])
 def server_news_entity(text):
@@ -188,7 +194,7 @@ def server_keyword_news(keyword):
 
 
 ##################################
-############ API : RESTAURANT ############
+######### API : RESTAURANT #########
 ##################################
 @app.route('/entity_restaurant/<text>', methods=['GET', 'POST'])
 def server_restaurant_entity(text):

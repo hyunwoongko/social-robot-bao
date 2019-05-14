@@ -1,6 +1,6 @@
 package com.welfarerobotics.welfareapplcation.api.chat.crawler;
 
-import com.welfarerobotics.welfareapplcation.api.chat.chatutil.Encoder;
+import com.welfarerobotics.welfareapplcation.api.chat.tools.Encoder;
 import com.welfarerobotics.welfareapplcation.entity.ServerCache;
 import org.jsoup.Jsoup;
 
@@ -23,6 +23,22 @@ public final class ModelApi {
      */
     public static String getIntent(String text) throws IOException {
         return Jsoup.connect(ServerCache.getInstance().getUrl() + "/intent/" + Encoder
+                .utf8(text))
+                .timeout(20000)
+                .get()
+                .body()
+                .text();
+    }
+
+    /**
+     * Doc2Vec 유사도 파악 API
+     * 문장을 입력하면 유사도에 따른 발화의도를 출력함
+     *
+     * @param text 발화 의도를 파악할 문장
+     * @return 발화 의도
+     */
+    public static String getSimilarity(String text) throws IOException {
+        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/similarity/" + Encoder
                 .utf8(text))
                 .timeout(20000)
                 .get()

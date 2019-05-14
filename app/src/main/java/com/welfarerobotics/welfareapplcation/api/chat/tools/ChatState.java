@@ -1,6 +1,6 @@
-package com.welfarerobotics.welfareapplcation.api.chat.chatutil;
+package com.welfarerobotics.welfareapplcation.api.chat.tools;
 
-import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.ArrayList;
 
 /**
  * @Author : Hyunwoong
@@ -12,6 +12,6 @@ public final class ChatState {
     public static String speech;
 
     // 의도큐
-    public static ConcurrentLinkedQueue<String> intentQueue = new ConcurrentLinkedQueue<>();
+    public static ArrayList<String> intentQueue = new ArrayList<>();
 
 }

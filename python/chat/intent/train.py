@@ -53,11 +53,11 @@ def train_vector_model(datas, train):
         morphs = list(map(lambda x: mecab.morphs(x), pos2))
         print("BUILD MODEL")
         model = FastText(size=vector_size,
-                         window=2,
+                         window=3,
                          workers=8,
-                         min_count=1,
+                         min_count=2,
                          sg=1,
-                         iter=1000)
+                         iter=1500)
         model.build_vocab(morphs)
         print("BUILD COMPLETE")
 
@@ -143,7 +143,7 @@ def create_graph(train=True):
                 padding="VALID",
                 name="conv")
 
-            h = tf.nn.relu(tf.nn.bias_add(conv, b_conv1), name="relu")
+            h = tf.nn.leaky_relu(tf.nn.bias_add(conv, b_conv1), name="relu")
             pooled = tf.nn.max_pool(h,
                                     ksize=[1, encode_length - filter_size + 1, 1, 1],
                                     strides=[1, 1, 1, 1],

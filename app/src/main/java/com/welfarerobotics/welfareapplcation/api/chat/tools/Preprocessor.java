@@ -1,4 +1,4 @@
-package com.welfarerobotics.welfareapplcation.api.chat.session;
+package com.welfarerobotics.welfareapplcation.api.chat.tools;
 
 import com.welfarerobotics.welfareapplcation.api.chat.crawler.PreprocessorApi;
 
@@ -9,7 +9,7 @@ import java.io.IOException;
  * @When : 5/12/2019 11:19 AM
  * @Homepage : https://github.com/gusdnd852
  */
-public class PreprocessingSession {
+public class Preprocessor {
 
     public static String preprocess(String speech) throws IOException {
         speech = PreprocessorApi.fix(speech);

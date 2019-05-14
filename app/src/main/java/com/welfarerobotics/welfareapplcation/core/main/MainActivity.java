@@ -33,7 +33,7 @@ import com.kakao.sdk.newtoneapi.SpeechRecognizerManager;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.api.chat.ChatApi;
 import com.welfarerobotics.welfareapplcation.api.chat.CssApi;
-import com.welfarerobotics.welfareapplcation.api.chat.chatutil.EmotionAdder;
+import com.welfarerobotics.welfareapplcation.api.chat.tools.Emotion;
 import com.welfarerobotics.welfareapplcation.core.BaseActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramListItem;
 import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramStageCash;
@@ -389,8 +389,8 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
                         mConversationArrayAdapter.add(readMessage);
                         Log.d(TAG, "받은 메세지 = " + readMessage);
                         //라즈베리파이에서 받는 메세지 부분 readMessage
-                        EmotionAdder.setEmotion(readMessage);
-                        Log.d(TAG, "감정 메세지 = " + EmotionAdder.getEmotion());
+                        Emotion.setEmotion(readMessage);
+                        Log.d(TAG, "감정 메세지 = " + Emotion.getEmotion());
                         //바뀜
                     }
 
@@ -500,7 +500,7 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
                             .location(UserCache.getInstance().getLocation())
                             .dict(UserCache.getInstance().getDict() == null ? new ArrayList<>() : UserCache.getInstance().getDict())
                             .build())
-                    .doOnNext(m -> ChatApi.get().chat(speech, m, this))
+                    .doOnNext(m -> ChatApi.get().chat(speech, this))
                     .doOnNext(m -> CssApi.get().stop(() -> client.startRecording(false)))
                     .observeOn(RxSchedulers.androidThread())
                     .subscribe();

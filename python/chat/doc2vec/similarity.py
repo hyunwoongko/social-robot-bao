@@ -7,8 +7,6 @@ import pandas as pd
 from gensim.models import Doc2Vec
 
 from chat.doc2vec.configs import Config
-from chat.util.hanspell.spell_checker import fix
-from chat.util.tokenizer import tokenize
 
 conf = Config()
 test_data = pd.read_csv(conf.test_path).values
@@ -37,12 +35,3 @@ def get_similarity(speech):
         res = '폴백'
 
     return res
-
-
-if __name__ == '__main__':
-    print("입력하세요 : ")
-    while True:
-        text = fix(tokenize(fix(input())))
-        print("전처리 문장 : ", text)
-        sim = get_similarity(speech=text)
-        print(sim)
