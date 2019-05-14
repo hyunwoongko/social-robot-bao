@@ -1,9 +1,11 @@
 package com.welfarerobotics.welfareapplcation.core.fairytale;
 
+import com.welfarerobotics.welfareapplcation.api.chat.chatutil.Fairytale;
+
 import java.util.ArrayList;
 
 public class FairytaleCache {
-    private static ArrayList<String> Fairytales = new ArrayList<>();
+    private static ArrayList<String[]> Fairytales = new ArrayList<>();
     private static FairytaleCache instance;
 
     private FairytaleCache() {
@@ -16,15 +18,15 @@ public class FairytaleCache {
         return instance;
     }   
 
-    public void addFairytale(String item) {
+    public void addFairytale(String[] item) {
         Fairytales.add(item);
     }
 
-    public ArrayList<String> getFairytale(){
+    public ArrayList<String[]> getFairytale(){
         return Fairytales;
     }
     
-    public String getFairytale(int pos){
+    public String[] getFairytale(int pos){
         return Fairytales.get(pos);
     }
 

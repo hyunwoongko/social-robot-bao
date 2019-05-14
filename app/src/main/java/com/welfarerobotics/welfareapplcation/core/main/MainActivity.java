@@ -645,7 +645,10 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
             databaseReference.child("fairytale").addChildEventListener(new ChildEventListener() {
                 @Override
                 public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                    FairytaleCache.getInstance().addFairytale(dataSnapshot.getValue().toString());
+                   FairytaleCache.getInstance().addFairytale(dataSnapshot.getValue().toString().split(","));
+                   // System.out.println(dataSnapshot.getValue().toString()+"sadfasdfas");
+                    System.out.println(FairytaleCache.getInstance().getFairytale(0)[1]+"+++++++++++++++++++++++");
+
                 }
 
                 @Override
