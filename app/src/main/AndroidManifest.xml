@@ -99,9 +99,11 @@
         <activity
             android:name=".core.settings.BluetoothActivity"
             android:screenOrientation="landscape" />
-
         <activity android:name=".core.contents.tangram.TangramSelecActivity"
             android:label="@string/app_name"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".core.contents.flashcard.FlashcardActivity"
             android:screenOrientation="landscape"/>
         <provider
             android:name="android.support.v4.content.FileProvider"

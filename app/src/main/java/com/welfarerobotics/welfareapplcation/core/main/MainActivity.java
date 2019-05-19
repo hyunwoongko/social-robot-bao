@@ -35,6 +35,7 @@ import com.welfarerobotics.welfareapplcation.api.chat.ChatApi;
 import com.welfarerobotics.welfareapplcation.api.chat.CssApi;
 import com.welfarerobotics.welfareapplcation.api.chat.tools.Emotion;
 import com.welfarerobotics.welfareapplcation.core.BaseActivity;
+import com.welfarerobotics.welfareapplcation.core.contents.flashcard.FlashcardCache;
 import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramListItem;
 import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramStageCash;
 import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleCache;
@@ -258,6 +259,7 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
         });
         fairytaleDataSetting();
         tangramDataSetting();
+        flashcardDataSetting();
     }
 
     /**
@@ -575,8 +577,6 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
         SpeechRecognizerManager.getInstance().finalizeLibrary();
     }
 
-
-
     private void tangramDataSetting(){
         try {
             FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
@@ -584,7 +584,6 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
             databaseReference.child("tangram").child("background").addChildEventListener(new ChildEventListener() {
                 @Override
                 public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-
 
                     Thread thread = new Thread(()->{
                         TangramListItem myItem;
@@ -633,9 +632,7 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
                 }
             });
         }catch (Throwable a){
-
         }
-
     }
 
     private void fairytaleDataSetting(){
@@ -646,9 +643,6 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
                 @Override
                 public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                    FairytaleCache.getInstance().addFairytale(dataSnapshot.getValue().toString().split(","));
-                   // System.out.println(dataSnapshot.getValue().toString()+"sadfasdfas");
-                    System.out.println(FairytaleCache.getInstance().getFairytale(0)[1]+"+++++++++++++++++++++++");
-
                 }
 
                 @Override
@@ -676,7 +670,43 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
         } catch (Throwable a){
             a.printStackTrace();
         }
+    }
 
+    private void flashcardDataSetting(){
+        try {
+            FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+            DatabaseReference databaseReference = firebaseDatabase.getReference();
+            databaseReference.child("flashcard").addChildEventListener(new ChildEventListener() {
+                @Override
+                public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                    FlashcardCache.getInstance().addFlashcard(dataSnapshot.getValue().toString().split(","));
+                }
+
+                @Override
+                public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                    FlashcardCache.getInstance().clear();
+                    flashcardDataSetting();
+                }
+
+                @Override
+                public void onChildRemoved(DataSnapshot dataSnapshot) {
+                    FairytaleCache.getInstance().clear();
+                    flashcardDataSetting();
+                }
+
+                @Override
+                public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+        } catch (Throwable a){
+            a.printStackTrace();
+        }
     }
 
     private Bitmap convertUrl(String urlString){

@@ -1,10 +1,9 @@
 package com.welfarerobotics.welfareapplcation.core.fairytale;
 
-
 import java.util.ArrayList;
 
 public class FairytaleCache {
-    private static ArrayList<String[]> Fairytales = new ArrayList<>();
+    private static ArrayList<String[]> fairytales = new ArrayList<>();
     private static FairytaleCache instance;
 
     private FairytaleCache() {
@@ -15,25 +14,25 @@ public class FairytaleCache {
             instance = new FairytaleCache();
         }
         return instance;
-    }   
-
-    public void addFairytale(String[] item) {
-        Fairytales.add(item);
     }
 
-    public ArrayList<String[]> getFairytale(){
-        return Fairytales;
-    }
-    
-    public String[] getFairytale(int pos){
-        return Fairytales.get(pos);
+    public void addFairytale(String[]item) {
+        fairytales.add(item);
     }
 
-    public int getFairytaleSize(){
-        return Fairytales.size();
+    public ArrayList<String[]> getFairytale() {
+        return fairytales;
     }
 
-    public void clear(){
-        Fairytales = new ArrayList<>();
+    public String[]getFairytale(int pos) {
+        return fairytales.get(pos);
+    }
+
+    public int getFairytaleSize() {
+        return fairytales.size();
+    }
+
+    public void clear() {
+        fairytales = new ArrayList<>();
     }
 }

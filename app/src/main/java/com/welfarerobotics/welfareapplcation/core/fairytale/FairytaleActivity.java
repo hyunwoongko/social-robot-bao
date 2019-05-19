@@ -31,6 +31,7 @@ public class FairytaleActivity extends Activity {
         getWindow().getAttributes().height = height;
 
         Thread thread = new Thread(() -> Fairytale.get().play());
+        thread.setDaemon(true);
         thread.start();
     }
 

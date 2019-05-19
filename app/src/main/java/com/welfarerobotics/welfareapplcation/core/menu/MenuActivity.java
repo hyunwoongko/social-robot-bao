@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.api.chat.crawler.YoutubeApi;
+import com.welfarerobotics.welfareapplcation.core.contents.flashcard.FlashcardActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.paintwith.PaintWithActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramSelecActivity;
 import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleActivity;
@@ -21,12 +22,14 @@ import java.io.IOException;
 public class MenuActivity extends AppCompatActivity {
     private String youtubeUrl;
     private QuickAction quickActionArt;
+    private QuickAction quickActionCard;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        //미술놀이 퀵액션 생성 (함께그려요, 탱그램)
         ActionItem aipaintwith = new ActionItem(1,R.drawable.menu_paintwith);
         ActionItem aitangram = new ActionItem(2,R.drawable.menu_tangram);
 
@@ -34,12 +37,21 @@ public class MenuActivity extends AppCompatActivity {
         quickActionArt.addActionItem(aipaintwith);
         quickActionArt.addActionItem(aitangram);
 
+        //카드놀이 퀵액션 생성(단어카드, 감정카드)
+        ActionItem aiflashcard = new ActionItem(1,R.drawable.menu_flashcard);
+        ActionItem aiemotioncard = new ActionItem(2,R.drawable.menu_emotioncard);
+
+        quickActionCard = new QuickAction(this, QuickAction.HORIZONTAL);
+        quickActionCard.addActionItem(aiflashcard);
+        quickActionCard.addActionItem(aiemotioncard);
+
         ImageButton ibbackbtn = findViewById(R.id.backbutton);
         ImageButton ibSettings = findViewById(R.id.settings);
         ImageButton ibplaylang = findViewById(R.id.playlang);
         ImageButton ibkidssong = findViewById(R.id.listensong);
         ImageButton ibfollowbao = findViewById(R.id.followbao);
         ImageButton iplayart = findViewById(R.id.playart);
+        ImageButton ibplaycard = findViewById(R.id.playcard);
 
         ibbackbtn.setOnClickListener(view -> onBackPressed());
 
@@ -53,9 +65,7 @@ public class MenuActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        iplayart.setOnClickListener(v->{
-            quickActionArt.show(v);
-        });
+        iplayart.setOnClickListener(v-> quickActionArt.show(v));
 
         ibkidssong.setOnClickListener(view -> {
             try {
@@ -78,6 +88,8 @@ public class MenuActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        ibplaycard.setOnClickListener(v -> quickActionCard.show(v));
+
         quickActionArt.setOnActionItemClickListener(item -> {
             if(item == aipaintwith){
                 Intent intent = new Intent(MenuActivity.this, PaintWithActivity.class);
@@ -85,6 +97,15 @@ public class MenuActivity extends AppCompatActivity {
             } else if(item == aitangram){
                 Intent intent = new Intent(MenuActivity.this, TangramSelecActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        quickActionCard.setOnActionItemClickListener(item -> {
+            if(item == aiflashcard){
+                Intent intent = new Intent(MenuActivity.this, FlashcardActivity.class);
+                startActivity(intent);
+            } else if(item == aiemotioncard){
+                Toast.makeText(getApplicationContext(),"개발중",Toast.LENGTH_SHORT).show();
             }
         });
     }

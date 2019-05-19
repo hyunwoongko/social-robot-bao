@@ -31,7 +31,6 @@ public final class Fairytale {
 
     private void playVoice(MediaPlayer mediaPlayer, String tts) {
         try {
-
             String text = URLEncoder.encode(tts, "UTF-8"); // 13자
             String apiURL = "https://naveropenapi.apigw.ntruss.com/voice/v1/tts";
             URL url = new URL(apiURL);
