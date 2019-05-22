@@ -1,8 +1,7 @@
-package com.welfarerobotics.welfareapplcation.core.contents.flashcard;
+package com.welfarerobotics.welfareapplcation.core.contents.emotioncard;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.WindowManager;
 import android.widget.ImageButton;
@@ -13,9 +12,9 @@ import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.BaseActivity;
 
-public class FlashcardActivity extends BaseActivity {
-    private ModeFragment modeFragment = null;
-    public static int index = 1;
+public class EmotioncardActivity extends BaseActivity {
+    private EmotioncardFragment emotioncardFragment = null;
+    public static int emotionIndex = 1;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,9 +22,9 @@ public class FlashcardActivity extends BaseActivity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_flashcard);
+        setContentView(R.layout.activity_emotioncard);
 
-        modeFragment = new ModeFragment();
+        emotioncardFragment = new EmotioncardFragment();
 
         ImageButton ibBackbutton = findViewById(R.id.backButton);
 
@@ -37,32 +36,21 @@ public class FlashcardActivity extends BaseActivity {
         ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this)
                 .tasksProcessingOrder(QueueProcessingType.FIFO)
                 .defaultDisplayImageOptions(options)
-                .memoryCacheSize(4*512*512)
-                .diskCacheSize(100*1024*1024)
-                .diskCacheFileCount(100)
+                .memoryCacheSize(4 * 512 * 512)
+                .diskCacheSize(100 * 1024 * 1024)
+                .diskCacheFileCount(50)
                 .build();
 
         ImageLoader.getInstance().init(config);
 
-        ibBackbutton.setOnClickListener(view -> {
-            Fragment mode = getSupportFragmentManager().findFragmentByTag("mode");
+        emotionIndex = 1;
 
-            if (mode != null && mode.isVisible()) {
-                onBackPressed();
-            } else{
-                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                fragmentTransaction
-                        .setCustomAnimations(R.anim.activity_fade_in, R.anim.activity_fade_out)
-                        .replace(R.id.container, modeFragment, "mode")
-                        .commit();
-            }
-        });
+        ibBackbutton.setOnClickListener(view -> onBackPressed());
 
-        //실행시 처음으로 표시되는 프래그먼트는 모드 프래그먼트
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction
                 .setCustomAnimations(R.anim.activity_fade_in, R.anim.activity_fade_out)
-                .replace(R.id.container, modeFragment, "mode")
+                .replace(R.id.container, emotioncardFragment)
                 .commit();
     }
 }

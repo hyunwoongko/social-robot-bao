@@ -35,6 +35,7 @@ import com.welfarerobotics.welfareapplcation.api.chat.ChatApi;
 import com.welfarerobotics.welfareapplcation.api.chat.CssApi;
 import com.welfarerobotics.welfareapplcation.api.chat.tools.Emotion;
 import com.welfarerobotics.welfareapplcation.core.BaseActivity;
+import com.welfarerobotics.welfareapplcation.core.contents.emotioncard.EmotioncardCache;
 import com.welfarerobotics.welfareapplcation.core.contents.flashcard.FlashcardCache;
 import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramListItem;
 import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramStageCash;
@@ -260,6 +261,7 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
         fairytaleDataSetting();
         tangramDataSetting();
         flashcardDataSetting();
+        emotioncardDataSetting();
     }
 
     /**
@@ -631,18 +633,19 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
 
                 }
             });
-        }catch (Throwable a){
+        } catch (Throwable a) {
         }
     }
 
-    private void fairytaleDataSetting(){
+    private void fairytaleDataSetting() {
         try {
             FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
             DatabaseReference databaseReference = firebaseDatabase.getReference();
             databaseReference.child("fairytale").addChildEventListener(new ChildEventListener() {
                 @Override
                 public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                   FairytaleCache.getInstance().addFairytale(dataSnapshot.getValue().toString().split(","));
+                    FairytaleCache.getInstance().addFairytale(dataSnapshot.getValue().toString().split(","));
+                    System.out.println("==================동화 데이터 다운로드");
                 }
 
                 @Override
@@ -667,12 +670,12 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
 
                 }
             });
-        } catch (Throwable a){
+        } catch (Throwable a) {
             a.printStackTrace();
         }
     }
 
-    private void flashcardDataSetting(){
+    private void flashcardDataSetting() {
         try {
             FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
             DatabaseReference databaseReference = firebaseDatabase.getReference();
@@ -680,6 +683,7 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
                 @Override
                 public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                     FlashcardCache.getInstance().addFlashcard(dataSnapshot.getValue().toString().split(","));
+                    System.out.println("==================플래시카드 데이터 다운로드");
                 }
 
                 @Override
@@ -704,14 +708,52 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
 
                 }
             });
-        } catch (Throwable a){
+        } catch (Throwable a) {
             a.printStackTrace();
         }
     }
 
-    private Bitmap convertUrl(String urlString){
+    private void emotioncardDataSetting() {
+        try {
+            FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+            DatabaseReference databaseReference = firebaseDatabase.getReference();
+            databaseReference.child("emotioncard").addChildEventListener(new ChildEventListener() {
+                @Override
+                public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                    EmotioncardCache.getInstance().addEmotioncard(dataSnapshot.getValue().toString().split(","));
+                    System.out.println("==================이모션카드 데이터 다운로드");
+                }
 
-        try{
+                @Override
+                public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                    EmotioncardCache.getInstance().clear();
+                    emotioncardDataSetting();
+                }
+
+                @Override
+                public void onChildRemoved(DataSnapshot dataSnapshot) {
+                    EmotioncardCache.getInstance().clear();
+                    emotioncardDataSetting();
+                }
+
+                @Override
+                public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+        } catch (Throwable a) {
+            a.printStackTrace();
+        }
+    }
+
+    private Bitmap convertUrl(String urlString) {
+
+        try {
 
             URL url = new URL(urlString);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -721,11 +763,10 @@ public class MainActivity extends BaseActivity implements SpeechRecognizeListene
             InputStream is = conn.getInputStream(); // InputStream 값 가져오기
             // Bitmap으로 변환
             return BitmapFactory.decodeStream(is);
-        }catch (Exception a){
-            System.out.println("asdfasdf"+a);
+        } catch (Exception a) {
+            System.out.println("asdfasdf" + a);
             return null;
         }
-
 
 
     }

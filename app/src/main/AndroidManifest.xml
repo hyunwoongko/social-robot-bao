@@ -105,6 +105,10 @@
         <activity
             android:name=".core.contents.flashcard.FlashcardActivity"
             android:screenOrientation="landscape"/>
+        <activity
+            android:name=".core.contents.emotioncard.EmotioncardActivity"
+            android:screenOrientation="landscape"/>
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.bignerdranch.android.test.fileprovider"

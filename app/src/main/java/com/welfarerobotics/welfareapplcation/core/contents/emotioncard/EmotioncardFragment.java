@@ -1,5 +1,6 @@
-package com.welfarerobotics.welfareapplcation.core.contents.flashcard;
+package com.welfarerobotics.welfareapplcation.core.contents.emotioncard;
 
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
@@ -11,8 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.entity.ServerCache;
@@ -22,113 +24,91 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
-import static com.welfarerobotics.welfareapplcation.core.contents.flashcard.FlashcardActivity.index;
+import static com.welfarerobotics.welfareapplcation.core.contents.emotioncard.EmotioncardActivity.emotionIndex;
 
-public class LearningFragment extends Fragment {
-    private LearningFragment learningFragment = null;
-    private FlashcardCache cache = FlashcardCache.getInstance();
+public class EmotioncardFragment extends Fragment {
+    private EmotioncardFragment emotioncardFragment = null;
+    private EmotioncardCache cache = EmotioncardCache.getInstance();
     private MediaPlayer mediaPlayer = new MediaPlayer();
-    private String[] name = new String[4];
+    private String[] name = new String[2];
 
-    @Nullable
-    @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_learning, container, false);
+        View v = inflater.inflate(R.layout.fragment_emotioncard, container, false);
 
-        //xml 변수 생성
-        ImageButton ibleftbtn = v.findViewById(R.id.learningleft);
-        ImageButton ibrightbtn = v.findViewById(R.id.learningright);
-        ImageButton ib1 = v.findViewById(R.id.learning1);
-        ImageButton ib2 = v.findViewById(R.id.learning2);
-        ImageButton ib3 = v.findViewById(R.id.learning3);
-        ImageButton ib4 = v.findViewById(R.id.learning4);
-        TextView tvIndex = v.findViewById(R.id.learningIndex);
+        ImageButton ibleftbtn = v.findViewById(R.id.emotionleft);
+        ImageButton ibrightbtn = v.findViewById(R.id.emotionright);
+        ImageButton ibEmotion1 = v.findViewById(R.id.emotion1);
+        ImageButton ibEmotion2 = v.findViewById(R.id.emotion2);
+        TextView tvIndex = v.findViewById(R.id.emotionIndex);
 
-        //페이지 번호 설정
-        tvIndex.setText(String.valueOf(index));
+        tvIndex.setText(String.valueOf(emotionIndex));
 
-        //이미지뷰 배열 생성
-        ImageButton[] ibArray = {ib1, ib2, ib3, ib4};
+        ImageButton[] ibArray = {ibEmotion1, ibEmotion2};
 
         //라이브러리 ImageLoader 사용
         ImageLoader imageLoader = ImageLoader.getInstance();
 
         //페이지 전환에 따른 프래그먼트 생성
-        learningFragment = new LearningFragment();
+        emotioncardFragment = new EmotioncardFragment();
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
 
-        /* 각 페이지당 표시할 카드 수는 4개
-         * 1페이지 : index=1, 카드 범위=0~3, i의 범위=0~3
-         * 2페이지 : index=2, 카드 범위=4~7, i의 범위=4~7
-         * 6페이지 : index=6, 카드 범위=20~23, i의 범위=20~23
-        */
-        for (int i = (index-1)*4; i < 4*index; i++) {
-            if(i>=cache.getFlashcardSize()){
+        for (int i = (emotionIndex - 1) * 2; i < 2 * emotionIndex; i++) {
+            if (i >= cache.getEmotioncardSize()) {
                 break;
             }
-            String[] child = cache.getFlashcard(i);
-            imageLoader.displayImage(child[0],ibArray[i%4]);
-            name[i%4]=child[1];
+            String[] child = cache.getEmotioncard(i);
+            Glide
+                    .with(this)
+                    .load(child[0])
+                    .apply(new RequestOptions().override(600, 850).fitCenter())
+                    .into(ibArray[i % 2]);
+            //imageLoader.displayImage(child[0],ibArray[i%2]);
+            name[i % 2] = child[1];
         }
 
         //페이지 처음이면 왼쪽 버튼이 invisible
         //페이지 맨끝이면 오른쪽 버튼이 invisible
-        if (index == 1) {
+        if (emotionIndex == 1) {
             ibleftbtn.setVisibility(View.INVISIBLE);
         }
-        if (index == cache.getFlashcardSize()/4) {
+        if (emotionIndex == cache.getEmotioncardSize() / 2) {
             ibrightbtn.setVisibility(View.INVISIBLE);
         }
 
         //왼쪽 버튼과 오른쪽 버튼 클릭시 페이지 전환
         ibleftbtn.setOnClickListener(view -> {
-            --index;
+            --emotionIndex;
             fragmentTransaction
                     .setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right)
-                    .replace(R.id.container, learningFragment, "learningSub")
+                    .replace(R.id.container, emotioncardFragment)
                     .commit();
         });
 
         ibrightbtn.setOnClickListener(view -> {
-            ++index;
+            ++emotionIndex;
             fragmentTransaction
                     .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
-                    .replace(R.id.container, learningFragment, "learningSub")
+                    .replace(R.id.container, emotioncardFragment)
                     .commit();
         });
 
         //각 이미지 클릭시 읽어주기(TTS) 기능
-        ib1.setOnClickListener(view -> {
-            if(mediaPlayer!=null && mediaPlayer.isPlaying()) {
+        ibEmotion1.setOnClickListener(view -> {
+            if (mediaPlayer != null && mediaPlayer.isPlaying()) {
                 mediaPlayer.stop();
                 mediaPlayer.release();
-                mediaPlayer=null;
+                mediaPlayer = null;
             }
             playVoice(mediaPlayer, name[0]);
         });
-        ib2.setOnClickListener(view -> {
-            if(mediaPlayer!=null && mediaPlayer.isPlaying()) {
+
+        ibEmotion2.setOnClickListener(view -> {
+            if (mediaPlayer != null && mediaPlayer.isPlaying()) {
                 mediaPlayer.stop();
                 mediaPlayer.release();
-                mediaPlayer=null;
+                mediaPlayer = null;
             }
             playVoice(mediaPlayer, name[1]);
-        });
-        ib3.setOnClickListener(view -> {
-            if(mediaPlayer!=null && mediaPlayer.isPlaying()) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer=null;
-            }
-           playVoice(mediaPlayer, name[2]);
-        });
-        ib4.setOnClickListener(view -> {
-            if(mediaPlayer!=null && mediaPlayer.isPlaying()) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer=null;
-            }
-           playVoice(mediaPlayer, name[3]);
         });
 
         return v;
@@ -163,7 +143,7 @@ public class LearningFragment extends Fragment {
                         dir.mkdirs();
                     }
                     // 랜덤한 이름으로 mp3 파일 생성
-                    String tempname = "navercssflashcard";
+                    String tempname = "navercssemotioncard";
                     File f = new File(Environment.getExternalStorageDirectory() +
                             File.separator + "NaverCSS/" + tempname + ".mp3");
                     f.createNewFile();
@@ -195,7 +175,7 @@ public class LearningFragment extends Fragment {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        String tempname = "navercssflashcard";
+        String tempname = "navercssemotioncard";
         String Path_to_file = Environment.getExternalStorageDirectory() +
                 File.separator + "NaverCSS/" + tempname + ".mp3";
 

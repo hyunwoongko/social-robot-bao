@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.api.chat.crawler.YoutubeApi;
+import com.welfarerobotics.welfareapplcation.core.contents.emotioncard.EmotioncardActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.flashcard.FlashcardActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.paintwith.PaintWithActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramSelecActivity;
@@ -105,7 +106,8 @@ public class MenuActivity extends AppCompatActivity {
                 Intent intent = new Intent(MenuActivity.this, FlashcardActivity.class);
                 startActivity(intent);
             } else if(item == aiemotioncard){
-                Toast.makeText(getApplicationContext(),"개발중",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MenuActivity.this, EmotioncardActivity.class);
+                startActivity(intent);
             }
         });
     }
