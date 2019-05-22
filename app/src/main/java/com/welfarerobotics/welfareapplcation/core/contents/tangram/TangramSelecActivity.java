@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.BaseActivity;
+
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 
@@ -45,8 +47,15 @@ try {
     mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+
+
             TangramListItem myItem = (TangramListItem) parent.getAdapter().getItem(position);
-            intent.putExtra("image", myItem.getStage());
+            Bitmap sendBitmap = myItem.getStage();
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            sendBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+            byte[] byteArray = stream.toByteArray();
+            intent.putExtra("image",byteArray);
             startActivity(intent);
         }
     });

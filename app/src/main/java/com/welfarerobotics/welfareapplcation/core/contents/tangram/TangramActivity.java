@@ -6,19 +6,17 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Display;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
@@ -26,6 +24,7 @@ import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.BaseActivity;
 
 import java.util.ArrayList;
+import java.util.concurrent.FutureTask;
 
 
 /*
@@ -45,8 +44,10 @@ public class TangramActivity extends BaseActivity {
 	Boolean flag =true;
 	static public Resources r;
 	private int toolboxHeight, displayWidth, displayHeight, scale;//전체 캔버스 크기?
-
-
+	private Bitmap stageimage;
+	BitmapDrawable background;
+	Bitmap backBitmap;
+	BitmapDrawable stage;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -56,12 +57,30 @@ public class TangramActivity extends BaseActivity {
         //getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 		setContentView(R.layout.play_activity);
 
+
+
+
 		_board = new ArrayList<ImagePiece>();//
 		r= this.getResources();
+		/*이미지 세팅 부분*/
+		Intent intent = getIntent();
+		byte[] arr = getIntent().getByteArrayExtra("image");
+		stageimage = BitmapFactory.decodeByteArray(arr, 0, arr.length);
+		backBitmap = BitmapFactory.decodeResource(r,R.drawable.background);
+		background = new BitmapDrawable(r,backBitmap);
+
+
+
+
+
+		background.setBounds(0, 0, getWindowManager().getDefaultDisplay().getWidth(), getWindowManager().getDefaultDisplay().getHeight());
+		/*세팅 끝*/
+
 		//set variables for drawing
 		Display display = getWindowManager().getDefaultDisplay(); 
 		displayWidth = display.getWidth();
 		displayHeight = display.getHeight();
+
 		if(displayWidth >= 480)
 			scale = 2;
 		else
@@ -100,7 +119,12 @@ public class TangramActivity extends BaseActivity {
 		layout.setBackground(bg);
 		//		layout.setBackgroundColor(Color.BLUE);
 
+		ImageButton stageView = (ImageButton) findViewById(R.id.imagestage);
+		stageView.setImageBitmap(stageimage);
+		stageView.setClickable(true);
+		stageView.setOnClickListener(view ->{
 
+		});
 
 
 
@@ -318,13 +342,10 @@ public class TangramActivity extends BaseActivity {
 		@Override
 		public void onDraw(Canvas canvas){
 			//draw the background
-			BitmapDrawable background;
-			Bitmap backBitmap = BitmapFactory.decodeResource(r,R.drawable.background);
-			background = new BitmapDrawable(r,backBitmap);
 
-			background.setBounds(0, 0, getWindowManager().getDefaultDisplay().getWidth(), getWindowManager().getDefaultDisplay().getHeight());
 			background.draw(canvas);
-
+			//canvas.drawBitmap(stageimage,null,ast,null);
+			canvas.drawBitmap(stageimage,displayWidth/3,displayHeight/3, null);
 			//paint for the pieces
 			//Paint piecePaint = new Paint();
 			//piecePaint.setColor(Color.RED);
@@ -333,37 +354,50 @@ public class TangramActivity extends BaseActivity {
 			//Paint activePaint = new Paint();
 			//activePaint.setColor(Color.BLUE);
 
-		Paint paint = new Paint();
-			paint.setColor(Color.BLACK);
-//			canvas.drawLine(0, toolboxHeight, displayWidth, toolboxHeight, paint); //Draw the line between the toolbox and play area
+//		Paint paint = new Paint();
+//			paint.setColor(Color.BLACK);
+////			canvas.drawLine(0, toolboxHeight, displayWidth, toolboxHeight, paint); //Draw the line between the toolbox and play area
+//
+//			if(GlobalVariables.outlineOn){
+//				//Draw puzzle in the background
+//				Path puzzlePath = new Path();
+//				ArrayList<Position> puzzlePositions = puzzle.getSolution();
+//				for(int i = 0; i < puzzlePositions.size();i++){
+//					if(i==0){
+//						puzzlePath.moveTo(puzzlePositions.get(i).getX(),
+//								puzzlePositions.get(i).getY());
+//					}else{
+//					puzzlePath.lineTo(puzzlePositions.get(i).getX(),
+//							puzzlePositions.get(i).getY());
+//					}
+//				}
+//				puzzlePath.close();
+//				//snap to grid
+//				int posX = Math.round((displayWidth/2-puzzle.getCenterX()) / 10) * 10;
+//				int posY = Math.round((displayHeight/2-puzzle.getCenterY()) / 10) * 10;
+//				puzzlePath.offset(posX, posY);
+//				//Offset the "model" too! move xsolution
+//				puzzle.moveXSolutionTo(posX, posY);
+//				canvas.drawPath(puzzlePath, paint);
 
-			if(GlobalVariables.outlineOn){
-				//Draw puzzle in the background
-				Path puzzlePath = new Path();
-				ArrayList<Position> puzzlePositions = puzzle.getSolution();
-				for(int i = 0; i < puzzlePositions.size();i++){
-					if(i==0){
-						puzzlePath.moveTo(puzzlePositions.get(i).getX(),
-								puzzlePositions.get(i).getY());
-					}else{
-					puzzlePath.lineTo(puzzlePositions.get(i).getX(),
-							puzzlePositions.get(i).getY());
-					}
-				}
-				puzzlePath.close();
-				//snap to grid
-				int posX = Math.round((displayWidth/2-puzzle.getCenterX()) / 10) * 10;
-				int posY = Math.round((displayHeight/2-puzzle.getCenterY()) / 10) * 10;
-				puzzlePath.offset(posX, posY);
-				//Offset the "model" too! move xsolution
-				puzzle.moveXSolutionTo(posX, posY);
-				canvas.drawPath(puzzlePath, paint);
-			}else {
-				//do not display outline
-			}
+//				Rect x  = new Rect();
+//				Rect dst = new Rect(400, 800,  displayWidth / 2, displayHeight / 2);// 이미지 폭과 넓이 그리고 크기 및 위치
+//			if(image!=null){
+//				System.out.println("스테이지 이미지 정상작동");
+//				canvas.drawBitmap(image,null,dst,null);
+//
+//			}else{
+//				System.out.println("스테이지 이미지 비정상작동");
+//
+//			}
+
+//			}else {
+//				//do not display outline
+//			}
 
 			if (! _toolbox.isEmpty()){
 				Path toolboxPiecePath;
+
 				/*path를 통해 사각형 삼각형 그림.*/
 				for (int j = 0; j < _toolbox.size(); j++){ //Draw all objects in the toolbox
 					ImagePiece toolboxPiece = _toolbox.get(j);
