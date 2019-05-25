@@ -47,9 +47,6 @@ try {
     mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-
-
             TangramListItem myItem = (TangramListItem) parent.getAdapter().getItem(position);
             Bitmap sendBitmap = myItem.getStage();
             ByteArrayOutputStream stream = new ByteArrayOutputStream();

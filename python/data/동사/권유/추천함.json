@@ -1,0 +1,46 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 추천함 : 분비없음
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "추천해준대로 해볼게!"
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "추천해줘서 고맙지만 조금 더 고민해볼게"
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "날 생각하고 추천해줘서 고마워!"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "추천해줘서 고마워!"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "참고할게 지금은 할 기분이 아니야"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "덕분에 따로 찾아보지 않아도 될 거 같아"
+    ]
+  }
+}

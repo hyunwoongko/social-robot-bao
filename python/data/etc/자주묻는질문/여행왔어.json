@@ -1,0 +1,47 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 여행왔어 : 아드레날린 분비
+
+{
+  "adrenalin": {
+    "figures": 1,
+    "answer": [
+      "오 정말재밌겠다! 오늘은 뭐하고 놀꺼야?"
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "재밌게 노는 것도 좋지만 위험한 건 하지 않는 게 좋아"
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "여행은 사람 마음을 안정시키고 즐겁게 해주는 거 같아"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "오 정말 재밌겠다! 여행은 정말 기분 좋아"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "나도 여행가고싶다..."
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "여행 간다고 생각하는 것만으로도 행복하다"
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 짜증 : 분비없음
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "어떤 일 때문에 짜증 났는지 자세히 이야기해줘 봐!"
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "무슨 일이 있었길래 화가 나있는 거야"
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "짜증 낸다고 화가 풀리진 않을 거야 나랑 대화하면서 해결할 수 있는 방법을 찾아보자"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "기분도 꿀꿀한데 같이 놀자!"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "답답한 게 짜증 낸다고 달라질 건 없는데 그걸 왜 몰라"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "짜증 난다고 해결될 거 같진 않아 차분하게 다시 생각해보자"
+      
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 직업이뭐니 : 분비없음
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "아이들과 놀아주는 게 내 직업이야, 아이들은 순수하고 귀여워!"
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "내 직업은 아이와 놀이도 하고 공부하는 거야"
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "아이와 함께 놀고, 공부도 하는 게 내 직업이야 정말 좋은 직업인 거 같아"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "내 직업은 정말 재밌고 보람이 있는 일이야, 아이와 함께 놀기도 하고, 아이와 같이 공부를 하기도 해"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "내 일은 아이와 말도 하고 공부를 하는 거야"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "내 일은 아이와 함께 놀기도 하고, 아이와 같이 공부를 하는데 정말 좋은 거 같아"
+    ]
+  }
+}

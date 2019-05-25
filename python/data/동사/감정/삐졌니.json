@@ -1,0 +1,46 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 삐졌니 : 분비없음
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "아니 난 삐지지 않았어!"
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "어떤 일 때문인지 모르겠는데 몸에 기운이 없어지는 거 같아"
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "아니야 삐진 게 아니라 밥을 안 먹어서 그래"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "아니야 지금 기분도 좋고 팔팔한걸?"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "아니야 아무것도"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "아무렇지 않은데, 무슨 일 있어?"
+    ]
+  }
+}

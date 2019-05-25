@@ -1,0 +1,46 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 화났니 : 분비없음
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "화난게 아니고 어떻게 될지 궁금해!"
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "아니야 화난 건 아니고 풀리지 않는 일이 있어서 신경 쓰여"
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "화난 거처럼 보이구나 나는 너랑 대화하고 있어서 기쁜데"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "화난 거처럼 보이구나 나는 너랑 대화하고 있어서 기쁜데"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "맞아 화가나있는상태야"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "화나지 않았어 지금 편안해서 기분 좋은데?"
+    ]
+  }
+}

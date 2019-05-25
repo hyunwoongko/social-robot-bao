@@ -1,0 +1,47 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 절망했니 : 분비없음
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "아니야 나는 절망 하지 않았어!"
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "어떤 방법도 떠오르지 않아 절망하고 있어"
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "아니야 나는 절망하지 않았어 행복한 기분인걸"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "지금 몹시 기쁜데 절망하는 거 같아 보이나.. 흠"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "이렇게 밖에 못한다는 게 스스로한테 화나"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "너무 편안하게 있어서 오해한 거 같아! 절망한 거 아니야"
+      
+    ]
+  }
+}

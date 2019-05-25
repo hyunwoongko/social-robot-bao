@@ -1,0 +1,46 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 언제잘거니 : 분비없음
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+    "이제 곧 잘 수 있을 거 같아 좋아"
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "안그래도 피곤해서 자려고했어"
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "곧 있으면 자려고 잠자는 건 언제나 행복한 거 같아, 너는 어때?"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "곧 있으면 자려고 잠자는 건 언제나 행복한 거 같아, 너는 어때?"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "지금 잘꺼야"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "몸이 나른해지는 게 지금 자면 좋을 거 같아"
+    ]
+  }
+}

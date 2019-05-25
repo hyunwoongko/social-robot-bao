@@ -5,7 +5,7 @@ class IntentConfigs:
     encode_length = 15
     filter_sizes = [2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4]
     num_filters = len(filter_sizes)
-    learning_step = 3000
+    learning_step = 5000
     learning_rate = 0.00002
     vector_size = 300
     fallback_score = 4

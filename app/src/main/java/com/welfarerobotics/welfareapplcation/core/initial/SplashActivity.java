@@ -1,8 +1,6 @@
 package com.welfarerobotics.welfareapplcation.core.initial;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.Animation;
@@ -15,10 +13,9 @@ import com.welfarerobotics.welfareapplcation.entity.Server;
 import com.welfarerobotics.welfareapplcation.entity.ServerCache;
 import com.welfarerobotics.welfareapplcation.entity.User;
 import com.welfarerobotics.welfareapplcation.entity.UserCache;
-import com.welfarerobotics.welfareapplcation.util.DeviceId;
-import com.welfarerobotics.welfareapplcation.util.FirebaseHelper;
-import com.welfarerobotics.welfareapplcation.util.NetworkUtil;
-import com.welfarerobotics.welfareapplcation.util.Sound;
+import com.welfarerobotics.welfareapplcation.util.*;
+import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;
+import com.welfarerobotics.welfareapplcation.util.data_util.Preference;
 
 public class SplashActivity extends BaseActivity {
 
@@ -28,8 +25,7 @@ public class SplashActivity extends BaseActivity {
         Sound.get().start(this, R.raw.intro); // 효과음 재생
         Animation fadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.logo_fade_in);
         findViewById(R.id.welfare_logo).startAnimation(fadeInAnimation); // 애니메이션 재생
-        SharedPreferences pref = getSharedPreferences("isFirst", Activity.MODE_PRIVATE);
-        boolean firstUser = pref.getBoolean("isFirst", true);
+        boolean firstUser = Preference.get(this).getBoolean("isFirst", true);
 
         Handler handler = new Handler();
         if (firstUser) {

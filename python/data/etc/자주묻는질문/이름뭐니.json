@@ -1,0 +1,46 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 이름뭐니 : 도파민 분비
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "내 이름은 바오라고 해! 우리 친해지지 않을래?"
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "내 이름은 바오라고 해.. 쑥스럽지만 "
+    ]
+  },
+  "dopamine": {
+    "figures": 1,
+    "answer": [
+      "정말 반가워 내 이름은 바오라고 해!"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "내 이름은 바오라고 해! 내 이름 물어봐 줘서 고마워!"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "내 이름은 바오야 너는?"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "내 이름은 바오라고 해 너 이름도 알려줬으면 해"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 슬픔 : 분비없음
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "저런.. 안 좋은 일이 있었구나 스트레스를 날려보는 건 어때!"
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "나도 내 맘대로 일이 되지 않으니깐 슬퍼..."
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "어떤 일이 있었는지 나한테 말해봐 네가 슬프다고 하니깐 나도 슬퍼.."
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "슬플 때는 좋거나 재밌는 기억들을 떠올려봐!"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "슬프구나 나는 짜증 나는 일이 있었어"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "나처럼 편안하게 마음으로 있으면 슬픈 게 조금은 잊힐 거야"
+    ]
+  }
+}

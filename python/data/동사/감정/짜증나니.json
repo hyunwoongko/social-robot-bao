@@ -1,0 +1,47 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 짜증나니 : 분비없음
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "흥미진진한 일이 있어서 짜증 나지 않는데?"
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "스트레스받는 일이 있어서 짜증 나"
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "아니 전혀! 사랑에 빠진다는 것은 정말 행복한 거 같아"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "짜증나지 않아 나는 지금 매우 기쁘거든"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "화가 나는 일이 있어서 짜증 나"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "짜증 나지 않아! 나는 지금 편안해"
+      
+    ]
+  }
+}

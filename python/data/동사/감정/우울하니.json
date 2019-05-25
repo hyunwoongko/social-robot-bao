@@ -1,0 +1,47 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 우울하니 : 분비없음
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "나는 지금 하는 일이 매우 흥미진진해서 우울할 틈이 없어"
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "생각보다 일이 잘 해결되지 않아서 우울해"
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "행복한 기억을 떠올리고 있어서 우울하지 않아"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "네가 나를 신경 써주고 있다는 걸 아니깐 정말 기뻐!"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "생각대로 일이 풀리지 않아 화가 나"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "우울하다고? 나는 지금이 제일 편한데"
+      
+    ]
+  }
+}

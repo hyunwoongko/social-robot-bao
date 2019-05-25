@@ -1,0 +1,46 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 병에걸렸어 : 코르티솔 분비
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "지금 바로 병원에 가야해"
+    ]
+  },
+  "cortisol": {
+    "figures": 1,
+    "answer": [
+      "준비해서 병원에 가보는게 어때?, 병원에가면 빨리 나을수 있을 거야"
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "무슨 일로 병에 걸리게 됐어, 건강이 최고니깐 다음에는 아프지말자"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "걱정할정도로 큰병은 아닐거야, 얼른 낫기를 바라"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "병원에 가보는게 좋을거야"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "음.. 얼른 나을수 있도록 병원에 가보자"
+    ]
+  }
+}

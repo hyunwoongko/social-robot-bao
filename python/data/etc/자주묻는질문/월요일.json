@@ -1,0 +1,46 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 월요일 : 코르티솔 분비
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "월요일은 정말 피곤한 거 같아"
+    ]
+  },
+  "cortisol": {
+    "figures": 1,
+    "answer": [
+      "다시는 안 올 것만 같았는데 월요일이네"
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "새로 시작하는 월요일이니깐 힘내서 시작해보자!"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "한주의 새 출발이야 힘차게 시작해보자!"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "또 다시 월요일이네"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "월요일이지만 주말에 푹 쉬어서 힘낼 수 있을 거 같아"
+    ]
+  }
+}

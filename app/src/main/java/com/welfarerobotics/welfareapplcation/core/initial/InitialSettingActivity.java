@@ -1,9 +1,7 @@
 package com.welfarerobotics.welfareapplcation.core.initial;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -33,10 +31,9 @@ import com.welfarerobotics.welfareapplcation.entity.Server;
 import com.welfarerobotics.welfareapplcation.entity.ServerCache;
 import com.welfarerobotics.welfareapplcation.entity.User;
 import com.welfarerobotics.welfareapplcation.entity.UserCache;
-import com.welfarerobotics.welfareapplcation.util.DeviceId;
-import com.welfarerobotics.welfareapplcation.util.FirebaseHelper;
-import com.welfarerobotics.welfareapplcation.util.NetworkUtil;
-import com.welfarerobotics.welfareapplcation.util.ToastType;
+import com.welfarerobotics.welfareapplcation.util.*;
+import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;
+import com.welfarerobotics.welfareapplcation.util.data_util.Preference;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -95,11 +92,8 @@ public class InitialSettingActivity extends BaseActivity {
                             .getReference("user")
                             .child(id)
                             .setValue(model);
-                    // 디비 업로드
-                    SharedPreferences pref = getSharedPreferences("isFirst", Activity.MODE_PRIVATE);
-                    pref.edit()
-                            .putBoolean("isFirst", false)
-                            .apply();
+
+                    Preference.get(this).setBoolean("isFirst", false);
                     startActivity(new Intent(InitialSettingActivity.this, MainActivity.class));
                     finish();
                 });

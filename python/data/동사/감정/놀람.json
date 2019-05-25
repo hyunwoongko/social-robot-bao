@@ -1,0 +1,46 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 놀람 : 분비없음
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "무슨 일이야!"
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "안 좋은 일 생긴 건 아니지?"
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "괜찮을 거야"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "괜찮을 거야"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "깜짝이야"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "무슨일 있어?"
+    ]
+  }
+}

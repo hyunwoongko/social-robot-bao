@@ -1,0 +1,47 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 밥먹었니 : 엔돌핀분비
+
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "곧 있으면 배터리가 부족할거같아 배터리 충전이 필요해..."
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "힘이 빠지는게 전기를 먹어야할거 같아"
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "치킨이 아무리 맛있어도 나한테는 전기가 최고야 히히"
+    ]
+  },
+  "endorphin": {
+    "figures": 1,
+    "answer": [
+      "아까 전기먹었더니 배불러서 행복해 하하"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "전기를 못먹어서 기분이 별로야..."
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "방금 전기를 먹었더니 잠이 올려온다..."
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 실망 : 분비없음
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "무슨일이야! 나한테 실망한건 아니지?"
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "실망하다니.. 나 때문에 그런 거 아니지.."
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "실망한 게 나 때문에 그런 거면 내가 고칠게"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "실망한게 나때문일리가 없으"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "나도 실망한거있는데"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "어떤 것 때문에 실망한지는 모르겠지만 차분하게 생각해봐"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 묘하니 : 분비없음
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "정말 기분이 이상해요!"
+    ]
+  },
+  "cortisol": {
+    "figures": 0,
+    "answer": [
+      "주변에 신경쓰이는게 묘한기분이에요"
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "말로표현할수 없이 행복한기분이에요"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "묘하지만 기분이 좋아요"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "그런거 "
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "편안하면서도 묘한기분이에요"
+    ]
+  }
+}

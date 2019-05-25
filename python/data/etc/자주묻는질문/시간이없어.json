@@ -1,0 +1,46 @@
+// adrenalin : 아드레날린 : 흥분
+// cortisol : 코르티솔 : 스트레스, 긴장감
+// dopamine : 도파민 : 사랑 , 쾌락
+// endorphin : 엔돌핀 : 기쁨, 기분좋음
+// noradrenalin : 노르아드레날린 : 분노, 화남
+// serotonin : 세르토닌 : 편안함, 평온함
+//
+// 시간이없어 : 코르티솔분비
+{
+  "adrenalin": {
+    "figures": 0,
+    "answer": [
+      "지금바로 준비해야해"
+    ]
+  },
+  "cortisol": {
+    "figures": 1,
+    "answer": [
+      "어떡해 늦는거 아니야, 더늦기전에 빨리 해보자"
+    ]
+  },
+  "dopamine": {
+    "figures": 0,
+    "answer": [
+      "요번에는 빠듯했지만 다음에는 미리 준비하는 게 좋을 거 같아"
+    ]
+  },
+  "endorphin": {
+    "figures": 0,
+    "answer": [
+      "하나씩 차근차근히 준비해보자 그러면 다음에는 충분할 거야"
+    ]
+  },
+  "noradrenalin": {
+    "figures": 0,
+    "answer": [
+      "늦지않게 준비했어야지"
+    ]
+  },
+  "serotonin": {
+    "figures": 0,
+    "answer": [
+      "빨리한다고 해서 좋아지는건 없어 하나씩 끝내자"
+    ]
+  }
+}
