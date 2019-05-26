@@ -7,12 +7,10 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Path;
-import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Display;
-import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
@@ -21,11 +19,11 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.core.BaseActivity;
+import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
+import com.welfarerobotics.welfareapplcation.entity.cache.TangramStageCache;
 
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.concurrent.FutureTask;
 
 
 /*
@@ -115,8 +113,8 @@ public class TangramActivity extends BaseActivity {
 		leftBtn.setClickable(true);
 		leftBtn.setOnClickListener(view->{
 			Random random = new Random();
-			TangramStageCash tangram;
-			tangram = TangramStageCash.getInstance();
+			TangramStageCache tangram;
+			tangram = TangramStageCache.getInstance();
 			stageimage = tangram.getImages().get(random.nextInt(tangram.getImages().size())).getStage();
 			myPanel.recall();
 

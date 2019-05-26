@@ -9,7 +9,6 @@ import android.view.MotionEvent;
 import android.view.Window;
 import android.view.WindowManager;
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.api.chat.tools.Fairytale;
 
 public class FairytaleActivity extends Activity {
 
@@ -30,7 +29,7 @@ public class FairytaleActivity extends Activity {
         getWindow().getAttributes().width = width;
         getWindow().getAttributes().height = height;
 
-        Thread thread = new Thread(() -> Fairytale.get().play());
+        Thread thread = new Thread(() -> FairytaleReader.get().play());
         thread.setDaemon(true);
         thread.start();
     }
@@ -40,7 +39,7 @@ public class FairytaleActivity extends Activity {
         int action = event.getAction();
         switch (action) {
             case MotionEvent.ACTION_DOWN:
-                Fairytale.get().stop();
+                FairytaleReader.get().stop();
                 finish();
                 break;
             case MotionEvent.ACTION_UP:    //화면을 터치했다 땠을때

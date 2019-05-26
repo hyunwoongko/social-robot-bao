@@ -34,9 +34,7 @@ public class MyScriptBuilder {
             dlgAlert.create().show();
             return;
         }
-
         widget.addSearchDir("zip://" + activity.getPackageCodePath() + "!/assets/conf");
         widget.configure("ko_KR", "cur_text");
-
-        }
-        }
+    }
+}

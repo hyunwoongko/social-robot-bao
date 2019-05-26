@@ -7,9 +7,9 @@ import android.support.v7.widget.GridLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.core.BaseActivity;
+import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.entity.Conversation;
-import com.welfarerobotics.welfareapplcation.entity.UserCache;
+import com.welfarerobotics.welfareapplcation.entity.cache.UserCache;
 
 import java.util.ArrayList;
 import java.util.Objects;

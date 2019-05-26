@@ -3,11 +3,10 @@ package com.welfarerobotics.welfareapplcation.core.settings;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.core.BaseActivity;
+import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 
 public class WifiActivity extends BaseActivity {
     private FragmentManager fm;

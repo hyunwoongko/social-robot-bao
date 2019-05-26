@@ -7,13 +7,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.kakao.sdk.newtoneapi.SpeechRecognizerClient;
 import com.kakao.sdk.newtoneapi.SpeechRecognizerManager;
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.api.chat.ChatApi;
-import com.welfarerobotics.welfareapplcation.api.chat.CssApi;
-import com.welfarerobotics.welfareapplcation.core.BaseActivity;
+import com.welfarerobotics.welfareapplcation.bot.Brain;
+import com.welfarerobotics.welfareapplcation.bot.Voice;
+import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.entity.Server;
-import com.welfarerobotics.welfareapplcation.entity.ServerCache;
+import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
 import com.welfarerobotics.welfareapplcation.util.Pool;
-import com.welfarerobotics.welfareapplcation.util.STTManager;
+import com.welfarerobotics.welfareapplcation.bot.Ear;
 import com.welfarerobotics.welfareapplcation.util.data_loader.DataLoader;
 import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;
 import com.welfarerobotics.welfareapplcation.util.touch_util.ConcreteSwipeTouchListener;
@@ -23,7 +23,7 @@ public class MainActivity extends BaseActivity {
 
     private OnSwipeTouchListener onSwipeTouchListener;
     private AudioManager audioManager;
-    private SpeechRecognizerClient client;
+    private SpeechRecognizerClient ear; // 청각
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class MainActivity extends BaseActivity {
         audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
         SpeechRecognizerManager.getInstance().initializeLibrary(this);
         onSwipeTouchListener = new ConcreteSwipeTouchListener(this, audioManager);
-        client = new SpeechRecognizerClient.Builder().setServiceType(SpeechRecognizerClient.SERVICE_TYPE_DICTATION).build();
+        ear = new SpeechRecognizerClient.Builder().setServiceType(SpeechRecognizerClient.SERVICE_TYPE_DICTATION).build();
 
         FirebaseHelper.get().connect(FirebaseDatabase
                 .getInstance()
@@ -46,16 +46,16 @@ public class MainActivity extends BaseActivity {
 
     private void init() {
         DataLoader.onDataLoad(); // 모든 데이터 다운로드
-        STTManager manager = new STTManager()
+        Ear manager = new Ear()
                 .onSuccess(speech -> Pool.threadPool.execute(() -> {
-                    ChatApi.get().chat(speech, this);
-                    CssApi.get().stop(() -> client.startRecording(false));
+                    Brain.get().think(speech, this);
+                    Voice.get().stop(() -> ear.startRecording(false));
                 }))
                 .onFail(handler -> handler.postDelayed(() ->
-                        client.startRecording(false), 100));
+                        ear.startRecording(false), 100));
 
-        client.setSpeechRecognizeListener(manager);
-        client.startRecording(false);
+        ear.setSpeechRecognizeListener(manager);
+        ear.startRecording(false);
     }
 
 

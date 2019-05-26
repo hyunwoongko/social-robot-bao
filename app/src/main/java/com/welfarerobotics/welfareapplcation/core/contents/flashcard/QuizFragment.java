@@ -15,7 +15,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.entity.ServerCache;
+import com.welfarerobotics.welfareapplcation.entity.cache.FlashcardCache;
+import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
 
 import java.io.*;
 import java.net.HttpURLConnection;

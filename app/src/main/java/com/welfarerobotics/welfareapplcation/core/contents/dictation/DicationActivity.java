@@ -2,7 +2,6 @@ package com.welfarerobotics.welfareapplcation.core.contents.dictation;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -10,7 +9,7 @@ import android.widget.Toast;
 import com.myscript.atk.scw.SingleCharWidget;
 import com.myscript.atk.scw.SingleCharWidgetApi;
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.core.BaseActivity;
+import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 
 public class DicationActivity extends BaseActivity implements  SingleCharWidgetApi.OnTextChangedListener{
 private MyScriptBuilder builder;

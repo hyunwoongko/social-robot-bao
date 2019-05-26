@@ -11,7 +11,8 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.core.BaseActivity;
+import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
+import com.welfarerobotics.welfareapplcation.entity.cache.TangramStageCache;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ import java.util.ArrayList;
 public class TangramSelecActivity extends BaseActivity {
     private GridView mListView;
     private TangramListAdater myAdaterr;
-    private ArrayList<TangramListItem> items = TangramStageCash.getInstance().getImages();
+    private ArrayList<TangramListItem> items = TangramStageCache.getInstance().getImages();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

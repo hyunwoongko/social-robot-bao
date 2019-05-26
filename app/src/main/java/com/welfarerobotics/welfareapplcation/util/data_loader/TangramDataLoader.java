@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
 import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramListItem;
-import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramStageCash;
+import com.welfarerobotics.welfareapplcation.entity.cache.TangramStageCache;
 import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;
 import com.welfarerobotics.welfareapplcation.util.data_util.UrlConverter;
 
@@ -44,7 +44,7 @@ public class TangramDataLoader implements DataLoader {
             Bitmap stage = UrlConverter.convertUrl(snapshot.getValue().toString());
             myItem = new TangramListItem();
             myItem.setStage(stage);
-            TangramStageCash.getInstance().addImage(myItem);
+            TangramStageCache.getInstance().addImage(myItem);
             System.out.println(getClass().getName() + " : 데이터 다운로드");
         });
         thread.start();

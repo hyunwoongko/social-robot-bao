@@ -2,7 +2,7 @@ package com.welfarerobotics.welfareapplcation.core.contents.dictation;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import com.welfarerobotics.welfareapplcation.core.BaseActivity;
+import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 
 /**
  * @Author : Hyunwoong

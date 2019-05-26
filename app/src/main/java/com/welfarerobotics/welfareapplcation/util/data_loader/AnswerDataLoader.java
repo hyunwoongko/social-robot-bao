@@ -4,8 +4,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.welfarerobotics.welfareapplcation.api.chat.tools.AnswerModel;
-import com.welfarerobotics.welfareapplcation.api.chat.tools.ChatCache;
+import com.welfarerobotics.welfareapplcation.entity.Answer;
+import com.welfarerobotics.welfareapplcation.entity.cache.ChatCache;
 
 import java.util.Map;
 
@@ -43,8 +43,8 @@ public class AnswerDataLoader implements DataLoader {
     }
 
     @Override public void save(DataSnapshot snapshot) {
-        Map<String, Map<String, AnswerModel>> map = (Map) snapshot.getValue();
-        Map<String, AnswerModel> answerMap = map.get("answer");
+        Map<String, Map<String, Answer>> map = (Map) snapshot.getValue();
+        Map<String, Answer> answerMap = map.get("answer");
         ChatCache.getInstance().setAnswer(answerMap);
     }
 }

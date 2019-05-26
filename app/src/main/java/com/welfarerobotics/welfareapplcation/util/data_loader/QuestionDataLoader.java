@@ -2,7 +2,7 @@ package com.welfarerobotics.welfareapplcation.util.data_loader;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
-import com.welfarerobotics.welfareapplcation.api.chat.tools.ChatCache;
+import com.welfarerobotics.welfareapplcation.entity.cache.ChatCache;
 import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;
 
 import java.util.ArrayList;

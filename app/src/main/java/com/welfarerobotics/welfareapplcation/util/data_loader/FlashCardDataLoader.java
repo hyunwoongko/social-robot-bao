@@ -2,7 +2,7 @@ package com.welfarerobotics.welfareapplcation.util.data_loader;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
-import com.welfarerobotics.welfareapplcation.core.contents.flashcard.FlashcardCache;
+import com.welfarerobotics.welfareapplcation.entity.cache.FlashcardCache;
 import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;
 
 /**

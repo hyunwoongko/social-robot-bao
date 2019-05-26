@@ -1,6 +1,5 @@
 package com.welfarerobotics.welfareapplcation.core.contents.emotioncard;
 
-import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
@@ -17,7 +16,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.entity.ServerCache;
+import com.welfarerobotics.welfareapplcation.entity.cache.EmotioncardCache;
+import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
 
 import java.io.*;
 import java.net.HttpURLConnection;

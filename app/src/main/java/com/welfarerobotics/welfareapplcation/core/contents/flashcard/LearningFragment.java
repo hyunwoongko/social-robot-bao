@@ -11,11 +11,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.entity.ServerCache;
+import com.welfarerobotics.welfareapplcation.entity.cache.FlashcardCache;
+import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
 
 import java.io.*;
 import java.net.HttpURLConnection;

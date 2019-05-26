@@ -16,7 +16,7 @@ import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.*;
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.core.BaseActivity;
+import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.util.Sound;
 import com.welfarerobotics.welfareapplcation.util.ToastType;
 
