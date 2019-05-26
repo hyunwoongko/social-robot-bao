@@ -23,6 +23,7 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.Arrays;
 
 import static com.welfarerobotics.welfareapplcation.core.contents.emotioncard.EmotioncardActivity.emotionIndex;
 
@@ -32,6 +33,8 @@ public class EmotioncardFragment extends Fragment {
     private MediaPlayer mediaPlayer = new MediaPlayer();
     private String[] name = new String[2];
 
+    @Nullable
+    @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_emotioncard, container, false);
 
@@ -62,7 +65,7 @@ public class EmotioncardFragment extends Fragment {
                     .load(child[0])
                     .apply(new RequestOptions().override(600, 850).fitCenter())
                     .into(ibArray[i % 2]);
-            //imageLoader.displayImage(child[0],ibArray[i%2]);
+            // imageLoader.displayImage(child[0],ibArray[i%2]);
             name[i % 2] = child[1];
         }
 
@@ -97,7 +100,7 @@ public class EmotioncardFragment extends Fragment {
             if (mediaPlayer != null && mediaPlayer.isPlaying()) {
                 mediaPlayer.stop();
                 mediaPlayer.release();
-                mediaPlayer = null;
+                mediaPlayer = new MediaPlayer();
             }
             playVoice(mediaPlayer, name[0]);
         });
@@ -106,7 +109,7 @@ public class EmotioncardFragment extends Fragment {
             if (mediaPlayer != null && mediaPlayer.isPlaying()) {
                 mediaPlayer.stop();
                 mediaPlayer.release();
-                mediaPlayer = null;
+                mediaPlayer = new MediaPlayer();
             }
             playVoice(mediaPlayer, name[1]);
         });
@@ -183,12 +186,12 @@ public class EmotioncardFragment extends Fragment {
             mediaPlayer = new MediaPlayer();
         try {
             mediaPlayer.setDataSource(Path_to_file);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         try {
             mediaPlayer.prepare();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         mediaPlayer.start();

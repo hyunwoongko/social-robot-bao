@@ -72,7 +72,7 @@ public class QuizFragment extends Fragment {
                 if (mediaPlayer != null && mediaPlayer.isPlaying()) {
                     mediaPlayer.stop();
                     mediaPlayer.release();
-                    mediaPlayer = null;
+                    mediaPlayer = new MediaPlayer();
                 }
                 playVoice(mediaPlayer, name);
             }
@@ -180,12 +180,12 @@ public class QuizFragment extends Fragment {
             mediaPlayer = new MediaPlayer();
         try {
             mediaPlayer.setDataSource(Path_to_file);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         try {
             mediaPlayer.prepare();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         mediaPlayer.start();

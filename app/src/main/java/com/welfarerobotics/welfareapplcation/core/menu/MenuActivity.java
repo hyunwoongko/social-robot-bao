@@ -24,7 +24,7 @@ import java.io.IOException;
 public class MenuActivity extends AppCompatActivity {
     private String youtubeUrl;
     private QuickAction quickActionArt;
-    private QuickAction quickActionCard;
+    private QuickAction quickActionLang;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,28 +32,29 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
         //미술놀이 퀵액션 생성 (함께그려요, 탱그램)
-        ActionItem aipaintwith = new ActionItem(1,R.drawable.menu_paintwith);
-        ActionItem aitangram = new ActionItem(2,R.drawable.menu_tangram);
+        ActionItem aipaintwith = new ActionItem(1, R.drawable.menu_paintwith);
+        ActionItem aitangram = new ActionItem(2, R.drawable.menu_tangram);
 
         quickActionArt = new QuickAction(this, QuickAction.HORIZONTAL);
         quickActionArt.addActionItem(aipaintwith);
         quickActionArt.addActionItem(aitangram);
 
-        //카드놀이 퀵액션 생성(단어카드, 감정카드)
-        ActionItem aiflashcard = new ActionItem(1,R.drawable.menu_flashcard);
-        ActionItem aiemotioncard = new ActionItem(2,R.drawable.menu_emotioncard);
+        //언어놀이 퀵액션 생성(받아쓰기, 낱말카드)
+        ActionItem aidictation = new ActionItem(1, R.drawable.menu_dictation);
+        ActionItem aiflashcard = new ActionItem(2, R.drawable.menu_flashcard);
 
-        quickActionCard = new QuickAction(this, QuickAction.HORIZONTAL);
-        quickActionCard.addActionItem(aiflashcard);
-        quickActionCard.addActionItem(aiemotioncard);
+        quickActionLang = new QuickAction(this, QuickAction.HORIZONTAL);
+        quickActionLang.addActionItem(aidictation);
+        quickActionLang.addActionItem(aiflashcard);
 
         ImageButton ibbackbtn = findViewById(R.id.backbutton);
         ImageButton ibSettings = findViewById(R.id.settings);
         ImageButton ibplaylang = findViewById(R.id.playlang);
         ImageButton ibkidssong = findViewById(R.id.listensong);
         ImageButton ibfollowbao = findViewById(R.id.followbao);
-        ImageButton iplayart = findViewById(R.id.playart);
-        ImageButton ibplaycard = findViewById(R.id.playcard);
+        ImageButton ibplayart = findViewById(R.id.playart);
+        ImageButton ibemotioncard = findViewById(R.id.emotioncard);
+        ImageButton ibplayfairytale = findViewById(R.id.playfairytale);
 
         ibbackbtn.setOnClickListener(view -> onBackPressed());
 
@@ -62,13 +63,9 @@ public class MenuActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        ibplaylang.setOnClickListener(view -> {
-//            Intent intent = new Intent(getApplicationContext(), ConversationEdit.class);
-            Intent intent = new Intent(getApplicationContext(), DicationActivity.class);
-            startActivity(intent);
-        });
+        ibplaylang.setOnClickListener(view -> quickActionLang.show(view));
 
-        iplayart.setOnClickListener(v-> quickActionArt.show(v));
+        ibplayart.setOnClickListener(view -> quickActionArt.show(view));
 
         ibkidssong.setOnClickListener(view -> {
             try {
@@ -87,28 +84,34 @@ public class MenuActivity extends AppCompatActivity {
         });
 
         ibfollowbao.setOnClickListener(view -> {
+        });
+
+        ibemotioncard.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), EmotioncardActivity.class);
+            startActivity(intent);
+        });
+
+        ibplayfairytale.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(), FairytaleActivity.class);
             startActivity(intent);
         });
 
-        ibplaycard.setOnClickListener(v -> quickActionCard.show(v));
-
         quickActionArt.setOnActionItemClickListener(item -> {
-            if(item == aipaintwith){
+            if (item == aipaintwith) {
                 Intent intent = new Intent(MenuActivity.this, PaintWithActivity.class);
                 startActivity(intent);
-            } else if(item == aitangram){
+            } else if (item == aitangram) {
                 Intent intent = new Intent(MenuActivity.this, TangramSelecActivity.class);
                 startActivity(intent);
             }
         });
 
-        quickActionCard.setOnActionItemClickListener(item -> {
-            if(item == aiflashcard){
-                Intent intent = new Intent(MenuActivity.this, FlashcardActivity.class);
+        quickActionLang.setOnActionItemClickListener(item -> {
+            if (item == aidictation) {
+                Intent intent = new Intent(MenuActivity.this, DicationActivity.class);
                 startActivity(intent);
-            } else if(item == aiemotioncard){
-                Intent intent = new Intent(MenuActivity.this, EmotioncardActivity.class);
+            } else if (item == aiflashcard) {
+                Intent intent = new Intent(MenuActivity.this, FlashcardActivity.class);
                 startActivity(intent);
             }
         });

@@ -29,7 +29,6 @@ public interface DataLoader {
         EMOTION_CARD_DATA_LOADER.load();
         QUESTION_DATA_LOADER.load();
         ANSWER_DATA_LOADER.load();
-        EMOTION_CARD_DATA_LOADER.load();
         EMOTION_CHAT_DATA_LOADER.load();
     }
 }
