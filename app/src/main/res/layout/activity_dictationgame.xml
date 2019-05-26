@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/dication_back" />
+
+    <ImageView
+        android:id="@+id/word"
+        android:layout_width="184dp"
+        android:layout_height="199dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/flashcards_mode_learning" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.myscript.atk.scw.SingleCharWidget
+            android:id="@+id/widget"
+            android:layout_width="555dp"
+            android:layout_height="166dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="201dp"
+            android:layout_weight="1"
+            android:background="@color/float_transparent">
+
+        </com.myscript.atk.scw.SingleCharWidget>
+
+        <TextView
+            android:id="@+id/test"
+            android:layout_width="163dp"
+            android:layout_height="62dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="11dp"
+            android:text="테스트용 입니다." />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/clear_btn"
+        android:layout_width="42dp"
+        android:layout_height="51dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="18dp"
+        android:background="@color/float_transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/clear" />
+
+    <ImageButton
+        android:id="@+id/submit_btn"
+        android:layout_width="42dp"
+        android:layout_height="51dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/clear_btn"
+        android:background="@color/float_transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/submit_btn" />
+
+</RelativeLayout>

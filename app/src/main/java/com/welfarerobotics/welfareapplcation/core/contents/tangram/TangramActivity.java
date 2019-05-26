@@ -24,6 +24,7 @@ import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.BaseActivity;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.concurrent.FutureTask;
 
 
@@ -110,6 +111,17 @@ public class TangramActivity extends BaseActivity {
 
 				});
 
+		ImageButton leftBtn= findViewById(R.id.forbtn);
+		leftBtn.setClickable(true);
+		leftBtn.setOnClickListener(view->{
+			Random random = new Random();
+			TangramStageCash tangram;
+			tangram = TangramStageCash.getInstance();
+			stageimage = tangram.getImages().get(random.nextInt(tangram.getImages().size())).getStage();
+			myPanel.recall();
+
+		});
+
 		ImageButton submitBtn = findViewById(R.id.rotatebtn);
 		submitBtn.setClickable(true);
 		submitBtn.setOnClickListener(view ->{
@@ -119,12 +131,6 @@ public class TangramActivity extends BaseActivity {
 		layout.setBackground(bg);
 		//		layout.setBackgroundColor(Color.BLUE);
 
-		ImageButton stageView = (ImageButton) findViewById(R.id.imagestage);
-		stageView.setImageBitmap(stageimage);
-		stageView.setClickable(true);
-		stageView.setOnClickListener(view ->{
-
-		});
 
 
 

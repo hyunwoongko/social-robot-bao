@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.api.chat.crawler.YoutubeApi;
+import com.welfarerobotics.welfareapplcation.core.contents.dictation.DicationActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.emotioncard.EmotioncardActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.flashcard.FlashcardActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.paintwith.PaintWithActivity;
@@ -62,7 +63,8 @@ public class MenuActivity extends AppCompatActivity {
         });
 
         ibplaylang.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), ConversationEdit.class);
+//            Intent intent = new Intent(getApplicationContext(), ConversationEdit.class);
+            Intent intent = new Intent(getApplicationContext(), DicationActivity.class);
             startActivity(intent);
         });
 
