@@ -94,7 +94,7 @@
             android:name=".core.contents.paintwith.PaintWithActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".core.contents.dictation.DictationActivity"
+            android:name=".core.contents.dictation.DicationActivity"
             android:screenOrientation="landscape" />
         <activity
             android:name=".core.settings.BluetoothActivity"
