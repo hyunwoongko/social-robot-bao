@@ -12,17 +12,17 @@ import java.util.ArrayList;
  * @when : 5/25/2019 4:02 PM
  * @homepage : https://github.com/gusdnd852
  */
-public class QuestionDataLoader implements DataLoader {
+public class TopicSwitchDataLoader implements DataLoader {
 
-    private static QuestionDataLoader instance;
+    private static TopicSwitchDataLoader instance;
 
-    private QuestionDataLoader() {
+    private TopicSwitchDataLoader() {
 
     }
 
-    static QuestionDataLoader getInstance() {
+    static TopicSwitchDataLoader getInstance() {
         if (instance == null) {
-            instance = new QuestionDataLoader();
+            instance = new TopicSwitchDataLoader();
         }
         return instance;
     }
@@ -35,13 +35,13 @@ public class QuestionDataLoader implements DataLoader {
             String dataString = data.getValue(String.class);
             qList.add(dataString);
         }
-        ChatCache.getInstance().setQuestion(qList);
+        ChatCache.getInstance().setTopicSwitch(qList);
         System.out.println(getClass().getName() + " : 데이터 다운로드");
     }
 
     @Override public void load() {
         FirebaseHelper.get().download(FirebaseDatabase.getInstance()
                 .getReference("chat")
-                .child("question"), this::save);
+                .child("topic switch"), this::save);
     }
 }

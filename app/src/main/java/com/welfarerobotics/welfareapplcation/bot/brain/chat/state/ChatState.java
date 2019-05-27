@@ -19,5 +19,5 @@ public interface ChatState {
     FallbackState FALLBACK_STATE = FallbackState.getInstance();
 
     ChatState think(ChatIntent intent, String preprocessedSpeech) throws IOException;
-    void speech(Mouth voice);
+    ChatState speech(Mouth voice);
 }

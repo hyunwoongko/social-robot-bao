@@ -26,19 +26,14 @@ public @Getter class Hippocampus {
     private List<String> word = new ArrayList<>();
 
     public void rememberWeather(List<String>[] entities) {
-        this.location = entities[0];
-        this.date = entities[1];
+        this.location.addAll(entities[0]);
+        this.date.addAll(entities[1]);
     }
 
     public void decideToSay(String thoughtSentence) {
         this.thoughtSentence = thoughtSentence;
     }
 
-    public void clearAllEntity() {
-        location.clear();
-        date.clear();
-        lang.clear();
-        word.clear();
-    }
+    public void
 }
 

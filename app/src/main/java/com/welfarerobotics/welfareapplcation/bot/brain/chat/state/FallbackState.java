@@ -1,9 +1,13 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.state;
 
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
+import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.intent.ChatIntent;
+import com.welfarerobotics.welfareapplcation.entity.cache.ChatCache;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.Random;
 
 /**
  * @author : Hyunwoong
@@ -12,6 +16,7 @@ import java.io.IOException;
  */
 public class FallbackState implements ChatState {
     private static FallbackState state;
+    private Random random = new Random();
 
     private FallbackState() {
     }
@@ -22,10 +27,18 @@ public class FallbackState implements ChatState {
     }
 
     @Override public ChatState think(ChatIntent intent, String preprocessedSpeech) throws IOException {
-        return null;
+        ChatCache cache = ChatCache.getInstance();
+        List<String> fallbackText = cache.getFallback();
+        List<String> topicSwitch = cache.getTopicSwitch();
+
+        String fallbackMsg = fallbackText.get(random.nextInt(fallbackText.size() - 1));
+        String topicSwitchMsg = topicSwitch.get(random.nextInt(topicSwitch.size() - 1));
+        Brain.hippocampus.decideToSay(fallbackMsg + " , " + topicSwitchMsg);
+        return FALLBACK_STATE;
     }
 
-    @Override public void speech(Mouth voice) {
-
+    @Override public ChatState speech(Mouth mouth) {
+        mouth.play(Brain.hippocampus.getThoughtSentence());
+        return NORMAL_STATE;
     }
 }

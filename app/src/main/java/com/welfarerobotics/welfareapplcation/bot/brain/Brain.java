@@ -6,8 +6,6 @@ import com.welfarerobotics.welfareapplcation.bot.brain.chat.intent.IntentClassif
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.preprocess.Preprocessor;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.state.ChatState;
 
-import java.io.IOException;
-
 /**
  * @Author : Hyunwoong
  * @When : 3/23/2019 10:58 PM
@@ -28,13 +26,14 @@ public final class Brain {
             String preprocessedSpeech = Preprocessor.preprocess(speech);
             ChatIntent intent = IntentClassifier.classify(preprocessedSpeech);
             currentState = currentState.think(intent, preprocessedSpeech);
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (Throwable ignore) {
+            currentState = ChatState.FALLBACK_STATE;
+            // 엑셉션 발생시 FALLBACK STATE 로 전환.
         }
     }
 
     public static void speech(Mouth mouth) {
-        currentState.speech(mouth);
+        currentState = currentState.speech(mouth);
     }
 
     public static void draw() {

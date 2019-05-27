@@ -13,7 +13,7 @@ public interface DataLoader {
     FairytaleDataLoader FAIRYTALE_DATA_LOADER = FairytaleDataLoader.getInstance();
     FlashCardDataLoader FLASH_CARD_DATA_LOADER = FlashCardDataLoader.getInstance();
     EmotionCardDataLoader EMOTION_CARD_DATA_LOADER = EmotionCardDataLoader.getInstance();
-    QuestionDataLoader QUESTION_DATA_LOADER = QuestionDataLoader.getInstance();
+    TopicSwitchDataLoader QUESTION_DATA_LOADER = TopicSwitchDataLoader.getInstance();
     AnswerDataLoader ANSWER_DATA_LOADER = AnswerDataLoader.getInstance();
     EmotionChatDataLoader EMOTION_CHAT_DATA_LOADER = EmotionChatDataLoader.getInstance();
 

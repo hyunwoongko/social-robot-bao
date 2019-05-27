@@ -25,5 +25,6 @@ public @Data class ChatCache {
 
     private Map<String, Answer> answer;
     private Map<String, List<String>> emotion;
-    private List<String> question;
+    private List<String> topicSwitch;
+    private List<String> fallback;
 }
