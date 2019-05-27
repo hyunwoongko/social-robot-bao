@@ -16,11 +16,13 @@
 
 */
 
-package com.welfarerobotics.welfareapplcation.core.main;
+package com.welfarerobotics.welfareapplcation.util.bluetooth;
 
 /**
  * Created by yubo on 7/11/17.
  */
+
+import com.welfarerobotics.welfareapplcation.util.bluetooth.BluetoothChatService;
 
 /**
  * Defines several constants used between {@link BluetoothChatService} and the UI.

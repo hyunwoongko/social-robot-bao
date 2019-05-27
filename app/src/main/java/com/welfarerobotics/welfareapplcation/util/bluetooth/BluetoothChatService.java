@@ -16,7 +16,7 @@
 
 */
 
-package com.welfarerobotics.welfareapplcation.core.main;
+package com.welfarerobotics.welfareapplcation.util.bluetooth;
 
 /**
  * Created by yubo on 7/11/17.
