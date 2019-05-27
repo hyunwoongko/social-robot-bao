@@ -27,7 +27,7 @@ public final class Brain {
         try {
             String preprocessedSpeech = Preprocessor.preprocess(speech);
             ChatIntent intent = IntentClassifier.classify(preprocessedSpeech);
-            currentState = currentState.answer(intent, preprocessedSpeech);
+            currentState = currentState.think(intent, preprocessedSpeech);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -38,6 +38,6 @@ public final class Brain {
     }
 
     public static void draw() {
-        // 함께그려요
+        // Generative Adversarial Nets
     }
 }

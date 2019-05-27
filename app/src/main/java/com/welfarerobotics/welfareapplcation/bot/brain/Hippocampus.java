@@ -1,7 +1,7 @@
 package com.welfarerobotics.welfareapplcation.bot.brain;
 
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.intent.ChatIntent;
-import lombok.Data;
+import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,11 +14,11 @@ import java.util.List;
  * 해마를 모방한 클래스
  * 이전에 들은 말들을 기억함
  */
-public @Data class Hippocampus {
+public @Getter class Hippocampus {
 
     private ArrayList<ChatIntent> openDomainIntentQueue = new ArrayList<>(); // 비목적 의도 큐
     private ChatIntent previousCloseDomainIntent = ChatIntent.builder().build(); // 최근 목적대화
-    private String textToSpeech = ""; // 사용자에게 해야할 말
+    private String thoughtSentence = ""; // 지금 말하려고 생각한 문장
 
     private List<String> location = new ArrayList<>();
     private List<String> date = new ArrayList<>();
@@ -30,8 +30,8 @@ public @Data class Hippocampus {
         this.date = entities[1];
     }
 
-    public void decideToSay(String textToSpeech) {
-        this.textToSpeech = textToSpeech;
+    public void decideToSay(String thoughtSentence) {
+        this.thoughtSentence = thoughtSentence;
     }
 
     public void clearAllEntity() {

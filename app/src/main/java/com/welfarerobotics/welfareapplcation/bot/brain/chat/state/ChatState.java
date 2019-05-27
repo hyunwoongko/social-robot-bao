@@ -18,6 +18,6 @@ public interface ChatState {
     QuestionState QUESTION_STATE = QuestionState.getInstance();
     FallbackState FALLBACK_STATE = FallbackState.getInstance();
 
-    ChatState answer(ChatIntent intent, String preprocessedSpeech) throws IOException;
+    ChatState think(ChatIntent intent, String preprocessedSpeech) throws IOException;
     void speech(Mouth voice);
 }

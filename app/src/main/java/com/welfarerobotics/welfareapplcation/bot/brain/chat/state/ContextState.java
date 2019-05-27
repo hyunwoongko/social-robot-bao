@@ -1,5 +1,6 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.state;
 
+import com.welfarerobotics.welfareapplcation.bot.Mouth;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.intent.ChatIntent;
 
 /**
@@ -18,7 +19,11 @@ public class ContextState implements ChatState {
         return state;
     }
 
-    @Override public ChatState answer(ChatIntent intent, String preprocessedSpeech) {
+    @Override public ChatState think(ChatIntent intent, String preprocessedSpeech) {
         return null;
+    }
+
+    @Override public void speech(Mouth voice) {
+
     }
 }
