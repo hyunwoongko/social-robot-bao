@@ -29,7 +29,8 @@ public class NormalState implements ChatState {
         if (intent == null) return FALLBACK_STATE.think(intent, speech);
         String intentName = intent.getIntentName(); // 의도명 파악
 
-        // 오늘은? 내일은 어때?  ||  일본어는? 미국은?  ||  전주는? 부산은? 대구는? // 미세먼지는? // 날씨는?
+        // 오늘은? 내일은 어때?  ||  일본어는? 미국은?  ||  전주는? 부산은? 대구는? ||
+        // 그럼 미세먼지는? || 그럼 날씨는?
         if (intentName.equals("날짜") || intentName.equals("국가") || intentName.equals("지역") ||
                 (intentName.equals("먼지") && Brain.hippocampus.getPreviousCloseDomainIntent().getIntentName().equals("날씨")) ||
                 (intentName.equals("날씨") && Brain.hippocampus.getPreviousCloseDomainIntent().getIntentName().equals("먼지")))

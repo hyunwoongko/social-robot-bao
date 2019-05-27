@@ -22,6 +22,11 @@ public class QuestionState implements ChatState {
     }
 
     @Override public ChatState think(ChatIntent intent, String speech) throws IOException {
+        String intentName = intent.getIntentName();
+
+        if (intentName.equals("번역")) {
+
+        }
 
 
         return null;
