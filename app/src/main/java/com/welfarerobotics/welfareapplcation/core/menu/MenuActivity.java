@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageButton;
 import android.widget.Toast;
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.bot.chat.crawler.YoutubeApi;
+import com.welfarerobotics.welfareapplcation.bot.brain.chat.crawler.YoutubeApi;
 import com.welfarerobotics.welfareapplcation.core.contents.dictation.DicationActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.emotioncard.EmotioncardActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.flashcard.FlashcardActivity;
