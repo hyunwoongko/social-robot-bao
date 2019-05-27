@@ -15,7 +15,7 @@ import java.util.Date;
  */
 @SuppressLint("SimpleDateFormat")
 public class CalenderScenario {
-    public static ChatState process(String preprocessedSpeech) throws IOException {
+    public static ChatState process(String speech) throws IOException {
         SimpleDateFormat format2 = new SimpleDateFormat("yyyy년 MM월 dd일");
         Date time = new Date();
         String time2 = format2.format(time);

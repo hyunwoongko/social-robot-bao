@@ -6,13 +6,11 @@ import java.io.IOException;
 
 /**
  * @author : Hyunwoong
- * @when : 5/27/2019 7:05 PM
+ * @when : 5/28/2019 2:29 AM
  * @homepage : https://github.com/gusdnd852
  */
-public class RestaurantScenario {
-    public static ChatState process(String speech, Runnable... forgets) throws IOException {
-        for(Runnable forget : forgets) forget.run(); // 원하는 만큼 기억을 잊음.
-
+public class WifiScenario {
+    public static ChatState process(String speech) throws IOException {
         return ChatState.NORMAL_STATE;
     }
 }

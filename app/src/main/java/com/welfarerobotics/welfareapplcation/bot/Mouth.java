@@ -97,6 +97,7 @@ public final @Data class Mouth {
             e.printStackTrace();
         }
         audioPlayer.start();
+        setSpeaker("jinho"); // 다시 진호로 바꿈
         return this;
     }
 

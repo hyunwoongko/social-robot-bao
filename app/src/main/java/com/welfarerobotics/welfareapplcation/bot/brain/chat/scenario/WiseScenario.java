@@ -10,7 +10,7 @@ import java.io.IOException;
  * @homepage : https://github.com/gusdnd852
  */
 public class WiseScenario {
-    public static ChatState process(String preprocessedSpeech) throws IOException {
+    public static ChatState process(String speech) throws IOException {
 
         return ChatState.NORMAL_STATE;
     }

@@ -18,7 +18,7 @@ import java.util.List;
  */
 @SuppressLint("SimpleDateFormat")
 public class TimeScenario {
-    public static ChatState process(String preprocessedSpeech) throws IOException {
+    public static ChatState process(String speech) throws IOException {
         SimpleDateFormat format2 = new SimpleDateFormat("HH시 mm분 ss초");
         Date time = new Date();
         String time2 = format2.format(time);

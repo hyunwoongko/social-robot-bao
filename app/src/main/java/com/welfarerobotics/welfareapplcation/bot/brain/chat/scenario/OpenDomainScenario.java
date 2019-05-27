@@ -11,7 +11,7 @@ import java.io.IOException;
  * @homepage : https://github.com/gusdnd852
  */
 public class OpenDomainScenario {
-    public static ChatState process(ChatIntent intent, String preprocessedSpeech) throws IOException {
+    public static ChatState process(ChatIntent intent, String speech) throws IOException {
         return ChatState.NORMAL_STATE;
     }
 }

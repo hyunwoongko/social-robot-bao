@@ -12,7 +12,7 @@ import java.util.List;
  * @homepage : https://github.com/gusdnd852
  * <p>
  * 해마를 모방한 클래스
- * 이전에 들은 말들을 기억함
+ * 이전에 들은 말들을 기억하는 클래스
  */
 public @Getter class Hippocampus {
 
@@ -28,6 +28,10 @@ public @Getter class Hippocampus {
     public void rememberWeather(List<String>[] entities) {
         this.location.addAll(entities[0]);
         this.date.addAll(entities[1]);
+    }
+
+    public void rememberWord(List<String> entity) {
+        word.addAll(entity);
     }
 
     public void decideToSay(String thoughtSentence) {

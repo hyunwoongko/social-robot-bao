@@ -21,11 +21,13 @@ public class QuestionState implements ChatState {
         return state;
     }
 
-    @Override public ChatState think(ChatIntent intent, String preprocessedSpeech) throws IOException {
+    @Override public ChatState think(ChatIntent intent, String speech) throws IOException {
+
+
         return null;
     }
 
-    @Override public void speech(Mouth voice) {
-
+    @Override public ChatState speech(Mouth voice) {
+        return null;
     }
 }

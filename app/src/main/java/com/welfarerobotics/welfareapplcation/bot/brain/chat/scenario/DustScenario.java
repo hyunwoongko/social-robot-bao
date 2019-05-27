@@ -16,7 +16,7 @@ import java.util.List;
 public class DustScenario {
     public static ChatState process(String preprocessedSpeech, Runnable... forgets) throws IOException {
         List<String>[] entities = WeatherEntityRecognizer.recognize(preprocessedSpeech, false);
-        for(Runnable forget : forgets) forget.run();
+        for(Runnable forget : forgets) forget.run(); // 원하는 만큼 기억을 잊음.
         Brain.hippocampus.rememberWeather(entities); // 해마에 엔티티를 기억시킴.
         String response = DustResponseGenerator.response();
         Brain.hippocampus.decideToSay(response);
