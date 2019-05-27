@@ -7,13 +7,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.kakao.sdk.newtoneapi.SpeechRecognizerClient;
 import com.kakao.sdk.newtoneapi.SpeechRecognizerManager;
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.bot.Brain;
-import com.welfarerobotics.welfareapplcation.bot.Voice;
+import com.welfarerobotics.welfareapplcation.bot.Ear;
+import com.welfarerobotics.welfareapplcation.bot.Mouth;
+import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.entity.Server;
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
 import com.welfarerobotics.welfareapplcation.util.Pool;
-import com.welfarerobotics.welfareapplcation.bot.Ear;
 import com.welfarerobotics.welfareapplcation.util.data_loader.DataLoader;
 import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;
 import com.welfarerobotics.welfareapplcation.util.touch_util.ConcreteSwipeTouchListener;
@@ -46,16 +46,17 @@ public class MainActivity extends BaseActivity {
 
     private void init() {
         DataLoader.onDataLoad(); // 모든 데이터 다운로드
-        Ear manager = new Ear()
+        Ear behaviorWhenHearing = new Ear() // 들었을 때 행동 설정
                 .onSuccess(speech -> Pool.threadPool.execute(() -> {
-                    Brain.get().think(speech, this);
-                    Voice.get().stop(() -> ear.startRecording(false));
-                }))
-                .onFail(handler -> handler.postDelayed(() ->
-                        ear.startRecording(false), 100));
+                    Brain.think(speech); // 생각
+                    Brain.speech(Mouth.get()); // 말하기
+                    Mouth.get().stop(() -> // 말하기 종료
+                            ear.startRecording(false)); // 다시 듣기
+                })).onFail(handler -> handler.postDelayed(() -> // 실패시
+                        ear.startRecording(false), 100)); // 다시듣기
 
-        ear.setSpeechRecognizeListener(manager);
-        ear.startRecording(false);
+        ear.setSpeechRecognizeListener(behaviorWhenHearing); // 행동 설정
+        ear.startRecording(false); // 듣기 시작
     }
 
 
