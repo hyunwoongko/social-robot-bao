@@ -33,7 +33,5 @@ public @Getter class Hippocampus {
     public void decideToSay(String thoughtSentence) {
         this.thoughtSentence = thoughtSentence;
     }
-
-    public void
 }
 
