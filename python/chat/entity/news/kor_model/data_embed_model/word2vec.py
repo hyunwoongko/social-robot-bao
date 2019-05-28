@@ -2,6 +2,7 @@ import os
 
 from gensim.models import fasttext
 
+
 def train_w2v(config):
     try:
         print("word2vec train start")

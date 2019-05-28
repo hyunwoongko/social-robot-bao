@@ -22,6 +22,7 @@ from chat.entity.translate.entity_recognizer import get_translate_entity
 from chat.entity.weather.entity_recognizer import get_weather_entity
 from chat.entity.wiki.entity_recognizer import get_wiki_entity
 from chat.intent.classifier import get_intent
+from chat.open_domain.open_domain import open_domain
 from chat.util.hanspell.spell_checker import fix
 from chat.util.tokenizer import tokenize
 
@@ -38,7 +39,7 @@ def init():
 
 
 ##################################
-####### DEEP LEARNING MODEL #######
+######### DEEP LEARNING MODEL #########
 ##################################
 
 @app.route('/intent/<text>', methods=['GET', 'POST'])
@@ -51,8 +52,13 @@ def server_similarity(text):
     return get_similarity(text)
 
 
+@app.route('/open_domain/<username>/<text>', methods=['GET', 'POST'])
+def server_open_domain(username, text):
+    return open_domain(username, text)
+
+
 ##################################
-######## PREPROCESS ###########
+############ PREPROCESS #############
 ##################################
 @app.route('/tokenize/<text>', methods=['GET', 'POST'])
 def server_tokenize(text):
@@ -65,7 +71,7 @@ def server_fix(text):
 
 
 ##################################
-########### API : DUST ###########
+############# API : DUST #############
 ##################################
 @app.route('/entity_dust/<text>', methods=['GET', 'POST'])
 def server_dust_entity(text):
@@ -88,7 +94,7 @@ def server_after_tomorrow_dust(location):
 
 
 ##################################
-########### API : ISSUE ###########
+############# API : ISSUE #############
 ##################################
 @app.route('/issue', methods=['GET', 'POST'])
 def server_issue():
@@ -96,7 +102,7 @@ def server_issue():
 
 
 ##################################
-######### API : TRANSLATE #########
+########### API : TRANSLATE ###########
 ##################################
 @app.route('/entity_translate/<text>', methods=['GET', 'POST'])
 def server_translate_entity(text):
@@ -109,7 +115,7 @@ def server_translate(lang, text):
 
 
 ##################################
-########### API : WIKI ###########
+############# API : WIKI #############
 ##################################
 @app.route('/entity_wiki/<text>', methods=['GET', 'POST'])
 def server_wiki_entity(text):
@@ -122,7 +128,7 @@ def server_wiki(text):
 
 
 ##################################
-######### API : WEATHER ##########
+########### API : WEATHER ############
 ##################################
 @app.route('/entity_weather/<text>', methods=['GET', 'POST'])
 def server_weather_entity(text):
@@ -155,7 +161,7 @@ def server_specific_weather(location, date):
 
 
 ##################################
-########### API : WISE ###########
+############# API : WISE #############
 ##################################
 @app.route('/wise', methods=['GET', 'POST'])
 def server_wise():
@@ -163,7 +169,7 @@ def server_wise():
 
 
 ##################################
-########## API : YOUTUBE ##########
+############ API : YOUTUBE ############
 ##################################
 @app.route('/entity_song/<text>', methods=['GET', 'POST'])
 def server_song_entity(text):
@@ -176,7 +182,7 @@ def server_youtube(text):
 
 
 ##################################
-########## API : NEWS ##########
+############ API : NEWS ##############
 ##################################
 @app.route('/entity_news/<text>', methods=['GET', 'POST'])
 def server_news_entity(text):
@@ -194,7 +200,7 @@ def server_keyword_news(keyword):
 
 
 ##################################
-######### API : RESTAURANT #########
+########### API : RESTAURANT ###########
 ##################################
 @app.route('/entity_restaurant/<text>', methods=['GET', 'POST'])
 def server_restaurant_entity(text):

@@ -1,6 +1,7 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.crawler;
 
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
+import com.welfarerobotics.welfareapplcation.entity.cache.UserCache;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
@@ -28,6 +29,25 @@ public final class ModelApi {
                 .body()
                 .text();
     }
+
+
+    /**
+     * 오픈도메인 대화 메소드
+     * 문장을 입력하면 대답을 출력함
+     *
+     * @param text 유저 입력 문장
+     * @return 출력
+     */
+    public static String getOpenDomainAnswer(String text) throws IOException {
+        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/open_domain/" + Encoder
+                .utf8(UserCache.getInstance().getName()) + Encoder
+                .utf8(text))
+                .timeout(20000)
+                .get()
+                .body()
+                .text();
+    }
+
 
     /**
      * Doc2Vec 유사도 파악 API

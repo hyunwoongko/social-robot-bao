@@ -1,6 +1,5 @@
 class config():
-
-    embedding = "facebook" #fasttext, word2vec, facebook
+    embedding = "facebook"  # fasttext, word2vec, facebook
     embedding_model_path = "chat/entity/song/data/w2v"
     crawler_path = "chat/entity/song/data/crawler/"
     crawler_file = 'chat/entity/song/source.txt'
@@ -27,8 +26,8 @@ class config():
     use_crawler = False
     hidden_size = 512
     char_hidden_size = 128
-    crf = True # size one is not allowed
-    chars = True # if char embedding, training is 3.5x slower
+    crf = True  # size one is not allowed
+    chars = True  # if char embedding, training is 3.5x slower
     output_path = "chat/entity/song/results/crf/"
     model_output = output_path + "model.weights/"
     log_path = output_path + "log.txt"

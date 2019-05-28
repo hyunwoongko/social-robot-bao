@@ -1,8 +1,10 @@
+import tensorflow as tf
+
 from chat.entity.song.kor_model.config import config
 from chat.entity.song.kor_model.data_embed_model import word2vec, data_utils
 from chat.entity.song.kor_model.data_embed_model.data_utils import CoNLLDataset
 from chat.entity.song.kor_model.ner_model.lstmcrf_model import NERModel
-import tensorflow as tf
+
 
 def embed_model():
     return word2vec.train_w2v(config)

@@ -1,7 +1,6 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.state;
 
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
-import com.welfarerobotics.welfareapplcation.bot.brain.chat.intent.ChatIntent;
 
 import java.io.IOException;
 
@@ -18,6 +17,6 @@ public interface ChatState {
     QuestionState QUESTION_STATE = QuestionState.getInstance();
     FallbackState FALLBACK_STATE = FallbackState.getInstance();
 
-    ChatState think(ChatIntent intent, String speech) throws IOException;
+    ChatState think(String intent, String speech) throws IOException;
     ChatState speech(Mouth voice);
 }

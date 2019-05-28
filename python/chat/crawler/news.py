@@ -93,4 +93,3 @@ def get_news():
             idx += 1
     result = ' , '.join(result)
     return result
-

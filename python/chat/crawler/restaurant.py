@@ -76,11 +76,13 @@ def recommend_restaurant(location):
             counter = False
             response_list = []
             for word in siksin_doc:
-                word = re.sub('습니다', '어', word)
-                word = re.sub('니다', '다', word)
-                word = re.sub('데요', '데', word)
-                word = re.sub('어요', '어', word)
-                word = re.sub('었요', '었어', word)
+                word = re.sub('하다', '합니다', word)
+                word = re.sub('한다', '합니다', word)
+                word = re.sub('했다', '했어요', word)
+                word = re.sub('했었다', '했었어요', word)
+                word = re.sub('이다', '입니다', word)
+                word = re.sub('있다', '있어요', word)
+                word = re.sub('있었다', '있었어요', word)
 
                 if '전화번호' in word:
                     response_list.append(word.split(sep='전화번호', maxsplit=1)[0])
@@ -97,7 +99,7 @@ def recommend_restaurant(location):
     else:
         description = ''
 
-    msg = info + ' , ' + name + ' 에 가보는 건 어떨까? '
+    msg = info + ' , ' + name + ' 에 가보는 건 어떨까요? '
 
     if description != ' ':
         msg += description
@@ -111,7 +113,6 @@ def recommend_restaurant(location):
     if tel != '':
         msg += ' 전화번호는 ' + tel + ','
 
-    msg += '야'
+    msg += '입니다.'
 
     return msg
-

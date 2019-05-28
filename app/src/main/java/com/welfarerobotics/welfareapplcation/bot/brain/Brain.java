@@ -1,7 +1,6 @@
 package com.welfarerobotics.welfareapplcation.bot.brain;
 
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
-import com.welfarerobotics.welfareapplcation.bot.brain.chat.intent.ChatIntent;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.intent.IntentClassifier;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.preprocess.Preprocessor;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.state.ChatState;
@@ -17,14 +16,13 @@ import com.welfarerobotics.welfareapplcation.bot.brain.chat.state.ChatState;
  */
 public final class Brain {
     private static ChatState currentState = ChatState.NORMAL_STATE;
-    public static Hippocampus hippocampus = new Hippocampus(); // 해마
-    public static Pituitary pituitary = new Pituitary(); // 뇌하수체
-    public static Amylace amylace = new Amylace(); // 편도체
+    public static Hippocampus hippocampus = new Hippocampus();
 
     public static void think(String speech) {
         try {
+            System.out.println("입력 : " + speech);
             String preprocessedSpeech = Preprocessor.preprocess(speech);
-            ChatIntent intent = IntentClassifier.classify(preprocessedSpeech);
+            String intent = IntentClassifier.classify(preprocessedSpeech);
             currentState = currentState.think(intent, preprocessedSpeech);
         } catch (Throwable ignore) {
             currentState = ChatState.FALLBACK_STATE;
@@ -39,4 +37,5 @@ public final class Brain {
     public static void draw() {
         // Generative Adversarial Nets
     }
+
 }

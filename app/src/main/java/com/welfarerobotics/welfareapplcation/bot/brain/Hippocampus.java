@@ -1,6 +1,5 @@
 package com.welfarerobotics.welfareapplcation.bot.brain;
 
-import com.welfarerobotics.welfareapplcation.bot.brain.chat.intent.ChatIntent;
 import lombok.Getter;
 
 import java.util.ArrayList;
@@ -16,8 +15,7 @@ import java.util.List;
  */
 public @Getter class Hippocampus {
 
-    private ArrayList<ChatIntent> openDomainIntentQueue = new ArrayList<>(); // 비목적 의도 큐
-    private ChatIntent previousCloseDomainIntent = ChatIntent.builder().build(); // 최근 목적대화
+    private String previousIntent = ""; // 최근 목적대화
     private String thoughtSentence = ""; // 지금 말하려고 생각한 문장
 
     private List<String> location = new ArrayList<>();

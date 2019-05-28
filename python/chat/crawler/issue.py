@@ -27,6 +27,6 @@ def get_issue():
         if idx in ran_list:
             issue_data.extend([title.text, ''])
 
-    issue_data.extend(["등 이있어."])
+    issue_data.extend(["등 이있습니다."])
     text = ' '.join(issue_data)
     return text

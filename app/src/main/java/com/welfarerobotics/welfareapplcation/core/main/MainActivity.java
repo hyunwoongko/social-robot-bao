@@ -14,6 +14,7 @@ import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.entity.Server;
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
 import com.welfarerobotics.welfareapplcation.util.Pool;
+import com.welfarerobotics.welfareapplcation.util.ToastType;
 import com.welfarerobotics.welfareapplcation.util.data_loader.DataLoader;
 import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;
 import com.welfarerobotics.welfareapplcation.util.touch_util.ConcreteSwipeTouchListener;
@@ -46,16 +47,18 @@ public class MainActivity extends BaseActivity {
 
     private void init() {
         DataLoader.onDataLoad(); // 모든 데이터 다운로드
-        Ear behaviorWhenHearing = new Ear() // 들었을 때 행동 설정
-                .onSuccess(speech -> Pool.threadPool.execute(() -> {
-                    Brain.think(speech); // 생각
-                    Brain.speech(Mouth.get()); // 말하기
-                    Mouth.get().stop(() -> // 말하기 종료
-                            ear.startRecording(false)); // 다시 듣기
-                })).onFail(handler -> handler.postDelayed(() -> // 실패시
-                        ear.startRecording(false), 100)); // 다시듣기
+        Ear hearing = new Ear();// 들었을 때 행동 설정
 
-        ear.setSpeechRecognizeListener(behaviorWhenHearing); // 행동 설정
+        hearing.onSuccess(speech -> Pool.threadPool.execute(() -> {
+            if (hearing.isNameDetected(speech)) {
+
+                Brain.think(speech); // 생각
+                Brain.speech(Mouth.get()); // 말하기
+                Mouth.get().stop(() -> ear.startRecording(false)); // 다시 듣기
+            } else hearing.hearAgain(ear);
+        })).onFail(() -> hearing.hearAgain(ear)); // 다시듣기
+
+        ear.setSpeechRecognizeListener(hearing); // 행동 설정
         ear.startRecording(false); // 듣기 시작
     }
 

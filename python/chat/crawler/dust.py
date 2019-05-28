@@ -19,12 +19,12 @@ def today_dust(location):
     del dust_figure[2]
     del dust_figure[4]
 
-    dust = '오늘 ' + location + '지역 미세먼지 정보를 알려줄게. ' + '오늘 ' + location + '지역의 미세먼지 상태는 ' + dust_figure[
+    dust = '오늘 ' + location + '지역 미세먼지 정보를 알려드릴게요. ' + '오늘 ' + location + '지역의 미세먼지 상태는 ' + dust_figure[
         1] + ' 이고, 농도는 ' + dust_figure[0] + ', 초미세먼지 상태는 ' + dust_figure[3] + ' 이고, 농도는 ' + dust_figure[
-               2] + ', 오존 상태는 ' + dust_figure[5] + ' 이고, 농도는 ' + dust_figure[4] + '야'
+               2] + ', 오존 상태는 ' + dust_figure[5] + ' 이고, 농도는 ' + dust_figure[4] + '입니다'
 
     if '나쁨' in dust:
-        dust += ' 공기 상태가 안좋으니 마스크를 착용하는 게 좋을 것 같아'
+        dust += ' 공기 상태가 안좋으니 마스크를 착용하세요'
 
     return dust
 
@@ -44,7 +44,7 @@ def tomorrow_dust(location):
     dust_figure.remove('자외선')
     dust_figure.remove('황사')
 
-    dust = '내일 ' + location + '의 미세먼지 정보를 알려줄게 '
+    dust = '내일 ' + location + '의 미세먼지 정보를 알려드릴게요 '
     dust_morn = dust_figure[0]
     dust_noon = dust_figure[1]
     dust += ', 내일 오전 미세먼지 상태는 ' + dust_morn + ', 오후 상태는 ' + dust_noon
@@ -53,10 +53,10 @@ def tomorrow_dust(location):
     dust += ', 내일 오전 초미세먼지 상태는 ' + supdust_morn + ', 오후 상태는 ' + supdust_noon
     ozone_morn = dust_figure[8]
     ozone_noon = dust_figure[9]
-    dust += ', 내일 오전 오존 상태는 ' + ozone_morn + ', 오후 상태는 ' + ozone_noon + '이야'
+    dust += ', 내일 오전 오존 상태는 ' + ozone_morn + ', 오후 상태는 ' + ozone_noon + '입니다'
 
     if '나쁨' in dust:
-        dust += ' 공기 상태가 나쁘니 마스크를 착용하는게 좋아보여'
+        dust += ' 공기 상태가 나쁘니 마스크를 착용하세요'
 
     return dust
 
@@ -76,7 +76,7 @@ def after_tomorrow_dust(location):
     dust_figure.remove('자외선')
     dust_figure.remove('황사')
 
-    dust = '모레 ' + location + '의 미세먼지 정보를 알려줄게 '
+    dust = '모레 ' + location + '의 미세먼지 정보를 알려드릴게요 '
     dust_morn = dust_figure[2]
     dust_noon = dust_figure[3]
     dust += ', 모레 오전 미세먼지 상태는 ' + dust_morn + ', 오후 상태는 ' + dust_noon
@@ -85,9 +85,9 @@ def after_tomorrow_dust(location):
     dust += ', 모레 오전 초미세먼지 상태는 ' + supdust_morn + ', 오후 상태는 ' + supdust_noon
     ozone_morn = dust_figure[10]
     ozone_noon = dust_figure[11]
-    dust += ', 모레 오전 오존 상태는 ' + ozone_morn + ', 오후 상태는 ' + ozone_noon + '야'
+    dust += ', 모레 오전 오존 상태는 ' + ozone_morn + ', 오후 상태는 ' + ozone_noon + '입니다'
 
     if '나쁨' in dust:
-        dust += ' 공기 상태가 나쁘니 마스크를 착용하는게 좋아보여'
+        dust += ' 공기 상태가 나쁘니 마스크를 착용하세요'
 
     return dust.replace('-', '아직 알수 없음')

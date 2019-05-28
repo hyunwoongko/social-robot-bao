@@ -1,7 +1,6 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.state;
 
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
-import com.welfarerobotics.welfareapplcation.bot.brain.chat.intent.ChatIntent;
 
 import java.io.IOException;
 
@@ -21,14 +20,7 @@ public class QuestionState implements ChatState {
         return state;
     }
 
-    @Override public ChatState think(ChatIntent intent, String speech) throws IOException {
-        String intentName = intent.getIntentName();
-
-        if (intentName.equals("번역")) {
-
-        }
-
-
+    @Override public ChatState think(String intent, String speech) throws IOException {
         return null;
     }
 

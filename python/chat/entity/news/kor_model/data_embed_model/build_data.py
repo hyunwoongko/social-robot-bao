@@ -9,12 +9,12 @@ def build_data(config):
     # build embedding model
     embed_model = word2vec.train_w2v(config)
 
-    #data_utils.write_vocab(model.wv.index2word, config.words_filename)
-    #np.savetxt(config.trimmed_filename, model.wv.syn0)
+    # data_utils.write_vocab(model.wv.index2word, config.words_filename)
+    # np.savetxt(config.trimmed_filename, model.wv.syn0)
 
     # Generators
-    dev   = CoNLLDataset(config.dev_filename, max_iter=config.max_iter)
-    test  = CoNLLDataset(config.test_filename, max_iter=config.max_iter)
+    dev = CoNLLDataset(config.dev_filename, max_iter=config.max_iter)
+    test = CoNLLDataset(config.test_filename, max_iter=config.max_iter)
     train = CoNLLDataset(config.train_filename, max_iter=config.max_iter)
 
     vocab_words, vocab_tags = data_utils.get_vocabs([train, dev, test])

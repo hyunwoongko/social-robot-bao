@@ -5,6 +5,7 @@ import os
 
 import pandas as pd
 
+
 def make_intent_data():
     result = pd.DataFrame(columns=['question', 'intent'])
     root = './data/목적/'

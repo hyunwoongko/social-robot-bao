@@ -15,11 +15,27 @@ import java.util.ArrayList;
  */
 public class Ear implements SpeechRecognizeListener {
 
-    private Handler sttHandler = new Handler();
     private Consumer<String> onSuccess;
-    private Consumer<Handler> onFail;
+    private Runnable onFail;
+    private Handler handler = new Handler(); // STT 핸들러
 
-    public Ear onFail(Consumer<Handler> onFail) {
+    public void hearAgain(SpeechRecognizerClient ear) {
+        handler.postDelayed(() -> ear.startRecording(false), 100);
+    }
+
+    public boolean isNameDetected(String speech) {
+        speech = speech.trim();
+        speech = speech.toLowerCase();
+        return speech.contains("바우") ||
+                speech.contains("바오") ||
+                speech.contains("바보") ||
+                speech.contains("바보야") ||
+                speech.contains("야") ||
+                speech.contains("봐봐") ||
+                speech.contains("여기");
+    }
+
+    public Ear onFail(Runnable onFail) {
         this.onFail = onFail;
         return this;
     }
@@ -46,7 +62,7 @@ public class Ear implements SpeechRecognizeListener {
     public void onError(int errorCode, String errorMsg) {
         System.out.println("카카오 STT 에러 : " + errorCode);
         System.out.println(errorMsg);
-        onFail.accept(sttHandler);
+        onFail.run();
     }
 
     @Override

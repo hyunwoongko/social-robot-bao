@@ -1,8 +1,8 @@
+import random
 import urllib
 from urllib.request import urlopen
 
 import bs4
-import random
 
 
 def get_youtube(song_name):

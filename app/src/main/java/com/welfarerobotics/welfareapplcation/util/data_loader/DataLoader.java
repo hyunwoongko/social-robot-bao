@@ -13,8 +13,6 @@ public interface DataLoader {
     FairytaleDataLoader FAIRYTALE_DATA_LOADER = FairytaleDataLoader.getInstance();
     FlashCardDataLoader FLASH_CARD_DATA_LOADER = FlashCardDataLoader.getInstance();
     EmotionCardDataLoader EMOTION_CARD_DATA_LOADER = EmotionCardDataLoader.getInstance();
-    TopicSwitchDataLoader QUESTION_DATA_LOADER = TopicSwitchDataLoader.getInstance();
-    AnswerDataLoader ANSWER_DATA_LOADER = AnswerDataLoader.getInstance();
     EmotionChatDataLoader EMOTION_CHAT_DATA_LOADER = EmotionChatDataLoader.getInstance();
 
     void load();
@@ -27,8 +25,6 @@ public interface DataLoader {
         FAIRYTALE_DATA_LOADER.load();
         FLASH_CARD_DATA_LOADER.load();
         EMOTION_CARD_DATA_LOADER.load();
-        QUESTION_DATA_LOADER.load();
-        ANSWER_DATA_LOADER.load();
         EMOTION_CHAT_DATA_LOADER.load();
     }
 }
