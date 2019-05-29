@@ -2,6 +2,8 @@ package com.welfarerobotics.welfareapplcation.entity.cache;
 
 import lombok.Data;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -21,7 +23,9 @@ public @Data class ChatCache {
         if (chatCache == null) chatCache = new ChatCache();
         return chatCache;
     }
-    private Map<String, List<String>> emotion;
-    private List<String> topicSwitch;
-    private List<String> fallback;
+
+    private List<String> call = new ArrayList<>();
+    private Map<String, List<String>> emotion = new HashMap<>();
+    private List<String> topicSwitch = new ArrayList<>();
+    private List<String> fallback = new ArrayList<>();
 }
