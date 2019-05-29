@@ -2,10 +2,10 @@ package com.welfarerobotics.welfareapplcation.bot.ear;
 
 import android.app.Activity;
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.entity.cache.ChatCache;
 import com.welfarerobotics.welfareapplcation.util.Sound;
 import java8.util.function.Consumer;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -15,7 +15,10 @@ import java.util.List;
  */
 public class Attention {
 
-    private List<String> attentionSet = ChatCache.getInstance().getCall();
+    private List<String> attentionSet = Arrays.asList(
+            "바오", "바오야", "다우", "다우야", "바우", "바우야", "바보야",
+            "하이", "헬로", "hi", "hello", "안녕"
+    );
 
     private boolean detectCalling(String speech) {
         System.out.println(speech);
