@@ -14,18 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f2ff807-e7e1-4931-91f5-40600ab735ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/Attention.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/Cochlea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/Ear.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/EarSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/Ear.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Hippocampus.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Hippocampus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/main/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/main/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/Answer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/Hormone.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/cache/ChatCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/cache/ChatCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/server_streaming.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/server_streaming.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Brain.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Brain.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/MyScript_ATK-Core-android-component/.gradle/" />
     <ignored path="$PROJECT_DIR$/MyScript_ATK-Core-android-component/build/" />
@@ -146,7 +135,7 @@
           <entry key="HTML" value="1" />
           <entry key="IDEA_MODULE" value="2" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="920" />
+          <entry key="JAVA" value="921" />
           <entry key="JSON" value="8" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="18" />
@@ -178,7 +167,7 @@
           <entry key="CLASS" value="1" />
           <entry key="CSV" value="33764" />
           <entry key="Groovy" value="106" />
-          <entry key="JAVA" value="26199" />
+          <entry key="JAVA" value="26204" />
           <entry key="JSON" value="325" />
           <entry key="PLAIN_TEXT" value="446" />
           <entry key="Python" value="9124" />
@@ -195,8 +184,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/Ear.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+            <state relative-caret-position="379">
+              <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#536#537#0" expanded="true" />
@@ -213,8 +202,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/main/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            <state relative-caret-position="-401">
+              <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
               <folding>
                 <element signature="e#2345#2346#0" expanded="true" />
                 <element signature="e#2372#2373#0" expanded="true" />
@@ -223,11 +212,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/EarSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+            <state relative-caret-position="439">
+              <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#525#526#0" expanded="true" />
@@ -242,7 +231,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Oblivion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
+            <state relative-caret-position="289">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
@@ -251,10 +240,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Hippocampus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="679">
+            <state relative-caret-position="619">
               <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Brain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+              <folding>
+                <element signature="e#1216#1217#0" expanded="true" />
+                <element signature="e#1273#1274#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -4591,7 +4593,6 @@
         <option value="$PROJECT_DIR$/python/chat/crawler/issue.py" />
         <option value="$PROJECT_DIR$/python/chat/crawler/dust.py" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/NameDetector.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Brain.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/data_loader/DataLoader.java" />
         <option value="$PROJECT_DIR$/python/server_painter.py" />
         <option value="$PROJECT_DIR$/python/server_streaming.py" />
@@ -4607,10 +4608,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/main/FocusOutState.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/Cochlea.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/Attention.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/Ear.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Hippocampus.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/main/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/EarSet.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/Ear.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Brain.java" />
       </list>
     </option>
   </component>
@@ -4836,19 +4838,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
               <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="menu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
               <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -5006,7 +4995,7 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559092977366" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559093480189" />
     <property name="device.picker.selection" value="ce0517155539ce3c01" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.6 (Capstone-Project)" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
@@ -5309,12 +5298,12 @@
       <workItem from="1558700163531" duration="349000" />
       <workItem from="1558700640283" duration="36784000" />
       <workItem from="1558918811220" duration="28495000" />
-      <workItem from="1558992248639" duration="17868000" />
+      <workItem from="1558992248639" duration="18370000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="842398000" />
+    <option name="totallyTimeSpent" value="842900000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5736,13 +5725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Brain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="706">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kakao.sdk/newtone/6.0.1/5bb91530722b5014d1eb1bf9ff1560e3b2b2cf78/newtone-6.0.1-sources.jar!/com/kakao/sdk/newtoneapi/SpeechRecognizerClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="826">
@@ -5757,33 +5739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/Cochlea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-851">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Oblivion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Hippocampus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="679">
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/main/FocusOutState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -5791,18 +5746,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/Ear.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/Cochlea.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+        <state relative-caret-position="-851">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#1066#1067#0" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
-            <element signature="e#609#610#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5821,8 +5770,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/main/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        <state relative-caret-position="-401">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
           <folding>
             <element signature="e#2345#2346#0" expanded="true" />
             <element signature="e#2372#2373#0" expanded="true" />
@@ -5830,16 +5779,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Hippocampus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Oblivion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/Ear.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#582#583#0" expanded="true" />
+            <element signature="e#1066#1067#0" expanded="true" />
+            <element signature="e#1102#1103#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/EarSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+        <state relative-caret-position="439">
+          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#525#526#0" expanded="true" />
             <element signature="e#564#565#0" expanded="true" />
             <element signature="e#1363#1364#0" expanded="true" />
             <element signature="e#1393#1394#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Brain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+          <folding>
+            <element signature="e#1216#1217#0" expanded="true" />
+            <element signature="e#1273#1274#0" expanded="true" />
           </folding>
         </state>
       </provider>

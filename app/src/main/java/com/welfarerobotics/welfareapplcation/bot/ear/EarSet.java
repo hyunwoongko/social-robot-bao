@@ -3,6 +3,7 @@ package com.welfarerobotics.welfareapplcation.bot.ear;
 import android.app.Activity;
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
 import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
+import com.welfarerobotics.welfareapplcation.util.Pool;
 
 /**
  * @author : Hyunwoong
@@ -37,10 +38,12 @@ public class EarSet {
     }
 
     private void iniRightEar() {
-        rightEar.ifHear(s -> { // 오른쪽 귀가 들리면
-            Brain.think(s); // 대답 추론
-            Brain.speech(Mouth.get()); // 대답 말함
-            Mouth.get().stop(() -> rightEar.hear()); // 오른쪽 귀 다시 듣기
+        rightEar.ifHear(s -> {// 오른쪽 귀가 들리면
+            Pool.threadPool.execute(() -> { // 쓰레드 전환
+                Brain.think(s); // 대답 추론
+                Brain.speech(Mouth.get()); // 대답 말함
+                Mouth.get().stop(() -> rightEar.hear()); // 오른쪽 귀 다시 듣기
+            });
         });
 
         rightEar.ifNotHear(() -> { // 오른쪽 귀가 못 들으면

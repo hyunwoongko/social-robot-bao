@@ -37,5 +37,4 @@ public final class Brain {
     public static void draw() {
         // Generative Adversarial Nets
     }
-
 }
