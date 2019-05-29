@@ -40,7 +40,7 @@ public final class ModelApi {
      */
     public static String getOpenDomainAnswer(String text) throws IOException {
         return Jsoup.connect(ServerCache.getInstance().getChat() + "/open_domain/" + Encoder
-                .utf8(UserCache.getInstance().getName()) + Encoder
+                .utf8(UserCache.getInstance().getName()) + "/" + Encoder
                 .utf8(text))
                 .timeout(20000)
                 .get()

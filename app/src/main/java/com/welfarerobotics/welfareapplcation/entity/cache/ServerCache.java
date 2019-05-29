@@ -27,9 +27,9 @@ public @Data class ServerCache {
         cache.setCsssecret(server.getCsssecret());
         cache.setYoutubekey(server.getYoutubekey());
         cache.setRoot(server.getRoot());
-        cache.setChat(cache.getRoot() + " : " + server.getChat());
-        cache.setPainter(cache.getRoot() + " : " +server.getPainter());
-        cache.setStreaming(cache.getRoot() + " : " +server.getStreaming());
+        cache.setChat(cache.getRoot() + ":" + server.getChat());
+        cache.setPainter(cache.getRoot() +  ":" +server.getPainter());
+        cache.setStreaming(cache.getRoot() + ":" +server.getStreaming());
         cache.setState(server.isState());
     }
 
