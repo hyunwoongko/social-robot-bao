@@ -5,6 +5,8 @@
 import emoji
 import requests
 
+from chat.util.hanspell.spell_checker import fix
+
 
 def open_domain(user_name, user_input):
     user_name = str(int(hash(user_name) / 100000000000000))  # 유저 별로 고유 해시값을 4자리 수로 구함
@@ -27,7 +29,7 @@ def open_domain(user_name, user_input):
                     mode = True
         except:
             pass
-        answer_list.append(' ')
+        answer_list.append(' , ')
     res = ''.join(answer_list)
     res = emoji.get_emoji_regexp().sub(u'', res)
-    return res
+    return fix(res)

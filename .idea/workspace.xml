@@ -15,8 +15,359 @@
   <component name="ChangeListManager">
     <list default="true" id="6f2ff807-e7e1-4931-91f5-40600ab735ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/cache/ServerCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/cache/ServerCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/chat/doc2vec/configs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/chat/doc2vec/data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/chat/doc2vec/model_train.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/chat/doc2vec/similarity.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/chat/doc2vec/test_doc2vec.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/chat/doc2vec/train_doc2vec.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/chat/intent/train_intent.csv" beforeDir="false" afterPath="$PROJECT_DIR$/python/chat/intent/train_intent.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/chat/open_domain/open_domain.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/chat/open_domain/open_domain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/대답/거절.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/대답/거절.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/대답/공감.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/대답/공감.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/대답/긍정.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/대답/긍정.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/대답/부정.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/대답/부정.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/대답/비난.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/대답/비난.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/되묻기/진위판별.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/되묻기/진위판별.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/의성어/감탄.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/의성어/감탄.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/인사/반가움.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/인사/반가움.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/인사/아침인사.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/인사/아침인사.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/인사/안부.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/인사/안부.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/인사/인사.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/인사/인사.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/인사/저녁인사.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/인사/저녁인사.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/인사/취침인사.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/인사/취침인사.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/금요일.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/나사랑하니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/나이몇살이니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/나이몇살이니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/넌뭘먹고사니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/넌뭘먹고사니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/무슨게임이좋니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/무슨게임이좋니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/무슨만화가좋니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/무슨만화가좋니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/무슨색이좋니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/무슨색이좋니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/무슨영화가좋니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/무슨영화가좋니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/무슨음식이좋니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/무슨음식이좋니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/밥먹었니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/밥먹었니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/병에걸렸어.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/병에걸렸어.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/상관없어.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/상관없어.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/셍일이언제니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/시간이없어.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/시간이없어.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/어디어디.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/언제잘거니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/언제잘거니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/여행왔어.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/여행왔어.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/왜그렇지않니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/월요일.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/월요일.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/이름뭐니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/이름뭐니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/직업이뭐니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/자주묻는질문/직업이뭐니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/호출/호출.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/etc/호출/호출.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/기분나쁘니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/기분나쁘니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/기분나쁨.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/기분나쁨.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/기분좋니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/기분좋니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/기분좋음.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/기분좋음.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/놀람.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/놀람.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/놀랐니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/놀랐니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/묘하니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/묘하니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/묘함.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/묘함.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/삐졌니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/삐졌니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/삐짐.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/삐짐.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/슬프니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/슬프니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/슬픔.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/슬픔.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/실망.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/실망.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/실망했니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/실망했니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/우울.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/우울.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/우울하니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/우울하니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/절망.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/절망.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/절망했니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/절망했니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/짜증.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/짜증.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/짜증나니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/짜증나니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/행복.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/행복하니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/행복하니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/화남.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/화남.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/화났니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/감정/화났니.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/권유/권유함.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/권유/권유함.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/권유/제안함.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/권유/추천하니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/권유/추천함.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/권유/추천함.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/권유/추천해줘.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/마음/감사하니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/마음/감사함.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/마음/미안하니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/마음/미안함.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/마음/힘드니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/마음/힘듦.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/몸상태/간지러움.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/몸상태/아프니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/몸상태/아픔.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/부탁/도와줘.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/부탁/해줘.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/생각/결정.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/생각/고민.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/생각/선택.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/소유/가지니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/소유/가짐.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/소유/버림.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/소유/잃니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/소유/잃음.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/시간/과거.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/시간/과거질문.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/시간/미래.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/시간/미래질문.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/시간/현재 질문.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/시간/현재.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/식사/맛없냐.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/식사/맛없음.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/식사/맛있니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/식사/맛있음.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/식사/먹고싶음.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/식사/먹니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/식사/먹음.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/식사/배고프니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/식사/배고픔.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/심심/심심.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/싸움/때리니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/싸움/때림.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/싸움/맞음.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/싸움/싸움.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/앎/모르니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/앎/모름.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/앎/아니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/앎/앎.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/위로/위로하니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/위로/위로함.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/위로/위로해줘.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/유무/없니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/유무/없어.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/유무/있니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/유무/있어.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/음성/듣다.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/음성/말함.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/질문/누구니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/질문/뭐해.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/축하/축하함.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/축하/축하해줘.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/칭찬/칭찬.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/크기/작니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/크기/작음.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/크기/크니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/크기/크다.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/행위/가니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/행위/감.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/행위/노니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/행위/놀음.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/행위/만드니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/행위/만듬.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/행위/수리.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/행위/연주.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/행위/연주하니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/행위/움직이니.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/행위/움직임.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/동사/협박/협박.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/미분류/기업.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/미분류/웹사이트.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/사물/IT기기.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/사물/가구.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/사물/사물.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/사물/인형.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/사물/자동차.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/사물/장난감.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/사물/전자제품.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/사물/침대.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/사물/티비.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/갑각류.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/강아지.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/고양이.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/곤충벌레.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/공룡.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/균계.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/꽃.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/나무.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/돼지.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/버섯.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/상상의동물.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/생물.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/식물.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/양서류.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/어류.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/연체동물.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/조류.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/파충류.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/펭귄.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/포유류.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/생물/해충.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/스포츠/농구.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/스포츠/무술.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/스포츠/수영.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/스포츠/스포츠.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/스포츠/야구.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/스포츠/육상.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/스포츠/축구.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/악기/관악기.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/악기/악기.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/악기/타악기.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/악기/현악기.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/예술/만화.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/예술/문학.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/예술/미술.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/예술/영화.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/예술/음악.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/음료/물.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/음료/우유.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/음료/음료.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/음료/쥬스.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/음료/커피.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/음식/간식.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/음식/고기.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/음식/과일.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/음식/떡볶이.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/음식/면음식.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/음식/빵.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/음식/야채.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/음식/음식.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/음식/치킨.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/음식/케이크.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/음식/튀김.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/음식/피자.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/음식/햄버거.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/의류/신발.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/의류/악세사리.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/의류/의류.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인간/결혼.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인간/사랑.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인간/생각.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인간/신체.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인간/우정.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인간/인생.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인간/죽음.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인간/통과의례.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인공지능/인공지능용어.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인공지능/인공지능친구.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인물관계/가족.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인물관계/누나.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인물관계/부모.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인물관계/부부.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인물관계/사람.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인물관계/아빠.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인물관계/엄마.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인물관계/연인.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인물관계/오빠.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인물관계/친구.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인물관계/친척.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/인물관계/형제.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/자연/바다.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/자연/바위.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/자연/자연.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/자연/태양.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/장소/경기장.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/장소/공원.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/장소/교실.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/장소/교회.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/장소/명소.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/장소/법원.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/장소/병원.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/장소/상가.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/장소/식당.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/장소/영화관.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/장소/집.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/장소/학교.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/장소/학원.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/지리/나라.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/지리/지리" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/가수.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/간호사.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/검사.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/경찰.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/공무원.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/과학자.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/대통령.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/변호사.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/선생님.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/소방관.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/연예인.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/요리사.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/운동선수.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/의사.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/작가.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/정치인.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/직업.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/판사.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/학생.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/직업/화가.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/질병/질병.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/체계/기념일.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/체계/나이.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/체계/날짜.csv" beforeDir="false" afterPath="$PROJECT_DIR$/python/data/목적/날짜.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/체계/도시.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/체계/돈.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/체계/명절.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/체계/색깔.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/체계/수.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/체계/언어국가.csv" beforeDir="false" afterPath="$PROJECT_DIR$/python/data/목적/언어국가.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/체계/지역.csv" beforeDir="false" afterPath="$PROJECT_DIR$/python/data/목적/지역.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/캐릭터/dc코믹스.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/캐릭터/디지몬.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/캐릭터/마블.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/캐릭터/만화.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/캐릭터/포켓몬.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/학업/숙제.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/학업/일기.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/학업/책.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/명사/학업/필기구.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/data/목적/먼지.csv" beforeDir="false" afterPath="$PROJECT_DIR$/python/data/목적/먼지.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/script_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/script_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/script_train_doc2vec.py" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/MyScript_ATK-Core-android-component/.gradle/" />
     <ignored path="$PROJECT_DIR$/MyScript_ATK-Core-android-component/build/" />
@@ -44,7 +395,8 @@
     <SUITE FILE_PATH="coverage/Capstone_Project$configs.coverage" NAME="configs Coverage Results" MODIFIED="1557401255252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/chat/intent" />
     <SUITE FILE_PATH="coverage/Capstone_Project$open_domain.coverage" NAME="open_domain Coverage Results" MODIFIED="1559029289675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/chat/open_domain" />
     <SUITE FILE_PATH="coverage/Capstone_Project$tokenizer.coverage" NAME="tokenizer Coverage Results" MODIFIED="1557335717264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/chat/util" />
-    <SUITE FILE_PATH="coverage/Capstone_Project$server_chat.coverage" NAME="server_chat Coverage Results" MODIFIED="1559107405360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$server_chat.coverage" NAME="server_chat Coverage Results" MODIFIED="1559109371533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
+    <SUITE FILE_PATH="coverage/Capstone_Project$script_data.coverage" NAME="script_data Coverage Results" MODIFIED="1559109754663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
     <SUITE FILE_PATH="coverage/Capstone_Project$chat_train_doc2vec.coverage" NAME="chat_train_doc2vec Coverage Results" MODIFIED="1557747358011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
     <SUITE FILE_PATH="coverage/Capstone_Project$script_train_intent.coverage" NAME="script_train_intent Coverage Results" MODIFIED="1558672383860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
     <SUITE FILE_PATH="coverage/Capstone_Project$script_main__1_.coverage" NAME="script_main (1) Coverage Results" MODIFIED="1557807063414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
@@ -132,17 +484,17 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
-          <entry key="CSV" value="381" />
+          <entry key="CSV" value="393" />
           <entry key="Groovy" value="14" />
           <entry key="HTML" value="1" />
           <entry key="IDEA_MODULE" value="2" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="992" />
+          <entry key="JAVA" value="997" />
           <entry key="JSON" value="10" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="18" />
           <entry key="Properties" value="1" />
-          <entry key="Python" value="320" />
+          <entry key="Python" value="326" />
           <entry key="XML" value="60" />
         </counts>
       </usages-collector>
@@ -167,12 +519,12 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="CSV" value="33764" />
+          <entry key="CSV" value="33781" />
           <entry key="Groovy" value="106" />
-          <entry key="JAVA" value="27024" />
+          <entry key="JAVA" value="27045" />
           <entry key="JSON" value="327" />
           <entry key="PLAIN_TEXT" value="459" />
-          <entry key="Python" value="9124" />
+          <entry key="Python" value="9168" />
           <entry key="XML" value="548" />
         </counts>
       </usages-collector>
@@ -184,99 +536,108 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/ModelApi.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/state/ContextState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1513">
-              <caret line="76" column="77" selection-start-line="76" selection-start-column="77" selection-end-line="76" selection-end-column="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/IssueApi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="20" column="61" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/Encoder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/DustApi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
-              <caret line="53" column="62" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/main/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/EarSet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+            <state relative-caret-position="186">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1597#1598#0" expanded="true" />
-                <element signature="e#1639#1640#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/initial/SplashActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/state/NormalState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+            <state relative-caret-position="6">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python/data/목적/지역.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python/data/목적/잘못들음.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="354">
+              <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python/chat/intent/train_intent.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="-116676" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python/data/목적/농담.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="-360" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python/data/목적/날짜.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="354">
+              <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python/data/목적/먼지.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="30">
+              <caret line="134" column="7" selection-start-line="134" selection-start-column="7" selection-end-line="134" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/Server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="13" column="26" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="26" />
-            </state>
+        <entry file="file://$PROJECT_DIR$/python/data/목적/볼륨업.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="-966" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/cache/ServerCache.java">
+        <entry file="file://$PROJECT_DIR$/python/script_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/data_util/FirebaseHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-              <folding>
-                <element signature="e#819#820#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -4537,10 +4898,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/python/chat/open_domain/open_domain.py" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/intent/CloseClassifier.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/intent/IntentClassifier.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/state/QuestionState.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/state/ContextState.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/OpenDomainScenario.java" />
         <option value="$PROJECT_DIR$/python/chat/crawler/issue.py" />
@@ -4582,12 +4939,16 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/RestaurantApi.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/PreprocessorApi.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/NewsApi.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/ModelApi.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/IssueApi.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/DustApi.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/EarSet.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/Server.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/ModelApi.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/cache/ServerCache.java" />
+        <option value="$PROJECT_DIR$/python/chat/open_domain/open_domain.py" />
+        <option value="$PROJECT_DIR$/python/script_data.py" />
+        <option value="$PROJECT_DIR$/python/data/목적/날짜.csv" />
+        <option value="$PROJECT_DIR$/python/data/목적/먼지.csv" />
       </list>
     </option>
   </component>
@@ -5211,7 +5572,27 @@
               <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="python" type="462c0819:PsiDirectoryNode" />
               <item name="chat" type="462c0819:PsiDirectoryNode" />
+              <item name="intent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="chat" type="462c0819:PsiDirectoryNode" />
               <item name="open_domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="목적" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
@@ -5283,7 +5664,7 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559108195519" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559109877762" />
     <property name="device.picker.selection" value="ce0517155539ce3c01" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.6 (Capstone-Project)" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
@@ -5313,11 +5694,11 @@
       <recent name="com.welfarerobotics.welfareapplcation.core.bluetooth" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\Github\Capstone-Project\python\data\목적" />
       <recent name="C:\Users\ASUS\Github\Capstone-Project\python\chat" />
       <recent name="C:\Users\ASUS\Github\Capstone-Project\app\src\main\java\com\welfarerobotics\welfareapplcation" />
       <recent name="C:\Users\ASUS\Github\Capstone-Project\python" />
       <recent name="C:\Users\ASUS\Github\Capstone-Project\app\src\main\res\raw" />
-      <recent name="C:\Users\ASUS\Github\Capstone-Project\app\src\main\res\layout" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -5332,7 +5713,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android App.app">
+  <component name="RunManager" selected="Python.script_data">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -5414,7 +5795,7 @@
       <option name="ipnbPort" value="8888" />
       <method v="2" />
     </configuration>
-    <configuration name="open_domain" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="script_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -5422,12 +5803,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/chat/open_domain" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/chat/open_domain/open_domain.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/script_data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -5506,18 +5887,18 @@
       <item itemvalue="Jupyter Notebook.Jupyter" />
       <item itemvalue="Android App.app" />
       <item itemvalue="Python.server_chat" />
-      <item itemvalue="Python.open_domain" />
       <item itemvalue="Python.server_painter" />
       <item itemvalue="Python.server_streaming" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="Python.script_data" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.script_data" />
+        <item itemvalue="Python.server_chat" />
         <item itemvalue="Python.server_streaming" />
         <item itemvalue="Python.server_painter" />
-        <item itemvalue="Python.server_chat" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Python.open_domain" />
       </list>
     </recent_temporary>
   </component>
@@ -5586,12 +5967,12 @@
       <workItem from="1558700163531" duration="349000" />
       <workItem from="1558700640283" duration="36784000" />
       <workItem from="1558918811220" duration="28495000" />
-      <workItem from="1558992248639" duration="27555000" />
+      <workItem from="1558992248639" duration="29358000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="852085000" />
+    <option name="totallyTimeSpent" value="853888000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5604,7 +5985,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8219396" visible="true" weight="0.20886752" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -5665,199 +6045,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Mistaken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/state/NormalState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="769">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/TranslateScenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/named_entity/TranslateEntityRecognizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Hippocampus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1008#1009#0" expanded="true" />
-            <element signature="e#1063#1064#0" expanded="true" />
-            <element signature="e#1117#1118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Brain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-          <folding>
-            <element signature="e#1216#1217#0" expanded="true" />
-            <element signature="e#1273#1274#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/social-robot-bao-export (2).json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="1391" column="2" lean-forward="true" selection-start-line="1391" selection-start-column="2" selection-end-line="1392" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/social-robot-bao-export.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="1229" selection-start-line="11" selection-start-column="1229" selection-end-line="11" selection-end-column="1229" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/data_loader/EmotionChatDataLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/data_util/JsonUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/Sound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/data_util/Preference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-570">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Oblivion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/Face.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/data_util/UrlConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/bluetooth/Bluetooth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/bluetooth/BluetoothData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/PardonScenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/response/RestaurantResponseGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/IssueScenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/WifiScenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/state/ChatState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/state/QuestionState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/contents/tangram/ImagePiece.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -6007,13 +6194,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/ModelApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
-          <caret line="76" column="77" selection-start-line="76" selection-start-column="77" selection-end-line="76" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/IssueApi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
@@ -6042,18 +6222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/EarSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1597#1598#0" expanded="true" />
-            <element signature="e#1639#1640#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/data_util/FirebaseHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -6064,25 +6232,218 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/cache/ServerCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/initial/SplashActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
-          <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+          <caret line="39" column="53" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="26" />
+        <state relative-caret-position="390">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/cache/ServerCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/ModelApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/script_main.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/cache/UserCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-464">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/server_chat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1980">
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/server_painter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-644">
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/chat/open_domain/open_domain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+          <folding>
+            <element signature="e#75#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Brain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/Eye.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/EarSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="49" column="42" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1597#1598#0" expanded="true" />
+            <element signature="e#1639#1640#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/state/ContextState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/state/NormalState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/data/명사/체계/날짜.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/data/명사/체계/도시.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/data/명사/체계/돈.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/data/명사/체계/지역.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-450" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/data/명사/체계/언어국가.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/script_train_doc2vec.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/script_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/data/목적/지역.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/data/목적/잘못들음.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="354">
+          <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/chat/intent/train_intent.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-116676" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/data/목적/농담.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/data/목적/날짜.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="354">
+          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/data/목적/먼지.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="30">
+          <caret line="134" column="7" selection-start-line="134" selection-start-column="7" selection-end-line="134" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/data/목적/볼륨업.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-966" />
       </provider>
     </entry>
   </component>
