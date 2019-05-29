@@ -26,11 +26,17 @@ public @Data class ServerCache {
         cache.setCssid(server.getCssid());
         cache.setCsssecret(server.getCsssecret());
         cache.setYoutubekey(server.getYoutubekey());
-        cache.setUrl(server.getUrl());
+        cache.setRoot(server.getRoot());
+        cache.setChat(cache.getRoot() + " : " + server.getChat());
+        cache.setPainter(cache.getRoot() + " : " + server.getPainter());
+        cache.setStreaming(cache.getRoot() + " : " + server.getStreaming());
         cache.setState(server.isState());
     }
 
-    private String url;
+    private String root;
+    private String chat;
+    private String painter;
+    private String streaming;
     private String cssid;
     private String csssecret;
     private String youtubekey;

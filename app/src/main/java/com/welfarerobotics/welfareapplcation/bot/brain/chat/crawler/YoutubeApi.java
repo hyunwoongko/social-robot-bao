@@ -19,7 +19,7 @@ public final class YoutubeApi {
      * @return 유튜브 동영상 URL
      */
     public static String getYoutube(String song) throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/youtube/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getChat() + "/youtube/" + Encoder
                 .utf8(song))
                 .timeout(20000)
                 .get()

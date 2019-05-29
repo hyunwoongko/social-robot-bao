@@ -20,7 +20,7 @@ public final class WikiApi {
      * @return 단어의 정보
      */
     public static String getWiki(String text) throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/wiki/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getChat() + "/wiki/" + Encoder
                 .utf8(text))
                 .timeout(20000)
                 .get()

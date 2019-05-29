@@ -19,7 +19,7 @@ public final class DustApi {
      * @return 오늘의 지역별 미세먼지 상황
      */
     public static String getTodayDust(String location) throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/today_dust/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getChat() + "/today_dust/" + Encoder
                 .utf8(location))
                 .timeout(20000)
                 .get()
@@ -35,7 +35,7 @@ public final class DustApi {
      * @return 내일의 지역별 미세먼지 상황
      */
     public static String getTomorrowDust(String location) throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/tomorrow_dust/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getChat() + "/tomorrow_dust/" + Encoder
                 .utf8(location))
                 .timeout(20000)
                 .get()
@@ -51,7 +51,7 @@ public final class DustApi {
      * @return 모레의 지역별 미세먼지 상황
      */
     public static String getAfterTomorrowDust(String location) throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/after_tomorrow_dust/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getChat() + "/after_tomorrow_dust/" + Encoder
                 .utf8(location))
                 .timeout(20000)
                 .get()

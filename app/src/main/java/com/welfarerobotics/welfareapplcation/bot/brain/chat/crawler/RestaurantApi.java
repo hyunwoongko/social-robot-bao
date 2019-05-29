@@ -19,7 +19,7 @@ public final class RestaurantApi {
      * @return 맛집 추천
      */
     public static String recommendRestaurant(String keyword) throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/restaurant/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getChat() + "/restaurant/" + Encoder
                 .utf8(keyword))
                 .timeout(20000)
                 .get()

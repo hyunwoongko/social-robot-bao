@@ -18,7 +18,7 @@ public final class WiseApi {
      * @return 랜덤 명언
      */
     public static String getWise() throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/wise")
+        return Jsoup.connect(ServerCache.getInstance().getChat() + "/wise")
                 .timeout(20000)
                 .get()
                 .body()

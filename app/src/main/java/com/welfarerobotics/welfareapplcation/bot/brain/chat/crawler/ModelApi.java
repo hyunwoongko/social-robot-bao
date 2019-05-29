@@ -22,7 +22,7 @@ public final class ModelApi {
      * @return 발화 의도
      */
     public static String getIntent(String text) throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/intent/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getChat() + "/intent/" + Encoder
                 .utf8(text))
                 .timeout(20000)
                 .get()
@@ -39,7 +39,7 @@ public final class ModelApi {
      * @return 출력
      */
     public static String getOpenDomainAnswer(String text) throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/open_domain/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getChat() + "/open_domain/" + Encoder
                 .utf8(UserCache.getInstance().getName()) + Encoder
                 .utf8(text))
                 .timeout(20000)
@@ -57,7 +57,7 @@ public final class ModelApi {
      * @return 발화 의도
      */
     public static String getSimilarity(String text) throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/similarity/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getChat() + "/similarity/" + Encoder
                 .utf8(text))
                 .timeout(20000)
                 .get()
@@ -74,7 +74,7 @@ public final class ModelApi {
      * @return 단어와 개체명이 포함된 문자열배열
      */
     public static String[][] getEntity(String kind, String text) throws IOException {
-        String entityString = Jsoup.connect(ServerCache.getInstance().getUrl() + "/entity_" + kind + "/" + Encoder
+        String entityString = Jsoup.connect(ServerCache.getInstance().getChat() + "/entity_" + kind + "/" + Encoder
                 .utf8(text))
                 .timeout(20000)
                 .get()

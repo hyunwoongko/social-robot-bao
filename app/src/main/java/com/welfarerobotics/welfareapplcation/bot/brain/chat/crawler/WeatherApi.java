@@ -21,7 +21,7 @@ public final class WeatherApi {
      * @return 오늘의 지역별 날씨 상황
      */
     public static String getTodayWeather(String location) throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/today_weather/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getChat() + "/today_weather/" + Encoder
                 .utf8(location))
                 .timeout(20000)
                 .get()
@@ -37,7 +37,7 @@ public final class WeatherApi {
      * @return 내일의 지역별 날씨 상황
      */
     public static String getTomorrowWeather(String location) throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/tomorrow_weather/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getChat() + "/tomorrow_weather/" + Encoder
                 .utf8(location))
                 .timeout(20000)
                 .get()
@@ -53,7 +53,7 @@ public final class WeatherApi {
      * @return 모레의 지역별 날씨 상황
      */
     public static String getAfterTomorrowWeather(String location) throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/after_tomorrow_weather/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getChat() + "/after_tomorrow_weather/" + Encoder
                 .utf8(location))
                 .timeout(20000)
                 .get()
@@ -69,7 +69,7 @@ public final class WeatherApi {
      * @return 이번 주의 지역별 날씨 상황
      */
     public static String getThisWeekWeather(String location) throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/this_week_weather/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getChat() + "/this_week_weather/" + Encoder
                 .utf8(location))
                 .timeout(20000)
                 .get()
@@ -86,7 +86,7 @@ public final class WeatherApi {
      * @return 특정 날짜의 지역별 날씨 상황
      */
     public static String getSpecificWeather(String location, String date) throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/specific_weather/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getChat() + "/specific_weather/" + Encoder
                 .utf8(location) + "/" + Encoder
                 .utf8(date))
                 .timeout(20000)

@@ -18,7 +18,7 @@ public final class NewsApi {
      * @return 현재 주요 뉴스
      */
     public static String getNews() throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/news/")
+        return Jsoup.connect(ServerCache.getInstance().getChat() + "/news/")
                 .timeout(20000)
                 .get()
                 .body()
@@ -33,7 +33,7 @@ public final class NewsApi {
      * @return 키워드별로 추천된 뉴스
      */
     public static String getKeywordNews(String keyword) throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getUrl() + "/keyword_news/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getChat() + "/keyword_news/" + Encoder
                 .utf8(keyword))
                 .timeout(20000)
                 .get()
