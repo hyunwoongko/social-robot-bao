@@ -22,7 +22,6 @@ public class MainActivity extends BaseActivity {
     private EarSet ear = new EarSet(this);
 
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -47,7 +46,6 @@ public class MainActivity extends BaseActivity {
         audioManager.setMicrophoneMute(false);
         ear.startHear();
     }
-
 
     @Override
     protected void onPause() {

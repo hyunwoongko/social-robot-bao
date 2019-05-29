@@ -55,7 +55,6 @@ public class EarSet {
     }
 
     public void blockHear() {
-        attention.block(activity); // 어텐션 비활성화
         leftEar.block(); // 왼쪽 귀 비활성화
         rightEar.block(); // 오른쪽 귀 비활성화
     }
