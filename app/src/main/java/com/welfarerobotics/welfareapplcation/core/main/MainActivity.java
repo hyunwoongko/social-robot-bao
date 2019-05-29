@@ -36,6 +36,7 @@ public class MainActivity extends BaseActivity {
             System.out.println(server);
             ServerCache.setInstance(server);
             DataLoader.onDataLoad(); // 모든 데이터 다운로드
+            ear.initEar();
         });
     }
 
