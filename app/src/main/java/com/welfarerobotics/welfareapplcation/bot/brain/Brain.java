@@ -17,16 +17,17 @@ import com.welfarerobotics.welfareapplcation.bot.brain.chat.state.ChatState;
 public final class Brain {
     private static ChatState currentState = ChatState.NORMAL_STATE;
     public static Hippocampus hippocampus = new Hippocampus();
+    private static String intent;
 
     public static void think(String speech) {
         try {
             System.out.println("입력 : " + speech);
             String preprocessedSpeech = Preprocessor.preprocess(speech);
-            String intent = IntentClassifier.classify(preprocessedSpeech);
+            intent = IntentClassifier.classify(preprocessedSpeech);
             currentState = currentState.think(intent, preprocessedSpeech);
         } catch (Throwable ignore) {
-            currentState = ChatState.FALLBACK_STATE;
-            // 엑셉션 발생시 FALLBACK STATE 로 전환.
+            currentState = ChatState.FALLBACK_STATE
+                    .think(intent, speech); // 엑셉션 발생시 FALLBACK 스테이트로 전환
         }
     }
 

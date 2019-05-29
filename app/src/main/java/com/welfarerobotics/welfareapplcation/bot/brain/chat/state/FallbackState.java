@@ -1,7 +1,9 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.state;
 
+
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
 import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
+import com.welfarerobotics.welfareapplcation.bot.brain.chat.intent.ChatIntent;
 import com.welfarerobotics.welfareapplcation.entity.cache.ChatCache;
 
 import java.io.IOException;
@@ -25,15 +27,15 @@ public class FallbackState implements ChatState {
         return state;
     }
 
-    @Override public ChatState think(String intent, String speech) throws IOException {
-        ChatCache cache = ChatCache.getInstance(); // 캐시로드
-        List<String> fallbackText = cache.getFallback(); // 폴백 대화
-        List<String> topicSwitch = cache.getTopicSwitch(); // 화제 전환
+    @Override public ChatState think(String intent, String preprocessedSpeech) {
+        ChatCache cache = ChatCache.getInstance();
+        List<String> fallbackText = cache.getFallback();
+        List<String> topicSwitch = cache.getTopicSwitch();
 
         String fallbackMsg = fallbackText.get(random.nextInt(fallbackText.size() - 1));
         String topicSwitchMsg = topicSwitch.get(random.nextInt(topicSwitch.size() - 1));
         Brain.hippocampus.decideToSay(fallbackMsg + " , " + topicSwitchMsg);
-        return this;
+        return FALLBACK_STATE;
     }
 
     @Override public ChatState speech(Mouth mouth) {

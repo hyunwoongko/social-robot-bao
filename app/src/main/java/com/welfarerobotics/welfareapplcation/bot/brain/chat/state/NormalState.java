@@ -25,8 +25,7 @@ public class NormalState implements ChatState {
     }
 
     @Override public ChatState think(String intent, String speech) throws IOException {
-        if (intent == null) return FALLBACK_STATE.think(intent, speech);
-
+        if (intent == null) return FALLBACK_STATE;
         // 오늘은? 내일은 어때?  ||  일본어는? 미국은?  ||  전주는? 부산은? 대구는? ||
         // 그럼 미세먼지는? || 그럼 날씨는?
         if (intent.equals("날짜") || intent.equals("국가") || intent.equals("지역") ||
