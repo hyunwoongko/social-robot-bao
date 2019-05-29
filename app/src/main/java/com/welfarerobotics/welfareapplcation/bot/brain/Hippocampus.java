@@ -28,6 +28,11 @@ public @Getter class Hippocampus {
         this.date.addAll(entities[1]);
     }
 
+    public void rememberTrainslate(List<String>[] entities) {
+        word.addAll(entities[0]);
+        lang.addAll(entities[1]);
+    }
+
     public void rememberWord(List<String> entity) {
         word.addAll(entity);
     }

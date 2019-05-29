@@ -1,6 +1,5 @@
 package com.welfarerobotics.welfareapplcation.entity.cache;
 
-import com.welfarerobotics.welfareapplcation.entity.Answer;
 import lombok.Data;
 
 import java.util.List;
@@ -22,9 +21,5 @@ public @Data class ChatCache {
         if (chatCache == null) chatCache = new ChatCache();
         return chatCache;
     }
-
-    private Map<String, Answer> answer;
     private Map<String, List<String>> emotion;
-    private List<String> topicSwitch;
-    private List<String> fallback;
 }
