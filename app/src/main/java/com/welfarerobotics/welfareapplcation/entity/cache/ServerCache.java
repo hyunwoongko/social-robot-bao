@@ -28,8 +28,8 @@ public @Data class ServerCache {
         cache.setYoutubekey(server.getYoutubekey());
         cache.setRoot(server.getRoot());
         cache.setChat(cache.getRoot() + " : " + server.getChat());
-        cache.setPainter(cache.getRoot() + " : " + server.getPainter());
-        cache.setStreaming(cache.getRoot() + " : " + server.getStreaming());
+        cache.setPainter(cache.getRoot() + " : " +server.getPainter());
+        cache.setStreaming(cache.getRoot() + " : " +server.getStreaming());
         cache.setState(server.isState());
     }
 
