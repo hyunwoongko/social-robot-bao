@@ -32,7 +32,7 @@ public class Attention {
 
     public void focus(String s, Activity activity, Ear ear, Consumer<String> consumer) {
         if (detectCalling(s)) {
-            Sound.get().effectSound(activity, R.raw.SpeechOn);
+            Sound.get().effectSound(activity, R.raw.speech_on);
             consumer.accept(s);
         } else {
             ear.hearAgain();
@@ -40,6 +40,6 @@ public class Attention {
     }
 
     public void block(Activity activity){
-        Sound.get().effectSound(activity, R.raw.SpeechOff);
+        Sound.get().effectSound(activity, R.raw.speech_off);
     }
 }

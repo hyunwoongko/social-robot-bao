@@ -3,10 +3,8 @@ package com.welfarerobotics.welfareapplcation.bot.brain.chat.state;
 
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
 import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
-import com.welfarerobotics.welfareapplcation.bot.brain.chat.intent.ChatIntent;
 import com.welfarerobotics.welfareapplcation.entity.cache.ChatCache;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.Random;
 

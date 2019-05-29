@@ -24,7 +24,7 @@ public class UrlConverter {
             // Bitmap으로 변환
             return BitmapFactory.decodeStream(is);
         } catch (Exception a) {
-            System.out.println("asdfasdf" + a);
+            System.out.println("URL CONVERTER : " + a);
             return null;
         }
     }
