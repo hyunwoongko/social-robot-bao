@@ -207,4 +207,4 @@ def server_restaurant(text):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=9890)
+    app.run(host='0.0.0.0', port=25400)

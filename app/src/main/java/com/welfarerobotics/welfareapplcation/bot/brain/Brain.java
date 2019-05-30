@@ -21,14 +21,12 @@ public final class Brain {
     private static ChatState currentState = ChatState.NORMAL_STATE;
     public static Hippocampus hippocampus = new Hippocampus();
     public static Random random = new Random();
-    private static String intent;
 
-
-    public static void think(String speech , Activity activity) {
+    public static void think(String speech, Activity activity) {
         try {
             System.out.println("입력 : " + speech);
             String preprocessedSpeech = Preprocessor.preprocess(speech);
-            intent = IntentClassifier.classify(preprocessedSpeech);
+            String intent = IntentClassifier.classify(preprocessedSpeech);
             currentState = currentState.think(intent, preprocessedSpeech, activity);
         } catch (Throwable e) {
             e.printStackTrace();
@@ -40,6 +38,10 @@ public final class Brain {
     }
 
     public static void draw() {
-        // Generative Adversarial Nets
+
+    }
+
+    public static void changeStyle() {
+
     }
 }

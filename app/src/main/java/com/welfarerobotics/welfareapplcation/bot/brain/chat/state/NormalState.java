@@ -56,8 +56,8 @@ public class NormalState implements ChatState {
         if (intent.equals("위키")) return WikiScenario.process(speech, Oblivion::forgetAll);
         if (intent.equals("인물")) return WikiScenario.process(speech, Oblivion::forgetAll);
         if (intent.equals("뉴스")) return NewsScenario.process(speech, Oblivion::forgetAll);
-        if (intent.equals("메모")) return AlramScenario.process(speech, Oblivion::forgetAll);
-        if (intent.equals("알람")) return AlramScenario.process(speech, Oblivion::forgetAll);
+        if (intent.equals("메모")) return AlarmScenario.process(speech, Oblivion::forgetAll);
+        if (intent.equals("알람")) return AlarmScenario.process(speech, Oblivion::forgetAll);
         if (intent.equals("번역")) return TranslateScenario.process(speech, Oblivion::forgetAll);
         return OpenDomainScenario.process(intent, speech); // <- 오픈도메인 대화
     }

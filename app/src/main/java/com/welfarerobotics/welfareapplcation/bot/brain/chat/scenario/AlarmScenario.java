@@ -9,7 +9,7 @@ import java.io.IOException;
  * @when : 5/28/2019 2:25 AM
  * @homepage : https://github.com/gusdnd852
  */
-public class AlramScenario {
+public class AlarmScenario {
     public static ChatState process(String speech, Runnable... forgets) throws IOException {
         for(Runnable forget : forgets) forget.run(); // 원하는 만큼 기억을 잊음.
 

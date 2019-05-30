@@ -1,5 +1,5 @@
-from chat.entity.news.kor_model.data_embed_model.data_utils import CoNLLDataset
-from chat.entity.news.kor_model.data_embed_model import word2vec, data_utils
+from chat.entity.alarm.kor_model.data_embed_model.data_utils import CoNLLDataset
+from chat.entity.alarm.kor_model.data_embed_model import word2vec, data_utils
 
 
 def build_data(config):

@@ -35,12 +35,11 @@ public final class PreprocessorApi {
      * @return 맞춤법이 교정된 문장
      */
     public static String fix(String text) throws IOException {
-        String fix = Jsoup.connect(ServerCache.getInstance().getChat() + "/fix/" + Encoder
+        return Jsoup.connect(ServerCache.getInstance().getChat() + "/fix/" + Encoder
                 .utf8(text))
                 .timeout(20000)
                 .get()
                 .body()
                 .text();
-        return fix;
     }
 }

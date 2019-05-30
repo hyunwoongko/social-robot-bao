@@ -1,0 +1,403 @@
+오늘 DATE
+알람 O
+맞춰줘 O
+
+내일 DATE
+알람 O
+맞춰줄래 O
+
+이번 DATE
+주 DATE
+7시 HOUR
+알람 O
+맞춰줘 O
+
+다음 DATE
+주 DATE
+2시 HOUR
+20분 MIN
+알람 O
+맞춰줘 O
+
+12월 MONTH
+12일 DAY
+알람 O
+맞출래 O
+
+11월 MONTH
+9일 DAY
+메모 O
+해줘 O
+
+10월 MONTH
+5일 DAY
+10시 HOUR
+알람 O
+맞출래 O
+
+9월 MONTH
+12일 DAY
+알람 O
+맞추려고 O
+
+8월 MONTH
+7일 DAY
+알람 O
+맞출래 O
+
+7월 MONTH
+15일 DAY
+알람 O
+맞추려고 O
+
+6월 MONTH
+12일 DAY
+알람 O
+맞출라고 O
+
+5월 MONTH
+13일 DAY
+알람 O
+맞출라고 O
+
+4월 MONTH
+18일 DAY
+11시 HOUR
+알람 O
+좀 O
+맞춰줄래 O
+
+3월 MONTH
+24일 DAY
+알람 O
+맞출건데 O
+
+2월 MONTH
+28일 DAY
+메모 O
+해줘 O
+
+30분 MIN
+전 PRE
+알람 O
+맞출래 O
+
+1월 MONTH
+22일 DAY
+알람 O
+맞출라고 O
+
+1일 DAY
+알람 O
+맞추려고 O
+
+2일 DAY
+알람 O
+맞출건데 O
+
+9월 MONTH
+3일 DAY
+알람 O
+맞출까 O
+생각 O
+
+4일 DAY
+알람 O
+맞춰줄래 O
+
+5일 DAY
+엄마 O
+만나러 O
+갈건데 O
+알람 O
+맞춰줘 O
+
+6일 DAY
+축구 MSG
+경기 MSG
+보려고 MSG
+알람 O
+맞춰줘 O
+
+7일 DAY
+숙제 MSG
+해야해 MSG
+알람 O
+맞춰주라 O
+
+8일 DAY
+12시 HOUR
+알람 O
+맞춰줘 O
+
+9일 DAY
+15시 HOUR
+알람 O
+맞추려고 O
+
+오늘 DATE
+7시 HOUR
+30분 MIN
+꺠워줘 O
+
+오늘 DATE
+5시 HOUR
+30분 MIN
+깨워줘 O
+
+내일 DATE
+2시 HOUR
+30분 MIN
+깨워줘 O
+
+모레 DATE
+3시 HOUR
+깨워줘 O
+
+이따 O
+알려줘 O
+
+내일 DATE
+7시 HOUR
+알람 O
+맞춰줘 O
+
+오늘 DATE
+6시 HOUR
+20분 MIN
+알람 O
+맞춰줘 O
+
+내일 DATE
+12시 HOUR
+깨워줘 O
+
+모레 DATE
+9시 HOUR
+반 HALF
+알려주라 O
+
+내일 DATE
+12시 HOUR
+깨워줘 O
+
+이따가 O
+깨워줘 O
+
+내일 DATE
+오전 ETC
+6시 HOUR
+반 HALF
+깨워줘 O
+
+내일 DATE
+오후 HOUR
+7시 HOUR
+정각 O
+숙제하라고 MSG
+해줘 O
+
+내일 DATE
+3시 HOUR
+깨워줘 O
+
+12월 DATE
+22일 DATE
+알려줘 O
+
+8월 DATE
+30일 DATE
+알려줘 O
+
+4월 DATE
+24일 DATE
+알려줘 O
+
+9월 DATE
+12일 DATE
+영화 MSG
+예매하라고 MSG
+알려줘 O
+
+3월 DATE
+12일 DATE
+공부하라고 MSG
+알려줘 O
+
+10월 DATE
+21일 DATE
+생일이라고 MSG
+알려줘 O
+
+8월 DATE
+12일 DATE
+축구한다고 MSG
+알려줘 O
+
+주말 DATE
+7시 HOUR
+축구한다고 O
+알려줘 O
+
+주말 DATE
+아침 HOUR
+9시 HOUR
+일어나라고 MSG
+알려줘 O
+
+내일 DATE
+오후 HOUR
+7시 HOUR
+정각 O
+숙제하라고 MSG
+해줘 O
+
+오늘 DATE
+2시 HOUR
+반 HALF
+알람 O
+맞출 O
+건데 O
+
+이따 O
+4시 HOUR
+알람 O
+맞춰줄래 O
+
+내일 DATE
+11시 HOUR
+알람 O
+맞추려고 O
+
+10시 HOUR
+반 HALF
+알람 O
+맞춰주겠니 O
+
+2시 HOUR
+반 HALF
+알람 O
+맞추려고 O
+
+2시 HOUR
+7분 MIN
+알람 O
+맞출래 O
+
+2시 HOUR
+30분 MIN
+전 PRE
+알람 O
+맞출래 O
+
+30분 MIN
+후 POST
+알람 O
+맞출래 O
+
+1시간 HOUR
+후 POST
+알람 O
+맞출래 O
+
+2시간 HOUR
+후 POST
+알람 O
+맞출래 O
+
+20분 MIN
+후 POST
+알람 O
+맞추려고 O
+
+15분 MIN
+있다가 POST
+알람 O
+맞춰줘 O
+
+3시간 HOUR
+후 POST
+알려줘 O
+
+1시간 HOUR
+있다가 POST
+알려줘 O
+
+20분 MIN
+후 POST
+알람 O
+맞춰줘 O
+
+1시간 HOUR
+있다가 POST
+메모 O
+해줘 O
+
+12시 HOUR
+있다가 POST
+알람 O
+맞춰줄래 O
+
+30분 MIN
+후 POST
+알람 O
+맞추려고 O
+
+30분 MIN
+뒤 POST
+알람 O
+맞출건데 O
+
+12분 MIN
+뒤 POST
+알람 O
+맞춰줘 O
+
+4시 HOUR
+30분 MIN
+전 PRE
+알람 O
+맞추려고 O
+
+1시 HOUR
+30분 MIN
+알람 O
+맞추자 O
+
+2시 HOUR
+33분 MIN
+학교 MSG
+가려고 MSG
+알람 O
+맞추자 O
+
+오늘 DATE
+저녁 TIMEZONE
+7시 HOUR
+알람 O
+맞출래 O
+
+내일 DATE
+아침 TIMEZONE
+7시 HOUR
+30분 MIN
+깨워줘 O
+
+11시 HOUR
+30분 MIN
+전 PRE
+알람 O
+맞추겠니 O
+
+4시 HOUR
+30분 MIN
+전 PRE
+알람 O
+맞추자 O
+
+4시 HOUR
+20분 MIN
+전 PRE
+맞춰줘 O
+
+
