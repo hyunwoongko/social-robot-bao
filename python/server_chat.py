@@ -14,6 +14,7 @@ from chat.crawler.weather import today_weather, tomorrow_weather, after_tomorrow
 from chat.crawler.wiki import wiki
 from chat.crawler.wise import get_wise
 from chat.crawler.youtube import get_youtube
+from chat.entity.alarm.entity_recognizer import get_alarm_entity
 from chat.entity.news.entity_recognizer import get_news_entity
 from chat.entity.restaurant.entity_recognizer import get_restaurant_entity
 from chat.entity.song.entity_recognizer import get_song_entity
@@ -204,6 +205,14 @@ def server_restaurant_entity(text):
 @app.route('/restaurant/<text>', methods=['GET', 'POST'])
 def server_restaurant(text):
     return recommend_restaurant(text)
+
+
+##################################
+########### API : ALARM ###########
+##################################
+@app.route('/entity_restaurant/<text>', methods=['GET', 'POST'])
+def server_alarm_entity(text):
+    return str(get_alarm_entity(text, False))
 
 
 if __name__ == '__main__':
