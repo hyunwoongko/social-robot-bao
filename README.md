@@ -9,6 +9,8 @@
 
 ###### * Title : Artificial Intelligence Social Robot to Help Education and Treatment of Children with Intellectual Developmental Disabilities 
 
+###### * Authors : Hyunwoong Go,Wonwoo Shin,HyunjuLee1,Seungmin Ji,CheolJung Yoo
+
 ###### * Publishing : 2019 Korea Information Technology Society and Korea Digital Contents Society Summer Collaboration Conference
 
 <br>
