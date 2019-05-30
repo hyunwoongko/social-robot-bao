@@ -1,5 +1,6 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.state;
 
+import android.app.Activity;
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
 import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
 import com.welfarerobotics.welfareapplcation.bot.brain.Oblivion;
@@ -17,7 +18,6 @@ import java.io.IOException;
  */
 public class ContextState implements ChatState {
     private static ContextState state;
-
     private ContextState() {
     }
 
@@ -26,7 +26,7 @@ public class ContextState implements ChatState {
         return state;
     }
 
-    @Override public ChatState think(String intent, String speech) throws IOException {
+    @Override public ChatState think(String intent, String speech, Activity activity) throws IOException {
         String prevIntent = Brain.hippocampus.getPreviousIntent();
         if (intent.equals("날짜")) { // 내일은? || 오늘은? || 모레는?
             if (prevIntent.equals("먼지")) return DustScenario.process(speech, Oblivion::forgetDate);

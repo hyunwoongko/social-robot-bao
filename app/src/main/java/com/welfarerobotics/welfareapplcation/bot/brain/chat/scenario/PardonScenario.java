@@ -11,6 +11,8 @@ import java.io.IOException;
  */
 public class PardonScenario {
     public static ChatState process(String speech) throws IOException {
+        // 아무 액션도 취하지 않음.
+        // 이전에 했던 말을 다시 반복
         return ChatState.NORMAL_STATE;
     }
 }

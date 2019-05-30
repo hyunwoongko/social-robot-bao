@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class WeatherEntityRecognizer {
     public static List<String>[] recognize(String preprocessedSpeech, boolean isContextMode) throws IOException {
-        String[][] entity = ModelApi.getEntity(preprocessedSpeech, "weather");
+        String[][] entity = ModelApi.getEntity("weather", preprocessedSpeech);
         String[] kewordGroup = entity[0];
         String[] entityGroup = entity[1];
         List<String> date = new ArrayList<>();

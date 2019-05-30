@@ -1,6 +1,9 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario;
 
+import android.app.Activity;
+import android.content.Intent;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.state.ChatState;
+import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleActivity;
 
 import java.io.IOException;
 
@@ -10,7 +13,8 @@ import java.io.IOException;
  * @homepage : https://github.com/gusdnd852
  */
 public class FairytaleScenario {
-    public static ChatState process(String speech) throws IOException {
+    public static ChatState process(String speech, Activity activity) throws IOException {
+        activity.startActivity(new Intent(activity, FairytaleActivity.class));
         return ChatState.NORMAL_STATE;
     }
 }

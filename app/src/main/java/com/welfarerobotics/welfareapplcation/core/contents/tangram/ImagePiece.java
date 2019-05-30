@@ -44,7 +44,6 @@ public class ImagePiece {
         this.type = type;
         this.center = new Position(pos);
 
-        //TODO: get orientation and vertices from database according to type
         //use a dummy 2x4 triangle defined with center at 0,0 for now
         orientation = 0;
         //NOTE: When you create pieces, please create ones centered at 0,0

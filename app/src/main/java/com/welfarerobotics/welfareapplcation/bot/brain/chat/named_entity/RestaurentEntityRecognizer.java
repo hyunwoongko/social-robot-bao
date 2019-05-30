@@ -14,7 +14,7 @@ import java.util.List;
 public class RestaurentEntityRecognizer {
 
     public static List<String> recognize(String preprocessedSpeech) throws IOException {
-        String[][] entity = ModelApi.getEntity(preprocessedSpeech, "restaurant");
+        String[][] entity = ModelApi.getEntity("restaurant", preprocessedSpeech);
         String[] kewordGroup = entity[0];
         String[] entityGroup = entity[1];
         List<String> loc = new ArrayList<>();

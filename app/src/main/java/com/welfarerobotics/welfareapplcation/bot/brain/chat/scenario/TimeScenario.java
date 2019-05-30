@@ -22,7 +22,7 @@ public class TimeScenario {
         SimpleDateFormat format2 = new SimpleDateFormat("HH시 mm분 ss초");
         Date time = new Date();
         String time2 = format2.format(time);
-        Brain.hippocampus.decideToSay("지금 시간은 " + time2 + " 이야");
+        Brain.hippocampus.decideToSay("지금 시간은 , " + time2 + " 입니다.");
         return ChatState.NORMAL_STATE;
     }
 }

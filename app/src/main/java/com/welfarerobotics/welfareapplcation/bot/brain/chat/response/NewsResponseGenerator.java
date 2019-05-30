@@ -13,21 +13,15 @@ import java.util.List;
  */
 public class NewsResponseGenerator {
 
-    private static String answer;
-
-    public static String getAnswer() {
-        return answer;
-    }
-
-    public static void response(List<String> word) throws IOException {
+    public static String response(List<String> word) throws IOException {
         if (word.size() != 0) {
             StringBuilder wordBuilder = new StringBuilder();
             for (String one : word) {
                 wordBuilder.append(one);
             }
-            answer = PreprocessorApi.fix(NewsApi.getKeywordNews(wordBuilder.toString()));
+            return PreprocessorApi.fix(NewsApi.getKeywordNews(wordBuilder.toString()));
         } else {
-            answer = PreprocessorApi.fix(NewsApi.getNews());
+            return PreprocessorApi.fix(NewsApi.getNews());
         }
     }
 }

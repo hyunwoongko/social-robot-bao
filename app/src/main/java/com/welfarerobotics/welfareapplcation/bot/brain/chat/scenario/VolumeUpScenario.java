@@ -1,8 +1,11 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario;
 
+import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.state.ChatState;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author : Hyunwoong
@@ -10,7 +13,15 @@ import java.io.IOException;
  * @homepage : https://github.com/gusdnd852
  */
 public class VolumeUpScenario {
+    private static List<String> strings = Arrays.asList(
+            "알았어요 소리를 키울게요",
+            "볼륨을 키울게요",
+            "네 소리를 키울게요"
+    );
+
     public static ChatState process(String speech) throws IOException {
+        Brain.hippocampus.decideToSay(strings.get(Brain.random.nextInt(strings.size() - 1)));
+        // TODO : 볼륨 키우기 구현해야함
         return ChatState.NORMAL_STATE;
     }
 }

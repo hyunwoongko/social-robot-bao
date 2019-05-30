@@ -14,7 +14,7 @@ import java.util.List;
 public class NewsEntityRecognizer {
 
     public static List<String> recognize(String preprocessedSpeech) throws IOException {
-        String[][] entity = ModelApi.getEntity(preprocessedSpeech, "news");
+        String[][] entity = ModelApi.getEntity("news", preprocessedSpeech);
         String[] kewordGroup = entity[0];
         String[] entityGroup = entity[1];
         List<String> word = new ArrayList<>();

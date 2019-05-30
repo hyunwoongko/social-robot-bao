@@ -19,7 +19,7 @@ public class CalenderScenario {
         SimpleDateFormat format2 = new SimpleDateFormat("yyyy년 MM월 dd일");
         Date time = new Date();
         String time2 = format2.format(time);
-        Brain.hippocampus.decideToSay("오늘 날짜는 " + time2 + " 이야");
+        Brain.hippocampus.decideToSay("오늘 날짜는 , " + time2 + " 입니다.");
         return ChatState.NORMAL_STATE;
     }
 }

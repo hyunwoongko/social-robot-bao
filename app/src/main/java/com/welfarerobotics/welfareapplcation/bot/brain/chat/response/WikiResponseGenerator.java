@@ -13,21 +13,11 @@ import java.util.List;
  */
 public class WikiResponseGenerator {
 
-    private static String answer;
-
-    public static String getAnswer() {
-        return answer;
-    }
-
-    public static boolean response(List<String> word) throws IOException {
-        if (word.size() != 0) {
+    public static String response(List<String> word) throws IOException {
             StringBuilder wordBuilder = new StringBuilder();
             for (String one : word) {
                 wordBuilder.append(one);
             }
-            answer = PreprocessorApi.fix(WikiApi.getWiki(wordBuilder.toString()));
-            return true;
-        }
-        return false;
+            return PreprocessorApi.fix(WikiApi.getWiki(wordBuilder.toString()));
     }
 }

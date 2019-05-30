@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class TranslateEntityRecognizer {
     public static List<String>[] recognize(String preprocessedSpeech) throws IOException {
-        String[][] entity = ModelApi.getEntity(preprocessedSpeech, "translate");
+        String[][] entity = ModelApi.getEntity("translate", preprocessedSpeech);
         String[] kewordGroup = entity[0];
         String[] entityGroup = entity[1];
         List<String> word = new ArrayList<>();

@@ -41,12 +41,6 @@ public final class PreprocessorApi {
                 .get()
                 .body()
                 .text();
-
-        // 예외처리
-        if (fix.contains("빈") && fix.contains("지노")) {
-            fix = fix.replace("빈", "");
-            fix = fix.replace("지노", "빈지노");
-        }
         return fix;
     }
 }

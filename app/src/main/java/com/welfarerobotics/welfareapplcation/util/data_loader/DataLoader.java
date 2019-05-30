@@ -21,7 +21,6 @@ public interface DataLoader {
 
     void save(DataSnapshot snapshot);
 
-    // 템플릿 메서드
     static void onDataLoad() {
         TANGRAM_DATA_LOADER.load();
         FAIRYTALE_DATA_LOADER.load();

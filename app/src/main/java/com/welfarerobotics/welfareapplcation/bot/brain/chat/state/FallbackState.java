@@ -1,6 +1,7 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.state;
 
 
+import android.app.Activity;
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
 import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
 import com.welfarerobotics.welfareapplcation.entity.cache.ChatCache;
@@ -25,7 +26,7 @@ public class FallbackState implements ChatState {
         return state;
     }
 
-    @Override public ChatState think(String intent, String preprocessedSpeech) {
+    @Override public ChatState think(String intent, String preprocessedSpeech, Activity activity) {
         ChatCache cache = ChatCache.getInstance();
         List<String> fallbackText = cache.getFallback();
         List<String> topicSwitch = cache.getTopicSwitch();

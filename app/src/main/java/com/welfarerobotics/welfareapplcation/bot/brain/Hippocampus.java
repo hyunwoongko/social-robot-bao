@@ -23,6 +23,10 @@ public @Getter class Hippocampus {
     private List<String> lang = new ArrayList<>();
     private List<String> word = new ArrayList<>();
 
+    public void rememberIntent(String intent) {
+        this.previousIntent = intent;
+    }
+
     public void rememberWeather(List<String>[] entities) {
         this.location.addAll(entities[0]);
         this.date.addAll(entities[1]);
@@ -35,6 +39,10 @@ public @Getter class Hippocampus {
 
     public void rememberWord(List<String> entity) {
         word.addAll(entity);
+    }
+
+    public void rememberLocation(List<String> entity) {
+        location.addAll(entity);
     }
 
     public void decideToSay(String thoughtSentence) {

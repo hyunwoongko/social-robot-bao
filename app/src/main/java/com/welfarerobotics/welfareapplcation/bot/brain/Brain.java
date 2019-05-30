@@ -1,9 +1,12 @@
 package com.welfarerobotics.welfareapplcation.bot.brain;
 
+import android.app.Activity;
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.intent.IntentClassifier;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.preprocess.Preprocessor;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.state.ChatState;
+
+import java.util.Random;
 
 /**
  * @Author : Hyunwoong
@@ -17,17 +20,18 @@ import com.welfarerobotics.welfareapplcation.bot.brain.chat.state.ChatState;
 public final class Brain {
     private static ChatState currentState = ChatState.NORMAL_STATE;
     public static Hippocampus hippocampus = new Hippocampus();
+    public static Random random = new Random();
     private static String intent;
 
-    public static void think(String speech) {
+
+    public static void think(String speech , Activity activity) {
         try {
             System.out.println("입력 : " + speech);
             String preprocessedSpeech = Preprocessor.preprocess(speech);
             intent = IntentClassifier.classify(preprocessedSpeech);
-            currentState = currentState.think(intent, preprocessedSpeech);
-        } catch (Throwable ignore) {
-            currentState = ChatState.FALLBACK_STATE
-                    .think(intent, speech); // 엑셉션 발생시 FALLBACK 스테이트로 전환
+            currentState = currentState.think(intent, preprocessedSpeech, activity);
+        } catch (Throwable e) {
+            e.printStackTrace();
         }
     }
 

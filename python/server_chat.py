@@ -14,7 +14,6 @@ from chat.crawler.weather import today_weather, tomorrow_weather, after_tomorrow
 from chat.crawler.wiki import wiki
 from chat.crawler.wise import get_wise
 from chat.crawler.youtube import get_youtube
-from chat.doc2vec.similarity import get_similarity
 from chat.entity.news.entity_recognizer import get_news_entity
 from chat.entity.restaurant.entity_recognizer import get_restaurant_entity
 from chat.entity.song.entity_recognizer import get_song_entity
@@ -45,11 +44,6 @@ def init():
 @app.route('/intent/<text>', methods=['GET', 'POST'])
 def server_intent(text):
     return get_intent(text)
-
-
-@app.route('/similarity/<text>', methods=['GET', 'POST'])
-def server_similarity(text):
-    return get_similarity(text)
 
 
 @app.route('/open_domain/<username>/<text>', methods=['GET', 'POST'])
