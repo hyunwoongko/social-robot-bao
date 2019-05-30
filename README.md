@@ -7,11 +7,11 @@
 
 ## Paper : [Download](https://github.com/gusdnd852/Social-Robot-Bao/raw/master/Artificial%20Intelligence%20Social%20Robot%20to%20Help%20Education.hwp)
 
-###### * Title : Artificial Intelligence Social Robot to Help Education and Treatment of Children with Intellectual Developmental Disabilities 
+###### *Title : Artificial Intelligence Social Robot to Help Education and Treatment of Children with Intellectual Developmental Disabilities* 
 
-###### * Authors : Hyunwoong Go,Wonwoo Shin,HyunjuLee1,Seungmin Ji,CheolJung Yoo
+###### *Authors : Hyunwoong Go,Wonwoo Shin,HyunjuLee1,Seungmin Ji,CheolJung Yoo*
 
-###### * Publishing : 2019 Korea Information Technology Society and Korea Digital Contents Society Summer Collaboration Conference
+###### *Publishing : 2019 Korea Information Technology Society and Korea Digital Contents Society Summer Collaboration Conference*
 
 <br>
 
