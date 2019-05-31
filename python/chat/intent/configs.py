@@ -8,8 +8,8 @@ class IntentConfigs:
     learning_step = 2500
     learning_rate = 0.00004
     vector_size = 300
-    fallback_score = 4
-    train_fasttext = True
+    fallback_score = 5.5
+    train_fasttext = False
     tokenizing = True
 
     root_path = './chat/intent/'

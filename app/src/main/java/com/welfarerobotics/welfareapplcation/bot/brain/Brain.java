@@ -1,10 +1,10 @@
 package com.welfarerobotics.welfareapplcation.bot.brain;
 
 import android.app.Activity;
-import com.welfarerobotics.welfareapplcation.bot.Mouth;
+import com.welfarerobotics.welfareapplcation.bot.brain.chat.Skills;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.intent.IntentClassifier;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.preprocess.Preprocessor;
-import com.welfarerobotics.welfareapplcation.bot.brain.chat.state.ChatState;
+import com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.conversation.FallbackScenario;
 
 import java.util.Random;
 
@@ -18,30 +18,19 @@ import java.util.Random;
  * State Pattern 으로 구현됨
  */
 public final class Brain {
-    private static ChatState currentState = ChatState.NORMAL_STATE;
     public static Hippocampus hippocampus = new Hippocampus();
     public static Random random = new Random();
 
-    public static void think(String speech, Activity activity) {
+    public static void thinkAndSay(String speech, Activity activity) {
         try {
-            System.out.println("입력 : " + speech);
             String preprocessedSpeech = Preprocessor.preprocess(speech);
             String intent = IntentClassifier.classify(preprocessedSpeech);
-            currentState = currentState.think(intent, preprocessedSpeech, activity);
+            System.out.println("스피치 : " + preprocessedSpeech);
+            System.out.println("인텐트 : " + intent);
+            Skills.thinkAndSay(intent, preprocessedSpeech, activity);
         } catch (Throwable e) {
-            e.printStackTrace();
+            e.printStackTrace(); // <- 개발땐 에러 봐야해
+//            FallbackScenario.process(); // <- 나중엔 이걸로
         }
-    }
-
-    public static void speech(Mouth mouth) {
-        currentState = currentState.speech(mouth);
-    }
-
-    public static void draw() {
-
-    }
-
-    public static void changeStyle() {
-
     }
 }

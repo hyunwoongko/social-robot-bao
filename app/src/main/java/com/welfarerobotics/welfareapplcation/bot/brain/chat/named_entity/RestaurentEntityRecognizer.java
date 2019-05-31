@@ -26,5 +26,4 @@ public class RestaurentEntityRecognizer {
         }
         return loc;
     }
-
 }

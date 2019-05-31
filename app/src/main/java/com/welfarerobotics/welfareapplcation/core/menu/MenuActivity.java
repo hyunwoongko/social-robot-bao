@@ -8,7 +8,8 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.crawler.YoutubeApi;
-import com.welfarerobotics.welfareapplcation.core.contents.dictation.DicationActivity;
+import com.welfarerobotics.welfareapplcation.core.contents.common_sense.CommonQuizActivity;
+import com.welfarerobotics.welfareapplcation.core.contents.dictation.DictationActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.emotioncard.EmotioncardActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.flashcard.FlashcardActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.paintwith.PaintWithActivity;
@@ -55,12 +56,17 @@ public class MenuActivity extends AppCompatActivity {
         ImageButton ibplayart = findViewById(R.id.playart);
         ImageButton ibemotioncard = findViewById(R.id.emotioncard);
         ImageButton ibplayfairytale = findViewById(R.id.playfairytale);
+        ImageButton ibQuiz = findViewById(R.id.commonsense);
 
         ibbackbtn.setOnClickListener(view -> onBackPressed());
 
         ibSettings.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(), SettingActivity.class);
             startActivity(intent);
+        });
+
+        ibQuiz.setOnClickListener(v->{
+            startActivity(new Intent(getApplicationContext(), CommonQuizActivity.class));
         });
 
         ibplaylang.setOnClickListener(view -> quickActionLang.show(view));
@@ -108,12 +114,21 @@ public class MenuActivity extends AppCompatActivity {
 
         quickActionLang.setOnActionItemClickListener(item -> {
             if (item == aidictation) {
-                Intent intent = new Intent(MenuActivity.this, DicationActivity.class);
+                Intent intent = new Intent(MenuActivity.this, DictationActivity.class);
                 startActivity(intent);
             } else if (item == aiflashcard) {
                 Intent intent = new Intent(MenuActivity.this, FlashcardActivity.class);
                 startActivity(intent);
             }
         });
+
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        if (bundle != null) {
+            String name = bundle.getString("key");
+            if (name != null && name.equals("FairytaleScenario")) {
+                startActivity(new Intent(getApplicationContext(), FairytaleActivity.class));
+            }
+        }
     }
 }

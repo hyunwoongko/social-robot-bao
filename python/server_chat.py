@@ -210,7 +210,7 @@ def server_restaurant(text):
 ##################################
 ########### API : ALARM ###########
 ##################################
-@app.route('/entity_restaurant/<text>', methods=['GET', 'POST'])
+@app.route('/entity_alarm/<text>', methods=['GET', 'POST'])
 def server_alarm_entity(text):
     return str(get_alarm_entity(text, False))
 

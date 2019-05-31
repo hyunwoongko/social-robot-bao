@@ -25,10 +25,15 @@ public class Oblivion {
         Brain.hippocampus.getWord().clear();
     }
 
+    public static void forgetAlarm() {
+        Brain.hippocampus.getAlarm().clear();
+    }
+
     public static void forgetAll() {
         Brain.hippocampus.getLocation().clear();
         Brain.hippocampus.getDate().clear();
         Brain.hippocampus.getLang().clear();
         Brain.hippocampus.getWord().clear();
+        Brain.hippocampus.getAlarm().clear();
     }
 }

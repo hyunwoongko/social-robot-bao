@@ -5,7 +5,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.welfarerobotics.welfareapplcation.entity.cache.ChatCache;
 import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author : Hyunwoong
@@ -29,19 +29,14 @@ public class FallbackDataLoader implements DataLoader {
 
 
     public void save(DataSnapshot dataSnapshot) {
-        Iterable<DataSnapshot> iterable = dataSnapshot.getChildren();
-        ArrayList<String> qList = new ArrayList<>();
-        for (DataSnapshot data : iterable) {
-            String dataString = data.getValue(String.class);
-            qList.add(dataString);
-        }
-        ChatCache.getInstance().setFallback(qList);
-        System.out.println(getClass().getName() + " : 데이터 다운로드");
+        List<String> list = (List) dataSnapshot.getValue();
+        ChatCache.getInstance().setFallback(list);
     }
 
     @Override public void load() {
-        FirebaseHelper.get().download(FirebaseDatabase.getInstance()
+        FirebaseHelper.get().connect(FirebaseDatabase.getInstance()
                 .getReference("chat")
                 .child("fallback"), this::save);
+        System.out.println(1);
     }
 }

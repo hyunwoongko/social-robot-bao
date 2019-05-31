@@ -1,5 +1,6 @@
 package com.welfarerobotics.welfareapplcation.bot.brain;
 
+import com.welfarerobotics.welfareapplcation.entity.Alarm;
 import lombok.Getter;
 
 import java.util.ArrayList;
@@ -17,11 +18,17 @@ public @Getter class Hippocampus {
 
     private String previousIntent = ""; // 최근 목적대화
     private String thoughtSentence = ""; // 지금 말하려고 생각한 문장
+    private boolean question = false;
 
     private List<String> location = new ArrayList<>();
     private List<String> date = new ArrayList<>();
     private List<String> lang = new ArrayList<>();
     private List<String> word = new ArrayList<>();
+    private Alarm alarm = new Alarm();
+
+    public void rememberAlarm(Alarm alarm) {
+        this.alarm = alarm;
+    }
 
     public void rememberIntent(String intent) {
         this.previousIntent = intent;
@@ -32,7 +39,7 @@ public @Getter class Hippocampus {
         this.date.addAll(entities[1]);
     }
 
-    public void rememberTrainslate(List<String>[] entities) {
+    public void rememberTranslate(List<String>[] entities) {
         word.addAll(entities[0]);
         lang.addAll(entities[1]);
     }

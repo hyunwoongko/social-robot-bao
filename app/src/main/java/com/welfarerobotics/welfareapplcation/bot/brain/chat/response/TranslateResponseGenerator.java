@@ -1,5 +1,6 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.response;
 
+import com.welfarerobotics.welfareapplcation.bot.Mouth;
 import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.crawler.PreprocessorApi;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.crawler.TranslatorApi;
@@ -29,6 +30,7 @@ public class TranslateResponseGenerator {
             }
 
             if (lang.contains("일본") || lang.contains("일본어") || lang.contains("일본말")) {
+                Mouth.get().setSpeaker("");
                 Brain.hippocampus.decideToSay(PreprocessorApi.fix(TranslatorApi.translate("ja", wordBuilder.toString())));
             } else if (lang.contains("영어") || lang.contains("영국어") || lang.contains("미국어") || lang.contains("미국말") || lang.contains("영국말")) {
                 Brain.hippocampus.decideToSay(PreprocessorApi.fix(TranslatorApi.translate("en", wordBuilder.toString())));

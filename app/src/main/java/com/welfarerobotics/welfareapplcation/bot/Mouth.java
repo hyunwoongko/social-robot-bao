@@ -4,6 +4,7 @@ import android.media.MediaPlayer;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
+import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
 import lombok.Data;
 
@@ -24,6 +25,10 @@ public final @Data class Mouth {
     public synchronized static Mouth get() {
         if (api == null) api = new Mouth();
         return api;
+    }
+
+    public void say() {
+        this.play(Brain.hippocampus.getThoughtSentence());
     }
 
     public Mouth play(String tts) {

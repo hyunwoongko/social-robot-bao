@@ -1,10 +1,10 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.response;
 
+import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.crawler.PreprocessorApi;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.crawler.RestaurantApi;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,34 +14,17 @@ import java.util.List;
  */
 public class RestaurantResponseGenerator {
 
-    private static String answer;
 
-    public static String getAnswer() {
-        return answer;
-    }
+    public static String response() throws IOException {
+        List<String> word = Brain.hippocampus.getLocation();
 
-    public static List<String> seperateEntity(String[][] entity) {
-        String[] kewordGroup = entity[0];
-        String[] entityGroup = entity[1];
-        List<String> loc = new ArrayList<>();
-
-        for (int i = 0; i < entityGroup.length; i++) {
-            if (entityGroup[i].contains("LOCATION")) {
-                loc.add(kewordGroup[i]);
-            }
-        }
-        return loc;
-    }
-
-    public static boolean response(List<String> word) throws IOException {
         if (word.size() != 0) {
             StringBuilder wordBuilder = new StringBuilder();
             for (String one : word) {
                 wordBuilder.append(one);
             }
-            answer = PreprocessorApi.fix(RestaurantApi.recommendRestaurant(wordBuilder.toString()));
-            return true;
+            return PreprocessorApi.fix(RestaurantApi.recommendRestaurant(wordBuilder.toString()));
         }
-        return false;
+        return null;
     }
 }

@@ -59,8 +59,7 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".core.menu.MenuActivity"
-            android:screenOrientation="landscape">
-        </activity>
+            android:screenOrientation="landscape"></activity>
         <activity
             android:name=".core.settings.SettingActivity"
             android:screenOrientation="landscape" />
@@ -94,20 +93,24 @@
             android:name=".core.contents.paintwith.PaintWithActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".core.contents.dictation.DicationActivity"
+            android:name=".core.contents.dictation.DictationActivity"
             android:screenOrientation="landscape" />
         <activity
             android:name=".core.settings.BluetoothActivity"
             android:screenOrientation="landscape" />
-        <activity android:name=".core.contents.tangram.TangramSelecActivity"
+        <activity
+            android:name=".core.contents.tangram.TangramSelecActivity"
             android:label="@string/app_name"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".core.contents.flashcard.FlashcardActivity"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".core.contents.emotioncard.EmotioncardActivity"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".core.contents.common_sense.CommonQuizActivity"
+            android:screenOrientation="landscape" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"

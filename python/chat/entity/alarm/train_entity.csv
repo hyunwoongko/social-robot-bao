@@ -185,7 +185,7 @@
 깨워줘 O
 
 내일 DATE
-오전 ETC
+오전 TIMEZONE
 6시 HOUR
 반 HALF
 깨워줘 O
@@ -1071,7 +1071,7 @@ pm TIMEZONE
 알려줘 O
 
 오늘 DATE
-오후 TiMEZONE
+오후 TIMEZONE
 2시에 HOUR
 축구 O
 약속 O
@@ -1564,7 +1564,7 @@ pm TIMEZONE
 해줘 O
 
 내일 DATE
-7시 HOURE
+7시 HOUR
 10분에 MIN
 깨워줘 O
 
@@ -2209,7 +2209,7 @@ pm TIMEZONE
 깨워줘 O
 
 내일 DATE
-오전 ETC
+오전 TIMEZONE
 6시 HOUR
 반 HALF
 깨워줘 O
@@ -3095,7 +3095,7 @@ pm TIMEZONE
 알려줘 O
 
 오늘 DATE
-오후 TiMEZONE
+오후 TIMEZONE
 2시에 HOUR
 축구 O
 약속 O
@@ -3589,7 +3589,7 @@ pm TIMEZONE
 해줘 O
 
 내일 DATE
-7시 HOURE
+7시 HOUR
 10분에 MIN
 깨워줘 O
 
@@ -4234,7 +4234,7 @@ pm TIMEZONE
 깨워줘 O
 
 내일 DATE
-오전 ETC
+오전 TIMEZONE
 6시 HOUR
 반 HALF
 깨워줘 O
@@ -5120,7 +5120,7 @@ pm TIMEZONE
 알려줘 O
 
 오늘 DATE
-오후 TiMEZONE
+오후 TIMEZONE
 2시에 HOUR
 축구 O
 약속 O
@@ -5613,7 +5613,7 @@ pm TIMEZONE
 해줘 O
 
 내일 DATE
-7시 HOURE
+7시 HOUR
 10분에 MIN
 깨워줘 O
 

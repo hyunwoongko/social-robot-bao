@@ -28,5 +28,5 @@ def get_issue():
             issue_data.extend([title.text, ''])
 
     issue_data.extend(["등 이있습니다."])
-    text = ' '.join(issue_data)
+    text = ' , '.join(issue_data)
     return text

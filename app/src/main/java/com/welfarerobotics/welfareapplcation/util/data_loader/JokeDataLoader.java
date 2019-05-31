@@ -6,6 +6,7 @@ import com.welfarerobotics.welfareapplcation.entity.cache.ChatCache;
 import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author : Hyunwoong
@@ -29,18 +30,13 @@ public class JokeDataLoader implements DataLoader {
 
 
     public void save(DataSnapshot dataSnapshot) {
-        Iterable<DataSnapshot> iterable = dataSnapshot.getChildren();
-        ArrayList<String> qList = new ArrayList<>();
-        for (DataSnapshot data : iterable) {
-            String dataString = data.getValue(String.class);
-            qList.add(dataString);
-        }
-        ChatCache.getInstance().setJoke(qList);
-        System.out.println(getClass().getName() + " : 데이터 다운로드");
+        List<String> list = (List) dataSnapshot.getValue();
+        ChatCache.getInstance().setJoke(list);
+
     }
 
     @Override public void load() {
-        FirebaseHelper.get().download(FirebaseDatabase.getInstance()
+        FirebaseHelper.get().connect(FirebaseDatabase.getInstance()
                 .getReference("chat")
                 .child("joke"), this::save);
     }

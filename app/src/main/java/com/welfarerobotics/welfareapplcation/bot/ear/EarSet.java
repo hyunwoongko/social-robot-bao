@@ -40,8 +40,7 @@ public class EarSet {
     private void iniRightEar() {
         rightEar.ifHear(s -> {// 오른쪽 귀가 들리면
             Pool.threadPool.execute(() -> { // 쓰레드 전환
-                Brain.think(s, activity);
-                Brain.speech(Mouth.get());
+                Brain.thinkAndSay(s, activity);
                 Mouth.get().stop(() -> rightEar.hear()); // 오른쪽 귀 다시 듣기
             });
         });
