@@ -1,10 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/dication_back"/>
 
-</LinearLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="25dp">
+
+        <com.myscript.atk.scw.SingleCharWidget
+                android:id="@+id/widget"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:background="@color/float_transparent"/>
+
+        <TextView
+                android:id="@+id/test"
+                android:layout_width="163dp"
+                android:layout_height="62dp"
+                android:gravity="center"
+                android:layout_marginStart="30dp"
+                android:visibility="invisible"
+                />
+
+        <ImageButton
+                android:id="@+id/speaker_btn"
+                android:layout_width="48dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/float_transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/speaker"/>
+
+        <ImageButton
+                android:id="@+id/clear_btn"
+                android:layout_width="42dp"
+                android:layout_height="51dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="18dp"
+                android:background="@color/float_transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/clear"/>
+
+        <ImageButton
+                android:id="@+id/submit_btn"
+                android:layout_width="42dp"
+                android:layout_height="51dp"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/clear_btn"
+                android:background="@color/float_transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/submit_btn"/>
+    </RelativeLayout>
+</RelativeLayout>
