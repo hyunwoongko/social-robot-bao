@@ -208,7 +208,7 @@ def server_restaurant(text):
 
 
 ##################################
-########### API : ALARM ###########
+############## API : ALARM ##############
 ##################################
 @app.route('/entity_alarm/<text>', methods=['GET', 'POST'])
 def server_alarm_entity(text):
@@ -216,4 +216,4 @@ def server_alarm_entity(text):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=25400)
+    app.run(host='0.0.0.0', port=9890)

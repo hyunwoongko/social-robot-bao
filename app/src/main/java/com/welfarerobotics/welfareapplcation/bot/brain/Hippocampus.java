@@ -1,5 +1,6 @@
 package com.welfarerobotics.welfareapplcation.bot.brain;
 
+import com.welfarerobotics.welfareapplcation.bot.brain.chat.preprocess.NameReplacer;
 import com.welfarerobotics.welfareapplcation.entity.Alarm;
 import lombok.Getter;
 
@@ -53,7 +54,7 @@ public @Getter class Hippocampus {
     }
 
     public void decideToSay(String thoughtSentence) {
-        this.thoughtSentence = thoughtSentence;
+        this.thoughtSentence = NameReplacer.replaceName(thoughtSentence);
     }
 }
 

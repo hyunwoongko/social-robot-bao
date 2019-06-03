@@ -32,6 +32,7 @@ def open_domain(user_name, user_input):
     response = requests.post(url=urls[rand], headers=headers, data=data, auth=auths[rand])
     answer_list = []
     mode = True
+    print(response)
     for i in response.json()['response']['replies']:
         try:
             for c in i['text']:
@@ -47,3 +48,4 @@ def open_domain(user_name, user_input):
     res = ''.join(answer_list)
     res = emoji.get_emoji_regexp().sub(u'', res)
     return fix(res)
+

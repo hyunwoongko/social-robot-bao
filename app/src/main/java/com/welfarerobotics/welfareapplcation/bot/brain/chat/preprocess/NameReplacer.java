@@ -10,7 +10,7 @@ import com.welfarerobotics.welfareapplcation.entity.cache.UserCache;
 public final class NameReplacer {
     public static String replaceName(String input) {
         if (input.contains("당신")) {
-            return input.replace("당신", UserCache.getInstance().getName());
+            return input.replace("당신", UserCache.getInstance().getName() + " 님");
         }
         return input;
     }

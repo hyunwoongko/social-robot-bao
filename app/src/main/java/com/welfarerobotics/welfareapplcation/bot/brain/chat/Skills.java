@@ -25,14 +25,14 @@ public class Skills {
         if (intent.equals("날짜") || intent.equals("언어국가") || intent.equals("지역") ||
                 (intent.equals("먼지") && Brain.hippocampus.getPreviousIntent().equals("날씨")) ||
                 (intent.equals("날씨") && Brain.hippocampus.getPreviousIntent().equals("먼지")))
-            ContextScenario.process(intent, speech);
+            ContextScenario.process(speech, intent);
 
         else {/** 스킬 모음 */
             if (!intent.equals("폴백")) Brain.hippocampus.rememberIntent(intent);
             if (intent.equals("알람")) AlarmScenario.process(speech, Oblivion::forgetAll);
             else if (intent.equals("메모")) AlarmScenario.process(speech, Oblivion::forgetAll);
             else if (intent.equals("달력")) CalenderScenario.process(speech);
-            else if (intent.equals("먼지")) DustScenario.process(speech, Oblivion::forgetAll);
+            else if (intent.equals("먼지")) DustScenario.process(speech, false, Oblivion::forgetAll);
             else if (intent.equals("동화")) FairytaleScenario.process(speech, activity);
             else if (intent.equals("이슈")) IssueScenario.process(speech);
             else if (intent.equals("농담")) JokeScenario.process(speech);
@@ -40,7 +40,7 @@ public class Skills {
             else if (intent.equals("맛집")) RestaurantScenario.process(speech, Oblivion::forgetAll);
             else if (intent.equals("시간")) TimeScenario.process(speech);
             else if (intent.equals("번역")) TranslateScenario.process(speech, Oblivion::forgetAll);
-            else if (intent.equals("날씨")) WeatherScenario.process(speech, Oblivion::forgetAll);
+            else if (intent.equals("날씨")) WeatherScenario.process(speech, false, Oblivion::forgetAll);
             else if (intent.equals("위키")) WikiScenario.process(speech, Oblivion::forgetAll);
             else if (intent.equals("인물")) WikiScenario.process(speech, Oblivion::forgetAll);
             else if (intent.equals("명언")) WiseScenario.process(speech);

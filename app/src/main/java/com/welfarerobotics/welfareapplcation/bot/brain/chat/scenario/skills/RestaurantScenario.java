@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class RestaurantScenario {
     public static void process(String speech, Runnable... forgets) throws IOException {
-        List<String> entity = RestaurentEntityRecognizer.recognize(speech);
+        List<String> entity = RestaurentEntityRecognizer.recognize(speech, false);
         for (Runnable forget : forgets) forget.run(); // 원하는 만큼 기억을 잊음.
         Brain.hippocampus.rememberLocation(entity);
         String res = RestaurantResponseGenerator.response();

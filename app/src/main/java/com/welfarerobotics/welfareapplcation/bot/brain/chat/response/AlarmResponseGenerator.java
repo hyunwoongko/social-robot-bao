@@ -14,9 +14,6 @@ public class AlarmResponseGenerator {
     public static List<String> recognize(String preprocessedSpeech) throws IOException {
         String[][] entity = ModelApi.getEntity("alarm", preprocessedSpeech);
 
-
-
-
         return null;
     }
 }

@@ -1,6 +1,7 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.named_entity;
 
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.crawler.ModelApi;
+import com.welfarerobotics.welfareapplcation.entity.cache.UserCache;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,12 +14,15 @@ import java.util.List;
  */
 public class RestaurentEntityRecognizer {
 
-    public static List<String> recognize(String preprocessedSpeech) throws IOException {
+    public static List<String> recognize(String preprocessedSpeech, boolean isContextMode) throws IOException {
         String[][] entity = ModelApi.getEntity("restaurant", preprocessedSpeech);
         String[] kewordGroup = entity[0];
         String[] entityGroup = entity[1];
         List<String> loc = new ArrayList<>();
 
+        if (!isContextMode) { // 디폴트 모드 세팅
+            if (loc.size() == 0) loc.add(UserCache.getInstance().getLocation());
+        }
         for (int i = 0; i < entityGroup.length; i++) {
             if (entityGroup[i].contains("LOCATION")) {
                 loc.add(kewordGroup[i]);

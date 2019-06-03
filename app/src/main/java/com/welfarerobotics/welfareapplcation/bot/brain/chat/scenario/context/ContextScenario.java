@@ -17,10 +17,10 @@ public class ContextScenario {
     public static void process(String speech, String intent) throws IOException {
         String prevIntent = Brain.hippocampus.getPreviousIntent();
         if (intent.equals("날짜")) DateContextScenario.process(speech, prevIntent);
-        if (intent.equals("언어국가")) LanguageContextScenario.process(speech);
-        if (intent.equals("지역")) LocationContextScenario.process(speech, prevIntent);
-        if (intent.equals("먼지")) WeatherScenario.process(speech);
-        else if (intent.equals("날씨")) DustScenario.process(speech);
+        else if (intent.equals("언어국가")) LanguageContextScenario.process(speech);
+        else if (intent.equals("지역")) LocationContextScenario.process(speech, prevIntent);
+        else if (intent.equals("먼지")) DustScenario.process(speech, true);
+        else if (intent.equals("날씨")) WeatherScenario.process(speech, true);
         else FallbackScenario.process();
     }
 }

@@ -25,6 +25,7 @@ public class DustResponseGenerator {
         StringBuilder dateBuilder = new StringBuilder();
         for (String one : date) {
             dateBuilder.append(one);
+            dateBuilder.append(" ");
         }
 
         if (date.contains("오늘")) {

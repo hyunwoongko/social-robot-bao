@@ -5,11 +5,11 @@ class IntentConfigs:
     encode_length = 15
     filter_sizes = [2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4]
     num_filters = len(filter_sizes)
-    learning_step = 2500
-    learning_rate = 0.00004
+    learning_step = 1000000000000
+    learning_rate = 0.0001
     vector_size = 300
-    fallback_score = 5.5
-    train_fasttext = False
+    fallback_score = 20
+    train_fasttext = True
     tokenizing = True
 
     root_path = './chat/intent/'
@@ -26,3 +26,4 @@ class IntentConfigs:
                 idx += 1
             self.intent_mapping[i] = idx
         self.label_size = len(self.intent_mapping)
+

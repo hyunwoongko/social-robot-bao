@@ -14,8 +14,8 @@ import java.util.List;
  * @homepage : https://github.com/gusdnd852
  */
 public class DustScenario {
-    public static void process(String preprocessedSpeech, Runnable... forgets) throws IOException {
-        List<String>[] entities = WeatherEntityRecognizer.recognize(preprocessedSpeech, false);
+    public static void process(String preprocessedSpeech, boolean contextMode,  Runnable... forgets) throws IOException {
+        List<String>[] entities = WeatherEntityRecognizer.recognize(preprocessedSpeech, contextMode);
         for(Runnable forget : forgets) forget.run(); // 원하는 만큼 기억을 잊음.
         Brain.hippocampus.rememberWeather(entities); // 해마에 엔티티를 기억시킴.
         String response = DustResponseGenerator.response();

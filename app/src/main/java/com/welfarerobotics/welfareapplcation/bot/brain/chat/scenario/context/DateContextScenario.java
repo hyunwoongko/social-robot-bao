@@ -13,7 +13,7 @@ import java.io.IOException;
  */
 public class DateContextScenario {
     public static void process(String speech, String prevIntent) throws IOException {
-        if (prevIntent.equals("날씨")) WeatherScenario.process(speech, Oblivion::forgetDate);
-        else if (prevIntent.equals("먼지")) DustScenario.process(speech, Oblivion::forgetDate);
+        if (prevIntent.equals("날씨")) WeatherScenario.process(speech, true, Oblivion::forgetDate);
+        else if (prevIntent.equals("먼지")) DustScenario.process(speech, true, Oblivion::forgetDate);
     }
 }
