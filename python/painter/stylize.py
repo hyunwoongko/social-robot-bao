@@ -25,8 +25,8 @@ wct_model = WCT(checkpoints=checkpoints,
 
 
 def get_stylize_image(content_fullpath, style_fullpath, output_path,
-                      content_size=256, style_size=256, alpha=0.6,
-                      swap5=False, ss_alpha=0.6, adain=False):
+                      content_size=256, style_size=256, alpha=0.23,
+                      swap5=False, ss_alpha=0.23, adain=False):
     content_fullpath = 'painter/images/output/' + content_fullpath
     output_path = 'painter/images/output/' + output_path
 
@@ -54,6 +54,5 @@ class Stylizer:
         get_stylize_image(self.inputfile, self.styles_name, self.inputfile)
 
     def random_stylize(self):
-        newname = './painter/styles/' + random.choice(self.styles_names) + '.jpg'
-        self.styles_name = newname
-        get_stylize_image(self.inputfile, newname, self.inputfile)
+        self.styles_name = './painter/styles/' + random.choice(self.styles_names) + '.jpg'
+        self.normal_stylize()

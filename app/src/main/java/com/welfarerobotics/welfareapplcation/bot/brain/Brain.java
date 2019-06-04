@@ -30,7 +30,9 @@ public final class Brain {
             Skills.thinkAndSay(intent, preprocessedSpeech, activity);
         } catch (Throwable e) {
             e.printStackTrace(); // <- 개발땐 에러 봐야해
-//            FallbackScenario.process(); // <- 나중엔 이걸로
+            FallbackScenario.process(); // <- 나중엔 이걸로
         }
     }
+
+
 }
