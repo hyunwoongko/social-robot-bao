@@ -17,6 +17,10 @@ public class WeatherResponseGenerator {
     public static String response() throws IOException {
         List<String> loc = Brain.hippocampus.getLocation();
         List<String> date = Brain.hippocampus.getDate();
+
+        System.out.println("LOC : " + loc);
+        System.out.println("DATE : " +date);
+
         StringBuilder locBuilder = new StringBuilder();
         for (String one : loc) {
             locBuilder.append(one);

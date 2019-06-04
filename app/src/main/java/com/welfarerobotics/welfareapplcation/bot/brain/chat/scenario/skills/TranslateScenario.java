@@ -18,7 +18,8 @@ public class TranslateScenario {
         List<String>[] entities = TranslateEntityRecognizer.recognize(speech);
         for (Runnable forget : forgets) forget.run(); // 원하는 만큼 기억을 잊음.
         Brain.hippocampus.rememberTranslate(entities); // 해마에 저장
-        TranslateResponseGenerator.response();
+        String response = TranslateResponseGenerator.response();
+        Brain.hippocampus.decideToSay(response);
         Mouth.get().say();
     }
 }

@@ -15,13 +15,11 @@ def open_domain(user_name, user_input):
 
     urls = [
         'https://builder.pingpong.us/api/builder/5cec5046e4b08517dba4a104/integration/v0.2/custom/' + user_name,
-        'https://builder.pingpong.us/api/builder/5cf0c6b0e4b0650704a2215/integration/v0.2/custom/' + user_name,
         'https://builder.pingpong.us/api/builder/5cf0c92ae4b0650704a22957/integration/v0.2/custom/' + user_name
     ]
 
     auths = [
         ('key', 'e5458bea6fcd5f4d0622cb8e07858f2b'),
-        ('key', 'a120fc0dcaee335788c3313623fa4a7f'),
         ('key', '0ae53003f4d99cdce7545e5f6269a7fc')
     ]
 
@@ -33,6 +31,7 @@ def open_domain(user_name, user_input):
     answer_list = []
     mode = True
     print(response)
+    print(urls[rand])
     for i in response.json()['response']['replies']:
         try:
             for c in i['text']:

@@ -16,10 +16,14 @@ import java.util.List;
 public class WikiScenario {
     public static void process(String speech, Runnable... forgets) throws IOException {
         List<String> entities = WikiEntityRecognizer.recognize(speech);
-        for (Runnable forget : forgets) forget.run(); // 원하는 만큼 기억을 잊음.
-        Brain.hippocampus.rememberWord(entities); // 해마에 엔티티를 기억시킴.
-        String response = WikiResponseGenerator.response(entities);
-        Brain.hippocampus.decideToSay(response);
+        if (entities.size() == 0) {
+            Brain.hippocampus.decideToSay(speech + " , 라고 하셨는데, 어떤 거 " + speech + " ?");
+        } else {
+            for (Runnable forget : forgets) forget.run(); // 원하는 만큼 기억을 잊음.
+            Brain.hippocampus.rememberWord(entities); // 해마에 엔티티를 기억시킴.
+            String response = WikiResponseGenerator.response(entities);
+            Brain.hippocampus.decideToSay(response);
+        }
         Mouth.get().say();
     }
 }

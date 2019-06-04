@@ -1,13 +1,7 @@
 # Author : Hyunwoong
 # When : 5/30/2019
 # Homepage : github.com/gusdnd852
-from chat.crawler.dust import metropolitan, tomorrow_dust
-from chat.util.hanspell.spell_checker import fix
-from chat.util.tokenizer import tokenize
+from chat.entity.translate.entity_recognizer import get_translate_entity
 
 if __name__ == '__main__':
-    while True:
-        q = fix(tokenize(fix(input())))
-        print(q)
-        a = tomorrow_dust(q)
-        print(a)
+    get_translate_entity("사랑해가 영어로 뭐야", True)

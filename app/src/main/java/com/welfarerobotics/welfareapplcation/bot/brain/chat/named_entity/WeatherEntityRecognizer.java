@@ -13,6 +13,31 @@ import java.util.List;
  * @homepage : https://github.com/gusdnd852
  */
 public class WeatherEntityRecognizer {
+
+    private static String[] DO = {
+            "경기도", "경기",
+            "충청도", "충청",
+            "충청남도", "충남",
+            "충청북도", "충북",
+            "전라도", "전라",
+            "전라남도", "전남",
+            "전라북도", "전북",
+            "경상남도", "경남",
+            "경상북도", "경북",
+            "경상도", "경상",
+            "강원도", "강원"
+    };
+
+    private static boolean isIn(String key) {
+        boolean isIn = false;
+        System.out.println("KEY : " + key);
+        for (String DO : WeatherEntityRecognizer.DO)
+            if (key.contains(DO)) isIn = true;
+        System.out.println("ISIN : " + isIn);
+
+        return isIn;
+    }
+
     public static List<String>[] recognize(String preprocessedSpeech, boolean isContextMode) throws IOException {
         String[][] entity = ModelApi.getEntity("weather", preprocessedSpeech);
         String[] kewordGroup = entity[0];
@@ -24,7 +49,9 @@ public class WeatherEntityRecognizer {
             if (entityGroup[i].contains("DATE")) {
                 date.add(kewordGroup[i]);
             } else if (entityGroup[i].contains("LOCATION")) {
-                location.add(kewordGroup[i]);
+                if (!isIn(kewordGroup[i])) {
+                    location.add(kewordGroup[i]);
+                }
             }
         }
 

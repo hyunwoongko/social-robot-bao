@@ -19,8 +19,6 @@ public class ContextScenario {
         if (intent.equals("날짜")) DateContextScenario.process(speech, prevIntent);
         else if (intent.equals("언어국가")) LanguageContextScenario.process(speech);
         else if (intent.equals("지역")) LocationContextScenario.process(speech, prevIntent);
-        else if (intent.equals("먼지")) DustScenario.process(speech, true);
-        else if (intent.equals("날씨")) WeatherScenario.process(speech, true);
         else FallbackScenario.process();
     }
 }

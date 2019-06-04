@@ -11,6 +11,6 @@ import java.io.IOException;
  */
 public class PardonScenario {
     public static void process(String speech) throws IOException {
-        Mouth.get().say();
+        Mouth.get().say(); // 다시 말하기
     }
 }

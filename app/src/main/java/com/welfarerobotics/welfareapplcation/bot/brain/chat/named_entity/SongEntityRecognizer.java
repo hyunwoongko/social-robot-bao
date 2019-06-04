@@ -13,11 +13,15 @@ import java.util.List;
  */
 public class SongEntityRecognizer {
 
-    public static List<String> recognize(String processedSpeech) throws IOException {
+    public static List<String> recognize(String processedSpeech, boolean isContextMode) throws IOException {
         String[][] entity = ModelApi.getEntity("song", processedSpeech);
         String[] kewordGroup = entity[0];
         String[] entityGroup = entity[1];
         List<String> word = new ArrayList<>();
+
+        if (!isContextMode) { // 디폴트 모드 세팅
+            if (word.size() == 0) word.add("어린이 동요");
+        }
 
         for (int i = 0; i < entityGroup.length; i++) {
             if (entityGroup[i].contains("WORD")) {

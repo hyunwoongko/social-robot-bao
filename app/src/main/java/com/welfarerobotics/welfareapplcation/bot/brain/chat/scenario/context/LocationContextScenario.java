@@ -13,7 +13,7 @@ import java.io.IOException;
  */
 public class LocationContextScenario {
     public static void process(String speech, String prevIntent) throws IOException {
-        if (prevIntent.equals("날씨")) WeatherScenario.process(speech, true,  Oblivion::forgetLocation);
+        if (prevIntent.equals("날씨")) WeatherScenario.process(speech, true, Oblivion::forgetLocation);
         else if (prevIntent.equals("먼지")) DustScenario.process(speech, true, Oblivion::forgetLocation);
     }
 }

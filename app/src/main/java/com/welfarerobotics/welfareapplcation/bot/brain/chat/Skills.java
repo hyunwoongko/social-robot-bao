@@ -22,15 +22,13 @@ public class Skills {
 
     public static void thinkAndSay(String intent, String speech, Activity activity) throws IOException {
         /** 문맥  모음 */
-        if (intent.equals("날짜") || intent.equals("언어국가") || intent.equals("지역") ||
-                (intent.equals("먼지") && Brain.hippocampus.getPreviousIntent().equals("날씨")) ||
-                (intent.equals("날씨") && Brain.hippocampus.getPreviousIntent().equals("먼지")))
+        if (intent.equals("날짜") || intent.equals("언어국가") || intent.equals("지역"))
             ContextScenario.process(speech, intent);
 
         else {/** 스킬 모음 */
             if (!intent.equals("폴백")) Brain.hippocampus.rememberIntent(intent);
-            if (intent.equals("알람")) AlarmScenario.process(speech, Oblivion::forgetAll);
-            else if (intent.equals("메모")) AlarmScenario.process(speech, Oblivion::forgetAll);
+            if (intent.equals("알람")) AlarmScenario.process(speech);
+            else if (intent.equals("메모")) AlarmScenario.process(speech);
             else if (intent.equals("달력")) CalenderScenario.process(speech);
             else if (intent.equals("먼지")) DustScenario.process(speech, false, Oblivion::forgetAll);
             else if (intent.equals("동화")) FairytaleScenario.process(speech, activity);

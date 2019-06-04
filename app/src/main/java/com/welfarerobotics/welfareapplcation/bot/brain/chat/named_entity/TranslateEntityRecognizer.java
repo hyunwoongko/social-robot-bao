@@ -1,9 +1,11 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.named_entity;
 
+import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.crawler.ModelApi;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -18,6 +20,15 @@ public class TranslateEntityRecognizer {
         String[] entityGroup = entity[1];
         List<String> word = new ArrayList<>();
         List<String> lang = new ArrayList<>();
+
+        if (word.size() == 0) {
+            String[] prevSpeech = Brain.hippocampus.getThoughtSentence().split(" ");
+            word.addAll(Arrays.asList(prevSpeech));
+        }
+
+        if (lang.size() == 0) {
+            lang.add("영어");
+        }
 
         for (int i = 0; i < entityGroup.length; i++) {
             if (entityGroup[i].contains("WORD")) {

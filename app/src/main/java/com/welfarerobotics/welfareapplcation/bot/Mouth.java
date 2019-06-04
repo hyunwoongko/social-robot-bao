@@ -42,7 +42,6 @@ public final @Data class Mouth {
             con.setRequestProperty("X-NCP-APIGW-API-KEY", ServerCache.getInstance().getCsssecret());
             // post request
             String postParams = "speaker=" + speaker + "&speed=2.5&text=" + text;
-            speaker = "jinho"; // 다시 진호로 원상복귀
             con.setDoOutput(true);
             DataOutputStream wr = new DataOutputStream(con.getOutputStream());
             wr.writeBytes(postParams);
