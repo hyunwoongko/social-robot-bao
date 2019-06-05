@@ -178,6 +178,7 @@ public class InitialSettingActivity extends BaseActivity {
         NetworkUtil.wifiSafe(this); // 네트워크 체크
 
         StorageReference storageRef = storage.getReference()
+                .child("userPhoto")
                 .child(DeviceId.getInstance(this).getUUID())
                 .child("userPhoto" + requestCode);
 

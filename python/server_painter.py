@@ -1,3 +1,5 @@
+import urllib.request
+
 from flask import Flask
 from flask import send_file
 
@@ -10,6 +12,13 @@ app = Flask(__name__)
 @app.route('/')
 def init():
     return 'BAO SERVER ON - PAINTER'
+
+
+@app.route('/download/<string:uid>/<path:url>')
+def download_image(uid, url):
+    file = 'painter/images/input/' + uid + '.jpg'
+    urllib.request.urlretrieve(url, file)
+    return url
 
 
 @app.route('/normal/<file>')
