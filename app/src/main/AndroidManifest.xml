@@ -84,12 +84,6 @@
             android:label="@string/app_name"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".core.contents.paintwith.GalleryActivity"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".core.contents.paintwith.PaintSelectActivity"
-            android:screenOrientation="landscape" />
-        <activity
             android:name=".core.contents.paintwith.PaintWithActivity"
             android:screenOrientation="landscape" />
         <activity

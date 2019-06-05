@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:layout_width="match_parent">
 
     <LinearLayout
@@ -13,30 +14,19 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="horizontal"
             android:layout_gravity="center"
             android:gravity="center"
             android:visibility="visible">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1.25" />
-
-            <ImageView
                 android:id="@+id/welfare_logo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:background="#00ffffff"
                 android:visibility="visible"
                 app:srcCompat="@drawable/welfare_management" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1.25" />
 
         </LinearLayout>
     </LinearLayout>
