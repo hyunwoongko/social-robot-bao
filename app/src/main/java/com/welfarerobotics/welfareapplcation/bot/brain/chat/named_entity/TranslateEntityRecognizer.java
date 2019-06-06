@@ -21,6 +21,14 @@ public class TranslateEntityRecognizer {
         List<String> word = new ArrayList<>();
         List<String> lang = new ArrayList<>();
 
+        for (int i = 0; i < entityGroup.length; i++) {
+            if (entityGroup[i].contains("WORD")) {
+                word.add(kewordGroup[i]);
+            } else if (entityGroup[i].contains("LANG")) {
+                lang.add(kewordGroup[i]);
+            }
+        }
+
         if (word.size() == 0) {
             String[] prevSpeech = Brain.hippocampus.getThoughtSentence().split(" ");
             word.addAll(Arrays.asList(prevSpeech));
@@ -30,13 +38,6 @@ public class TranslateEntityRecognizer {
             lang.add("영어");
         }
 
-        for (int i = 0; i < entityGroup.length; i++) {
-            if (entityGroup[i].contains("WORD")) {
-                word.add(kewordGroup[i]);
-            } else if (entityGroup[i].contains("LANG")) {
-                lang.add(kewordGroup[i]);
-            }
-        }
         List<String>[] entites = new List[2];
         entites[0] = word;
         entites[1] = lang;

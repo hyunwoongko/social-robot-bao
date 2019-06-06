@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.widget.ImageView;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -78,7 +79,11 @@ public class PaintWithActivity extends BaseActivity {
                 Future<String> urlFuture = Pool.threadPool.submit(() -> PainterApi.getPaint(uuid, taskSnapshot.getDownloadUrl().toString().split("\\?")[0]));
                 new Thread(() -> runOnUiThread(() -> {
                     try {
-                        Glide.with(imageView.getContext()).load(urlFuture.get()).into(imageView);
+                        Glide.with(imageView.getContext())
+                                .load(urlFuture.get())
+                                .apply(RequestOptions.timeoutOf(5 * 60 * 1000))
+                                .into(imageView);
+
                         imageView.setAlpha(200);
                     } catch (ExecutionException | InterruptedException e) {
                         e.printStackTrace();

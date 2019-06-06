@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Capstone-Project.iml" filepath="$PROJECT_DIR$/Capstone-Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/Capstone-Project-app.iml" filepath="$PROJECT_DIR$/app/Capstone-Project-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/Capstone_Project.iml" filepath="$PROJECT_DIR$/Capstone_Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/Capstone_Project-app.iml" filepath="$PROJECT_DIR$/app/Capstone_Project-app.iml" />
