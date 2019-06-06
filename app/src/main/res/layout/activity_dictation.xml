@@ -1,79 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/back"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:adjustViewBounds="false"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/dication_back" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="25dp">
-
-        <com.myscript.atk.scw.SingleCharWidget
-            android:id="@+id/widget"
+            android:id="@+id/back"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="60dp"
-            android:background="@color/float_transparent" />
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/dication_back"/>
 
-        <TextView
-            android:id="@+id/test"
-            android:layout_width="163dp"
-            android:layout_height="62dp"
-            android:gravity="center"
-            android:layout_marginStart="30dp"
-            android:visibility="invisible" />
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="25dp">
+
+        <com.myscript.atk.scw.SingleCharWidget
+                android:id="@+id/widget"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:background="@color/float_transparent"/>
 
         <ImageButton
-            android:id="@+id/speaker_btn"
-            android:layout_width="48dp"
-            android:layout_height="50dp"
-            android:layout_margin="40dp"
-            android:layout_alignParentTop="true"
-            android:background="@color/float_transparent"
-            android:scaleType="fitXY"
-            android:src="@drawable/speaker" />
-
-
-        <ImageButton
-            android:id="@+id/clear_btn"
-            android:layout_width="42dp"
-            android:layout_height="51dp"
-            android:layout_marginTop="40dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="40dp"
-            android:background="@color/float_transparent"
-            android:scaleType="fitXY"
-            android:src="@drawable/clear" />
+                android:id="@+id/backbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/float_transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/menu_backbutton"/>
 
         <ImageButton
-            android:id="@+id/submit_btn"
-            android:layout_width="42dp"
-            android:layout_height="51dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="10dp"
-            android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/clear_btn"
-            android:background="@color/float_transparent"
-            android:scaleType="fitXY"
-            android:src="@drawable/submit_btn" />
+                android:id="@+id/speaker_btn"
+                android:layout_width="42dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="60dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/float_transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/speaker"/>
+
+        <ImageButton
+                android:id="@+id/submit_btn"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/clear_btn"
+                android:background="@color/float_transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/submit_btn"/>
+
+        <ImageButton
+                android:id="@+id/clear_btn"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="40dp"
+                android:background="@color/float_transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/clear"/>
+
     </RelativeLayout>
 </RelativeLayout>
