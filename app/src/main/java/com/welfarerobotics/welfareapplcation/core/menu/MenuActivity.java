@@ -92,7 +92,6 @@ public class MenuActivity extends AppCompatActivity {
                 youtubeUrl = futureYoutube.get(); // 쓰레드 처리 결과를 수신
                 int UrlIdIndex = youtubeUrl.indexOf("=");
                 youtubeUrl = youtubeUrl.substring(UrlIdIndex + 1);
-                Toasty.info(this, "화면을 누르면 재생이 종료됩니다.", Toast.LENGTH_SHORT).show();
                 //YoutubeActivity 실행 및 URL 전달
                 Intent youtubeIntent = new Intent(getApplicationContext(), YoutubeActivity.class);
                 youtubeIntent.putExtra("url", youtubeUrl);
