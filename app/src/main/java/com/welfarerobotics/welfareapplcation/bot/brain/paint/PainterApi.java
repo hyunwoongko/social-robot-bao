@@ -13,9 +13,9 @@ import java.io.IOException;
  */
 public class PainterApi {
 
-    public static String getPaint(String id, String text) throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getPainter() + "/intent/" + Encoder
-                .utf8(text))
+    public static String getPaint(String uid, String path) throws IOException {
+        return Jsoup.connect(ServerCache.getInstance().getPainter() + "/normal/" + Encoder
+                .utf8(uid) + "/" + Encoder.utf8(path))
                 .timeout(20000)
                 .get()
                 .body()

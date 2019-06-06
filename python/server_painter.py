@@ -14,29 +14,28 @@ def init():
     return 'BAO SERVER ON - PAINTER'
 
 
-@app.route('/download/<string:uid>/<path:url>')
-def download_image(uid, url):
-    file = 'painter/images/input/' + uid + '.jpg'
-    urllib.request.urlretrieve(url, file)
-    return url
-
-
-@app.route('/normal/<file>')
-def normal(file):
-    pix_translate(file, file)
+@app.route('/normal/<string:uid>/<path:url>')
+def normal(uid, url):
+    file = uid + '.jpg'
+    input_path = 'painter/images/input/'+file
+    output_path = 'painter/images/output'+file
+    urllib.request.urlretrieve(url + '?alt=media', input_path)
+    pix_translate(input_path, output_path)
     stylizer = Stylizer(file)
     stylizer.normal_stylize()
-    output = 'painter/images/output/' + file
-    return send_file(output, mimetype='image/png')
+    return send_file(output_path, mimetype='image/png')
 
 
-@app.route('/random/<file>')
-def random(file):
-    pix_translate(file, file)
+@app.route('/random/<string:uid>/<path:url>')
+def random(uid, url):
+    file = uid + '.jpg'
+    input_path = 'painter/images/input/'+file
+    output_path = 'painter/images/output/'+file
+    urllib.request.urlretrieve(url + '?alt=media', input_path)
+    pix_translate(input_path, output_path)
     stylizer = Stylizer(file)
     stylizer.random_stylize()
-    output = 'painter/images/output/' + file
-    return send_file(output, mimetype='image/png')
+    return send_file(output_path, mimetype='image/png')
 
 
 if __name__ == '__main__':

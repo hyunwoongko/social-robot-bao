@@ -12,8 +12,6 @@ from PIL import Image
 
 
 def pix_translate(input_file, output_file, model_dir='painter/models/pix2pix'):
-    input_file = 'painter/images/input/' + input_file
-    output_file = 'painter/images/output/' + output_file
     with open(input_file, "rb") as f:
         im = Image.open(input_file)
         im = im.resize((256, 256), Image.ANTIALIAS)
