@@ -18,7 +18,7 @@ def init():
 def normal(uid, url):
     file = uid + '.jpg'
     input_path = 'painter/images/input/'+file
-    output_path = 'painter/images/output'+file
+    output_path = 'painter/images/output/'+file
     urllib.request.urlretrieve(url + '?alt=media', input_path)
     pix_translate(input_path, output_path)
     stylizer = Stylizer(file)

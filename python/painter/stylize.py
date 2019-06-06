@@ -25,8 +25,8 @@ wct_model = WCT(checkpoints=checkpoints,
 
 
 def get_stylize_image(content_fullpath, style_fullpath, output_path,
-                      content_size=256, style_size=256, alpha=0.3,
-                      swap5=False, ss_alpha=0.3, adain=False):
+                      content_size=256, style_size=256, alpha=0.25,
+                      swap5=False, ss_alpha=0.25, adain=False):
     content_fullpath = 'painter/images/output/' + content_fullpath
     output_path = 'painter/images/output/' + output_path
 

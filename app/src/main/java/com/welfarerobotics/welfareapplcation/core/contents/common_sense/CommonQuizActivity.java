@@ -3,7 +3,6 @@ package com.welfarerobotics.welfareapplcation.core.contents.common_sense;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.google.firebase.database.*;
@@ -33,7 +32,6 @@ public class CommonQuizActivity extends BaseActivity {
         txtview = findViewById(R.id.question_view);
         ImageView o_view = findViewById(R.id.o_icon);
         ImageView x_view = findViewById(R.id.x_icon);
-        ImageButton backbtn = findViewById(R.id.backbutton);
 
         KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE);
         pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
@@ -44,7 +42,6 @@ public class CommonQuizActivity extends BaseActivity {
 
         o_view.setOnClickListener(v -> select(true));
         x_view.setOnClickListener(v -> select(false));
-        backbtn.setOnClickListener(view -> onBackPressed());
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference databaseRef = database.getReference("common sense quiz");

@@ -7,11 +7,8 @@ import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.google.firebase.database.*;
 import com.kinda.alert.KAlertDialog;
 import com.myscript.atk.scw.SingleCharWidget;
@@ -37,17 +34,15 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
     private Random random = new Random();
     private short currentQuestionCount = 1;
     private MediaPlayer mediaPlayer = new MediaPlayer();
-    private String imageURL;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dictation);
+        tv = findViewById(R.id.test);
         ImageButton submit = findViewById(R.id.submit_btn);
         ImageButton clear = findViewById(R.id.clear_btn);
         ImageButton speaker = findViewById(R.id.speaker_btn);
-        ImageButton backbtn = findViewById(R.id.backbutton);
-        //ImageView image = findViewById(R.id.image_dictation);
 
         KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE);
         pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
@@ -96,21 +91,6 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
         pDialog2.setCancelable(false);
         pDialog2.show();
 
-        //TODO
-        /*
-        try {
-            imageURL = ImageCrawler.crawler(currentDictation);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        Glide
-                .with(this)
-                .load(imageURL)
-                .apply(new RequestOptions().override(300,300))
-                .into(image);
-         */
-
         widget = (SingleCharWidget) findViewById(R.id.widget);
         widget.setOnTextChangedListener(this);
         builder = new MyScriptBuilder(widget, this);
@@ -138,8 +118,6 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
             playVoice(mediaPlayer, currentDictation);
         });
 
-        backbtn.setOnClickListener(view -> onBackPressed());
-
     }
 
     @Override
@@ -156,7 +134,6 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
     }
 
     private void select() {
-        // 5문제(1,2,3,4,5)를 풀었다면 다시 할지 묻고, 아니면 다음 문제 안내 디이얼로그 표시
         if(currentQuestionCount == 6){
             KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE);
             pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));

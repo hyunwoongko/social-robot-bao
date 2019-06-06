@@ -3,6 +3,7 @@ package com.welfarerobotics.welfareapplcation.bot.brain.paint;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.crawler.Encoder;
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
 import org.jsoup.Jsoup;
+import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
@@ -12,17 +13,12 @@ import java.io.IOException;
  * @homepage : https://github.com/gusdnd852
  */
 public class PainterApi {
-
     public static String getPaint(String uid, String path) throws IOException {
-        return Jsoup.connect(ServerCache.getInstance().getPainter() + "/normal/" + Encoder
-                .utf8(uid) + "/" + Encoder.utf8(path))
+        Jsoup.connect(ServerCache.getInstance().getPainter() + "/random/" + uid + "/" + path)
                 .timeout(20000)
-                .get()
-                .body()
-                .text();
-    }
+                .ignoreContentType(true)
+                .get();
 
-    public static void draw() {
-
+        return ServerCache.getInstance().getPainter() + "/random/" + uid + "/" + path;
     }
 }
