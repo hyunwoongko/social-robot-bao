@@ -17,10 +17,14 @@ import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramSelecA
 import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleActivity;
 import com.welfarerobotics.welfareapplcation.core.settings.SettingActivity;
 import com.welfarerobotics.welfareapplcation.core.youtube.YoutubeActivity;
+import com.welfarerobotics.welfareapplcation.util.Pool;
+import es.dmoral.toasty.Toasty;
 import me.piruin.quickaction.ActionItem;
 import me.piruin.quickaction.QuickAction;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 
 public class MenuActivity extends AppCompatActivity {
     private String youtubeUrl;
@@ -65,7 +69,7 @@ public class MenuActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        ibQuiz.setOnClickListener(v->{
+        ibQuiz.setOnClickListener(v -> {
             startActivity(new Intent(getApplicationContext(), CommonQuizActivity.class));
         });
 
@@ -74,19 +78,28 @@ public class MenuActivity extends AppCompatActivity {
         ibplayart.setOnClickListener(view -> quickActionArt.show(view));
 
         ibkidssong.setOnClickListener(view -> {
+
+            Future<String> futureYoutube = Pool.threadPool.submit(() -> {
+                try {
+                    return YoutubeApi.getYoutube("동요");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    return null;
+                }
+            });
+            //Youtube URL에서 ID만 추출
             try {
-                youtubeUrl = YoutubeApi.getYoutube("동요");
-            } catch (IOException e) {
+                youtubeUrl = futureYoutube.get(); // 쓰레드 처리 결과를 수신
+                int UrlIdIndex = youtubeUrl.indexOf("=");
+                youtubeUrl = youtubeUrl.substring(UrlIdIndex + 1);
+                Toasty.info(this, "화면을 누르면 재생이 종료됩니다.", Toast.LENGTH_SHORT).show();
+                //YoutubeActivity 실행 및 URL 전달
+                Intent youtubeIntent = new Intent(getApplicationContext(), YoutubeActivity.class);
+                youtubeIntent.putExtra("url", youtubeUrl);
+                startActivity(youtubeIntent);
+            } catch (ExecutionException | InterruptedException e) {
                 e.printStackTrace();
             }
-            //Youtube URL에서 ID만 추출
-            int UrlIdIndex = youtubeUrl.indexOf("=");
-            youtubeUrl = youtubeUrl.substring(UrlIdIndex + 1);
-            Toast.makeText(this, "화면을 누르면 재생이 종료됩니다.", Toast.LENGTH_SHORT).show();
-            //YoutubeActivity 실행 및 URL 전달
-            Intent youtubeIntent = new Intent(getApplicationContext(), YoutubeActivity.class);
-            youtubeIntent.putExtra("url", youtubeUrl);
-            startActivity(youtubeIntent);
         });
 
         ibfollowbao.setOnClickListener(view -> {

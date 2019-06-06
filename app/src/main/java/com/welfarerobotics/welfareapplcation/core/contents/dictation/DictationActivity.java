@@ -1,4 +1,4 @@
-﻿package com.welfarerobotics.welfareapplcation.core.contents.dictation;
+package com.welfarerobotics.welfareapplcation.core.contents.dictation;
 
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -7,11 +7,8 @@ import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.google.firebase.database.*;
 import com.kinda.alert.KAlertDialog;
 import com.myscript.atk.scw.SingleCharWidget;

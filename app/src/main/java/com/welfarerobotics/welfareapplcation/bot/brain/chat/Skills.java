@@ -37,6 +37,7 @@ public class Skills {
             else if (intent.equals("뉴스")) NewsScenario.process(speech, Oblivion::forgetAll);
             else if (intent.equals("맛집")) RestaurantScenario.process(speech, Oblivion::forgetAll);
             else if (intent.equals("시간")) TimeScenario.process(speech);
+            else if (intent.equals("음악")) SongScenario.process(speech, activity);
             else if (intent.equals("번역")) TranslateScenario.process(speech, Oblivion::forgetAll);
             else if (intent.equals("날씨")) WeatherScenario.process(speech, false, Oblivion::forgetAll);
             else if (intent.equals("위키")) WikiScenario.process(speech, Oblivion::forgetAll);

@@ -13,13 +13,10 @@ import java.util.List;
 public class SongResponseGenerator {
 
     public static String response(List<String> word) throws IOException {
-        if (word.size() != 0) {
-            StringBuilder wordBuilder = new StringBuilder();
-            for (String one : word) {
-                wordBuilder.append(one);
-            }
-            return YoutubeApi.getYoutube(wordBuilder.toString());
+        StringBuilder wordBuilder = new StringBuilder();
+        for (String one : word) {
+            wordBuilder.append(one);
         }
-        return null;
+        return YoutubeApi.getYoutube(wordBuilder.toString());
     }
 }

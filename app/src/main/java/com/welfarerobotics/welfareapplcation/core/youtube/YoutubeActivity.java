@@ -15,6 +15,7 @@ import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
+import es.dmoral.toasty.Toasty;
 
 public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
@@ -97,8 +98,8 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
 
         @Override
         public void onVideoStarted() {
-            Toast.makeText(getApplicationContext(), "화면을 누르면 재생을 종료합니다", Toast.LENGTH_SHORT).show();
-        }
+            Toasty.info(getApplicationContext(), "화면을 누르면 재생을 종료합니다.", Toast.LENGTH_SHORT).show();
+          }
 
         @Override
         public void onVideoEnded() {

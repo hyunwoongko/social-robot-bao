@@ -1,4 +1,4 @@
-﻿package com.welfarerobotics.welfareapplcation.core.contents.common_sense;
+package com.welfarerobotics.welfareapplcation.core.contents.common_sense;
 
 import android.graphics.Color;
 import android.os.Bundle;
