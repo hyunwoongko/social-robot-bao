@@ -1,12 +1,28 @@
 import urllib.request
+from datetime import datetime
+from functools import wraps, update_wrapper
 
-from flask import Flask
+from flask import Flask, make_response
 from flask import send_file
 
 from painter.pix2pix import pix_translate
 from painter.stylize import Stylizer
 
 app = Flask(__name__)
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+
+
+def nocache(view):
+    @wraps(view)
+    def no_cache(*args, **kwargs):
+        response = make_response(view(*args, **kwargs))
+        response.headers['Last-Modified'] = datetime.now()
+        response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0'
+        response.headers['Pragma'] = 'no-cache'
+        response.headers['Expires'] = '-1'
+        return response
+
+    return update_wrapper(no_cache, view)
 
 
 @app.route('/')
@@ -14,27 +30,19 @@ def init():
     return 'BAO SERVER ON - PAINTER'
 
 
-@app.route('/normal/<string:uid>/<path:url>')
-def normal(uid, url):
+@app.route('/draw/<string:uid>/<string:change>/<path:url>')
+@nocache
+def draw(uid, change, url):
     file = uid + '.jpg'
-    input_path = 'painter/images/input/'+file
-    output_path = 'painter/images/output/'+file
+    input_path = 'painter/images/input/' + file
+    output_path = 'painter/images/output/' + file
     urllib.request.urlretrieve(url + '?alt=media', input_path)
     pix_translate(input_path, output_path)
     stylizer = Stylizer(file)
-    stylizer.normal_stylize()
-    return send_file(output_path, mimetype='image/png')
-
-
-@app.route('/random/<string:uid>/<path:url>')
-def random(uid, url):
-    file = uid + '.jpg'
-    input_path = 'painter/images/input/'+file
-    output_path = 'painter/images/output/'+file
-    urllib.request.urlretrieve(url + '?alt=media', input_path)
-    pix_translate(input_path, output_path)
-    stylizer = Stylizer(file)
-    stylizer.random_stylize()
+    if change == 'true':
+        stylizer.stylize(True)
+    else:
+        stylizer.stylize(False)
     return send_file(output_path, mimetype='image/png')
 
 

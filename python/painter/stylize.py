@@ -45,14 +45,12 @@ def get_stylize_image(content_fullpath, style_fullpath, output_path,
 class Stylizer:
     styles = os.listdir('./painter/styles')
     styles_names = [i.split('.')[0] for i in styles]
-    styles_name = './painter/styles/' + random.choice(styles_names) + '.jpg'
 
     def __init__(self, inputfile):
         self.inputfile = inputfile
 
-    def normal_stylize(self):
-        get_stylize_image(self.inputfile, self.styles_name, self.inputfile)
-
-    def random_stylize(self):
-        self.styles_name = './painter/styles/' + random.choice(self.styles_names) + '.jpg'
-        self.normal_stylize()
+    def stylize(self, change):
+        global styles_name
+        if change:
+            styles_name = './painter/styles/' + random.choice(self.styles_names) + '.jpg'
+        get_stylize_image(self.inputfile, styles_name, self.inputfile)
