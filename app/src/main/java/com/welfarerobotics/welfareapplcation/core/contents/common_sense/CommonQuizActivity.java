@@ -1,8 +1,9 @@
-package com.welfarerobotics.welfareapplcation.core.contents.common_sense;
+﻿package com.welfarerobotics.welfareapplcation.core.contents.common_sense;
 
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.google.firebase.database.*;
@@ -32,6 +33,7 @@ public class CommonQuizActivity extends BaseActivity {
         txtview = findViewById(R.id.question_view);
         ImageView o_view = findViewById(R.id.o_icon);
         ImageView x_view = findViewById(R.id.x_icon);
+        ImageButton backbtn = findViewById(R.id.backbutton);
 
         KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE);
         pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
@@ -42,6 +44,7 @@ public class CommonQuizActivity extends BaseActivity {
 
         o_view.setOnClickListener(v -> select(true));
         x_view.setOnClickListener(v -> select(false));
+        backbtn.setOnClickListener(view -> onBackPressed());
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference databaseRef = database.getReference("common sense quiz");
@@ -68,36 +71,36 @@ public class CommonQuizActivity extends BaseActivity {
     }
 
     private void select(boolean userAnswer) {
-            currentQuestionCount++;
-            if (currentQuiz.isAnswer() == userAnswer) {
-                correctAnswerCount++;
-                Sound.get().effectSound(this, R.raw.dingdong);
-                showToast("정답입니다", ToastType.success);
-            } else {
-                Sound.get().effectSound(this, R.raw.beebeep);
-                showToast("오답입니다", ToastType.error);
-           }
-
-            if(currentQuestionCount == 5){
-                KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE);
-                pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
-                pDialog.setTitleText("놀이 종료");
-                pDialog.setContentText("\n정답 갯수는 " + correctAnswerCount + "개 입니다.\n게임을 다시 할까요?\n\n");
-                pDialog.setCancelable(false);
-                pDialog.setConfirmText("아니오");
-                pDialog.setConfirmClickListener(d->finish());
-                pDialog.setCancelText("예");
-                pDialog.setCancelClickListener(d->{
-                    finish();
-                    startActivity(getIntent());
-                });
-                pDialog.confirmButtonColor(R.color.confirm_button);
-                pDialog.cancelButtonColor(R.color.confirm_button);
-                pDialog.show();
-            }else{
-                quizzes.remove(currentQuiz);
-                currentQuiz = quizzes.get(random.nextInt(quizzes.size() - 1));
-                txtview.setText(currentQuiz.getQuestion());
-            }
+        currentQuestionCount++;
+        if (currentQuiz.isAnswer() == userAnswer) {
+            correctAnswerCount++;
+            Sound.get().effectSound(this, R.raw.dingdong);
+            showToast("정답입니다", ToastType.success);
+        } else {
+            Sound.get().effectSound(this, R.raw.beebeep);
+            showToast("오답입니다", ToastType.error);
         }
+
+        if(currentQuestionCount == 5){
+            KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE);
+            pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+            pDialog.setTitleText("놀이 종료");
+            pDialog.setContentText("\n정답 갯수는 " + correctAnswerCount + "개 입니다.\n게임을 다시 할까요?\n\n");
+            pDialog.setCancelable(false);
+            pDialog.setConfirmText("아니오");
+            pDialog.setConfirmClickListener(d->finish());
+            pDialog.setCancelText("예");
+            pDialog.setCancelClickListener(d->{
+                finish();
+                startActivity(getIntent());
+            });
+            pDialog.confirmButtonColor(R.color.confirm_button);
+            pDialog.cancelButtonColor(R.color.confirm_button);
+            pDialog.show();
+        }else{
+            quizzes.remove(currentQuiz);
+            currentQuiz = quizzes.get(random.nextInt(quizzes.size() - 1));
+            txtview.setText(currentQuiz.getQuestion());
+        }
+    }
 }

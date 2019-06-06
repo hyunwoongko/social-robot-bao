@@ -13,7 +13,7 @@
         android:adjustViewBounds="false"
         android:cropToPadding="false"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/dication_back" />
+        app:srcCompat="@drawable/dication_back"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -31,49 +31,52 @@
             android:layout_alignParentTop="true"
             android:layout_gravity="center"
             android:layout_marginTop="60dp"
-            android:background="@color/float_transparent" />
+            android:background="@color/float_transparent"/>
 
-        <TextView
-            android:id="@+id/test"
-            android:layout_width="163dp"
-            android:layout_height="62dp"
-            android:gravity="center"
-            android:layout_marginStart="30dp"
-            android:visibility="invisible" />
+        <ImageButton
+            android:id="@+id/backbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="40dp"
+            android:background="@color/float_transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/menu_backbutton"/>
 
         <ImageButton
             android:id="@+id/speaker_btn"
-            android:layout_width="48dp"
-            android:layout_height="50dp"
-            android:layout_margin="40dp"
-            android:layout_alignParentTop="true"
-            android:background="@color/float_transparent"
-            android:scaleType="fitXY"
-            android:src="@drawable/speaker" />
-
-
-        <ImageButton
-            android:id="@+id/clear_btn"
             android:layout_width="42dp"
-            android:layout_height="51dp"
-            android:layout_marginTop="40dp"
-            android:layout_alignParentEnd="true"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="85dp"
             android:layout_alignParentTop="true"
-            android:layout_marginEnd="40dp"
             android:background="@color/float_transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/clear" />
+            android:src="@drawable/speaker"/>
 
         <ImageButton
             android:id="@+id/submit_btn"
-            android:layout_width="42dp"
-            android:layout_height="51dp"
-            android:layout_marginTop="40dp"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
             android:layout_alignParentTop="true"
             android:layout_toStartOf="@+id/clear_btn"
             android:background="@color/float_transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/submit_btn" />
+            android:src="@drawable/submit_btn"/>
+
+        <ImageButton
+            android:id="@+id/clear_btn"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="40dp"
+            android:background="@color/float_transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/clear"/>
+
     </RelativeLayout>
 </RelativeLayout>

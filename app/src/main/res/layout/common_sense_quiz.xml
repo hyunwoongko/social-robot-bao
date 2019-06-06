@@ -1,46 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-                                             android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="20dp"
+        android:background="@color/float_transparent"
+        android:id="@+id/backbutton"
+        android:src="@drawable/menu_backbutton"/>
     <TextView
-            android:text="TextView"
-            android:layout_width="289dp"
-            android:layout_height="65dp"
-            android:id="@+id/question_view" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintHorizontal_bias="0.501" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="8dp" app:layout_constraintVertical_bias="0.38"/>
+        android:text="TextView"
+        android:layout_width="289dp"
+        android:layout_height="65dp"
+        android:id="@+id/question_view" android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_bias="0.501" app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp" app:layout_constraintVertical_bias="0.38"/>
     <ImageView
-            android:layout_width="55dp"
-            android:layout_height="55dp" app:srcCompat="@drawable/o_icon"
-            android:id="@+id/o_icon" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="25dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintHorizontal_bias="0.3"/>
+        android:layout_width="55dp"
+        android:layout_height="55dp" app:srcCompat="@drawable/o_icon"
+        android:id="@+id/o_icon" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="25dp"
+        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_bias="0.3"/>
     <ImageView
-            android:layout_width="55dp"
-            android:layout_height="55dp" app:srcCompat="@drawable/x_icon"
-            android:id="@+id/x_icon"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="25dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintHorizontal_bias="0.7"/>
+        android:layout_width="55dp"
+        android:layout_height="55dp" app:srcCompat="@drawable/x_icon"
+        android:id="@+id/x_icon"
+        app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="25dp"
+        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+        app:layout_constraintHorizontal_bias="0.7"/>
     <ImageView
-            android:layout_width="46dp"
-            android:layout_height="54dp" app:srcCompat="@drawable/q_icon"
-            android:id="@+id/imageView" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintHorizontal_bias="0.16" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="8dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="8dp" app:layout_constraintVertical_bias="0.110000014"/>
+        android:layout_width="46dp"
+        android:layout_height="54dp" app:srcCompat="@drawable/q_icon"
+        android:id="@+id/imageView" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_bias="0.16" app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp" app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp" app:layout_constraintVertical_bias="0.110000014"/>
     <ImageView
-            android:layout_width="310dp"
-            android:layout_height="232dp" app:srcCompat="@drawable/balloon"
-            android:id="@+id/imageView3" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintHorizontal_bias="0.47" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="8dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="8dp" app:layout_constraintVertical_bias="0.18"/>
+        android:layout_width="310dp"
+        android:layout_height="232dp" app:srcCompat="@drawable/balloon"
+        android:id="@+id/imageView3" app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_bias="0.47" app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp" app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp" app:layout_constraintVertical_bias="0.18"/>
 </android.support.constraint.ConstraintLayout>
