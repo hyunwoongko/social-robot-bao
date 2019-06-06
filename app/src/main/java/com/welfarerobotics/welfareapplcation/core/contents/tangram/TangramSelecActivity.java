@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.entity.cache.TangramStageCache;
+import com.welfarerobotics.welfareapplcation.util.Sound;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
@@ -95,5 +96,16 @@ try {
 
 
         myAdaterr.notifyDataSetChanged();
+    }
+
+    @Override protected void onPause() {
+        super.onPause();
+        Sound.get().pause();
+    }
+
+    @Override protected void onResume() {
+        super.onResume();
+        Sound.get().resume(this, R.raw.tangram);
+        Sound.get().loop(true);
     }
 }

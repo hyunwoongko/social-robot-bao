@@ -11,6 +11,7 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
+import com.welfarerobotics.welfareapplcation.util.Sound;
 
 public class EmotioncardActivity extends BaseActivity {
     private EmotioncardFragment emotioncardFragment = null;
@@ -52,5 +53,19 @@ public class EmotioncardActivity extends BaseActivity {
                 .setCustomAnimations(R.anim.activity_fade_in, R.anim.activity_fade_out)
                 .replace(R.id.container, emotioncardFragment)
                 .commit();
+    }
+    @Override protected void onResume() {
+        super.onResume();
+        Sound.get().resume(this, R.raw.emotion_card);
+    }
+
+    @Override protected void onPause() {
+        super.onPause();
+        Sound.get().pause();
+    }
+
+    @Override protected void onDestroy() {
+        super.onDestroy();
+        Sound.get().stop();
     }
 }

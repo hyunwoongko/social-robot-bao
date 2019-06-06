@@ -7,7 +7,6 @@ import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 import com.google.firebase.database.*;
 import com.kinda.alert.KAlertDialog;
@@ -18,6 +17,7 @@ import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
 import com.welfarerobotics.welfareapplcation.util.Sound;
 import com.welfarerobotics.welfareapplcation.util.ToastType;
+import es.dmoral.toasty.Toasty;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -29,7 +29,7 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
     private MyScriptBuilder builder;
     private SingleCharWidgetApi widget;
     private String[] quiz;
-    private TextView tv;
+    private String text = null;
     private String currentDictation;
     private Random random = new Random();
     private short currentQuestionCount = 1;
@@ -61,9 +61,9 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
                 quiz = dataSnapshot
                         .getValue()
                         .toString()
-                        .replace("[","")
-                        .replace("]","")
-                        .replace(" ","")
+                        .replace("[", "")
+                        .replace("]", "")
+                        .replace(" ", "")
                         .split(",");
 
                 currentDictation = quiz[random.nextInt(quiz.length)];
@@ -81,7 +81,7 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
         pDialog2.setContentText("단어를 잘 듣고 받아 적어봅시다.\n" + currentQuestionCount + "번째 문제입니다.");
         pDialog2.setConfirmText("예");
         pDialog2.confirmButtonColor(R.color.confirm_button);
-        pDialog2.setConfirmClickListener(kAlertDialog->{
+        pDialog2.setConfirmClickListener(kAlertDialog -> {
             if (mediaPlayer != null && mediaPlayer.isPlaying()) {
                 mediaPlayer.stop();
                 mediaPlayer.release();
@@ -116,13 +116,14 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
         /*위젯 설정*/
 
         submit.setOnClickListener(view -> {
-            Toast.makeText(this, "입력한 단어" + tv.getText().toString(), Toast.LENGTH_SHORT).show();
+            if (text != null) // null 체크
+                Toasty.success(this, "입력한 단어 : " + text, Toast.LENGTH_SHORT).show();
         });
 
         clear.setOnClickListener(view -> {
-            Toast.makeText(this, "초기화합니다.", Toast.LENGTH_SHORT).show();
+            Toasty.info(this, "초기화합니다.", Toast.LENGTH_SHORT).show();
             widget.clear();
-            tv.setText("");
+           text = null;
         });
 
         speaker.setOnClickListener(view -> {
@@ -140,6 +141,7 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
 
     @Override
     public void onTextChanged(SingleCharWidgetApi singleCharWidgetApi, String s, boolean b) {
+        text = s;
         System.out.println(s);
         System.out.println(currentDictation);
         if (s.contains(currentDictation)) {
@@ -153,30 +155,30 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
 
     private void select() {
         // 5문제(1,2,3,4,5)를 풀었다면 다시 할지 묻고, 아니면 다음 문제 안내 디이얼로그 표시
-        if(currentQuestionCount == 6){
+        if (currentQuestionCount == 6) {
             KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE);
             pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
             pDialog.setTitleText("놀이 종료");
             pDialog.setContentText("게임을 다시 할까요?\n\n");
             pDialog.setCancelable(false);
             pDialog.setConfirmText("아니오");
-            pDialog.setConfirmClickListener(d->finish());
+            pDialog.setConfirmClickListener(d -> finish());
             pDialog.setCancelText("예");
-            pDialog.setCancelClickListener(d->{
+            pDialog.setCancelClickListener(d -> {
                 finish();
                 startActivity(getIntent());
             });
             pDialog.confirmButtonColor(R.color.confirm_button);
             pDialog.cancelButtonColor(R.color.confirm_button);
             pDialog.show();
-        }else{
+        } else {
             currentDictation = quiz[random.nextInt(quiz.length)];
             KAlertDialog pDialog2 = new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE);
             pDialog2.setTitleText("안내");
             pDialog2.setContentText(currentQuestionCount + "번째 문제입니다.\n준비되었나요?");
             pDialog2.setConfirmText("예");
             pDialog2.confirmButtonColor(R.color.confirm_button);
-            pDialog2.setConfirmClickListener(kAlertDialog->{
+            pDialog2.setConfirmClickListener(kAlertDialog -> {
                 if (mediaPlayer != null && mediaPlayer.isPlaying()) {
                     mediaPlayer.stop();
                     mediaPlayer.release();
@@ -268,5 +270,20 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
             e.printStackTrace();
         }
         mediaPlayer.start();
+    }
+
+    @Override protected void onResume() {
+        super.onResume();
+        Sound.get().resume(this, R.raw.dictaion);
+    }
+
+    @Override protected void onPause() {
+        super.onPause();
+        Sound.get().pause();
+    }
+
+    @Override protected void onDestroy() {
+        super.onDestroy();
+        Sound.get().stop();
     }
 }

@@ -25,6 +25,7 @@ import com.welfarerobotics.welfareapplcation.core.settings.WifiActivity;
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
 import com.welfarerobotics.welfareapplcation.util.CanvasView;
 import com.welfarerobotics.welfareapplcation.util.DeviceId;
+import com.welfarerobotics.welfareapplcation.util.Sound;
 
 import java.io.ByteArrayOutputStream;
 import java.util.Objects;
@@ -122,5 +123,21 @@ public class PaintWithActivity extends BaseActivity {
                 first = "false";
             });
         });
+    }
+
+    @Override protected void onResume() {
+        super.onResume();
+        Sound.get().resume(this, R.raw.paint);
+        Sound.get().loop(true);
+    }
+
+    @Override protected void onPause() {
+        super.onPause();
+        Sound.get().pause();
+    }
+
+    @Override protected void onDestroy() {
+        super.onDestroy();
+        Sound.get().stop();
     }
 }

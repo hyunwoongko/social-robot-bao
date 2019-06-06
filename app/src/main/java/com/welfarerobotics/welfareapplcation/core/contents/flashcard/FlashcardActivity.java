@@ -12,6 +12,7 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
+import com.welfarerobotics.welfareapplcation.util.Sound;
 
 public class FlashcardActivity extends BaseActivity {
     private ModeFragment modeFragment = null;
@@ -64,5 +65,20 @@ public class FlashcardActivity extends BaseActivity {
                 .setCustomAnimations(R.anim.activity_fade_in, R.anim.activity_fade_out)
                 .replace(R.id.container, modeFragment, "mode")
                 .commit();
+    }
+
+    @Override protected void onResume() {
+        super.onResume();
+        Sound.get().resume(this, R.raw.flash_card);
+    }
+
+    @Override protected void onPause() {
+        super.onPause();
+        Sound.get().pause();
+    }
+
+    @Override protected void onDestroy() {
+        super.onDestroy();
+        Sound.get().stop();
     }
 }

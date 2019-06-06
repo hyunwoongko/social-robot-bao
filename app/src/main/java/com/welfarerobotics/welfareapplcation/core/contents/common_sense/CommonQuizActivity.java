@@ -103,4 +103,19 @@ public class CommonQuizActivity extends BaseActivity {
             txtview.setText(currentQuiz.getQuestion());
         }
     }
+
+    @Override protected void onResume() {
+        super.onResume();
+        Sound.get().resume(this, R.raw.common_sense);
+    }
+
+    @Override protected void onPause() {
+        super.onPause();
+        Sound.get().pause();
+    }
+
+    @Override protected void onDestroy() {
+        super.onDestroy();
+        Sound.get().stop();
+    }
 }

@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.Window;
 import android.view.WindowManager;
 import com.welfarerobotics.welfareapplcation.R;
+import com.welfarerobotics.welfareapplcation.util.Sound;
 
 public class FairytaleActivity extends Activity {
 
@@ -50,8 +51,20 @@ public class FairytaleActivity extends Activity {
         return super.onTouchEvent(event);
     }
 
+    @Override protected void onResume() {
+        super.onResume();
+        Sound.get().resume(this, R.raw.fairytale);
+        Sound.get().loop(true);
+    }
+
+    @Override protected void onPause() {
+        super.onPause();
+        Sound.get().pause();
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        Sound.get().stop();
     }
 }

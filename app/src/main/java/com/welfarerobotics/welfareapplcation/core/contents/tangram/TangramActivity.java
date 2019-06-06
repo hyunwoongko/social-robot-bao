@@ -1,5 +1,6 @@
 package com.welfarerobotics.welfareapplcation.core.contents.tangram;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -10,252 +11,248 @@ import android.graphics.Path;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.Display;
-import android.view.KeyEvent;
-import android.view.MotionEvent;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
+import android.view.*;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.entity.cache.TangramStageCache;
+import com.welfarerobotics.welfareapplcation.util.Sound;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 
 /*
-* surfaceview = > 실시간으로 그릴 때 사용하는 뷰. 펀치를 뚫어서 그 부분만 옮겨짐. 4개의 메소드가 필요.
-*
-*
-*
-*
-*
-* */
+ * surfaceview = > 실시간으로 그릴 때 사용하는 뷰. 펀치를 뚫어서 그 부분만 옮겨짐. 4개의 메소드가 필요.
+ *
+ *
+ *
+ *
+ *
+ * */
 
 
 public class TangramActivity extends BaseActivity {
-	ImagePuzzle puzzle;
-	ArrayList<ImagePiece> _board;
-	LinearLayout layout;
-	Boolean flag =true;
-	static public Resources r;
-	private int toolboxHeight, displayWidth, displayHeight, scale;//전체 캔버스 크기?
-	private Bitmap stageimage;
-	BitmapDrawable background;
-	Bitmap backBitmap;
-	BitmapDrawable stage;
+    ImagePuzzle puzzle;
+    ArrayList<ImagePiece> _board;
+    LinearLayout layout;
+    Boolean flag = true;
+    static public Resources r;
+    private int toolboxHeight, displayWidth, displayHeight, scale;//전체 캔버스 크기?
+    private Bitmap stageimage;
+    BitmapDrawable background;
+    Bitmap backBitmap;
+    BitmapDrawable stage;
 
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		flag= true;
-		int uiOptions = getWindow().getDecorView().getSystemUiVisibility();
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        flag = true;
+        int uiOptions = getWindow().getDecorView().getSystemUiVisibility();
         //getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
-		setContentView(R.layout.play_activity);
+        setContentView(R.layout.play_activity);
 
 
+        _board = new ArrayList<ImagePiece>();//
+        r = this.getResources();
+        /*이미지 세팅 부분*/
+        Intent intent = getIntent();
+        byte[] arr = getIntent().getByteArrayExtra("image");
+        stageimage = BitmapFactory.decodeByteArray(arr, 0, arr.length);
+        backBitmap = BitmapFactory.decodeResource(r, R.drawable.background);
+        background = new BitmapDrawable(r, backBitmap);
 
 
-		_board = new ArrayList<ImagePiece>();//
-		r= this.getResources();
-		/*이미지 세팅 부분*/
-		Intent intent = getIntent();
-		byte[] arr = getIntent().getByteArrayExtra("image");
-		stageimage = BitmapFactory.decodeByteArray(arr, 0, arr.length);
-		backBitmap = BitmapFactory.decodeResource(r,R.drawable.background);
-		background = new BitmapDrawable(r,backBitmap);
+        background.setBounds(0, 0, getWindowManager().getDefaultDisplay().getWidth(), getWindowManager().getDefaultDisplay().getHeight());
+        /*세팅 끝*/
+
+        //set variables for drawing
+        Display display = getWindowManager().getDefaultDisplay();
+        displayWidth = display.getWidth();
+        displayHeight = display.getHeight();
+
+        if (displayWidth >= 480)
+            scale = 2;
+        else
+            scale = 1;
+        toolboxHeight = 80 * scale;
+
+        final Panel myPanel = new Panel(this);
 
 
+        layout = findViewById(R.id.line);
+        //layout.setOrientation(LinearLayout.HORIZONTAL);
 
 
+        layout.addView(myPanel, new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT, 1.0f));
 
-		background.setBounds(0, 0, getWindowManager().getDefaultDisplay().getWidth(), getWindowManager().getDefaultDisplay().getHeight());
-		/*세팅 끝*/
-
-		//set variables for drawing
-		Display display = getWindowManager().getDefaultDisplay(); 
-		displayWidth = display.getWidth();
-		displayHeight = display.getHeight();
-
-		if(displayWidth >= 480)
-			scale = 2;
-		else
-			scale = 1;
-		toolboxHeight = 80*scale;
-		
-		final Panel myPanel = new Panel(this);
+        // Recall button
+        // Submit button
+        ImageButton backBtn = findViewById(R.id.backbutton);
+        backBtn.setClickable(true);
+        backBtn.setOnClickListener(view -> {
+            myPanel._thread.setRunning(false);
+            finish();
 
 
-		layout = findViewById(R.id.line);
-		//layout.setOrientation(LinearLayout.HORIZONTAL);
+        });
+
+        ImageButton leftBtn = findViewById(R.id.forbtn);
+        leftBtn.setClickable(true);
+        leftBtn.setOnClickListener(view -> {
+            Random random = new Random();
+            TangramStageCache tangram;
+            tangram = TangramStageCache.getInstance();
+            stageimage = tangram.getImages().get(random.nextInt(tangram.getImages().size())).getStage();
+            myPanel.recall();
+
+        });
+
+        ImageButton submitBtn = findViewById(R.id.rotatebtn);
+        submitBtn.setClickable(true);
+        submitBtn.setOnClickListener(view -> {
+            myPanel.rotate();
+        });
+
+        Drawable bg = this.getDrawable(R.drawable.background);
+        layout.setBackground(bg);
+        //		layout.setBackgroundColor(Color.BLUE);
 
 
+    }
 
-		layout.addView(myPanel, new LinearLayout.LayoutParams(
-				LinearLayout.LayoutParams.MATCH_PARENT,
-				LinearLayout.LayoutParams.MATCH_PARENT, 1.0f));
+    @Override protected void onResume() {
+        super.onResume();
+        Sound.get().resume(this, R.raw.fairytale);
+        Sound.get().loop(true);
+    }
 
-		// Recall button
-		// Submit button
-		ImageButton backBtn = findViewById(R.id.backbutton);
-		backBtn.setClickable(true);
-		backBtn.setOnClickListener(view ->{
-			myPanel._thread.setRunning(false);
-		    finish();
+    @Override
+    public void onPause() {
+        super.onPause();
+        Sound.get().pause();
+        // Remove the activity when its off the screen
+        finish();
+    }
 
+    //Disable Back button
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
 
-				});
+            //preventing default implementation previous to android.os.Build.VERSION_CODES.ECLAIR
 
-		ImageButton leftBtn= findViewById(R.id.forbtn);
-		leftBtn.setClickable(true);
-		leftBtn.setOnClickListener(view->{
-			Random random = new Random();
-			TangramStageCache tangram;
-			tangram = TangramStageCache.getInstance();
-			stageimage = tangram.getImages().get(random.nextInt(tangram.getImages().size())).getStage();
-			myPanel.recall();
+            return true;
 
-		});
+        }
 
-		ImageButton submitBtn = findViewById(R.id.rotatebtn);
-		submitBtn.setClickable(true);
-		submitBtn.setOnClickListener(view ->{
-			myPanel.rotate();});
+        return super.onKeyDown(keyCode, event);
+    }
 
-		Drawable bg = this.getDrawable(R.drawable.background);
-		layout.setBackground(bg);
-		//		layout.setBackgroundColor(Color.BLUE);
+    class Panel extends SurfaceView implements SurfaceHolder.Callback {
+        private ActionThread _thread;
+        //private ArrayList<Piece> _board = new ArrayList<Piece>();
+        private ArrayList<ImagePiece> _toolbox = new ArrayList<ImagePiece>();
+        private ImagePiece _currentGraphic = null;//선택한 조각
+        private ImagePiece _rotatedGraphic = null;//조각 회전
+        private ImagePiece rotatePieces;
 
+        public Panel(Context context) {
+            super(context);
+            getHolder().addCallback(this);
+            //_thread = new ActionThread(getHolder(), this);
 
+            puzzle = new ImagePuzzle(GlobalVariables.getCurrentLevel()); // Retrieve puzzle for Level 1
+            puzzle.scaleSolution(scale);
+            ArrayList<ImagePiece> pieces = puzzle.pieces; // Retrieve the pieces for
+            // that puzzle
 
+            for (int i = 0; i < pieces.size(); i++) {
+                ImagePiece p = pieces.get(i);
+                p.setActive(false);
+                _toolbox.add(p); // add each piece to the toolbox
+            }
+            updateToolbox(); //update the positions of the pieces
 
-	}
-	@Override
-	public void onPause() {
-		super.onPause();
+        }
 
-		// Remove the activity when its off the screen
-		finish();
-	}
-	
-	//Disable Back button
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-	     if (keyCode == KeyEvent.KEYCODE_BACK) {
-
-	     //preventing default implementation previous to android.os.Build.VERSION_CODES.ECLAIR
-
-	     return true;
-
-	     }
-
-	     return super.onKeyDown(keyCode, event);    
-	}
-
-	class Panel extends SurfaceView implements SurfaceHolder.Callback {
-		private ActionThread _thread;
-		//private ArrayList<Piece> _board = new ArrayList<Piece>();
-		private ArrayList<ImagePiece> _toolbox = new ArrayList<ImagePiece>();
-		private ImagePiece _currentGraphic = null;//선택한 조각
-		private ImagePiece _rotatedGraphic = null;//조각 회전
-		private ImagePiece rotatePieces;
-
-		public Panel(Context context) {
-			super(context);
-			getHolder().addCallback(this);
-			//_thread = new ActionThread(getHolder(), this);
-
-			puzzle = new ImagePuzzle(GlobalVariables.getCurrentLevel()); // Retrieve puzzle for Level 1
-			puzzle.scaleSolution(scale);
-			ArrayList<ImagePiece> pieces = puzzle.pieces; // Retrieve the pieces for
-			// that puzzle
-
-			for (int i = 0; i < pieces.size(); i++) {
-				ImagePiece p = pieces.get(i);
-				p.setActive(false);
-				_toolbox.add(p); // add each piece to the toolbox
-			}
-			updateToolbox(); //update the positions of the pieces
-
-		}
-		@Override
-		public boolean onTouchEvent(MotionEvent event) {
-			// synchronized (_thread.getSurfaceHolder()) {
+        @Override
+        public boolean onTouchEvent(MotionEvent event) {
+            // synchronized (_thread.getSurfaceHolder()) {
 
 
+            if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                float x = event.getX();
+                float y = event.getY();
 
-				if (event.getAction() == MotionEvent.ACTION_DOWN) {
-					float x = event.getX();
-					float y = event.getY();
+                for (int i = 0; i < _toolbox.size(); i++) {
+                    ImagePiece piece = _toolbox.get(i);
+                    //if pointer inside BoundingBox of piece, select it
+                    if (piece.getXBB().inside((int) x, (int) y) && (new Position((int) x, (int) y)).inside(piece.getXVertices(), false)) {
+                        _currentGraphic = piece;
+                        break;
+                    }
+                }
 
-					for (int i = 0; i < _toolbox.size(); i++) {
-						ImagePiece piece = _toolbox.get(i);
-						//if pointer inside BoundingBox of piece, select it
-						if (piece.getXBB().inside((int) x, (int) y) && (new Position((int) x, (int) y)).inside(piece.getXVertices(), false)) {
-							_currentGraphic = piece;
-							break;
-						}
-					}
-
-					for (int i = 0; i < _board.size(); i++) {
-						ImagePiece piece = _board.get(i);
-						//if pointer inside BoundingBox of piece, select it
-						if (piece.getXBB().inside((int) x, (int) y) && (new Position((int) x, (int) y)).inside(piece.getXVertices(), false)) {
-							_currentGraphic = piece;
-							break;
-						}
-					}
+                for (int i = 0; i < _board.size(); i++) {
+                    ImagePiece piece = _board.get(i);
+                    //if pointer inside BoundingBox of piece, select it
+                    if (piece.getXBB().inside((int) x, (int) y) && (new Position((int) x, (int) y)).inside(piece.getXVertices(), false)) {
+                        _currentGraphic = piece;
+                        break;
+                    }
+                }
 
 
-				} else if (event.getAction() == MotionEvent.ACTION_MOVE) {
-					if (_currentGraphic != null) {
-						_currentGraphic.setActive(false);
-						int posX = (int) event.getX();
-						int posY = (int) event.getY();
-						_currentGraphic.moveTo(posX, posY);
-					}
-				} else if (event.getAction() == MotionEvent.ACTION_UP) {
+            } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
+                if (_currentGraphic != null) {
+                    _currentGraphic.setActive(false);
+                    int posX = (int) event.getX();
+                    int posY = (int) event.getY();
+                    _currentGraphic.moveTo(posX, posY);
+                }
+            } else if (event.getAction() == MotionEvent.ACTION_UP) {
 
-					if (_currentGraphic != null) {
-						if (event.getY() > toolboxHeight) {// within the board area and outside the toolbox
-							int posX = Math.round(event.getX() / 10) * 10;
-							int posY = Math.round(event.getY() / 10) * 10;
+                if (_currentGraphic != null) {
+                    if (event.getY() > toolboxHeight) {// within the board area and outside the toolbox
+                        int posX = Math.round(event.getX() / 10) * 10;
+                        int posY = Math.round(event.getY() / 10) * 10;
 
-							int maxY = (layout.getHeight()- _currentGraphic.getHeight());
-							if (posY > maxY) {//make sure not below the buttons layout
-								posY = maxY;
-							}
+                        int maxY = (layout.getHeight() - _currentGraphic.getHeight());
+                        if (posY > maxY) {//make sure not below the buttons layout
+                            posY = maxY;
+                        }
 
-							int minX = _currentGraphic.getWidth() / 2;
-							int maxX = layout.getWidth() - minX;
-							if (posX > maxX) {//make sure it is not too far to the right
-								posX = maxX;
-							} else if (posX < minX) {//make sure it is not too far to the left
-								posX = minX;
-							}
+                        int minX = _currentGraphic.getWidth() / 2;
+                        int maxX = layout.getWidth() - minX;
+                        if (posX > maxX) {//make sure it is not too far to the right
+                            posX = maxX;
+                        } else if (posX < minX) {//make sure it is not too far to the left
+                            posX = minX;
+                        }
 
-							//snap to grid
-							posX = Math.round(posX / 10) * 10;
-							posY = Math.round(posY / 10) * 10;
+                        //snap to grid
+                        posX = Math.round(posX / 10) * 10;
+                        posY = Math.round(posY / 10) * 10;
 
-							_currentGraphic.moveTo(posX, posY);
-							if (!_board.contains(_currentGraphic)) {
-								_board.add(_currentGraphic);
-								_toolbox.remove(_currentGraphic);
-								updateToolbox();
-							}
-						} else if (event.getY() <= toolboxHeight) {// within the toolbox area
-							if (!_toolbox.contains(_currentGraphic)) {
-								_toolbox.add(_currentGraphic);
-								_board.remove(_currentGraphic);
-							}
-							updateToolbox(); //always keep toolbox updated if in toolbox
-						}
+                        _currentGraphic.moveTo(posX, posY);
+                        if (!_board.contains(_currentGraphic)) {
+                            _board.add(_currentGraphic);
+                            _toolbox.remove(_currentGraphic);
+                            updateToolbox();
+                        }
+                    } else if (event.getY() <= toolboxHeight) {// within the toolbox area
+                        if (!_toolbox.contains(_currentGraphic)) {
+                            _toolbox.add(_currentGraphic);
+                            _board.remove(_currentGraphic);
+                        }
+                        updateToolbox(); //always keep toolbox updated if in toolbox
+                    }
 
-						if (_currentGraphic.isActive() && event.getY() > toolboxHeight) {
-							//check in board area too before rotating
+                    if (_currentGraphic.isActive() && event.getY() > toolboxHeight) {
+                        //check in board area too before rotating
 //						_currentGraphic.rotate();
 //						if(_rotatedGraphic !=null){
 //
@@ -263,100 +260,97 @@ public class TangramActivity extends BaseActivity {
 //							_rotatedGraphic = _currentGraphic;
 //						}
 
-						}
+                    }
 
-						setActive(_currentGraphic);
-						rotatePieces = _currentGraphic;
-						_currentGraphic = null;
-
-
-					}
-				}
+                    setActive(_currentGraphic);
+                    rotatePieces = _currentGraphic;
+                    _currentGraphic = null;
 
 
-
-			return true;
-		}
-
+                }
+            }
 
 
+            return true;
+        }
 
-		// }
 
-		/**
-		 * setActive sets all the pieces on the board and in the toolbox
-		 * inactive except for the active piece
-		 *
-		 * @param p
-		 */
-		public void setActive(ImagePiece p) {
-			for (ImagePiece piece : _toolbox) {
-				piece.setActive(false);
-			}
-			for (ImagePiece piece : _board) {
-				piece.setActive(false);
-			}
-			p.setActive(true);
-		}
+        // }
 
-		/**
-		 * updateToolBox rearranges the pieces in the right position
-		 */
-		public void updateToolbox() {
-			int margin = toolboxHeight/8;
+        /**
+         * setActive sets all the pieces on the board and in the toolbox
+         * inactive except for the active piece
+         *
+         * @param p
+         */
+        public void setActive(ImagePiece p) {
+            for (ImagePiece piece : _toolbox) {
+                piece.setActive(false);
+            }
+            for (ImagePiece piece : _board) {
+                piece.setActive(false);
+            }
+            p.setActive(true);
+        }
+
+        /**
+         * updateToolBox rearranges the pieces in the right position
+         */
+        public void updateToolbox() {
+            int margin = toolboxHeight / 8;
             int marginvalue = 100;
-			int centerX = 0;
-			int centerY = 0;
-			for (int i = 0; i < _toolbox.size(); i++) {
-				ImagePiece p = _toolbox.get(i);
-				centerX += (p.getWidth() + margin+marginvalue); // add width of Piece + margin
-				centerY = toolboxHeight/2;
-				p.moveTo(centerX, centerY);
-			}
-		}
+            int centerX = 0;
+            int centerY = 0;
+            for (int i = 0; i < _toolbox.size(); i++) {
+                ImagePiece p = _toolbox.get(i);
+                centerX += (p.getWidth() + margin + marginvalue); // add width of Piece + margin
+                centerY = toolboxHeight / 2;
+                p.moveTo(centerX, centerY);
+            }
+        }
 
-		/**
-		 * Recall takes all of the pieces on the board and puts them back into
-		 * the toolbox
-		 */
-		public void recall() {
-			//move all the pieces back to toolbox
-			for (int i = 0; i < _board.size(); i++) {
-				ImagePiece p = _board.get(i);
-				p.setActive(false);
-				_toolbox.add(p);
+        /**
+         * Recall takes all of the pieces on the board and puts them back into
+         * the toolbox
+         */
+        public void recall() {
+            //move all the pieces back to toolbox
+            for (int i = 0; i < _board.size(); i++) {
+                ImagePiece p = _board.get(i);
+                p.setActive(false);
+                _toolbox.add(p);
 
-			}
-			_board.clear();
-			updateToolbox();
-		}
+            }
+            _board.clear();
+            updateToolbox();
+        }
 
-		public void rotate(){
-			try {
-				rotatePieces.rotateBitmap(90);
-				updateToolbox();
-			}catch (Exception e){
-				System.out.println("Null Exception");
+        public void rotate() {
+            try {
+                rotatePieces.rotateBitmap(90);
+                updateToolbox();
+            } catch (Exception e) {
+                System.out.println("Null Exception");
 
 
-			}
+            }
 
-		}
+        }
 
-		@Override
-		public void onDraw(Canvas canvas){
-			//draw the background
+        @Override
+        public void onDraw(Canvas canvas) {
+            //draw the background
 
-			background.draw(canvas);
-			//canvas.drawBitmap(stageimage,null,ast,null);
-			canvas.drawBitmap(stageimage,displayWidth/3,displayHeight/3, null);
-			//paint for the pieces
-			//Paint piecePaint = new Paint();
-			//piecePaint.setColor(Color.RED);
-			//canvas.drawOval(0, 0, getWindowManager().getDefaultDisplay().getWidth(), getWindowManager().getDefaultDisplay().getHeight(),piecePaint);
-			//paint for the active piece
-			//Paint activePaint = new Paint();
-			//activePaint.setColor(Color.BLUE);
+            background.draw(canvas);
+            //canvas.drawBitmap(stageimage,null,ast,null);
+            canvas.drawBitmap(stageimage, displayWidth / 3, displayHeight / 3, null);
+            //paint for the pieces
+            //Paint piecePaint = new Paint();
+            //piecePaint.setColor(Color.RED);
+            //canvas.drawOval(0, 0, getWindowManager().getDefaultDisplay().getWidth(), getWindowManager().getDefaultDisplay().getHeight(),piecePaint);
+            //paint for the active piece
+            //Paint activePaint = new Paint();
+            //activePaint.setColor(Color.BLUE);
 
 //		Paint paint = new Paint();
 //			paint.setColor(Color.BLACK);
@@ -399,161 +393,159 @@ public class TangramActivity extends BaseActivity {
 //				//do not display outline
 //			}
 
-			if (! _toolbox.isEmpty()){
-				Path toolboxPiecePath;
+            if (!_toolbox.isEmpty()) {
+                Path toolboxPiecePath;
 
-				/*path를 통해 사각형 삼각형 그림.*/
-				for (int j = 0; j < _toolbox.size(); j++){ //Draw all objects in the toolbox
-					ImagePiece toolboxPiece = _toolbox.get(j);
+                /*path를 통해 사각형 삼각형 그림.*/
+                for (int j = 0; j < _toolbox.size(); j++) { //Draw all objects in the toolbox
+                    ImagePiece toolboxPiece = _toolbox.get(j);
 
-					toolboxPiecePath = new Path();
-					ArrayList<Position> toolboxPieceVertices = toolboxPiece.getXVertices();
-					canvas.drawBitmap(toolboxPiece.getImage(),toolboxPieceVertices.get(0).getX(),toolboxPieceVertices.get(0).getY(),null);
-					for(int i = 0; i < toolboxPieceVertices.size();i++){
+                    toolboxPiecePath = new Path();
+                    ArrayList<Position> toolboxPieceVertices = toolboxPiece.getXVertices();
+                    canvas.drawBitmap(toolboxPiece.getImage(), toolboxPieceVertices.get(0).getX(), toolboxPieceVertices.get(0).getY(), null);
+                    for (int i = 0; i < toolboxPieceVertices.size(); i++) {
 
-						if(i==0){
+                        if (i == 0) {
 
-							toolboxPiecePath.moveTo(toolboxPieceVertices.get(i).getX(),
-									toolboxPieceVertices.get(i).getY());
-						}else{
+                            toolboxPiecePath.moveTo(toolboxPieceVertices.get(i).getX(),
+                                    toolboxPieceVertices.get(i).getY());
+                        } else {
 
-							toolboxPiecePath.lineTo(toolboxPieceVertices.get(i).getX(),
-									toolboxPieceVertices.get(i).getY());
-						}
+                            toolboxPiecePath.lineTo(toolboxPieceVertices.get(i).getX(),
+                                    toolboxPieceVertices.get(i).getY());
+                        }
 
-					}
+                    }
 
-					toolboxPiecePath.close();
+                    toolboxPiecePath.close();
 
-					//toolboxPiecePath.offset(10+70*j, 0);
-					//toolboxPiecePath.offset(_currentGraphic., _currentGraphic.());
-					//canvas.drawPath(toolboxPiecePath, piecePaint);
-				}
-			}
-			if (! _board.isEmpty()){
-				Path boardPiecePath;
+                    //toolboxPiecePath.offset(10+70*j, 0);
+                    //toolboxPiecePath.offset(_currentGraphic., _currentGraphic.());
+                    //canvas.drawPath(toolboxPiecePath, piecePaint);
+                }
+            }
+            if (!_board.isEmpty()) {
+                Path boardPiecePath;
 
-				for (int j = 0; j < _board.size();j++) { //Draw all objects on the board
-					ImagePiece boardPiece = _board.get(j);
+                for (int j = 0; j < _board.size(); j++) { //Draw all objects on the board
+                    ImagePiece boardPiece = _board.get(j);
 
-					boardPiecePath = new Path();
-					ArrayList<Position> boardPieceVertices = boardPiece.getXVertices();
-					canvas.drawBitmap(boardPiece.getImage(),boardPieceVertices.get(0).getX(),boardPieceVertices.get(0).getY(),null);
+                    boardPiecePath = new Path();
+                    ArrayList<Position> boardPieceVertices = boardPiece.getXVertices();
+                    canvas.drawBitmap(boardPiece.getImage(), boardPieceVertices.get(0).getX(), boardPieceVertices.get(0).getY(), null);
 
-					for(int i = 0; i < boardPieceVertices.size();i++){
-						if(i==0){
-							boardPiecePath.moveTo(boardPieceVertices.get(i).getX(),
-									boardPieceVertices.get(i).getY());
-						}else{
-							boardPiecePath.lineTo(boardPieceVertices.get(i).getX(),
-									boardPieceVertices.get(i).getY());
-						}
-					}
-					//this offset is messing the model don't do this
-					//rather design the Piece itself so it is centered!
-					//boardPiecePath.offset(boardPiece.getXOffset(), boardPiece.getYOffset());
-					boardPiecePath.close();
+                    for (int i = 0; i < boardPieceVertices.size(); i++) {
+                        if (i == 0) {
+                            boardPiecePath.moveTo(boardPieceVertices.get(i).getX(),
+                                    boardPieceVertices.get(i).getY());
+                        } else {
+                            boardPiecePath.lineTo(boardPieceVertices.get(i).getX(),
+                                    boardPieceVertices.get(i).getY());
+                        }
+                    }
+                    //this offset is messing the model don't do this
+                    //rather design the Piece itself so it is centered!
+                    //boardPiecePath.offset(boardPiece.getXOffset(), boardPiece.getYOffset());
+                    boardPiecePath.close();
 
-					//flash the rotated piece in teal
-					if(_rotatedGraphic!= null && _rotatedGraphic == boardPiece) {
-						//canvas.drawPath(boardPiecePath, activePaint);
-						_rotatedGraphic = null;
-					} else {
-						//canvas.drawPath(boardPiecePath, piecePaint);
-					}
-				}
-			}
+                    //flash the rotated piece in teal
+                    if (_rotatedGraphic != null && _rotatedGraphic == boardPiece) {
+                        //canvas.drawPath(boardPiecePath, activePaint);
+                        _rotatedGraphic = null;
+                    } else {
+                        //canvas.drawPath(boardPiecePath, piecePaint);
+                    }
+                }
+            }
 
-			// Draw the object that is being dragged (if there is one)
-			if (_currentGraphic != null) {
-				Path path = new Path();
+            // Draw the object that is being dragged (if there is one)
+            if (_currentGraphic != null) {
+                Path path = new Path();
 
-				ArrayList<Position> pieceVertices = _currentGraphic.getXVertices();
+                ArrayList<Position> pieceVertices = _currentGraphic.getXVertices();
 
-				for(int i = 0; i < pieceVertices.size();i++){
-					if(i==0){
-						path.moveTo(pieceVertices.get(i).getX(),
-								pieceVertices.get(i).getY());
-					}else{
-						path.lineTo(pieceVertices.get(i).getX(),
-								pieceVertices.get(i).getY());
-					}
-				}
-				//path.offset(_currentGraphic.getXOffset(), _currentGraphic.getYOffset());
-				path.close();
-				//canvas.drawPath(path, activePaint);
-			}
-		}
+                for (int i = 0; i < pieceVertices.size(); i++) {
+                    if (i == 0) {
+                        path.moveTo(pieceVertices.get(i).getX(),
+                                pieceVertices.get(i).getY());
+                    } else {
+                        path.lineTo(pieceVertices.get(i).getX(),
+                                pieceVertices.get(i).getY());
+                    }
+                }
+                //path.offset(_currentGraphic.getXOffset(), _currentGraphic.getYOffset());
+                path.close();
+                //canvas.drawPath(path, activePaint);
+            }
+        }
 
-		public void surfaceChanged(SurfaceHolder holder, int format, int width,
-				int height) {
-			// TODO Auto-generated method stub
-		}
+        public void surfaceChanged(SurfaceHolder holder, int format, int width,
+                                   int height) {
+            // TODO Auto-generated method stub
+        }
 
-		public void surfaceCreated(SurfaceHolder holder) {
-			_thread = new ActionThread(getHolder(), this);
-			_thread.setRunning(true);
-			_thread.start();
-		}
+        public void surfaceCreated(SurfaceHolder holder) {
+            _thread = new ActionThread(getHolder(), this);
+            _thread.setRunning(true);
+            _thread.start();
+        }
 
-		public void surfaceDestroyed(SurfaceHolder holder) {
-			// simply copied from sample application LunarLander:
-			// we have to tell thread to shut down & wait for it to finish, or
-			// else
-			// it might touch the Surface after we return and explode
-			boolean retry = true;
-			_thread.setRunning(false);
-			while (retry) {
-				try {
-					_thread.join();
-					retry = false;
-				} catch (InterruptedException e) {
-					// we will try it again and again...
-				}
-			}
-		}
-
-
-
-	}
+        public void surfaceDestroyed(SurfaceHolder holder) {
+            // simply copied from sample application LunarLander:
+            // we have to tell thread to shut down & wait for it to finish, or
+            // else
+            // it might touch the Surface after we return and explode
+            boolean retry = true;
+            _thread.setRunning(false);
+            while (retry) {
+                try {
+                    _thread.join();
+                    retry = false;
+                } catch (InterruptedException e) {
+                    // we will try it again and again...
+                }
+            }
+        }
 
 
+    }
 
-	class ActionThread extends Thread {
-		private SurfaceHolder _surfaceHolder;
-		private Panel _panel;
-		private boolean _run = false;
 
-		public ActionThread(SurfaceHolder surfaceHolder, Panel panel) {
-			_surfaceHolder = surfaceHolder;
-			_panel = panel;
-		}
+    class ActionThread extends Thread {
+        private SurfaceHolder _surfaceHolder;
+        private Panel _panel;
+        private boolean _run = false;
 
-		public void setRunning(boolean run) {
-			_run = run;
-		}
+        public ActionThread(SurfaceHolder surfaceHolder, Panel panel) {
+            _surfaceHolder = surfaceHolder;
+            _panel = panel;
+        }
 
-		public SurfaceHolder getSurfaceHolder() {
-			return _surfaceHolder;
-		}
+        public void setRunning(boolean run) {
+            _run = run;
+        }
 
-		@Override
-		public void run() {
-			Canvas c;
-			while (_run) {
-				c = null;
-				try {
-					c = _surfaceHolder.lockCanvas(null);
-					_panel.onDraw(c);
-				} finally {
-					// do this in a finally so that if an exception is thrown
-					// during the above, we don't leave the Surface in an
-					// inconsistent state
-					if (c != null) {
-						_surfaceHolder.unlockCanvasAndPost(c);
-					}
-				}
-			}
-		}
-	}
+        public SurfaceHolder getSurfaceHolder() {
+            return _surfaceHolder;
+        }
+
+        @SuppressLint("WrongCall") @Override
+        public void run() {
+            Canvas c;
+            while (_run) {
+                c = null;
+                try {
+                    c = _surfaceHolder.lockCanvas(null);
+                    _panel.onDraw(c);
+                } finally {
+                    // do this in a finally so that if an exception is thrown
+                    // during the above, we don't leave the Surface in an
+                    // inconsistent state
+                    if (c != null) {
+                        _surfaceHolder.unlockCanvasAndPost(c);
+                    }
+                }
+            }
+        }
+    }
 }
