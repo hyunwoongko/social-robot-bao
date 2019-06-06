@@ -126,7 +126,7 @@ public class TangramActivity extends BaseActivity {
 
     @Override protected void onResume() {
         super.onResume();
-        Sound.get().resume(this, R.raw.fairytale);
+        Sound.get().resume(this, R.raw.tangram);
         Sound.get().loop(true);
     }
 
@@ -136,6 +136,11 @@ public class TangramActivity extends BaseActivity {
         Sound.get().pause();
         // Remove the activity when its off the screen
         finish();
+    }
+
+    @Override protected void onDestroy() {
+        super.onDestroy();
+        Sound.get().stop();
     }
 
     //Disable Back button
