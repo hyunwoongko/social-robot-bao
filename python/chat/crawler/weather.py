@@ -139,8 +139,8 @@ def tomorrow_weather(location):
 
         weather_morning, weather_noon = __tone_maker(weather_morning, weather_noon)
         template_msg = '내일 ' + location + ' 날씨를 알려드릴게요.' + ' 내일 오전엔 ' + weather_morning[
-            0] + ' 기온은 ' + temperature_morning + '에요. 오후' + glue + ' ' + weather_noon[
-                           0] + ' 기온은 ' + temperature_noon + '입니다.'
+            0] + ' , 기온은 ' + temperature_morning + '에요. 오후' + glue + ' ' + weather_noon[
+                           0] + ' , 기온은 ' + temperature_noon + '입니다.'
 
         if '비가 내' in template_msg:
             template_msg += ' 내일은 우산을 챙기는게 좋을 것 같아요.'
@@ -198,8 +198,8 @@ def after_tomorrow_weather(location):
 
         weather_morning, weather_noon = __tone_maker(weather_morning, weather_noon)
         template_msg = '모레 ' + location + ' 날씨를 알려드릴게요.' + ' 모레 오전엔 ' + weather_morning[
-            0] + ' 기온은 ' + temperature_morning + '에요. 오후' + glue + ' ' + weather_noon[
-                           0] + ' 기온은 ' + temperature_noon + '입니다.'
+            0] + ' , 기온은 ' + temperature_morning + '에요. 오후' + glue + ' ' + weather_noon[
+                           0] + ' , 기온은 ' + temperature_noon + '입니다.'
 
         if '비가 내' in template_msg:
             template_msg += ' 모레는 우산을 챙기는게 좋을 것 같아요.'
