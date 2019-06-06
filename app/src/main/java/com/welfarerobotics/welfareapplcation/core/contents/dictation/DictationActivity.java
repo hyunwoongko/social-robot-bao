@@ -274,7 +274,7 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
 
     @Override protected void onResume() {
         super.onResume();
-        Sound.get().resume(this, R.raw.dictaion);
+        Sound.get().resume(this, R.raw.dictation);
     }
 
     @Override protected void onPause() {
