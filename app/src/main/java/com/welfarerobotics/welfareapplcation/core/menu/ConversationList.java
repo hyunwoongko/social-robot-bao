@@ -6,13 +6,15 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.google.firebase.database.FirebaseDatabase;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.entity.Conversation;
+import com.welfarerobotics.welfareapplcation.entity.User;
 import com.welfarerobotics.welfareapplcation.entity.cache.UserCache;
+import com.welfarerobotics.welfareapplcation.util.DeviceId;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class ConversationList extends BaseActivity {
     private String a;
@@ -26,8 +28,33 @@ public class ConversationList extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.conversation_list);
         topLL = (GridLayout) findViewById(R.id.Gridlayout);
-        ArrayList<Conversation> dict = Objects.requireNonNull(UserCache.getInstance()).getDict();
-        if (dict.size() != 0 ) {
+
+        if (UserCache.getInstance().getDict() == null) {
+            ArrayList<Conversation> conversations = new ArrayList<>();
+            Conversation conversation = new Conversation();
+            conversation.setInput("안녕");
+            conversation.setOutput("안녕하세요. 반가워요.");
+            conversations.add(conversation);
+
+            User model = User.builder()
+                    .id(UserCache.getInstance().getId())
+                    .name(UserCache.getInstance().getName())
+                    .location(UserCache.getInstance().getLocation())
+                    .photo(UserCache.getInstance().getPhoto())
+                    .dict(conversations)
+                    .build();
+
+            FirebaseDatabase.getInstance()
+                    .getReference("user")
+                    .child(DeviceId.getInstance(this).getUUID())
+                    .setValue(model);
+
+            UserCache.setInstance(model);
+        }
+
+        ArrayList<Conversation> dict = UserCache.getInstance().getDict();
+
+        if (dict.size() != 0) {
             for (Conversation once : dict) {
                 textview(once.getInput());
                 textview(once.getOutput());

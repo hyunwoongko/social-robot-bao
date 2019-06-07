@@ -15,8 +15,6 @@ public interface DataLoader {
     EmotionCardDataLoader EMOTION_CARD_DATA_LOADER = EmotionCardDataLoader.getInstance();
     EmotionChatDataLoader EMOTION_CHAT_DATA_LOADER = EmotionChatDataLoader.getInstance();
     FallbackDataLoader FALLBACK_DATA_LOADER = FallbackDataLoader.getInstance();
-    TopicSwitchDataLoader TOPIC_SWITCH_DATA_LOADER = TopicSwitchDataLoader.getInstance();
-
     void load();
 
     void save(DataSnapshot snapshot);
@@ -28,6 +26,5 @@ public interface DataLoader {
         EMOTION_CARD_DATA_LOADER.load();
         EMOTION_CHAT_DATA_LOADER.load();
         FALLBACK_DATA_LOADER.load();
-        TOPIC_SWITCH_DATA_LOADER.load();
     }
 }

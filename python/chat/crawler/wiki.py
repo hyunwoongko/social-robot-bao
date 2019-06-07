@@ -56,7 +56,7 @@ def wiki(question):
             result_set = [i.text.split(sep='.', maxsplit=1)[1] for i in result]
             response_text = ' 또는 '.join(result_set)
         except:
-            response_text = '죄송해요 그 단어는 알 수 없어요'
+            response_text = '죄송해요 잘 못 알아들었어요. 조금 더 자세히 말해주세요.'
 
     if len(response_list) == 0:
         headers = {
@@ -76,5 +76,5 @@ def wiki(question):
             result_set = [i.text.split(sep='.', maxsplit=1)[1] for i in result]
             response_text = ' 또는 '.join(result_set)
         except:
-            response_text = '죄송해요 ' + question + '은 아직 공부중이에요.'
+            response_text = '죄송해요 잘 못 알아들었어요. 조금 더 자세히 말해주세요.'
     return response_text

@@ -15,12 +15,10 @@ import java.util.Random;
 public class FallbackScenario {
     public static void process() {
         List<String> fallbacks = ChatCache.getInstance().getFallback();
-        List<String> topicSwitches = ChatCache.getInstance().getTopicSwitch();
         Random random = Brain.random;
 
         String fallback = fallbacks.get(random.nextInt(fallbacks.size() - 1));
-        String topicSwitch = topicSwitches.get(random.nextInt(topicSwitches.size() - 1));
-        Brain.hippocampus.decideToSay(fallback + " , " + topicSwitch);
+        Brain.hippocampus.decideToSay(fallback);
         Mouth.get().say();
     }
 }

@@ -26,7 +26,6 @@ public @Data class ChatCache {
 
     private List<String> call = new ArrayList<>();
     private Map<String, List<String>> emotion = new HashMap<>();
-    private List<String> topicSwitch = new ArrayList<>();
     private List<String> fallback = new ArrayList<>();
     private List<String> joke = new ArrayList<>();
 }

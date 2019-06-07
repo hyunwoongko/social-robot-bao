@@ -1,73 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             xmlns:tools="http://schemas.android.com/tools"
-                                             android:layout_width="match_parent"
-                                             android:layout_height="match_parent"
-                                             xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent" android:background="@drawable/blackboard" android:id="@+id/imageView2"
-            tools:layout_editor_absoluteY="0dp" tools:layout_editor_absoluteX="378dp"/>
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/blackboard"
+        android:id="@+id/imageView2"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="378dp" />
+
     <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" android:id="@+id/fill">
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fill">
+
         <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" app:srcCompat="@android:color/transparent"
-                android:layout_weight="3" android:id="@+id/null2"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@android:color/transparent"
+            android:layout_weight="3"
+            android:id="@+id/null2" />
+
         <LinearLayout
-                android:orientation="vertical"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" android:layout_weight="1">
+                android:layout_height="match_parent"
+                android:id="@+id/gh"
+                android:layout_weight="3" />
+
             <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" android:id="@+id/gh" android:layout_weight="3">
-                <TextView
-                        android:text="BAO 말가르키기"
-                        android:textSize="40sp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/textView5" android:layout_weight="1"/>
-            </LinearLayout>
-            <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" android:layout_weight="1">
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
                 <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" android:layout_weight="1">
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
                     <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" android:id="@+id/textView9"
-                            android:text="Q. 질문을 입력하세요"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView9"
+                        android:text="Q. 질문을 입력하세요" />
+
                     <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/question_edit"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/question_edit" />
                 </LinearLayout>
+
                 <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" android:layout_weight="1">
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
                     <TextView
-                            android:text="A. 원하는답을 입력하세요"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" android:id="@+id/textView10"/>
+                        android:text="A. 원하는답을 입력하세요"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView10" />
+
                     <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/answer_edit"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/answer_edit" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
         <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" app:srcCompat="@android:color/transparent"
-                android:layout_weight="3" android:id="@+id/null1"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@android:color/transparent"
+            android:layout_weight="3"
+            android:id="@+id/null1" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

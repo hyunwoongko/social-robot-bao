@@ -27,6 +27,7 @@ import com.kinda.alert.KAlertDialog;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.core.main.MainActivity;
+import com.welfarerobotics.welfareapplcation.entity.Conversation;
 import com.welfarerobotics.welfareapplcation.entity.Server;
 import com.welfarerobotics.welfareapplcation.entity.User;
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
@@ -85,6 +86,13 @@ public class InitialSettingActivity extends BaseActivity {
                     String id = DeviceId.getInstance(this).getUUID();
                     User model = new User();
                     model.setId(id);
+
+                    ArrayList<Conversation> conversations = new ArrayList<>();
+                    Conversation firstConversation = new Conversation();
+                    firstConversation.setInput("안녕");
+                    firstConversation.setOutput("안녕하세요. 반가워요!");
+                    conversations.add(firstConversation);
+                    model.setDict(conversations);
 
                     EditText nameEditText = findViewById(R.id.user_name);
                     EditText addressEditText = findViewById(R.id.user_address);

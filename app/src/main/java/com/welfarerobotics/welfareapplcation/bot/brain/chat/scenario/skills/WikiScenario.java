@@ -17,7 +17,7 @@ public class WikiScenario {
     public static void process(String speech, Runnable... forgets) throws IOException {
         List<String> entities = WikiEntityRecognizer.recognize(speech);
         if (entities.size() == 0) {
-            Brain.hippocampus.decideToSay(speech + " , 라고 하셨는데, 어떤 거 " + speech + " ?");
+            Brain.hippocampus.decideToSay("잘 못알아 들었어요. 죄송해요.");
         } else {
             for (Runnable forget : forgets) forget.run(); // 원하는 만큼 기억을 잊음.
             Brain.hippocampus.rememberWord(entities); // 해마에 엔티티를 기억시킴.
