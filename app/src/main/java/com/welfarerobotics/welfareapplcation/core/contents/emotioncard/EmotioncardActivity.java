@@ -56,7 +56,7 @@ public class EmotioncardActivity extends BaseActivity {
     }
     @Override protected void onResume() {
         super.onResume();
-        Sound.get().resume(this, R.raw.emotion_card);
+        Sound.get().resume(this, R.raw.emotion_card).loop(true);
     }
 
     @Override protected void onPause() {

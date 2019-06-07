@@ -9,7 +9,6 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.Toast;
-
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.entity.cache.TangramStageCache;
@@ -45,29 +44,29 @@ public class TangramSelecActivity extends BaseActivity {
 
         myAdaterr.notifyDataSetChanged();
 
-try {
-    mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            TangramListItem myItem = (TangramListItem) parent.getAdapter().getItem(position);
-            Bitmap sendBitmap = myItem.getStage();
-            ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            sendBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
-            byte[] byteArray = stream.toByteArray();
-            intent.putExtra("image",byteArray);
-            startActivity(intent);
+        try {
+            mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    TangramListItem myItem = (TangramListItem) parent.getAdapter().getItem(position);
+                    Bitmap sendBitmap = myItem.getStage();
+                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                    sendBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                    byte[] byteArray = stream.toByteArray();
+                    intent.putExtra("image", byteArray);
+                    startActivity(intent);
+                }
+            });
+        } catch (Exception e) {
+            Toast.makeText(this, "" + e, Toast.LENGTH_SHORT).show();
+
         }
-    });
-}catch (Exception e){
-    Toast.makeText(this, ""+e, Toast.LENGTH_SHORT).show();
+        backBtn.setClickable(true);
+        backBtn.setOnClickListener(view -> onBackPressed());
 
-}
-            backBtn.setClickable(true);
-            backBtn.setOnClickListener(view -> onBackPressed());
-
-            rotateBtn.setClickable(true);
-            rotateBtn.setOnClickListener(view -> {
-             myAdaterr.clear();
+        rotateBtn.setClickable(true);
+        rotateBtn.setOnClickListener(view -> {
+            myAdaterr.clear();
             for (int i = 0; i < items.size(); i++) {
                 myAdaterr.addItem(items.get(i));
 
@@ -90,22 +89,29 @@ try {
         Intent intent = new Intent(this, TangramActivity.class);
         for (int i = 0; i < items.size(); i++) {
             myAdaterr.addItem(items.get(i));
-
-
         }
-
-
         myAdaterr.notifyDataSetChanged();
-    }
-
-    @Override protected void onPause() {
-        super.onPause();
-        Sound.get().pause();
     }
 
     @Override protected void onResume() {
         super.onResume();
         Sound.get().resume(this, R.raw.tangram);
         Sound.get().loop(true);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Sound.get().pause();
+    }
+
+    @Override protected void onStop() {
+        super.onStop();
+        Sound.get().clear();
+    }
+
+    @Override protected void onDestroy() {
+        super.onDestroy();
+        Sound.get().stop();
     }
 }

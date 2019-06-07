@@ -40,7 +40,7 @@ public class Sound {
 
     public Sound start(Context context, int resid) {
         if (musicPlayer != null) clear();
-        if (musicPlayer == null) musicPlayer = MediaPlayer.create(context, resid);
+        musicPlayer = MediaPlayer.create(context, resid);
         musicPlayer.start();
         return this;
     } // 뮤직 스타트
@@ -48,6 +48,7 @@ public class Sound {
     public Sound stop() {
         if (musicPlayer != null) {
             musicPlayer.stop();
+            this.clear();
             length = 0;
         }
         return this;
@@ -63,7 +64,7 @@ public class Sound {
 
     public Sound resume(Context context, int resId) {
         if (musicPlayer != null) clear();
-        if (musicPlayer == null) musicPlayer = MediaPlayer.create(context, resId);
+        musicPlayer = MediaPlayer.create(context, resId);
         musicPlayer.seekTo(length);
         musicPlayer.start();
         return this;

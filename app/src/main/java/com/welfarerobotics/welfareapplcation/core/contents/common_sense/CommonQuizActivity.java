@@ -107,6 +107,7 @@ public class CommonQuizActivity extends BaseActivity {
     @Override protected void onResume() {
         super.onResume();
         Sound.get().resume(this, R.raw.common_sense);
+        Sound.get().loop(true);
     }
 
     @Override protected void onPause() {

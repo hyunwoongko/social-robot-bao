@@ -6,17 +6,14 @@
     <Preference
             android:key="SetupWifi"
             android:title="Wi-Fi 설정"/>
-    <PreferenceScreen
-            android:key="TeachSentencesMenu"
-            android:title="말 학습시키기">
-        <PreferenceCategory android:title="말 학습시키기"/>
-        <Preference
-                android:key="TeachSentences"
-                android:title="말 학습시키기"/>
-        <Preference
-                android:key="ManageSentences"
-                android:title="학습 내용 관리"/>
-    </PreferenceScreen>
+
+
+    <Preference
+        android:key="TeachSentencesMenu"
+        android:title="말 학습시키기">
+    </Preference>
+
+
     <PreferenceScreen
             android:key="InitConversationMenu"
             android:title="먼저 말걸기">

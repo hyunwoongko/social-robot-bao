@@ -28,12 +28,15 @@ import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.core.main.MainActivity;
 import com.welfarerobotics.welfareapplcation.entity.Server;
-import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
 import com.welfarerobotics.welfareapplcation.entity.User;
+import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
 import com.welfarerobotics.welfareapplcation.entity.cache.UserCache;
-import com.welfarerobotics.welfareapplcation.util.*;
+import com.welfarerobotics.welfareapplcation.util.DeviceId;
+import com.welfarerobotics.welfareapplcation.util.NetworkUtil;
+import com.welfarerobotics.welfareapplcation.util.ToastType;
 import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;
 import com.welfarerobotics.welfareapplcation.util.data_util.Preference;
+import es.dmoral.toasty.Toasty;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -82,20 +85,34 @@ public class InitialSettingActivity extends BaseActivity {
                     String id = DeviceId.getInstance(this).getUUID();
                     User model = new User();
                     model.setId(id);
-                    model.setName(((EditText) findViewById(R.id.user_name)).getText().toString());
-                    model.setLocation(((EditText) findViewById(R.id.user_address)).getText().toString());
-                    model.setPhoto(photos);
-                    UserCache.setInstance(model);
-                    // 싱글톤 업로드
 
-                    FirebaseDatabase.getInstance()
-                            .getReference("user")
-                            .child(id)
-                            .setValue(model);
+                    EditText nameEditText = findViewById(R.id.user_name);
+                    EditText addressEditText = findViewById(R.id.user_address);
 
-                    Preference.get(this).setBoolean("isFirst", false);
-                    startActivity(new Intent(InitialSettingActivity.this, MainActivity.class));
-                    finish();
+                    if (nameEditText.getText() != null &&
+                            !nameEditText.getText().toString().trim().equals("") &&
+                            !nameEditText.getText().toString().replaceAll(" ", "").equals("") &&
+                            addressEditText.getText() != null &&
+                            !addressEditText.getText().toString().trim().equals("") &&
+                            !addressEditText.getText().toString().replaceAll(" ", "").equals("")) {
+
+                        model.setName(nameEditText.getText().toString());
+                        model.setLocation(addressEditText.getText().toString());
+                        model.setPhoto(photos);
+                        UserCache.setInstance(model);
+                        // 싱글톤 업로드
+
+                        FirebaseDatabase.getInstance()
+                                .getReference("user")
+                                .child(id)
+                                .setValue(model);
+
+                        Preference.get(this).setBoolean("isFirst", false);
+                        startActivity(new Intent(InitialSettingActivity.this, MainActivity.class));
+                        finish();
+                    } else {
+                        Toasty.error(this, "사용자 이름과 지역정보(시/군/구 단위까지)를 반드시 입력해주세요", Toast.LENGTH_SHORT).show();
+                    }
                 });
             }
         });

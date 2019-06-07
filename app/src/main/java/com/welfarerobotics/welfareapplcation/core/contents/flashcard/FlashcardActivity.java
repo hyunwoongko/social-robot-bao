@@ -38,8 +38,8 @@ public class FlashcardActivity extends BaseActivity {
         ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this)
                 .tasksProcessingOrder(QueueProcessingType.FIFO)
                 .defaultDisplayImageOptions(options)
-                .memoryCacheSize(4*512*512)
-                .diskCacheSize(100*1024*1024)
+                .memoryCacheSize(4 * 512 * 512)
+                .diskCacheSize(100 * 1024 * 1024)
                 .diskCacheFileCount(100)
                 .build();
 
@@ -50,7 +50,7 @@ public class FlashcardActivity extends BaseActivity {
 
             if (mode != null && mode.isVisible()) {
                 onBackPressed();
-            } else{
+            } else {
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                 fragmentTransaction
                         .setCustomAnimations(R.anim.activity_fade_in, R.anim.activity_fade_out)
@@ -69,7 +69,8 @@ public class FlashcardActivity extends BaseActivity {
 
     @Override protected void onResume() {
         super.onResume();
-        Sound.get().resume(this, R.raw.flash_card);
+        Sound.get().resume(this, R.raw.flash_card)
+                .loop(true);
     }
 
     @Override protected void onPause() {

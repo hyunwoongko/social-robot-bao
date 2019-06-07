@@ -106,6 +106,10 @@
             android:name=".core.contents.common_sense.CommonQuizActivity"
             android:screenOrientation="landscape" />
 
+        <activity
+            android:name=".core.menu.ConversationList"
+            android:screenOrientation="landscape" />
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.bignerdranch.android.test.fileprovider"

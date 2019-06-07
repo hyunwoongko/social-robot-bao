@@ -26,9 +26,8 @@ public class ConversationList extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.conversation_list);
         topLL = (GridLayout) findViewById(R.id.Gridlayout);
-        UserCache singleton = UserCache.getInstance();
-        ArrayList<Conversation> dict = Objects.requireNonNull(singleton).getDict();
-        if (0 != dict.size()) {
+        ArrayList<Conversation> dict = Objects.requireNonNull(UserCache.getInstance()).getDict();
+        if (dict.size() != 0 ) {
             for (Conversation once : dict) {
                 textview(once.getInput());
                 textview(once.getOutput());

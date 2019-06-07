@@ -120,9 +120,8 @@ public class TangramActivity extends BaseActivity {
         Drawable bg = this.getDrawable(R.drawable.background);
         layout.setBackground(bg);
         //		layout.setBackgroundColor(Color.BLUE);
-
-
     }
+
 
     @Override protected void onResume() {
         super.onResume();
@@ -134,13 +133,16 @@ public class TangramActivity extends BaseActivity {
     public void onPause() {
         super.onPause();
         Sound.get().pause();
-        // Remove the activity when its off the screen
-        finish();
     }
 
     @Override protected void onDestroy() {
         super.onDestroy();
         Sound.get().stop();
+    }
+
+    @Override protected void onStop() {
+        super.onStop();
+        Sound.get().clear();
     }
 
     //Disable Back button

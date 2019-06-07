@@ -6,11 +6,14 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
+import android.preference.PreferenceScreen;
 import android.widget.Toast;
 import com.welfarerobotics.welfareapplcation.R;
+import com.welfarerobotics.welfareapplcation.core.menu.ConversationList;
 
-public class SettingActivity extends PreferenceActivity{
+public class SettingActivity extends PreferenceActivity {
     private LocationManager manager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,9 +21,15 @@ public class SettingActivity extends PreferenceActivity{
 
         Preference BackButton = findPreference("BackButton");
         Preference SetupWifi = findPreference("SetupWifi");
-        
+        Preference TeachSentenceMenu = findPreference("TeachSentencesMenu");
+
         BackButton.setOnPreferenceClickListener(preference -> {
             onBackPressed();
+            return false;
+        });
+
+        TeachSentenceMenu.setOnPreferenceClickListener(preference -> {
+            startActivity(new Intent(this, ConversationList.class));
             return false;
         });
 
@@ -30,12 +39,20 @@ public class SettingActivity extends PreferenceActivity{
                 Toast.makeText(getApplicationContext(), "Wi-Fi 설정을 하려면 GPS를 켜야 합니다", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), LocSettingsActivity.class);
                 startActivity(intent);
-            }else{
+            } else {
                 Intent intent = new Intent(getApplicationContext(), WifiActivity.class);
                 startActivity(intent);
             }
             return false;
 
         });
+    }
+
+
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
+
     }
 }

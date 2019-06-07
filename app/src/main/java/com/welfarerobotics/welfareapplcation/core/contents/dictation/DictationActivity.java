@@ -123,7 +123,7 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
         clear.setOnClickListener(view -> {
             Toasty.info(this, "초기화합니다.", Toast.LENGTH_SHORT).show();
             widget.clear();
-           text = null;
+            text = null;
         });
 
         speaker.setOnClickListener(view -> {
@@ -272,9 +272,11 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
         mediaPlayer.start();
     }
 
+
     @Override protected void onResume() {
         super.onResume();
         Sound.get().resume(this, R.raw.dictation);
+        Sound.get().loop(true);
     }
 
     @Override protected void onPause() {
