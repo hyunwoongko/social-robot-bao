@@ -45,8 +45,8 @@ public class Skills {
             else if (intent.equals("명언")) WiseScenario.process(speech);
 
             /** 기기제어 */
-            else if (intent.equals("볼륨업")) VolumeUpScenario.process(speech);
-            else if (intent.equals("볼륨다운")) VolumeDownScenario.process(speech);
+            else if (intent.equals("볼륨업")) VolumeUpScenario.process(speech,activity);
+            else if (intent.equals("볼륨다운")) VolumeDownScenario.process(speech,activity);
             else if (intent.equals("와이파이")) WifiScenario.process(speech, activity);
             else if (intent.equals("받아쓰기")) DictationScenario.process(speech, activity);
             else if (intent.equals("감정카드")) EmotionCardScenario.process(speech, activity);

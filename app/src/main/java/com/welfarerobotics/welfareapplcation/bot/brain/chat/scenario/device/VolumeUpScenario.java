@@ -1,7 +1,9 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.device;
 
+import android.app.Activity;
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
 import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
+import com.welfarerobotics.welfareapplcation.util.Volume;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -19,9 +21,11 @@ public class VolumeUpScenario {
             "네 소리를 키울게요"
     );
 
-    public static void process(String speech) throws IOException {
+    public static void process(String speech, Activity activity) throws IOException {
         Brain.hippocampus.decideToSay(strings.get(Brain.random.nextInt(strings.size() - 1)));
         // TODO : 볼륨 키우기 구현해야함
+        Volume vl = new Volume();
+        vl.volumeUp(activity);
         Mouth.get().say();
     }
 }
