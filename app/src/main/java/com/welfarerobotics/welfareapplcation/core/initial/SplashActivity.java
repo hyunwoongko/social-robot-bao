@@ -36,11 +36,18 @@ public class SplashActivity extends BaseActivity {
                 finish();
             }, 3000);
         } else {
-            NetworkUtil.wifiSafe(this, () -> FirebaseHelper.get().connect(FirebaseDatabase.getInstance().getReference("server"), snapshot -> {
+            NetworkUtil.wifiSafe(this, () -> FirebaseHelper.get().connect(FirebaseDatabase
+                    .getInstance()
+                    .getReference("server"), snapshot -> {
+
                 Server server = snapshot.getValue(Server.class);
                 ServerCache.setInstance(server);
-                FirebaseHelper.get().connect(FirebaseDatabase.getInstance().getReference("user")
+
+                FirebaseHelper.get().connect(FirebaseDatabase
+                        .getInstance()
+                        .getReference("user")
                         .child(DeviceId.getInstance(getApplicationContext()).getUUID()), dataSnapshots -> {
+                    
                     User user = dataSnapshots.getValue(User.class);
                     UserCache.setInstance(user);
                     handler.postDelayed(() -> {

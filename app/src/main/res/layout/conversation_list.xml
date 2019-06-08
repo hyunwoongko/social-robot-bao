@@ -1,15 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             xmlns:tools="http://schemas.android.com/tools"
-                                             android:layout_width="match_parent"
-                                             android:layout_height="match_parent"
-                                             xmlns:app="http://schemas.android.com/apk/res-auto">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/blackboard"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:visibility="visible">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginStart="35dp"
+        android:background="#00ffffff"
+        android:id="@+id/backbutton"
+        android:src="@drawable/menu_backbutton" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:fontFamily="@font/baemin"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:text="Q. 바오에게 물어보는 질문"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/question_view"
+            android:layout_weight="1" />
+
+        <TextView
+            android:fontFamily="@font/baemin"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:text="A. 바오가말하는 답"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/answer_view"
+            android:layout_weight="1" />
+    </LinearLayout>
 
     <android.support.v7.widget.GridLayout
-            app:columnCount="2"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="8dp" tools:layout_editor_absoluteX="8dp"
-            android:id="@+id/Gridlayout">
+        app:columnCount="2"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="40dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical"
+        android:id="@+id/Gridlayout"
+        tools:ignore="MissingConstraints">
 
     </android.support.v7.widget.GridLayout>
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

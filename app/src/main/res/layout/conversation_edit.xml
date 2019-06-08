@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/blackboard"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="fill_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@drawable/blackboard"
-        android:id="@+id/imageView2"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="378dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginStart="35dp"
+        android:background="#00ffffff"
+        android:id="@+id/backbutton"
+        android:src="@drawable/menu_backbutton" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -23,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:srcCompat="@android:color/transparent"
-            android:layout_weight="3"
+            android:layout_weight="2"
             android:id="@+id/null2" />
 
         <LinearLayout
@@ -35,9 +39,42 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:background="@drawable/border"
+                android:layout_gravity="center"
+                android:id="@+id/listView"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    app:srcCompat="?android:attr/actionModeFindDrawable" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/baemin"
+                    android:text="가르친 말 목록 보기"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/gh"
-                android:layout_weight="3" />
+                android:layout_weight="2">
+
+            </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -53,8 +90,10 @@
 
                     <TextView
                         android:layout_width="match_parent"
+                        android:fontFamily="@font/baemin"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView9"
+                        android:id="@+id/question_view"
+                        android:textColor="#000000"
                         android:text="Q. 질문을 입력하세요" />
 
                     <EditText
@@ -70,15 +109,37 @@
                     android:layout_weight="1">
 
                     <TextView
-                        android:text="A. 원하는답을 입력하세요"
+                        android:text="A. 원하는 답을 입력하세요"
                         android:layout_width="match_parent"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/baemin"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView10" />
+                        android:id="@+id/answer_view" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/answer_edit" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@android:color/transparent"
+                            android:id="@+id/imageView6"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@drawable/save_button"
+                            android:id="@+id/save_view"
+                            android:layout_weight="3" />
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -87,7 +148,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:srcCompat="@android:color/transparent"
-            android:layout_weight="3"
+            android:layout_weight="2"
             android:id="@+id/null1" />
     </LinearLayout>
 

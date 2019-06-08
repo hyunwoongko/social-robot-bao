@@ -10,7 +10,7 @@ import android.preference.PreferenceScreen;
 import android.widget.Toast;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.alarm.AlarmActivity;
-import com.welfarerobotics.welfareapplcation.core.menu.ConversationList;
+import com.welfarerobotics.welfareapplcation.core.menu.ConversationEdit;
 
 public class SettingActivity extends PreferenceActivity {
     private LocationManager manager;
@@ -35,7 +35,7 @@ public class SettingActivity extends PreferenceActivity {
         });
 
         TeachSentenceMenu.setOnPreferenceClickListener(preference -> {
-            startActivity(new Intent(this, ConversationList.class));
+            startActivity(new Intent(this, ConversationEdit.class));
             return false;
         });
 
