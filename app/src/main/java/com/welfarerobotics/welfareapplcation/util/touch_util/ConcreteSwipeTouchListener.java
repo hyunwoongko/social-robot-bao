@@ -7,6 +7,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
 import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
+import com.welfarerobotics.welfareapplcation.bot.ear.EarSet;
+import com.welfarerobotics.welfareapplcation.core.main.MainActivity;
 import com.welfarerobotics.welfareapplcation.core.menu.MenuActivity;
 
 /**

@@ -17,6 +17,10 @@ public class EarSet {
     private Activity activity;
     private boolean saying;
 
+    public boolean isSaying() {
+        return saying;
+    }
+
     public EarSet(Activity activity) {
         this.activity = activity;
     }
@@ -68,7 +72,7 @@ public class EarSet {
             saying = true;
             Mouth.get().play(Brain.hippocampus.getThoughtSentence());
             Mouth.get().stop(() -> {
-                startHear();
+                leftEar.hearAgain();
                 saying = false;
             });
         }
