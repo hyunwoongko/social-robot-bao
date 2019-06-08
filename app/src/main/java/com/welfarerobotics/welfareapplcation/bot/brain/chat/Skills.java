@@ -27,8 +27,8 @@ public class Skills {
 
         else {/** 스킬 모음 */
             if (!intent.equals("폴백")) Brain.hippocampus.rememberIntent(intent);
-            if (intent.equals("알람")) AlarmScenario.process(speech);
-            else if (intent.equals("메모")) AlarmScenario.process(speech);
+            if (intent.equals("알람")) AlarmScenario.process(speech, activity);
+            else if (intent.equals("메모")) AlarmScenario.process(speech, activity);
             else if (intent.equals("달력")) CalenderScenario.process(speech);
             else if (intent.equals("먼지")) DustScenario.process(speech, false, Oblivion::forgetAll);
             else if (intent.equals("동화")) FairytaleScenario.process(speech, activity);

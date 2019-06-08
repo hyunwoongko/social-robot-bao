@@ -14,6 +14,11 @@
     </Preference>
 
 
+    <Preference
+        android:key="Alarm"
+        android:title="알람 설정하기">
+    </Preference>
+
     <PreferenceScreen
             android:key="InitConversationMenu"
             android:title="먼저 말걸기">

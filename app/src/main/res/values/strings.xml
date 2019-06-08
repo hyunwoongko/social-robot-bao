@@ -1,4 +1,44 @@
 <resources>
-    <string name="app_name">Welfareapplcation</string>
+    <string name="app_name">Welfareapplication</string>
+
+    <!-- Main Activity/Fragment -->
+    <string name="empty_view_text">알람을 추가하려면 아래 시계버튼을 누르세요.</string>
+
+    <!-- Edit Alarm Activity/Fragment -->
+    <string name="time">시간</string>
+    <string name="label">알람 이름</string>
+    <string name="days">요일</string>
+    <string name="edit_alarm">알람 수정</string>
+    <string name="add_alarm">알람 추가</string>
+    <string name="add_label_hint">알람 이름을 입력하세요!</string>
+    <string name="update_complete">수정 완료</string>
+    <string name="update_failed">수정 실패</string>
+    <string name="delete_complete">알람이 삭제되었습니다</string>
+    <string name="delete_failed">살제 실패</string>
+    <string name="delete_dialog_title">알람 삭제</string>
+    <string name="delete_dialog_content">알람을 삭제하시겠습니까?</string>
+    <string name="yes">네</string>
+    <string name="no">아니오</string>
+
+    <!-- Edit Alarm Menu -->
+    <string name="action_save">저장</string>
+    <string name="action_delete">삭제</string>
+
+    <!-- Alarm Landing Page Activity/Fragment -->
+    <string name="launch_main_activity">알람 화면 실행</string>
+    <string name="dismiss">거부</string>
+
+    <!-- Days -->
+    <string name="monday">월요일</string>
+    <string name="tuesday">화요일</string>
+    <string name="wednesday">수요일</string>
+    <string name="thursday">목요일</string>
+    <string name="friday">금요일</string>
+    <string name="saturday">토요일</string>
+    <string name="sunday">일요일</string>
+
+    <!-- Notification -->
+    <string name="channel_name">소셜로봇 바오 알람</string>
     <string name="kakao_app_key">0d5adb7f4c140d28185aaaf48a0eac4b</string>
+
 </resources>

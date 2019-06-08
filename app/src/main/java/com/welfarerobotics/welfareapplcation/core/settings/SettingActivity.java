@@ -9,6 +9,7 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
 import android.widget.Toast;
 import com.welfarerobotics.welfareapplcation.R;
+import com.welfarerobotics.welfareapplcation.core.alarm.AlarmActivity;
 import com.welfarerobotics.welfareapplcation.core.menu.ConversationList;
 
 public class SettingActivity extends PreferenceActivity {
@@ -22,7 +23,12 @@ public class SettingActivity extends PreferenceActivity {
         Preference BackButton = findPreference("BackButton");
         Preference SetupWifi = findPreference("SetupWifi");
         Preference TeachSentenceMenu = findPreference("TeachSentencesMenu");
+        Preference Alarm = findPreference("Alarm");
 
+        Alarm.setOnPreferenceClickListener(p->{
+            startActivity(new Intent(this, AlarmActivity.class));
+            return false;
+        });
         BackButton.setOnPreferenceClickListener(preference -> {
             onBackPressed();
             return false;

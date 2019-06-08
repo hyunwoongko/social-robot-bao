@@ -12,7 +12,9 @@
         <!-- Full Screen Mode -->
         <item name="android:windowFullscreen">true</item>
     </style>
+
     <style parent="Theme.AppCompat.Light" name="SwitchTheme">
-    <item name="android:colorControlActivated">#ff33b5e5</item>
+        <item name="android:colorControlActivated">#ff33b5e5</item>
     </style>
+
 </resources>

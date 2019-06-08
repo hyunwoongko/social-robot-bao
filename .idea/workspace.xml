@@ -19,19 +19,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f2ff807-e7e1-4931-91f5-40600ab735ff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AbstractAlarmActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AddEditAlarmActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AddEditAlarmFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/Alarm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmLandingPageActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmLandingPageFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmsAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/DatabaseHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/DividerItemDecoration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/EmptyRecyclerView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/LoadAlarmsReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/LoadAlarmsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/ViewUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/TopologicalSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/conversation/FallbackScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/conversation/FallbackScenario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/skills/WikiScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/skills/WikiScenario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/initial/InitialSettingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/initial/InitialSettingActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/ConversationList.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/ConversationList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/cache/ChatCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/cache/ChatCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/data_loader/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/data_loader/DataLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/data_loader/TopicSwitchDataLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/conversation_edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/conversation_edit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/conversation_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/conversation_list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/chat/crawler/wiki.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/chat/crawler/wiki.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/Skills.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/Skills.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/device/AlarmScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/device/AlarmScenario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/settings/SettingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/settings/SettingActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/settings_preference.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/settings_preference.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/chat/intent/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/chat/intent/configs.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/MyScript_ATK-Core-android-component/.gradle/" />
     <ignored path="$PROJECT_DIR$/MyScript_ATK-Core-android-component/build/" />
@@ -156,95 +176,102 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/Skills.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_alarm.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="120">
+              <caret line="4" column="87" selection-start-line="4" selection-start-column="87" selection-end-line="4" selection-end-column="87" />
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/skills/WikiScenario.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_alarm.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+            <state relative-caret-position="120">
+              <caret line="4" column="35" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="35" />
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/Encoder.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_alarm_landing_page.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="120">
+              <caret line="4" column="91" selection-start-line="4" selection-start-column="91" selection-end-line="4" selection-end-column="91" />
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/settings/WifiFragment.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AddEditAlarmActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-464">
-              <caret line="90" selection-start-line="90" selection-end-line="90" />
+            <state relative-caret-position="390">
+              <caret line="13" column="69" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="69" />
               <folding>
-                <element signature="e#2808#3105#0" expanded="true" />
-                <element signature="e#3104#3105#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python/chat/crawler/wiki.py">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AddEditAlarmFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="653">
-              <caret line="70" column="12" lean-forward="true" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
+            <state relative-caret-position="127">
+              <caret line="41" column="55" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/cache/ChatCache.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/data_loader/DataLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+            <state relative-caret-position="120">
+              <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/conversation/FallbackScenario.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmLandingPageActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+            <state relative-caret-position="210">
+              <caret line="9" column="73" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/conversation/OpenDomainScenario.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AbstractAlarmActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="390">
+              <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/ModelApi.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/arrays.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="302">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -4235,34 +4262,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Brain.java" />
-        <option value="$PROJECT_DIR$/python/temp.py" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/TopologicalSort.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/border.xml" />
-        <option value="$PROJECT_DIR$/python/server_chat.py" />
-        <option value="$PROJECT_DIR$/python/chat/entity/news/entity_recognizer.py" />
-        <option value="$PROJECT_DIR$/python/chat/crawler/dust.py" />
-        <option value="$PROJECT_DIR$/python/chat/crawler/translation.py" />
-        <option value="$PROJECT_DIR$/python/chat/entity/news/kor_model/data_embed_model/word2vec.py" />
-        <option value="$PROJECT_DIR$/python/painter/pix2pix.py" />
-        <option value="$PROJECT_DIR$/python/chat/intent/configs.py" />
-        <option value="$PROJECT_DIR$/python/chat/crawler/weather.py" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/context/LanguageContextScenario.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/named_entity/TranslateEntityRecognizer.java" />
-        <option value="$PROJECT_DIR$/python/data/목적/언어국가.csv" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/IssueApi.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/paint/PainterApi.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_paint_with.xml" />
-        <option value="$PROJECT_DIR$/python/server_painter.py" />
-        <option value="$PROJECT_DIR$/python/painter/stylize.py" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_dictation.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/common_sense_quiz.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/contents/dictation/ImageCrawler.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/response/SongResponseGenerator.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/named_entity/SongEntityRecognizer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/skills/SongScenario.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/Skills.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/youtube/YoutubeActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/MenuActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/fairytale/FairytaleActivity.java" />
@@ -4274,9 +4278,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/contents/dictation/DictationActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/contents/tangram/TangramActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/contents/tangram/TangramSelecActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/xml/settings_preference.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/settings/SettingActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/initial/InitialSettingActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/ConversationList.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/conversation_list.xml" />
@@ -4286,6 +4287,32 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/cache/ChatCache.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/data_loader/DataLoader.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/conversation/FallbackScenario.java" />
+        <option value="$PROJECT_DIR$/python/chat/intent/configs.py" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmLandingPageFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmReceiver.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmsAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/DividerItemDecoration.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/settings/SettingActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/device/AlarmScenario.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/Skills.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AddEditAlarmFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/main/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_alarm_landing_page.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_alarm.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/xml/settings_preference.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_alarm.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_alarm.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AbstractAlarmActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AddEditAlarmActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmLandingPageActivity.java" />
       </list>
     </option>
   </component>
@@ -4468,99 +4495,7 @@
               <item name="bot" type="462c0819:PsiDirectoryNode" />
               <item name="brain" type="462c0819:PsiDirectoryNode" />
               <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="crawler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
-              <item name="brain" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="named_entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
-              <item name="brain" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="preprocess" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
-              <item name="brain" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="response" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
-              <item name="brain" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
               <item name="scenario" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
-              <item name="brain" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="scenario" type="462c0819:PsiDirectoryNode" />
-              <item name="context" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
-              <item name="brain" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="scenario" type="462c0819:PsiDirectoryNode" />
-              <item name="conversation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
@@ -4588,38 +4523,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
               <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
-              <item name="brain" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="scenario" type="462c0819:PsiDirectoryNode" />
-              <item name="hardware" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
-              <item name="brain" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="scenario" type="462c0819:PsiDirectoryNode" />
-              <item name="skills" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -4633,7 +4536,7 @@
               <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
               <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="contents" type="462c0819:PsiDirectoryNode" />
+              <item name="alarm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
@@ -4646,104 +4549,7 @@
               <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
               <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="contents" type="462c0819:PsiDirectoryNode" />
-              <item name="common_sense" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="contents" type="462c0819:PsiDirectoryNode" />
-              <item name="dictation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="contents" type="462c0819:PsiDirectoryNode" />
-              <item name="emotioncard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="contents" type="462c0819:PsiDirectoryNode" />
-              <item name="flashcard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="contents" type="462c0819:PsiDirectoryNode" />
-              <item name="paintwith" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="contents" type="462c0819:PsiDirectoryNode" />
-              <item name="tangram" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="initial" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="menu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
@@ -4757,56 +4563,6 @@
               <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="settings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
-              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="data_loader" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
@@ -4850,6 +4606,33 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="raw" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="values" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="values-w820dp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
               <item name="xml" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -4869,6 +4652,20 @@
               <item name="python" type="462c0819:PsiDirectoryNode" />
               <item name="chat" type="462c0819:PsiDirectoryNode" />
               <item name="crawler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="chat" type="462c0819:PsiDirectoryNode" />
+              <item name="intent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capstone-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="chat" type="462c0819:PsiDirectoryNode" />
+              <item name="open_domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Capstone-Project" type="b2602c69:ProjectViewProjectNode" />
@@ -4901,7 +4698,7 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559882384272" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559951603992" />
     <property name="device.picker.selection" value="ce0517155539ce3c01" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.6 (Capstone-Project)" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
@@ -4915,15 +4712,15 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\Github\Capstone-Project\python\chat\intent\data\명사\식물" />
+      <recent name="C:\Users\ASUS\Github\Capstone-Project\python\chat\intent\data\etc\이름질문" />
+      <recent name="C:\Users\ASUS\Github\Capstone-Project\python\chat\intent\data\etc" />
+      <recent name="C:\Users\ASUS\Github\Capstone-Project\python\chat\intent\data\목적\날씨" />
+      <recent name="C:\Users\ASUS\Github\Capstone-Project\python\chat\intent\data\명사\사람" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.welfarerobotics.welfareapplcation" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ASUS\Github\Capstone-Project\python\painter\images\input" />
-      <recent name="C:\Users\ASUS\Github\Capstone-Project\python" />
-      <recent name="C:\Users\ASUS\Github\Capstone-Project\python\data\목적" />
-      <recent name="C:\Users\ASUS\Github\Capstone-Project\python\chat\entity\restaurant" />
-      <recent name="C:\Users\ASUS\Github\Capstone-Project\python\chat\entity\restaurant\data\processed" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.device" />
@@ -4931,12 +4728,12 @@
       <recent name="com.welfarerobotics.welfareapplcation.bot.chat.named_entity" />
       <recent name="com.welfarerobotics.welfareapplcation.core.bluetooth" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ASUS\Github\Capstone-Project\python\chat\intent\data\명사\식물" />
-      <recent name="C:\Users\ASUS\Github\Capstone-Project\python\chat\intent\data\etc\이름질문" />
-      <recent name="C:\Users\ASUS\Github\Capstone-Project\python\chat\intent\data\etc" />
-      <recent name="C:\Users\ASUS\Github\Capstone-Project\python\chat\intent\data\목적\날씨" />
-      <recent name="C:\Users\ASUS\Github\Capstone-Project\python\chat\intent\data\명사\사람" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\Github\Capstone-Project\app\src\main\java\com\welfarerobotics\welfareapplcation\core\alarm" />
+      <recent name="C:\Users\ASUS\Github\Capstone-Project\python\painter\images\input" />
+      <recent name="C:\Users\ASUS\Github\Capstone-Project\python" />
+      <recent name="C:\Users\ASUS\Github\Capstone-Project\python\data\목적" />
+      <recent name="C:\Users\ASUS\Github\Capstone-Project\python\chat\entity\restaurant" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -5226,12 +5023,12 @@
       <workItem from="1559831313418" duration="89000" />
       <workItem from="1559831442959" duration="9225000" />
       <workItem from="1559843130312" duration="1708000" />
-      <workItem from="1559845726861" duration="14742000" />
+      <workItem from="1559845726861" duration="22635000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1034309000" />
+    <option name="totallyTimeSpent" value="1042202000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5267,7 +5064,7 @@
       <window_info anchor="bottom" id="Android Profiler" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32901832" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5048077" side_tool="true" weight="0.47572815" />
-      <window_info anchor="bottom" id="Logcat" order="12" sideWeight="0.49519232" visible="true" weight="0.41639698" />
+      <window_info anchor="bottom" id="Logcat" order="12" sideWeight="0.49519232" visible="true" weight="0.34304208" />
       <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49946582" weight="0.32937366" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="14" weight="0.32901832" />
       <window_info anchor="bottom" id="Sequence" order="15" weight="0.3214671" />
@@ -5312,352 +5109,6 @@
     <SUITE FILE_PATH="coverage/Social_Robot_Bao$server_chat.coverage" NAME="server_chat Coverage Results" MODIFIED="1559827662982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/response/NewsResponseGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/skills/TimeScenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="17" selection-start-line="17" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/skills/RestaurantScenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/named_entity/SongEntityRecognizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/skills/TranslateScenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/response/SongResponseGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/device/DictationScenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/data/목적/음악.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-1080" />
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/skills/SongScenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="24" column="83" selection-start-line="24" selection-start-column="83" selection-end-line="24" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/YoutubeApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/youtube/YoutubeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="33" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dictation.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/fairytale/FairytaleActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/contents/dictation/ImageCrawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/contents/tangram/TangramListItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/contents/flashcard/FlashcardActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/contents/paintwith/PaintWithActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="140" column="27" selection-start-line="140" selection-start-column="27" selection-end-line="140" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/contents/emotioncard/EmotioncardActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/contents/dictation/DictationActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="273" selection-start-line="273" selection-end-line="273" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/Sound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-209">
-          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/contents/tangram/TangramActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="142" selection-start-line="142" selection-end-line="145" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/contents/tangram/TangramSelecActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="58" column="15" selection-start-line="58" selection-start-column="15" selection-end-line="58" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/contents/common_sense/CommonQuizActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2850">
-          <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/MenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="95" column="80" selection-start-line="95" selection-start-column="80" selection-end-line="95" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="97" column="4" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_init_bluetooth.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/settings/LocSettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/preference/Preference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="180" column="21" selection-start-line="180" selection-start-column="21" selection-end-line="180" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/settings_preference.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="39" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="39" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/settings/SettingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/cache/UserCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/ConversationList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/conversation_list.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/conversation_edit.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/ConversationEdit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/initial/InitialBluetoothActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/initial/InitialSettingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/skills/WikiScenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/ModelApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/conversation/OpenDomainScenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/Skills.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/crawler/Encoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/settings/WifiFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-464">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
-          <folding>
-            <element signature="e#2808#3105#0" expanded="true" />
-            <element signature="e#3104#3105#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/TopologicalSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1447">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/chat/crawler/wiki.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="70" column="12" lean-forward="true" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/data_loader/TopicSwitchDataLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
@@ -5681,8 +5132,349 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/conversation/FallbackScenario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+        <state relative-caret-position="286">
+          <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/flashcards_mode_learning.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/chat/intent/configs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/chat/open_domain/open_domain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-847">
+          <caret line="12" selection-start-line="12" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/ConversationEdit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/ConversationList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1927">
+          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2325#2361#0" expanded="true" />
+            <element signature="e#7348#7384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="15" column="80" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/DividerItemDecoration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/LoadAlarmsReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/LoadAlarmsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/ViewUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/device/AlarmScenario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/Skills.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="30" column="80" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="136" column="52" selection-start-line="136" selection-start-column="52" selection-end-line="136" selection-end-column="52" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="147" column="27" selection-start-line="147" selection-start-column="27" selection-end-line="147" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_init_bluetooth.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/Alarm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmLandingPageFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/DatabaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2429">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/main/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edit_alarm.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/settings/SettingActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/settings_preference.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_main.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/alarm_row.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/res (2)/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="72" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/res (2)/layout/fragment_main.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/EmptyRecyclerView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_alarm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="71" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_add_edit_alarm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5776" />
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_alarm_landing_page.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_alarm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="87" selection-start-line="4" selection-start-column="87" selection-end-line="4" selection-end-column="87" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_alarm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_alarm_landing_page.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="91" selection-start-line="4" selection-start-column="91" selection-end-line="4" selection-end-column="91" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/arrays.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AbstractAlarmActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AddEditAlarmActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="13" column="69" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AddEditAlarmFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="41" column="55" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/alarm/AlarmLandingPageActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="9" column="73" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

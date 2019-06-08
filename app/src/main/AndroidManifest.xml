@@ -109,7 +109,19 @@
         <activity
             android:name=".core.menu.ConversationList"
             android:screenOrientation="landscape" />
-        <activity android:name=".core.menu.ConversationEdit" />
+
+        <activity
+            android:name=".core.menu.ConversationEdit"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".core.alarm.AddEditAlarmActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".core.alarm.AlarmActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".core.alarm.AlarmLandingPageActivity"
+            android:screenOrientation="landscape" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"

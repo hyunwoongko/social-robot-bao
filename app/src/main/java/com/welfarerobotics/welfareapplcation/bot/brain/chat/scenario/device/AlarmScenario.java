@@ -1,7 +1,10 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.device;
 
+import android.app.Activity;
+import android.content.Intent;
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
 import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
+import com.welfarerobotics.welfareapplcation.core.alarm.AlarmActivity;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -18,9 +21,9 @@ public class AlarmScenario {
             "알람 설정을 위해 이동합니다"
     );
 
-    public static void process(String speech) throws IOException {
+    public static void process(String speech, Activity activity) throws IOException {
         Brain.hippocampus.decideToSay(strings.get(Brain.random.nextInt(strings.size() - 1)));
-        // TODO : 알람 액티비티로 이동 !!
         Mouth.get().say();
+        activity.startActivity(new Intent(activity, AlarmActivity.class));
     }
 }
