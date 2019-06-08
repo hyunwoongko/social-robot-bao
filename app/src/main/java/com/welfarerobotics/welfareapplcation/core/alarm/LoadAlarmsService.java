@@ -37,5 +37,4 @@ public final class LoadAlarmsService extends IntentService {
         final Intent launchLoadAlarmsServiceIntent = new Intent(context, LoadAlarmsService.class);
         context.startService(launchLoadAlarmsServiceIntent);
     }
-
 }

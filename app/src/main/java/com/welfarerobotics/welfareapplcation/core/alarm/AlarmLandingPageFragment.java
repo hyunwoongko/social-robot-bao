@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import com.welfarerobotics.welfareapplcation.R;
+import com.welfarerobotics.welfareapplcation.util.Sound;
 
 
 public final class AlarmLandingPageFragment extends Fragment implements View.OnClickListener {
@@ -18,10 +19,7 @@ public final class AlarmLandingPageFragment extends Fragment implements View.OnC
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         final View v = inflater.inflate(R.layout.fragment_alarm_landing_page, container, false);
-        final Button launchMainActivityBtn = (Button) v.findViewById(R.id.load_main_activity_btn);
-        final Button dismiss = (Button) v.findViewById(R.id.dismiss_btn);
-
-        launchMainActivityBtn.setOnClickListener(this);
+        final Button dismiss = (Button) v.findViewById(R.id.ok_button);
         dismiss.setOnClickListener(this);
         return v;
     }
@@ -29,25 +27,29 @@ public final class AlarmLandingPageFragment extends Fragment implements View.OnC
     @Override
     public void onPause() {
         super.onPause();
+        Sound.get().pause();
     }
 
     @Override
     public void onResume() {
+        Sound.get().resume(getActivity(), R.raw.alarm);
+        Sound.get().loop(true);
         super.onResume();
+    }
+
+    @Override public void onDestroy() {
+        super.onDestroy();
+        Sound.get().stop();
     }
 
     @Override
     public void onClick(View view) {
-
         switch (view.getId()) {
-            case R.id.load_main_activity_btn:
-                startActivity(new Intent(getContext(), AlarmActivity.class));
-                getActivity().finish();
-                break;
-            case R.id.dismiss_btn:
+            case R.id.ok_button:
+                Sound.get().stop();
+                startActivity(new Intent(getActivity(), AlarmActivity.class));
                 getActivity().finish();
                 break;
         }
-
     }
 }

@@ -132,11 +132,8 @@ public final class AddEditAlarmFragment extends Fragment {
         final int messageId = (rowsUpdated == 1) ? R.string.update_complete : R.string.update_failed;
 
         Toast.makeText(getContext(), messageId, Toast.LENGTH_SHORT).show();
-
         AlarmReceiver.setReminderAlarm(getContext(), alarm);
-
         getActivity().finish();
-
     }
 
     private void delete() {

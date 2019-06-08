@@ -1,16 +1,9 @@
 package com.welfarerobotics.welfareapplcation.core.alarm;
 
-import android.app.AlarmManager;
-import android.app.Notification;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
+import android.app.*;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.media.AudioAttributes;
-import android.media.AudioManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
@@ -18,13 +11,15 @@ import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.util.SparseBooleanArray;
 import com.welfarerobotics.welfareapplcation.R;
-;
 
 import java.util.Calendar;
 
 import static android.app.NotificationManager.IMPORTANCE_HIGH;
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.O;
+
+;
 
 public final class AlarmReceiver extends BroadcastReceiver {
 
@@ -62,26 +57,18 @@ public final class AlarmReceiver extends BroadcastReceiver {
         builder.setContentTitle(context.getString(R.string.app_name));
         builder.setContentText(alarm.getLabel());
         builder.setTicker(alarm.getLabel());
-        builder.setVibrate(new long[]{1000, 500, 1000, 500, 1000, 500});
-        builder.setSound(Uri.parse("android.resource://"
-                + context.getPackageName() + "/" + R.raw.alarm));
-
-
         builder.setContentIntent(pIntent);
         builder.setAutoCancel(true);
+        builder.setSound(null);
         builder.setPriority(Notification.PRIORITY_HIGH);
-
         Notification notification = builder.build();
-        notification.sound = Uri.parse("android.resource://"
-                + context.getPackageName() + "/" + R.raw.alarm);
-
 
         manager.notify(id, notification);
 
         //Reset Alarm manually
         setReminderAlarm(context, alarm);
-
-        context.startActivity(new Intent(context, AlarmLandingPageActivity.class));
+        context.startActivity(new Intent(context, AlarmLandingPageActivity.class).addFlags(FLAG_ACTIVITY_NEW_TASK));
+        System.out.println("AAAAAAAAAAAAAAAALLLLLLLLLLLAAAAAAAARRRRRMMMMMM");
     }
 
     //Convenience method for setting a notification
@@ -208,21 +195,10 @@ public final class AlarmReceiver extends BroadcastReceiver {
 
         final String name = ctx.getString(R.string.channel_name);
         if (mgr.getNotificationChannel(name) == null) {
-
-            AudioAttributes.Builder builder = new AudioAttributes.Builder()
-                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                    .setUsage(AudioAttributes.USAGE_ALARM)
-                    .setLegacyStreamType(AudioManager.STREAM_ALARM);
-
-            AudioAttributes attributes = builder.build();
-
             final NotificationChannel channel =
                     new NotificationChannel(CHANNEL_ID, name, IMPORTANCE_HIGH);
-            channel.enableVibration(true);
-            channel.setSound(Uri.parse("android.resource://"
-                    + ctx.getPackageName() + "/" + R.raw.alarm), attributes);
-            channel.setVibrationPattern(new long[]{1000, 500, 1000, 500, 1000, 500});
             channel.setBypassDnd(true);
+            channel.setSound(null, null);
             mgr.createNotificationChannel(channel);
         }
     }
