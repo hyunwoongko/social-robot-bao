@@ -82,12 +82,7 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
         pDialog2.setConfirmText("예");
         pDialog2.confirmButtonColor(R.color.confirm_button);
         pDialog2.setConfirmClickListener(kAlertDialog -> {
-            if (mediaPlayer != null && mediaPlayer.isPlaying()) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer = new MediaPlayer();
-            }
-            playVoice(mediaPlayer, currentDictation);
+            speak();
             kAlertDialog.dismissWithAnimation();
         });
         pDialog2.setCancelable(false);
@@ -127,12 +122,7 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
         });
 
         speaker.setOnClickListener(view -> {
-            if (mediaPlayer != null && mediaPlayer.isPlaying()) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer = new MediaPlayer();
-            }
-            playVoice(mediaPlayer, currentDictation);
+            speak();
         });
 
         backbtn.setOnClickListener(view -> onBackPressed());
@@ -179,12 +169,7 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
             pDialog2.setConfirmText("예");
             pDialog2.confirmButtonColor(R.color.confirm_button);
             pDialog2.setConfirmClickListener(kAlertDialog -> {
-                if (mediaPlayer != null && mediaPlayer.isPlaying()) {
-                    mediaPlayer.stop();
-                    mediaPlayer.release();
-                    mediaPlayer = new MediaPlayer();
-                }
-                playVoice(mediaPlayer, currentDictation);
+                speak();
                 kAlertDialog.dismissWithAnimation();
             });
             pDialog2.setCancelable(false);
@@ -203,7 +188,7 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
                 con.setRequestProperty("X-NCP-APIGW-API-KEY-ID", ServerCache.getInstance().getCssid());
                 con.setRequestProperty("X-NCP-APIGW-API-KEY", ServerCache.getInstance().getCsssecret());
                 // post request
-                String postParams = "speaker=jinho&speed=2.5&text=" + text;
+                String postParams = "speaker=jinho&speed=5.0&text=" + text;
                 con.setDoOutput(true);
                 DataOutputStream wr = new DataOutputStream(con.getOutputStream());
                 wr.writeBytes(postParams);
@@ -287,5 +272,19 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
     @Override protected void onDestroy() {
         super.onDestroy();
         Sound.get().stop();
+    }
+
+    private void speak() {
+        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = new MediaPlayer();
+        }
+        StringBuilder speech = new StringBuilder();
+        for (int i = 0; i < currentDictation.length(); i++) {
+            speech.append(String.valueOf(currentDictation.charAt(i)));
+        }
+
+        playVoice(mediaPlayer, speech.toString());
     }
 }

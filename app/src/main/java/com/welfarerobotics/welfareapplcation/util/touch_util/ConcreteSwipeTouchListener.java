@@ -3,6 +3,10 @@ package com.welfarerobotics.welfareapplcation.util.touch_util;
 import android.app.Activity;
 import android.content.Intent;
 import android.media.AudioManager;
+import android.view.MotionEvent;
+import android.view.View;
+import com.welfarerobotics.welfareapplcation.bot.Mouth;
+import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
 import com.welfarerobotics.welfareapplcation.core.menu.MenuActivity;
 
 /**
@@ -13,11 +17,12 @@ import com.welfarerobotics.welfareapplcation.core.menu.MenuActivity;
 public class ConcreteSwipeTouchListener extends OnSwipeTouchListener {
     private AudioManager audioManager;
     private Activity activity;
-
-    public ConcreteSwipeTouchListener(Activity activity, AudioManager audioManager) {
+    private Runnable singleTap;
+    public ConcreteSwipeTouchListener(Activity activity, AudioManager audioManager, Runnable singleTap) {
         super(activity);
         this.audioManager = audioManager;
         this.activity = activity;
+        this.singleTap = singleTap;
     }
 
     @Override
@@ -34,5 +39,9 @@ public class ConcreteSwipeTouchListener extends OnSwipeTouchListener {
     public void onActivityDoubleTap() {
         Intent menuIntent = new Intent(activity, MenuActivity.class);
         activity.startActivity(menuIntent);
+    }
+
+    @Override public void onActivitySingleTap() {
+        singleTap.run();
     }
 }

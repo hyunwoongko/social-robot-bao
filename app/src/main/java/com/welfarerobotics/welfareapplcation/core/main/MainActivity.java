@@ -27,7 +27,6 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
         SpeechRecognizerManager.getInstance().initializeLibrary(this);
-        onSwipeTouchListener = new ConcreteSwipeTouchListener(this, audioManager);
 
         FirebaseHelper.get().connect(FirebaseDatabase
                 .getInstance()
@@ -37,6 +36,7 @@ public class MainActivity extends BaseActivity {
             ServerCache.setInstance(server);
             DataLoader.onDataLoad(); // 모든 데이터 다운로드
             ear.initEar();
+            onSwipeTouchListener = new ConcreteSwipeTouchListener(this, audioManager, ear::repeat);
         });
     }
 
@@ -61,7 +61,9 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        onSwipeTouchListener.getGestureDetector().onTouchEvent(ev);
+        if(onSwipeTouchListener != null){
+            onSwipeTouchListener.getGestureDetector().onTouchEvent(ev);
+        }
         return super.dispatchTouchEvent(ev);
     }
 }

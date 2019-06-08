@@ -41,7 +41,7 @@ public final @Data class Mouth {
             con.setRequestProperty("X-NCP-APIGW-API-KEY-ID", ServerCache.getInstance().getCssid());
             con.setRequestProperty("X-NCP-APIGW-API-KEY", ServerCache.getInstance().getCsssecret());
             // post request
-            String postParams = "speaker=" + speaker + "&speed=2.5&text=" + text;
+            String postParams = "speaker=" + speaker + "&speed=4.0&text=" + text;
             con.setDoOutput(true);
             DataOutputStream wr = new DataOutputStream(con.getOutputStream());
             wr.writeBytes(postParams);
@@ -87,8 +87,7 @@ public final @Data class Mouth {
         String Path_to_file = Environment.getExternalStorageDirectory() +
                 File.separator + "NaverCSS/" + tempname + ".mp3";
 
-        if (audioPlayer == null)
-            audioPlayer = new MediaPlayer();
+        audioPlayer = new MediaPlayer();
 
         try {
             audioPlayer.setDataSource(Path_to_file);

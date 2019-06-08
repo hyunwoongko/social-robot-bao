@@ -33,6 +33,4 @@ public final class Brain {
             FallbackScenario.process(); // <- 나중엔 이걸로
         }
     }
-
-
 }

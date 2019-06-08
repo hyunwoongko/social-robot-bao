@@ -15,6 +15,7 @@ public class EarSet {
     private Ear rightEar = new Ear(); // 문장 디텍트
     private Attention attention = new Attention();
     private Activity activity;
+    private boolean saying;
 
     public EarSet(Activity activity) {
         this.activity = activity;
@@ -59,5 +60,17 @@ public class EarSet {
     public void blockHear() {
         leftEar.block(); // 왼쪽 귀 비활성화
         rightEar.block(); // 오른쪽 귀 비활성화
+    }
+
+    public void repeat() {
+        if(!saying){
+            blockHear();
+            saying = true;
+            Mouth.get().play(Brain.hippocampus.getThoughtSentence());
+            Mouth.get().stop(() -> {
+                startHear();
+                saying = false;
+            });
+        }
     }
 }
