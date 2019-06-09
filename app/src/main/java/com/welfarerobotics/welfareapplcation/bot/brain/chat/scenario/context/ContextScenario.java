@@ -1,10 +1,7 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.context;
 
-import android.app.Activity;
 import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.conversation.FallbackScenario;
-import com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.skills.DustScenario;
-import com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.skills.WeatherScenario;
 
 import java.io.IOException;
 
