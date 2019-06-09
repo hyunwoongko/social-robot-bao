@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Capstone-Project.iml" filepath="$PROJECT_DIR$/Capstone-Project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/Capstone-Project-app.iml" filepath="$PROJECT_DIR$/app/Capstone-Project-app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Capstone_Project.iml" filepath="$PROJECT_DIR$/Capstone_Project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/Capstone_Project-app.iml" filepath="$PROJECT_DIR$/app/Capstone_Project-app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Desktop-Social-Robot-Bao.iml" filepath="$PROJECT_DIR$/Desktop-Social-Robot-Bao.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyScript_ATK-Core-android-component/MyScript_ATK-Core-android-component.iml" filepath="$PROJECT_DIR$/MyScript_ATK-Core-android-component/MyScript_ATK-Core-android-component.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyScript_ATK-IMCommon-android-component/MyScript_ATK-IMCommon-android-component.iml" filepath="$PROJECT_DIR$/MyScript_ATK-IMCommon-android-component/MyScript_ATK-IMCommon-android-component.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyScript_ATK-SingleCharWidget-android-widget/MyScript_ATK-SingleCharWidget-android-widget.iml" filepath="$PROJECT_DIR$/MyScript_ATK-SingleCharWidget-android-widget/MyScript_ATK-SingleCharWidget-android-widget.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyScript_ATK-Text-android-component/MyScript_ATK-Text-android-component.iml" filepath="$PROJECT_DIR$/MyScript_ATK-Text-android-component/MyScript_ATK-Text-android-component.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Social-Robot-Bao.iml" filepath="$PROJECT_DIR$/Social-Robot-Bao.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/python/chat.iml" filepath="$PROJECT_DIR$/python/chat.iml" />
       <module fileurl="file://$PROJECT_DIR$/myscript-certificate/myscript-certificate.iml" filepath="$PROJECT_DIR$/myscript-certificate/myscript-certificate.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mysript-certificate_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mysript-certificate_main.iml" group="mysript-certificate" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mysript-certificate_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mysript-certificate_test.iml" group="mysript-certificate" />
-      <module fileurl="file://$PROJECT_DIR$/python/python.iml" filepath="$PROJECT_DIR$/python/python.iml" />
-      <module fileurl="file://$PROJECT_DIR$/rasberrypi/rasberrypi.iml" filepath="$PROJECT_DIR$/rasberrypi/rasberrypi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sicial.iml" filepath="$PROJECT_DIR$/sicial.iml" />
     </modules>
   </component>
 </project>

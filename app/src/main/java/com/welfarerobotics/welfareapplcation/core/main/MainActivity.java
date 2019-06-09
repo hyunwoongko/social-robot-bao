@@ -2,14 +2,21 @@ package com.welfarerobotics.welfareapplcation.core.main;
 
 import android.media.AudioManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MotionEvent;
+import android.widget.ImageView;
+import android.widget.TextView;
+
 import com.google.firebase.database.FirebaseDatabase;
 import com.kakao.sdk.newtoneapi.SpeechRecognizerManager;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.bot.ear.EarSet;
+import com.welfarerobotics.welfareapplcation.bot.face.Detect;
+import com.welfarerobotics.welfareapplcation.bot.face.FaceHandler;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.entity.Server;
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
+import com.welfarerobotics.welfareapplcation.util.bluetooth.Bluetooth;
 import com.welfarerobotics.welfareapplcation.util.data_loader.DataLoader;
 import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;
 import com.welfarerobotics.welfareapplcation.util.touch_util.ConcreteSwipeTouchListener;
@@ -38,6 +45,16 @@ public class MainActivity extends BaseActivity {
             ear.initEar();
             onSwipeTouchListener = new ConcreteSwipeTouchListener(this, audioManager, ear::repeat);
         });
+
+
+        ImageView eyes = (ImageView)findViewById(R.id.eye);
+        ImageView mouse =(ImageView)findViewById(R.id.s_mouse);
+        TextView emotion = (TextView)findViewById(R.id.emotion);
+        Bluetooth bluetooth =Bluetooth.getInstance(this);
+        //FaceHandler handler = new FaceHandler(eyes);
+        Handler handler = new FaceHandler(eyes,emotion,mouse);
+        new Detect(handler);
+
     }
 
     @Override

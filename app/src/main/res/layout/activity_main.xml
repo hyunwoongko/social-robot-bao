@@ -1,31 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+>
 
-    <FrameLayout
-        android:id="@+id/main_frame"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <VideoView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:id="@+id/videoview"
-
-            />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <ImageView
+            android:id="@+id/back"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/face1t"
-            android:id="@+id/face"
-            android:background="@color/white" />
-    </FrameLayout>
-</android.support.constraint.ConstraintLayout>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@android:color/black" />
+
+        <TextView
+            android:id="@+id/emotion"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:textColor="@color/white"
+            android:textSize="50dp"
+            android:text="감정" />
+
+        <ImageView
+            android:id="@+id/s_mouse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="59dp"
+            app:srcCompat="@drawable/normal" />
+
+        <ImageView
+            android:id="@+id/eye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="87dp"
+            app:srcCompat="@drawable/normal_eye" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
