@@ -42,7 +42,7 @@
                 android:layout_marginTop="50dp"
                 android:gravity="center"
                 android:padding="5dp"
-                android:background="@drawable/border"
+                android:background="@drawable/border_white"
                 android:layout_gravity="center"
                 android:id="@+id/listView"
                 android:layout_height="wrap_content">
