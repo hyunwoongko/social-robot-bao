@@ -34,9 +34,9 @@ public class FallbackDataLoader implements DataLoader {
     }
 
     @Override public void load() {
-        FirebaseHelper.get().connect(FirebaseDatabase.getInstance()
+        FirebaseHelper.get().connect(
+                FirebaseDatabase.getInstance()
                 .getReference("chat")
                 .child("fallback"), this::save);
-        System.out.println(1);
     }
 }

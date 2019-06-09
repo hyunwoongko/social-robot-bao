@@ -140,6 +140,10 @@ public class MenuActivity extends AppCompatActivity {
             String name = bundle.getString("key");
             if (name != null && name.equals("FairytaleScenario")) {
                 startActivity(new Intent(getApplicationContext(), FairytaleActivity.class));
+            } else if (name.equals("CommonQuizReplay")) {
+                startActivity(new Intent(getApplicationContext(), CommonQuizActivity.class));
+            } else if (name.equals("DictationReplay")) {
+                startActivity(new Intent(getApplicationContext(), DictationActivity.class));
             }
         }
     }

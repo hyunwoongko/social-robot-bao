@@ -10,12 +10,14 @@ import android.graphics.Canvas;
 import android.graphics.Path;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.*;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
+import com.welfarerobotics.welfareapplcation.core.base.VoiceActivity;
 import com.welfarerobotics.welfareapplcation.entity.cache.TangramStageCache;
 import com.welfarerobotics.welfareapplcation.util.Sound;
 
@@ -33,7 +35,7 @@ import java.util.Random;
  * */
 
 
-public class TangramActivity extends BaseActivity {
+public class TangramActivity extends VoiceActivity {
     ImagePuzzle puzzle;
     ArrayList<ImagePiece> _board;
     LinearLayout layout;
@@ -43,6 +45,7 @@ public class TangramActivity extends BaseActivity {
     private Bitmap stageimage;
     BitmapDrawable background;
     Bitmap backBitmap;
+    private MediaPlayer mediaPlayer = new MediaPlayer();
     BitmapDrawable stage;
 
     @Override
@@ -96,24 +99,29 @@ public class TangramActivity extends BaseActivity {
         backBtn.setOnClickListener(view -> {
             myPanel._thread.setRunning(false);
             finish();
-
-
         });
 
         ImageButton leftBtn = findViewById(R.id.forbtn);
         leftBtn.setClickable(true);
         leftBtn.setOnClickListener(view -> {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = new MediaPlayer();
+            playVoice(mediaPlayer, "이번엔 다른 그림을 준비했어요!, 이 것도 맞춰볼까요?");
             Random random = new Random();
             TangramStageCache tangram;
             tangram = TangramStageCache.getInstance();
             stageimage = tangram.getImages().get(random.nextInt(tangram.getImages().size())).getStage();
             myPanel.recall();
-
         });
 
         ImageButton submitBtn = findViewById(R.id.rotatebtn);
         submitBtn.setClickable(true);
         submitBtn.setOnClickListener(view -> {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = new MediaPlayer();
+            playVoice(mediaPlayer, "조각 돌리기");
             myPanel.rotate();
         });
 
@@ -138,11 +146,6 @@ public class TangramActivity extends BaseActivity {
     @Override protected void onDestroy() {
         super.onDestroy();
         Sound.get().stop();
-    }
-
-    @Override protected void onStop() {
-        super.onStop();
-        Sound.get().clear();
     }
 
     //Disable Back button

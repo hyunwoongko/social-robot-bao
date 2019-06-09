@@ -35,8 +35,6 @@ public class ConversationEdit extends BaseActivity {
         answer = findViewById(R.id.answer_edit);
         saveview = findViewById(R.id.save_view);
         listview = findViewById(R.id.listView);
-
-
         saveview.setOnClickListener(v -> {
             qstring = question.getText().toString().trim();
             astring = answer.getText().toString().trim();

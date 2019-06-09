@@ -11,9 +11,10 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
+import com.welfarerobotics.welfareapplcation.core.base.VoiceActivity;
 import com.welfarerobotics.welfareapplcation.util.Sound;
 
-public class EmotioncardActivity extends BaseActivity {
+public class EmotioncardActivity extends VoiceActivity {
     private EmotioncardFragment emotioncardFragment = null;
     public static int emotionIndex = 1;
 

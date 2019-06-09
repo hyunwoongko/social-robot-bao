@@ -92,26 +92,4 @@ public class TangramSelecActivity extends BaseActivity {
         }
         myAdaterr.notifyDataSetChanged();
     }
-
-    @Override protected void onResume() {
-        super.onResume();
-        Sound.get().resume(this, R.raw.tangram);
-        Sound.get().loop(true);
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        Sound.get().pause();
-    }
-
-    @Override protected void onStop() {
-        super.onStop();
-        Sound.get().clear();
-    }
-
-    @Override protected void onDestroy() {
-        super.onDestroy();
-        Sound.get().stop();
-    }
 }

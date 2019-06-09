@@ -1,6 +1,7 @@
 package com.welfarerobotics.welfareapplcation.core.contents.common_sense;
 
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageButton;
@@ -9,7 +10,7 @@ import android.widget.TextView;
 import com.google.firebase.database.*;
 import com.kinda.alert.KAlertDialog;
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
+import com.welfarerobotics.welfareapplcation.core.base.VoiceActivity;
 import com.welfarerobotics.welfareapplcation.entity.Quiz;
 import com.welfarerobotics.welfareapplcation.util.Sound;
 import com.welfarerobotics.welfareapplcation.util.ToastType;
@@ -18,13 +19,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class CommonQuizActivity extends BaseActivity {
+public class CommonQuizActivity extends VoiceActivity {
     private TextView txtview;
     private List<Quiz> quizzes = new ArrayList<>();
     private Quiz currentQuiz;
     private Random random = new Random();
     private short correctAnswerCount = 0;
     private short currentQuestionCount = 0;
+    private MediaPlayer mediaPlayer = new MediaPlayer();
+    private boolean isRightAnswer = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +62,19 @@ public class CommonQuizActivity extends BaseActivity {
 
                 currentQuiz = quizzes.get(random.nextInt(quizzes.size() - 1));
                 txtview.setText(currentQuiz.getQuestion());
-                pDialog.dismissWithAnimation();
+                pDialog.changeAlertType(KAlertDialog.SUCCESS_TYPE);
+                pDialog.setTitleText("문제");
+                pDialog.setContentText("\n문제를 잘 듣고 정답을 맞춰봐요.\n\n");
+                pDialog.setCancelable(false);
+                pDialog.setConfirmText("확인");
+                pDialog.setConfirmClickListener(d -> {
+                    quizzes.remove(currentQuiz);
+                    currentQuiz = quizzes.get(random.nextInt(quizzes.size() - 1));
+                    txtview.setText(currentQuiz.getQuestion());
+                    playVoice(mediaPlayer, currentQuiz.getQuestion());
+                    pDialog.dismissWithAnimation();
+                });
+                pDialog.confirmButtonColor(R.color.confirm_button);
             }
 
             @Override
@@ -71,37 +86,63 @@ public class CommonQuizActivity extends BaseActivity {
     }
 
     private void select(boolean userAnswer) {
-        currentQuestionCount++;
-        if (currentQuiz.isAnswer() == userAnswer) {
+        isRightAnswer = currentQuiz.isAnswer() == userAnswer;
+        if (isRightAnswer) {
+            currentQuestionCount++;
             correctAnswerCount++;
-            Sound.get().effectSound(this, R.raw.dingdong);
-            showToast("정답입니다", ToastType.success);
-        } else {
-            Sound.get().effectSound(this, R.raw.beebeep);
-            showToast("오답입니다", ToastType.error);
-        }
-
-        if(currentQuestionCount == 5){
-            KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE);
-            pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
-            pDialog.setTitleText("놀이 종료");
-            pDialog.setContentText("\n정답 갯수는 " + correctAnswerCount + "개 입니다.\n게임을 다시 할까요?\n\n");
-            pDialog.setCancelable(false);
-            pDialog.setConfirmText("아니오");
-            pDialog.setConfirmClickListener(d->finish());
-            pDialog.setCancelText("예");
-            pDialog.setCancelClickListener(d->{
-                finish();
-                startActivity(getIntent());
-            });
-            pDialog.confirmButtonColor(R.color.confirm_button);
-            pDialog.cancelButtonColor(R.color.confirm_button);
-            pDialog.show();
-        }else{
             quizzes.remove(currentQuiz);
             currentQuiz = quizzes.get(random.nextInt(quizzes.size() - 1));
             txtview.setText(currentQuiz.getQuestion());
+            Sound.get().effectSound(this, R.raw.dingdong);
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = new MediaPlayer();
+            playVoice(mediaPlayer, "잘했어요. 정답입니다");
+            showToast("정답입니다", ToastType.success);
+        } else {
+            Sound.get().effectSound(this, R.raw.beebeep);
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = new MediaPlayer();
+            playVoice(mediaPlayer, "아니에요. 다시 생각해볼까요?");
+            showToast("오답입니다", ToastType.error);
         }
+
+        if (currentQuestionCount == 5) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = new MediaPlayer();
+            playVoice(mediaPlayer, "놀이 종료, 정답의 갯수는 " + correctAnswerCount + "개 입니다.");
+
+            KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE);
+            pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+            pDialog.setTitleText("놀이 종료");
+            pDialog.setContentText("\n정답 갯수는 " + correctAnswerCount + "개 입니다.\n\n");
+            pDialog.setCancelable(false);
+            pDialog.setConfirmText("확인");
+            pDialog.setConfirmClickListener(kAlertDialog -> finish());
+            pDialog.confirmButtonColor(R.color.confirm_button);
+            pDialog.show();
+        } else {
+            if (isRightAnswer) {
+                KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE);
+                pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+                pDialog.setTitleText("문제");
+                pDialog.setContentText("\n문제를 잘 듣고 정답을 맞춰봐요.\n\n");
+                pDialog.setCancelable(false);
+                pDialog.setConfirmText("확인");
+                pDialog.setConfirmClickListener(d -> {
+                    mediaPlayer.stop();
+                    mediaPlayer.release();
+                    mediaPlayer = new MediaPlayer();
+                    playVoice(mediaPlayer, currentQuiz.getQuestion());
+                    pDialog.dismissWithAnimation();
+                });
+                pDialog.confirmButtonColor(R.color.confirm_button);
+                pDialog.show();
+            }
+        }
+
     }
 
     @Override protected void onResume() {
