@@ -106,20 +106,14 @@ public final @Data class Mouth {
 
 
     public void stop(Runnable nextAction) {
-        if (audioPlayer != null) {
-            audioPlayer.setOnCompletionListener(mediaPlayer -> {
-                Handler mHandler = new Handler(Looper.getMainLooper());
-                mHandler.postDelayed(nextAction, 300);
-                audioPlayer.release();
-                audioPlayer = null;
-            });
-        }
+        audioPlayer.setOnCompletionListener(mediaPlayer -> {
+            Handler mHandler = new Handler(Looper.getMainLooper());
+            mHandler.postDelayed(nextAction, 300);
+            audioPlayer.release();
+        });
     }
 
     public void cancel() {
-        if (audioPlayer != null) {
-            audioPlayer.release();
-            audioPlayer = null;
-        }
+        audioPlayer.release();
     }
 }

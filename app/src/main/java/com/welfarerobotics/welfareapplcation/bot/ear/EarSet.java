@@ -7,8 +7,6 @@ import com.welfarerobotics.welfareapplcation.entity.Conversation;
 import com.welfarerobotics.welfareapplcation.entity.cache.UserCache;
 import com.welfarerobotics.welfareapplcation.util.Pool;
 
-import java.util.concurrent.atomic.AtomicBoolean;
-
 /**
  * @author : Hyunwoong
  * @when : 5/29/2019 10:13 AM
@@ -19,11 +17,8 @@ public class EarSet {
     private Ear rightEar = new Ear(); // 문장 디텍트
     private Attention attention = new Attention();
     private Activity activity;
-    private boolean saying;
-
-    public boolean isSaying() {
-        return saying;
-    }
+    private boolean rightOn;
+    private boolean isSaying;
 
     public EarSet(Activity activity) {
         this.activity = activity;
@@ -47,21 +42,22 @@ public class EarSet {
     }
 
     private void iniRightEar() {
-        AtomicBoolean isTeachedSpeech = new AtomicBoolean(false);
         rightEar.ifHear(s -> {// 오른쪽 귀가 들리면
+            rightOn = true;
             Pool.threadPool.execute(() -> { // 쓰레드 전환
+                boolean isTeachedSpeech = false;
                 for (Conversation c : UserCache.getInstance().getDict()) {
                     if (c.getInput().replaceAll(" ", "").trim().equals(
                             s.replaceAll(" ", "").trim())) {
-
                         Brain.hippocampus.decideToSay(c.getOutput()); // 배웠던 말을 그대로 입력
-                        Mouth.get().say(); // 말하기
-                        Mouth.get().stop(() -> rightEar.hear()); // 오른쪽 귀 다시 듣기
-                        isTeachedSpeech.set(true); // 다음 단계로 진행하지 않음.
+                        isTeachedSpeech = true;
                         break;
                     }
                 }
-                if (!isTeachedSpeech.get()) { // 배운말이 아니면
+                if (isTeachedSpeech) {
+                    Mouth.get().say();
+                    Mouth.get().stop(() -> rightEar.hear());
+                } else {
                     Brain.thinkAndSay(s, activity); // 뇌에서 생각해서 말하기
                     Mouth.get().stop(() -> rightEar.hear()); // 오른쪽 귀 다시 듣기
                 }
@@ -72,6 +68,7 @@ public class EarSet {
             blockHear();
             attention.block(activity); // 어텐션 비활성화
             leftEar.hearAgain();
+            rightOn = false;
         });
     }
 
@@ -85,14 +82,12 @@ public class EarSet {
     }
 
     public void repeat() {
-        if (!saying) {
+        if (!isSaying && !rightOn) {
+            isSaying = true;
             blockHear();
-            saying = true;
             Mouth.get().play(Brain.hippocampus.getThoughtSentence());
-            Mouth.get().stop(() -> {
-                leftEar.hearAgain();
-                saying = false;
-            });
+            Mouth.get().stop(() -> leftEar.hear());
+            isSaying = false;
         }
     }
 }

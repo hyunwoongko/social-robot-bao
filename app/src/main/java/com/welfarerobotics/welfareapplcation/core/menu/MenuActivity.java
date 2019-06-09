@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageButton;
-import android.widget.Toast;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.crawler.YoutubeApi;
 import com.welfarerobotics.welfareapplcation.core.contents.common_sense.CommonQuizActivity;
@@ -18,7 +17,6 @@ import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleActivity;
 import com.welfarerobotics.welfareapplcation.core.settings.SettingActivity;
 import com.welfarerobotics.welfareapplcation.core.youtube.YoutubeActivity;
 import com.welfarerobotics.welfareapplcation.util.Pool;
-import es.dmoral.toasty.Toasty;
 import me.piruin.quickaction.ActionItem;
 import me.piruin.quickaction.QuickAction;
 
@@ -140,10 +138,6 @@ public class MenuActivity extends AppCompatActivity {
             String name = bundle.getString("key");
             if (name != null && name.equals("FairytaleScenario")) {
                 startActivity(new Intent(getApplicationContext(), FairytaleActivity.class));
-            } else if (name.equals("CommonQuizReplay")) {
-                startActivity(new Intent(getApplicationContext(), CommonQuizActivity.class));
-            } else if (name.equals("DictationReplay")) {
-                startActivity(new Intent(getApplicationContext(), DictationActivity.class));
             }
         }
     }
