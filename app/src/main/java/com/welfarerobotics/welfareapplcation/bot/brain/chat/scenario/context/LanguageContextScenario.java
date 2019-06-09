@@ -1,7 +1,7 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.context;
 
 import com.welfarerobotics.welfareapplcation.bot.brain.Oblivion;
-import com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.skills.WeatherScenario;
+import com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.skills.TranslateScenario;
 
 import java.io.IOException;
 
@@ -12,6 +12,6 @@ import java.io.IOException;
  */
 public class LanguageContextScenario {
     public static void process(String speech) throws IOException {
-        WeatherScenario.process(speech, true, Oblivion::forgetLang);
+        TranslateScenario.process(speech, Oblivion::forgetLang);
     }
 }
