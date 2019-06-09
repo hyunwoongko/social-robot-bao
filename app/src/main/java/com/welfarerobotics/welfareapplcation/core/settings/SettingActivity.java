@@ -24,6 +24,7 @@ public class SettingActivity extends PreferenceActivity {
         Preference SetupWifi = findPreference("SetupWifi");
         Preference TeachSentenceMenu = findPreference("TeachSentencesMenu");
         Preference Alarm = findPreference("Alarm");
+        Preference ICMenu = findPreference("InitConversationMenu");
 
         Alarm.setOnPreferenceClickListener(p->{
             startActivity(new Intent(this, AlarmActivity.class));
@@ -36,6 +37,10 @@ public class SettingActivity extends PreferenceActivity {
 
         TeachSentenceMenu.setOnPreferenceClickListener(preference -> {
             startActivity(new Intent(this, ConversationEdit.class));
+            return false;
+        });
+        ICMenu.setOnPreferenceClickListener(p->{
+            startActivity(new Intent(this, InitConversationMenuActivity.class));
             return false;
         });
 
@@ -53,7 +58,6 @@ public class SettingActivity extends PreferenceActivity {
 
         });
     }
-
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {

@@ -27,6 +27,8 @@ public final class AddEditAlarmActivity extends AbstractAlarmActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // 뒤로가기 버튼, 디폴트로 true만 해도 백버튼이 생김
+        getSupportActionBar().setTitle("알람 추가");
         setContentView(R.layout.activity_edit_alarm);
 
         final Alarm alarm = getAlarm();
@@ -78,7 +80,6 @@ public final class AddEditAlarmActivity extends AbstractAlarmActivity {
         }
         return getString(titleResId);
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 

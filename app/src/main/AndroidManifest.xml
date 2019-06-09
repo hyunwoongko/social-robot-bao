@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.welfarerobotics.welfareapplcation">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.welfarerobotics.welfareapplcation">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <!--블루투스 권한-->
@@ -25,116 +25,120 @@
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 
     <application
-        android:allowBackup="false"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/AppTheme"
-        tools:targetApi="m"
-        tools:replace="android:icon">
+            android:allowBackup="false"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:usesCleartextTraffic="true"
+            android:theme="@style/AppTheme"
+            tools:targetApi="m"
+            tools:replace="android:icon">
 
         <activity
-            android:name=".core.initial.SplashActivity"
-            android:screenOrientation="landscape">
+                android:name=".core.initial.SplashActivity"
+                android:screenOrientation="landscape">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity> <!-- 스플래시 -->
 
 
         <activity
-            android:name=".core.main.MainActivity"
-            android:screenOrientation="landscape" />
+                android:name=".core.main.MainActivity"
+                android:screenOrientation="landscape" />
         <activity
-            android:name=".core.initial.GreetingActivity"
-            android:screenOrientation="landscape" />
+                android:name=".core.initial.GreetingActivity"
+                android:screenOrientation="landscape" />
         <activity
-            android:name=".core.youtube.YoutubeActivity"
-            android:theme="@android:style/Theme.Dialog" />
+                android:name=".core.youtube.YoutubeActivity"
+                android:theme="@android:style/Theme.Dialog" />
         <activity
-            android:name=".core.settings.WifiActivity"
-            android:screenOrientation="landscape" />
+                android:name=".core.settings.WifiActivity"
+                android:screenOrientation="landscape" />
         <activity
-            android:name=".core.menu.MenuActivity"
-            android:screenOrientation="landscape"></activity>
+                android:name=".core.menu.MenuActivity"
+                android:screenOrientation="landscape">
+        </activity>
         <activity
-            android:name=".core.settings.SettingActivity"
-            android:screenOrientation="landscape" />
+                android:name=".core.settings.SettingActivity"
+                android:screenOrientation="landscape" />
         <activity
-            android:name=".core.settings.LocSettingsActivity"
-            android:screenOrientation="landscape" />
+                android:name=".core.settings.LocSettingsActivity"
+                android:screenOrientation="landscape" />
         <activity
-            android:name=".core.initial.InitialSettingActivity"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation" />
+                android:name=".core.settings.InitConversationMenuActivity"
+                android:screenOrientation="landscape" />
         <activity
-            android:name=".core.fairytale.FairytaleActivity"
-            android:theme="@android:style/Theme.Dialog" />
+                android:name=".core.initial.InitialSettingActivity"
+                android:screenOrientation="landscape"
+                android:configChanges="orientation" />
         <activity
-            android:name=".core.initial.InitialBluetoothActivity"
-            android:screenOrientation="landscape" />
+                android:name=".core.fairytale.FairytaleActivity"
+                android:theme="@android:style/Theme.Dialog" />
         <activity
-            android:name=".core.initial.InitialWifiActivity"
-            android:screenOrientation="landscape" />
+                android:name=".core.initial.InitialBluetoothActivity"
+                android:screenOrientation="landscape" />
         <activity
-            android:name=".core.contents.tangram.TangramActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="landscape" />
+                android:name=".core.initial.InitialWifiActivity"
+                android:screenOrientation="landscape" />
         <activity
-            android:name=".core.contents.paintwith.PaintWithActivity"
-            android:screenOrientation="landscape" />
+                android:name=".core.contents.tangram.TangramActivity"
+                android:label="@string/app_name"
+                android:screenOrientation="landscape" />
         <activity
-            android:name=".core.contents.dictation.DictationActivity"
-            android:screenOrientation="landscape" />
+                android:name=".core.contents.paintwith.PaintWithActivity"
+                android:screenOrientation="landscape" />
         <activity
-            android:name=".core.settings.BluetoothActivity"
-            android:screenOrientation="landscape" />
+                android:name=".core.contents.dictation.DictationActivity"
+                android:screenOrientation="landscape" />
         <activity
-            android:name=".core.contents.tangram.TangramSelecActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="landscape" />
+                android:name=".core.settings.BluetoothActivity"
+                android:screenOrientation="landscape" />
         <activity
-            android:name=".core.contents.flashcard.FlashcardActivity"
-            android:screenOrientation="landscape" />
+                android:name=".core.contents.tangram.TangramSelecActivity"
+                android:label="@string/app_name"
+                android:screenOrientation="landscape" />
         <activity
-            android:name=".core.contents.emotioncard.EmotioncardActivity"
-            android:screenOrientation="landscape" />
+                android:name=".core.contents.flashcard.FlashcardActivity"
+                android:screenOrientation="landscape" />
         <activity
-            android:name=".core.contents.common_sense.CommonQuizActivity"
-            android:screenOrientation="landscape" />
+                android:name=".core.contents.emotioncard.EmotioncardActivity"
+                android:screenOrientation="landscape" />
+        <activity
+                android:name=".core.contents.common_sense.CommonQuizActivity"
+                android:screenOrientation="landscape" />
 
         <activity
-            android:name=".core.menu.ConversationList"
-            android:screenOrientation="landscape" />
+                android:name=".core.menu.ConversationList"
+                android:screenOrientation="landscape" />
 
         <activity
-            android:name=".core.menu.ConversationEdit"
-            android:screenOrientation="landscape" />
+                android:name=".core.menu.ConversationEdit"
+                android:screenOrientation="landscape" />
         <activity
-            android:name=".core.alarm.AddEditAlarmActivity"
-            android:screenOrientation="landscape" />
+                android:name=".core.alarm.AddEditAlarmActivity"
+                android:screenOrientation="landscape" />
         <activity
-            android:name=".core.alarm.AlarmActivity"
-            android:screenOrientation="landscape" />
+                android:name=".core.alarm.AlarmActivity"
+                android:screenOrientation="landscape" />
         <activity
-            android:name=".core.alarm.AlarmLandingPageActivity"
-            android:screenOrientation="landscape" />
+                android:name=".core.alarm.AlarmLandingPageActivity"
+                android:screenOrientation="landscape" />
 
         <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.bignerdranch.android.test.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
+                android:name="android.support.v4.content.FileProvider"
+                android:authorities="com.bignerdranch.android.test.fileprovider"
+                android:exported="false"
+                android:grantUriPermissions="true">
             <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/filepaths" />
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/filepaths" />
         </provider>
         <meta-data
-            android:name="com.kakao.sdk.AppKey"
-            android:value="@string/kakao_app_key" />
+                android:name="com.kakao.sdk.AppKey"
+                android:value="@string/kakao_app_key" />
 
 
         <service android:name=".core.alarm.LoadAlarmsService" />

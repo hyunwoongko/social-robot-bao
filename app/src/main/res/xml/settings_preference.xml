@@ -3,32 +3,24 @@
     <Preference
             android:key="BackButton"
             android:title="←  설정"/>
+
     <Preference
             android:key="SetupWifi"
             android:title="Wi-Fi 설정"/>
-
 
     <Preference
         android:key="TeachSentencesMenu"
         android:title="말 학습시키기">
     </Preference>
 
-
     <Preference
         android:key="Alarm"
         android:title="알람 설정하기">
     </Preference>
 
-    <PreferenceScreen
+    <Preference
             android:key="InitConversationMenu"
             android:title="먼저 말걸기">
-        <PreferenceCategory android:title="먼저 말걸기"/>
-        <SwitchPreference
-                android:defaultValue="false"
-                android:key="ToggleInitConversation"
-                android:title="말걸기 기능 전환"
-                android:summaryOff="말걸기 기능이 꺼져 있습니다"
-                android:summaryOn="말걸기 기능이 켜져 있습니다"/>
-    </PreferenceScreen>
+    </Preference>
 
 </PreferenceScreen>
