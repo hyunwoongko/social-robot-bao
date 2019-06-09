@@ -1,13 +1,19 @@
 package com.welfarerobotics.welfareapplcation.core.contents.dictation;
 
 import android.graphics.Color;
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.firebase.database.*;
 import com.kinda.alert.KAlertDialog;
 import com.myscript.atk.scw.SingleCharWidget;
@@ -29,22 +35,22 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
     private MyScriptBuilder builder;
     private SingleCharWidgetApi widget;
     private String[] quiz;
-    private String text = null;
     private String currentDictation;
     private Random random = new Random();
     private short currentQuestionCount = 1;
     private MediaPlayer mediaPlayer = new MediaPlayer();
-    private String imageURL;
+    private ImageView hintImage;
+    private ImageCrawler imageCrawler = new ImageCrawler();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dictation);
-        ImageButton submit = findViewById(R.id.submit_btn);
         ImageButton clear = findViewById(R.id.clear_btn);
         ImageButton speaker = findViewById(R.id.speaker_btn);
         ImageButton backbtn = findViewById(R.id.backbutton);
-        //ImageView image = findViewById(R.id.image_dictation);
+        ImageButton hint = findViewById(R.id.hint_btn);
+        hintImage = findViewById(R.id.hint_image);
 
         KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE);
         pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
@@ -82,25 +88,19 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
         pDialog2.setConfirmText("예");
         pDialog2.confirmButtonColor(R.color.confirm_button);
         pDialog2.setConfirmClickListener(kAlertDialog -> {
+            try {
+                Glide
+                        .with(this)
+                        .load(imageCrawler.crawler(currentDictation))
+                        .into(hintImage);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             speak();
             kAlertDialog.dismissWithAnimation();
         });
         pDialog2.setCancelable(false);
         pDialog2.show();
-
-        //TODO
-        /*
-        try {
-            imageURL = ImageCrawler.crawler(currentDictation);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Glide
-                .with(this)
-                .load(imageURL)
-                .apply(new RequestOptions().override(300,300))
-                .into(image);
-         */
 
         widget = (SingleCharWidget) findViewById(R.id.widget);
         widget.setOnTextChangedListener(this);
@@ -110,15 +110,9 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
 
         /*위젯 설정*/
 
-        submit.setOnClickListener(view -> {
-            if (text != null) // null 체크
-                Toasty.success(this, "입력한 단어 : " + text, Toast.LENGTH_SHORT).show();
-        });
-
         clear.setOnClickListener(view -> {
             Toasty.info(this, "초기화합니다.", Toast.LENGTH_SHORT).show();
             widget.clear();
-            text = null;
         });
 
         speaker.setOnClickListener(view -> {
@@ -127,11 +121,25 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
 
         backbtn.setOnClickListener(view -> onBackPressed());
 
+        hint.setOnTouchListener((v, event) -> {
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    hintImage.setVisibility(View.VISIBLE);
+                    return true;
+
+                case MotionEvent.ACTION_MOVE:
+                    return true;
+
+                case MotionEvent.ACTION_UP:
+                    hintImage.setVisibility(View.INVISIBLE);
+                    return false;
+            }
+            return false;
+        });
     }
 
     @Override
     public void onTextChanged(SingleCharWidgetApi singleCharWidgetApi, String s, boolean b) {
-        text = s;
         System.out.println(s);
         System.out.println(currentDictation);
         if (s.contains(currentDictation)) {
@@ -169,6 +177,15 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
             pDialog2.setConfirmText("예");
             pDialog2.confirmButtonColor(R.color.confirm_button);
             pDialog2.setConfirmClickListener(kAlertDialog -> {
+                try {
+                    Glide
+                            .with(this)
+                            .load(imageCrawler.crawler(currentDictation))
+                            .apply(new RequestOptions().override(300, 300))
+                            .into(hintImage);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 speak();
                 kAlertDialog.dismissWithAnimation();
             });
@@ -258,18 +275,21 @@ public class DictationActivity extends BaseActivity implements SingleCharWidgetA
     }
 
 
-    @Override protected void onResume() {
+    @Override
+    protected void onResume() {
         super.onResume();
         Sound.get().resume(this, R.raw.dictation);
         Sound.get().loop(true);
     }
 
-    @Override protected void onPause() {
+    @Override
+    protected void onPause() {
         super.onPause();
         Sound.get().pause();
     }
 
-    @Override protected void onDestroy() {
+    @Override
+    protected void onDestroy() {
         super.onDestroy();
         Sound.get().stop();
     }
