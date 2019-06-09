@@ -11,7 +11,7 @@ def get_youtube(song_name):
     html_doc = urlopen(url)
     soup = bs4.BeautifulSoup(html_doc, 'html.parser')
     link = soup.findAll('div', attrs={'class': 'yt-lockup-dismissable'})
-    idx = random.randint(0, 5)
+    idx = random.randint(0, 8)
     link = 'https://www.youtube.com/' + link[idx].find('h3').find('a')['href']
 
     # _filename = 'song'
