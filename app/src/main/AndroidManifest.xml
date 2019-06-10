@@ -120,6 +120,9 @@
         <activity
             android:name=".core.alarm.AlarmLandingPageActivity"
             android:screenOrientation="landscape" />
+        <activity
+            android:name=".core.settings.InitConversationMenuActivity"
+            android:screenOrientation="landscape" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
