@@ -43,6 +43,19 @@
                 android:scaleType="fitXY"
                 android:src="@drawable/menu_backbutton"/>
 
+        <TextView
+                android:id="@+id/dictation_write"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/hint_btn"
+                android:layout_toEndOf="@id/backbutton"
+                android:gravity="center"
+                android:fontFamily="@font/baemin"
+                android:textSize="30sp"
+                />
+
         <ImageView
                 android:id="@+id/hint_image"
                 android:layout_width="200dp"
@@ -52,7 +65,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_toStartOf="@+id/hint_btn"
                 android:background="@color/float_transparent"
-                android:visibility="invisible"/>
+                android:scaleType="fitXY"
+                android:visibility="invisible"
+                android:src="@drawable/hint_notload"/>
 
         <ImageButton
                 android:id="@+id/hint_btn"
