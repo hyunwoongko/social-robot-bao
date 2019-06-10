@@ -49,9 +49,15 @@ public class Cochlea implements SpeechRecognizeListener {
     }
 
     @Override public void onResults(Bundle results) {
-        ArrayList<String> matches =
+        ArrayList<String> words =
                 results.getStringArrayList(SpeechRecognizerClient.KEY_RECOGNITION_RESULTS);
-        String speech = matches.get(0); //0번이 가장 다듬어진 문장
+        String speech = words.get(0); //0번이 가장 다듬어진 문장
+
+        ArrayList<Integer> confidence =
+                results.getIntegerArrayList(SpeechRecognizerClient.KEY_CONFIDENCE_VALUES);
+
+        System.out.println("CONFIDENCE : " + confidence.get(0));
+
         success.accept(speech);
     }
 
@@ -60,6 +66,5 @@ public class Cochlea implements SpeechRecognizeListener {
     }
 
     @Override public void onFinished() {
-
     }
 }

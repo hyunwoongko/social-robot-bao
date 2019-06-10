@@ -48,7 +48,7 @@ public @Getter class Hippocampus {
     }
 
     public void decideToSay(String thoughtSentence) {
-        this.thoughtSentence = NameReplacer.replaceName(thoughtSentence);
+        this.thoughtSentence = thoughtSentence;
     }
 }
 

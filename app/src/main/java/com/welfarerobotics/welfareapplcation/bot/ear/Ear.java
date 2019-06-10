@@ -18,7 +18,10 @@ public class Ear {
     private Handler handler = new Handler();
 
     public Ear() {
-        earCanal = new SpeechRecognizerClient.Builder().setServiceType(SpeechRecognizerClient.SERVICE_TYPE_DICTATION).build();
+        earCanal = new SpeechRecognizerClient.Builder()
+                .setServiceType(SpeechRecognizerClient.SERVICE_TYPE_WEB)
+                .setGlobalTimeOut(60)
+                .build();
         cochlea = new Cochlea();
     }
 
@@ -37,7 +40,7 @@ public class Ear {
     }
 
     public void hearAgain() {
-        handler.postDelayed(this::hear, 100);
+        handler.postDelayed(this::hear, 150);
     }
 
     public void block() {

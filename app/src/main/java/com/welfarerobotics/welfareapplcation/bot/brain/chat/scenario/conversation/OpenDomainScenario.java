@@ -3,6 +3,7 @@ package com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.conversati
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
 import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.crawler.ModelApi;
+import com.welfarerobotics.welfareapplcation.bot.brain.chat.preprocess.NameReplacer;
 
 import java.io.IOException;
 
@@ -14,7 +15,7 @@ import java.io.IOException;
 public class OpenDomainScenario {
     public static void process(String intent, String speech) throws IOException {
         String answer = ModelApi.getOpenDomainAnswer(speech);
-        Brain.hippocampus.decideToSay(answer);
+        Brain.hippocampus.decideToSay(NameReplacer.replaceName(answer));
         Mouth.get().say();
     }
 }
