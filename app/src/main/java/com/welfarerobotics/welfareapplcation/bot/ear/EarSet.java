@@ -7,6 +7,9 @@ import com.welfarerobotics.welfareapplcation.entity.Conversation;
 import com.welfarerobotics.welfareapplcation.entity.cache.UserCache;
 import com.welfarerobotics.welfareapplcation.util.Pool;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 /**
  * @author : Hyunwoong
  * @when : 5/29/2019 10:13 AM
@@ -82,12 +85,17 @@ public class EarSet {
     }
 
     public void repeat() {
-        if (!isSaying && !rightOn) {
-            isSaying = true;
-            blockHear();
-            Mouth.get().play(Brain.hippocampus.getThoughtSentence());
-            Mouth.get().stop(() -> leftEar.hear());
-            isSaying = false;
-        }
+        Pool.threadPool.execute(()->{
+            if (!isSaying && !rightOn) {
+                isSaying = true;
+                blockHear();
+                Mouth.get().play(Brain.hippocampus.getThoughtSentence());
+                Mouth.get().stop(() -> {
+                    leftEar.hear();
+                    isSaying = false;
+                });
+
+            }
+        });
     }
 }

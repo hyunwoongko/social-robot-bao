@@ -17,6 +17,7 @@ public final @Data class Mouth {
     private static Mouth api = null;
     private MediaPlayer audioPlayer = new MediaPlayer();
     private String speaker = "jinho";
+    private Runnable r;
 
     private Mouth() {
 
@@ -79,37 +80,33 @@ public final @Data class Mouth {
                 br.close();
                 System.out.println(response.toString());
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        String tempname = "navercssfile";
-        String Path_to_file = Environment.getExternalStorageDirectory() +
-                File.separator + "NaverCSS/" + tempname + ".mp3";
-
-        audioPlayer = new MediaPlayer();
-
-        try {
+            String tempname = "navercssfile";
+            String Path_to_file = Environment.getExternalStorageDirectory() +
+                    File.separator + "NaverCSS/" + tempname + ".mp3";
+            audioPlayer = new MediaPlayer();
             audioPlayer.setDataSource(Path_to_file);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
             audioPlayer.prepare();
+            audioPlayer.start();
+            setSpeaker("jinho"); // 다시 진호로 바꿈
         } catch (IOException e) {
-            e.printStackTrace();
+            stop(r);
         }
-        audioPlayer.start();
-        setSpeaker("jinho"); // 다시 진호로 바꿈
         return this;
     }
 
 
     public void stop(Runnable nextAction) {
+        r = nextAction;
         audioPlayer.setOnCompletionListener(mediaPlayer -> {
             Handler mHandler = new Handler(Looper.getMainLooper());
             mHandler.postDelayed(nextAction, 300);
             audioPlayer.release();
+        });
+        audioPlayer.setOnErrorListener((mp, what, extra) -> {
+            Handler mHandler = new Handler(Looper.getMainLooper());
+            mHandler.postDelayed(nextAction, 300);
+            audioPlayer.release();
+            return false;
         });
     }
 

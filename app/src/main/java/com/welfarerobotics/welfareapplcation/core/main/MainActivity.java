@@ -1,5 +1,8 @@
 package com.welfarerobotics.welfareapplcation.core.main;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.os.Bundle;
@@ -7,7 +10,6 @@ import android.os.Handler;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.google.firebase.database.FirebaseDatabase;
 import com.kakao.sdk.newtoneapi.SpeechRecognizerManager;
 import com.welfarerobotics.welfareapplcation.R;
@@ -37,11 +39,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
         refresh_view = (ImageView) findViewById(R.id.refresh);
-        refresh_view.setOnClickListener(view -> {
-            finish();
-            Intent intent = new Intent(this, SplashActivity.class);
-            startActivity(intent);
-        });
+        refresh_view.setOnClickListener(view -> this.refresh());
         SpeechRecognizerManager.getInstance().initializeLibrary(this);
 
         FirebaseHelper.get().connect(FirebaseDatabase
@@ -55,13 +53,12 @@ public class MainActivity extends BaseActivity {
             onSwipeTouchListener = new ConcreteSwipeTouchListener(this, audioManager, ear::repeat);
         });
 
-
-        ImageView eyes = (ImageView)findViewById(R.id.eye);
-        ImageView mouse =(ImageView)findViewById(R.id.s_mouse);
-        TextView emotion = (TextView)findViewById(R.id.emotion);
-        Bluetooth bluetooth =Bluetooth.getInstance(this);
+        ImageView eyes = (ImageView) findViewById(R.id.eye);
+        ImageView mouse = (ImageView) findViewById(R.id.s_mouse);
+        TextView emotion = (TextView) findViewById(R.id.emotion);
+        Bluetooth bluetooth = Bluetooth.getInstance(this);
         //FaceHandler handler = new FaceHandler(eyes);
-        Handler handler = new FaceHandler(eyes,emotion,mouse);
+        Handler handler = new FaceHandler(eyes, emotion, mouse, this);
         new Detect(handler);
 
     }
@@ -87,9 +84,27 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        if(onSwipeTouchListener != null){
+        float fingerX = ev.getX();
+        float fingerY = ev.getY();
+
+        float rfButtonX = refresh_view.getX();
+        float rfButtonY = refresh_view.getY();
+
+        if (Math.abs(fingerX - rfButtonX) < 75 && Math.abs(fingerY - rfButtonY) < 75) {
+            refresh();
+        } else if (onSwipeTouchListener != null) {
             onSwipeTouchListener.getGestureDetector().onTouchEvent(ev);
         }
         return super.dispatchTouchEvent(ev);
+    }
+
+    private void refresh() {
+        Intent mStartActivity = new Intent(this, SplashActivity.class);
+        int mPendingIntentId = 123456;
+        PendingIntent mPendingIntent = PendingIntent.getActivity(this, mPendingIntentId, mStartActivity,
+                PendingIntent.FLAG_CANCEL_CURRENT);
+        AlarmManager mgr = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
+        mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 10, mPendingIntent);
+        System.exit(0);
     }
 }

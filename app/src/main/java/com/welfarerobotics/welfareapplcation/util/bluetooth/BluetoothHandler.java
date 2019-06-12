@@ -1,33 +1,34 @@
 package com.welfarerobotics.welfareapplcation.util.bluetooth;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.widget.ArrayAdapter;
-
 import com.welfarerobotics.welfareapplcation.bot.face.Coordinate;
 import com.welfarerobotics.welfareapplcation.bot.face.Eye;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
 
-public class BluetoothHandler extends Handler{
+public class BluetoothHandler extends Handler {
     private ArrayAdapter<String> mConversationArrayAdapter;
     private BluetoothData data;
     private String mConnectedDeviceName = null;
     static String currentStatus = "not connected";
     private BluetoothChatService mChatService = null;
     private StringBuffer mOutStringBuffer;
+    private Activity context;
 
-   public BluetoothHandler(BluetoothData data,ArrayAdapter<String>mConversationArrayAdapter,BluetoothChatService mChatService){
-
+    public BluetoothHandler(BluetoothData data, ArrayAdapter<String> mConversationArrayAdapter, BluetoothChatService mChatService, Activity context) {
         this.data = data;
-        this.mConversationArrayAdapter =mConversationArrayAdapter;
-        this.mChatService =mChatService;
-       mOutStringBuffer = new StringBuffer("");
-
+        this.mConversationArrayAdapter = mConversationArrayAdapter;
+        this.mChatService = mChatService;
+        mOutStringBuffer = new StringBuffer("");
+        this.context = context;
     }
+
     @Override
     public void handleMessage(Message msg) {
         switch (msg.what) {
@@ -61,29 +62,29 @@ public class BluetoothHandler extends Handler{
 //                    String readMessage = new String(readBuf);
                 String readMessage = (String) msg.obj;
                 Log.d("블루투스 통신", "readMessage = " + readMessage);
-                if(readMessage.contains("Emotion")) {
+                if (readMessage.contains("Emotion")) {
                     String replace = readMessage.replace("Emotion:", "");
                     Log.d("감정왔음:", "readMessage = " + replace);
-                    Eye.getEye().seeEmotion(replace);
-                }else if(readMessage.contains("Cordinate")){
+                    Eye.getEye(context).seeEmotion(replace);
+                } else if (readMessage.contains("Cordinate")) {
                     String replace = readMessage.replace("Cordinate:", "");
-                    String cordinates[]=replace.split(",");
+                    String cordinates[] = replace.split(",");
                     Coordinate coordinate = new Coordinate();
 
-                    cordinates[0]= cordinates[0].replace("height:","");
-                    cordinates[1]= cordinates[1].replace("width:","");
-                    cordinates[2]= cordinates[2].replace("left:","");
-                    cordinates[3]= cordinates[3].replace("top:","");
-                    cordinates[3]= cordinates[3].replace("l","");
+                    cordinates[0] = cordinates[0].replace("height:", "");
+                    cordinates[1] = cordinates[1].replace("width:", "");
+                    cordinates[2] = cordinates[2].replace("left:", "");
+                    cordinates[3] = cordinates[3].replace("top:", "");
+                    cordinates[3] = cordinates[3].replace("l", "");
                     //Log.d("각도왔음:", "readMessage = " + cordinates[0]+cordinates[1]+cordinates[2]+cordinates[3]);
-                    try{
+                    try {
                         coordinate.setHeight(Integer.parseInt(cordinates[0]));
                         coordinate.setWidth(Integer.parseInt(cordinates[1]));
                         coordinate.setLeft(Integer.parseInt(cordinates[2]));
                         coordinate.setTop(Integer.parseInt(cordinates[3]));
-                        Eye.getEye().seeCoordinate(coordinate);
+                        Eye.getEye(context).see(coordinate.getLeft(), 0.25f);
 
-                    }catch (Exception e){
+                    } catch (Exception e) {
 
 
                     }
@@ -128,14 +129,13 @@ public class BluetoothHandler extends Handler{
         }
 
 
-
-
     }
 
-    public void setmChatService(BluetoothChatService mChatService){
+    public void setmChatService(BluetoothChatService mChatService) {
 
-       this.mChatService =mChatService;
+        this.mChatService = mChatService;
     }
+
     /**
      * Sends a message.
      *
@@ -157,7 +157,7 @@ public class BluetoothHandler extends Handler{
             mOutStringBuffer.setLength(0);
 //            mOutEditText.setText(mOutStringBuffer); 수신받은내용을 출력해주는부분
             //Toast.makeText(this, mOutStringBuffer, Toast.LENGTH_SHORT).show();
-           // emtion_status = mOutStringBuffer.toString();
+            // emtion_status = mOutStringBuffer.toString();
         }
     }
 
@@ -165,7 +165,7 @@ public class BluetoothHandler extends Handler{
     public void sendMessage(String SSID, String PWD) {
         // Check that we're actually connected before trying anything
         if (mChatService.getState() != BluetoothChatService.STATE_CONNECTED) {
-           // Toast.makeText(this, "BT not connected", Toast.LENGTH_SHORT).show();
+            // Toast.makeText(this, "BT not connected", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -185,7 +185,7 @@ public class BluetoothHandler extends Handler{
             // Reset out string buffer to zero and clear the edit text field
             mOutStringBuffer.setLength(0);
 //            mOutEditText.setText(mOutStringBuffer); 수신받은내용을 출력해주는부분
-          //  Toast.makeText(this, mOutStringBuffer, Toast.LENGTH_SHORT).show();
+            //  Toast.makeText(this, mOutStringBuffer, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -207,24 +207,24 @@ public class BluetoothHandler extends Handler{
             //Toast.makeText(getActivity(), "result: "+result+", IP: "+ip, Toast.LENGTH_LONG).show();
 
             if (!result.equals("SUCCESS")) {
-             //   Toast.makeText(this, "FAIL", Toast.LENGTH_LONG).show();
+                //   Toast.makeText(this, "FAIL", Toast.LENGTH_LONG).show();
             } else {
-               // Toast.makeText(this, "SUCCESS", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(this, "SUCCESS", Toast.LENGTH_SHORT).show();
 //                Toast.makeText(getActivity(),getString(R.string.config_success) + ip,Toast.LENGTH_LONG).show();
             }
         } catch (JSONException e) {
             // error handling
-          //  Toast.makeText(this, "SOMETHING WENT WRONG", Toast.LENGTH_LONG).show();
+            //  Toast.makeText(this, "SOMETHING WENT WRONG", Toast.LENGTH_LONG).show();
         }
     }
 
-        public boolean isJson (String str){
-            try {
-                new JSONObject(str);
-            } catch (JSONException ex) {
-                return false;
-            }
-            return true;
+    public boolean isJson(String str) {
+        try {
+            new JSONObject(str);
+        } catch (JSONException ex) {
+            return false;
         }
-
+        return true;
     }
+
+}

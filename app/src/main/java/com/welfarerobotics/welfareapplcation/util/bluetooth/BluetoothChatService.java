@@ -22,6 +22,7 @@ package com.welfarerobotics.welfareapplcation.util.bluetooth;
  * Created by yubo on 7/11/17.
  */
 
+import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothServerSocket;
@@ -81,10 +82,9 @@ public class BluetoothChatService {
     /**
      * Constructor. Prepares a new BluetoothChat session.
      *
-     * @param context The UI Activity Context
      * @param handler A Handler to send messages back to the UI Activity
      */
-    public BluetoothChatService(Context context, BluetoothHandler handler) {
+    public BluetoothChatService(Activity context, BluetoothHandler handler) {
         mAdapter = BluetoothAdapter.getDefaultAdapter();
         mState = STATE_NONE;
         mNewState = mState;

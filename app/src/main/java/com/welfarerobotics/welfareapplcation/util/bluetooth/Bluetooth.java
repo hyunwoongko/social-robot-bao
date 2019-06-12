@@ -1,5 +1,6 @@
 package com.welfarerobotics.welfareapplcation.util.bluetooth;
 
+import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
@@ -30,28 +31,22 @@ public class Bluetooth {
     /*
     싱글톤의 변형임. 처음 메인에다가 박아두고 다른 액티비티에서 사용할 때는 Context로 안받고 사용하면 됨.
     */
-    public static Bluetooth getInstance(Context context){
+    public static Bluetooth getInstance(Activity activity){
         if(bluetooth==null){
-            bluetooth = new Bluetooth(context);
+            bluetooth = new Bluetooth(activity);
 
         }
         return  bluetooth;
     }
 
     public static Bluetooth getInstance(){
-
-
         return bluetooth;
-
-
     }
 
 
-    public Bluetooth(Context context) {
-
+    public Bluetooth(Activity activity) {
         data = new BluetoothData(false, false);
-
-        mConversationArrayAdapter = new ArrayAdapter<String>(context, R.layout.message) {
+        mConversationArrayAdapter = new ArrayAdapter<String>(activity, R.layout.message) {
             @NonNull
             @Override
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -73,10 +68,10 @@ public class Bluetooth {
         // Get the device MAC address
         String address = "B8:27:EB:16:AE:38";/*승민이형 바꿔주세요*/
         // Get the BluetoothDevice object
-        handler = new BluetoothHandler(data, mConversationArrayAdapter,mChatService);
+        handler = new BluetoothHandler(data, mConversationArrayAdapter,mChatService, activity);
         BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);
         // Attempt to connect to the device'
-        mChatService = new BluetoothChatService(context, handler);
+        mChatService = new BluetoothChatService(activity, handler);
         mChatService.connect(device, true);
 
 

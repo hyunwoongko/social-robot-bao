@@ -1,9 +1,13 @@
 package com.welfarerobotics.welfareapplcation.bot.face;
 
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Handler;
 import android.util.Log;
 import android.widget.ImageView;
+import com.welfarerobotics.welfareapplcation.R;
+import com.welfarerobotics.welfareapplcation.util.Pool;
 
 import java.util.concurrent.Executors;
 
@@ -21,60 +25,41 @@ public class Eye {
     private final float weightX = 1.0f;
     private final float weightY = 0.5f;
     private static Handler sightHandler = new Handler();
-    public static Eye getEye(){
-        if(eye==null){
-            eye = new Eye();
+    private Activity activity;
 
+    public Eye(Activity activity) {
+        this.activity = activity;
+    }
+
+    public static Eye getEye(Activity activity){
+        if(eye==null){
+            eye = new Eye(activity);
         }
         return  eye;
-
     }
 
     public void seeEmotion(String emotion){
         facialExpression = emotion;
-
     }
 
     public String getFacialExpression(){
-
         return  facialExpression;
     }
-    public void seeCoordinate( Coordinate faceCoordinates){
-        eyeX = ((faceCoordinates.getLeft()))*weightX;
-        eyeY = ((faceCoordinates.getTop()))*weightY;
-        Log.d("눈 확인","eyeX:"+eyeX+"  eyeY"+eyeY);
 
-    }
-
-    public void see(String facialExpression, Coordinate faceCoordinates) {
-        Eye.facialExpression = facialExpression;
-        Eye.faceCoordinates = faceCoordinates;
-
-
-    }
-
-    public static float getEyeX() {
-        return eyeX;
-    }
-
-    public static float getEyeY() {
-        return eyeY;
-    }
-
-    public static void setEye(ImageView iv, float x, float speed) {
-        Executors.newSingleThreadExecutor().execute(() -> {
+    public void see(float x, float speed) {
+        Pool.threadPool.execute(() -> {
             float weight = 100;
-            if (x > iv.getX()) {
-                for (float ix = iv.getX(); ix < x; ix += 0.5) {
+            if (x > activity.findViewById(R.id.eye).getX()) {
+                for (float ix = activity.findViewById(R.id.eye).getX(); ix < x; ix += 0.5) {
                     float finalIx = ix;
                     weight += speed;
-                    sightHandler.postDelayed(() -> iv.setX(finalIx), (long) weight);
+                    sightHandler.postDelayed(() -> activity.findViewById(R.id.eye).setX(finalIx), (long) weight);
                 }
             } else {
-                for (float ix = iv.getX(); ix > x; ix -= 0.5) {
+                for (float ix = activity.findViewById(R.id.eye).getX(); ix > x; ix -= 0.5) {
                     float finalIx = ix;
                     weight += speed;
-                    sightHandler.postDelayed(() -> iv.setX(finalIx), (long) weight);
+                    sightHandler.postDelayed(() -> activity.findViewById(R.id.eye).setX(finalIx), (long) weight);
                 }
             }
         });
