@@ -1,7 +1,11 @@
 package com.welfarerobotics.welfareapplcation.bot.face;
 
 
+import android.os.Handler;
 import android.util.Log;
+import android.widget.ImageView;
+
+import java.util.concurrent.Executors;
 
 /**
  * @author : Hyunwoong
@@ -16,6 +20,7 @@ public class Eye {
     private static Eye eye;
     private final float weightX = 1.0f;
     private final float weightY = 0.5f;
+    private static Handler sightHandler = new Handler();
     public static Eye getEye(){
         if(eye==null){
             eye = new Eye();
@@ -54,6 +59,25 @@ public class Eye {
 
     public static float getEyeY() {
         return eyeY;
+    }
+
+    public static void setEye(ImageView iv, float x, float speed) {
+        Executors.newSingleThreadExecutor().execute(() -> {
+            float weight = 100;
+            if (x > iv.getX()) {
+                for (float ix = iv.getX(); ix < x; ix += 0.5) {
+                    float finalIx = ix;
+                    weight += speed;
+                    sightHandler.postDelayed(() -> iv.setX(finalIx), (long) weight);
+                }
+            } else {
+                for (float ix = iv.getX(); ix > x; ix -= 0.5) {
+                    float finalIx = ix;
+                    weight += speed;
+                    sightHandler.postDelayed(() -> iv.setX(finalIx), (long) weight);
+                }
+            }
+        });
     }
 
 }
