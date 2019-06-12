@@ -5239,7 +5239,7 @@
     <property name="android.profiler.active" value="true" />
     <property name="android.sdk.path" value="D:/SDKFOLDER" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560346938033" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560347267141" />
     <property name="device.picker.selection" value="ce0517155539ce3c01" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/smart-sketch-master" />
     <property name="project.structure.last.edited" value="Modules" />
