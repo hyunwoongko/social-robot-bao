@@ -1,5 +1,6 @@
 package com.welfarerobotics.welfareapplcation.core.main;
 
+import android.content.Intent;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -14,6 +15,7 @@ import com.welfarerobotics.welfareapplcation.bot.ear.EarSet;
 import com.welfarerobotics.welfareapplcation.bot.face.Detect;
 import com.welfarerobotics.welfareapplcation.bot.face.FaceHandler;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
+import com.welfarerobotics.welfareapplcation.core.initial.SplashActivity;
 import com.welfarerobotics.welfareapplcation.entity.Server;
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
 import com.welfarerobotics.welfareapplcation.util.bluetooth.Bluetooth;
@@ -27,12 +29,19 @@ public class MainActivity extends BaseActivity {
     private OnSwipeTouchListener onSwipeTouchListener;
     private AudioManager audioManager;
     private EarSet ear = new EarSet(this);
+    private ImageView refresh_view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
+        refresh_view = (ImageView) findViewById(R.id.refresh);
+        refresh_view.setOnClickListener(view -> {
+            finish();
+            Intent intent = new Intent(this, SplashActivity.class);
+            startActivity(intent);
+        });
         SpeechRecognizerManager.getInstance().initializeLibrary(this);
 
         FirebaseHelper.get().connect(FirebaseDatabase

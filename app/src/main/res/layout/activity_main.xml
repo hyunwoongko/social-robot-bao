@@ -1,49 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
->
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/relative_1">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
-
-        <ImageView
-            android:id="@+id/back"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            app:srcCompat="@android:color/black" />
+            android:layout_alignParentTop="true" android:id="@+id/relative_2">
+
+        <ImageView
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                app:srcCompat="@android:color/black"/>
 
         <TextView
-            android:id="@+id/emotion"
-            android:layout_width="128dp"
-            android:layout_height="61dp"
-            android:textColor="@color/white"
-            android:textSize="50dp"
-            android:text="감정" />
+                android:id="@+id/emotion"
+                android:layout_width="128dp"
+                android:layout_height="61dp"
+                android:textColor="@color/white"
+                android:textSize="50dp"
+                android:text="감정"/>
 
         <ImageView
-            android:id="@+id/s_mouse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="59dp"
-            app:srcCompat="@drawable/normal" />
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/refresh_white"
+                android:id="@+id/refresh" android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"/>
+        <ImageView
+                android:id="@+id/s_mouse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="59dp"
+                app:srcCompat="@drawable/normal"/>
 
         <ImageView
-            android:id="@+id/eye"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="87dp"
-            app:srcCompat="@drawable/normal_eye" />
+                android:id="@+id/eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="87dp"
+                app:srcCompat="@drawable/normal_eye"/>
 
     </RelativeLayout>
 
