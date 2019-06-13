@@ -9,6 +9,7 @@ import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
@@ -31,6 +32,7 @@ import java.util.*;
 public class WifiFragment extends Fragment {
     public class device {
         CharSequence name;
+
 
         public String getCapabilities() {
             return capabilities;
@@ -173,23 +175,28 @@ public class WifiFragment extends Fragment {
         pDialog.setCancelable(false);
         pDialog.show();
         values.clear();
-        try {
-            netCount = netCount - 1;
-            while (netCount >= 0) {
-                device d = new device();
-                d.setName(wifiList.get(netCount).SSID.toString());
-                d.setCapabilities(wifiList.get(netCount).capabilities);
-                values.add(d);
-                wifiScanAdapter.notifyDataSetChanged();
+        Handler handler = new Handler();
+        handler.postDelayed(() -> {
+            System.out.println("++++++++++");
+            try {
                 netCount = netCount - 1;
+                while (netCount >= 0) {
+                    device d = new device();
+                    d.setName(wifiList.get(netCount).SSID.toString());
+                    d.setCapabilities(wifiList.get(netCount).capabilities);
+                    values.add(d);
+                    wifiScanAdapter.notifyDataSetChanged();
+                    netCount = netCount - 1;
+                }
+                Collections.reverse(values);
+                wifiScanAdapter.notifyDataSetChanged();
+                pDialog.dismissWithAnimation();
+            } catch (Exception e) {
+                Log.d("Wifi", e.getMessage());
+                pDialog.dismissWithAnimation();
             }
-            Collections.reverse(values);
-            wifiScanAdapter.notifyDataSetChanged();
-            pDialog.dismissWithAnimation();
-        } catch (Exception e) {
-            Log.d("Wifi", e.getMessage());
-            pDialog.dismissWithAnimation();
-        }
+        },5000);
+
     }
 
     @Override
