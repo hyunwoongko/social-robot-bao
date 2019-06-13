@@ -63,6 +63,12 @@
             android:name=".core.settings.SettingActivity"
             android:screenOrientation="sensorLandscape" />
         <activity
+                android:name=".core.settings.SysRefreshActivity"
+                android:screenOrientation="sensorLandscape" />
+        <activity
+                android:name=".core.settings.SysRfPopupActivity"
+                android:screenOrientation="sensorLandscape" />
+        <activity
             android:name=".core.settings.LocSettingsActivity"
             android:screenOrientation="sensorLandscape" />
         <activity

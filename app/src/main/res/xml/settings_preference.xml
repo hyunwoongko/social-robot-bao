@@ -23,4 +23,9 @@
             android:title="먼저 말걸기">
     </Preference>
 
+    <Preference
+            android:key="SystemRefresh"
+            android:title="시스템 초기화">
+    </Preference>
+
 </PreferenceScreen>

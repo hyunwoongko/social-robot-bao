@@ -25,7 +25,12 @@ public class SettingActivity extends PreferenceActivity {
         Preference TeachSentenceMenu = findPreference("TeachSentencesMenu");
         Preference Alarm = findPreference("Alarm");
         Preference ICMenu = findPreference("InitConversationMenu");
+        Preference Systemrefresh = findPreference("SystemRefresh");
 
+        Systemrefresh.setOnPreferenceClickListener(p->{
+            startActivity(new Intent(this, SysRefreshActivity.class));
+            return false;
+        });
         Alarm.setOnPreferenceClickListener(p->{
             startActivity(new Intent(this, AlarmActivity.class));
             return false;
