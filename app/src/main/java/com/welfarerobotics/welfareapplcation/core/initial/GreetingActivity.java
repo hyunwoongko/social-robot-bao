@@ -14,10 +14,9 @@ import com.welfarerobotics.welfareapplcation.core.base.VoiceActivity;
 import com.welfarerobotics.welfareapplcation.util.Sound;
 import com.welfarerobotics.welfareapplcation.util.TypeWriterView;
 
-public class GreetingActivity extends VoiceActivity {
+public class GreetingActivity extends BaseActivity {
 
     private int msgCount = 0;
-    private MediaPlayer mediaPlayer = new MediaPlayer();
     private String[] msg = {
             "안녕하세요.",
             "저는 인공지능 로봇 바오라고 합니다.",
@@ -55,11 +54,6 @@ public class GreetingActivity extends VoiceActivity {
                 startActivity(intent);
                 finish();
             } else {
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer = new MediaPlayer();
-
-                playVoice(mediaPlayer, msg[msgCount]);
                 writerView.write(msg[msgCount], 70);
             }
         });

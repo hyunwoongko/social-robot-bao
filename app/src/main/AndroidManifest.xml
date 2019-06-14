@@ -67,7 +67,8 @@
                 android:screenOrientation="sensorLandscape" />
         <activity
                 android:name=".core.settings.SysRfPopupActivity"
-                android:screenOrientation="sensorLandscape" />
+                android:theme="@android:style/Theme.Dialog"
+                 />
         <activity
             android:name=".core.settings.LocSettingsActivity"
             android:screenOrientation="sensorLandscape" />

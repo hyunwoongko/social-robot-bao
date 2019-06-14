@@ -40,6 +40,7 @@ public class MainActivity extends BaseActivity {
         audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
         refresh_view = (ImageView) findViewById(R.id.refresh);
         refresh_view.setOnClickListener(view -> this.refresh());
+        SpeechRecognizerManager.getInstance().initializeLibrary(this);
 
         FirebaseHelper.get().connect(FirebaseDatabase
                 .getInstance()
@@ -48,7 +49,6 @@ public class MainActivity extends BaseActivity {
             System.out.println(server);
             ServerCache.setInstance(server);
             DataLoader.onDataLoad(); // 모든 데이터 다운로드
-            SpeechRecognizerManager.getInstance().initializeLibrary(this);
             ear.initEar();
             onSwipeTouchListener = new ConcreteSwipeTouchListener(this, audioManager, ear::repeat);
         });
