@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,13 +14,15 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.welfarerobotics.welfareapplcation.R;
+import com.welfarerobotics.welfareapplcation.util.data_util.Preference;
+
+import static android.content.Context.MODE_PRIVATE;
 
 
-public class Bluetooth {
+public class Bluetooth{
 
 
     // Intent request codes
-
     private ArrayAdapter<String> mConversationArrayAdapter;
     private BluetoothAdapter mBluetoothAdapter = null;
     private BluetoothChatService mChatService = null;
@@ -50,6 +53,7 @@ public class Bluetooth {
             @NonNull
             @Override
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+
                 View view = super.getView(position, convertView, parent);
                 TextView tView = (TextView) view.findViewById(R.id.listItem);
                 if (data.isRead) {
@@ -66,7 +70,11 @@ public class Bluetooth {
 
 
         // Get the device MAC address
-        String address = "B8:27:EB:16:AE:38";/*승민이형 바꿔주세요*/
+        String address;
+        Activity ac = new Activity();
+        SharedPreferences pref = ac.getSharedPreferences("Bluetooth", MODE_PRIVATE);
+        address = pref.getString("Bluetooth", "B8:27:EB:16:AE:38");
+
         // Get the BluetoothDevice object
         handler = new BluetoothHandler(data, mConversationArrayAdapter,mChatService, activity);
         BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);
