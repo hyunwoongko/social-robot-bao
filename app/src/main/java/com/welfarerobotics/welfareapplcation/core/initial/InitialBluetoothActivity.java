@@ -5,10 +5,7 @@ import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
+import android.content.*;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -19,6 +16,7 @@ import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.util.Sound;
 import com.welfarerobotics.welfareapplcation.util.ToastType;
+import com.welfarerobotics.welfareapplcation.util.data_util.Preference;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -155,14 +153,13 @@ public class InitialBluetoothActivity extends BaseActivity {
         listDeviceView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                mBluetoothAdapter.cancelDiscovery(); // 블루투스 검색 취소
                 BluetoothDevice device = bluetoothDevices.get(position);
-
                 try {
                     //선택한 디바이스 페어링 요청
                     Method method = device.getClass().getMethod("createBond", (Class[]) null);
                     method.invoke(device, (Object[]) null);
                     selectDevice = position;
-                    mBluetoothAdapter.cancelDiscovery(); // 블루투스 검색 취소
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -268,6 +265,7 @@ public class InitialBluetoothActivity extends BaseActivity {
                     Map map = new HashMap();
                     map.put("name", device.getName()); //device.getName() : 블루투스 디바이스의 이름
                     map.put("address", device.getAddress()); //device.getAddress() : 블루투스 디바이스의 MAC 주소
+
                     dataDevice_list.add(map);
                     //리스트 목록갱신
                     adapterDevice.notifyDataSetChanged();
@@ -285,6 +283,13 @@ public class InitialBluetoothActivity extends BaseActivity {
                 case BluetoothDevice.ACTION_BOND_STATE_CHANGED:
                     BluetoothDevice paired = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                     if (paired.getBondState() == BluetoothDevice.BOND_BONDED) {
+                        SharedPreferences pref = getSharedPreferences("Bluetooth", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = pref.edit();
+                        editor.putString("Bluetooth", paired.getAddress());
+                        editor.commit();
+
+                        SharedPreferences pref1 = getSharedPreferences("Bluetooth", MODE_PRIVATE);
+                        System.out.println("페어링주소"+pref1.getString("Bluetooth", "B8:27:EB:16:AE:38"));
                         //데이터 저장
                         Map map2 = new HashMap();
                         map2.put("name", paired.getName()); //device.getName() : 블루투스 디바이스의 이름

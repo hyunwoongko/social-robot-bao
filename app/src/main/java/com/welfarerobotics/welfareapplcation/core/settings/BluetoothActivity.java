@@ -42,6 +42,8 @@ public class BluetoothActivity extends BaseActivity {
     //블루투스 연결
     private BluetoothSocket mConnectSocket;
     private boolean mIsConnected = false;
+    //블루투스 페어링된 주소
+    private String paredbluetooth;
 
     private ListView listDeviceView;
     private ListView pairing_listDeviceView;
@@ -157,7 +159,8 @@ public class BluetoothActivity extends BaseActivity {
 
                 try {
                     //선택한 디바이스 페어링 요청
-                    Method method = device.getClass().getMethod("createBond", (Class[]) null);
+                    paredbluetooth = device.getAddress(); // 페어링된 주소 저장장
+                   Method method = device.getClass().getMethod("createBond", (Class[]) null);
                     method.invoke(device, (Object[]) null);
                     selectDevice = position;
                     mBluetoothAdapter.cancelDiscovery(); // 블루투스 검색 취소

@@ -13,6 +13,7 @@
 
 ###### *Publishing : 2019 Korea Information Technology Society and Korea Digital Contents Society Summer Collaboration Conference*
 
+###### *Prize : Silver Prize at 2019 Korea Information Technology Society*
 <br>
 
 ![paper](https://user-images.githubusercontent.com/38183241/58642180-bf73fb80-8337-11e9-8e07-b49cd770f6dc.jpg)

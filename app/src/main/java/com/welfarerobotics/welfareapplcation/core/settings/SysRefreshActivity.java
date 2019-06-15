@@ -25,12 +25,12 @@ public class SysRefreshActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_initconversationmenu);
-        toolbar = findViewById(R.id.con_menu);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("시스템 초기화");
-        ImageView baoimg = (ImageView) findViewById(R.id.bao_imageview);
+        setContentView(R.layout.activity_system_refresh);
+//        toolbar = findViewById(R.id.con_menu);
+//        setSupportActionBar(toolbar);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setTitle("시스템 초기화");
+        baoimg = (ImageView) findViewById(R.id.bao_imageview);
         baoimg.setOnClickListener(view -> {
             startActivity(new Intent(this, SysRfPopupActivity.class));
         });

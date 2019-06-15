@@ -9,7 +9,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.welfarerobotics.welfareapplcation.Model;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.core.main.MainActivity;
