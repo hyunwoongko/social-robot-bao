@@ -21,7 +21,7 @@ from chat.entity.translate.entity_recognizer import get_translate_entity
 from chat.entity.weather.entity_recognizer import get_weather_entity
 from chat.entity.wiki.entity_recognizer import get_wiki_entity
 from chat.intent.classifier import get_intent
-from chat.open_domain.open_domain import open_domain
+from chat.open_domain.open_domain import open_domain, get_emotion
 from chat.util.hanspell.spell_checker import fix
 from chat.util.tokenizer import tokenize
 
@@ -46,9 +46,14 @@ def server_intent(text):
     return get_intent(text)
 
 
-@app.route('/open_domain/<username>/<text>', methods=['GET', 'POST'])
-def server_open_domain(username, text):
-    return open_domain(username, text)
+@app.route('/open_domain/<text>', methods=['GET', 'POST'])
+def server_open_domain(text):
+    return open_domain(text)
+
+
+@app.route('/emotion/<text>', methods=['GET', 'POST'])
+def server_emotion(text):
+    return get_emotion(text)
 
 
 ##################################
