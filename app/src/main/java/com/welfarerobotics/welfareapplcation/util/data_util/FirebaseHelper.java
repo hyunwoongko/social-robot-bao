@@ -46,9 +46,7 @@ public class FirebaseHelper {
                 consumer.accept(dataSnapshot);
             }
 
-            @Override public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-                consumer.accept(dataSnapshot);
-            }
+            @Override public void onChildMoved(DataSnapshot dataSnapshot, String s) {}
 
             @Override public void onCancelled(DatabaseError databaseError) {
 

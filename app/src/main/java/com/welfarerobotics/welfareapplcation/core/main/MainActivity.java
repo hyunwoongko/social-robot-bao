@@ -38,6 +38,9 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
+        ImageView eyes = (ImageView) findViewById(R.id.eye);
+        ImageView mouse = (ImageView) findViewById(R.id.s_mouse);
+        TextView emotion = (TextView) findViewById(R.id.emotion);
         refresh_view = (ImageView) findViewById(R.id.refresh);
         refresh_view.setOnClickListener(view -> this.refresh());
         SpeechRecognizerManager.getInstance().initializeLibrary(this);
@@ -46,20 +49,15 @@ public class MainActivity extends BaseActivity {
                 .getInstance()
                 .getReference("server"), dataSnapshot -> {
             Server server = dataSnapshot.getValue(Server.class);
-            System.out.println(server);
+            Bluetooth bluetooth = Bluetooth.getInstance(this);
+            Handler handler = new FaceHandler(eyes, emotion, mouse, this);
+            new Detect(handler);
             ServerCache.setInstance(server);
             DataLoader.onDataLoad(); // 모든 데이터 다운로드
             ear.initEar();
             onSwipeTouchListener = new ConcreteSwipeTouchListener(this, audioManager, ear::repeat);
-        });
 
-        ImageView eyes = (ImageView) findViewById(R.id.eye);
-        ImageView mouse = (ImageView) findViewById(R.id.s_mouse);
-        TextView emotion = (TextView) findViewById(R.id.emotion);
-        Bluetooth bluetooth = Bluetooth.getInstance(this);
-        //FaceHandler handler = new FaceHandler(eyes);
-        Handler handler = new FaceHandler(eyes, emotion, mouse, this);
-        new Detect(handler);
+        });
     }
 
     @Override
