@@ -32,7 +32,7 @@ public class Skills {
         else if (intent.equals("달력")) CalenderScenario.process(speech);
         else if (intent.equals("먼지")) DustScenario.process(speech, false, Oblivion::forgetAll);
         else if (intent.equals("동화")) FairytaleScenario.process(speech, activity);
-        else if (intent.equals("이슈")) IssueScenario.process(speech);
+//    else if (intent.equals("이슈")) IssueScenario.process(speech); // 불안정해서 제외
         else if (intent.equals("농담")) JokeScenario.process(speech);
         else if (intent.equals("뉴스")) NewsScenario.process(speech, Oblivion::forgetAll);
         else if (intent.equals("맛집")) RestaurantScenario.process(speech, Oblivion::forgetAll);

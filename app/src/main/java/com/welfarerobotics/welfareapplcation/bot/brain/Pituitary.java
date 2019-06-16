@@ -1,5 +1,8 @@
 package com.welfarerobotics.welfareapplcation.bot.brain;
 
+import android.app.Activity;
+import android.widget.TextView;
+import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.crawler.ModelApi;
 
 import java.io.IOException;
@@ -48,12 +51,15 @@ public class Pituitary {
     }
 
     /**
-     * 호르몬 상태를 리턴해주는 클래스
-     * 클라이언트는 이 메소드 사용하면 됩니다.
+     * 호르몬 상태를 변경해주는 메소드
      *
-     * @return 현재 호르몬 상태
+     * @param speech   사용자의 입력
+     * @param activity View 제어을 위해 위임
      */
-    public static Hormone getHormone() {
-        return Hormone.getHormone(currentEmotion);
+    public static void setHormone(String speech, Activity activity) throws IOException {
+        TextView view = activity.findViewById(R.id.hormone); // 호르몬 뷰어
+        Pituitary.rememberNewSentence(speech);
+        String currHormone = Hormone.getHormone(currentEmotion).toString();
+        activity.runOnUiThread(() -> view.setText(currHormone));
     }
 }
