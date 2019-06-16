@@ -19,13 +19,13 @@
     </Preference>
 
     <Preference
-            android:key="InitConversationMenu"
-            android:title="먼저 말걸기">
+            android:key="SystemRefresh"
+            android:title="시스템 초기화">
     </Preference>
 
     <Preference
-            android:key="SystemRefresh"
-            android:title="시스템 초기화">
+        android:key="Info"
+        android:title="제품 정보">
     </Preference>
 
 </PreferenceScreen>

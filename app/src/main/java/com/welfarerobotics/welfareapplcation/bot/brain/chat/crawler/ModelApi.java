@@ -1,7 +1,6 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.crawler;
 
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
-import com.welfarerobotics.welfareapplcation.entity.cache.UserCache;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
@@ -40,14 +39,29 @@ public final class ModelApi {
      */
     public static String getOpenDomainAnswer(String text) throws IOException {
         return Jsoup.connect(ServerCache.getInstance().getChat() + "/open_domain/" + Encoder
-                .utf8(UserCache.getInstance().getName()) + "/" + Encoder
                 .utf8(text))
-                .timeout(20000)
+                .timeout(600000)
                 .get()
                 .body()
                 .text();
     }
 
+
+    /**
+     * 감정지수(호르몬) 계산
+     * 문장을 입력하면 호르몬 값을 출력함
+     *
+     * @param text 유저 입력 문장
+     * @return 출력된 감정지수
+     */
+    public static float getEmotion(String text) throws IOException {
+        return Float.valueOf(Jsoup.connect(ServerCache.getInstance().getChat() + "/emotion/" + Encoder
+                .utf8(text))
+                .timeout(600000)
+                .get()
+                .body()
+                .text());
+    }
 
     /**
      * Doc2Vec 유사도 파악 API

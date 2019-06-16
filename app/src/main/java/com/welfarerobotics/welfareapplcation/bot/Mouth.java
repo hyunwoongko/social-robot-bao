@@ -99,12 +99,12 @@ public final @Data class Mouth {
         r = nextAction;
         audioPlayer.setOnCompletionListener(mediaPlayer -> {
             Handler mHandler = new Handler(Looper.getMainLooper());
-            mHandler.postDelayed(nextAction, 300);
+            mHandler.postDelayed(nextAction, 150);
             audioPlayer.release();
         });
         audioPlayer.setOnErrorListener((mp, what, extra) -> {
             Handler mHandler = new Handler(Looper.getMainLooper());
-            mHandler.postDelayed(nextAction, 300);
+            mHandler.postDelayed(nextAction, 150);
             audioPlayer.release();
             return false;
         });

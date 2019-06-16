@@ -20,7 +20,7 @@ public class Ear {
     public Ear() {
         earCanal = new SpeechRecognizerClient.Builder()
                 .setServiceType(SpeechRecognizerClient.SERVICE_TYPE_WEB)
-                .setGlobalTimeOut(60)
+                .setGlobalTimeOut(20)
                 .build();
         cochlea = new Cochlea();
     }

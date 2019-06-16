@@ -2811,4 +2811,429 @@ JavaScript error: moz-extension://c2d691ca-b0f8-4525-8bf2-0729ee45376f/lib/Messa
 [Child 10168, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
 [Child 10168, [Parent 14412, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
 [Child 18636, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 18636,
+[Child 18636,1560628633064	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ASUS\\AppData\\Local\\Temp\\rust_mozprofile.KbgOJHbOENyi"
+*** You are running in headless mode.
+1560628633655	addons.xpi	WARN	Not converting unknown addon type undefined
+1560628633655	addons.xpi	WARN	Not converting unknown addon type undefined
+1560628633656	addons.xpi	WARN	Not converting unknown addon type undefined
+1560628633692	addons.xpi-utils	WARN	updateMetadata: Add-on tor-launcher@torproject.org is invalid: Error: File C:\Users\ASUS\AppData\Local\Temp\rust_mozprofile.KbgOJHbOENyi\extensions\tor-launcher@torproject.org.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:542:11) JS Stack trace: loadManifest@XPIInstall.jsm:542:11
+awaitPromise@XPIProvider.jsm:187:15
+syncLoadManifestFromFile@XPIInstall.jsm:606:22
+updateMetadata@XPIDatabase.jsm:2462:32
+updateExistingAddon@XPIDatabase.jsm:2641:23
+processFileChanges@XPIDatabase.jsm:2717:31
+checkForChanges@XPIProvider.jsm:2664:55
+startup@XPIProvider.jsm:2224:12
+callProvider@AddonManager.jsm:204:31
+_startProvider@AddonManager.jsm:655:5
+startup@AddonManager.jsm:811:14
+startup@AddonManager.jsm:2804:26
+observe@addonManager.js:65:29
+1560628633697	addons.xpi-utils	WARN	updateMetadata: Add-on torbutton@torproject.org is invalid: Error: File C:\Users\ASUS\AppData\Local\Temp\rust_mozprofile.KbgOJHbOENyi\extensions\torbutton@torproject.org.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:542:11) JS Stack trace: loadManifest@XPIInstall.jsm:542:11
+awaitPromise@XPIProvider.jsm:187:15
+syncLoadManifestFromFile@XPIInstall.jsm:606:22
+updateMetadata@XPIDatabase.jsm:2462:32
+updateExistingAddon@XPIDatabase.jsm:2641:23
+processFileChanges@XPIDatabase.jsm:2717:31
+checkForChanges@XPIProvider.jsm:2664:55
+startup@XPIProvider.jsm:2224:12
+callProvider@AddonManager.jsm:204:31
+_startProvider@AddonManager.jsm:655:5
+startup@AddonManager.jsm:811:14
+startup@AddonManager.jsm:2804:26
+observe@addonManager.js:65:29
+1560628634108	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1560628634108	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1560628634108	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: moz-extension://c2d691ca-b0f8-4525-8bf2-0729ee45376f/lib/Messages.js, line 68: Error: Could not establish connection. Receiving end does not exist.
+JavaScript error: resource://gre/modules/ExtensionContent.jsm, line 490: TypeError: Argument 1 of PrecompiledScript.executeInGlobal is not an object.
+JavaScript error: , line 0: TypeError: can't access dead object
+1560628635257	Marionette	INFO	Listening on port 55929
+1560628635310	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221560618350307%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+
+1560628784692	addons.xpi	WARN	Not converting unknown addon type undefined
+1560628784726	addons.xpi-utils	WARN	updateMetadata: Add-on tor-launcher@torproject.org is invalid: Error: File C:\Users\ASUS\AppData\Local\Temp\rust_mozprofile.ydssJFjMx6mF\extensions\tor-launcher@torproject.org.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:542:11) JS Stack trace: loadManifest@XPIInstall.jsm:542:11
+awaitPromise@XPIProvider.jsm:187:15
+syncLoadManifestFromFile@XPIInstall.jsm:606:22
+updateMetadata@XPIDatabase.jsm:2462:32
+updateExistingAddon@XPIDatabase.jsm:2641:23
+processFileChanges@XPIDatabase.jsm:2717:31
+checkForChanges@XPIProvider.jsm:2664:55
+startup@XPIProvider.jsm:2224:12
+callProvider@AddonManager.jsm:204:31
+_startProvider@AddonManager.jsm:655:5
+startup@AddonManager.jsm:811:14
+startup@AddonManager.jsm:2804:26
+observe@addonManager.js:65:29
+1560628784730	addons.xpi-utils	WARN	updateMetadata: Add-on torbutton@torproject.org is invalid: Error: File C:\Users\ASUS\AppData\Local\Temp\rust_mozprofile.ydssJFjMx6mF\extensions\torbutton@torproject.org.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:542:11) JS Stack trace: loadManifest@XPIInstall.jsm:542:11
+awaitPromise@XPIProvider.jsm:187:15
+syncLoadManifestFromFile@XPIInstall.jsm:606:22
+updateMetadata@XPIDatabase.jsm:2462:32
+updateExistingAddon@XPIDatabase.jsm:2641:23
+processFileChanges@XPIDatabase.jsm:2717:31
+checkForChanges@XPIProvider.jsm:2664:55
+startup@XPIProvider.jsm:2224:12
+callProvider@AddonManager.jsm:204:31
+_startProvider@AddonManager.jsm:655:5
+startup@AddonManager.jsm:811:14
+startup@AddonManager.jsm:2804:26
+observe@addonManager.js:65:29
+1560628785150	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1560628785150	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1560628785150	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+1560628786280	Marionette	INFO	Listening on port 56001
+1560628786290	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221560618350307%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+
+1560628940125	addons.xpi	WARN	Not converting unknown addon type undefined
+1560628940157	addons.xpi-utils	WARN	updateMetadata: Add-on tor-launcher@torproject.org is invalid: Error: File C:\Users\ASUS\AppData\Local\Temp\rust_mozprofile.TxCb0YlH92uJ\extensions\tor-launcher@torproject.org.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:542:11) JS Stack trace: loadManifest@XPIInstall.jsm:542:11
+awaitPromise@XPIProvider.jsm:187:15
+syncLoadManifestFromFile@XPIInstall.jsm:606:22
+updateMetadata@XPIDatabase.jsm:2462:32
+updateExistingAddon@XPIDatabase.jsm:2641:23
+processFileChanges@XPIDatabase.jsm:2717:31
+checkForChanges@XPIProvider.jsm:2664:55
+startup@XPIProvider.jsm:2224:12
+callProvider@AddonManager.jsm:204:31
+_startProvider@AddonManager.jsm:655:5
+startup@AddonManager.jsm:811:14
+startup@AddonManager.jsm:2804:26
+observe@addonManager.js:65:29
+1560628940161	addons.xpi-utils	WARN	updateMetadata: Add-on torbutton@torproject.org is invalid: Error: File C:\Users\ASUS\AppData\Local\Temp\rust_mozprofile.TxCb0YlH92uJ\extensions\torbutton@torproject.org.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:542:11) JS Stack trace: loadManifest@XPIInstall.jsm:542:11
+awaitPromise@XPIProvider.jsm:187:15
+syncLoadManifestFromFile@XPIInstall.jsm:606:22
+updateMetadata@XPIDatabase.jsm:2462:32
+updateExistingAddon@XPIDatabase.jsm:2641:23
+processFileChanges@XPIDatabase.jsm:2717:31
+checkForChanges@XPIProvider.jsm:2664:55
+startup@XPIProvider.jsm:2224:12
+callProvider@AddonManager.jsm:204:31
+_startProvider@AddonManager.jsm:655:5
+startup@AddonManager.jsm:811:14
+startup@AddonManager.jsm:2804:26
+observe@addonManager.js:65:29
+1560628940545	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1560628940545	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1560628940545	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+1560628941726	Marionette	INFO	Listening on port 56061
+JavaScript error: moz-extension://c2d691ca-b0f8-4525-8bf2-0729ee45376f/lib/Messages.js, line 68: Error: Could not establish connection. Receiving end does not exist.
+1560628941996	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221560618350307%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+Exiting due to channel error.
+Not converting unknown addon type undefined
+1560628965483	addons.xpi-utils	WARN	updateMetadata: Add-on tor-launcher@torproject.org is invalid: Error: File C:\Users\ASUS\AppData\Local\Temp\rust_mozprofile.5Z39p6v9EoJR\extensions\tor-launcher@torproject.org.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:542:11) JS Stack trace: loadManifest@XPIInstall.jsm:542:11
+awaitPromise@XPIProvider.jsm:187:15
+syncLoadManifestFromFile@XPIInstall.jsm:606:22
+updateMetadata@XPIDatabase.jsm:2462:32
+updateExistingAddon@XPIDatabase.jsm:2641:23
+processFileChanges@XPIDatabase.jsm:2717:31
+checkForChanges@XPIProvider.jsm:2664:55
+startup@XPIProvider.jsm:2224:12
+callProvider@AddonManager.jsm:204:31
+_startProvider@AddonManager.jsm:655:5
+startup@AddonManager.jsm:811:14
+startup@AddonManager.jsm:2804:26
+observe@addonManager.js:65:29
+1560628965488	addons.xpi-utils	WARN	updateMetadata: Add-on torbutton@torproject.org is invalid: Error: File C:\Users\ASUS\AppData\Local\Temp\rust_mozprofile.5Z39p6v9EoJR\extensions\torbutton@torproject.org.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:542:11) JS Stack trace: loadManifest@XPIInstall.jsm:542:11
+awaitPromise@XPIProvider.jsm:187:15
+syncLoadManifestFromFile@XPIInstall.jsm:606:22
+updateMetadata@XPIDatabase.jsm:2462:32
+updateExistingAddon@XPIDatabase.jsm:2641:23
+processFileChanges@XPIDatabase.jsm:2717:31
+checkForChanges@XPIProvider.jsm:2664:55
+startup@XPIProvider.jsm:2224:12
+callProvider@AddonManager.jsm:204:31
+_startProvider@AddonManager.jsm:655:5
+startup@AddonManager.jsm:811:14
+startup@AddonManager.jsm:2804:26
+observe@addonManager.js:65:29
+1560628965921	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1560628965921	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1560628965921	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+1560628967301	Marionette	INFO	Listening on port 56111
+JavaScript error: moz-extension://c2d691ca-b0f8-4525-8bf2-0729ee45376f/lib/Messages.js, line 68: Error: Could not establish connection. Receiving end does not exist.
+1560628967631	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221560618350307%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+
+1560628983381	addons.xpi	WARN	Not converting unknown addon type undefined
+1560628983414	addons.xpi-utils	WARN	updateMetadata: Add-on tor-launcher@torproject.org is invalid: Error: File C:\Users\ASUS\AppData\Local\Temp\rust_mozprofile.r4AZnWQT2Klc\extensions\tor-launcher@torproject.org.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:542:11) JS Stack trace: loadManifest@XPIInstall.jsm:542:11
+awaitPromise@XPIProvider.jsm:187:15
+syncLoadManifestFromFile@XPIInstall.jsm:606:22
+updateMetadata@XPIDatabase.jsm:2462:32
+updateExistingAddon@XPIDatabase.jsm:2641:23
+processFileChanges@XPIDatabase.jsm:2717:31
+checkForChanges@XPIProvider.jsm:2664:55
+startup@XPIProvider.jsm:2224:12
+callProvider@AddonManager.jsm:204:31
+_startProvider@AddonManager.jsm:655:5
+startup@AddonManager.jsm:811:14
+startup@AddonManager.jsm:2804:26
+observe@addonManager.js:65:29
+1560628983418	addons.xpi-utils	WARN	updateMetadata: Add-on torbutton@torproject.org is invalid: Error: File C:\Users\ASUS\AppData\Local\Temp\rust_mozprofile.r4AZnWQT2Klc\extensions\torbutton@torproject.org.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:542:11) JS Stack trace: loadManifest@XPIInstall.jsm:542:11
+awaitPromise@XPIProvider.jsm:187:15
+syncLoadManifestFromFile@XPIInstall.jsm:606:22
+updateMetadata@XPIDatabase.jsm:2462:32
+updateExistingAddon@XPIDatabase.jsm:2641:23
+processFileChanges@XPIDatabase.jsm:2717:31
+checkForChanges@XPIProvider.jsm:2664:55
+startup@XPIProvider.jsm:2224:12
+callProvider@AddonManager.jsm:204:31
+_startProvider@AddonManager.jsm:655:5
+startup@AddonManager.jsm:811:14
+startup@AddonManager.jsm:2804:26
+observe@addonManager.js:65:29
+1560628983813	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1560628983814	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1560628983814	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+1560628984830	Marionette	INFO	Listening on port 56158
+JavaScript error: moz-extension://c2d691ca-b0f8-4525-8bf2-0729ee45376f/lib/Messages.js, line 68: Error: Could not establish connection. Receiving end does not exist.
+1560628985045	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221560618350307%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+Exiting due to channel error.
+Exiting due to channel error.
+pe undefined
+1560629026633	addons.xpi-utils	WARN	updateMetadata: Add-on tor-launcher@torproject.org is invalid: Error: File C:\Users\ASUS\AppData\Local\Temp\rust_mozprofile.frS5RCysKwVa\extensions\tor-launcher@torproject.org.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:542:11) JS Stack trace: loadManifest@XPIInstall.jsm:542:11
+awaitPromise@XPIProvider.jsm:187:15
+syncLoadManifestFromFile@XPIInstall.jsm:606:22
+updateMetadata@XPIDatabase.jsm:2462:32
+updateExistingAddon@XPIDatabase.jsm:2641:23
+processFileChanges@XPIDatabase.jsm:2717:31
+checkForChanges@XPIProvider.jsm:2664:55
+startup@XPIProvider.jsm:2224:12
+callProvider@AddonManager.jsm:204:31
+_startProvider@AddonManager.jsm:655:5
+startup@AddonManager.jsm:811:14
+startup@AddonManager.jsm:2804:26
+observe@addonManager.js:65:29
+1560629026637	addons.xpi-utils	WARN	updateMetadata: Add-on torbutton@torproject.org is invalid: Error: File C:\Users\ASUS\AppData\Local\Temp\rust_mozprofile.frS5RCysKwVa\extensions\torbutton@torproject.org.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:542:11) JS Stack trace: loadManifest@XPIInstall.jsm:542:11
+awaitPromise@XPIProvider.jsm:187:15
+syncLoadManifestFromFile@XPIInstall.jsm:606:22
+updateMetadata@XPIDatabase.jsm:2462:32
+updateExistingAddon@XPIDatabase.jsm:2641:23
+processFileChanges@XPIDatabase.jsm:2717:31
+checkForChanges@XPIProvider.jsm:2664:55
+startup@XPIProvider.jsm:2224:12
+callProvider@AddonManager.jsm:204:31
+_startProvider@AddonManager.jsm:655:5
+startup@AddonManager.jsm:811:14
+startup@AddonManager.jsm:2804:26
+observe@addonManager.js:65:29
+1560629027021	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1560629027021	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1560629027022	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+1560629028194	Marionette	INFO	Listening on port 56272
+JavaScript error: moz-extension://c2d691ca-b0f8-4525-8bf2-0729ee45376f/lib/Messages.js, line 68: Error: Could not establish connection. Receiving end does not exist.
+1560629028213	Marionette	WARN	TLS certificate errors will be ignored for this session
+1560629032538	Marionette	INFO	Stopped listening on port 56272
+[Parent 9704, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 9704, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4920, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4920, Chrome_ChildThread][Child 19748, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1[Parent 9704, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18188, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18188, C1560629094022	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ASUS\\AppData\\Local\\Temp\\rust_mozprofile.OiP82xs1LhAc"
+*** You are running in headless mode.
+1560629094260	addons.xpi	WARN	Not converting unknown addon type undefined
+1560629094261	addons.xpi	WARN	Not converting unknown addon type undefined
+1560629094261	addons.xpi	WARN	Not converting unknown addon type undefined
+1560629094294	addons.xpi-utils	WARN	updateMetadata: Add-on tor-launcher@torproject.org is invalid: Error: File C:\Users\ASUS\AppData\Local\Temp\rust_mozprofile.OiP82xs1LhAc\extensions\tor-launcher@torproject.org.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:542:11) JS Stack trace: loadManifest@XPIInstall.jsm:542:11
+awaitPromise@XPIProvider.jsm:187:15
+syncLoadManifestFromFile@XPIInstall.jsm:606:22
+updateMetadata@XPIDatabase.jsm:2462:32
+updateExistingAddon@XPIDatabase.jsm:2641:23
+processFileChanges@XPIDatabase.jsm:2717:31
+checkForChanges@XPIProvider.jsm:2664:55
+startup@XPIProvider.jsm:2224:12
+callProvider@AddonManager.jsm:204:31
+_startProvider@AddonManager.jsm:655:5
+startup@AddonManager.jsm:811:14
+startup@AddonManager.jsm:2804:26
+observe@addonManager.js:65:29
+1560629094298	addons.xpi-utils	WARN	updateMetadata: Add-on torbutton@torproject.org is invalid: Error: File C:\Users\ASUS\AppData\Local\Temp\rust_mozprofile.OiP82xs1LhAc\extensions\torbutton@torproject.org.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:542:11) JS Stack trace: loadManifest@XPIInstall.jsm:542:11
+awaitPromise@XPIProvider.jsm:187:15
+syncLoadManifestFromFile@XPIInstall.jsm:606:22
+updateMetadata@XPIDatabase.jsm:2462:32
+updateExistingAddon@XPIDatabase.jsm:2641:23
+processFileChanges@XPIDatabase.jsm:2717:31
+checkForChanges@XPIProvider.jsm:2664:55
+startup@XPIProvider.jsm:2224:12
+callProvider@AddonManager.jsm:204:31
+_startProvider@AddonManager.jsm:655:5
+startup@AddonManager.jsm:811:14
+startup@AddonManager.jsm:2804:26
+observe@addonManager.js:65:29
+1560629094688	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1560629094688	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1560629094688	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: moz-extension://c2d691ca-b0f8-4525-8bf2-0729ee45376f/lib/Messages.js, line 68: Error: Could not establish connection. Receiving end does not exist.
+1560629095797	Marionette	INFO	Listening on port 56324
+1560629096135	Marionette	WARN	TLS certificate errors will be ignored for this session
+1560629101489	Marionette	INFO	Stopped listening on port 56324
+[Parent 11004, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 11004, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1084, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task[_15599361C01/build/src/ipc/chromium/src/chhrome/common/ipc_channel_win.cc, liilne 341
+d 7552, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child [Parent 11004, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11712, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1560629110991	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ASUS\\AppData\\Local\\Temp\\rust_mozprofile.jM10Q1kRyq6d"
+*** You are running in headless mode.
+1560629111220	addons.xpi	WARN	Not converting unknown addon type undefined
+1560629111220	addons.xpi	WARN	Not converting unknown addon type undefined
+1560629111220	addons.xpi	WARN	Not converting unknown addon type undefined
+1560629111252	addons.xpi-utils	WARN	updateMetadata: Add-on tor-launcher@torproject.org is invalid: Error: File C:\Users\ASUS\AppData\Local\Temp\rust_mozprofile.jM10Q1kRyq6d\extensions\tor-launcher@torproject.org.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:542:11) JS Stack trace: loadManifest@XPIInstall.jsm:542:11
+awaitPromise@XPIProvider.jsm:187:15
+syncLoadManifestFromFile@XPIInstall.jsm:606:22
+updateMetadata@XPIDatabase.jsm:2462:32
+updateExistingAddon@XPIDatabase.jsm:2641:23
+processFileChanges@XPIDatabase.jsm:2717:31
+checkForChanges@XPIProvider.jsm:2664:55
+startup@XPIProvider.jsm:2224:12
+callProvider@AddonManager.jsm:204:31
+_startProvider@AddonManager.jsm:655:5
+startup@AddonManager.jsm:811:14
+startup@AddonManager.jsm:2804:26
+observe@addonManager.js:65:29
+1560629111256	addons.xpi-utils	WARN	updateMetadata: Add-on torbutton@torproject.org is invalid: Error: File C:\Users\ASUS\AppData\Local\Temp\rust_mozprofile.jM10Q1kRyq6d\extensions\torbutton@torproject.org.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:542:11) JS Stack trace: loadManifest@XPIInstall.jsm:542:11
+awaitPromise@XPIProvider.jsm:187:15
+syncLoadManifestFromFile@XPIInstall.jsm:606:22
+updateMetadata@XPIDatabase.jsm:2462:32
+updateExistingAddon@XPIDatabase.jsm:2641:23
+processFileChanges@XPIDatabase.jsm:2717:31
+checkForChanges@XPIProvider.jsm:2664:55
+startup@XPIProvider.jsm:2224:12
+callProvider@AddonManager.jsm:204:31
+_startProvider@AddonManager.jsm:655:5
+startup@AddonManager.jsm:811:14
+startup@AddonManager.jsm:2804:26
+observe@addonManager.js:65:29
+1560629111641	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1560629111642	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1560629111642	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: moz-extension://c2d691ca-b0f8-4525-8bf2-0729ee45376f/lib/Messages.js, line 68: Error: Could not establish connection. Receiving end does not exist.
+1560629112688	Marionette	INFO	Listening on port 56378
+1560629113103	Marionette	WARN	TLS certificate errors will be ignored for this session
+1560629117977	Marionette	INFO	Stopped listening on port 56378
+[Parent 20964, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 20964, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1228, Chrome_ChildThread] WARNING: pipe error: 109: file z:/[task_1559936101/build/src/ipc/chromiCumhild 2892, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc//chromisum/src/chrome/common/ipc_channel_win.cc, line 341
+rc/chrome/common/ipc_channel_win.cc, line 341
+[Chil[Parent 20964, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10436, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11560629144202	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ASUS\\AppData\\Local\\Temp\\rust_mozprofile.azNMGuVVqqiQ"
+*** You are running in headless mode.
+1560629144428	addons.xpi	WARN	Not converting unknown addon type undefined
+1560629144428	addons.xpi	WARN	Not converting unknown addon type undefined
+1560629144428	addons.xpi	WARN	Not converting unknown addon type undefined
+1560629144463	addons.xpi-utils	WARN	updateMetadata: Add-on tor-launcher@torproject.org is invalid: Error: File C:\Users\ASUS\AppData\Local\Temp\rust_mozprofile.azNMGuVVqqiQ\extensions\tor-launcher@torproject.org.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:542:11) JS Stack trace: loadManifest@XPIInstall.jsm:542:11
+awaitPromise@XPIProvider.jsm:187:15
+syncLoadManifestFromFile@XPIInstall.jsm:606:22
+updateMetadata@XPIDatabase.jsm:2462:32
+updateExistingAddon@XPIDatabase.jsm:2641:23
+processFileChanges@XPIDatabase.jsm:2717:31
+checkForChanges@XPIProvider.jsm:2664:55
+startup@XPIProvider.jsm:2224:12
+callProvider@AddonManager.jsm:204:31
+_startProvider@AddonManager.jsm:655:5
+startup@AddonManager.jsm:811:14
+startup@AddonManager.jsm:2804:26
+observe@addonManager.js:65:29
+1560629144467	addons.xpi-utils	WARN	updateMetadata: Add-on torbutton@torproject.org is invalid: Error: File C:\Users\ASUS\AppData\Local\Temp\rust_mozprofile.azNMGuVVqqiQ\extensions\torbutton@torproject.org.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:542:11) JS Stack trace: loadManifest@XPIInstall.jsm:542:11
+awaitPromise@XPIProvider.jsm:187:15
+syncLoadManifestFromFile@XPIInstall.jsm:606:22
+updateMetadata@XPIDatabase.jsm:2462:32
+updateExistingAddon@XPIDatabase.jsm:2641:23
+processFileChanges@XPIDatabase.jsm:2717:31
+checkForChanges@XPIProvider.jsm:2664:55
+startup@XPIProvider.jsm:2224:12
+callProvider@AddonManager.jsm:204:31
+_startProvider@AddonManager.jsm:655:5
+startup@AddonManager.jsm:811:14
+startup@AddonManager.jsm:2804:26
+observe@addonManager.js:65:29
+1560629144849	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1560629144849	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1560629144849	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 1772: Error: Cannot find loader for bootstrap
+JavaScript error: moz-extension://c2d691ca-b0f8-4525-8bf2-0729ee45376f/lib/Messages.js, line 68: Error: Could not establish connection. Receiving end does not exist.
+JavaScript error: resource://gre/modules/ExtensionContent.jsm, line 490: TypeError: Argument 1 of PrecompiledScript.executeInGlobal is not an object.
+JavaScript error: , line 0: TypeError: can't access dead object
+1560629145888	Marionette	INFO	Listening on port 56425
+1560629146316	Marionette	WARN	TLS certificate errors will be ignored for this session
+1560629150338	Marionette	INFO	Stopped listening on port 56425
+[Parent 11992, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17228, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 172[Child 17280, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17280, C[Parent 11992, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18888, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559936101/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 188

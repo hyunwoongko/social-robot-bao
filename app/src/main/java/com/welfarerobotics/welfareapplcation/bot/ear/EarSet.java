@@ -1,11 +1,13 @@
 package com.welfarerobotics.welfareapplcation.bot.ear;
 
 import android.app.Activity;
+import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
 import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
 import com.welfarerobotics.welfareapplcation.entity.Conversation;
 import com.welfarerobotics.welfareapplcation.entity.cache.UserCache;
 import com.welfarerobotics.welfareapplcation.util.Pool;
+import com.welfarerobotics.welfareapplcation.util.Sound;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -46,6 +48,7 @@ public class EarSet {
 
     private void iniRightEar() {
         rightEar.ifHear(s -> {// 오른쪽 귀가 들리면
+            Sound.get().effectSound(activity, R.raw.think);
             rightOn = true;
             Pool.threadPool.execute(() -> { // 쓰레드 전환
                 boolean isTeachedSpeech = false;
@@ -94,7 +97,6 @@ public class EarSet {
                     leftEar.hear();
                     isSaying = false;
                 });
-
             }
         });
     }

@@ -12,6 +12,7 @@ import com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.hardware.Si
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.skills.*;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
 /**
  * @author : Hyunwoong
@@ -20,7 +21,7 @@ import java.io.IOException;
  */
 public class Skills {
 
-    public static void thinkAndSay(String intent, String speech, Activity activity) throws IOException {
+    public static void thinkAndSay(String intent, String speech, Activity activity) throws IOException, ExecutionException, InterruptedException {
         Brain.hippocampus.rememberIntent(intent);
 
         /** 문맥  모음 */
@@ -65,6 +66,6 @@ public class Skills {
 
         /** 대화 */
         else if (intent.equals("잘못들음")) PardonScenario.process(speech);
-        else OpenDomainScenario.process(intent, speech); // <- 오픈도메인 대화
+        else OpenDomainScenario.process(intent, speech, activity); // <- 오픈도메인 대화
     }
 }

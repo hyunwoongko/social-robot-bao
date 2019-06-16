@@ -24,14 +24,19 @@ public class SettingActivity extends PreferenceActivity {
         Preference SetupWifi = findPreference("SetupWifi");
         Preference TeachSentenceMenu = findPreference("TeachSentencesMenu");
         Preference Alarm = findPreference("Alarm");
-        Preference ICMenu = findPreference("InitConversationMenu");
         Preference Systemrefresh = findPreference("SystemRefresh");
+        Preference info = findPreference("Info");
 
-        Systemrefresh.setOnPreferenceClickListener(p->{
+        info.setOnPreferenceClickListener(p -> {
+            startActivity(new Intent(this, InfoActivity.class));
+            return false;
+        });
+
+        Systemrefresh.setOnPreferenceClickListener(p -> {
             startActivity(new Intent(this, SysRefreshActivity.class));
             return false;
         });
-        Alarm.setOnPreferenceClickListener(p->{
+        Alarm.setOnPreferenceClickListener(p -> {
             startActivity(new Intent(this, AlarmActivity.class));
             return false;
         });
@@ -44,11 +49,6 @@ public class SettingActivity extends PreferenceActivity {
             startActivity(new Intent(this, ConversationEdit.class));
             return false;
         });
-        ICMenu.setOnPreferenceClickListener(p->{
-            startActivity(new Intent(this, InitConversationMenuActivity.class));
-            return false;
-        });
-
         SetupWifi.setOnPreferenceClickListener(preference -> {
             manager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
             if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {

@@ -71,8 +71,7 @@ public class Bluetooth{
 
         // Get the device MAC address
         String address;
-        Activity ac = new Activity();
-        SharedPreferences pref = ac.getSharedPreferences("Bluetooth", MODE_PRIVATE);
+        SharedPreferences pref = activity.getSharedPreferences("Bluetooth", MODE_PRIVATE);
         address = pref.getString("Bluetooth", "B8:27:EB:16:AE:38");
 
         // Get the BluetoothDevice object

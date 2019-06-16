@@ -60,7 +60,6 @@ public class MainActivity extends BaseActivity {
         //FaceHandler handler = new FaceHandler(eyes);
         Handler handler = new FaceHandler(eyes, emotion, mouse, this);
         new Detect(handler);
-
     }
 
     @Override

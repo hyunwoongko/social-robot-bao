@@ -63,12 +63,11 @@
             android:name=".core.settings.SettingActivity"
             android:screenOrientation="sensorLandscape" />
         <activity
-                android:name=".core.settings.SysRefreshActivity"
-                android:screenOrientation="sensorLandscape" />
+            android:name=".core.settings.SysRefreshActivity"
+            android:screenOrientation="sensorLandscape" />
         <activity
-                android:name=".core.settings.SysRfPopupActivity"
-                android:theme="@android:style/Theme.Dialog"
-                 />
+            android:name=".core.settings.SysRfPopupActivity"
+            android:theme="@android:style/Theme.Dialog" />
         <activity
             android:name=".core.settings.LocSettingsActivity"
             android:screenOrientation="sensorLandscape" />
@@ -130,6 +129,10 @@
             android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".core.settings.InitConversationMenuActivity"
+            android:screenOrientation="sensorLandscape" />
+
+        <activity
+            android:name=".core.settings.InfoActivity"
             android:screenOrientation="sensorLandscape" />
 
         <provider
