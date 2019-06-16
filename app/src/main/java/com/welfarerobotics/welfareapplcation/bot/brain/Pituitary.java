@@ -25,7 +25,7 @@ public class Pituitary {
      *
      * @param userText 사용자의 입력
      */
-    public static void rememberNewSentence(String userText) throws IOException {
+    private static void rememberNewSentence(String userText) throws IOException {
         float currentHormoneValue;
         if (userText.contains("#")) currentHormoneValue = -1.0f;
         else currentHormoneValue = ModelApi.getEmotion(userText);
