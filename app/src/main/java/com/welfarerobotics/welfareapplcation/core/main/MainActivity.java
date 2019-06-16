@@ -64,6 +64,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        findViewById(R.id.isHearing).setBackground(getDrawable(R.drawable.border_black));
         audioManager.setMicrophoneMute(false);
         if (hasPaused) {
             ear.startHear();
@@ -73,6 +74,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        findViewById(R.id.isHearing).setBackground(getDrawable(R.drawable.border_black));
         audioManager.setMicrophoneMute(true);
         ear.blockHear();
         hasPaused = true;
