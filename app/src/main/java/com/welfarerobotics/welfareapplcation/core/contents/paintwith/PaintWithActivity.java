@@ -42,7 +42,6 @@ public class PaintWithActivity extends VoiceActivity {
 
     private CanvasView canvasView;
     private String uuid;
-    private String first = "true";
     private MediaPlayer mediaPlayer = new MediaPlayer();
     private Random random = new Random();
     private String[] readyStrings = {
@@ -62,6 +61,7 @@ public class PaintWithActivity extends VoiceActivity {
         setContentView(R.layout.activity_paint_with);
         canvasView = findViewById(R.id.canvas_view);
         canvasView.setBackgroundColor(Color.TRANSPARENT);
+        ImageView imageView = findViewById(R.id.paint_with_image);
 
         uuid = DeviceId.getInstance(this).getUUID();
         findViewById(R.id.redo_button).setOnClickListener(v -> {
@@ -84,9 +84,9 @@ public class PaintWithActivity extends VoiceActivity {
             mediaPlayer = new MediaPlayer();
             playVoice(mediaPlayer, "모두 지우기");
             canvasView.clear();
+            imageView.setImageBitmap(null);
         });
         findViewById(R.id.backButton).setOnClickListener(v -> finish());
-        ImageView imageView = findViewById(R.id.paint_with_image);
 
 
         findViewById(R.id.pencil_button).setOnClickListener(v -> {
@@ -145,7 +145,7 @@ public class PaintWithActivity extends VoiceActivity {
                         .skipMemoryCache(false);
 
                 Glide.with(imageView.getContext())
-                        .load(ServerCache.getInstance().getPainter() + "/draw/" + uuid + "/" + first + "/" + taskSnapshot.getDownloadUrl().toString().split("\\?")[0])
+                        .load(ServerCache.getInstance().getPainter() + "/draw/" + uuid + "/" + taskSnapshot.getDownloadUrl().toString().split("\\?")[0])
                         .listener(new RequestListener<Drawable>() {
                             @Override public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
                                 pDialog.changeAlertType(KAlertDialog.ERROR_TYPE);
@@ -171,7 +171,6 @@ public class PaintWithActivity extends VoiceActivity {
                         .apply(options)
                         .into(imageView);
                 imageView.setAlpha(185);
-                first = "false";
             });
         });
     }

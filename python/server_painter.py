@@ -30,19 +30,14 @@ def init():
     return 'BAO SERVER ON - PAINTER'
 
 
-@app.route('/draw/<string:uid>/<string:change>/<path:url>')
+@app.route('/draw/<string:uid>/<path:url>')
 @nocache
-def draw(uid, change, url):
+def draw(uid, url):
     file = uid + '.jpg'
     input_path = 'painter/images/input/' + file
     output_path = 'painter/images/output/' + file
     urllib.request.urlretrieve(url + '?alt=media', input_path)
     pix_translate(input_path, output_path)
-    stylizer = Stylizer(file)
-    if change == 'true':
-        stylizer.stylize(True)
-    else:
-        stylizer.stylize(False)
     return send_file(output_path, mimetype='image/png')
 
 
