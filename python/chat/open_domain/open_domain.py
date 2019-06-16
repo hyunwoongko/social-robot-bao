@@ -30,7 +30,6 @@ def get_emotion(user_input) -> float:
     txt = driver.page_source
     driver.quit()
     for i, sentiment in enumerate(txt.split('model_score')):
-        print(sentiment)
         if i == 2:
             sentiment = sentiment.replace('": ', '')
             sentiment = sentiment.replace('"', '')
