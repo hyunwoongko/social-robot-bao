@@ -32,6 +32,7 @@ public class MainActivity extends BaseActivity {
     private AudioManager audioManager;
     private EarSet ear = new EarSet(this);
     private ImageView refresh_view;
+    private boolean hasPaused = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +57,7 @@ public class MainActivity extends BaseActivity {
             DataLoader.onDataLoad(); // 모든 데이터 다운로드
             onSwipeTouchListener = new ConcreteSwipeTouchListener(this, audioManager, ear::repeat);
             ear.initEar();
+            ear.startHear();
         });
     }
 
@@ -63,7 +65,9 @@ public class MainActivity extends BaseActivity {
     protected void onResume() {
         super.onResume();
         audioManager.setMicrophoneMute(false);
-        ear.startHear();
+        if (hasPaused) {
+            ear.startHear();
+        }
     }
 
     @Override
@@ -71,6 +75,7 @@ public class MainActivity extends BaseActivity {
         super.onPause();
         audioManager.setMicrophoneMute(true);
         ear.blockHear();
+        hasPaused = true;
     }
 
     @Override
