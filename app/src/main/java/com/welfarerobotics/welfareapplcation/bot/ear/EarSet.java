@@ -48,7 +48,6 @@ public class EarSet {
 
     private void iniRightEar() {
         rightEar.ifHear(s -> {// 오른쪽 귀가 들리면
-            Sound.get().effectSound(activity, R.raw.think);
             rightOn = true;
             Pool.threadPool.execute(() -> { // 쓰레드 전환
                 boolean isTeachedSpeech = false;
@@ -64,6 +63,7 @@ public class EarSet {
                     Mouth.get().say();
                     Mouth.get().stop(() -> rightEar.hear());
                 } else {
+                    Sound.get().effectSound(activity, R.raw.think); // 오래 걸리기 떄문에 효과음 재생해줌
                     Brain.thinkAndSay(s, activity); // 뇌에서 생각해서 말하기
                     Mouth.get().stop(() -> rightEar.hear()); // 오른쪽 귀 다시 듣기
                 }

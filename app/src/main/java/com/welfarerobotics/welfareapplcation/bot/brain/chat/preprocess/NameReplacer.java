@@ -12,6 +12,9 @@ public final class NameReplacer {
         if (input.contains("당신")) {
             return input.replace("당신", UserCache.getInstance().getName() + " 님");
         }
+        if(input.contains("핑퐁")){
+            return input.replace("핑퐁", "바오");
+        }
         return input;
     }
 }
