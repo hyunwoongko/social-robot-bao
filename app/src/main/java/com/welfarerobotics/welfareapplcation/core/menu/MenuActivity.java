@@ -77,7 +77,7 @@ public class MenuActivity extends AppCompatActivity {
 
         ibkidssong.setOnClickListener(view -> {
 
-            Future<String> futureYoutube = Pool.threadPool.submit(() -> {
+            Future<String> futureYoutube = Pool.youtubeThread.submit(() -> {
                 try {
                     return YoutubeApi.getYoutube("동요");
                 } catch (IOException e) {

@@ -34,19 +34,23 @@ public class EarSet {
     private void initLeftEar() {
         leftEar.ifHear(s -> { // 왼쪽 귀로 들으면
             attention.focus(s, activity, leftEar, speech -> { // 자신의 이름이 불렸는지 체크
+                activity.runOnUiThread(()->activity.findViewById(R.id.isHearing).setBackground(activity.getDrawable(R.drawable.border_hearing)));
                 leftEar.block(); // 왼쪽 귀 비활성화
-                rightEar.hearAgain(); // 오른쪽 귀 활성화
+                rightEar.hear(); // 오른쪽 귀 활성화
             });
         });
 
-        leftEar.ifNotHear(leftEar::hear);
+        leftEar.ifNotHear(()->{
+            leftEar.hearAgain();
+            activity.runOnUiThread(()->activity.findViewById(R.id.isHearing).setBackground(activity.getDrawable(R.drawable.border_black)));
+        });
         // 왼쪽 귀 못들으면 무한 재반복
     }
 
     private void iniRightEar() {
         rightEar.ifHear(s -> {// 오른쪽 귀가 들리면
             rightOn = true;
-            Pool.threadPool.execute(() -> { // 쓰레드 전환
+            Pool.mouthThread.execute(() -> { // 쓰레드 전환
                 boolean isTeachedSpeech = false;
                 for (Conversation c : UserCache.getInstance().getDict()) {
                     if (c.getInput().replaceAll(" ", "").trim().equals(
@@ -58,20 +62,21 @@ public class EarSet {
                 }
                 if (isTeachedSpeech) {
                     Mouth.get().say();
-                    Mouth.get().stop(() -> rightEar.hear());
+                    Mouth.get().stop(() -> rightEar.hearAgain());
                 } else {
-                    Sound.get().effectSound(activity, R.raw.think); // 오래 걸리기 떄문에 효과음 재생해줌
+                    Sound.get().effectSound(activity, R.raw.think);
                     Brain.thinkAndSay(s, activity); // 뇌에서 생각해서 말하기
-                    Mouth.get().stop(() -> rightEar.hear());
+                    Mouth.get().stop(() -> rightEar.hearAgain()); // 오른쪽 귀 다시 듣기
                 }
             });
         });
 
         rightEar.ifNotHear(() -> { // 오른쪽 귀가 못 들으면
-            blockHear();
+            rightEar.block();
             attention.block(activity); // 어텐션 비활성화
-            leftEar.hear();
+            leftEar.hearAgain();
             rightOn = false;
+            activity.runOnUiThread(()->activity.findViewById(R.id.isHearing).setBackground(activity.getDrawable(R.drawable.border_black)));
         });
     }
 
@@ -85,15 +90,16 @@ public class EarSet {
     }
 
     public void repeat() {
-        Pool.threadPool.execute(() -> {
+        Pool.mouthThread.execute(() -> {
             if (!isSaying && !rightOn) {
                 isSaying = true;
                 blockHear();
                 Mouth.get().play(Brain.hippocampus.getThoughtSentence());
                 Mouth.get().stop(() -> {
-                    leftEar.hearAgain();
+                    leftEar.hear();
                     isSaying = false;
                 });
+
             }
         });
     }

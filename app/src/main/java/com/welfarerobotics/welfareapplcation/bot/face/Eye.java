@@ -47,7 +47,7 @@ public class Eye {
     }
 
     public void see(float x, float speed) {
-        Pool.threadPool.execute(() -> {
+        Pool.eyeThread.execute(() -> {
             float weight = 100;
             if (x > activity.findViewById(R.id.eye).getX()) {
                 for (float ix = activity.findViewById(R.id.eye).getX(); ix < x; ix += 0.5) {

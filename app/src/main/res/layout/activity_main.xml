@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:id="@+id/relative_1">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,6 +28,7 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="24dp"
+            android:fontFamily="@font/baemin"
             android:text="감정" />
 
         <TextView
@@ -37,6 +39,7 @@
             android:layout_centerHorizontal="true"
             android:text="호르몬"
             android:gravity="center"
+            android:fontFamily="@font/baemin"
             android:textColor="@color/white"
             android:textSize="24sp" />
 
@@ -70,4 +73,11 @@
 
     </RelativeLayout>
 
+    <ImageView
+        android:id="@+id/isHearing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/border_black" />
 </RelativeLayout>

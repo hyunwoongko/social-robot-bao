@@ -17,11 +17,10 @@ public class Attention {
 
     private List<String> attentionSet = Arrays.asList(
             "바오", "바오야", "다우", "다우야", "바우", "바우야", "바보야",
-            "하이", "헬로", "hi", "hello", "안녕"
+            "하이", "헬로", "hi", "hello", "안녕", "카카오야"
     );
 
     private boolean detectCalling(String speech) {
-        System.out.println(speech);
         boolean recognization = false;
         speech = speech.trim();
         speech = speech.toLowerCase();

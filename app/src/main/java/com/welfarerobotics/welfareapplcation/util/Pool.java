@@ -9,5 +9,9 @@ import java.util.concurrent.Executors;
  * @homepage : https://github.com/gusdnd852
  */
 public class Pool {
-    public static ExecutorService threadPool = Executors.newCachedThreadPool();
+    public static ExecutorService mouthThread = Executors.newCachedThreadPool();
+    public static ExecutorService hormoneThread = Executors.newCachedThreadPool();
+    public static ExecutorService eyeThread = Executors.newSingleThreadExecutor();
+    public static ExecutorService youtubeThread = Executors.newSingleThreadExecutor();
+
 }

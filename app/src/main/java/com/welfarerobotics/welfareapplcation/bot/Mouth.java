@@ -83,7 +83,6 @@ public final @Data class Mouth {
             String tempname = "navercssfile";
             String Path_to_file = Environment.getExternalStorageDirectory() +
                     File.separator + "NaverCSS/" + tempname + ".mp3";
-            audioPlayer.release();
             audioPlayer = new MediaPlayer();
             audioPlayer.setDataSource(Path_to_file);
             audioPlayer.prepare();
@@ -100,12 +99,12 @@ public final @Data class Mouth {
         r = nextAction;
         audioPlayer.setOnCompletionListener(mediaPlayer -> {
             Handler mHandler = new Handler(Looper.getMainLooper());
-            mHandler.postDelayed(nextAction, 150);
+            mHandler.postDelayed(nextAction, 300);
             audioPlayer.release();
         });
         audioPlayer.setOnErrorListener((mp, what, extra) -> {
             Handler mHandler = new Handler(Looper.getMainLooper());
-            mHandler.postDelayed(nextAction, 150);
+            mHandler.postDelayed(nextAction, 300);
             audioPlayer.release();
             return false;
         });
