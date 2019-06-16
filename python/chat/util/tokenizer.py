@@ -4,6 +4,12 @@ stop_word = [
     '바오'
 ]
 
+josa = [
+    '이구나', '이네', '이야',
+    '은', '는', '이', '가', '을', '를',
+    '로', '으로'
+]
+
 
 def tokenize(sentence):
     tokenizer = Okt()
@@ -12,7 +18,7 @@ def tokenize(sentence):
     for word, tag in pos:
         if word in stop_word:
             continue
-        elif tag == 'Josa' or tag == 'Punctuation':
+        elif (tag == 'Josa' and word in josa) or tag == 'Punctuation':
             continue
         else:
             word_bag.append(word)

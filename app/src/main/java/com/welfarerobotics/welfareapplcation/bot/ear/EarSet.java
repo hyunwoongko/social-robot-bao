@@ -9,9 +9,6 @@ import com.welfarerobotics.welfareapplcation.entity.cache.UserCache;
 import com.welfarerobotics.welfareapplcation.util.Pool;
 import com.welfarerobotics.welfareapplcation.util.Sound;
 
-import java.util.Arrays;
-import java.util.Collections;
-
 /**
  * @author : Hyunwoong
  * @when : 5/29/2019 10:13 AM
@@ -38,11 +35,11 @@ public class EarSet {
         leftEar.ifHear(s -> { // 왼쪽 귀로 들으면
             attention.focus(s, activity, leftEar, speech -> { // 자신의 이름이 불렸는지 체크
                 leftEar.block(); // 왼쪽 귀 비활성화
-                rightEar.hear(); // 오른쪽 귀 활성화
+                rightEar.hearAgain(); // 오른쪽 귀 활성화
             });
         });
 
-        leftEar.ifNotHear(leftEar::hearAgain);
+        leftEar.ifNotHear(leftEar::hear);
         // 왼쪽 귀 못들으면 무한 재반복
     }
 
@@ -65,7 +62,7 @@ public class EarSet {
                 } else {
                     Sound.get().effectSound(activity, R.raw.think); // 오래 걸리기 떄문에 효과음 재생해줌
                     Brain.thinkAndSay(s, activity); // 뇌에서 생각해서 말하기
-                    Mouth.get().stop(() -> rightEar.hear()); // 오른쪽 귀 다시 듣기
+                    Mouth.get().stop(() -> rightEar.hear());
                 }
             });
         });
@@ -73,7 +70,7 @@ public class EarSet {
         rightEar.ifNotHear(() -> { // 오른쪽 귀가 못 들으면
             blockHear();
             attention.block(activity); // 어텐션 비활성화
-            leftEar.hearAgain();
+            leftEar.hear();
             rightOn = false;
         });
     }
@@ -88,13 +85,13 @@ public class EarSet {
     }
 
     public void repeat() {
-        Pool.threadPool.execute(()->{
+        Pool.threadPool.execute(() -> {
             if (!isSaying && !rightOn) {
                 isSaying = true;
                 blockHear();
                 Mouth.get().play(Brain.hippocampus.getThoughtSentence());
                 Mouth.get().stop(() -> {
-                    leftEar.hear();
+                    leftEar.hearAgain();
                     isSaying = false;
                 });
             }

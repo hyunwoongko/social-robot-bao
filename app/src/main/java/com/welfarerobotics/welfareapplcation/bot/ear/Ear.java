@@ -20,7 +20,7 @@ public class Ear {
     public Ear() {
         earCanal = new SpeechRecognizerClient.Builder()
                 .setServiceType(SpeechRecognizerClient.SERVICE_TYPE_WEB)
-                .setGlobalTimeOut(20)
+                .setGlobalTimeOut(35)
                 .build();
         cochlea = new Cochlea();
     }
@@ -31,7 +31,7 @@ public class Ear {
     }
 
     public void ifNotHear(Runnable fail) {
-        cochlea.ifNotHear(fail);
+        cochlea.ifNotHear(() -> handler.postDelayed(fail, 250));
         earCanal.setSpeechRecognizeListener(cochlea);
     }
 
@@ -40,7 +40,7 @@ public class Ear {
     }
 
     public void hearAgain() {
-        handler.postDelayed(this::hear, 150);
+        handler.postDelayed(this::hear, 250);
     }
 
     public void block() {

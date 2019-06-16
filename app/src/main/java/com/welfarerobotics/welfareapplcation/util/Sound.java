@@ -24,22 +24,21 @@ public class Sound {
     private Sound() {
         if (musicPlayer == null) {
             musicPlayer = new MediaPlayer();
+            effectPlayer = new MediaPlayer();
             length = 0;
         }
     } // 초기화
 
     public Sound clear() {
-        if (musicPlayer != null) {
-            musicPlayer.reset();
-            musicPlayer.release();
-            musicPlayer = null;
-        }
+        musicPlayer.reset();
+        musicPlayer.release();
+        musicPlayer = null;
         return this;
     } // 지속적으로 미디어플레이어를 사용하면 객체가 너무 많이 생성되어
     // 에러가 발생하기 떄문에 그 수를 조절하기 위하여, 객체를 죽여줘야함.
 
     public Sound start(Context context, int resid) {
-        if (musicPlayer != null) clear();
+        clear();
         musicPlayer = MediaPlayer.create(context, resid);
         musicPlayer.start();
         return this;
@@ -78,11 +77,9 @@ public class Sound {
     } // 반복재생을 할 것인지 말 것인지 결정함.
 
     public Sound effectSound(Context context, int resId) {
-        if (effectPlayer != null) {
-            effectPlayer.reset();
-            effectPlayer.release();
-            effectPlayer = null;
-        }
+        effectPlayer.reset();
+        effectPlayer.release();
+        effectPlayer = null;
         effectPlayer = MediaPlayer.create(context, resId);
         effectPlayer.start();
         effectPlayer.setLooping(false);

@@ -83,6 +83,7 @@ public final @Data class Mouth {
             String tempname = "navercssfile";
             String Path_to_file = Environment.getExternalStorageDirectory() +
                     File.separator + "NaverCSS/" + tempname + ".mp3";
+            audioPlayer.release();
             audioPlayer = new MediaPlayer();
             audioPlayer.setDataSource(Path_to_file);
             audioPlayer.prepare();
