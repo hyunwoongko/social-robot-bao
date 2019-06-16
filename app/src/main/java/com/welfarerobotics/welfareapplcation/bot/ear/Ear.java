@@ -40,7 +40,7 @@ public class Ear {
     }
 
     public void hearAgain() {
-        handler.postDelayed(this::hear, 150);
+        handler.postDelayed(this::hear, 500);
     }
 
     public void block() {

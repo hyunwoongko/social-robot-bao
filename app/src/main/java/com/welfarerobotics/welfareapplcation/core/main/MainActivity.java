@@ -54,9 +54,8 @@ public class MainActivity extends BaseActivity {
             new Detect(handler);
             ServerCache.setInstance(server);
             DataLoader.onDataLoad(); // 모든 데이터 다운로드
-            ear.initEar();
             onSwipeTouchListener = new ConcreteSwipeTouchListener(this, audioManager, ear::repeat);
-
+            ear.initEar();
         });
     }
 

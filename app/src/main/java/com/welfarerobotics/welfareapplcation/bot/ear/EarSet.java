@@ -74,9 +74,9 @@ public class EarSet {
         rightEar.ifNotHear(() -> { // 오른쪽 귀가 못 들으면
             rightEar.block();
             attention.block(activity); // 어텐션 비활성화
-            leftEar.hearAgain();
             rightOn = false;
             activity.runOnUiThread(()->activity.findViewById(R.id.isHearing).setBackground(activity.getDrawable(R.drawable.border_black)));
+            leftEar.hearAgain();
         });
     }
 
@@ -96,10 +96,9 @@ public class EarSet {
                 blockHear();
                 Mouth.get().play(Brain.hippocampus.getThoughtSentence());
                 Mouth.get().stop(() -> {
-                    leftEar.hear();
+                    leftEar.hearAgain();
                     isSaying = false;
                 });
-
             }
         });
     }
