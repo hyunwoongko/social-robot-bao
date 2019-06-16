@@ -11,13 +11,13 @@ from selenium.webdriver.firefox.options import Options
 
 options = Options()
 options.headless = True
-ua = UserAgent()
-options.add_argument('user-agent=' + ua.random)
 
 
 def get_emotion(user_input) -> float:
     query = urllib.parse.quote(user_input)
     profile = webdriver.FirefoxProfile()
+    ua = UserAgent()
+    options.add_argument('user-agent=' + ua.random)
     profile.set_preference("network.proxy.type", 1)
     profile.set_preference("network.proxy.socks", "127.0.0.1")
     profile.set_preference("network.proxy.socks_port", 9150)
@@ -41,6 +41,8 @@ def get_emotion(user_input) -> float:
 def open_domain(user_input) -> str:
     query = urllib.parse.quote(user_input)
     profile = webdriver.FirefoxProfile()
+    ua = UserAgent()
+    options.add_argument('user-agent=' + ua.random)
     profile.set_preference("network.proxy.type", 1)
     profile.set_preference("network.proxy.socks", "127.0.0.1")
     profile.set_preference("network.proxy.socks_port", 9150)
