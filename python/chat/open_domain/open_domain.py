@@ -17,15 +17,20 @@ options.add_argument('user-agent=' + ua.random)
 
 def get_emotion(user_input) -> float:
     query = urllib.parse.quote(user_input)
-    profile = FirefoxProfile(r"C:\Tor\Browser\TorBrowser\Data\Browser\profile.default")
+    profile = webdriver.FirefoxProfile()
+    profile.set_preference("network.proxy.type", 1)
+    profile.set_preference("network.proxy.socks", "127.0.0.1")
+    profile.set_preference("network.proxy.socks_port", 9150)
     profile.set_preference("general.useragent.override", ua.random)
+    profile.update_preferences()
 
     driver = webdriver.Firefox(firefox_options=options, firefox_profile=profile,
                                executable_path=r'chat/open_domain/fox.exe')
-    driver.get("https://demo.pingpong.us/api/emoji.php?custom=basic&query=" + query)
+    driver.get("https://demo.pingpong.us/api/sentiment.php?query=" + query)
     txt = driver.page_source
     driver.quit()
     for i, sentiment in enumerate(txt.split('model_score')):
+        print(sentiment)
         if i == 2:
             sentiment = sentiment.replace('": ', '')
             sentiment = sentiment.replace('"', '')
@@ -36,8 +41,12 @@ def get_emotion(user_input) -> float:
 
 def open_domain(user_input) -> str:
     query = urllib.parse.quote(user_input)
-    profile = FirefoxProfile(r"C:\Tor\Browser\TorBrowser\Data\Browser\profile.default")
+    profile = webdriver.FirefoxProfile()
+    profile.set_preference("network.proxy.type", 1)
+    profile.set_preference("network.proxy.socks", "127.0.0.1")
+    profile.set_preference("network.proxy.socks_port", 9150)
     profile.set_preference("general.useragent.override", ua.random)
+    profile.update_preferences()
     driver = webdriver.Firefox(firefox_options=options, firefox_profile=profile,
                                executable_path=r'chat/open_domain/fox.exe')
     driver.get("https://demo.pingpong.us/api/reaction.php?custom=basic&query=" + query)
@@ -66,3 +75,5 @@ def open_domain(user_input) -> str:
 def exception(text):
     if '네 안녕' in text: return '안녕'
     else: return text;
+
+

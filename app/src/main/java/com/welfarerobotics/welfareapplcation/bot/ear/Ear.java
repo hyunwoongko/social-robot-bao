@@ -40,10 +40,11 @@ public class Ear {
     }
 
     public void hearAgain() {
-        handler.postDelayed(this::hear, 500);
+        handler.postDelayed(this::hear, 300);
     }
 
     public void block() {
         earCanal.stopRecording();
+        earCanal.cancelRecording();
     }
 }
