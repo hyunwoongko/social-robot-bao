@@ -13,7 +13,8 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.nostra13.universalimageloader.core.ImageLoader;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.entity.cache.FlashcardCache;
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
@@ -40,13 +41,11 @@ public class QuizFragment extends Fragment {
 
         //xml 변수 생성
         ImageButton ibQuizImage = v.findViewById(R.id.quizImage);
-        ImageView ivBlank = v.findViewById(R.id.quizBlank);
         ImageButton ibleftbtn = v.findViewById(R.id.quizLeft);
         ImageButton ibrightbtn = v.findViewById(R.id.quizRight);
+        TextView tvQuizText = v.findViewById(R.id.quizText);
         TextView tvAnswer = v.findViewById(R.id.quizAnswer);
 
-        //라이브러리 ImageLoader 사용
-        ImageLoader imageLoader = ImageLoader.getInstance();
 
         //페이지 이동을 위한 변수 생성
         quizFragment = new QuizFragment();
@@ -54,8 +53,13 @@ public class QuizFragment extends Fragment {
 
         //각 페이지 별 카드 설정
         String[] child = cache.getFlashcard(index - 1);
-        imageLoader.displayImage(child[0], ibQuizImage);
+        Glide
+                .with(this)
+                .load(child[0])
+                .apply(new RequestOptions().override(800, 850).fitCenter())
+                .into(ibQuizImage);
         name = child[1];
+        tvQuizText.setText(child[1]);
 
         //페이지 처음이면 왼쪽 버튼이 invisible
         //페이지 맨끝이면 오른쪽 버튼이 invisible
@@ -81,7 +85,7 @@ public class QuizFragment extends Fragment {
         ibleftbtn.setOnClickListener(view -> {
             --index;
             flag = false;
-            ivBlank.setVisibility(View.VISIBLE);
+            tvQuizText.setVisibility(View.INVISIBLE);
             fragmentTransaction
                     .setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right)
                     .replace(R.id.container, quizFragment, "quizSub")
@@ -89,11 +93,13 @@ public class QuizFragment extends Fragment {
         });
 
         tvAnswer.setOnClickListener(view -> {
-            if (ivBlank.getVisibility() == View.VISIBLE) {
-                ivBlank.setVisibility(View.INVISIBLE);
+            if (tvQuizText.getVisibility() == View.INVISIBLE) {
+                tvQuizText.setVisibility(View.VISIBLE);
+                tvAnswer.setText("정답 숨기기");
                 flag = true;
             } else {
-                ivBlank.setVisibility(View.VISIBLE);
+                tvQuizText.setVisibility(View.INVISIBLE);
+                tvAnswer.setText("정답 보기");
                 flag = false;
             }
         });
@@ -101,7 +107,7 @@ public class QuizFragment extends Fragment {
         ibrightbtn.setOnClickListener(view -> {
             ++index;
             flag = false;
-            ivBlank.setVisibility(View.VISIBLE);
+            tvQuizText.setVisibility(View.INVISIBLE);
             fragmentTransaction
                     .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
                     .replace(R.id.container, quizFragment, "quizSub")

@@ -48,7 +48,6 @@ dependencies {
     // 이미지
     implementation 'com.github.bumptech.glide:glide:4.6.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
-    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
 
     // 파이어베이스
     implementation 'com.firebaseui:firebase-ui-storage:3.2.2'

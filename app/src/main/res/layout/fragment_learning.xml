@@ -49,6 +49,54 @@
             android:padding="10sp"
             android:id="@+id/learning4"/>
 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/learning1"
+            app:layout_constraintEnd_toEndOf="@id/learning1"
+            app:layout_constraintBottom_toBottomOf="@id/learning1"
+            android:paddingBottom="@dimen/flashcard_Learning_textPaddingBottom"
+            android:textSize="@dimen/flashcard_Learning_textSize"
+            android:textColor="#000000"
+            android:fontFamily="@font/baemin"
+            android:id="@+id/learningText1"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/learning2"
+            app:layout_constraintEnd_toEndOf="@id/learning2"
+            app:layout_constraintBottom_toBottomOf="@id/learning2"
+            android:paddingBottom="@dimen/flashcard_Learning_textPaddingBottom"
+            android:textSize="@dimen/flashcard_Learning_textSize"
+            android:textColor="#000000"
+            android:fontFamily="@font/baemin"
+            android:id="@+id/learningText2"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/learning3"
+            app:layout_constraintEnd_toEndOf="@id/learning3"
+            app:layout_constraintBottom_toBottomOf="@id/learning3"
+            android:paddingBottom="@dimen/flashcard_Learning_textPaddingBottom"
+            android:textSize="@dimen/flashcard_Learning_textSize"
+            android:textColor="#000000"
+            android:fontFamily="@font/baemin"
+            android:id="@+id/learningText3"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/learning4"
+            app:layout_constraintEnd_toEndOf="@id/learning4"
+            app:layout_constraintBottom_toBottomOf="@id/learning4"
+            android:paddingBottom="@dimen/flashcard_Learning_textPaddingBottom"
+            android:textSize="@dimen/flashcard_Learning_textSize"
+            android:textColor="#000000"
+            android:fontFamily="@font/baemin"
+            android:id="@+id/learningText4"/>
+
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,7 +113,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:textSize="30sp"
+            android:fontFamily="@font/baemin"
+            android:textSize="25sp"
             android:id="@+id/learningIndex"/>
 
     <ImageButton

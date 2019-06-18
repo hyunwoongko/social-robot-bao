@@ -14,19 +14,20 @@
             android:foreground="?attr/selectableItemBackgroundBorderless"
             android:background="#00ffffff"
             android:padding="10sp"
-            android:id="@+id/quizImage"
-    />
+            android:id="@+id/quizImage"/>
 
-    <ImageView
+    <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/flashcards_blank"
-            android:layout_marginBottom="14dp"
-            app:layout_constraintBottom_toBottomOf="@id/quizImage"
             app:layout_constraintStart_toStartOf="@id/quizImage"
             app:layout_constraintEnd_toEndOf="@id/quizImage"
-            android:id="@+id/quizBlank"
-    />
+            app:layout_constraintBottom_toBottomOf="@id/quizImage"
+            android:paddingBottom="@dimen/flashcard_Quiz_textPaddingBottom"
+            android:textSize="@dimen/flashcard_Quiz_textSize"
+            android:textColor="#000000"
+            android:fontFamily="@font/baemin"
+            android:visibility="invisible"
+            android:id="@+id/quizText"/>
 
     <ImageButton
             android:layout_width="wrap_content"
@@ -45,7 +46,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:textSize="40sp"
+            android:fontFamily="@font/baemin"
+            android:textSize="28sp"
+            app:layout_constraintVertical_bias="0.8"
             android:text="정답 보기"
             android:id="@+id/quizAnswer" />
 

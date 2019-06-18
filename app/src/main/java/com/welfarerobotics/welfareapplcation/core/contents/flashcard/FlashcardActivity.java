@@ -6,10 +6,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.WindowManager;
 import android.widget.ImageButton;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.util.Sound;
@@ -29,21 +25,6 @@ public class FlashcardActivity extends BaseActivity {
         modeFragment = new ModeFragment();
 
         ImageButton ibBackbutton = findViewById(R.id.backButton);
-
-        DisplayImageOptions options = new DisplayImageOptions.Builder()
-                .cacheInMemory(true)
-                .cacheOnDisk(true)
-                .build();
-
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this)
-                .tasksProcessingOrder(QueueProcessingType.FIFO)
-                .defaultDisplayImageOptions(options)
-                .memoryCacheSize(4 * 512 * 512)
-                .diskCacheSize(100 * 1024 * 1024)
-                .diskCacheFileCount(100)
-                .build();
-
-        ImageLoader.getInstance().init(config);
 
         ibBackbutton.setOnClickListener(view -> {
             Fragment mode = getSupportFragmentManager().findFragmentByTag("mode");

@@ -5,12 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentTransaction;
 import android.view.WindowManager;
 import android.widget.ImageButton;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.core.base.VoiceActivity;
 import com.welfarerobotics.welfareapplcation.util.Sound;
 
@@ -29,21 +24,6 @@ public class EmotioncardActivity extends VoiceActivity {
         emotioncardFragment = new EmotioncardFragment();
 
         ImageButton ibBackbutton = findViewById(R.id.backButton);
-
-        DisplayImageOptions options = new DisplayImageOptions.Builder()
-                .cacheInMemory(true)
-                .cacheOnDisk(true)
-                .build();
-
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this)
-                .tasksProcessingOrder(QueueProcessingType.FIFO)
-                .defaultDisplayImageOptions(options)
-                .memoryCacheSize(4 * 512 * 512)
-                .diskCacheSize(100 * 1024 * 1024)
-                .diskCacheFileCount(50)
-                .build();
-
-        ImageLoader.getInstance().init(config);
 
         emotionIndex = 1;
 

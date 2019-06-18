@@ -12,7 +12,6 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.VoiceFragment;
 import com.welfarerobotics.welfareapplcation.entity.cache.EmotioncardCache;
@@ -40,9 +39,6 @@ public class EmotioncardFragment extends VoiceFragment {
 
         ImageButton[] ibArray = {ibEmotion1, ibEmotion2};
 
-        //라이브러리 ImageLoader 사용
-        ImageLoader imageLoader = ImageLoader.getInstance();
-
         //페이지 전환에 따른 프래그먼트 생성
         emotioncardFragment = new EmotioncardFragment();
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
@@ -57,7 +53,7 @@ public class EmotioncardFragment extends VoiceFragment {
                     .load(child[0])
                     .apply(new RequestOptions().override(600, 850).fitCenter())
                     .into(ibArray[i % 2]);
-            // imageLoader.displayImage(child[0],ibArray[i%2]);
+
             name[i % 2] = child[1];
         }
 

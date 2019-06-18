@@ -10,7 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import com.nostra13.universalimageloader.core.ImageLoader;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.VoiceFragment;
 import com.welfarerobotics.welfareapplcation.entity.cache.FlashcardCache;
@@ -35,16 +36,18 @@ public class LearningFragment extends VoiceFragment {
         ImageButton ib2 = v.findViewById(R.id.learning2);
         ImageButton ib3 = v.findViewById(R.id.learning3);
         ImageButton ib4 = v.findViewById(R.id.learning4);
+        TextView tv1 = v.findViewById(R.id.learningText1);
+        TextView tv2 = v.findViewById(R.id.learningText2);
+        TextView tv3 = v.findViewById(R.id.learningText3);
+        TextView tv4 = v.findViewById(R.id.learningText4);
         TextView tvIndex = v.findViewById(R.id.learningIndex);
 
         //페이지 번호 설정
         tvIndex.setText(String.valueOf(index));
 
-        //이미지뷰 배열 생성
+        //이미지버튼과 텍스트뷰 배열 생성
         ImageButton[] ibArray = {ib1, ib2, ib3, ib4};
-
-        //라이브러리 ImageLoader 사용
-        ImageLoader imageLoader = ImageLoader.getInstance();
+        TextView[] tvArray = {tv1, tv2, tv3, tv4};
 
         //페이지 전환에 따른 프래그먼트 생성
         learningFragment = new LearningFragment();
@@ -60,8 +63,13 @@ public class LearningFragment extends VoiceFragment {
                 break;
             }
             String[] child = cache.getFlashcard(i);
-            imageLoader.displayImage(child[0], ibArray[i % 4]);
+            Glide
+                    .with(this)
+                    .load(child[0])
+                    .apply(new RequestOptions().override(650, 700).fitCenter())
+                    .into(ibArray[i % 4]);
             name[i % 4] = child[1];
+            tvArray[i%4].setText(child[1]);
         }
 
         //페이지 처음이면 왼쪽 버튼이 invisible

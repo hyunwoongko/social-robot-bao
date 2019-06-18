@@ -7,4 +7,9 @@
 
     <dimen name="fab_margin_default">16dp</dimen>
 
+    <dimen name="flashcard_Learning_textSize">28sp</dimen>
+    <dimen name="flashcard_Learning_textPaddingBottom">22dp</dimen>
+
+    <dimen name="flashcard_Quiz_textSize">30sp</dimen>
+    <dimen name="flashcard_Quiz_textPaddingBottom">30dp</dimen>
 </resources>
