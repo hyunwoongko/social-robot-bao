@@ -5,10 +5,7 @@ import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
+import android.content.*;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -291,6 +288,12 @@ public class BluetoothActivity extends BaseActivity {
                         map2.put("name", paired.getName()); //device.getName() : 블루투스 디바이스의 이름
                         map2.put("address", paired.getAddress()); //device.getAddress() : 블루투스 디바이스의 MAC 주소
                         pairing_dataDevice_list.add(map2);
+
+                        SharedPreferences pref = getSharedPreferences("Bluetooth", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = pref.edit();
+                        editor.putString("Bluetooth", paired.getAddress());
+                        editor.commit();
+
                         //리스트 목록갱신
                         adapterPaired.notifyDataSetChanged();
                         //검색된 목록

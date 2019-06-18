@@ -1,6 +1,7 @@
 package com.welfarerobotics.welfareapplcation.core.settings;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.*;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -28,6 +29,8 @@ import com.welfarerobotics.welfareapplcation.util.Sound;
 import es.dmoral.toasty.Toasty;
 
 import java.util.*;
+
+import static android.content.Context.MODE_PRIVATE;
 
 public class WifiFragment extends Fragment {
     public class device {
@@ -76,6 +79,7 @@ public class WifiFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
@@ -153,6 +157,7 @@ public class WifiFragment extends Fragment {
                                 Log.d(TAG, "Password is:" + userInput.getText());
                                 password = userInput.getText().toString();
                                 //  result.setText(userInput.getText());
+                                savewifi(getActivity());
                                 connectWiFi(String.valueOf(d.getName()), password, d.capabilities);
 
                             })
@@ -166,7 +171,16 @@ public class WifiFragment extends Fragment {
             alertDialog.show();
         });
     }
+    private void savewifi(Activity activity){
+        SharedPreferences pref = activity.getSharedPreferences("Wifi", MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putString("Wifi",password);
+        editor.commit();
 
+//        SharedPreferences pref1 = activity.getSharedPreferences("Wifi", MODE_PRIVATE);
+//        System.out.println("페어링주소"+pref1.getString("Bluetooth", "12345678"));
+//        Log.w("TAG: ", "와이파이연결되면 쉐어드프리퍼런스에 비밀번호저장");
+    }
     private void scan() {
         wifi.startScan();
         KAlertDialog pDialog = new KAlertDialog(getActivity(), KAlertDialog.PROGRESS_TYPE);

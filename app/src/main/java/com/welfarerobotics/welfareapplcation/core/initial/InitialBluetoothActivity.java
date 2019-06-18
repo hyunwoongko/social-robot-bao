@@ -10,6 +10,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.View;
 import android.widget.*;
 import com.welfarerobotics.welfareapplcation.R;
@@ -153,7 +154,6 @@ public class InitialBluetoothActivity extends BaseActivity {
         listDeviceView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                mBluetoothAdapter.cancelDiscovery(); // 블루투스 검색 취소
                 BluetoothDevice device = bluetoothDevices.get(position);
                 try {
                     //선택한 디바이스 페어링 요청
@@ -163,14 +163,6 @@ public class InitialBluetoothActivity extends BaseActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                // adapter.getItem(position)의 return 값은 Object 형
-                // 실제 Item의 자료형은 CustomDTO 형이기 때문에
-                // 형변환을 시켜야 getResId() 메소드를 호출할 수 있습니다.
-//                dataDevice_list.get(position);
-//                Map<String,String> vo = (Map<String, String>) parent.getAdapter().getItem(position);
-//                Toast.makeText(getApplicationContext(), vo.get("name"), Toast.LENGTH_LONG).show();
-//                BluetoothDevice bond_device = mBluetoothAdapter.getRemoteDevice(vo.get("address"));
-//                UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
             }
         });
         //1. 블루투스가 꺼져있으면 활성화
@@ -281,8 +273,10 @@ public class InitialBluetoothActivity extends BaseActivity {
                     break;
                 //블루투스 디바이스 페어링 상태 변화
                 case BluetoothDevice.ACTION_BOND_STATE_CHANGED:
+//                    mBluetoothAdapter.cancelDiscovery(); // 블루투스 검색 취소
                     BluetoothDevice paired = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                     if (paired.getBondState() == BluetoothDevice.BOND_BONDED) {
+                        mBluetoothAdapter.cancelDiscovery(); // 블루투스 검색 취소
                         SharedPreferences pref = getSharedPreferences("Bluetooth", MODE_PRIVATE);
                         SharedPreferences.Editor editor = pref.edit();
                         editor.putString("Bluetooth", paired.getAddress());
@@ -290,6 +284,7 @@ public class InitialBluetoothActivity extends BaseActivity {
 
                         SharedPreferences pref1 = getSharedPreferences("Bluetooth", MODE_PRIVATE);
                         System.out.println("페어링주소"+pref1.getString("Bluetooth", "B8:27:EB:16:AE:38"));
+                        Log.w("TAG: ", "로그 페어링되면 쉐어드프리퍼런스에 주소저장");
                         //데이터 저장
                         Map map2 = new HashMap();
                         map2.put("name", paired.getName()); //device.getName() : 블루투스 디바이스의 이름
