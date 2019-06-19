@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class TangramStageCache {
     private static ArrayList<TangramListItem> backImgaes = new ArrayList<>();
+    private static String urls[];
     private static TangramStageCache instance;
 
     private TangramStageCache() {
@@ -20,6 +21,14 @@ public class TangramStageCache {
 
     public void addImage(TangramListItem item) {
         backImgaes.add(item);
+
+    }
+    public void addurl(String[] item) {
+        urls=item;
+
+    }
+    public String[] getUrls() {
+        return  urls;
 
     }
     public ArrayList<TangramListItem> getImages(){

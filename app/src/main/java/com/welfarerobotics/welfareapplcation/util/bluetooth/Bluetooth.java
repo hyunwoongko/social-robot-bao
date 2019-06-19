@@ -81,17 +81,17 @@ public class Bluetooth{
         mChatService = new BluetoothChatService(activity, handler);
         mChatService.connect(device, true);
 
-        //Get the wifipswd
-        String wifipswd;
-        SharedPreferences pref1 = activity.getSharedPreferences("Wifi", MODE_PRIVATE);
-        wifipswd = pref1.getString("Wifi", "12345678");
-
-        // Get the BluetoothDevice object
-        handler = new BluetoothHandler(data, mConversationArrayAdapter,mChatService, activity);
-        BluetoothDevice device1 = mBluetoothAdapter.getRemoteDevice(wifipswd);
-        // Attempt to connect to the device'
-        mChatService = new BluetoothChatService(activity, handler);
-        mChatService.connect(device1, true);
+//        //Get the wifipswd
+//        String wifipswd;
+//        SharedPreferences pref1 = activity.getSharedPreferences("Wifi", MODE_PRIVATE);
+//        wifipswd = pref1.getString("Wifi", "12345678");
+//
+//        // Get the BluetoothDevice object
+//        handler = new BluetoothHandler(data, mConversationArrayAdapter,mChatService, activity);
+//        BluetoothDevice device1 = mBluetoothAdapter.getRemoteDevice(wifipswd);
+//        // Attempt to connect to the device'
+//        mChatService = new BluetoothChatService(activity, handler);
+//        mChatService.connect(device1, true);
 
     }
 
@@ -102,7 +102,7 @@ public class Bluetooth{
    public void sendMessage(String SSID, String PWD){
 
         handler.sendMessage(SSID, PWD);
-   }
+   }/*와이파이 번호 보내세요.*/
 
 }
 

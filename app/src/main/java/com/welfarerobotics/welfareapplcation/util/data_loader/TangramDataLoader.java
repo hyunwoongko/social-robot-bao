@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
 import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramListItem;
+import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleCache;
 import com.welfarerobotics.welfareapplcation.entity.cache.TangramStageCache;
 import com.welfarerobotics.welfareapplcation.util.Pool;
 import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;

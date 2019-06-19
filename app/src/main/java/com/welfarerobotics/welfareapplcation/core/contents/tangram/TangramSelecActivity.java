@@ -12,7 +12,9 @@ import android.widget.Toast;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.entity.cache.TangramStageCache;
+import com.welfarerobotics.welfareapplcation.util.Pool;
 import com.welfarerobotics.welfareapplcation.util.Sound;
+import com.welfarerobotics.welfareapplcation.util.data_util.UrlConverter;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
@@ -87,9 +89,59 @@ public class TangramSelecActivity extends BaseActivity {
         //dataSetting();
         mListView.setAdapter(myAdaterr);
         Intent intent = new Intent(this, TangramActivity.class);
+
+    }
+
+
+    private void imageSetting(){
+
+        Pool.imageThread.execute(() -> {
+            TangramListItem myItem;
+            myItem = new TangramListItem();
+            String[] urls;
+            urls = TangramStageCache.getInstance().getUrls();
+            for(int i =0; i<urls.length;i++){
+
+                Bitmap stage = UrlConverter.convertUrl(urls[i]);
+                myItem.setStage(stage);
+                TangramStageCache.getInstance().addImage(myItem);
+
+            }
+
+            Init();
+
+        });
+    }
+
+    private void Init(){
+        Intent intent = new Intent(this, TangramActivity.class);
+        items = TangramStageCache.getInstance().getImages();
         for (int i = 0; i < items.size(); i++) {
             myAdaterr.addItem(items.get(i));
+
+
         }
+
+
         myAdaterr.notifyDataSetChanged();
+
+        try {
+            mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    TangramListItem myItem = (TangramListItem) parent.getAdapter().getItem(position);
+                    Bitmap sendBitmap = myItem.getStage();
+                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                    sendBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                    byte[] byteArray = stream.toByteArray();
+                    intent.putExtra("image", byteArray);
+                    startActivity(intent);
+                }
+            });
+        } catch (Exception e) {
+            Toast.makeText(this, "" + e, Toast.LENGTH_SHORT).show();
+
+        }
+
     }
 }

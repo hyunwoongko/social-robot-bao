@@ -14,8 +14,8 @@ public class FaceHandler extends Handler {
     private ImageView eyes;
     private ImageView mouse;
     private  TextView emotion;
-    private float eyeX;
-    private float eyeY;
+    private  float eyeX;
+    private  float eyeY;
     private int i=0;
     private Activity activity;
 
@@ -38,28 +38,7 @@ public class FaceHandler extends Handler {
             eyes.setX(eyeX);
             eyes.setY(eyeY);
         }
-        if(i==1){
-            eyes.setImageResource(R.drawable.sad_eye);
-            mouse.setImageResource(R.drawable.sad);
 
-        }else if(i==2){
-            eyes.setImageResource(R.drawable.oops_eye);
-            mouse.setImageResource(R.drawable.smile);
-        }else if(i==3){
-            eyes.setImageResource(R.drawable.normal_eye);
-            mouse.setImageResource(R.drawable.normal);
-
-
-        }else if(i==4){
-
-
-        }else if(i==5){
-
-
-        }else if(i==6){
-            i=0;
-        }
-        i++;
 
 
     }

@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageButton;
 import com.welfarerobotics.welfareapplcation.R;
+import com.welfarerobotics.welfareapplcation.bot.Body;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.crawler.YoutubeApi;
 import com.welfarerobotics.welfareapplcation.core.contents.common_sense.CommonQuizActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.dictation.DictationActivity;
@@ -100,6 +101,9 @@ public class MenuActivity extends AppCompatActivity {
         });
 
         ibfollowbao.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), Body.class);
+            startActivity(intent);
+
         });
 
         ibemotioncard.setOnClickListener(view -> {
