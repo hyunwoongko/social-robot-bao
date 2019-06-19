@@ -39,6 +39,8 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
+        audioManager.setMicrophoneMute(true);
+
         ImageView eyes = (ImageView) findViewById(R.id.eye);
         ImageView mouse = (ImageView) findViewById(R.id.s_mouse);
         TextView emotion = (TextView) findViewById(R.id.emotion);
@@ -58,6 +60,7 @@ public class MainActivity extends BaseActivity {
             onSwipeTouchListener = new ConcreteSwipeTouchListener(this, audioManager, ear::repeat);
             ear.initEar();
             ear.startHear();
+            audioManager.setMicrophoneMute(false);
         });
     }
 
