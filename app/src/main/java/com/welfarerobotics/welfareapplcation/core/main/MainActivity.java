@@ -79,7 +79,6 @@ public class MainActivity extends BaseActivity {
         super.onPause();
         findViewById(R.id.isHearing).setBackground(getDrawable(R.drawable.border_black));
         audioManager.setMicrophoneMute(true);
-        ear.blockHear();
         hasPaused = true;
     }
 
