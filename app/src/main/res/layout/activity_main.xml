@@ -25,11 +25,14 @@
             android:id="@+id/emotion"
             android:layout_width="128dp"
             android:layout_height="61dp"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="24dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:fontFamily="@font/baemin"
-            android:text="감정" />
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="감정"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
 
         <ImageView
             android:layout_width="40dp"

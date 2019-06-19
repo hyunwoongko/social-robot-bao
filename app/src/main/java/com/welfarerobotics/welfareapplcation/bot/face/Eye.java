@@ -17,7 +17,7 @@ import java.util.concurrent.Executors;
  * @homepage : https://github.com/gusdnd852
  */
 public class Eye {
-    private static String facialExpression = "neutral";
+    private static String facialExpression = "neutrall";
     private static Coordinate faceCoordinates;
     private static float eyeX=0;
     private static float eyeY=0;

@@ -9,26 +9,26 @@ import android.widget.ImageView;
  */
 
 public class Face {
-static Face face=null;
-private ImageView eyes;
-private ImageView mouse;
+    static Face face = null;
+    private ImageView eyes;
+    private ImageView mouse;
 
 
-public Face getInstance(){
-if(face==null){
+    public Face getInstance() {
+        if (face == null) {
 
-    face = new Face();
+            face = new Face();
 
-}
+        }
 
-return face;
+        return face;
 
-}
+    }
 
-private Face(){
+    private Face() {
 
 
-}
+    }
 
     public void setEyes(ImageView eyes) {
         this.eyes = eyes;

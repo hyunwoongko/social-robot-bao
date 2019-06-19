@@ -17,6 +17,7 @@ import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramSelecA
 import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleActivity;
 import com.welfarerobotics.welfareapplcation.core.settings.SettingActivity;
 import com.welfarerobotics.welfareapplcation.core.youtube.YoutubeActivity;
+import com.welfarerobotics.welfareapplcation.entity.cache.ChatCache;
 import com.welfarerobotics.welfareapplcation.util.Pool;
 import me.piruin.quickaction.ActionItem;
 import me.piruin.quickaction.QuickAction;

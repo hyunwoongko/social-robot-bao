@@ -1,4 +1,4 @@
-package com.welfarerobotics.welfareapplcation.bot.face;
+package com.welfarerobotics.welfareapplcation.bot;
 
 import android.media.MediaPlayer;
 import android.os.Environment;
