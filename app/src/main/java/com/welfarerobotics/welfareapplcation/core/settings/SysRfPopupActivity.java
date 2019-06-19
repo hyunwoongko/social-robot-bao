@@ -41,7 +41,7 @@ public class SysRfPopupActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_sysrfpopup);
         userid = DeviceId.getInstance(this).getUUID();
-        editText = (EditText) findViewById(R.id.num_editext);
+        editText = (EditText) findViewById(R.id.name_editext);
         RandomIntNumber();
         //UI 객체생성
         txtText = (TextView) findViewById(R.id.ramnum_textview);
@@ -64,7 +64,6 @@ public class SysRfPopupActivity extends Activity {
         cancelbtn = (Button) findViewById(R.id.cancel_button);
         cancelbtn.setOnClickListener(view -> {
             finish();
-            startActivity(new Intent(this, SysRefreshActivity.class));
         });
 
     }

@@ -3,7 +3,6 @@ package com.welfarerobotics.welfareapplcation.util.bluetooth;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
@@ -14,7 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.util.data_util.Preference;
+import com.welfarerobotics.welfareapplcation.bot.Body.Signal;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -99,6 +98,12 @@ public class Bluetooth{
         handler.sendMessage(msg);
 
     }
+    public void sendSignal(Signal signal, float angle){
+
+        handler.sendMessage(signal.toString()+","+angle);
+
+    }
+//돌리는 것
    public void sendMessage(String SSID, String PWD){
 
         handler.sendMessage(SSID, PWD);

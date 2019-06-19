@@ -41,7 +41,7 @@
                   android:gravity="center"
                   android:alpha="0.87"
                   android:layout_width="match_parent"
-                  android:layout_height="wrap_content" android:id="@+id/num_editext"
+                  android:layout_height="wrap_content" android:id="@+id/name_editext"
                   android:hint="숫자를 입력후 확인버튼을 눌러주세요"/>
     </LinearLayout>
     <!-- Notice -->

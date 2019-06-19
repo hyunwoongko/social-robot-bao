@@ -20,7 +20,7 @@
 
     <Preference
             android:key="SystemRefresh"
-            android:title="시스템 초기화">
+            android:title="사용자 재설정 및 시스템 초기화">
     </Preference>
 
     <Preference
