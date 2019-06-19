@@ -18,8 +18,8 @@ public enum Hormone {
         if (currEmotion >= 0.6) return Dopamine; // 쾌락
         else if (currEmotion < 0.6 && currEmotion >= 0.2) return Endorphin; // 기쁨
         else if (currEmotion < 0.2 && currEmotion >= -0.2) return Serotonin; // 평온
-        else if (currEmotion < -0.2 && currEmotion >= -0.6) return Cortisol; // 스트레스
-        else if (currEmotion < -0.6) return Noradrenalin; // 분노
+        else if (currEmotion < -0.2 && currEmotion >= -0.7) return Cortisol; // 스트레스
+        else if (currEmotion < -0.7) return Noradrenalin; // 분노
         else return null;
     }
 

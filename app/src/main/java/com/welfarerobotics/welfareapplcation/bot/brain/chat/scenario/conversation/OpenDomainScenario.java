@@ -55,12 +55,12 @@ public class OpenDomainScenario {
                             mouse.setImageResource(R.drawable.normal);
                             break;
                         case Cortisol:
-                            eye.setImageResource(R.drawable.sad_eye);
-                            mouse.setImageResource(R.drawable.sad);
+                            eye.setImageResource(R.drawable.regret);
+                            mouse.setImageResource(R.drawable.normal);
                             break;
                         case Noradrenalin:
-                            eye.setImageResource(R.drawable.angry);
-                            mouse.setImageResource(R.drawable.normal);
+                            eye.setImageResource(R.drawable.sad_eye);
+                            mouse.setImageResource(R.drawable.sad);
                             break;
                         default:
                             eye.setImageResource(R.drawable.normal_eye);
