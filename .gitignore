@@ -20,3 +20,5 @@ doc2vec_model
 *.pyc
 *.cpython-36.pyc
 *.npz
+*.log
+*.plantuml

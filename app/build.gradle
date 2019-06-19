@@ -57,7 +57,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:12.0.1'
     implementation 'com.google.firebase:firebase-storage:12.0.1'
     implementation 'com.google.android.gms:play-services-location:12.0.1'
-
+ 
     // 유틸리티
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.6'
     annotationProcessor "org.projectlombok:lombok:1.18.6"
