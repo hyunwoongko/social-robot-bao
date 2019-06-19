@@ -31,18 +31,6 @@
             android:fontFamily="@font/baemin"
             android:text="감정" />
 
-        <TextView
-            android:id="@+id/hormone"
-            android:layout_width="128dp"
-            android:layout_height="61dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:text="호르몬"
-            android:gravity="center"
-            android:fontFamily="@font/baemin"
-            android:textColor="@color/white"
-            android:textSize="24sp" />
-
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"

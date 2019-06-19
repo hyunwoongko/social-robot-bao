@@ -15,11 +15,11 @@ public enum Hormone {
      * @return 호르몬 상태
      */
     public static Hormone getHormone(float currEmotion) {
-        if (currEmotion >= 0.7) return Dopamine; // 쾌락
-        else if (currEmotion < 0.7 && currEmotion >= 0.2) return Endorphin; // 기쁨
+        if (currEmotion >= 0.6) return Dopamine; // 쾌락
+        else if (currEmotion < 0.6 && currEmotion >= 0.2) return Endorphin; // 기쁨
         else if (currEmotion < 0.2 && currEmotion >= -0.2) return Serotonin; // 평온
-        else if (currEmotion < -0.2 && currEmotion >= -0.7) return Cortisol; // 스트레스
-        else if (currEmotion < -0.7) return Noradrenalin; // 분노
+        else if (currEmotion < -0.2 && currEmotion >= -0.6) return Cortisol; // 스트레스
+        else if (currEmotion < -0.6) return Noradrenalin; // 분노
         else return null;
     }
 

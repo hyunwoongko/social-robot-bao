@@ -2,7 +2,6 @@ package com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.conversati
 
 import android.app.Activity;
 import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.TextView;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
@@ -14,7 +13,6 @@ import com.welfarerobotics.welfareapplcation.bot.brain.chat.preprocess.NameRepla
 import com.welfarerobotics.welfareapplcation.util.Pool;
 
 import java.io.IOException;
-import java.util.Random;
 import java.util.concurrent.ExecutionException;
 
 /**
@@ -25,7 +23,6 @@ import java.util.concurrent.ExecutionException;
 public class OpenDomainScenario {
     public static void process(String intent, String speech, Activity activity) throws IOException, ExecutionException, InterruptedException {
         String answer = ModelApi.getOpenDomainAnswer(speech);
-        TextView view = activity.findViewById(R.id.hormone); // 호르몬 뷰어
         /*원우 추가*/
         ImageView eye = activity.findViewById(R.id.eye); //감정 눈
         ImageView mouse = activity.findViewById(R.id.s_mouse);//감정 입
@@ -43,48 +40,32 @@ public class OpenDomainScenario {
         Pool.hormoneThread.submit(() -> {
             try {
                 Hormone hormone = Pituitary.rememberNewSentence(finalSpeech);
-
                 activity.runOnUiThread(() -> {
-                    view.setText(hormone.toString());
-                    /*
-                    * TODO : if - else 표정 분기 만들면 됩
-                    * */
-
-                    /*
-                    * 도파민: 쾌락
-                    * 엔돌핀: 즐거움
-                    * 세르토닌: 행복
-                    * 코르티솔: 스트레스
-                    * 노르아드레날린: 분노
-                    * */
-                    switch (hormone){
+                    switch (hormone) {
                         case Dopamine:
-                            eye.setImageResource(R.drawable.normal_eye);
-                            mouse.setImageResource(R.drawable.smile);
-                        case Endorphin:
                             eye.setImageResource(R.drawable.oops_eye);
                             mouse.setImageResource(R.drawable.smile);
+                            break;
+                        case Endorphin:
+                            eye.setImageResource(R.drawable.normal_eye);
+                            mouse.setImageResource(R.drawable.smile);
+                            break;
                         case Serotonin:
                             eye.setImageResource(R.drawable.normal_eye);
                             mouse.setImageResource(R.drawable.normal);
+                            break;
                         case Cortisol:
-                            if(new Random().nextInt(2)==0){
-                                eye.setImageResource(R.drawable.oops_eye);
-                                mouse.setImageResource(R.drawable.sad);
-                            }else{
-                                eye.setImageResource(R.drawable.sad_eye);
-                                mouse.setImageResource(R.drawable.sad);
-                            }
-
+                            eye.setImageResource(R.drawable.sad_eye);
+                            mouse.setImageResource(R.drawable.sad);
+                            break;
                         case Noradrenalin:
                             eye.setImageResource(R.drawable.angry);
                             mouse.setImageResource(R.drawable.normal);
+                            break;
                         default:
                             eye.setImageResource(R.drawable.normal_eye);
                             mouse.setImageResource(R.drawable.normal);
-
                     }
-
                 });
             } catch (IOException e) {
                 e.printStackTrace();
