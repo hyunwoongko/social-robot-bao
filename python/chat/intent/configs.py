@@ -6,10 +6,10 @@ class IntentConfigs:
     filter_sizes = [2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4]
     num_filters = len(filter_sizes)
     learning_step = 1000000000000
-    learning_rate = 0.001
+    learning_rate = 0.0003
     vector_size = 300
     fallback_score = 28
-    train_fasttext = False
+    train_fasttext = True
     tokenizing = True
 
     root_path = './chat/intent/'

@@ -1,3 +1,4 @@
+import random
 import urllib.request
 from datetime import datetime
 from functools import wraps, update_wrapper
@@ -5,6 +6,7 @@ from functools import wraps, update_wrapper
 from flask import Flask, make_response
 from flask import send_file
 
+from painter.gray_classifier import GrayscaleClassifier
 from painter.pix2pix import pix_translate
 from painter.stylize import Stylizer
 
@@ -38,6 +40,11 @@ def draw(uid, url):
     output_path = 'painter/images/output/' + file
     urllib.request.urlretrieve(url + '?alt=media', input_path)
     pix_translate(input_path, output_path)
+    classifier = GrayscaleClassifier()
+    is_gray = classifier.is_gray(output_path)
+    stylizer = Stylizer(file)
+    if is_gray:
+        stylizer.stylize(True)
     return send_file(output_path, mimetype='image/png')
 
 

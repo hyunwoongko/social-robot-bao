@@ -56,6 +56,5 @@ class ColorExtractor:
 
     def get_color(self, file_name, k=3):
         image = mpimg.imread(file_name)
-        plt.imshow(image)
         col = self.image_color_cluster(file_name, k)
         return col
