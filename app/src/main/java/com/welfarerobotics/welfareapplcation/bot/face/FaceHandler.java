@@ -47,7 +47,7 @@ public class FaceHandler extends Handler {
             else if (face.equals(FaceExpression.sadness.toString())) sayEmotion(FaceExpression.sadness);
             else if (face.equals(FaceExpression.disgust.toString())) sayEmotion(FaceExpression.disgust);
             else if (face.equals(FaceExpression.surprise.toString())) sayEmotion(FaceExpression.surprise);
-            textView.setText(face);
+//            textView.setText(face);
         }
     }
 

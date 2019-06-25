@@ -44,27 +44,27 @@ public class OpenDomainScenario {
                     switch (hormone) {
                         case Dopamine:
                             eye.setImageResource(R.drawable.oops_eye);
-                            mouse.setImageResource(R.drawable.smile);
+                            mouse.setImageResource(R.drawable.good_mouse);
                             break;
                         case Endorphin:
-                            eye.setImageResource(R.drawable.normal_eye);
-                            mouse.setImageResource(R.drawable.smile);
+                            eye.setImageResource(R.drawable.good_eye);
+                            mouse.setImageResource(R.drawable.normal_mouse);
                             break;
                         case Serotonin:
                             eye.setImageResource(R.drawable.normal_eye);
-                            mouse.setImageResource(R.drawable.normal);
+                            mouse.setImageResource(R.drawable.normal_mouse);
                             break;
                         case Cortisol:
-                            eye.setImageResource(R.drawable.regret);
-                            mouse.setImageResource(R.drawable.normal);
+                            eye.setImageResource(R.drawable.sad_sad_eye);
+                            mouse.setImageResource(R.drawable.depressed_mouse);
                             break;
                         case Noradrenalin:
-                            eye.setImageResource(R.drawable.sad_eye);
-                            mouse.setImageResource(R.drawable.sad);
+                            eye.setImageResource(R.drawable.very_sad_eye);
+                            mouse.setImageResource(R.drawable.depressed_mouse);
                             break;
                         default:
                             eye.setImageResource(R.drawable.normal_eye);
-                            mouse.setImageResource(R.drawable.normal);
+                            mouse.setImageResource(R.drawable.normal_mouse);
                     }
                 });
             } catch (IOException e) {

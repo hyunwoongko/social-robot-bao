@@ -4,10 +4,12 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.google.firebase.database.FirebaseDatabase;
@@ -33,7 +35,7 @@ public class MainActivity extends BaseActivity {
     private EarSet ear = new EarSet(this);
     private ImageView refresh_view;
     private boolean hasPaused = false;
-
+    private int test=1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,14 +98,16 @@ public class MainActivity extends BaseActivity {
         float rfButtonY = refresh_view.getY();
 
         if (Math.abs(fingerX - rfButtonX) < 75 && Math.abs(fingerY - rfButtonY) < 75) {
-            refresh();
+//            refresh();
         } else if (onSwipeTouchListener != null) {
             onSwipeTouchListener.getGestureDetector().onTouchEvent(ev);
         }
         return super.dispatchTouchEvent(ev);
     }
 
+
     private void refresh() {
+
         Intent mStartActivity = new Intent(this, SplashActivity.class);
         int mPendingIntentId = 123456;
         PendingIntent mPendingIntent = PendingIntent.getActivity(this, mPendingIntentId, mStartActivity,
@@ -111,5 +115,11 @@ public class MainActivity extends BaseActivity {
         AlarmManager mgr = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
         mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 10, mPendingIntent);
         System.exit(0);
+
+
+
+
+
+
     }
 }

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             xmlns:app="http://schemas.android.com/apk/res-auto"
-                                             xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-                                             android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="1026dp"
+        android:layout_height="605dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:srcCompat="@drawable/blackboard" />
 
     <ImageView
@@ -28,32 +30,34 @@
         android:layout_marginTop="90dp"
         android:fontFamily="@font/baemin"
         android:text="사용자이름및 지역 변경하기"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="41dp"
-        android:gravity="center"
-        android:fontFamily="@font/baemin"
+        android:layout_width="203dp"
+        android:layout_height="65dp"
         android:layout_marginStart="90dp"
         android:layout_marginTop="25dp"
+        android:fontFamily="@font/baemin"
+        android:gravity="center"
         android:text="이름을 입력하세요"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/name_editext"
-        android:layout_width="100dp"
-        android:layout_height="41dp"
-        android:fontFamily="@font/baemin"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="176dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="40dp"
         android:alpha="0.87"
+        android:fontFamily="@font/baemin"
         android:gravity="center"
         android:textColor="#000"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -61,35 +65,37 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="41dp"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/baemin"
-        android:layout_marginTop="24dp"
         android:gravity="center"
         android:text="지역을 입력하세요"
+        android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/name_editext"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/region_editext"
-        android:layout_width="100dp"
-        android:layout_height="41dp"
-        android:fontFamily="@font/baemin"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="182dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
         android:alpha="0.87"
+        android:fontFamily="@font/baemin"
         android:gravity="center"
         android:textColor="#000"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/change_button"
-        android:layout_width="60dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="93dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
         android:text="변경"
+        android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/region_editext"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -97,23 +103,25 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:fontFamily="@font/baemin"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="44dp"
 
-        android:layout_marginTop="24dp"
+        android:fontFamily="@font/baemin"
         android:text="바오를 누르면 시스템이 초기화 됩니다"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <ImageView
         android:id="@+id/Bao_view"
-        android:layout_width="109dp"
-        android:layout_height="156dp"
-        android:layout_marginStart="90dp"
+        android:layout_width="192dp"
+        android:layout_height="218dp"
+        android:layout_marginStart="96dp"
         android:layout_marginTop="14dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/bao" />
 </android.support.constraint.ConstraintLayout>
