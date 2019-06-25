@@ -10,6 +10,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.View;
 import android.widget.*;
 import com.welfarerobotics.welfareapplcation.R;
@@ -292,6 +293,7 @@ public class BluetoothActivity extends BaseActivity {
                         SharedPreferences pref = getSharedPreferences("Bluetooth", MODE_PRIVATE);
                         SharedPreferences.Editor editor = pref.edit();
                         editor.putString("Bluetooth", paired.getAddress());
+                        Log.d("지승민","쉐어드프리퍼런스 확인"+pref.getString("Bluetooth",""));
                         editor.commit();
 
                         //리스트 목록갱신

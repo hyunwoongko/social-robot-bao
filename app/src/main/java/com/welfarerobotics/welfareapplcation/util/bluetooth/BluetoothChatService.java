@@ -418,6 +418,9 @@ public class BluetoothChatService {
                 }
             } catch (IOException e) {
                 Log.e(TAG, "Socket Type: " + mSocketType + "create() failed", e);
+            } catch (Exception e){
+                Log.e(TAG,"블루투스 켜달라하고 다시 실행시켜야할 듯 "+e ,e);
+
             }
             mmSocket = tmp;
             mState = STATE_CONNECTING;

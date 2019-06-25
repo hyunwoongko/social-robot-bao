@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -71,14 +72,20 @@ public class Bluetooth{
         // Get the device MAC address
         String address;
         SharedPreferences pref = activity.getSharedPreferences("Bluetooth", MODE_PRIVATE);
-        address = pref.getString("Bluetooth", "B8:27:EB:16:AE:38");
-
+        address = pref.getString("Bluetooth", "");
+        Log.d("Bluetooth","Adress:"+address);
         // Get the BluetoothDevice object
         handler = new BluetoothHandler(data, mConversationArrayAdapter,mChatService, activity);
-        BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);
+        try{
+            BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);
+            mChatService = new BluetoothChatService(activity, handler);
+            mChatService.connect(device, true);
+        }catch (Exception e){
+            Log.d("블루투스","주소 에러 adress:"+address);
+        }
+
         // Attempt to connect to the device'
-        mChatService = new BluetoothChatService(activity, handler);
-        mChatService.connect(device, true);
+
 
 //        //Get the wifipswd
 //        String wifipswd;

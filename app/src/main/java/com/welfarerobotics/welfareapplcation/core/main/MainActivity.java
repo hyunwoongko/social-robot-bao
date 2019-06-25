@@ -22,6 +22,7 @@ import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.core.initial.SplashActivity;
 import com.welfarerobotics.welfareapplcation.entity.Server;
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
+import com.welfarerobotics.welfareapplcation.util.KakaoDevelop;
 import com.welfarerobotics.welfareapplcation.util.bluetooth.Bluetooth;
 import com.welfarerobotics.welfareapplcation.util.data_loader.DataLoader;
 import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;
@@ -64,6 +65,7 @@ public class MainActivity extends BaseActivity {
             ear.startHear();
             audioManager.setMicrophoneMute(false);
         });
+
     }
 
     @Override
