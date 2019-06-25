@@ -49,7 +49,6 @@ public class ConversationEdit extends BaseActivity {
                 model.setId(UserCache.getInstance().getId());
                 model.setName(UserCache.getInstance().getName());
                 model.setLocation(UserCache.getInstance().getLocation());
-                model.setPhoto(UserCache.getInstance().getPhoto());
                 Conversation convModel = new Conversation();
 
                 if (UserCache.getInstance().getDict() == null) {

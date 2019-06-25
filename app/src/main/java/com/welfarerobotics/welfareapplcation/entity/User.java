@@ -19,5 +19,4 @@ public @Builder @Data class User {
     private String name;
     private String location;
     private ArrayList<Conversation> dict;
-    private ArrayList<String> photo;
 }

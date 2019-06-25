@@ -25,12 +25,10 @@ public @Data class UserCache {
         cache.setName(user.getName());
         cache.setLocation(user.getLocation());
         cache.setDict(user.getDict());
-        cache.setPhoto(user.getPhoto());
     }
 
     private String id;
     private String name;
     private String location;
     private ArrayList<Conversation> dict;
-    private ArrayList<String> photo;
 }

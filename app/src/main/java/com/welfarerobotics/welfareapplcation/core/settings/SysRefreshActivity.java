@@ -59,7 +59,6 @@ public class SysRefreshActivity extends BaseActivity {
 
                 model.setName(nameEditText.getText().toString());
                 model.setLocation(addressEditText.getText().toString());
-                model.setPhoto(model.getPhoto());
                 UserCache.setInstance(model);
                 // 싱글톤 업로드
 

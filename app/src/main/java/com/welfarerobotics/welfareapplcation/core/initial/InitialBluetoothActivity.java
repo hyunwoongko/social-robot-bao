@@ -92,7 +92,7 @@ public class InitialBluetoothActivity extends BaseActivity {
         //블루투스를 지원하지 않으면 null을 리턴한다
         if (mBluetoothAdapter == null) {
             showToast("블루투스를 지원하지 않는 단말기 입니다.", ToastType.error);
-            finish();
+            startActivity(new Intent(this, InitialWifiActivity.class));
             return;
         }
         //블루투스 브로드캐스트 리시버 등록

@@ -88,63 +88,6 @@
                         android:layout_height="wrap_content" />
                 </LinearLayout>
             </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="15dp"
-                android:padding="10dp"
-                android:weightSum="2.5"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:weightSum="3">
-
-                    <ImageView
-                        android:id="@+id/user_image_0"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:layout_marginRight="15dp"
-                        android:background="@drawable/no_image_icon"
-                        android:scaleType="fitXY"
-                        tools:ignore="NestedWeights" />
-
-                    <ImageView
-                        android:id="@+id/user_image_1"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:layout_marginRight="15dp"
-                        android:background="@drawable/no_image_icon"
-                        android:scaleType="fitXY" />
-
-                    <ImageView
-                        android:id="@+id/user_image_2"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/no_image_icon"
-                        android:scaleType="fitXY" />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/baemin"
-                    android:layout_marginTop="20dp"
-                    android:gravity="center"
-                    android:layout_weight="1.5"
-                    android:layout_gravity="center"
-                    android:textSize="20sp"
-                    android:text="3장 모두 등록해주세요" />
-            </LinearLayout>
         </LinearLayout>
 
         <Button

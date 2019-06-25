@@ -23,43 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f2ff807-e7e1-4931-91f5-40600ab735ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/python/painter/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/painter/grayscale/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/chat/intent/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/chat/intent/configs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/chat/intent/train_intent.csv" beforeDir="false" afterPath="$PROJECT_DIR$/python/chat/intent/train_intent.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/data/목적/잘못들음.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/color_extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/painter/grayscale/color_extractor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/gallery/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/grayscale_classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/painter/gray_classifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/images/input/16f916f0-f71c-36e2-8e90-2de6bfddfad2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/python/painter/images/input/16f916f0-f71c-36e2-8e90-2de6bfddfad2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/images/output/16f916f0-f71c-36e2-8e90-2de6bfddfad2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/python/painter/images/output/16f916f0-f71c-36e2-8e90-2de6bfddfad2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/images/output/input.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/python/painter/images/output/input.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/images/wrong_example/0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/python/painter/grayscale/wrong_example/0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/images/wrong_example/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/python/painter/grayscale/wrong_example/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/images/wrong_example/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/python/painter/grayscale/wrong_example/2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/images/wrong_example/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/python/painter/grayscale/wrong_example/3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/images/wrong_example/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/python/painter/grayscale/wrong_example/4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/images/wrong_example/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/python/painter/grayscale/wrong_example/5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/images/wrong_example/6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/python/painter/grayscale/wrong_example/6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/images/wrong_example/7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/python/painter/grayscale/wrong_example/7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/images/wrong_example/8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/python/painter/grayscale/wrong_example/8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/images/wrong_example/9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/python/painter/grayscale/wrong_example/9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/styles/anime1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/styles/anime2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/styles/anime3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/python/painter/styles/2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/styles/eastern.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/styles/mountain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/styles/snow.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/styles/snow4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/styles/vangogh.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/uploads/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/wrong.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/painter/wrong_rgb_extractor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/server_painter.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/server_painter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/temp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/initial/InitialSettingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/initial/InitialSettingActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/ConversationEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/ConversationEdit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/settings/SysRefreshActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/settings/SysRefreshActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/cache/UserCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/cache/UserCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_init_setting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_init_setting.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/painter/images/input/c7d1e192-b239-3297-a30d-d26a250f1e61.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/python/painter/images/input/c7d1e192-b239-3297-a30d-d26a250f1e61.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/painter/images/output/c7d1e192-b239-3297-a30d-d26a250f1e61.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/python/painter/images/output/c7d1e192-b239-3297-a30d-d26a250f1e61.jpg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/MyScript_ATK-Core-android-component/.gradle/" />
     <ignored path="$PROJECT_DIR$/MyScript_ATK-Core-android-component/build/" />
@@ -168,70 +142,81 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python/painter/gray_classifier.py">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_init_setting.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="320">
+              <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/settings/SysRefreshActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="61" column="6" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python/temp.py">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/ConversationEdit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-              <folding>
-                <element signature="e#74#83#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="148">
+              <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python/server_painter.py">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/ConversationList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1128">
-              <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="112">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python/geckodriver.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/python/painter/styles/3.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python/server_chat.py">
+        <entry file="file://$PROJECT_DIR$/python/painter/grayscale/color_extractor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="280">
+              <caret line="16" column="61" lean-forward="true" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+              <folding>
+                <element signature="e#75#90#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python/painter/images/output/9b89fca4-a3cb-33bd-a300-c786a0ee96dd.jpg">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/MenuActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="68" column="34" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python/painter/styles/1.jpg">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_info.xml">
+          <provider editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python/painter/styles/2.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python/painter/images/output/16f916f0-f71c-36e2-8e90-2de6bfddfad2.jpg">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/python/painter/grayscale/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -331,12 +316,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/Attention.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Pituitary.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/data_util/FirebaseHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/ear/EarSet.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/util/data_loader/DataLoader.java" />
-        <option value="$PROJECT_DIR$/python/chat/util/tokenizer.py" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/Skills.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/response/X.scala" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/response/package.scala" />
@@ -361,7 +340,6 @@
         <option value="$PROJECT_DIR$/python/painter/color_extractor.py" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/python/chat/intent/train.py" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/main/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/Hormone.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/conversation/OpenDomainScenario.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/face/FaceExpression.java" />
@@ -378,10 +356,17 @@
         <option value="$PROJECT_DIR$/python/painter/grayscale/wrong_rgb_extractor.py" />
         <option value="$PROJECT_DIR$/python/painter/grayscale/grayscale_classifier.py" />
         <option value="$PROJECT_DIR$/python/painter/grayscale_classifier.py" />
-        <option value="$PROJECT_DIR$/python/painter/grayscale/color_extractor.py" />
-        <option value="$PROJECT_DIR$/python/server_painter.py" />
         <option value="$PROJECT_DIR$/python/painter/gray_classifier.py" />
         <option value="$PROJECT_DIR$/python/temp.py" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/main/MainActivity.java" />
+        <option value="$PROJECT_DIR$/python/server_painter.py" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/User.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/cache/UserCache.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/initial/InitialSettingActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_init_setting.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/settings/SysRefreshActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/ConversationEdit.java" />
+        <option value="$PROJECT_DIR$/python/painter/grayscale/color_extractor.py" />
       </list>
     </option>
   </component>
@@ -391,11 +376,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="951" />
-    <option name="y" value="36" />
-    <option name="width" value="978" />
-    <option name="height" value="1050" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="37" />
+    <option name="width" value="1291" />
+    <option name="height" value="695" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -433,7 +418,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -455,6 +439,144 @@
             <path>
               <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
               <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
+              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
+              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
+              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="initial" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
+              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="menu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
+              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="settings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
+              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="welfarerobotics" type="462c0819:PsiDirectoryNode" />
+              <item name="welfareapplcation" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="python" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -469,49 +591,12 @@
               <item name="python" type="462c0819:PsiDirectoryNode" />
               <item name="painter" type="462c0819:PsiDirectoryNode" />
               <item name="grayscale" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-              <item name="painter" type="462c0819:PsiDirectoryNode" />
-              <item name="grayscale" type="462c0819:PsiDirectoryNode" />
-              <item name="wrong_example" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-              <item name="painter" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-              <item name="painter" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-              <item name="painter" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="output" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Social-Robot-Bao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Social-Robot-Bao" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-              <item name="painter" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
@@ -579,9 +664,9 @@
     <property name="android.sdk.path" value="D:/SDKFOLDER" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560978550353" />
-    <property name="device.picker.selection" value="8SHQ31207261HB437BX" />
+    <property name="device.picker.selection" value="Nexus_7_API_24" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.50967115" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -830,8 +915,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.server_painter" />
-        <item itemvalue="Python.temp" />
         <item itemvalue="Python.server_chat" />
+        <item itemvalue="Python.temp" />
         <item itemvalue="Python.gray_classifier" />
         <item itemvalue="Python.grayscale_classifier (2)" />
       </list>
@@ -929,11 +1014,18 @@
       <workItem from="1560869671070" duration="31764000" />
       <workItem from="1561262649178" duration="54000" />
       <workItem from="1561339325548" duration="6074000" />
+      <workItem from="1561362071336" duration="526000" />
+      <workItem from="1561365180070" duration="4513000" />
+      <workItem from="1561370755912" duration="2864000" />
+      <workItem from="1561435916837" duration="3810000" />
+      <workItem from="1561454098590" duration="1110000" />
+      <workItem from="1561455722710" duration="302000" />
+      <workItem from="1561456424163" duration="3341000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1223581000" />
+    <option name="totallyTimeSpent" value="1240047000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -945,9 +1037,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
+    <frame x="-8" y="22" width="1296" height="946" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14112903" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22970779" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Build Variants" order="3" side_tool="true" />
@@ -957,14 +1050,14 @@
       <window_info id="Captures" order="7" side_tool="true" weight="0.25" />
       <window_info id="UI Designer" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.43001443" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3282532" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4537389" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.399137" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.24675325" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.15462612" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32916266" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Logcat" order="11" weight="0.4040404" />
@@ -978,7 +1071,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.32959402" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.26542208" />
       <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" />
       <window_info anchor="right" id="Gradle" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -990,7 +1083,7 @@
       <window_info anchor="right" id="R Graphics" order="13" />
       <window_info anchor="right" id="UML Diagrams" order="14" type="SLIDING" />
       <window_info anchor="right" id="Maven Projects" order="15" />
-      <window_info anchor="right" id="SciView" order="16" visible="true" weight="0.20766129" />
+      <window_info anchor="right" id="SciView" order="16" weight="0.20713201" />
       <window_info anchor="right" id="Database" order="17" />
       <window_info anchor="right" id="Leiningen" order="18" />
       <window_info anchor="right" id="REPL" order="19" side_tool="true" />
@@ -1058,110 +1151,12 @@
     <SUITE FILE_PATH="coverage/Social_Robot_Bao$gray_classifier.coverage" NAME="gray_classifier Coverage Results" MODIFIED="1561341626155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/painter" />
     <SUITE FILE_PATH="coverage/Social_Robot_Bao$temp.coverage" NAME="temp Coverage Results" MODIFIED="1561344899970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
     <SUITE FILE_PATH="coverage/Social_Robot_Bao$grayscale_classifier__2_.coverage" NAME="grayscale_classifier (2) Coverage Results" MODIFIED="1561339598928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/painter" />
-    <SUITE FILE_PATH="coverage/Social_Robot_Bao$server_painter.coverage" NAME="server_painter Coverage Results" MODIFIED="1561344951075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
+    <SUITE FILE_PATH="coverage/Social_Robot_Bao$server_painter.coverage" NAME="server_painter Coverage Results" MODIFIED="1561457336674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
     <SUITE FILE_PATH="coverage/Social_Robot_Bao$server_streaming.coverage" NAME="server_streaming Coverage Results" MODIFIED="1559827569856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
     <SUITE FILE_PATH="coverage/Social_Robot_Bao$wrong_rgb_extractor.coverage" NAME="wrong_rgb_extractor Coverage Results" MODIFIED="1561339525735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/painter/grayscale" />
-    <SUITE FILE_PATH="coverage/Social_Robot_Bao$server_chat.coverage" NAME="server_chat Coverage Results" MODIFIED="1561344891520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
+    <SUITE FILE_PATH="coverage/Social_Robot_Bao$server_chat.coverage" NAME="server_chat Coverage Results" MODIFIED="1561457331620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/skills/SongScenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/conversation/OpenDomainScenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v24/regret.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/main/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/face/Detect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/bot.plantuml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/device/TangramScenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/conversation/FallbackScenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/conversation/PardonScenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/brain/chat/scenario/device/VolumeUpScenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/Body/Dance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/face/FaceHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/Mouth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="e#785#786#0" expanded="true" />
-            <element signature="e#850#851#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/MenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/face/Face.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -1184,12 +1179,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="24" column="36" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="36" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/bot/Body/DanceCashe.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1212,38 +1207,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/painter/styles/vangogh.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/python/painter/styles/vangogh.jpg" />
     <entry file="file://$PROJECT_DIR$/python/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/painter/grayscale/wrong_rgb_extractor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-92">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#74#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/painter/grayscale/wrong.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/painter/grayscale/color_extractor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-          <folding>
-            <element signature="e#75#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/python/painter/grayscale/wrong_rgb_extractor.py" />
+    <entry file="file://$PROJECT_DIR$/python/painter/grayscale/wrong.csv" />
     <entry file="file://$PROJECT_DIR$/python/painter/images/input/16f916f0-f71c-36e2-8e90-2de6bfddfad2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1265,15 +1234,6 @@
     <entry file="file://$PROJECT_DIR$/python/painter/grayscale/wrong_example/4.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/painter/pix2pix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python/painter/stylize.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
@@ -1284,31 +1244,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/painter/styles/eastern.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/painter/styles/mountain.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/painter/styles/snow4.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/painter/styles/snow.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/painter/temp.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/server_chat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/python/painter/styles/eastern.jpg" />
+    <entry file="file://$PROJECT_DIR$/python/painter/styles/mountain.jpg" />
+    <entry file="file://$PROJECT_DIR$/python/painter/styles/snow4.jpg" />
+    <entry file="file://$PROJECT_DIR$/python/painter/styles/snow.jpg" />
+    <entry file="file://$PROJECT_DIR$/python/painter/temp.py" />
+    <entry file="file://$PROJECT_DIR$/python/painter/styles/0.jpg" />
     <entry file="file://$PROJECT_DIR$/python/temp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
+        <state relative-caret-position="224">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
           <folding>
             <element signature="e#74#83#0" expanded="true" />
@@ -1316,32 +1260,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/painter/gray_classifier.py">
+    <entry file="file://$PROJECT_DIR$/python/painter/styles/3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/base/VoiceActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="252">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/main/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python/painter/images/output/9b89fca4-a3cb-33bd-a300-c786a0ee96dd.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/painter/images/output/16f916f0-f71c-36e2-8e90-2de6bfddfad2.jpg">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/python/painter/gray_classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/painter/styles/0.jpg">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/python/painter/pix2pix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/painter/images/output/input.jpg">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/python/painter/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/server_chat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python/server_painter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1128">
-          <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+        <state relative-caret-position="924">
+          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/initial/InitialSettingActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/entity/cache/UserCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
@@ -1351,8 +1350,71 @@
     <entry file="file://$PROJECT_DIR$/python/painter/styles/2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/painter/styles/3.jpg">
+    <entry file="file://$PROJECT_DIR$/python/painter/images/output/16f916f0-f71c-36e2-8e90-2de6bfddfad2.jpg">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/painter/images/output/input.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_init_setting.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/settings/SysRefreshActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="61" column="6" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/ConversationEdit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/ConversationList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/geckodriver.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/welfarerobotics/welfareapplcation/core/menu/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="68" column="34" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_info.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/painter/grayscale/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/painter/grayscale/color_extractor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="16" column="61" lean-forward="true" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+          <folding>
+            <element signature="e#75#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
@@ -1395,7 +1457,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>Android API 24 Platform</last-edited>
+          <last-edited>Android API 28 Platform</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
