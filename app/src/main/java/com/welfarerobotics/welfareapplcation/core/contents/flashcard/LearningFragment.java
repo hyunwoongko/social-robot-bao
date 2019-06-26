@@ -66,7 +66,7 @@ public class LearningFragment extends VoiceFragment {
             Glide
                     .with(this)
                     .load(child[0])
-                    .apply(new RequestOptions().override(300, 425).fitCenter())
+                    .apply(new RequestOptions().override(225, 319).fitCenter())
                     .into(ibArray[i % 4]);
             name[i % 4] = child[1];
             tvArray[i%4].setText(child[1]);

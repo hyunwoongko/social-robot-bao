@@ -72,6 +72,9 @@
             android:name=".core.settings.LocSettingsActivity"
             android:screenOrientation="sensorLandscape" />
         <activity
+            android:name=".core.fairytale.FairytaleListActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
             android:name=".core.initial.InitialSettingActivity"
             android:screenOrientation="sensorLandscape"
             android:configChanges="orientation" />

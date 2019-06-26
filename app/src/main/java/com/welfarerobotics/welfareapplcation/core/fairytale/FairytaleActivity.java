@@ -2,16 +2,21 @@ package com.welfarerobotics.welfareapplcation.core.fairytale;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.Display;
 import android.view.MotionEvent;
 import android.view.Window;
 import android.view.WindowManager;
 import com.welfarerobotics.welfareapplcation.R;
+import com.welfarerobotics.welfareapplcation.entity.FairyTail;
 import com.welfarerobotics.welfareapplcation.util.Sound;
 
 public class FairytaleActivity extends Activity {
+
+    private FairyTail fairytail;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,8 +34,10 @@ public class FairytaleActivity extends Activity {
         int height = (int) (dp.getHeight() * 1.0);
         getWindow().getAttributes().width = width;
         getWindow().getAttributes().height = height;
-
-        Thread thread = new Thread(() -> FairytaleReader.get().play());
+        Intent intent = getIntent();
+        fairytail=FairytailCache.getInstance().getFairytail().get(intent.getIntExtra("item",0));
+        Log.d("동화 읽기",fairytail.getTitle()+fairytail);
+        Thread thread = new Thread(() -> FairytaleReader.get(fairytail).play());
         thread.setDaemon(true);
         thread.start();
     }
@@ -40,7 +47,7 @@ public class FairytaleActivity extends Activity {
         int action = event.getAction();
         switch (action) {
             case MotionEvent.ACTION_DOWN:
-                FairytaleReader.get().stop();
+                FairytaleReader.get(fairytail).stop();
                 finish();
                 break;
             case MotionEvent.ACTION_UP:    //화면을 터치했다 땠을때

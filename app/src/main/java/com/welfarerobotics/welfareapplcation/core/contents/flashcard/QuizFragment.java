@@ -56,7 +56,7 @@ public class QuizFragment extends Fragment {
         Glide
                 .with(this)
                 .load(child[0])
-                .apply(new RequestOptions().override(800, 850).fitCenter())
+                .apply(new RequestOptions().override(225, 319).fitCenter())
                 .into(ibQuizImage);
         name = child[1];
         tvQuizText.setText(child[1]);

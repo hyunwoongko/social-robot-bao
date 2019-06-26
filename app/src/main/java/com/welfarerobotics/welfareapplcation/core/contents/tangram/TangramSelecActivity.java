@@ -93,10 +93,7 @@ public class TangramSelecActivity extends BaseActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        myAdaterr = new TangramListAdater();
-        //dataSetting();
-        mListView.setAdapter(myAdaterr);
-        Intent intent = new Intent(this, TangramActivity.class);
+        myAdaterr.notifyDataSetChanged();
 
     }
 

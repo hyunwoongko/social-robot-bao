@@ -23,15 +23,12 @@ public class FairytaleCache {
     public ArrayList<String[]> getFairytale() {
         return fairytales;
     }
-
     public String[]getFairytale(int pos) {
         return fairytales.get(pos);
     }
-
     public int getFairytaleSize() {
         return fairytales.size();
     }
-
     public void clear() {
         fairytales = new ArrayList<>();
     }

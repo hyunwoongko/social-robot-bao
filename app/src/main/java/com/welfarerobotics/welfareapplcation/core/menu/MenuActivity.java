@@ -15,6 +15,7 @@ import com.welfarerobotics.welfareapplcation.core.contents.flashcard.FlashcardAc
 import com.welfarerobotics.welfareapplcation.core.contents.paintwith.PaintWithActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramSelecActivity;
 import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleActivity;
+import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleListActivity;
 import com.welfarerobotics.welfareapplcation.core.settings.SettingActivity;
 import com.welfarerobotics.welfareapplcation.core.youtube.YoutubeActivity;
 import com.welfarerobotics.welfareapplcation.entity.cache.ChatCache;
@@ -112,7 +113,7 @@ public class MenuActivity extends AppCompatActivity {
         });
 
         ibplayfairytale.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), FairytaleActivity.class);
+            Intent intent = new Intent(getApplicationContext(), FairytaleListActivity.class);
             startActivity(intent);
         });
 

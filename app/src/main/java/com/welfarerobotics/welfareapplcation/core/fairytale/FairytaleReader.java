@@ -2,6 +2,8 @@ package com.welfarerobotics.welfareapplcation.core.fairytale;
 
 import android.media.MediaPlayer;
 import android.os.Environment;
+
+import com.welfarerobotics.welfareapplcation.entity.FairyTail;
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
 
 import java.io.*;
@@ -15,18 +17,29 @@ public final class FairytaleReader {
     private static FairytaleReader fairytale = null;
     private MediaPlayer mediaPlayer = new MediaPlayer();
     private boolean flag;
+    private  FairyTail fairyTail;
+    private String[]context;
 
-    private FairytaleReader() {
-
+    private FairytaleReader(FairyTail fairyTail) {
+        this.fairyTail =fairyTail;
     }
 
-    public synchronized static FairytaleReader get() {
-        if (fairytale == null) fairytale = new FairytaleReader();
+
+    public synchronized static FairytaleReader get(FairyTail fairyTail) {
+        if (fairytale == null) {
+
+            fairytale = new FairytaleReader(fairyTail);
+
+        }else{
+            fairytale.setfairyTail(fairyTail);
+
+        }
         return fairytale;
     }
 
-    private Random randomint = new Random();
-    private FairytaleCache cache = FairytaleCache.getInstance();
+     private void setfairyTail(FairyTail fairyTail){
+        this.fairyTail = fairyTail;
+    }
 
     private void playVoice(MediaPlayer mediaPlayer, String tts) {
         try {
@@ -99,7 +112,7 @@ public final class FairytaleReader {
 
     public void play() {
         flag = true;
-        String[] select = cache.getFairytale(randomint.nextInt(cache.getFairytaleSize()));
+        String[] select = fairyTail.getContext().split(",");
         mediaPlayer = new MediaPlayer();
         playVoice(mediaPlayer, select[0]);
         int idx = 0;
@@ -131,9 +144,15 @@ public final class FairytaleReader {
 
     public void stop() {
         if(flag) {
-            mediaPlayer.stop();
-            mediaPlayer.release();
-            flag = false;
+            try{
+                mediaPlayer.stop();
+                mediaPlayer.release();
+                flag = false;
+
+            }catch (Exception e){
+                stop();
+            }
+
         }
     }
 }
