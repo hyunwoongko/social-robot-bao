@@ -25,6 +25,7 @@ public abstract class BaseActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //화면 항상 켜짐
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
     }
 
     @Override public void startActivity(Intent intent) {

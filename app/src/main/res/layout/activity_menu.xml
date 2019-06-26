@@ -4,107 +4,116 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
+        android:keepScreenOn="true"
         android:layout_height="match_parent">
 
     <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_margin="20dp"
-            android:background="#00ffffff"
-            android:id="@+id/backbutton"
-            android:src="@drawable/menu_backbutton"/>
+        android:id="@+id/backbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="#00ffffff"
+        android:src="@drawable/menu_backbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/menu_playlang"
-            app:layout_constraintTop_toBottomOf="@id/backbutton"
-            app:layout_constraintBottom_toTopOf="@id/commonsense"
-            app:layout_constraintStart_toEndOf="@id/backbutton"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:background="#00ffffff"
-            android:id="@+id/playlang"/>
+        android:id="@+id/playlang"
+        android:layout_width="148dp"
+        android:layout_height="142dp"
+        android:background="#00ffffff"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@id/commonsense"
+        app:layout_constraintStart_toEndOf="@id/backbutton"
+        app:layout_constraintTop_toBottomOf="@id/backbutton"
+        app:srcCompat="@drawable/menu_playlang" />
 
     <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/menu_playart"
-            app:layout_constraintStart_toEndOf="@id/playlang"
-            app:layout_constraintEnd_toStartOf="@id/playfairytale"
-            app:layout_constraintTop_toTopOf="@id/playlang"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:background="#00ffffff"
-            android:id="@+id/playart"/>
+        android:id="@+id/playart"
+        android:layout_width="148dp"
+        android:layout_height="142dp"
+        android:background="#00ffffff"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@id/playfairytale"
+        app:layout_constraintStart_toEndOf="@id/playlang"
+        app:layout_constraintTop_toTopOf="@id/playlang"
+        app:srcCompat="@drawable/menu_playart" />
 
     <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/menu_fairytale"
-            app:layout_constraintStart_toEndOf="@id/playart"
-            app:layout_constraintEnd_toStartOf="@id/emotioncard"
-            app:layout_constraintTop_toTopOf="@id/playart"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:background="#00ffffff"
-            android:id="@+id/playfairytale"/>
+        android:id="@+id/playfairytale"
+        android:layout_width="148dp"
+        android:layout_height="142dp"
+        android:background="#00ffffff"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@id/emotioncard"
+        app:layout_constraintStart_toEndOf="@id/playart"
+        app:layout_constraintTop_toTopOf="@id/playart"
+        app:srcCompat="@drawable/menu_fairytale" />
 
     <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/menu_emotioncard"
-            app:layout_constraintStart_toEndOf="@id/playfairytale"
-            app:layout_constraintTop_toTopOf="@id/playfairytale"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:background="#00ffffff"
-            android:id="@+id/emotioncard"/>
+        android:id="@+id/emotioncard"
+        android:layout_width="148dp"
+        android:layout_height="142dp"
+        android:background="#00ffffff"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/playfairytale"
+        app:layout_constraintTop_toTopOf="@id/playfairytale"
+        app:srcCompat="@drawable/menu_emotioncard" />
 
     <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/menu_commonsense"
-            app:layout_constraintTop_toBottomOf="@id/playlang"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@id/playlang"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:background="#00ffffff"
-            android:id="@+id/commonsense"/>
+        android:id="@+id/commonsense"
+        android:layout_width="148dp"
+        android:layout_height="142dp"
+        android:background="#00ffffff"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/playlang"
+        app:layout_constraintTop_toBottomOf="@id/playlang"
+        app:srcCompat="@drawable/menu_commonsense" />
 
     <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/menu_listensong"
-            app:layout_constraintTop_toBottomOf="@id/playlang"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/commonsense"
-            app:layout_constraintEnd_toStartOf="@id/followbao"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:background="#00ffffff"
-            android:id="@+id/listensong"/>
+        android:id="@+id/listensong"
+        android:layout_width="148dp"
+        android:layout_height="142dp"
+        android:background="#00ffffff"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/followbao"
+        app:layout_constraintStart_toEndOf="@id/commonsense"
+        app:layout_constraintTop_toBottomOf="@id/playlang"
+        app:srcCompat="@drawable/menu_listensong" />
 
     <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/menu_followbao"
-            app:layout_constraintTop_toBottomOf="@id/playlang"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/listensong"
-            app:layout_constraintEnd_toStartOf="@id/settings"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:background="#00ffffff"
-            android:id="@+id/followbao"/>
+        android:id="@+id/followbao"
+        android:layout_width="148dp"
+        android:layout_height="142dp"
+        android:background="#00ffffff"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/settings"
+        app:layout_constraintStart_toEndOf="@id/listensong"
+        app:layout_constraintTop_toBottomOf="@id/playlang"
+        app:srcCompat="@drawable/menu_followbao" />
 
     <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/menu_settings"
-            app:layout_constraintTop_toBottomOf="@id/playlang"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/followbao"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:background="#00ffffff"
-            android:id="@+id/settings"/>
+        android:id="@+id/settings"
+        android:layout_width="148dp"
+        android:layout_height="142dp"
+        android:background="#00ffffff"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/followbao"
+        app:layout_constraintTop_toBottomOf="@id/playlang"
+        app:srcCompat="@drawable/menu_settings" />
 
 </android.support.constraint.ConstraintLayout>

@@ -4,12 +4,10 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.google.firebase.database.FirebaseDatabase;
@@ -22,7 +20,6 @@ import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.core.initial.SplashActivity;
 import com.welfarerobotics.welfareapplcation.entity.Server;
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
-import com.welfarerobotics.welfareapplcation.util.KakaoDevelop;
 import com.welfarerobotics.welfareapplcation.util.bluetooth.Bluetooth;
 import com.welfarerobotics.welfareapplcation.util.data_loader.DataLoader;
 import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;
@@ -117,11 +114,6 @@ public class MainActivity extends BaseActivity {
         AlarmManager mgr = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
         mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 10, mPendingIntent);
         System.exit(0);
-
-
-
-
-
 
     }
 }

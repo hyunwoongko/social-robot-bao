@@ -1,5 +1,3 @@
-        ImageView eyes = (ImageView) findViewById(R.id.eye);
-        ImageView mouse = (ImageView) findViewById(R.id.s_mouse);
         switch (test){
             case 1:
                 eyes.setImageResource(R.drawable.sad_sad_eye);
@@ -18,6 +16,14 @@
                 mouse.setImageResource(R.drawable.depressed_mouse);
                 break;
             case 5:
+                Glide.with(this).asGif().load(R.raw.ohooo_eye).into(eyes);
+                mouse.setImageResource(R.drawable.smile_mouse);
+                break;
+            case 6:
+                eyes.setImageResource(R.drawable.good_eye);
+                mouse.setImageResource(R.drawable.normal_mouse);
+                break;
+            case 7:
                 eyes.setImageResource(R.drawable.normal_eye);
                 mouse.setImageResource(R.drawable.normal_mouse);
                 test=0;
@@ -27,5 +33,3 @@
 
         }
         test++;
-
-        감정 회전 테스트 코드

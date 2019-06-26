@@ -51,7 +51,7 @@ public class EmotioncardFragment extends VoiceFragment {
             Glide
                     .with(this)
                     .load(child[0])
-                    .apply(new RequestOptions().override(600, 850).fitCenter())
+                    .apply(new RequestOptions().override(300, 425).fitCenter())
                     .into(ibArray[i % 2]);
 
             name[i % 2] = child[1];
