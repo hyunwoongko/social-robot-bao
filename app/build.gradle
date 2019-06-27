@@ -70,6 +70,8 @@ dependencies {
     implementation 'net.sourceforge.streamsupport:streamsupport-flow:1.6.0'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation group: 'org.jsoup', name: 'jsoup', version: '1.9.1'
+    provided 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+
 
     //myscript
     implementation(name: 'MyScript_ATK-Core-android-component', ext: 'aar')

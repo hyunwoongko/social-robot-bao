@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:text="사용자 설정"
             android:padding="15dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="70dp"
             android:gravity="center"
             android:textSize="30sp"
             android:layout_weight="0.2"
@@ -35,57 +35,86 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="1.3"
                 android:padding="10dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:layout_marginRight="20dp"
+                android:weightSum="2.5"
                 tools:ignore="NestedWeights">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:weightSum="3"
-                    android:padding="10dp">
+                    android:layout_height="match_parent"
+                    android:weightSum="2"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1.5"
+                    android:layout_marginBottom="20dp"
+                    android:padding="20dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="이름"
-                        android:textSize="20sp"
-                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:textSize="25sp"
+                        android:layout_weight="1"
                         android:fontFamily="@font/baemin"
                         android:layout_marginRight="10dp" />
 
                     <EditText
                         android:id="@+id/user_name"
                         android:layout_weight="1"
+                        android:layout_margin="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:padding="10dp"
-                    android:weightSum="3">
+                    android:layout_weight="1"
+                    android:weightSum="2">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="사는 곳\n(시/군/구)"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1.5"
-                        android:textSize="20sp"
+                        android:text="사는 곳\n(시군구 단위)"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="25sp"
+                        android:layout_gravity="center"
                         android:fontFamily="@font/baemin"
                         android:layout_marginRight="10dp" />
 
-                    <EditText
-                        android:id="@+id/user_address"
+                    <LinearLayout
+                        android:padding="20dp"
+                        android:orientation="vertical"
+                        android:weightSum="4"
+                        android:gravity="center"
                         android:layout_weight="1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="match_parent">
+
+                        <Spinner
+                            android:id="@+id/spinner_states"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#DDDDDD"
+                            android:layout_margin="10dp"
+                            android:layout_weight="2" />
+
+                        <Spinner
+                            android:id="@+id/spinner_cities"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#DDDDDD"
+                            android:layout_margin="10dp"
+                            android:layout_weight="2" />
+
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
