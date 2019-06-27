@@ -60,8 +60,8 @@ import java.util.Locale;
 import java.util.Objects;
 
 public class InitialSettingActivity extends BaseActivity {
-    private final String[] Main_Category = {"지역선택", "서울", "인천", "대전", "대구", "광주", "부산", "울산", "울산", "세종특별자치시",
-            "경기도", "강원도", "충청북도", "충청남도", "경상북도", "경상남도", "전라북도", "전라남도"};
+    private final String[] Main_Category = {"지역선택", "서울", "인천", "대전", "대구", "광주", "부산", "울산", "세종",
+            "경기도", "강원도", "충청북도", "충청남도", "경상북도", "경상남도", "전라북도", "전라남도", "제주도"};
     private final String[] Seoul = {"시군구 선택", "강남구", "강동구", "강북구", "강서구", "관악구", "광진구", "구로구", "금천구", "노원구", "도봉구",
             "동대문구", "동작구", "마포구", "서대문구", "서초구", "성동구", "성북구", "송파구", "양천구", "영등포구", "용산구", "은평구", "종로구", "중구", "중랑구"};
     private final String[] Incheon = {"시군구 선택", "강화군", "계양구", "남구", "남동구", "동구", "부평구", "서구", "연수구", "웅진구", "중구"};
@@ -97,6 +97,68 @@ public class InitialSettingActivity extends BaseActivity {
 
         Button nextButton = findViewById(R.id.initial_setting_next_button);
         NetworkUtil.wifiSafe(this); // 네트워크 체크
+        final String[] location = {null};
+
+        Spinner states = findViewById(R.id.spinner_states);
+        Spinner cities = findViewById(R.id.spinner_cities);
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
+                getApplicationContext(),
+                android.R.layout.simple_spinner_dropdown_item,
+                Main_Category);
+
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        states.setAdapter(arrayAdapter);
+        states.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String[] city = {"지역을 선택해주세요."};
+                if (i == 1) city = Seoul;
+                else if (i == 2) city = Incheon;
+                else if (i == 3) city = Daejeon;
+                else if (i == 4) city = Daegu;
+                else if (i == 5) city = Gwangju;
+                else if (i == 6) city = Busan;
+                else if (i == 7) city = Ulsan;
+                else if (i == 8) city = Sejong;
+                else if (i == 9) city = Gyeonggido;
+                else if (i == 10) city = Gangwondo;
+                else if (i == 11) city = Chungcheongbukdo;
+                else if (i == 12) city = Chungcheongnamdo;
+                else if (i == 13) city = Gyeongsangbukdo;
+                else if (i == 14) city = Gyeongsangnamdo;
+                else if (i == 15) city = Jeollabukdo;
+                else if (i == 16) city = Jeollanamdo;
+                else if (i == 17) city = Island;
+
+                try {
+                    ArrayAdapter<String> cityAdapter = new ArrayAdapter<>(
+                            getApplicationContext(),
+                            android.R.layout.simple_spinner_dropdown_item,
+                            city);
+
+                    cityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    cities.setAdapter(cityAdapter);
+                    String[] finalCity = city;
+                    cities.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            if (i != 0) location[0] = finalCity[i];
+                        }
+
+                        @Override public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+                } catch (Exception e) {
+                    Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });
 
         nextButton.setOnClickListener(v ->
                 FirebaseHelper.get().connect(FirebaseDatabase.getInstance().getReference("server"), snapshot -> {
@@ -119,47 +181,32 @@ public class InitialSettingActivity extends BaseActivity {
                     model.setDict(conversations);
                     EditText nameEditText = findViewById(R.id.user_name);
 
-                    Spinner states = findViewById(R.id.spinner_states);
-                    Spinner cities = findViewById(R.id.spinner_cities);
+                    try {
+                        if (nameEditText.getText() != null &&
+                                !nameEditText.getText().toString().trim().equals("") &&
+                                !nameEditText.getText().toString().replaceAll(" ", "").equals("") &&
+                                location[0] != null &&
+                                !location[0].trim().equals("") &&
+                                !location[0].replaceAll(" ", "").equals("")) {
 
-                    ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
-                            getApplicationContext(),
-                            android.R.layout.simple_spinner_dropdown_item,
-                            Main_Category);
+                            model.setName(nameEditText.getText().toString());
+                            model.setLocation(location[0]);
+                            UserCache.setInstance(model);
+                            // 싱글톤 업로드
 
-                    arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    states.setAdapter(arrayAdapter);
-                    states.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                        @Override
-                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            Toast.makeText(getApplicationContext(), Main_Category[i] + "가 선택되었습니다.",
-                                    Toast.LENGTH_SHORT).show();
+                            FirebaseDatabase.getInstance()
+                                    .getReference("user")
+                                    .child(id)
+                                    .setValue(model);
+
+                            Preference.get(this).setBoolean("isFirst", false);
+                            startActivity(new Intent(InitialSettingActivity.this, MainActivity.class));
+                            finish();
+                        }else{
+                            Toasty.error(this, " 모든 정보를 입력해주세요");
                         }
-
-                        @Override
-                        public void onNothingSelected(AdapterView<?> adapterView) {
-                        }
-                    });
-
-
-                    if (nameEditText.getText() != null &&
-                            !nameEditText.getText().toString().trim().equals("") &&
-                            !nameEditText.getText().toString().replaceAll(" ", "").equals("")
-                    ) {
-
-                        model.setName(nameEditText.getText().toString());
-                        model.setLocation("NEED TO ADD LOC");
-                        UserCache.setInstance(model);
-                        // 싱글톤 업로드
-
-                        FirebaseDatabase.getInstance()
-                                .getReference("user")
-                                .child(id)
-                                .setValue(model);
-
-                        Preference.get(this).setBoolean("isFirst", false);
-                        startActivity(new Intent(InitialSettingActivity.this, MainActivity.class));
-                        finish();
+                    } catch (Exception e) {
+                        Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 }));
     }

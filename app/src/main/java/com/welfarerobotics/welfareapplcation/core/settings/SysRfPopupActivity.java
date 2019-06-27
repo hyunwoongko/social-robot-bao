@@ -18,7 +18,9 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.*;
 import com.google.firebase.storage.FirebaseStorage;
+import com.kinda.alert.KAlertDialog;
 import com.welfarerobotics.welfareapplcation.R;
+import com.welfarerobotics.welfareapplcation.core.initial.InitialWifiActivity;
 import com.welfarerobotics.welfareapplcation.core.initial.SplashActivity;
 import com.welfarerobotics.welfareapplcation.util.DeviceId;
 import com.welfarerobotics.welfareapplcation.util.data_util.Preference;
@@ -52,8 +54,8 @@ public class SysRfPopupActivity extends Activity {
             try {
                 int input = Integer.parseInt(editText.getText().toString().replace(" ", ""));
                 if (input == arrayint[2]) {
-                    finish();
                     resetstorage();
+                    finish();
                 } else {
                     Toasty.info(this, "입력하신 숫자가 아닙니다.").show();
                 }
@@ -93,6 +95,7 @@ public class SysRfPopupActivity extends Activity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 refresh();
+                finish();
                 System.out.println("리얼타임삭제완료");
             }
 
@@ -178,6 +181,9 @@ public class SysRfPopupActivity extends Activity {
                 PendingIntent.FLAG_CANCEL_CURRENT);
         AlarmManager mgr = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
         mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 10, mPendingIntent);
+        finishAffinity();
+        System.runFinalization();
+        android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(0);
     }
 }
