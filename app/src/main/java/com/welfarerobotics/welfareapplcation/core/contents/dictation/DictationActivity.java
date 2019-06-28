@@ -84,7 +84,7 @@ public class DictationActivity extends VoiceActivity implements SingleCharWidget
         });
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference databaseRef = database.getReference("dictation");
+        DatabaseReference databaseRef = database.getReference("word");
         databaseRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
