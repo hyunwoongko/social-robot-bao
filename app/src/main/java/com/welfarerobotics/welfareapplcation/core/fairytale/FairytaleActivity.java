@@ -15,7 +15,7 @@ import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.entity.FairyTail;
 import com.welfarerobotics.welfareapplcation.util.Sound;
 
-public class FairytaleActivity extends BaseActivity {
+public class FairytaleActivity extends Activity {
 
     private FairyTail fairytail;
 
