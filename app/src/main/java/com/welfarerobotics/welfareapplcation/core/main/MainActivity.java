@@ -161,11 +161,12 @@ public class MainActivity extends BaseActivity {
                     } else {
                         audioManager.setMicrophoneMute(true);
                         // 말을 하고있는 중에만 소리를 막음
-                        Sound.get().effectSound(this, R.raw.think);
+
                         if (s.contains("이름")) {
-                            Brain.hippocampus.decideToSay("음.. , 제 이름은 BOW , 라고 해요 !"); // 배웠던 말을 그대로 입력
+                            Brain.hippocampus.decideToSay("제 이름은 BAO , 라고 해요 !"); // 배웠던 말을 그대로 입력
                             Mouth.get().say();
                         } else {
+                            Sound.get().effectSound(this, R.raw.think);
                             Brain.thinkAndSay(s, this); // 뇌에서 생각해서 말하기
                         }
                         Mouth.get().stop(() -> audioManager.setMicrophoneMute(false));
