@@ -1,11 +1,14 @@
 package com.welfarerobotics.welfareapplcation.core.main;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.RecognitionListener;
 import android.speech.SpeechRecognizer;
 import com.kakao.sdk.newtoneapi.SpeechRecognizeListener;
 import com.kakao.sdk.newtoneapi.SpeechRecognizerClient;
+import com.welfarerobotics.welfareapplcation.util.ToastType;
+import es.dmoral.toasty.Toasty;
 import java8.util.function.Consumer;
 
 import java.util.ArrayList;
@@ -23,8 +26,8 @@ public class SpeechListener implements SpeechRecognizeListener {
     private Runnable fail;
     private Handler handler = new Handler();
     private List<String> attentionSet = Arrays.asList(
-            "바오", "바오야", "다우", "다우야", "바우", "바우야", "바보야",
-            "하이", "헬로", "hi", "hello", "안녕", "카카오야"
+            "바오", "바오야", "다우", "다우야", "바우", "바우야", "바보야", "카카오야",
+            "타오", "타오야", "하오", "하오야", "bow", "빠우", "빠오"
     );
 
     private boolean detectCalling(String speech) {
@@ -65,8 +68,15 @@ public class SpeechListener implements SpeechRecognizeListener {
         ArrayList<String> words =
                 results.getStringArrayList(SpeechRecognizerClient.KEY_RECOGNITION_RESULTS);
         String speech = words.get(0); //0번이 가장 다듬어진 문장
-        if (detectCalling(speech)) success.accept(speech);
-        else handler.postDelayed(fail, 100);
+
+        if (speech.contains("바보"))
+            speech = speech.replaceAll("바보", "바오");
+
+        if (detectCalling(speech)) {
+            success.accept(speech);
+        } else {
+            handler.postDelayed(fail, 100);
+        }
     }
 
     @Override public void onAudioLevel(float audioLevel) {

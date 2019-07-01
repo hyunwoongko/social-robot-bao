@@ -12,6 +12,7 @@ import android.speech.RecognizerIntent;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
 import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
@@ -24,10 +25,7 @@ import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.core.initial.SplashActivity;
 import com.welfarerobotics.welfareapplcation.entity.Conversation;
 import com.welfarerobotics.welfareapplcation.entity.cache.UserCache;
-import com.welfarerobotics.welfareapplcation.util.Pool;
-import com.welfarerobotics.welfareapplcation.util.Sound;
-import com.welfarerobotics.welfareapplcation.util.SpeechRecognizerClient;
-import com.welfarerobotics.welfareapplcation.util.SpeechRecognizerManager;
+import com.welfarerobotics.welfareapplcation.util.*;
 import com.welfarerobotics.welfareapplcation.util.bluetooth.Bluetooth;
 import com.welfarerobotics.welfareapplcation.util.data_loader.DataLoader;
 import com.welfarerobotics.welfareapplcation.util.touch_util.ConcreteSwipeTouchListener;
@@ -130,8 +128,8 @@ public class MainActivity extends BaseActivity {
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.KOREAN);
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
                 "바오에게 말해요!");
-        try {
 
+        try {
             startActivityForResult(intent, STT_RQCODE);
         } catch (ActivityNotFoundException ignore) {
         }
@@ -164,7 +162,12 @@ public class MainActivity extends BaseActivity {
                         audioManager.setMicrophoneMute(true);
                         // 말을 하고있는 중에만 소리를 막음
                         Sound.get().effectSound(this, R.raw.think);
-                        Brain.thinkAndSay(s, this); // 뇌에서 생각해서 말하기
+                        if (s.contains("이름")) {
+                            Brain.hippocampus.decideToSay("음.. , 제 이름은 BOW , 라고 해요 !"); // 배웠던 말을 그대로 입력
+                            Mouth.get().say();
+                        } else {
+                            Brain.thinkAndSay(s, this); // 뇌에서 생각해서 말하기
+                        }
                         Mouth.get().stop(() -> audioManager.setMicrophoneMute(false));
                         // 말이 끝나면 다시 소리 들음
                     }

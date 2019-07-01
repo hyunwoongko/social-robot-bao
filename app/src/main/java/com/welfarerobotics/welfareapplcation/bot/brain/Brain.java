@@ -28,14 +28,11 @@ public final class Brain {
 
     public static void thinkAndSay(String speech, Activity activity) {
         try {
-            TextView textView = activity.findViewById(R.id.emotion);
-
             String preprocessedSpeech = Preprocessor.preprocess(speech);
             String intent = IntentClassifier.classify(preprocessedSpeech);
             System.out.println("스피치 : " + preprocessedSpeech);
             System.out.println("인텐트 : " + intent);
             Skills.thinkAndSay(intent, preprocessedSpeech, activity);
-
         } catch (Throwable e) {
             FallbackScenario.process(); // <- 나중엔 이걸로
         }

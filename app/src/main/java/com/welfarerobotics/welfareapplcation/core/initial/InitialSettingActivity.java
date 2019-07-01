@@ -170,14 +170,7 @@ public class InitialSettingActivity extends BaseActivity {
                     model.setId(id);
 
                     ArrayList<Conversation> conversations = new ArrayList<>();
-                    Conversation firstConversation = new Conversation();
-                    firstConversation.setInput("안녕");
-                    firstConversation.setOutput("안녕하세요. 반가워요!");
-                    firstConversation.setInput("이름");
-                    firstConversation.setOutput("제 이름은 바오에요.");
-                    firstConversation.setInput("이름이 뭐야");
-                    firstConversation.setOutput("제 이름은 바오에요!");
-                    conversations.add(firstConversation);
+
                     model.setDict(conversations);
                     EditText nameEditText = findViewById(R.id.user_name);
 

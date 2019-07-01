@@ -54,8 +54,7 @@ public class SysRfPopupActivity extends Activity {
             try {
                 int input = Integer.parseInt(editText.getText().toString().replace(" ", ""));
                 if (input == arrayint[2]) {
-                    resetstorage();
-                    finish();
+                    realtimereset();
                 } else {
                     Toasty.info(this, "입력하신 숫자가 아닙니다.").show();
                 }
@@ -102,47 +101,6 @@ public class SysRfPopupActivity extends Activity {
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 Log.w("TAG: ", "Failed to refresh Bao", databaseError.toException());
-            }
-        });
-    }
-
-    private void resetstorage() {
-        //파베 값바뀌면!!
-        System.out.println("스토리지 접근");
-        FirebaseStorage storage = FirebaseStorage.getInstance();
-        storage.getReference().child("userPhoto").child(userid).child("userPhoto0").delete().addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                System.out.println("스토리지1 접근");
-                storage.getReference().child("userPhoto").child(userid).child("userPhoto1").delete().addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        System.out.println("스토리지2 접근");
-                        storage.getReference().child("userPhoto").child(userid).child("userPhoto2").delete().addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                System.out.println("스토리지2 삭제후 리프레시");
-                                realtimereset();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception exception) {
-                                // Uh-oh, an error occurred!
-                            }
-                        });
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception exception) {
-                        // Uh-oh, an error occurred!
-                    }
-                });
-            }
-
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception exception) {
-                // Uh-oh, an error occurred!
             }
         });
     }
