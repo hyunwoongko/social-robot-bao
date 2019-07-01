@@ -8,7 +8,7 @@ class IntentConfigs:
     learning_step = 1000000000000
     learning_rate = 0.0003
     vector_size = 320
-    fallback_score = 20
+    fallback_score = 24
     train_fasttext = True
     tokenizing = True
 

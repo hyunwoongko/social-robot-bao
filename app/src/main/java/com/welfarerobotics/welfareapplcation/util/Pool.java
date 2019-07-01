@@ -1,7 +1,9 @@
 package com.welfarerobotics.welfareapplcation.util;
 
+import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ForkJoinPool;
 
 /**
  * @author : Hyunwoong
@@ -11,8 +13,7 @@ import java.util.concurrent.Executors;
 public class Pool {
     public static ExecutorService mouthThread = Executors.newCachedThreadPool();
     public static ExecutorService hormoneThread = Executors.newCachedThreadPool();
-    public static ExecutorService imageThread = Executors.newCachedThreadPool();
     public static ExecutorService eyeThread = Executors.newSingleThreadExecutor();
     public static ExecutorService youtubeThread = Executors.newSingleThreadExecutor();
-
+    public static ExecutorService sttThread = Executors.newSingleThreadExecutor();
 }

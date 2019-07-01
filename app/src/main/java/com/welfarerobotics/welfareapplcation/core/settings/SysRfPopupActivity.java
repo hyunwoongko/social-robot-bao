@@ -18,9 +18,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.*;
 import com.google.firebase.storage.FirebaseStorage;
-import com.kinda.alert.KAlertDialog;
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.core.initial.InitialWifiActivity;
 import com.welfarerobotics.welfareapplcation.core.initial.SplashActivity;
 import com.welfarerobotics.welfareapplcation.util.DeviceId;
 import com.welfarerobotics.welfareapplcation.util.data_util.Preference;
@@ -36,12 +34,14 @@ public class SysRfPopupActivity extends Activity {
     private Button cancelbtn;
     private EditText editText;
     private String userid;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //타이틀바 없애기
+        //타이틀바 없애기);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_sysrfpopup);
+
         userid = DeviceId.getInstance(this).getUUID();
         editText = (EditText) findViewById(R.id.name_editext);
         RandomIntNumber();
@@ -105,7 +105,8 @@ public class SysRfPopupActivity extends Activity {
             }
         });
     }
-    private void resetstorage(){
+
+    private void resetstorage() {
         //파베 값바뀌면!!
         System.out.println("스토리지 접근");
         FirebaseStorage storage = FirebaseStorage.getInstance();

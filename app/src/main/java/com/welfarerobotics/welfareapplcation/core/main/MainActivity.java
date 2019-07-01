@@ -12,8 +12,6 @@ import android.speech.RecognizerIntent;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.kakao.sdk.newtoneapi.SpeechRecognizerClient;
-import com.kakao.sdk.newtoneapi.SpeechRecognizerManager;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
 import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
@@ -28,7 +26,8 @@ import com.welfarerobotics.welfareapplcation.entity.Conversation;
 import com.welfarerobotics.welfareapplcation.entity.cache.UserCache;
 import com.welfarerobotics.welfareapplcation.util.Pool;
 import com.welfarerobotics.welfareapplcation.util.Sound;
-import com.welfarerobotics.welfareapplcation.util.ToastType;
+import com.welfarerobotics.welfareapplcation.util.SpeechRecognizerClient;
+import com.welfarerobotics.welfareapplcation.util.SpeechRecognizerManager;
 import com.welfarerobotics.welfareapplcation.util.bluetooth.Bluetooth;
 import com.welfarerobotics.welfareapplcation.util.data_loader.DataLoader;
 import com.welfarerobotics.welfareapplcation.util.touch_util.ConcreteSwipeTouchListener;
@@ -42,7 +41,7 @@ public class MainActivity extends BaseActivity {
     private OnSwipeTouchListener onSwipeTouchListener;
     private AudioManager audioManager;
     private ImageView refresh_view;
-    private int STT_RQCODE = 852;
+    private int STT_RQCODE = 99;
     private SpeechRecognizerClient client;
     private ImageView eyes;
     private ImageView mouth;
@@ -68,39 +67,31 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        try {
-            Hormone hormone = Pituitary.getHormone();
-            FaceExpressionGenerator.ganerate(this, hormone, eyes, mouth);
-            client = new SpeechRecognizerClient.Builder()
-                    .setServiceType(SpeechRecognizerClient.SERVICE_TYPE_WEB)
-                    .setGlobalTimeOut(30)
-                    .build();
-            client.setSpeechRecognizeListener(new SpeechListener(
-                    ss -> promptSpeechInput(),
-                    () -> {
-                        overridePendingTransition(R.anim.activity_on, R.anim.activity_off);
-                        startActivity(getIntent());
-                        overridePendingTransition(R.anim.activity_on, R.anim.activity_off);
-                        finish();
-                        overridePendingTransition(R.anim.activity_on, R.anim.activity_off);
-                    }));
-            client.startRecording(false);
-        } catch (Throwable e) {
-            showToast(e.getMessage(), ToastType.error);
-        }
+        Hormone hormone = Pituitary.getHormone();
+        FaceExpressionGenerator.ganerate(this, hormone, eyes, mouth);
+        client = new SpeechRecognizerClient.Builder()
+                .setServiceType(SpeechRecognizerClient.SERVICE_TYPE_WEB)
+                .build();
+        client.setSpeechRecognizeListener(new SpeechListener(
+                ss -> promptSpeechInput(),
+                () -> {
+                    overridePendingTransition(R.anim.activity_off, R.anim.activity_off);
+                    startActivity(getIntent());
+                    overridePendingTransition(R.anim.activity_off, R.anim.activity_off);
+                    finish();
+                    overridePendingTransition(R.anim.activity_off, R.anim.activity_off);
+                }));
+        client.startRecording(false);
     }
 
-    @Override
-    protected void onPause() {
+    @Override protected void onPause() {
         super.onPause();
-        Pool.mouthThread.execute(()->{
+        if (client != null) {
             client.stopRecording();
             client.cancelRecording();
             client = null;
-        }); // 메인쓰레드에서 stt를 끄면 쓰레드를 join하는 과정해서 딜레이가 발생함
-        // 다른 쓰레드에서 stt를 종료해줄 필요가 있음.
-        
-        audioManager.setMicrophoneMute(false);
+            audioManager.setMicrophoneMute(false);
+        }
     }
 
     @Override
@@ -140,6 +131,7 @@ public class MainActivity extends BaseActivity {
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
                 "바오에게 말해요!");
         try {
+
             startActivityForResult(intent, STT_RQCODE);
         } catch (ActivityNotFoundException ignore) {
         }
@@ -148,7 +140,6 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        audioManager.setMicrophoneMute(true);
         if (requestCode == STT_RQCODE) {
             if (resultCode == RESULT_OK && data != null) {
                 Pool.mouthThread.execute(() -> {
@@ -164,12 +155,18 @@ public class MainActivity extends BaseActivity {
                         }
                     }
                     if (isTeachedSpeech) {
+                        audioManager.setMicrophoneMute(true);
+                        // 말을 하고있는 중에만 소리를 막음
                         Mouth.get().say();
                         Mouth.get().stop(() -> audioManager.setMicrophoneMute(false));
+                        // 말이 끝나면 다시 소리 들음
                     } else {
+                        audioManager.setMicrophoneMute(true);
+                        // 말을 하고있는 중에만 소리를 막음
                         Sound.get().effectSound(this, R.raw.think);
                         Brain.thinkAndSay(s, this); // 뇌에서 생각해서 말하기
                         Mouth.get().stop(() -> audioManager.setMicrophoneMute(false));
+                        // 말이 끝나면 다시 소리 들음
                     }
                 });
             }

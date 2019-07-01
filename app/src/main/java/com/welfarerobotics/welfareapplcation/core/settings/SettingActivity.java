@@ -19,7 +19,6 @@ public class SettingActivity extends PreferenceActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.settings_preference);
-
         Preference BackButton = findPreference("BackButton");
         Preference SetupWifi = findPreference("SetupWifi");
         Preference TeachSentenceMenu = findPreference("TeachSentencesMenu");

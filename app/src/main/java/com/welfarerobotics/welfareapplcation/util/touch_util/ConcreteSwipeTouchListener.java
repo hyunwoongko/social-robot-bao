@@ -30,6 +30,12 @@ public class ConcreteSwipeTouchListener extends OnSwipeTouchListener {
         audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_LOWER, AudioManager.FLAG_SHOW_UI);
     }
 
+    @Override
+    public void onActivityDoubleTap() {
+        Intent menuIntent = new Intent(activity, MenuActivity.class);
+        activity.startActivity(menuIntent);
+    }
+
     @Override public void onActivitySingleTap() {
         Intent menuIntent = new Intent(activity, MenuActivity.class);
         activity.startActivity(menuIntent);

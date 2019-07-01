@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.bot.Body.Dance;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.crawler.YoutubeApi;
+import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.common_sense.CommonQuizActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.dictation.DictationActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.emotioncard.EmotioncardActivity;
@@ -16,6 +17,7 @@ import com.welfarerobotics.welfareapplcation.core.contents.paintwith.PaintWithAc
 import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramSelecActivity;
 import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleActivity;
 import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleListActivity;
+import com.welfarerobotics.welfareapplcation.core.main.MainActivity;
 import com.welfarerobotics.welfareapplcation.core.settings.SettingActivity;
 import com.welfarerobotics.welfareapplcation.core.youtube.YoutubeActivity;
 import com.welfarerobotics.welfareapplcation.entity.cache.ChatCache;
@@ -27,7 +29,7 @@ import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
-public class MenuActivity extends AppCompatActivity {
+public class MenuActivity extends BaseActivity {
     private String youtubeUrl;
     private QuickAction quickActionArt;
     private QuickAction quickActionLang;

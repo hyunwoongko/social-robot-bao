@@ -11,10 +11,11 @@ import android.view.MotionEvent;
 import android.view.Window;
 import android.view.WindowManager;
 import com.welfarerobotics.welfareapplcation.R;
+import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.entity.FairyTail;
 import com.welfarerobotics.welfareapplcation.util.Sound;
 
-public class FairytaleActivity extends Activity {
+public class FairytaleActivity extends BaseActivity {
 
     private FairyTail fairytail;
 
