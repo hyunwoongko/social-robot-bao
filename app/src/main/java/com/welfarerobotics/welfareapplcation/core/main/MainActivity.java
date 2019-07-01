@@ -56,24 +56,13 @@ public class MainActivity extends BaseActivity {
         eyes = (ImageView) findViewById(R.id.eye);
         mouth = (ImageView) findViewById(R.id.s_mouth);
         TextView emotion = (TextView) findViewById(R.id.emotion);
-        onSwipeTouchListener = new ConcreteSwipeTouchListener(this, audioManager, this::promptSpeechInput);
+        onSwipeTouchListener = new ConcreteSwipeTouchListener(this, audioManager);
         refresh_view = (ImageView) findViewById(R.id.refresh);
         refresh_view.setOnClickListener(view -> this.refresh());
         Bluetooth.getInstance(this);
         Handler handler = new FaceHandler(eyes, emotion, mouth, this);
         new Detect(handler);
         DataLoader.onDataLoad(); // 모든 데이터 다운로드
-    }
-
-
-    @Override public void startActivity(Intent intent) {
-        super.startActivity(intent);
-        overridePendingTransition(R.anim.activity_on, R.anim.activity_off);
-    }
-
-    @Override public void finish() {
-        super.finish();
-        overridePendingTransition(R.anim.activity_on, R.anim.activity_off);
     }
 
     @Override
@@ -89,8 +78,11 @@ public class MainActivity extends BaseActivity {
             client.setSpeechRecognizeListener(new SpeechListener(
                     ss -> promptSpeechInput(),
                     () -> {
+                        overridePendingTransition(R.anim.activity_on, R.anim.activity_off);
                         startActivity(getIntent());
+                        overridePendingTransition(R.anim.activity_on, R.anim.activity_off);
                         finish();
+                        overridePendingTransition(R.anim.activity_on, R.anim.activity_off);
                     }));
             client.startRecording(false);
         } catch (Throwable e) {
@@ -101,10 +93,13 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        client.stopRecording();
-        client.cancelRecording();
-        client = null;
-
+        Pool.mouthThread.execute(()->{
+            client.stopRecording();
+            client.cancelRecording();
+            client = null;
+        }); // 메인쓰레드에서 stt를 끄면 쓰레드를 join하는 과정해서 딜레이가 발생함
+        // 다른 쓰레드에서 stt를 종료해줄 필요가 있음.
+        
         audioManager.setMicrophoneMute(false);
     }
 
@@ -154,7 +149,6 @@ public class MainActivity extends BaseActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         audioManager.setMicrophoneMute(true);
-
         if (requestCode == STT_RQCODE) {
             if (resultCode == RESULT_OK && data != null) {
                 Pool.mouthThread.execute(() -> {

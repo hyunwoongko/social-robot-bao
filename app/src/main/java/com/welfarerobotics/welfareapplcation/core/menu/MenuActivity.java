@@ -103,8 +103,8 @@ public class MenuActivity extends AppCompatActivity {
         });
 
         ibfollowbao.setOnClickListener(view -> {
-            new Dance();
-
+            // new Dance();
+            //TODO : 여기 잠시 주석 처리 해놓음 !!
         });
 
         ibemotioncard.setOnClickListener(view -> {

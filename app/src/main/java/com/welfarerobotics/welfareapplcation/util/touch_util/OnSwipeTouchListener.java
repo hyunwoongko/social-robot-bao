@@ -32,7 +32,6 @@ public class OnSwipeTouchListener implements OnTouchListener {
 
         @Override
         public boolean onDoubleTap(MotionEvent e) {
-            onActivityDoubleTap();
             return super.onDoubleTap(e);
         }
 
@@ -90,8 +89,5 @@ public class OnSwipeTouchListener implements OnTouchListener {
     }
 
     public void onSwipeBottom() {
-    }
-
-    public void onActivityDoubleTap(){
     }
 }

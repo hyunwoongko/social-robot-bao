@@ -13,12 +13,11 @@ import com.welfarerobotics.welfareapplcation.core.menu.MenuActivity;
 public class ConcreteSwipeTouchListener extends OnSwipeTouchListener {
     private AudioManager audioManager;
     private Activity activity;
-    private Runnable singleTap;
-    public ConcreteSwipeTouchListener(Activity activity, AudioManager audioManager, Runnable singleTap) {
+
+    public ConcreteSwipeTouchListener(Activity activity, AudioManager audioManager) {
         super(activity);
         this.audioManager = audioManager;
         this.activity = activity;
-        this.singleTap = singleTap;
     }
 
     @Override
@@ -31,13 +30,8 @@ public class ConcreteSwipeTouchListener extends OnSwipeTouchListener {
         audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_LOWER, AudioManager.FLAG_SHOW_UI);
     }
 
-    @Override
-    public void onActivityDoubleTap() {
+    @Override public void onActivitySingleTap() {
         Intent menuIntent = new Intent(activity, MenuActivity.class);
         activity.startActivity(menuIntent);
-    }
-
-    @Override public void onActivitySingleTap() {
-        singleTap.run();
     }
 }
