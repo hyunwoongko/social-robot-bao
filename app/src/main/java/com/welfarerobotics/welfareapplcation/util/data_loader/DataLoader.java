@@ -8,14 +8,12 @@ import com.google.firebase.database.DataSnapshot;
  * @homepage : https://github.com/gusdnd852
  */
 public interface DataLoader {
-
     TangramDataLoader TANGRAM_DATA_LOADER = TangramDataLoader.getInstance();
     FairytaleDataLoader FAIRYTALE_DATA_LOADER = FairytaleDataLoader.getInstance();
     FlashCardDataLoader FLASH_CARD_DATA_LOADER = FlashCardDataLoader.getInstance();
     EmotionCardDataLoader EMOTION_CARD_DATA_LOADER = EmotionCardDataLoader.getInstance();
     EmotionChatDataLoader EMOTION_CHAT_DATA_LOADER = EmotionChatDataLoader.getInstance();
     FallbackDataLoader FALLBACK_DATA_LOADER = FallbackDataLoader.getInstance();
-    FairytailDataLoader FAIRYTAIL_DATA_LOADER = FairytailDataLoader.getInstance();
     DanceDataLoader DANCE_DATA_LOADER = DanceDataLoader.getInstance();
     ServerDataLoader SERVER_DATA_LOADER = ServerDataLoader.getInstance();
 
@@ -31,7 +29,6 @@ public interface DataLoader {
         EMOTION_CHAT_DATA_LOADER.load();
         FALLBACK_DATA_LOADER.load();
         DANCE_DATA_LOADER.load();
-        FAIRYTAIL_DATA_LOADER.load();
         SERVER_DATA_LOADER.load();
     }
 }

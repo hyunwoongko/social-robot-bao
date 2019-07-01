@@ -16,6 +16,10 @@ public class FairytaleCache {
         return instance;
     }
 
+    public static void setFairytales(ArrayList<String[]> fairytales) {
+        FairytaleCache.fairytales = fairytales;
+    }
+
     public void addFairytale(String[]item) {
         fairytales.add(item);
     }

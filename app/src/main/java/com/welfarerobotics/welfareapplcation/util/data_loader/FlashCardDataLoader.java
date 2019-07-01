@@ -26,13 +26,10 @@ public class FlashCardDataLoader implements DataLoader {
     }
 
     @Override public void load() {
-        FirebaseHelper.get().download(FirebaseDatabase
-                .getInstance()
-                .getReference("flashcard"), this::save);
+
     }
 
     @Override public void save(DataSnapshot snapshot) {
-        FlashcardCache.getInstance().addFlashcard(snapshot.getValue().toString().split(","));
-        System.out.println(getClass().getName() + " : 데이터 다운로드");
+
     }
 }

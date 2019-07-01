@@ -2,27 +2,31 @@ package com.welfarerobotics.welfareapplcation.bot.Body;
 
 import java.util.ArrayList;
 
-public class DanceCashe {
+public class DanceCache {
 
-    static private DanceCashe danceCashe=null;
+    static private DanceCache danceCashe=null;
     private ArrayList<ArrayList<String>> Commands = new ArrayList<ArrayList<String>>();
-    static public DanceCashe getInstance(){
+    static public DanceCache getInstance(){
         if(danceCashe==null){
-            danceCashe = new DanceCashe();
+            danceCashe = new DanceCache();
 
         }
 
         return danceCashe;
     }
 
-    private DanceCashe(){
+    private DanceCache(){
+    }
 
-
+    public void setCommands(ArrayList<ArrayList<String>> commands) {
+        Commands = commands;
     }
 
     public void addCommans(ArrayList<String>command){
         Commands.add(command);
     }
+
+
     public ArrayList<ArrayList<String>> getCommands(){
         return  Commands;
     }

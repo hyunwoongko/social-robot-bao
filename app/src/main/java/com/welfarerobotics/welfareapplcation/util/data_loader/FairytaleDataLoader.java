@@ -28,13 +28,10 @@ public class FairytaleDataLoader implements DataLoader {
 
 
     @Override public void load() {
-        FirebaseHelper.get().download(FirebaseDatabase
-                .getInstance()
-                .getReference("fairytale"), this::save);
+
     }
 
     @Override public void save(DataSnapshot snapshot) {
-        FairytaleCache.getInstance().addFairytale(snapshot.getValue().toString().split(","));
-        System.out.println(getClass().getName() + " : 데이터 다운로드");
+
     }
 }

@@ -20,19 +20,19 @@ public class EmotioncardCache {
         emotioncards.add(item);
     }
 
-    public ArrayList<String[]> getEmotioncard(){
+    public ArrayList<String[]> getEmotioncard() {
         return emotioncards;
     }
 
-    public String[] getEmotioncard(int pos){
+    public String[] getEmotioncard(int pos) {
         return emotioncards.get(pos);
     }
 
-    public int getEmotioncardSize(){
+    public int getEmotioncardSize() {
         return emotioncards.size();
     }
 
-    public void clear(){
+    public void clear() {
         emotioncards = new ArrayList<>();
     }
 }

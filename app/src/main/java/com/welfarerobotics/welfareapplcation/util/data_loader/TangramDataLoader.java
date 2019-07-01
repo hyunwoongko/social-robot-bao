@@ -32,22 +32,12 @@ public class TangramDataLoader implements DataLoader {
 
     @Override
     public void load() {
-        FirebaseHelper.get().download(FirebaseDatabase
-                .getInstance()
-                .getReference("tangram")
-                .child("background"), this::save);
+
     }
 
 
     @Override
     public void save(DataSnapshot snapshot) {
-        Pool.imageThread.execute(() -> {
-            TangramListItem myItem;
-            Bitmap stage = UrlConverter.convertUrl(snapshot.getValue().toString());
-            myItem = new TangramListItem();
-            myItem.setStage(stage);
-            TangramStageCache.getInstance().addImage(myItem);
-            System.out.println(getClass().getName() + " : 데이터 다운로드");
-        });
+
     }
 }
