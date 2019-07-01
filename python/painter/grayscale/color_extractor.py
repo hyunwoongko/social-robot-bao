@@ -5,9 +5,7 @@
 import operator
 
 import cv2
-import matplotlib.image as mpimg
 import numpy as np
-from matplotlib import pyplot as plt
 from sklearn.cluster import KMeans
 
 
@@ -47,14 +45,8 @@ class ColorExtractor:
 
         hist = self.centroid_histogram(clt)
         bar, p_arr = self.plot_colors(hist, clt.cluster_centers_)
-
-        plt.figure()
-        plt.axis("off")
-        plt.imshow(bar)
-        plt.show()
         return p_arr
 
     def get_color(self, file_name, k=3):
-        image = mpimg.imread(file_name)
         col = self.image_color_cluster(file_name, k)
         return col

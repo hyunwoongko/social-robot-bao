@@ -3,12 +3,6 @@ package com.welfarerobotics.welfareapplcation.util.touch_util;
 import android.app.Activity;
 import android.content.Intent;
 import android.media.AudioManager;
-import android.view.MotionEvent;
-import android.view.View;
-import com.welfarerobotics.welfareapplcation.bot.Mouth;
-import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
-import com.welfarerobotics.welfareapplcation.bot.ear.EarSet;
-import com.welfarerobotics.welfareapplcation.core.main.MainActivity;
 import com.welfarerobotics.welfareapplcation.core.menu.MenuActivity;
 
 /**

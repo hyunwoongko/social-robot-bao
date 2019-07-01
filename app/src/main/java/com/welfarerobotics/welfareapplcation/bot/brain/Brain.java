@@ -36,16 +36,7 @@ public final class Brain {
             System.out.println("인텐트 : " + intent);
             Skills.thinkAndSay(intent, preprocessedSpeech, activity);
 
-            if (textView.getText().toString().equals(FaceExpression.neutral.toString()) ||
-                    textView.getText().toString().equals("감정")) return;
-            else Mouth.get().stop(() -> Mouth.get().play(ChatCache.getInstance()
-                        .getEmotion()
-                        .get(textView.getText().toString())
-                        .get(random.nextInt(ChatCache.getInstance().getEmotion()
-                                .get(textView.getText().toString()).size() - 1))));
-
         } catch (Throwable e) {
-            e.printStackTrace(); // <- 개발땐 에러 봐야해
             FallbackScenario.process(); // <- 나중엔 이걸로
         }
     }

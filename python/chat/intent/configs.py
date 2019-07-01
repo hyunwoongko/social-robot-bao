@@ -7,8 +7,8 @@ class IntentConfigs:
     num_filters = len(filter_sizes)
     learning_step = 1000000000000
     learning_rate = 0.0003
-    vector_size = 300
-    fallback_score = 28
+    vector_size = 320
+    fallback_score = 20
     train_fasttext = True
     tokenizing = True
 

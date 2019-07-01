@@ -1,0 +1,26 @@
+//        ImageView imgView = (ImageView)findViewById(R.id.s_mouse);
+//
+//        imgView.setVisibility(View.VISIBLE);
+//
+//        imgView.setBackgroundResource(R.drawable.mouse_anima);
+//
+//
+//
+//        AnimationDrawable frame =
+//
+//                (AnimationDrawable)imgView.getBackground();
+//
+//
+//
+//        if(frame.isRunning()){
+//
+//            frame.stop();
+//
+//        }else{
+//
+//            frame.stop();
+//
+//            frame.start();
+//
+//        }
+//    }

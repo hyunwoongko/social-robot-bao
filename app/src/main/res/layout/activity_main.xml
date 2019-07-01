@@ -46,7 +46,7 @@
             app:srcCompat="@drawable/refresh_white" />
 
         <ImageView
-            android:id="@+id/s_mouse"
+            android:id="@+id/s_mouth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="80dp"
             app:srcCompat="@drawable/normal_eye" />
 
     </RelativeLayout>
