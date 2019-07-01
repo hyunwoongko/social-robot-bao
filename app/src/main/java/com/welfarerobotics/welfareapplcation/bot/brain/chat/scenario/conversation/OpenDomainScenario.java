@@ -1,6 +1,7 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.conversation;
 
 import android.app.Activity;
+import android.widget.ImageView;
 import android.widget.TextView;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
@@ -9,6 +10,7 @@ import com.welfarerobotics.welfareapplcation.bot.brain.Hormone;
 import com.welfarerobotics.welfareapplcation.bot.brain.Pituitary;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.crawler.ModelApi;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.preprocess.NameReplacer;
+import com.welfarerobotics.welfareapplcation.bot.face.FaceExpressionGenerator;
 import com.welfarerobotics.welfareapplcation.util.Pool;
 
 import java.io.IOException;
@@ -22,7 +24,11 @@ import java.util.concurrent.ExecutionException;
 public class OpenDomainScenario {
     public static void process(String intent, String speech, Activity activity) throws IOException, ExecutionException, InterruptedException {
         String answer = ModelApi.getOpenDomainAnswer(speech);
-        TextView view = activity.findViewById(R.id.hormone); // 호르몬 뷰어
+        /*원우 추가*/
+        ImageView eye = activity.findViewById(R.id.eye); //감정 눈
+        ImageView mouth = activity.findViewById(R.id.s_mouth);//감정 입
+        /*        */
+
         if (answer.contains("#")) { // 욕설이 포함된 경우
             answer = answer.replaceAll("#", ""); // 대답에서 # 제거
             speech = speech + "#"; // 사용자 입력에 # 추가
@@ -35,7 +41,7 @@ public class OpenDomainScenario {
         Pool.hormoneThread.submit(() -> {
             try {
                 Hormone hormone = Pituitary.rememberNewSentence(finalSpeech);
-                activity.runOnUiThread(() -> view.setText(hormone.toString()));
+                FaceExpressionGenerator.ganerate(activity, hormone, eye, mouth);
             } catch (IOException e) {
                 e.printStackTrace();
             }

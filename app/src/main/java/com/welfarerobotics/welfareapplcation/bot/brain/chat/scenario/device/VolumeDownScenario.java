@@ -24,7 +24,6 @@ public class VolumeDownScenario {
 
     public static void process(String speech, Activity activity) throws IOException {
         Brain.hippocampus.decideToSay(strings.get(Brain.random.nextInt(strings.size() - 1)));
-        // TODO : 볼륨 줄이기 구현해야함
         Volume vl = new Volume();
         vl.volumeDown(activity);
         Mouth.get().say();

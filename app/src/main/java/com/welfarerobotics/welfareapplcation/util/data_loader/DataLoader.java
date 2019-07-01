@@ -17,6 +17,8 @@ public interface DataLoader {
     FallbackDataLoader FALLBACK_DATA_LOADER = FallbackDataLoader.getInstance();
     FairytailDataLoader FAIRYTAIL_DATA_LOADER = FairytailDataLoader.getInstance();
     DanceDataLoader DANCE_DATA_LOADER = DanceDataLoader.getInstance();
+    ServerDataLoader SERVER_DATA_LOADER = ServerDataLoader.getInstance();
+
     void load();
 
     void save(DataSnapshot snapshot);
@@ -30,5 +32,6 @@ public interface DataLoader {
         FALLBACK_DATA_LOADER.load();
         DANCE_DATA_LOADER.load();
         FAIRYTAIL_DATA_LOADER.load();
+        SERVER_DATA_LOADER.load();
     }
 }
