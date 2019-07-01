@@ -2,11 +2,10 @@ package com.welfarerobotics.welfareapplcation.core.menu;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageButton;
 import com.welfarerobotics.welfareapplcation.R;
-import com.welfarerobotics.welfareapplcation.bot.Body.Dance;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.crawler.YoutubeApi;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.core.contents.common_sense.CommonQuizActivity;
@@ -17,10 +16,8 @@ import com.welfarerobotics.welfareapplcation.core.contents.paintwith.PaintWithAc
 import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramSelecActivity;
 import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleActivity;
 import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleListActivity;
-import com.welfarerobotics.welfareapplcation.core.main.MainActivity;
 import com.welfarerobotics.welfareapplcation.core.settings.SettingActivity;
 import com.welfarerobotics.welfareapplcation.core.youtube.YoutubeActivity;
-import com.welfarerobotics.welfareapplcation.entity.cache.ChatCache;
 import com.welfarerobotics.welfareapplcation.util.Pool;
 import me.piruin.quickaction.ActionItem;
 import me.piruin.quickaction.QuickAction;
@@ -33,6 +30,7 @@ public class MenuActivity extends BaseActivity {
     private String youtubeUrl;
     private QuickAction quickActionArt;
     private QuickAction quickActionLang;
+    private Handler handler = new Handler();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

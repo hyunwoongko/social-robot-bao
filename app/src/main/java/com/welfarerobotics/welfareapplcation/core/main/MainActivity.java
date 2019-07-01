@@ -144,12 +144,14 @@ public class MainActivity extends BaseActivity {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     String s = result.get(0);
                     boolean isTeachedSpeech = false;
-                    for (Conversation c : UserCache.getInstance().getDict()) {
-                        if (c.getInput().replaceAll(" ", "").trim().equals(
-                                s.replaceAll(" ", "").trim())) {
-                            Brain.hippocampus.decideToSay(c.getOutput()); // 배웠던 말을 그대로 입력
-                            isTeachedSpeech = true;
-                            break;
+                    if (UserCache.getInstance().getDict() != null) {
+                        for (Conversation c : UserCache.getInstance().getDict()) {
+                            if (c.getInput().replaceAll(" ", "").trim().equals(
+                                    s.replaceAll(" ", "").trim())) {
+                                Brain.hippocampus.decideToSay(c.getOutput()); // 배웠던 말을 그대로 입력
+                                isTeachedSpeech = true;
+                                break;
+                            }
                         }
                     }
                     if (isTeachedSpeech) {

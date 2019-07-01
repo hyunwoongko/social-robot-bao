@@ -26,7 +26,7 @@ public abstract class VoiceActivity extends BaseActivity {
                 con.setRequestProperty("X-NCP-APIGW-API-KEY-ID", ServerCache.getInstance().getCssid());
                 con.setRequestProperty("X-NCP-APIGW-API-KEY", ServerCache.getInstance().getCsssecret());
                 // post request
-                String postParams = "speaker=jinho&speed=3.0&text=" + text;
+                String postParams = "speaker=jinho&speed=3.3&text=" + text;
                 con.setDoOutput(true);
                 DataOutputStream wr = new DataOutputStream(con.getOutputStream());
                 wr.writeBytes(postParams);

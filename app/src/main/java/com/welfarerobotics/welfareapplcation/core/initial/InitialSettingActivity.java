@@ -1,29 +1,12 @@
 package com.welfarerobotics.welfareapplcation.core.initial;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.FileProvider;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.*;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
-import com.kinda.alert.KAlertDialog;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.core.main.MainActivity;
@@ -34,30 +17,11 @@ import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
 import com.welfarerobotics.welfareapplcation.entity.cache.UserCache;
 import com.welfarerobotics.welfareapplcation.util.DeviceId;
 import com.welfarerobotics.welfareapplcation.util.NetworkUtil;
-import com.welfarerobotics.welfareapplcation.util.ToastType;
 import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;
 import com.welfarerobotics.welfareapplcation.util.data_util.Preference;
 import es.dmoral.toasty.Toasty;
-import org.apache.http.HttpResponse;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.xml.sax.InputSource;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.InputStream;
-import java.io.StringReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLEncoder;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Locale;
-import java.util.Objects;
 
 public class InitialSettingActivity extends BaseActivity {
     private final String[] Main_Category = {"지역선택", "서울", "인천", "대전", "대구", "광주", "부산", "울산", "세종",
