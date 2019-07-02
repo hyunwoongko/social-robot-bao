@@ -1,9 +1,15 @@
 package com.welfarerobotics.welfareapplcation.util.data_loader;
 
+import android.util.Log;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
+import com.welfarerobotics.welfareapplcation.core.fairytale.FairytailCache;
 import com.welfarerobotics.welfareapplcation.entity.cache.FlashcardCache;
 import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;
+
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * @author : Hyunwoong
@@ -26,10 +32,23 @@ public class FlashCardDataLoader implements DataLoader {
     }
 
     @Override public void load() {
+        FlashcardCache.getInstance().clear();
+
+        FirebaseHelper.get().download(FirebaseDatabase
+                .getInstance()
+                .getReference("word"), this::save);
 
     }
 
     @Override public void save(DataSnapshot snapshot) {
+//        FlashcardCache.getInstance().addFlashcard(snapshot.getValue().toString().split(","));
+        FlashcardCache.getInstance().setFlashcard(snapshot);
+
+
+
+         }
+
+
 
     }
-}
+

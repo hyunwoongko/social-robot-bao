@@ -1,75 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="20dp"
-        android:background="@color/float_transparent"
-        android:id="@+id/backbutton"
-        android:src="@drawable/menu_backbutton" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/backbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/float_transparent"
+                android:scaleType="center"
+                android:src="@drawable/menu_backbutton" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/question_view"
+            android:layout_width="853dp"
+            android:layout_height="436dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="77dp"
+            android:background="@drawable/blackboard"
+            android:fontFamily="@font/baemin"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="124dp"
+            android:layout_marginTop="137dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            app:srcCompat="@drawable/q_icon" />
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:gravity="center"
-        android:weightSum="4"
-        android:orientation="vertical">
+        android:layout_weight="3"
+        android:layout_marginBottom="18dp"
+        android:gravity="center">
 
-        <FrameLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/o_icon"
+            android:layout_width="109dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="80dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1">
+            android:layout_marginEnd="50dp"
+            app:srcCompat="@drawable/o_icon" />
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                app:srcCompat="@drawable/q_icon"
-                android:layout_margin="15dp"
-                android:id="@+id/imageView" />
-
-            <TextView
-                android:text="TextView"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:background="@drawable/border_black"
-                android:fontFamily="@font/baemin"
-                android:textColor="#000000"
-                android:id="@+id/question_view" />
-
-        </FrameLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_weight="2.9"
-            android:gravity="center"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/o_icon"
-                android:id="@+id/o_icon"
-                android:layout_marginEnd="50dp" />
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/x_icon"
-                android:id="@+id/x_icon"/>
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/x_icon"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/x_icon" />
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

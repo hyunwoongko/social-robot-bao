@@ -30,5 +30,31 @@ public class FirebaseHelper {
             @Override public void onCancelled(DatabaseError databaseError) {
             }
         });
+
+
+
+    }
+
+
+    public void download(DatabaseReference reference, Consumer<DataSnapshot> consumer) {
+        reference.addChildEventListener(new ChildEventListener() {
+            @Override public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                consumer.accept(dataSnapshot);
+            }
+
+            @Override public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                consumer.accept(dataSnapshot);
+            }
+
+            @Override public void onChildRemoved(DataSnapshot dataSnapshot) {
+                consumer.accept(dataSnapshot);
+            }
+
+            @Override public void onChildMoved(DataSnapshot dataSnapshot, String s) {}
+
+            @Override public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 }

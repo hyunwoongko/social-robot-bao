@@ -1,10 +1,14 @@
 package com.welfarerobotics.welfareapplcation.core.contents.flashcard;
 
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.OvalShape;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +18,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.VoiceFragment;
+import com.welfarerobotics.welfareapplcation.entity.FlashCard;
 import com.welfarerobotics.welfareapplcation.entity.cache.FlashcardCache;
 
 import static com.welfarerobotics.welfareapplcation.core.contents.flashcard.FlashcardActivity.index;
@@ -23,7 +28,7 @@ public class LearningFragment extends VoiceFragment {
     private FlashcardCache cache = FlashcardCache.getInstance();
     private MediaPlayer mediaPlayer = new MediaPlayer();
     private String[] name = new String[4];
-
+    private String TAG = "FlashCard";
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -52,24 +57,29 @@ public class LearningFragment extends VoiceFragment {
         //페이지 전환에 따른 프래그먼트 생성
         learningFragment = new LearningFragment();
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-
+//        GradientDrawable border =(GradientDrawable) getContext().getDrawable(R.drawable.word_border);
         /* 각 페이지당 표시할 카드 수는 4개
          * 1페이지 : index=1, 카드 범위=0~3, i의 범위=0~3
          * 2페이지 : index=2, 카드 범위=4~7, i의 범위=4~7
          * 6페이지 : index=6, 카드 범위=20~23, i의 범위=20~23
          */
         for (int i = (index - 1) * 4; i < 4 * index; i++) {
-            if (i >= cache.getFlashcardSize()) {
+            if (i >= cache.getFlashcard().size()) {
                 break;
             }
-            String[] child = cache.getFlashcard(i);
+//            ibArray[i % 4].setBackground(border);
+            ibArray[i % 4].setClipToOutline(true);
+            FlashCard child = cache.getFlashcard(i);
             Glide
                     .with(this)
-                    .load(child[0])
-                    .apply(new RequestOptions().override(225, 319).fitCenter())
+                    .load(child.getImageURL())
+                    .apply(new RequestOptions().override(226, 320).fitCenter())
                     .into(ibArray[i % 4]);
-            name[i % 4] = child[1];
-            tvArray[i%4].setText(child[1]);
+
+            name[i % 4] =child.getWord();
+            tvArray[i%4].setText(child.getWord());
+            Log.d(TAG,child.getImageURL());
+            Log.d(TAG,child.getWord());
         }
 
         //페이지 처음이면 왼쪽 버튼이 invisible
@@ -77,7 +87,7 @@ public class LearningFragment extends VoiceFragment {
         if (index == 1) {
             ibleftbtn.setVisibility(View.INVISIBLE);
         }
-        if (index == cache.getFlashcardSize() / 4) {
+        if (index == cache.getFlashcard().size() / 4) {
             ibrightbtn.setVisibility(View.INVISIBLE);
         }
 

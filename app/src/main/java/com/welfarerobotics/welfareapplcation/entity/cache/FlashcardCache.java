@@ -1,10 +1,16 @@
 package com.welfarerobotics.welfareapplcation.entity.cache;
 
+import android.util.Log;
+
+import com.google.firebase.database.DataSnapshot;
+import com.welfarerobotics.welfareapplcation.entity.FlashCard;
+
 import java.util.ArrayList;
 
 public class FlashcardCache {
-    private static ArrayList<String[]> flashcards = new ArrayList<>();
+
     private static FlashcardCache instance;
+    private static ArrayList<FlashCard> flashCards =new ArrayList<>();
 
     private FlashcardCache() {
     }
@@ -15,24 +21,28 @@ public class FlashcardCache {
         }
         return instance;
     }
-    
-    public void addFlashcard(String[] item) {
-        flashcards.add(item);
+
+
+    public ArrayList<FlashCard> getFlashcard(){
+        return flashCards;
     }
 
-    public ArrayList<String[]> getFlashcard(){
-        return flashcards;
+    public FlashCard getFlashcard(int pos){
+        return flashCards.get(pos);
     }
 
-    public String[] getFlashcard(int pos){
-        return flashcards.get(pos);
-    }
 
-    public int getFlashcardSize(){
-        return flashcards.size();
-    }
 
     public void clear(){
-        flashcards = new ArrayList<>();
+        flashCards.clear();
+        System.out.println(getClass().getName() + " : flashcards clear");
+    }
+
+    public void setFlashcard(DataSnapshot snapshot) {
+        FlashCard flashCard;
+        flashCard = snapshot.getValue(FlashCard.class);
+        Log.d("플래시카드","URL:"+flashCard.getImageURL()+"\n"+"WORD"+flashCard.getWord());
+        flashCards.add(flashCard);
+
     }
 }

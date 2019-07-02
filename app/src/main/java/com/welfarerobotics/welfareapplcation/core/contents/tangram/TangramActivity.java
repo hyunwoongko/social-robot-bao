@@ -12,9 +12,16 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.view.*;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.transition.Transition;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.core.base.VoiceActivity;
@@ -47,6 +54,7 @@ public class TangramActivity extends VoiceActivity {
     Bitmap backBitmap;
     private MediaPlayer mediaPlayer = new MediaPlayer();
     BitmapDrawable stage;
+    private String image;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,14 +68,21 @@ public class TangramActivity extends VoiceActivity {
         _board = new ArrayList<ImagePiece>();//
         r = this.getResources();
         /*이미지 세팅 부분*/
-        Intent intent = getIntent();
-        byte[] arr = getIntent().getByteArrayExtra("image");
-        stageimage = BitmapFactory.decodeByteArray(arr, 0, arr.length);
+        image = getIntent().getStringExtra("image");
+        Glide.with(this).asBitmap().load(image).into(new SimpleTarget<Bitmap>() {
+            @Override
+            public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                stageimage = resource;
+                stageimage =Bitmap.createScaledBitmap(stageimage, stageimage.getWidth()/2, stageimage.getHeight()/2, false);
+            }
+        });
+
         backBitmap = BitmapFactory.decodeResource(r, R.drawable.background);
         background = new BitmapDrawable(r, backBitmap);
 
-
         background.setBounds(0, 0, getWindowManager().getDefaultDisplay().getWidth(), getWindowManager().getDefaultDisplay().getHeight());
+        background.setAntiAlias(true);
+
         /*세팅 끝*/
 
         //set variables for drawing
@@ -111,8 +126,16 @@ public class TangramActivity extends VoiceActivity {
             Random random = new Random();
             TangramStageCache tangram;
             tangram = TangramStageCache.getInstance();
-            stageimage = tangram.getImages().get(random.nextInt(tangram.getImages().size())).getStage();
-            myPanel.recall();
+            image = tangram.getURL().get(random.nextInt(tangram.getURL().size()));
+            Glide.with(getApplicationContext()).asBitmap().load(image).into(new SimpleTarget<Bitmap>() {
+                @Override
+                public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+
+                    stageimage =Bitmap.createScaledBitmap(resource, 120, 120, false);
+                    myPanel.recall();
+                }
+            });
+
         });
 
         ImageButton submitBtn = findViewById(R.id.rotatebtn);
@@ -128,6 +151,8 @@ public class TangramActivity extends VoiceActivity {
         Drawable bg = this.getDrawable(R.drawable.background);
         layout.setBackground(bg);
         //		layout.setBackgroundColor(Color.BLUE);
+
+
     }
 
 
@@ -307,7 +332,7 @@ public class TangramActivity extends VoiceActivity {
          * updateToolBox rearranges the pieces in the right position
          */
         public void updateToolbox() {
-            int margin = toolboxHeight / 8;
+            int margin = toolboxHeight / 7;
             int marginvalue = 100;
             int centerX = 0;
             int centerY = 0;
@@ -353,7 +378,8 @@ public class TangramActivity extends VoiceActivity {
 
             background.draw(canvas);
             //canvas.drawBitmap(stageimage,null,ast,null);
-            canvas.drawBitmap(stageimage, displayWidth / 3, displayHeight / 3, null);
+            if(stageimage!=null)
+            canvas.drawBitmap(stageimage, displayWidth /2, displayHeight /2, null);
             //paint for the pieces
             //Paint piecePaint = new Paint();
             //piecePaint.setColor(Color.RED);
@@ -369,7 +395,8 @@ public class TangramActivity extends VoiceActivity {
 //			if(GlobalVariables.outlineOn){
 //				//Draw puzzle in the background
 //				Path puzzlePath = new Path();
-//				ArrayList<Position> puzzlePositions = puzzle.getSolution();
+//				ArrayList<Posi
+//				tion> puzzlePositions = puzzle.getSolution();
 //				for(int i = 0; i < puzzlePositions.size();i++){
 //					if(i==0){
 //						puzzlePath.moveTo(puzzlePositions.get(i).getX(),

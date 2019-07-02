@@ -26,7 +26,7 @@ import java.util.ArrayList;
 public class TangramSelecActivity extends BaseActivity {
     private GridView mListView;
     private TangramListAdater myAdaterr;
-    private ArrayList<TangramListItem> items = TangramStageCache.getInstance().getImages();
+    private ArrayList<String> items = TangramStageCache.getInstance().getURL();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class TangramSelecActivity extends BaseActivity {
         mListView = (GridView) findViewById(R.id.grid_list);
         ImageButton rotateBtn = findViewById(R.id.rotatebtn);
         ImageButton backBtn = findViewById(R.id.backbutton);
-        myAdaterr = new TangramListAdater();
+        myAdaterr = new TangramListAdater(this);
         //dataSetting();
         mListView.setAdapter(myAdaterr);
 
@@ -58,12 +58,7 @@ public class TangramSelecActivity extends BaseActivity {
             mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    TangramListItem myItem = (TangramListItem) parent.getAdapter().getItem(position);
-                    Bitmap sendBitmap = myItem.getStage();
-                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                    sendBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
-                    byte[] byteArray = stream.toByteArray();
-                    intent.putExtra("image", byteArray);
+                    intent.putExtra("image", items.get(position));
                     startActivity(intent);
                 }
             });

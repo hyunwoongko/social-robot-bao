@@ -27,10 +27,14 @@ public class EmotionCardDataLoader implements DataLoader {
     }
 
     @Override public void load() {
-
+        EmotioncardCache.getInstance().clear();
+        FirebaseHelper.get().download(FirebaseDatabase
+                .getInstance()
+                .getReference("emotioncard"), this::save);
     }
 
     @Override public void save(DataSnapshot snapshot) {
-
+        EmotioncardCache.getInstance().addEmotioncard(snapshot.getValue().toString().split(","));
+        System.out.println(getClass().getName() + " : 데이터 다운로드");
     }
 }

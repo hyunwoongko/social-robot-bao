@@ -7,105 +7,242 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:background="#00ffffff"
-            android:padding="10sp"
-            android:id="@+id/learning1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <ImageButton
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/learning1"
-            app:layout_constraintEnd_toStartOf="@id/learning3"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:background="#00ffffff"
-            android:padding="10sp"
-            android:id="@+id/learning2"/>
+            android:layout_weight="3"
+            android:orientation="horizontal">
 
-    <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/learning2"
-            app:layout_constraintEnd_toStartOf="@id/learning4"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:background="#00ffffff"
-            android:padding="10sp"
-            android:id="@+id/learning3"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/word_back"
+                android:orientation="vertical">
 
-    <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:background="#00ffffff"
-            android:padding="10sp"
-            android:id="@+id/learning4"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@id/learning1"
-            app:layout_constraintEnd_toEndOf="@id/learning1"
-            app:layout_constraintBottom_toBottomOf="@id/learning1"
-            android:paddingBottom="@dimen/flashcard_Learning_textPaddingBottom"
-            android:textSize="@dimen/flashcard_Learning_textSize"
-            android:textColor="#000000"
-            android:fontFamily="@font/baemin"
-            android:id="@+id/learningText1"/>
+                    <ImageButton
+                        android:id="@+id/learning1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/word_border"
+                        android:foreground="?attr/selectableItemBackgroundBorderless" />
+                </LinearLayout>
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@id/learning2"
-            app:layout_constraintEnd_toEndOf="@id/learning2"
-            app:layout_constraintBottom_toBottomOf="@id/learning2"
-            android:paddingBottom="@dimen/flashcard_Learning_textPaddingBottom"
-            android:textSize="@dimen/flashcard_Learning_textSize"
-            android:textColor="#000000"
-            android:fontFamily="@font/baemin"
-            android:id="@+id/learningText2"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@id/learning3"
-            app:layout_constraintEnd_toEndOf="@id/learning3"
-            app:layout_constraintBottom_toBottomOf="@id/learning3"
-            android:paddingBottom="@dimen/flashcard_Learning_textPaddingBottom"
-            android:textSize="@dimen/flashcard_Learning_textSize"
-            android:textColor="#000000"
-            android:fontFamily="@font/baemin"
-            android:id="@+id/learningText3"/>
+                    <TextView
+                        android:id="@+id/learningText1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="86dp"
+                        android:layout_marginBottom="37dp"
+                        android:fontFamily="@font/baemin"
+                        android:gravity="top"
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@id/learning4"
-            app:layout_constraintEnd_toEndOf="@id/learning4"
-            app:layout_constraintBottom_toBottomOf="@id/learning4"
-            android:paddingBottom="@dimen/flashcard_Learning_textPaddingBottom"
-            android:textSize="@dimen/flashcard_Learning_textSize"
-            android:textColor="#000000"
-            android:fontFamily="@font/baemin"
-            android:id="@+id/learningText4"/>
+                        android:paddingBottom="@dimen/flashcard_Learning_textPaddingBottom"
+                        android:text="tests"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/flashcard_Learning_textSize"
+                        android:visibility="visible" />
 
-    <ImageButton
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/word_back"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/learning2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/word_border"
+                        android:foreground="?attr/selectableItemBackgroundBorderless" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/learningText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="86dp"
+                        android:layout_marginBottom="37dp"
+                        android:fontFamily="@font/baemin"
+                        android:gravity="top"
+
+                        android:paddingBottom="@dimen/flashcard_Learning_textPaddingBottom"
+                        android:text="tests"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/flashcard_Learning_textSize"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/word_back"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/learning3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/word_border"
+                        android:foreground="?attr/selectableItemBackgroundBorderless" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/learningText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="86dp"
+                        android:layout_marginBottom="37dp"
+                        android:fontFamily="@font/baemin"
+                        android:gravity="top"
+
+                        android:paddingBottom="@dimen/flashcard_Learning_textPaddingBottom"
+                        android:text="tests"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/flashcard_Learning_textSize"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/word_back"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/learning4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/word_border"
+                        android:foreground="?attr/selectableItemBackgroundBorderless" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/learningText4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="86dp"
+                        android:layout_marginBottom="37dp"
+                        android:fontFamily="@font/baemin"
+                        android:gravity="top"
+
+                        android:paddingBottom="@dimen/flashcard_Learning_textPaddingBottom"
+                        android:text="tests"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/flashcard_Learning_textSize"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/flashcards_leftarrow"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:background="#00ffffff"
-            android:id="@+id/learningleft"/>
+            android:layout_weight="2">
+
+            <ImageButton
+                android:id="@+id/learningright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:background="#00ffffff"
+
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/flashcards_rightarrow" />
+
+            <ImageButton
+                android:id="@+id/learningleft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="875dp"
+                android:background="#00ffffff"
+
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/flashcards_leftarrow" />
+        </RelativeLayout>
+
+    </LinearLayout>
 
     <TextView
             android:layout_width="wrap_content"
@@ -116,16 +253,5 @@
             android:fontFamily="@font/baemin"
             android:textSize="25sp"
             android:id="@+id/learningIndex"/>
-
-    <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/flashcards_rightarrow"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:background="#00ffffff"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:id="@+id/learningright"
-    />
 
 </android.support.constraint.ConstraintLayout>

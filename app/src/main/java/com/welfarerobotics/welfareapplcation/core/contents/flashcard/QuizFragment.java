@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.welfarerobotics.welfareapplcation.R;
+import com.welfarerobotics.welfareapplcation.entity.FlashCard;
 import com.welfarerobotics.welfareapplcation.entity.cache.FlashcardCache;
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
 
@@ -52,21 +53,21 @@ public class QuizFragment extends Fragment {
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
 
         //각 페이지 별 카드 설정
-        String[] child = cache.getFlashcard(index - 1);
+        FlashCard child = cache.getFlashcard(index - 1);
         Glide
                 .with(this)
-                .load(child[0])
+                .load(child.getImageURL())
                 .apply(new RequestOptions().override(225, 319).fitCenter())
                 .into(ibQuizImage);
-        name = child[1];
-        tvQuizText.setText(child[1]);
+        name = child.getWord();
+        tvQuizText.setText(child.getWord());
 
         //페이지 처음이면 왼쪽 버튼이 invisible
         //페이지 맨끝이면 오른쪽 버튼이 invisible
         if (index == 1) {
             ibleftbtn.setVisibility(View.INVISIBLE);
         }
-        if (index == cache.getFlashcardSize()) {
+        if (index == cache.getFlashcard().size()) {
             ibrightbtn.setVisibility(View.INVISIBLE);
         }
 

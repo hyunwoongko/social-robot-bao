@@ -27,6 +27,9 @@ public class FairytailCache {
 
         return  fairytail;
     }
+    public void clear(){
+        fairytail.clear();
+    }
     public void setFairytails(DataSnapshot fairytails) {
         FairyTail fairyTail;
         fairyTail = fairytails.getValue(FairyTail.class);

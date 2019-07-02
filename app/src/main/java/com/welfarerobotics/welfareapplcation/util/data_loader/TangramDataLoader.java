@@ -1,14 +1,9 @@
 package com.welfarerobotics.welfareapplcation.util.data_loader;
 
-import android.graphics.Bitmap;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
-import com.welfarerobotics.welfareapplcation.core.contents.tangram.TangramListItem;
-import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleCache;
 import com.welfarerobotics.welfareapplcation.entity.cache.TangramStageCache;
-import com.welfarerobotics.welfareapplcation.util.Pool;
 import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;
-import com.welfarerobotics.welfareapplcation.util.data_util.UrlConverter;
 
 /**
  * @author : Hyunwoong
@@ -32,12 +27,16 @@ public class TangramDataLoader implements DataLoader {
 
     @Override
     public void load() {
-
+        TangramStageCache.getInstance().getURL().clear();
+        FirebaseHelper.get().download(FirebaseDatabase
+                .getInstance()
+                .getReference("tangram")
+                .child("background"), this::save);
     }
 
 
     @Override
     public void save(DataSnapshot snapshot) {
-
+        TangramStageCache.getInstance().addURL(snapshot.getValue().toString());
     }
 }

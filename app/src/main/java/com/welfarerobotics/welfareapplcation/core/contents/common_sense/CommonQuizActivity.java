@@ -101,8 +101,14 @@ public class CommonQuizActivity extends VoiceActivity {
             showToast("정답입니다", ToastType.success);
         } else {
             Sound.get().effectSound(this, R.raw.beebeep);
-            mediaPlayer.stop();
-            mediaPlayer.release();
+            try{
+                mediaPlayer.stop();
+                mediaPlayer.release();
+            }catch (Exception e){
+
+
+            }
+
             mediaPlayer = new MediaPlayer();
             playVoice(mediaPlayer, "아니에요. 다시 생각해볼까요?");
             showToast("오답입니다", ToastType.error);

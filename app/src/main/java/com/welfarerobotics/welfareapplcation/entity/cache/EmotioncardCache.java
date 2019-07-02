@@ -33,6 +33,6 @@ public class EmotioncardCache {
     }
 
     public void clear() {
-        emotioncards = new ArrayList<>();
+        emotioncards.clear();
     }
 }

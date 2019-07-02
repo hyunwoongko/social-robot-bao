@@ -2,7 +2,7 @@ package com.welfarerobotics.welfareapplcation.util.data_loader;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
-import com.welfarerobotics.welfareapplcation.core.fairytale.FairytaleCache;
+import com.welfarerobotics.welfareapplcation.core.fairytale.FairytailCache;
 import com.welfarerobotics.welfareapplcation.util.data_util.FirebaseHelper;
 
 /**
@@ -28,10 +28,14 @@ public class FairytaleDataLoader implements DataLoader {
 
 
     @Override public void load() {
-
+        FairytailCache.getInstance().clear();
+        FirebaseHelper.get().download(FirebaseDatabase
+                .getInstance()
+                .getReference("fairytail"), this::save);
     }
 
     @Override public void save(DataSnapshot snapshot) {
+        FairytailCache.getInstance().setFairytails(snapshot);
 
     }
 }
