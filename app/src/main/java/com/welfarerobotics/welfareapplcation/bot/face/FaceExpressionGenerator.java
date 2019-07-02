@@ -17,11 +17,11 @@ public class FaceExpressionGenerator {
         activity.runOnUiThread(() -> {
             switch (hormone) {
                 case Dopamine:
-                    eye.setImageResource(R.drawable.oops_eye);
-                    mouth.setImageResource(R.drawable.good_mouse);
+                    eye.setImageResource(R.drawable.very_happy_eye);
+                    mouth.setImageResource(R.drawable.very_happy_mouse);
                     break;
                 case Endorphin:
-                    eye.setImageResource(R.drawable.good_eye);
+                    eye.setImageResource(R.drawable.happy_eye);
                     mouth.setImageResource(R.drawable.normal_mouse);
                     break;
                 case Serotonin:

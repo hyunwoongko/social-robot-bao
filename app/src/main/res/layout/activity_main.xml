@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="125dp"
+            android:layout_marginBottom="112dp"
             app:srcCompat="@drawable/normal_mouse" />
 
         <ImageView
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="123dp"
             app:srcCompat="@drawable/normal_eye" />
 
     </RelativeLayout>
