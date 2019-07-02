@@ -47,13 +47,17 @@ public class PaintWithActivity extends VoiceActivity {
     private String[] readyStrings = {
             "우와 정말 잘 그리셨어요. 저도 한번 그려볼게요 !",
             UserCache.getInstance().getName() + "님, 정말 잘 그렸어요. 이번엔 제가 그려볼게요!",
-            "우와 " + UserCache.getInstance().getName() + "님, 그림실력이 대단한데요.. 이번엔 제가 그려볼게요!"
+            "우와 " + UserCache.getInstance().getName() + "님, 그림실력이 대단한데요.. 이번엔 제가 그려볼게요!",
+            "어떻게 하면 그렇게 그릴 수 있나요? , 저도 잘 그리고 싶어요",
+            "대단해요 ! 정말 잘 그리시는데요"
     };
 
     private String[] resultStrings = {
             "저는 이렇게 그려봤는데 어떤가요?",
             "저는 이런 느낌으로 그려 봤어요! 이런 느낌은 어떤가요?",
-            "이렇게도 그릴 수 있답니다. 물론 저는 " + UserCache.getInstance().getName() + "님 보다는 못 그리지만요"
+            "이렇게도 그릴 수 있답니다. 물론 저는 " + UserCache.getInstance().getName() + "님 보다는 못 그리지만요",
+            "이번엔 이렇게 그려봤어요 !",
+            "제 솜씨도 한번 보실래요? , 어때요?"
     };
 
     @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -94,7 +98,7 @@ public class PaintWithActivity extends VoiceActivity {
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
             playVoice(mediaPlayer, "연필");
-            this.canvasView.setPaintStrokeWidth(5F);
+            this.canvasView.setPaintStrokeWidth(1F);
             this.canvasView.setMode(CanvasView.Mode.DRAW);    // for drawing
         });
         findViewById(R.id.eraser_button).setOnClickListener(v -> {

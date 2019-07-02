@@ -1,4 +1,4 @@
-include ':app', 
+include ':app', ':streaming', ':streaming', 
         ':MyScript_ATK-Core-android-component',
         ':MyScript_ATK-IMCommon-android-component',
         ':MyScript_ATK-SingleCharWidget-android-widget',
