@@ -4,21 +4,26 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="394dp"
+        android:layout_height="410dp"
+        android:background="@drawable/fairytaly_line"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="40dp"
             android:layout_weight="1"
+            android:background="@color/white"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/image1"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="250dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
+                android:background="@drawable/word_border"
                 android:scaleType="fitXY" />
 
             <TextView
@@ -27,8 +32,10 @@
                 android:layout_height="65dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
+                android:fontFamily="@font/baemin"
                 android:gravity="center"
                 android:text="TextView"
+                android:textColor="@color/cardview_dark_background"
                 android:textSize="20sp" />
 
         </LinearLayout>
