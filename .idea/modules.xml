@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/myscript-certificate/myscript-certificate.iml" filepath="$PROJECT_DIR$/myscript-certificate/myscript-certificate.iml" />
       <module fileurl="file://$PROJECT_DIR$/python/python.iml" filepath="$PROJECT_DIR$/python/python.iml" />
       <module fileurl="file://$PROJECT_DIR$/sicial.iml" filepath="$PROJECT_DIR$/sicial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/streaming/streaming.iml" filepath="$PROJECT_DIR$/streaming/streaming.iml" />
     </modules>
   </component>
 </project>
