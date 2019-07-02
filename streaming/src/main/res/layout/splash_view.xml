@@ -5,7 +5,7 @@
 
         <variable
             name="viewModel"
-            type="com.welfarerobotics.welfareapplication.streaming.viewmodel.SplashViewModel" />
+            type="com.welfarerobotics.welfareapplication.streaming.core.viewmodel.SplashViewModel" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:gravity="center"
         android:layout_height="match_parent"
-        tools:context=".view.SplashActivity">
+        tools:context=".core.view.SplashActivity">
 
         <ImageView
             android:id="@+id/splash_logo"

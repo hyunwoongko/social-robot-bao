@@ -1,4 +1,4 @@
-package com.welfarerobotics.welfareapplication.streaming.factory;
+package com.welfarerobotics.welfareapplication.streaming.di;
 
 import android.app.Application;
 import android.arch.lifecycle.ViewModel;
@@ -14,21 +14,28 @@ import java.lang.reflect.InvocationTargetException;
  * <p>
  * Parameterized Factory Pattern 으로 구현하기
  */
-public class ViewModelFactory extends ViewModelProvider.AndroidViewModelFactory {
+public class ViewModelProviders extends ViewModelProvider.AndroidViewModelFactory {
+
+    private static ViewModelProviders instance;
+
+    @NonNull public static ViewModelProviders getInstance(@NonNull Application application) {
+        if (instance == null) instance = new ViewModelProviders(application);
+        return instance;
+    }
 
     private Class[] classes = null;
     private Object[] params = null;
 
-    public ViewModelFactory(@NonNull Application application) {
+    public ViewModelProviders(@NonNull Application application) {
         super(application);
     }
 
-    public ViewModelFactory setClasses(Class... classes) {
+    public ViewModelProviders setClasses(Class... classes) {
         this.classes = classes;
         return this;
     }
 
-    public ViewModelFactory setParams(Object... params) {
+    public ViewModelProviders setParams(Object... params) {
         this.params = params;
         return this;
     }

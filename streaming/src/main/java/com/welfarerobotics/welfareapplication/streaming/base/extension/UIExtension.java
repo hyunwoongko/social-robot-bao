@@ -1,4 +1,4 @@
-package com.welfarerobotics.welfareapplication.streaming.base.extend;
+package com.welfarerobotics.welfareapplication.streaming.base.extension;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,7 +13,7 @@ import java8.util.function.Consumer;
  * <p>
  * UI Util Wrapper 메소드 정의
  */
-public abstract class UtilExtends extends ActivityExtends {
+public abstract class UIExtension extends ActivityExtension {
     private KAlertDialog dialog;
     private boolean isDailogAvailable = false;
 

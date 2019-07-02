@@ -1,6 +1,12 @@
 package com.welfarerobotics.welfareapplication.streaming.util;
 
+import lombok.Getter;
+import rx.Scheduler;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
+
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -14,8 +20,13 @@ import java.util.concurrent.Executors;
 
 @SuppressWarnings("unchecked")
 public class Pool {
-    private static ConcurrentHashMap<String, Object> objectPool = new ConcurrentHashMap<>();
+    private final static ConcurrentHashMap<String, Object> objectPool = new ConcurrentHashMap<>();
     static ExecutorService thread = Executors.newCachedThreadPool();
+
+    public final static Scheduler background = Schedulers.from(thread);
+    public final static Scheduler computation = Schedulers.computation();
+    public final static Scheduler io = Schedulers.io();
+    public final static Scheduler main = AndroidSchedulers.mainThread();
 
     public static void addObject(String key, Object val) {
         objectPool.put(key, val);
@@ -23,5 +34,9 @@ public class Pool {
 
     public static <T> T getObject(String key, Class<T>... clazz) {
         return (T) objectPool.get(key);
+    }
+
+    public static void removeObject(String key){
+        objectPool.remove(key);
     }
 }

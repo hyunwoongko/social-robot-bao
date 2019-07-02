@@ -22,6 +22,6 @@ public class ThreadUtil {
     }
 
     public static void async(Runnable runnable) {
-        Pool.thread.submit(runnable);
+        Pool.thread.execute(runnable);
     }
 }

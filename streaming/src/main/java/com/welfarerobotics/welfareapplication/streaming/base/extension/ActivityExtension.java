@@ -1,7 +1,8 @@
-package com.welfarerobotics.welfareapplication.streaming.base.extend;
+package com.welfarerobotics.welfareapplication.streaming.base.extension;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import com.welfarerobotics.welfareapplication.streaming.R;
 import com.welfarerobotics.welfareapplication.streaming.util.Sound;
@@ -13,12 +14,16 @@ import com.welfarerobotics.welfareapplication.streaming.util.Sound;
  * <p>
  * Activity 기능 확장
  */
-public abstract class ActivityExtends extends AppCompatActivity {
+public abstract class ActivityExtension extends AppCompatActivity {
 
     private int song = -1;
 
     protected void setBackgroundMusic(int resid) {
         this.song = song;
+    }
+
+    protected void getPermission(String... permisions) {
+        ActivityCompat.requestPermissions(this, permisions, 1);
     }
 
     public void startMusic() {
