@@ -41,7 +41,6 @@ import java.util.Random;
  *
  * */
 
-
 public class TangramActivity extends VoiceActivity {
     ImagePuzzle puzzle;
     ArrayList<ImagePiece> _board;
@@ -55,6 +54,8 @@ public class TangramActivity extends VoiceActivity {
     private MediaPlayer mediaPlayer = new MediaPlayer();
     BitmapDrawable stage;
     private String image;
+    int imageWidth;
+    int imageHeight;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -73,7 +74,8 @@ public class TangramActivity extends VoiceActivity {
             @Override
             public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
                 stageimage = resource;
-                stageimage =Bitmap.createScaledBitmap(stageimage, stageimage.getWidth()/2, stageimage.getHeight()/2, false);
+                stageimage =Bitmap.createScaledBitmap(stageimage, new Float(stageimage.getWidth()*0.7).intValue(), new Float(stageimage.getHeight()*0.7).intValue(), false);
+//                stageimage =Bitmap.createScaledBitmap(stageimage, stageimage.getWidth()/2, stageimage.getHeight()/2, false);
             }
         });
 
@@ -94,7 +96,7 @@ public class TangramActivity extends VoiceActivity {
             scale = 2;
         else
             scale = 1;
-        toolboxHeight = 80 * scale;
+        toolboxHeight = 80 * 1;
 
         final Panel myPanel = new Panel(this);
 
@@ -130,8 +132,9 @@ public class TangramActivity extends VoiceActivity {
             Glide.with(getApplicationContext()).asBitmap().load(image).into(new SimpleTarget<Bitmap>() {
                 @Override
                 public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                    stageimage =resource;
+                    stageimage =Bitmap.createScaledBitmap(stageimage, new Float(stageimage.getWidth()*0.7).intValue(), new Float(stageimage.getHeight()*0.7).intValue(), false);
 
-                    stageimage =Bitmap.createScaledBitmap(resource, 120, 120, false);
                     myPanel.recall();
                 }
             });
@@ -332,7 +335,7 @@ public class TangramActivity extends VoiceActivity {
          * updateToolBox rearranges the pieces in the right position
          */
         public void updateToolbox() {
-            int margin = toolboxHeight / 7;
+            int margin = toolboxHeight /10;
             int marginvalue = 100;
             int centerX = 0;
             int centerY = 0;
@@ -377,9 +380,12 @@ public class TangramActivity extends VoiceActivity {
             //draw the background
 
             background.draw(canvas);
+            Float fl = new Float(displayWidth /2.5);
+
             //canvas.drawBitmap(stageimage,null,ast,null);
             if(stageimage!=null)
-            canvas.drawBitmap(stageimage, displayWidth /2, displayHeight /2, null);
+            canvas.drawBitmap(stageimage, fl.intValue(), new Float(displayHeight /3.5).intValue() , null);
+
             //paint for the pieces
             //Paint piecePaint = new Paint();
             //piecePaint.setColor(Color.RED);
