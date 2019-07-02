@@ -20,7 +20,6 @@ public class LiveData<T> extends MutableLiveData<T> {
     private final AtomicBoolean mPending = new AtomicBoolean(false);
 
     public LiveData() {
-
     }
 
     public LiveData(T initialData) {
