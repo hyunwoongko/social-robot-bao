@@ -27,7 +27,7 @@ public class FairytaleHandler extends Handler {
     @Override
     public void handleMessage(Message msg) {
         super.handleMessage(msg);
-        writerView.write(msg.obj.toString(),70);
+        writerView.write(msg.obj.toString(),90);
 
     }
 

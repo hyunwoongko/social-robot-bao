@@ -151,7 +151,7 @@ public final class FairytaleReader {
         String[] select = fairyTail.getContext().split(",");
         mediaPlayer = new MediaPlayer();
         playVoice(mediaPlayer, select[0]);
-        Message msg = new Message();
+        Message msg =writerView.obtainMessage();
         msg.obj = new String(select[0]);
         writerView.sendMessage(msg);
 
@@ -169,11 +169,13 @@ public final class FairytaleReader {
                         mediaPlayer.release();
                         mediaPlayer = new MediaPlayer();
                         idx++;
-                        String fairy = select[idx];
-                        msg.obj = fairy;
-                        writerView.sendMessage(msg);
-                        Log.d("FairyTa","mas:"+msg.obj);
+                        final String fairy = select[idx];
+                        Message message = writerView.obtainMessage();
+                        message.obj=fairy;
+                        writerView.sendMessage(message);
                         playVoice(mediaPlayer, select[idx]);
+                        Log.d("FairyTa","mas:"+msg.obj);
+
 
 
 //                        writerView.write(select[idx],70,1);
@@ -182,6 +184,7 @@ public final class FairytaleReader {
                         mediaPlayer.stop();
                         mediaPlayer.release();
 //                        writerView.write("",70,1);
+                        msg=writerView.obtainMessage();
                         msg.obj="";
                         writerView.sendMessage(msg);
                         flag = false;
