@@ -2,9 +2,12 @@ package com.welfarerobotics.welfareapplcation.core.fairytale;
 
 import android.media.MediaPlayer;
 import android.os.Environment;
+import android.os.Message;
+import android.util.Log;
 
 import com.welfarerobotics.welfareapplcation.entity.FairyTail;
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
+import com.welfarerobotics.welfareapplcation.util.TypeWriterView;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -111,6 +114,8 @@ public final class FairytaleReader {
     }
 
     public void play() {
+
+
         flag = true;
         String[] select = fairyTail.getContext().split(",");
         mediaPlayer = new MediaPlayer();
@@ -141,7 +146,52 @@ public final class FairytaleReader {
             }
         }
     }
+    public void play(FairytaleHandler writerView) {
+        flag = true;
+        String[] select = fairyTail.getContext().split(",");
+        mediaPlayer = new MediaPlayer();
+        playVoice(mediaPlayer, select[0]);
+        Message msg = new Message();
+        msg.obj = new String(select[0]);
+        writerView.sendMessage(msg);
 
+        int idx = 0;
+        while (flag) {
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            try {
+                if (mediaPlayer != null && !mediaPlayer.isPlaying()) {
+                    System.out.println(select.length);
+                    if (idx < select.length-1) {
+                        mediaPlayer.release();
+                        mediaPlayer = new MediaPlayer();
+                        idx++;
+                        String fairy = select[idx];
+                        msg.obj = fairy;
+                        writerView.sendMessage(msg);
+                        Log.d("FairyTa","mas:"+msg.obj);
+                        playVoice(mediaPlayer, select[idx]);
+
+
+//                        writerView.write(select[idx],70,1);
+
+                    } else {
+                        mediaPlayer.stop();
+                        mediaPlayer.release();
+//                        writerView.write("",70,1);
+                        msg.obj="";
+                        writerView.sendMessage(msg);
+                        flag = false;
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
     public void stop() {
         if(flag) {
             try{

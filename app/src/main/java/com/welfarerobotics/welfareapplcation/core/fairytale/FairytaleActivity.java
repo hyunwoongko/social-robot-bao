@@ -10,35 +10,42 @@ import android.view.Display;
 import android.view.MotionEvent;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
+
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.entity.FairyTail;
 import com.welfarerobotics.welfareapplcation.util.Sound;
+import com.welfarerobotics.welfareapplcation.util.TypeWriterView;
 
-public class FairytaleActivity extends Activity {
+public class FairytaleActivity extends BaseActivity {
 
     private FairyTail fairytail;
-
+    private TypeWriterView writerView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);//액티비티를 다이얼로그 형식으로 표시
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_fairytale);
-        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
-        layoutParams.flags = WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        layoutParams.dimAmount = 0.0f; //메인액티비티 투명도 조절
-        layoutParams.alpha = 0.0f;
-        getWindow().setAttributes(layoutParams);
+//        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
+//        layoutParams.flags = WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+//        layoutParams.dimAmount = 1.0f; //메인액티비티 투명도 조절
+//        layoutParams.alpha = 0.0f;
+        writerView =findViewById(R.id.fairy_type);
 
-        Display dp = ((WindowManager) getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
-        int width = (int) (dp.getWidth() * 1.0);
-        int height = (int) (dp.getHeight() * 1.0);
-        getWindow().getAttributes().width = width;
-        getWindow().getAttributes().height = height;
+//        getWindow().setAttributes(layoutParams);
+//
+//        Display dp = ((WindowManager) getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+//        int width = (int) (dp.getWidth() * 1.0);
+//        int height = (int) (dp.getHeight() * 1.0);
+//        getWindow().getAttributes().width = width;
+//        getWindow().getAttributes().height = height;
         Intent intent = getIntent();
         fairytail=FairytailCache.getInstance().getFairytail().get(intent.getIntExtra("item",0));
         Log.d("동화 읽기",fairytail.getTitle()+fairytail);
-        Thread thread = new Thread(() -> FairytaleReader.get(fairytail).play());
+        FairytaleHandler handler = new FairytaleHandler(writerView);
+        Thread thread = new Thread(() -> FairytaleReader.get(fairytail).play(handler));
+
         thread.setDaemon(true);
         thread.start();
     }

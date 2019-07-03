@@ -80,7 +80,7 @@
             android:configChanges="orientation" />
         <activity
             android:name=".core.fairytale.FairytaleActivity"
-            android:theme="@android:style/Theme.Dialog" />
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".core.initial.InitialBluetoothActivity"
             android:screenOrientation="sensorLandscape" />
