@@ -2,10 +2,11 @@ package com.welfarerobotics.welfareapplication.streaming.base.extension;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import com.welfarerobotics.welfareapplication.streaming.R;
-import com.welfarerobotics.welfareapplication.streaming.util.Sound;
+import com.welfarerobotics.welfareapplication.streaming.util.sound.Sound;
 
 /**
  * @author : Hyunwoong
@@ -17,6 +18,7 @@ import com.welfarerobotics.welfareapplication.streaming.util.Sound;
 public abstract class ActivityExtension extends AppCompatActivity {
 
     private int song = -1;
+    private Handler handler = new Handler();
 
     protected void setBackgroundMusic(int resid) {
         this.song = song;
@@ -61,5 +63,9 @@ public abstract class ActivityExtension extends AppCompatActivity {
     public void startActivityAndFinish(Class<? extends Activity> activity) {
         startActivity(activity);
         finish();
+    }
+
+    public Handler getHandler() {
+        return handler;
     }
 }

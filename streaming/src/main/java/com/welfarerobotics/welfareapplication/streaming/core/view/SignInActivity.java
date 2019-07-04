@@ -18,7 +18,7 @@ public class SignInActivity extends BaseActivity<SignInView, SignInViewModel> {
 
     @Override protected int injectView() {
         DaggerSignInFactory.builder()
-                .signInModule(new SignInModule(getApplication()))
+                .signInModule(new SignInModule())
                 .build().inject(this);
 
         return R.layout.sign_in_view;

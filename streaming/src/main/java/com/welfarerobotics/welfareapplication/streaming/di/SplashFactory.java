@@ -1,6 +1,5 @@
 package com.welfarerobotics.welfareapplication.streaming.di;
 
-import android.app.Application;
 import com.welfarerobotics.welfareapplication.streaming.core.view.SplashActivity;
 import com.welfarerobotics.welfareapplication.streaming.core.viewmodel.SplashViewModel;
 import dagger.Component;
@@ -19,15 +18,8 @@ public interface SplashFactory {
 
     @Module class SplashModule {
 
-        private Application application;
-
-        public SplashModule(Application application) {
-            this.application = application;
-        }
-
-        @Provides
-        public SplashViewModel provideViewModel() {
-            return ViewModelProviders.getInstance(application).create(SplashViewModel.class);
+        @Provides public SplashViewModel provideViewModel() {
+            return ViewModelFactory.getInstance().create(SplashViewModel.class);
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.welfarerobotics.welfareapplication.streaming.base;
 
 import android.arch.lifecycle.AndroidViewModel;
+import android.arch.lifecycle.ViewModel;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
@@ -19,13 +20,12 @@ import javax.inject.Inject;
  * Template Method 패턴으로 구현하기
  */
 @SuppressWarnings("unchecked")
-@Getter
 public abstract class BaseActivity<V extends ViewDataBinding,
-        VM extends AndroidViewModel> extends UIExtension {
+        VM extends ViewModel> extends UIExtension {
 
     @Inject
     protected VM viewModel;
-    private V view;
+    protected V view;
 
     @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +33,7 @@ public abstract class BaseActivity<V extends ViewDataBinding,
         view.setVariable(BR.viewModel, viewModel);
         this.observe();
     }
+
     protected abstract int injectView();
 
     protected abstract void observe();

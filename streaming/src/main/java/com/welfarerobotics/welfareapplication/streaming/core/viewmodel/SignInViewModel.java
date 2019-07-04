@@ -1,9 +1,7 @@
 package com.welfarerobotics.welfareapplication.streaming.core.viewmodel;
 
-import android.app.Application;
-import android.support.annotation.NonNull;
-import com.welfarerobotics.welfareapplication.streaming.base.BaseViewModel;
-import com.welfarerobotics.welfareapplication.streaming.core.model.SignInModel;
+import android.arch.lifecycle.ViewModel;
+import com.welfarerobotics.welfareapplication.streaming.util.binding.ViewData;
 import lombok.Getter;
 
 /**
@@ -13,13 +11,8 @@ import lombok.Getter;
  */
 
 @Getter
-public class SignInViewModel extends BaseViewModel<SignInModel> {
+public class SignInViewModel extends ViewModel {
 
-    public SignInViewModel(@NonNull Application application) {
-        super(application);
-    }
+    private ViewData<String> uuid = new ViewData<>();
 
-    @Override public SignInModel onCreate() {
-        return super.onCreate();
-    }
 }

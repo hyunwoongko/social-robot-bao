@@ -23,6 +23,7 @@ public abstract class UIExtension extends ActivityExtension {
     }
 
     public void dialogProgress() {
+        isDailogAvailable = true;
         dialog.changeAlertType(KAlertDialog.PROGRESS_TYPE);
         dialog.setTitleText("로딩 중");
         dialog.setContentText("잠시만 기다려주세요.");
@@ -31,6 +32,7 @@ public abstract class UIExtension extends ActivityExtension {
     }
 
     public void dialogError(String msg, Runnable... nextAction) {
+        isDailogAvailable = true;
         dialog.changeAlertType(KAlertDialog.ERROR_TYPE);
         dialog.setTitleText("에러 발생");
         dialog.setContentText(msg);
@@ -45,6 +47,7 @@ public abstract class UIExtension extends ActivityExtension {
     }
 
     public void dialogSuccess(String title, String content, Runnable... nextAction) {
+        isDailogAvailable = true;
         dialog.changeAlertType(KAlertDialog.SUCCESS_TYPE);
         dialog.setTitleText(title);
         dialog.setContentText(content);

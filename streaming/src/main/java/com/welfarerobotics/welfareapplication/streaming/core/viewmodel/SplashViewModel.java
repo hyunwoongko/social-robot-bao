@@ -1,12 +1,13 @@
 package com.welfarerobotics.welfareapplication.streaming.core.viewmodel;
 
-import android.app.Application;
-import android.support.annotation.NonNull;
-import com.welfarerobotics.welfareapplication.streaming.base.BaseViewModel;
-import com.welfarerobotics.welfareapplication.streaming.base.marker.Model;
-import com.welfarerobotics.welfareapplication.streaming.core.model.SplashModel;
-import com.welfarerobotics.welfareapplication.streaming.util.LiveData;
+import android.arch.lifecycle.ViewModel;
+import com.welfarerobotics.welfareapplication.streaming.util.binding.ViewData;
+import com.welfarerobotics.welfareapplication.streaming.util.binding.Event;
+import com.welfarerobotics.welfareapplication.streaming.util.etc.Pool;
 import lombok.Getter;
+import rx.Observable;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author : Hyunwoong
@@ -15,17 +16,15 @@ import lombok.Getter;
  */
 
 @Getter
-public class SplashViewModel extends BaseViewModel<SplashModel> {
+public class SplashViewModel extends ViewModel {
 
-    public SplashViewModel(@NonNull Application application) {
-        super(application);
-    }
+    private ViewData playSound = new ViewData();
+    private ViewData moveActivity = new ViewData();
 
-    @Override public SplashModel onCreate() {
-        return super.onCreate();
-    }
-
-    public void splashEvent() {
-
-    }
+    private Event splashEvent = v -> Observable.just(v)
+            .doOnNext(view -> playSound.call())
+            .delay(3, TimeUnit.SECONDS)
+            .observeOn(Pool.main)
+            .doOnNext(view -> moveActivity.call())
+            .subscribe();
 }
