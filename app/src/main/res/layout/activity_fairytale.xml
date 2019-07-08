@@ -19,8 +19,7 @@
             android:textColor="@color/com_kakao_button_text_press"
             android:textSize="30sp"
             android:background="@color/white"
-            android:text="치르지르와 미치르는 잠이 오지 않았어요."
-            app:autoSizePresetSizes="@array/autosize_text_sizes" />
+            android:text="치르지르와 미치르는 잠이 오지 않았어요."/>
     </FrameLayout>
 
     <FrameLayout

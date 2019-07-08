@@ -43,12 +43,16 @@ def draw(uid, url):
     classifier = GrayscaleClassifier()
     is_gray = classifier.is_gray(output_path)
     stylizer = Stylizer(file)
+    rd = random.randint(0, 1)
+    print("RANDOM VALUE IS {0}".format(rd))
     if is_gray:
         stylizer.stylize(True)
+        print("GRAY SCALE IMAGE !!")
+    elif rd == 0:
+        stylizer.stylize(True)
+        print("RANDOM STYLIZE !!".format(rd))
     return send_file(output_path, mimetype='image/png')
 
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=9891)
-
-

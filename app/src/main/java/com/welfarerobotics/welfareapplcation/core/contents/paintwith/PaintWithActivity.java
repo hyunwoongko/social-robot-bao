@@ -16,6 +16,7 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
 import com.bumptech.glide.signature.ObjectKey;
+import com.divyanshu.draw.widget.DrawView;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -40,7 +41,10 @@ import java.util.Random;
  */
 public class PaintWithActivity extends VoiceActivity {
 
-    private CanvasView canvasView;
+    private float min = 1.5f;
+    private float max = 2.8f;
+    private float pencilWidth = 2.00f;
+    private DrawView canvasView;
     private String uuid;
     private MediaPlayer mediaPlayer = new MediaPlayer();
     private Random random = new Random();
@@ -66,7 +70,8 @@ public class PaintWithActivity extends VoiceActivity {
         canvasView = findViewById(R.id.canvas_view);
         canvasView.setBackgroundColor(Color.TRANSPARENT);
         ImageView imageView = findViewById(R.id.paint_with_image);
-
+        this.canvasView.setStrokeWidth(pencilWidth);
+        pencilWidth = (float) (min + Math.random() * (max - min));
         uuid = DeviceId.getInstance(this).getUUID();
         findViewById(R.id.redo_button).setOnClickListener(v -> {
             mediaPlayer.stop();
@@ -87,7 +92,10 @@ public class PaintWithActivity extends VoiceActivity {
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
             playVoice(mediaPlayer, "모두 지우기");
-            canvasView.clear();
+            canvasView.clearCanvas();
+            pencilWidth = (float) (min + Math.random() * (max - min));
+            this.canvasView.setStrokeWidth(pencilWidth);
+            this.canvasView.setColor(Color.BLACK);    // for drawing
             imageView.setImageBitmap(null);
         });
         findViewById(R.id.backButton).setOnClickListener(v -> finish());
@@ -98,22 +106,27 @@ public class PaintWithActivity extends VoiceActivity {
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
             playVoice(mediaPlayer, "연필");
-            this.canvasView.setPaintStrokeWidth(1F);
-            this.canvasView.setMode(CanvasView.Mode.DRAW);    // for drawing
+            pencilWidth = (float) (min + Math.random() * (max - min));
+            this.canvasView.setStrokeWidth(pencilWidth);
+            this.canvasView.setColor(Color.BLACK);    // for drawing
         });
         findViewById(R.id.eraser_button).setOnClickListener(v -> {
             mediaPlayer.stop();
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
             playVoice(mediaPlayer, "지우개");
-            this.canvasView.setPaintStrokeWidth(40F);
-            this.canvasView.setMode(CanvasView.Mode.ERASER);  // for using Eraser
+            this.canvasView.setStrokeWidth(20F);
+            this.canvasView.setColor(Color.WHITE);  // for using Eraser
         });
 
         findViewById(R.id.style_button).setOnClickListener(v -> {
             mediaPlayer.stop();
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
+            pencilWidth = (float) (min + Math.random() * (max - min));
+            this.canvasView.setStrokeWidth(pencilWidth);
+            this.canvasView.setColor(Color.BLACK);    // for drawing
+
             playVoice(mediaPlayer, readyStrings[random.nextInt(readyStrings.length-1)]);
 
             KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE);
@@ -126,7 +139,7 @@ public class PaintWithActivity extends VoiceActivity {
                     .getReference()
                     .child(uuid + ".jpg");
 
-            Bitmap bitmap = this.canvasView.getScaleBitmap(256, 256);
+            Bitmap bitmap = this.canvasView.getBitmap();
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             Objects.requireNonNull(bitmap).compress(Bitmap.CompressFormat.JPEG, 100, baos);
             byte[] datas = baos.toByteArray();
@@ -174,7 +187,7 @@ public class PaintWithActivity extends VoiceActivity {
                         })
                         .apply(options)
                         .into(imageView);
-                imageView.setAlpha(185);
+                imageView.setAlpha(200);
             });
         });
     }

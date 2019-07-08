@@ -19,7 +19,7 @@ class GrayscaleClassifier:
             gfactor += (abs(i[1] - i[2]))
             gfactor += (abs(i[0] - i[2]))
         print('grayfactor is ' + str(gfactor))
-        if gfactor < 125:
+        if gfactor < 50:
             return True
         else:
             return False

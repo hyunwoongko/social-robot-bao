@@ -71,11 +71,11 @@
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1.5"
+            android:layout_weight="1.1"
             android:padding="5dp"
             android:background="@drawable/border_white">
 
-            <com.welfarerobotics.welfareapplcation.util.CanvasView
+            <com.divyanshu.draw.widget.DrawView
                 android:id="@+id/canvas_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
@@ -129,7 +129,8 @@
                 android:scaleType="fitXY"
                 android:background="@drawable/redo"
                 android:textSize="45sp" />
-
         </LinearLayout>
     </LinearLayout>
+
+
 </LinearLayout>
