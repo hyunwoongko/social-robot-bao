@@ -115,6 +115,7 @@ public class TangramActivity extends VoiceActivity {
         backBtn.setClickable(true);
         backBtn.setOnClickListener(view -> {
             myPanel._thread.setRunning(false);
+            mediaPlayer.stop();
             finish();
         });
 

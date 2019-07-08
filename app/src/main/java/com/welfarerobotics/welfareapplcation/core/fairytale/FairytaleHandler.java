@@ -2,6 +2,7 @@ package com.welfarerobotics.welfareapplcation.core.fairytale;
 
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 
 import com.welfarerobotics.welfareapplcation.util.TypeWriterView;
 
@@ -28,6 +29,7 @@ public class FairytaleHandler extends Handler {
     public void handleMessage(Message msg) {
         super.handleMessage(msg);
         writerView.write(msg.obj.toString(),90);
+
 
     }
 

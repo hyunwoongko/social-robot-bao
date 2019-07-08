@@ -11,17 +11,16 @@
         android:layout_weight="1">
 
         <com.welfarerobotics.welfareapplcation.util.TypeWriterView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/fairy_type"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/baemin"
             android:gravity="center|left"
             android:layout_margin="10dp"
-            android:textSize="40dp"
+            android:textSize="30sp"
             android:textColor="@color/com_kakao_button_text_press"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMaxTextSize="50dp"
-            android:autoSizeMinTextSize="10dp"
+            app:autoSizePresetSizes="@array/autosize_text_sizes"
             />
     </FrameLayout>
 

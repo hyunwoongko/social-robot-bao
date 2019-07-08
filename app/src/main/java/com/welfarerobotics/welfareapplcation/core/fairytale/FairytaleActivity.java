@@ -33,6 +33,7 @@ public class FairytaleActivity extends BaseActivity {
 //        layoutParams.alpha = 0.0f;
         writerView =findViewById(R.id.fairy_type);
 
+
 //        getWindow().setAttributes(layoutParams);
 //
 //        Display dp = ((WindowManager) getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
@@ -42,8 +43,9 @@ public class FairytaleActivity extends BaseActivity {
 //        getWindow().getAttributes().height = height;
         Intent intent = getIntent();
         fairytail=FairytailCache.getInstance().getFairytail().get(intent.getIntExtra("item",0));
-        Log.d("동화 읽기",fairytail.getTitle()+fairytail);
+
         FairytaleHandler handler = new FairytaleHandler(writerView);
+        writerView.setAuto(true);
         Thread thread = new Thread(() -> FairytaleReader.get(fairytail).play(handler));
 
         thread.setDaemon(true);

@@ -174,7 +174,7 @@ public final class FairytaleReader {
                         message.obj=fairy;
                         writerView.sendMessage(message);
                         playVoice(mediaPlayer, select[idx]);
-                        Log.d("FairyTa","mas:"+msg.obj);
+
 
 
 
