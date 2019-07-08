@@ -101,20 +101,25 @@ public class Bluetooth{
 
     }
 
-    public void sendMessage(String msg){
+  synchronized public void sendMessage(String msg){
         handler.sendMessage(msg);
 
     }
-    public void sendSignal(Signal signal, float angle){
+
+  synchronized public void sendSignal(Signal signal, float angle){
 
         handler.sendMessage(signal.toString()+","+angle);
 
     }
 //돌리는 것
-   public void sendMessage(String SSID, String PWD){
+  synchronized public void sendWifi(String SSID, String PWD){
 
         handler.sendMessage(SSID, PWD);
    }/*와이파이 번호 보내세요.*/
+    synchronized public void sendPort(String port){
+
+        handler.sendMessage("Port,"+port);
+    }/*스트리밍 포트를 보내주세요*/
 
 }
 

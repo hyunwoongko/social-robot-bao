@@ -43,9 +43,13 @@ public class TypeWriterView extends TextView {
                 mHandler.postDelayed(characterAdder, mDelay);
                 /*원우 추가*/
                 startAutoSizing();
-                if(mIndex==1){
-                    setTextSize(max);
+                if(autoSize==true){
+                    if(mIndex==1){
+                        setTextSize(max);
+                    }
+
                 }
+
                 /*원우 추가*/
 
 
