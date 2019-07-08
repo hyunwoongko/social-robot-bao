@@ -95,7 +95,7 @@ public class TypeWriterView extends TextView {
     }
 
     public void setAuto(boolean autoSize,float min,float max){
-        final float  defaultDegree = 3.0f;
+        final float  defaultDegree = 2.0f;
 
         setAuto(autoSize,min,max,defaultDegree);
 
