@@ -60,6 +60,7 @@ public class MainActivity extends BaseActivity {
         Handler handler = new FaceHandler(eyes, emotion, mouth, this);
         new Detect(handler);
         DataLoader.onDataLoad(); // 모든 데이터 다운로드
+
     }
 
     @Override

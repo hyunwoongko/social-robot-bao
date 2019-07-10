@@ -27,8 +27,8 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
         setContentView(R.layout.activity_youtube);
         WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
         layoutParams.flags = WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        layoutParams.dimAmount = 0.65f; //메인액티비티 투명도 조절
-        layoutParams.alpha = 0.65f;
+        layoutParams.dimAmount =0.0f; //메인액티비티 투명도 조절
+        layoutParams.alpha = 1.0f;
         getWindow().setAttributes(layoutParams);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);

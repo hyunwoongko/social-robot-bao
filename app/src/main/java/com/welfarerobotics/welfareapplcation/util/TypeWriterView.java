@@ -41,6 +41,7 @@ public class TypeWriterView extends TextView {
 
 
                 mHandler.postDelayed(characterAdder, mDelay);
+
                 /*원우 추가*/
                 startAutoSizing();
                 if(autoSize==true){
@@ -92,7 +93,7 @@ public class TypeWriterView extends TextView {
 
     /*원우 추가*/
     public void setAuto(boolean autoSize){
-        final float defaultMin = 15.0f;
+        final float defaultMin = 30.0f;
         final float defaultMax = 40.0f;
         setAuto(autoSize,defaultMin,defaultMax);
 
@@ -119,10 +120,11 @@ public class TypeWriterView extends TextView {
         if(autoSize==true){
 
             float fontsize = getTextSize()/ getResources().getDisplayMetrics().scaledDensity;//getTextSize는 px를 받아옴. sp로 바꿔주는 연산
+            float minsize = min/ getResources().getDisplayMetrics().scaledDensity;
             int textSize = new Float(getText().length()*fontsize).intValue();//전체 텍스트 길이
             if(textSize>getWidth()) {
 
-                if ((fontsize- degree) > min) {
+                if ((fontsize- degree) > minsize) {
                     Log.d("폰트 크기 변경 전",""+getTextSize());
                     float setSize = fontsize-degree;//텍스트 사이즈가 텍스트뷰 넓이보다 크면 degree만큼 줄임(최저값 이내로.)
                     Log.d("폰트 크기 변경 값", ""+(setSize));
