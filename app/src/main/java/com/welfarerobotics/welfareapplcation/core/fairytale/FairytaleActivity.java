@@ -68,6 +68,11 @@ public class FairytaleActivity extends BaseActivity {
         return super.onTouchEvent(event);
     }
 
+    @Override
+    public void onBackPressed() {
+
+    }
+
     @Override protected void onResume() {
         super.onResume();
         Sound.get().resume(this, R.raw.fairytale);
