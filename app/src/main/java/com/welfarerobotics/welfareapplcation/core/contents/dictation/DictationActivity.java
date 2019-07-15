@@ -39,17 +39,21 @@ public class DictationActivity extends VoiceActivity implements SingleCharWidget
     private MediaPlayer mediaPlayer = new MediaPlayer();
     private ImageView hintImage;
     private TextView tv;
+    private TextView preview;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dictation);
         ImageButton clear = findViewById(R.id.clear_btn);
+        clear.setAlpha(0.5f);
         ImageButton speaker = findViewById(R.id.speaker_btn);
         ImageButton backbtn = findViewById(R.id.backbutton);
         ImageButton hint = findViewById(R.id.hint_btn);
         hintImage = findViewById(R.id.hint_image);
         tv = findViewById(R.id.dictation_write);
+        preview = findViewById(R.id.preivew);
+        preview.setAlpha(0.8f);
 
         KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE);
         pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
@@ -94,7 +98,7 @@ public class DictationActivity extends VoiceActivity implements SingleCharWidget
                     quizzes.add(quiz);
                 }
 
-                currentDictationQuiz = quizzes.get(random.nextInt(quizzes.size()-1));
+                currentDictationQuiz = quizzes.get(random.nextInt(quizzes.size() - 1));
                 pDialog.changeAlertType(KAlertDialog.SUCCESS_TYPE);
                 pDialog.setTitleText("안내");
                 pDialog.setContentText("단어를 잘 듣고 받아 적어봅시다.\n" + currentQuestionCount + "번째 문제입니다.");
@@ -103,9 +107,9 @@ public class DictationActivity extends VoiceActivity implements SingleCharWidget
                 pDialog.setConfirmClickListener(d -> {
                     quizzes.remove(currentDictationQuiz);
                     currentDictationQuiz = quizzes.get(random.nextInt(quizzes.size() - 1));
+                    preview.setText(currentDictationQuiz.getWord());
                     speak();
-                    Glide
-                            .with(DictationActivity.this)
+                    Glide.with(DictationActivity.this)
                             .load(currentDictationQuiz.getImageURL())
                             .apply(new RequestOptions().override(200, 200)
                                     .placeholder(R.drawable.hint_notload))
@@ -122,10 +126,13 @@ public class DictationActivity extends VoiceActivity implements SingleCharWidget
         });
 
         widget = (SingleCharWidget) findViewById(R.id.widget);
+        ((SingleCharWidget) widget).setAlpha(0.8f);
         widget.setOnTextChangedListener(this);
+        widget.setInkColor(Color.BLACK);
+        widget.setInkWidth(18f);
         builder = new MyScriptBuilder(widget, this);
         builder.Build();
-        widget.setInkFadeOutEffect(1);
+        widget.setAutoCommitEnabled(false);
     }
 
     @Override
@@ -143,10 +150,9 @@ public class DictationActivity extends VoiceActivity implements SingleCharWidget
                     .into(hintImage);
             Sound.get().effectSound(this, R.raw.dingdong);
             showToast("정답입니다", ToastType.success);
-            mediaPlayer.stop();
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
-            playVoice(mediaPlayer, "잘했어요. 정답입니다.");
+            playVoice(mediaPlayer, "정답을 맞췄어요! 다음문제를 풀어볼까요?");
             currentQuestionCount++;
             widget.clear();
             select();
@@ -172,7 +178,8 @@ public class DictationActivity extends VoiceActivity implements SingleCharWidget
             pDialog.setConfirmText("예");
             pDialog.confirmButtonColor(R.color.confirm_button);
             pDialog.setConfirmClickListener(d -> {
-                mediaPlayer.stop();
+                preview.setText(currentDictationQuiz.getWord());
+
                 mediaPlayer.release();
                 mediaPlayer = new MediaPlayer();
                 speak();
@@ -203,13 +210,13 @@ public class DictationActivity extends VoiceActivity implements SingleCharWidget
     }
 
     private void speak() {
-        mediaPlayer.stop();
         mediaPlayer.release();
         mediaPlayer = new MediaPlayer();
 
         StringBuilder speech = new StringBuilder();
         for (int i = 0; i < currentDictationQuiz.getWord().length(); i++) {
             speech.append(String.valueOf(currentDictationQuiz.getWord().charAt(i)));
+            speech.append(" ");
         }
 
         playVoice(mediaPlayer, speech.toString());

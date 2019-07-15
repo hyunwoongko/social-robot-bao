@@ -34,7 +34,7 @@ public final class Brain {
             System.out.println("인텐트 : " + intent);
             Skills.thinkAndSay(intent, preprocessedSpeech, activity);
         } catch (Throwable e) {
-            FallbackScenario.process(); // <- 나중엔 이걸로
+            FallbackScenario.process(activity); // <- 나중엔 이걸로
         }
     }
 }

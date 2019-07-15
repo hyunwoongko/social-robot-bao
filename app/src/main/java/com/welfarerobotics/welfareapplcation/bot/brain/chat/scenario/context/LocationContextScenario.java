@@ -1,5 +1,6 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.context;
 
+import android.app.Activity;
 import com.welfarerobotics.welfareapplcation.bot.brain.Oblivion;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.conversation.FallbackScenario;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.skills.DustScenario;
@@ -13,9 +14,9 @@ import java.io.IOException;
  * @homepage : https://github.com/gusdnd852
  */
 public class LocationContextScenario {
-    public static void process(String speech, String prevIntent) throws IOException {
-        if (prevIntent.equals("날씨")) WeatherScenario.process(speech, true, Oblivion::forgetLocation);
-        else if (prevIntent.equals("먼지")) DustScenario.process(speech, true, Oblivion::forgetLocation);
-        else FallbackScenario.process();
+    public static void process(String speech, String prevIntent, Activity activity) throws IOException {
+        if (prevIntent.equals("날씨")) WeatherScenario.process(speech, activity,true, Oblivion::forgetLocation);
+        else if (prevIntent.equals("먼지")) DustScenario.process(speech, activity,true, Oblivion::forgetLocation);
+        else FallbackScenario.process(activity);
     }
 }

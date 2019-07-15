@@ -1,5 +1,6 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.conversation;
 
+import android.app.Activity;
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
 
 import java.io.IOException;
@@ -10,7 +11,7 @@ import java.io.IOException;
  * @homepage : https://github.com/gusdnd852
  */
 public class PardonScenario {
-    public static void process(String speech) throws IOException {
-        Mouth.get().say(); // 다시 말하기
+    public static void process(String speech, Activity activity) throws IOException {
+        Mouth.get().say(activity); // 다시 말하기
     }
 }

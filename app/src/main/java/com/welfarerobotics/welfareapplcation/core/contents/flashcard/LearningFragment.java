@@ -110,25 +110,21 @@ public class LearningFragment extends VoiceFragment {
 
         //각 이미지 클릭시 읽어주기(TTS) 기능
         ib1.setOnClickListener(view -> {
-            mediaPlayer.stop();
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
             playVoice(mediaPlayer, name[0]);
         });
         ib2.setOnClickListener(view -> {
-            mediaPlayer.stop();
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
             playVoice(mediaPlayer, name[1]);
         });
         ib3.setOnClickListener(view -> {
-            mediaPlayer.stop();
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
             playVoice(mediaPlayer, name[2]);
         });
         ib4.setOnClickListener(view -> {
-            mediaPlayer.stop();
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
             playVoice(mediaPlayer, name[3]);

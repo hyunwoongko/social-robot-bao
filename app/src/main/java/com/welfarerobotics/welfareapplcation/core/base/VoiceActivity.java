@@ -1,13 +1,22 @@
 package com.welfarerobotics.welfareapplcation.core.base;
 
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Environment;
+import com.amazonaws.services.polly.model.OutputFormat;
+import com.amazonaws.services.polly.model.SynthesizeSpeechPresignRequest;
+import com.welfarerobotics.welfareapplcation.bot.Mouth;
+import com.welfarerobotics.welfareapplcation.bot.SSML;
 import com.welfarerobotics.welfareapplcation.entity.cache.ServerCache;
+import com.welfarerobotics.welfareapplcation.util.AwsPollyClient;
+import com.welfarerobotics.welfareapplcation.util.Pool;
 
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 
 /**
  * @author : Hyunwoong
@@ -16,87 +25,37 @@ import java.net.URLEncoder;
  */
 public abstract class VoiceActivity extends BaseActivity {
     protected void playVoice(MediaPlayer mediaPlayer, String tts) {
-        Thread thread = new Thread(() -> {
-            try {
-                String text = URLEncoder.encode(tts, "UTF-8"); // 13자
-                String apiURL = "https://naveropenapi.apigw.ntruss.com/voice/v1/tts";
-                URL url = new URL(apiURL);
-                HttpURLConnection con = (HttpURLConnection) url.openConnection();
-                con.setRequestMethod("POST");
-                con.setRequestProperty("X-NCP-APIGW-API-KEY-ID", ServerCache.getInstance().getCssid());
-                con.setRequestProperty("X-NCP-APIGW-API-KEY", ServerCache.getInstance().getCsssecret());
-                // post request
-                String postParams = "speaker=jinho&speed=3.3&text=" + text;
-                con.setDoOutput(true);
-                DataOutputStream wr = new DataOutputStream(con.getOutputStream());
-                wr.writeBytes(postParams);
-                wr.flush();
-                wr.close();
-                int responseCode = con.getResponseCode();
-                BufferedReader br;
-                if (responseCode == 200) { // 정상 호출
-                    InputStream is = con.getInputStream();
-                    int read = 0;
-                    byte[] bytes = new byte[1024];
-                    //NaverCSS 폴더 생성
-                    File dir = new File(Environment.getExternalStorageDirectory() + "/", "NaverCSS");
-                    if (!dir.exists()) {
-                        dir.mkdirs();
-                    }
-                    // 랜덤한 이름으로 mp3 파일 생성
-                    String tempname = "navercssemotioncard";
-                    File f = new File(Environment.getExternalStorageDirectory() +
-                            File.separator + "NaverCSS/" + tempname + ".mp3");
-                    f.createNewFile();
-                    OutputStream outputStream = new FileOutputStream(f);
-                    while ((read = is.read(bytes)) != -1) {
-                        outputStream.write(bytes, 0, read);
-                    }
-                    is.close();
 
-                } else {  // 에러 발생
-                    br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
-                    String inputLine;
-                    StringBuffer response = new StringBuffer();
-                    while ((inputLine = br.readLine()) != null) {
-                        response.append(inputLine);
-                    }
-                    br.close();
-                    System.out.println(response.toString());
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+        /*
+         * {Gender: Female,Id: Seoyeon,LanguageCode: ko-KR,LanguageName: Korean,Name: Seoyeon,}
+         * */
+        Future<URL> urlFuture = Pool.mouthThread.submit(() -> {
+
+            SynthesizeSpeechPresignRequest request = new SynthesizeSpeechPresignRequest()
+                    .withText(SSML.setSSML(tts))
+                    .withTextType("ssml")
+                    .withVoiceId("Seoyeon")
+                    .withOutputFormat(OutputFormat.Mp3);
+
+            return AwsPollyClient.getInstance(this)
+                    .getClient()
+                    .getPresignedSynthesizeSpeechUrl(request);
         });
-        thread.setDaemon(true);
-        thread.start();
+
+        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
         try {
-            thread.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
-            mediaPlayer.stop();
-            mediaPlayer.release();
-            mediaPlayer = new MediaPlayer();
-        }
-
-        String tempname = "navercssemotioncard";
-        String Path_to_file = Environment.getExternalStorageDirectory() +
-                File.separator + "NaverCSS/" + tempname + ".mp3";
-
-        try {
-            mediaPlayer.setDataSource(Path_to_file);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
+            // Set media player's data source to previously obtained URL.
+            if(mediaPlayer.isPlaying()){
+                mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer = new MediaPlayer();
+            }
+            mediaPlayer.setDataSource(urlFuture.get().toString());
             mediaPlayer.prepare();
-        } catch (Exception e) {
+            mediaPlayer.start();
+        } catch (IOException | ExecutionException | InterruptedException e) {
             e.printStackTrace();
         }
-        mediaPlayer.start();
     }
 }

@@ -31,6 +31,7 @@ public @Data class ServerCache {
         cache.setPainter(cache.getRoot() +  ":" +server.getPainter());
         cache.setStreaming(cache.getRoot() + ":" +server.getStreaming());
         cache.setState(server.isState());
+        cache.setAwsid(server.getAwsid());
     }
 
     private String root;
@@ -41,4 +42,5 @@ public @Data class ServerCache {
     private String csssecret;
     private String youtubekey;
     private boolean state;
+    private String awsid;
 }

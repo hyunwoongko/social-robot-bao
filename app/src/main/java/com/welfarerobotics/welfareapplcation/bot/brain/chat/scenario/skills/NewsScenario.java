@@ -1,5 +1,6 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.skills;
 
+import android.app.Activity;
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
 import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.named_entity.NewsEntityRecognizer;
@@ -14,12 +15,12 @@ import java.util.List;
  * @homepage : https://github.com/gusdnd852
  */
 public class NewsScenario {
-    public static void process(String speech, Runnable... forgets) throws IOException {
+    public static void process(String speech, Activity activity, Runnable... forgets) throws IOException {
         List<String> entities = NewsEntityRecognizer.recognize(speech);
         for (Runnable forget : forgets) forget.run(); // 원하는 만큼 기억을 잊음.
         Brain.hippocampus.rememberWord(entities); // 해마에 엔티티를 기억시킴.
         String response = NewsResponseGenerator.response(entities);
         Brain.hippocampus.decideToSay(response);
-        Mouth.get().say();
+        Mouth.get().say(activity);
     }
 }

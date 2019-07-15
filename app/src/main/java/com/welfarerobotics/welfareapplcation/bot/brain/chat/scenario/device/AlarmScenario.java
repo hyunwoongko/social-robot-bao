@@ -23,7 +23,7 @@ public class AlarmScenario {
 
     public static void process(String speech, Activity activity) throws IOException {
         Brain.hippocampus.decideToSay(strings.get(Brain.random.nextInt(strings.size() - 1)));
-        Mouth.get().say();
+        Mouth.get().say(activity);
         activity.startActivity(new Intent(activity, AlarmActivity.class));
     }
 }

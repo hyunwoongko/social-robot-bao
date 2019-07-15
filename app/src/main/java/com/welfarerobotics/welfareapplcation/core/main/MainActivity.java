@@ -13,6 +13,9 @@ import android.view.MotionEvent;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.amazonaws.auth.CognitoCachingCredentialsProvider;
+import com.amazonaws.regions.Regions;
+import com.amazonaws.services.polly.AmazonPollyPresigningClient;
 import com.welfarerobotics.welfareapplcation.R;
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
 import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
@@ -60,6 +63,9 @@ public class MainActivity extends BaseActivity {
         Handler handler = new FaceHandler(eyes, emotion, mouth, this);
         new Detect(handler);
         DataLoader.onDataLoad(); // 모든 데이터 다운로드
+
+
+
 
     }
 
@@ -136,6 +142,7 @@ public class MainActivity extends BaseActivity {
         }
     }
 
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -158,7 +165,7 @@ public class MainActivity extends BaseActivity {
                     if (isTeachedSpeech) {
                         audioManager.setMicrophoneMute(true);
                         // 말을 하고있는 중에만 소리를 막음
-                        Mouth.get().say();
+                        Mouth.get().say(this);
                         Mouth.get().stop(() -> audioManager.setMicrophoneMute(false));
                         // 말이 끝나면 다시 소리 들음
                     } else {

@@ -1,5 +1,6 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.skills;
 
+import android.app.Activity;
 import com.welfarerobotics.welfareapplcation.bot.Mouth;
 import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
 import com.welfarerobotics.welfareapplcation.entity.cache.ChatCache;
@@ -23,11 +24,11 @@ public class JokeScenario {
             "아, 이 이야기 조금 재밌는데.. 하나 해드릴게요."
     );
 
-    public static void process(String speech) throws IOException {
+    public static void process(String speech, Activity activity) throws IOException {
         String joke = jokes.get(random.nextInt(jokes.size() - 1));
         List<String> msgs = ChatCache.getInstance().getJoke();
         Random random = Brain.random;
         Brain.hippocampus.decideToSay(joke + " , " + msgs.get(random.nextInt(msgs.size() - 1)));
-        Mouth.get().say();
+        Mouth.get().say(activity);
     }
 }

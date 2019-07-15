@@ -34,7 +34,7 @@ public class OpenDomainScenario {
             speech = speech + "#"; // 사용자 입력에 # 추가
         }
         Brain.hippocampus.decideToSay(NameReplacer.replaceName(answer));
-        Mouth.get().say(); // 음성 말하기 세션
+        Mouth.get().say(activity); // 음성 말하기 세션
 
         // 호르몬 변화 세션
         String finalSpeech = speech;

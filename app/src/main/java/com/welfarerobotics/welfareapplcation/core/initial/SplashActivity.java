@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import com.amazonaws.auth.CognitoCachingCredentialsProvider;
+import com.amazonaws.regions.Regions;
+import com.amazonaws.services.polly.AmazonPollyPresigningClient;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -39,6 +42,7 @@ public class SplashActivity extends BaseActivity {
         Animation fadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.logo_fade_in);
         findViewById(R.id.welfare_logo).startAnimation(fadeInAnimation); // 애니메이션 재생
         boolean firstUser = Preference.get(this).getBoolean("isFirst", true);
+
 
         Handler handler = new Handler();
         if (firstUser) {

@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Capstone.iml" filepath="$PROJECT_DIR$/Capstone.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Capstone-Project.iml" filepath="$PROJECT_DIR$/Capstone-Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyScript_ATK-Core-android-component/MyScript_ATK-Core-android-component.iml" filepath="$PROJECT_DIR$/MyScript_ATK-Core-android-component/MyScript_ATK-Core-android-component.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyScript_ATK-IMCommon-android-component/MyScript_ATK-IMCommon-android-component.iml" filepath="$PROJECT_DIR$/MyScript_ATK-IMCommon-android-component/MyScript_ATK-IMCommon-android-component.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyScript_ATK-SingleCharWidget-android-widget/MyScript_ATK-SingleCharWidget-android-widget.iml" filepath="$PROJECT_DIR$/MyScript_ATK-SingleCharWidget-android-widget/MyScript_ATK-SingleCharWidget-android-widget.iml" />
@@ -12,7 +10,6 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/myscript-certificate/myscript-certificate.iml" filepath="$PROJECT_DIR$/myscript-certificate/myscript-certificate.iml" />
       <module fileurl="file://$PROJECT_DIR$/python/python.iml" filepath="$PROJECT_DIR$/python/python.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sicial.iml" filepath="$PROJECT_DIR$/sicial.iml" />
       <module fileurl="file://$PROJECT_DIR$/streaming/streaming.iml" filepath="$PROJECT_DIR$/streaming/streaming.iml" />
     </modules>
   </component>

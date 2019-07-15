@@ -1,5 +1,6 @@
 package com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.context;
 
+import android.app.Activity;
 import com.welfarerobotics.welfareapplcation.bot.brain.Brain;
 import com.welfarerobotics.welfareapplcation.bot.brain.chat.scenario.conversation.FallbackScenario;
 
@@ -11,11 +12,11 @@ import java.io.IOException;
  * @homepage : https://github.com/gusdnd852
  */
 public class ContextScenario {
-    public static void process(String speech, String intent) throws IOException {
+    public static void process(String speech, String intent, Activity activity) throws IOException {
         String prevIntent = Brain.hippocampus.getPreviousIntent();
-        if (intent.equals("날짜")) DateContextScenario.process(speech, prevIntent);
-        else if (intent.equals("언어국가")) LanguageContextScenario.process(speech);
-        else if (intent.equals("지역")) LocationContextScenario.process(speech, prevIntent);
-        else FallbackScenario.process();
+        if (intent.equals("날짜")) DateContextScenario.process(speech, prevIntent, activity);
+        else if (intent.equals("언어국가")) LanguageContextScenario.process(speech, activity);
+        else if (intent.equals("지역")) LocationContextScenario.process(speech, prevIntent, activity);
+        else FallbackScenario.process(activity);
     }
 }

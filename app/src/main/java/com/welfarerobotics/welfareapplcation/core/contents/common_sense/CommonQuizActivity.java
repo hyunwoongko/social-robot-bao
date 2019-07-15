@@ -94,15 +94,13 @@ public class CommonQuizActivity extends VoiceActivity {
             currentQuiz = quizzes.get(random.nextInt(quizzes.size() - 1));
             txtview.setText(currentQuiz.getQuestion());
             Sound.get().effectSound(this, R.raw.dingdong);
-            mediaPlayer.stop();
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
-            playVoice(mediaPlayer, "잘했어요. 정답입니다");
+            playVoice(mediaPlayer, "정답을 맞췄어요!. 다음 문제를 풀어볼까요?");
             showToast("정답입니다", ToastType.success);
         } else {
             Sound.get().effectSound(this, R.raw.beebeep);
             try{
-                mediaPlayer.stop();
                 mediaPlayer.release();
             }catch (Exception e){
 
@@ -115,15 +113,14 @@ public class CommonQuizActivity extends VoiceActivity {
         }
 
         if (currentQuestionCount == 5) {
-            mediaPlayer.stop();
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
-            playVoice(mediaPlayer, "놀이 종료, 정답의 갯수는 " + correctAnswerCount + "개 입니다.");
+            playVoice(mediaPlayer, "놀이 종료, 모든 문제를 잘 맞췄어요 !");
 
             KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE);
             pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
             pDialog.setTitleText("놀이 종료");
-            pDialog.setContentText("\n정답 갯수는 " + correctAnswerCount + "개 입니다.\n\n");
+            pDialog.setContentText("\n모든 문제를 잘 맞췄어요 !\n\n");
             pDialog.setCancelable(false);
             pDialog.setConfirmText("확인");
             pDialog.setConfirmClickListener(kAlertDialog -> finish());
@@ -138,7 +135,6 @@ public class CommonQuizActivity extends VoiceActivity {
                 pDialog.setCancelable(false);
                 pDialog.setConfirmText("확인");
                 pDialog.setConfirmClickListener(d -> {
-                    mediaPlayer.stop();
                     mediaPlayer.release();
                     mediaPlayer = new MediaPlayer();
                     playVoice(mediaPlayer, currentQuiz.getQuestion());

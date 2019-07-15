@@ -26,6 +26,6 @@ public class VolumeDownScenario {
         Brain.hippocampus.decideToSay(strings.get(Brain.random.nextInt(strings.size() - 1)));
         Volume vl = new Volume();
         vl.volumeDown(activity);
-        Mouth.get().say();
+        Mouth.get().say(activity);
     }
 }

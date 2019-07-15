@@ -77,6 +77,10 @@ dependencies {
     implementation(name: 'MyScript_ATK-IMCommon-android-component', ext: 'aar')
     implementation(name: 'MyScript_ATK-SingleCharWidget-android-widget', ext: 'aar')
     implementation project(path: ':myscript-certificate')
+
+    def aws_version = "2.13.+"
+    implementation "com.amazonaws:aws-android-sdk-polly:$aws_version"
+    implementation "com.amazonaws:aws-android-sdk-mobile-client:$aws_version"
 }
 
 apply plugin: 'com.google.gms.google-services'

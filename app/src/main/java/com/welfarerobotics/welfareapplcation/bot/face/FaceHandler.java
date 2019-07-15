@@ -59,6 +59,6 @@ public class FaceHandler extends Handler {
         List<String> strings = ChatCache.getInstance().getEmotion().get(expression.toString());
         String txt = strings.get(Brain.random.nextInt(ChatCache.getInstance().getEmotion().get(expression.toString()).size() - 1));
         Brain.hippocampus.decideToSay(txt);
-        Pool.mouthThread.execute(() -> Mouth.get().say());
+        Pool.mouthThread.execute(() -> Mouth.get().say(activity));
     }
 }

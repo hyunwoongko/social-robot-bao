@@ -17,4 +17,5 @@ public @Builder @Data class Server {
     private int chat;
     private int painter;
     private int streaming;
+    private String awsid;
 }

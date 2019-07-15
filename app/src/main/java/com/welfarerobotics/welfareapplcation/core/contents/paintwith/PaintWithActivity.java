@@ -51,9 +51,9 @@ public class PaintWithActivity extends VoiceActivity {
     private String[] readyStrings = {
             "우와 정말 잘 그리셨어요. 저도 한번 그려볼게요 !",
             UserCache.getInstance().getName() + "님, 정말 잘 그렸어요. 이번엔 제가 그려볼게요!",
-            "우와 " + UserCache.getInstance().getName() + "님, 그림실력이 대단한데요.. 이번엔 제가 그려볼게요!",
+            "우와 " + UserCache.getInstance().getName() + "님, 그림실력이 대단한데요? 이번엔 제가 그려볼게요!",
             "어떻게 하면 그렇게 그릴 수 있나요? , 저도 잘 그리고 싶어요",
-            "대단해요 ! 정말 잘 그리시는데요"
+            "대단해요 ! 정말 잘 그리시는데요?"
     };
 
     private String[] resultStrings = {
@@ -74,21 +74,19 @@ public class PaintWithActivity extends VoiceActivity {
         pencilWidth = (float) (min + Math.random() * (max - min));
         uuid = DeviceId.getInstance(this).getUUID();
         findViewById(R.id.redo_button).setOnClickListener(v -> {
-            mediaPlayer.stop();
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
             playVoice(mediaPlayer, "앞으로 되돌리기");
             canvasView.redo();
         });
         findViewById(R.id.undo_button).setOnClickListener(v -> {
-            mediaPlayer.stop();
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
             playVoice(mediaPlayer, "뒤로 되돌리기");
             canvasView.undo();
         });
         findViewById(R.id.clear_button).setOnClickListener(v -> {
-            mediaPlayer.stop();
+            
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
             playVoice(mediaPlayer, "모두 지우기");
@@ -102,7 +100,6 @@ public class PaintWithActivity extends VoiceActivity {
 
 
         findViewById(R.id.pencil_button).setOnClickListener(v -> {
-            mediaPlayer.stop();
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
             playVoice(mediaPlayer, "연필");
@@ -111,7 +108,6 @@ public class PaintWithActivity extends VoiceActivity {
             this.canvasView.setColor(Color.BLACK);    // for drawing
         });
         findViewById(R.id.eraser_button).setOnClickListener(v -> {
-            mediaPlayer.stop();
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
             playVoice(mediaPlayer, "지우개");
@@ -120,24 +116,25 @@ public class PaintWithActivity extends VoiceActivity {
         });
 
         findViewById(R.id.style_button).setOnClickListener(v -> {
-            mediaPlayer.stop();
+            findViewById(R.id.style_button).setClickable(false);
+            KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE);
+            pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+            pDialog.setTitleText("\n잠시만 기다려주세요...\n");
+            pDialog.setContentText("바오가 그림을 그리고 있어요.");
+            pDialog.setCancelable(false);
+            pDialog.show();
+
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
             pencilWidth = (float) (min + Math.random() * (max - min));
             this.canvasView.setStrokeWidth(pencilWidth);
             this.canvasView.setColor(Color.BLACK);    // for drawing
 
-            playVoice(mediaPlayer, readyStrings[random.nextInt(readyStrings.length-1)]);
-
-            KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE);
-            pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
-            pDialog.setTitleText("\n바오가 그림을 그리는 중이에요. \n");
-            pDialog.setCancelable(false);
-            pDialog.show();
-
             StorageReference storageRef = FirebaseStorage.getInstance()
                     .getReference()
                     .child(uuid + ".jpg");
+
+            playVoice(mediaPlayer, readyStrings[random.nextInt(readyStrings.length-1)]);
 
             Bitmap bitmap = this.canvasView.getBitmap();
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -145,6 +142,7 @@ public class PaintWithActivity extends VoiceActivity {
             byte[] datas = baos.toByteArray();
             UploadTask uploadTask = storageRef.putBytes(datas);
             uploadTask.addOnFailureListener(exception -> {
+                findViewById(R.id.style_button).setClickable(true);
                 pDialog.changeAlertType(KAlertDialog.ERROR_TYPE);
                 pDialog.setTitleText("인터넷 연결상태를 확인해주세요.");
                 pDialog.confirmButtonColor(R.color.confirm_button);
@@ -165,6 +163,7 @@ public class PaintWithActivity extends VoiceActivity {
                         .load(ServerCache.getInstance().getPainter() + "/draw/" + uuid + "/" + taskSnapshot.getDownloadUrl().toString().split("\\?")[0])
                         .listener(new RequestListener<Drawable>() {
                             @Override public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                                findViewById(R.id.style_button).setClickable(true);
                                 pDialog.changeAlertType(KAlertDialog.ERROR_TYPE);
                                 pDialog.setTitleText("인터넷 연결상태를 확인해주세요.");
                                 pDialog.confirmButtonColor(R.color.confirm_button);
@@ -177,11 +176,11 @@ public class PaintWithActivity extends VoiceActivity {
                             }
 
                             @Override public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
-                                mediaPlayer.stop();
                                 mediaPlayer.release();
                                 mediaPlayer = new MediaPlayer();
                                 playVoice(mediaPlayer, resultStrings[random.nextInt(resultStrings.length-1)]);
                                 pDialog.dismissWithAnimation();
+                                findViewById(R.id.style_button).setClickable(true);
                                 return false;
                             }
                         })
