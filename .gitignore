@@ -22,3 +22,4 @@ doc2vec_model
 *.npz
 *.log
 *.plantuml
+.idea/codeStyles/Project.xml

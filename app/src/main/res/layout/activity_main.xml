@@ -20,14 +20,18 @@
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_marginStart="-9dp"
+            android:layout_marginTop="-66dp"
             app:srcCompat="@android:color/black" />
 
         <TextView
             android:id="@+id/emotion"
             android:layout_width="128dp"
             android:layout_height="61dp"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
+            android:layout_marginStart="438dp"
+            android:layout_marginTop="-7dp"
             android:fontFamily="@font/baemin"
             android:foregroundGravity="center"
             android:gravity="center"
@@ -37,30 +41,32 @@
 
         <ImageView
             android:id="@+id/refresh"
-            android:layout_width="98dp"
-            android:layout_height="89dp"
+            android:layout_width="243dp"
+            android:layout_height="244dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="-4dp"
-            android:layout_marginEnd="-1dp"
-            app:srcCompat="@drawable/refresh_white" />
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="5dp"
+            app:srcCompat="@drawable/conversation" />
 
         <ImageView
             android:id="@+id/s_mouth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/emotion"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="112dp"
+            android:layout_marginEnd="-28dp"
+            android:layout_marginBottom="134dp"
             app:srcCompat="@drawable/normal_mouse" />
 
         <ImageView
             android:id="@+id/eye"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="123dp"
+            android:layout_marginStart="262dp"
+            android:layout_marginTop="122dp"
             app:srcCompat="@drawable/normal_eye" />
 
     </RelativeLayout>
@@ -68,10 +74,48 @@
     <ImageView
         android:id="@+id/isHearing"
         android:layout_width="match_parent"
-        android:layout_height="610dp"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="-18dp"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="-6dp"
         android:src="@drawable/border_black" />
+
+    <TextView
+        android:id="@+id/conversation"
+        android:layout_width="204dp"
+        android:layout_height="89dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="47dp"
+        android:fontFamily="@font/baemin"
+        android:gravity="center"
+        android:text="대화 해요!"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/play_with"
+        android:layout_width="243dp"
+        android:layout_height="244dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-1dp"
+        app:srcCompat="@drawable/play_with" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="109dp"
+        android:fontFamily="@font/baemin"
+        android:text="놀아 봐요!"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
 </RelativeLayout>

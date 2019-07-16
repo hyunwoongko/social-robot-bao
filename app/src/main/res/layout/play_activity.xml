@@ -45,7 +45,7 @@
             android:layout_marginStart="43dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="12dp"
-
+            android:scaleType="fitCenter"
             android:layout_marginBottom="-70dp"
             android:background="#00ffffff"
             android:src="@drawable/menu_backbutton"
@@ -60,7 +60,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="31dp"
-
+            android:scaleType="fitCenter"
             android:background="#00ffffff"
             android:src="@drawable/forword_btn"
             app:layout_constraintStart_toStartOf="parent"

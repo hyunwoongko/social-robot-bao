@@ -9,6 +9,7 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.RecognizerIntent;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,6 +27,7 @@ import com.welfarerobotics.welfareapplcation.bot.face.FaceExpressionGenerator;
 import com.welfarerobotics.welfareapplcation.bot.face.FaceHandler;
 import com.welfarerobotics.welfareapplcation.core.base.BaseActivity;
 import com.welfarerobotics.welfareapplcation.core.initial.SplashActivity;
+import com.welfarerobotics.welfareapplcation.core.menu.MenuActivity;
 import com.welfarerobotics.welfareapplcation.entity.Conversation;
 import com.welfarerobotics.welfareapplcation.entity.cache.UserCache;
 import com.welfarerobotics.welfareapplcation.util.*;
@@ -42,10 +44,12 @@ public class MainActivity extends BaseActivity {
     private OnSwipeTouchListener onSwipeTouchListener;
     private AudioManager audioManager;
     private ImageView refresh_view;
+    private ImageView play_with;
     private int STT_RQCODE = 99;
     private SpeechRecognizerClient client;
     private ImageView eyes;
     private ImageView mouth;
+    private boolean conversation = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +63,10 @@ public class MainActivity extends BaseActivity {
         onSwipeTouchListener = new ConcreteSwipeTouchListener(this, audioManager);
         refresh_view = (ImageView) findViewById(R.id.refresh);
         refresh_view.setOnClickListener(view -> this.refresh());
+        play_with=findViewById(R.id.play_with);
+        play_with.setOnClickListener(view->this.play_with());
+
+
         Bluetooth.getInstance(this);
         Handler handler = new FaceHandler(eyes, emotion, mouth, this);
         new Detect(handler);
@@ -110,22 +118,28 @@ public class MainActivity extends BaseActivity {
         float fingerY = ev.getY();
         float rfButtonX = refresh_view.getX();
         float rfButtonY = refresh_view.getY();
-        if (Math.abs(fingerX - rfButtonX) < 75 && Math.abs(fingerY - rfButtonY) < 75) {
-        } else if (onSwipeTouchListener != null) {
-            onSwipeTouchListener.getGestureDetector().onTouchEvent(ev);
+        if(conversation!=true){
+            if (Math.abs(fingerX - rfButtonX) < 75 && Math.abs(fingerY - rfButtonY) < 75) {
+            } else if (onSwipeTouchListener != null) {
+                onSwipeTouchListener.getGestureDetector().onTouchEvent(ev);
+            }
+
         }
+
         return super.dispatchTouchEvent(ev);
     }
 
 
     private void refresh() {
-        Intent mStartActivity = new Intent(this, SplashActivity.class);
-        int mPendingIntentId = 123456;
-        PendingIntent mPendingIntent = PendingIntent.getActivity(this, mPendingIntentId, mStartActivity,
-                PendingIntent.FLAG_CANCEL_CURRENT);
-        AlarmManager mgr = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
-        mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 10, mPendingIntent);
-        System.exit(0);
+        //conversation=true;
+        promptSpeechInput();
+       // conversation=false;
+    }
+
+    private void play_with(){
+
+        Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+        startActivity(intent);
     }
 
     private void promptSpeechInput() {
@@ -137,6 +151,7 @@ public class MainActivity extends BaseActivity {
                 "바오에게 말해요!");
 
         try {
+
             startActivityForResult(intent, STT_RQCODE);
         } catch (ActivityNotFoundException ignore) {
         }

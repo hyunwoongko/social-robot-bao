@@ -32,18 +32,16 @@ public class EmotioncardFragment extends VoiceFragment {
         ImageButton ibleftbtn = v.findViewById(R.id.emotionleft);
         ImageButton ibrightbtn = v.findViewById(R.id.emotionright);
         ImageButton ibEmotion1 = v.findViewById(R.id.emotion1);
-        ImageButton ibEmotion2 = v.findViewById(R.id.emotion2);
         TextView tvIndex = v.findViewById(R.id.emotionIndex);
 
         tvIndex.setText(String.valueOf(emotionIndex));
 
-        ImageButton[] ibArray = {ibEmotion1, ibEmotion2};
 
         //페이지 전환에 따른 프래그먼트 생성
         emotioncardFragment = new EmotioncardFragment();
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
 
-        for (int i = (emotionIndex - 1) * 2; i < 2 * emotionIndex; i++) {
+        for (int i = (emotionIndex - 1) ; i <  emotionIndex; i++) {
             if (i >= cache.getEmotioncardSize()) {
                 break;
             }
@@ -52,9 +50,9 @@ public class EmotioncardFragment extends VoiceFragment {
                     .with(this)
                     .load(child[0])
                     .apply(new RequestOptions().override(300, 425).fitCenter())
-                    .into(ibArray[i % 2]);
+                    .into(ibEmotion1);
 
-            name[i % 2] = child[1];
+            name[i%1] = child[1];
         }
 
         //페이지 처음이면 왼쪽 버튼이 invisible
@@ -88,12 +86,6 @@ public class EmotioncardFragment extends VoiceFragment {
             mediaPlayer.release();
             mediaPlayer = new MediaPlayer();
             playVoice(mediaPlayer, name[0]);
-        });
-
-        ibEmotion2.setOnClickListener(view -> {
-            mediaPlayer.release();
-            mediaPlayer = new MediaPlayer();
-            playVoice(mediaPlayer, name[1]);
         });
 
         return v;

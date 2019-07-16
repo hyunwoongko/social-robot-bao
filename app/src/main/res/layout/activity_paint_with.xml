@@ -9,12 +9,13 @@
     android:orientation="vertical">
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/menu_backbutton"
-        android:background="#00ffffff"
+        android:id="@+id/backButton"
+        android:layout_width="80dp"
+        android:layout_height="68dp"
         android:layout_margin="5dp"
-        android:id="@+id/backButton" />
+        android:background="#00ffffff"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/menu_backbutton" />
 
     <LinearLayout
         android:layout_width="match_parent"

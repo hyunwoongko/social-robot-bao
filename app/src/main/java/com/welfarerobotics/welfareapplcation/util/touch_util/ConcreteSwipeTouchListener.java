@@ -37,7 +37,7 @@ public class ConcreteSwipeTouchListener extends OnSwipeTouchListener {
     }
 
     @Override public void onActivitySingleTap() {
-        Intent menuIntent = new Intent(activity, MenuActivity.class);
-        activity.startActivity(menuIntent);
+    //    Intent menuIntent = new Intent(activity, MenuActivity.class);
+    //    activity.startActivity(menuIntent);
     }
 }

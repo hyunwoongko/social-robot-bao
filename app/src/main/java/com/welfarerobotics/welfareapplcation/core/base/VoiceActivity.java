@@ -41,8 +41,12 @@ public abstract class VoiceActivity extends BaseActivity {
                     .getClient()
                     .getPresignedSynthesizeSpeechUrl(request);
         });
+        try{
+            mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+        }catch (Exception e){
+            // 이거 연타 되면 에러 뜨는거 같아서 예외처리 해둠.
+        }
 
-        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
         try {
             // Set media player's data source to previously obtained URL.
@@ -56,6 +60,11 @@ public abstract class VoiceActivity extends BaseActivity {
             mediaPlayer.start();
         } catch (IOException | ExecutionException | InterruptedException e) {
             e.printStackTrace();
+        } catch (Exception e){
+            // java.lang.IllegalStateException
+            //        at android.media.MediaPlayer.isPlaying(Native Method) 연타시에 이 엑셉션이 뜸. 그래서 그냥 전체 예외처리 해뒀다.
+            e.printStackTrace();
+
         }
     }
 }
