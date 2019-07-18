@@ -28,15 +28,17 @@ public class TangramDataLoader implements DataLoader {
     @Override
     public void load() {
         TangramStageCache.getInstance().getURL().clear();
+        TangramStageCache.getInstance().getTangrams().clear();
+
         FirebaseHelper.get().download(FirebaseDatabase
                 .getInstance()
-                .getReference("tangram")
-                .child("background"), this::save);
+                .getReference("Tangram")
+                , this::save);
     }
 
 
     @Override
     public void save(DataSnapshot snapshot) {
-        TangramStageCache.getInstance().addURL(snapshot.getValue().toString());
+        TangramStageCache.getInstance().setTangram(snapshot);
     }
 }

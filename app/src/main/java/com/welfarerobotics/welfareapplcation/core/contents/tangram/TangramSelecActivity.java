@@ -59,6 +59,7 @@ public class TangramSelecActivity extends BaseActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     intent.putExtra("image", items.get(position));
+                    intent.putExtra("Position",position);
                     startActivity(intent);
                 }
             });

@@ -14,6 +14,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.*;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -114,9 +115,12 @@ public class TangramActivity extends VoiceActivity {
         ImageButton backBtn = findViewById(R.id.backbutton);
         backBtn.setClickable(true);
         backBtn.setOnClickListener(view -> {
-            myPanel._thread.setRunning(false);
             mediaPlayer.stop();
-            finish();
+            mediaPlayer.release();
+
+            myPanel._thread.setRunning(false);
+
+//            finish();
         });
 
         ImageButton leftBtn = findViewById(R.id.forbtn);
@@ -145,11 +149,7 @@ public class TangramActivity extends VoiceActivity {
         ImageButton submitBtn = findViewById(R.id.rotatebtn);
         submitBtn.setClickable(true);
         submitBtn.setOnClickListener(view -> {
-            mediaPlayer.stop();
-            mediaPlayer.release();
-            mediaPlayer = new MediaPlayer();
-            playVoice(mediaPlayer, "조각 돌리기");
-            myPanel.rotate();
+
         });
 
         Drawable bg = this.getDrawable(R.drawable.background);
@@ -200,12 +200,12 @@ public class TangramActivity extends VoiceActivity {
 
         public Panel(Context context) {
             super(context);
+            puzzle = new ImagePuzzle(GlobalVariables.getCurrentLevel()); // Retrieve puzzle for Level 1
+            int position = getIntent().getIntExtra("Position",0);
+            ArrayList<ImagePiece> pieces =puzzle.getPieces(position);
+            puzzle.scaleSolution(scale);
             getHolder().addCallback(this);
             //_thread = new ActionThread(getHolder(), this);
-
-            puzzle = new ImagePuzzle(GlobalVariables.getCurrentLevel()); // Retrieve puzzle for Level 1
-            puzzle.scaleSolution(scale);
-            ArrayList<ImagePiece> pieces = puzzle.pieces; // Retrieve the pieces for
             // that puzzle
 
             for (int i = 0; i < pieces.size(); i++) {
@@ -231,6 +231,7 @@ public class TangramActivity extends VoiceActivity {
                     //if pointer inside BoundingBox of piece, select it
                     if (piece.getXBB().inside((int) x, (int) y) && (new Position((int) x, (int) y)).inside(piece.getXVertices(), false)) {
                         _currentGraphic = piece;
+                     //   Log.d("탱그램 조각 선택","currentGraphic");
                         break;
                     }
                 }
@@ -250,6 +251,7 @@ public class TangramActivity extends VoiceActivity {
                     _currentGraphic.setActive(false);
                     int posX = (int) event.getX();
                     int posY = (int) event.getY();
+              //      Log.d("탱그램 조각 움직임","currentGraphic");
                     _currentGraphic.moveTo(posX, posY);
                 }
             } else if (event.getAction() == MotionEvent.ACTION_UP) {
@@ -337,8 +339,8 @@ public class TangramActivity extends VoiceActivity {
          */
         public void updateToolbox() {
             int margin = toolboxHeight /10;
-            int marginvalue = 100;
-            int centerX = 0;
+            int marginvalue = 50;
+            int centerX = 40;
             int centerY = 0;
             for (int i = 0; i < _toolbox.size(); i++) {
                 ImagePiece p = _toolbox.get(i);
@@ -547,6 +549,7 @@ public class TangramActivity extends VoiceActivity {
                     retry = false;
                 } catch (InterruptedException e) {
                     // we will try it again and again...
+                    Log.d("탱그램 에러",""+e);
                 }
             }
         }
@@ -577,11 +580,16 @@ public class TangramActivity extends VoiceActivity {
         public void run() {
             Canvas c;
             while (_run) {
+                System.out.println("로그로그 : " + _run);
                 c = null;
                 try {
                     c = _surfaceHolder.lockCanvas(null);
                     _panel.onDraw(c);
-                } finally {
+                }catch (Exception e){
+                    Log.d("탱그램",""+e);
+
+                }finally
+                 {
                     // do this in a finally so that if an exception is thrown
                     // during the above, we don't leave the Surface in an
                     // inconsistent state
@@ -590,6 +598,8 @@ public class TangramActivity extends VoiceActivity {
                     }
                 }
             }
+
+            finish();
         }
     }
 }

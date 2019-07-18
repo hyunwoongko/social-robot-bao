@@ -1,5 +1,10 @@
 package com.welfarerobotics.welfareapplcation.core.contents.tangram;
 
+import android.util.Log;
+
+import com.welfarerobotics.welfareapplcation.entity.Tangram;
+import com.welfarerobotics.welfareapplcation.entity.cache.TangramStageCache;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -72,17 +77,14 @@ public class ImagePuzzle {
 
 	private ArrayList<ArrayList<ImagePiece>> getpiecesList(){
 		ArrayList<ArrayList<ImagePiece>> piecesList = new ArrayList<ArrayList<ImagePiece>>();
-
+		// 문제 지점 가설 1
 		//house with two squares and two small trianges
-		ArrayList<ImagePiece>pieces1 = new ArrayList<ImagePiece>();
-		pieces1.add(new ImagePiece(ImagePiece.rhombus,new Position(0,0)));
-		pieces1.add(new ImagePiece(ImagePiece.parallelogram,new Position(0,0)));
-		pieces1.add(new ImagePiece(ImagePiece.triangle1,new Position(0,0)));
-		pieces1.add(new ImagePiece(ImagePiece.triangle2,new Position(0,0)));
-		pieces1.add(new ImagePiece(ImagePiece.triangle3,new Position(0,0)));
-		pieces1.add(new ImagePiece(ImagePiece.triangle4,new Position(0,0)));
-		pieces1.add(new ImagePiece(ImagePiece.triangle5,new Position(0,0)));
-		piecesList.add(pieces1);
+//		ArrayList<ImagePiece>pieces1 = new ArrayList<ImagePiece>();
+//		pieces1.add(new ImagePiece(TangramPiece.TRIANGLE2,new Position(0,0)));
+//		pieces1.add(new ImagePiece(TangramPiece.TRIANGLE3,new Position(0,0)));
+//		pieces1.add(new ImagePiece(TangramPiece.TRIANGLE4,new Position(0,0)));
+//		pieces1.add(new ImagePiece(TangramPiece.TRIANGLE5,new Position(0,0)));
+//		piecesList.add(pieces1);
 
 
 		return piecesList;
@@ -107,7 +109,13 @@ public class ImagePuzzle {
 		initialize();
 		
 		//pieces required for puzzle
-		pieces = piecesList.get(pieceIndex);
+//		pieces = piecesList.get(0);
+		//가설2
+		pieces = new ArrayList<>();
+		pieces.add(new ImagePiece(TangramPiece.TRIANGLE2,new Position(0,0)));
+		pieces.add(new ImagePiece(TangramPiece.TRIANGLE3,new Position(0,0)));
+		pieces.add(new ImagePiece(TangramPiece.TRIANGLE4,new Position(0,0)));
+		pieces.add(new ImagePiece(TangramPiece.TRIANGLE5,new Position(0,0)));
 	}
 	
 	public void initialize(){
@@ -119,13 +127,9 @@ public class ImagePuzzle {
 			bb = new BoundingBox(solution);
 		}
 	}
-	
-	public ImagePiece addPiece(int type, Position pos){
-		ImagePiece piece = new ImagePiece(type, pos);
-		pieces.add(piece);
-		return piece;
-	}
-	
+
+
+
 	public void movePiece(ImagePiece piece, Position pos){
 		if (pieces.contains(piece)){
 			pieces.remove(piece);
@@ -133,7 +137,7 @@ public class ImagePuzzle {
 			pieces.add(piece);
 		}
 	}
-	
+
 	public void moveXSolutionTo(int x, int y){
 		for(int i = 0; i < xsolution.size(); i++){
 			xsolution.get(i).set(solution.get(i).getX()+x,solution.get(i).getY()+y);
@@ -266,7 +270,14 @@ public class ImagePuzzle {
 	public ArrayList<Position> getXSolution(){
 		return xsolution;
 	}
-	public ArrayList<ImagePiece> getPieces(){
+	public synchronized ArrayList<ImagePiece> getPieces(int position){
+	    pieces.clear();
+		ArrayList<TangramPiece> tngram = TangramSeparater.Separate(TangramStageCache.getInstance().getTangrams().get(position));
+		 for(TangramPiece p :tngram){
+                pieces.add(new ImagePiece(p,new Position(0,0)));
+                Log.d("탱그램","조각 분배");
+            }
+
 		return pieces;
 	}
 	//get time elapsed in seconds since Puzzle created

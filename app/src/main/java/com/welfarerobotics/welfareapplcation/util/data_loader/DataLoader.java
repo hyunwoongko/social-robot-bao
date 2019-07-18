@@ -31,5 +31,6 @@ public interface DataLoader {
         FALLBACK_DATA_LOADER.load();
         DANCE_DATA_LOADER.load();
         SERVER_DATA_LOADER.load();
+
     }
 }

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/FucBao.iml" filepath="$PROJECT_DIR$/FucBao.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyScript_ATK-Core-android-component/MyScript_ATK-Core-android-component.iml" filepath="$PROJECT_DIR$/MyScript_ATK-Core-android-component/MyScript_ATK-Core-android-component.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyScript_ATK-IMCommon-android-component/MyScript_ATK-IMCommon-android-component.iml" filepath="$PROJECT_DIR$/MyScript_ATK-IMCommon-android-component/MyScript_ATK-IMCommon-android-component.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyScript_ATK-SingleCharWidget-android-widget/MyScript_ATK-SingleCharWidget-android-widget.iml" filepath="$PROJECT_DIR$/MyScript_ATK-SingleCharWidget-android-widget/MyScript_ATK-SingleCharWidget-android-widget.iml" />

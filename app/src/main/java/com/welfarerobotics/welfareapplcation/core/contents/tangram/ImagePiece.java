@@ -2,13 +2,14 @@ package com.welfarerobotics.welfareapplcation.core.contents.tangram;
 
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
 
 public class ImagePiece {
-    private int type;
+    private TangramPiece type;
     private int orientation;
     private Position center;
     private ArrayList<Position> vertices, xvertices;
@@ -24,7 +25,7 @@ public class ImagePiece {
      * @param orientation
      * @param vertices
      */
-    public ImagePiece(int type, Position pos, int orientation, ArrayList <Position> vertices) {
+    public ImagePiece(TangramPiece type, Position pos, int orientation, ArrayList <Position> vertices) {
         this.type = type;
         this.center = new Position(pos);
         this.orientation = orientation;
@@ -39,8 +40,8 @@ public class ImagePiece {
 
 
 
-    public ImagePiece(int type, Position pos) {
-
+    public ImagePiece(TangramPiece type, Position pos) {
+        /*여기 조각에 맞게 수정*/
         this.type = type;
         this.center = new Position(pos);
 
@@ -52,35 +53,117 @@ public class ImagePiece {
         //snap to grid to work properly
         int width;
         int height;
-        if(type==rhombus){
+        Log.d("탱그램 조각",type.name());
+        if(type==TangramPiece.RHOMBUS){
             vertices = new ArrayList<Position>();
             //이미지 넣기
             image= Images.getImages().getRhombus();
 
-        }else if(type==triangle1){//위
+        }else if(type==TangramPiece.TRIANGLE1){//위
             vertices = new ArrayList<Position>();
             image= Images.getImages().getTriAngle(0);
             //이미지 넣기
-        }else if(type==triangle2){//아래
+        }else if(type==TangramPiece.TRIANGLE2){//아래
             vertices = new ArrayList<Position>();
             image= Images.getImages().getTriAngle(1);
             //이미지 넣기
-        }else if(type==triangle3){//위
+        }else if(type==TangramPiece.TRIANGLE3){//위
             vertices = new ArrayList<Position>();
             image= Images.getImages().getTriAngle(2);
             //이미지 넣기
-        }else if(type==triangle4){//아래
+        }else if(type==TangramPiece.TRIANGLE4){//아래
             vertices = new ArrayList<Position>();
             image= Images.getImages().getTriAngle(3);
             //이미지 넣기
-        }else if(type==triangle5){//아래
+        }else if(type==TangramPiece.TRIANGLE5){//아래
             vertices = new ArrayList<Position>();
             image= Images.getImages().getTriAngle(4);
 
             //이미지 넣기
-        }else if(type==parallelogram){
+        }else if(type==TangramPiece.PARALLELOGRAM){
             vertices = new ArrayList<Position>();
             image= Images.getImages().getParallelo();
+
+
+            //이미지 넣기
+        } else if(type==TangramPiece.TRIANGLE1_90){
+            vertices = new ArrayList<Position>();
+            image= rotater(90,Images.getImages().getTriAngle(0));
+
+
+        }else if(type==TangramPiece.TRIANGLE1_180){
+            vertices = new ArrayList<Position>();
+            image= rotater(180,Images.getImages().getTriAngle(0));
+
+
+        }else if(type==TangramPiece.TRIANGLE1_270){
+            vertices = new ArrayList<Position>();
+            image= rotater(270,Images.getImages().getTriAngle(0));
+
+
+        }else if(type==TangramPiece.TRIANGLE2_90){
+            vertices = new ArrayList<Position>();
+            image= rotater(90,Images.getImages().getTriAngle(1));
+
+
+        }else if(type==TangramPiece.TRIANGLE2_180){
+            vertices = new ArrayList<Position>();
+            image= rotater(180,Images.getImages().getTriAngle(1));
+
+
+        }else if(type==TangramPiece.TRIANGLE2_270){
+            vertices = new ArrayList<Position>();
+            image= rotater(270,Images.getImages().getTriAngle(1));
+
+
+        }else if(type==TangramPiece.TRIANGLE3_90){
+            vertices = new ArrayList<Position>();
+            image= rotater(90,Images.getImages().getTriAngle(2));
+
+
+        }else if(type==TangramPiece.TRIANGLE3_180){
+            vertices = new ArrayList<Position>();
+            image= rotater(180,Images.getImages().getTriAngle(2));
+
+
+        }else if(type==TangramPiece.TRIANGLE3_270){
+            vertices = new ArrayList<Position>();
+            image= rotater(270,Images.getImages().getTriAngle(2));
+
+
+        }else if(type==TangramPiece.TRIANGLE4_90){
+            vertices = new ArrayList<Position>();
+            image= rotater(90,Images.getImages().getTriAngle(3));
+
+
+        }else if(type==TangramPiece.TRIANGLE4_180){
+            vertices = new ArrayList<Position>();
+            image= rotater(180,Images.getImages().getTriAngle(3));
+
+
+        }else if(type==TangramPiece.TRIANGLE4_270){
+            vertices = new ArrayList<Position>();
+            image= rotater(270,Images.getImages().getTriAngle(3));
+
+
+        }else if(type==TangramPiece.TRIANGLE5_90){
+            vertices = new ArrayList<Position>();
+            image= rotater(90,Images.getImages().getTriAngle(4));
+
+
+        }else if(type==TangramPiece.TRIANGLE5_180){
+            vertices = new ArrayList<Position>();
+            image= rotater(180,Images.getImages().getTriAngle(4));
+
+
+        }else if(type==TangramPiece.TRIANGLE5_270){
+            vertices = new ArrayList<Position>();
+            image= rotater(270,Images.getImages().getTriAngle(4));
+
+
+        }else if(type==TangramPiece.PARALLELOGRAM_90){
+            vertices = new ArrayList<Position>();
+            image= rotater(90,Images.getImages().getParallelo());
 
 
             //이미지 넣기
@@ -261,6 +344,21 @@ public class ImagePiece {
         updateArry();
     }
 
+    public Bitmap rotater(float degrees,Bitmap bitmap) {
+
+        int width = bitmap.getWidth();
+        int height = bitmap.getHeight();
+
+        Matrix matrix = new Matrix();
+        matrix.preRotate(degrees);
+
+        Bitmap rotatedBitmap = Bitmap.createBitmap(bitmap, 0, 0, width, height, matrix, true);
+//			Canvas canvas = new Canvas(rotatedBitmap);
+//			canvas.drawBitmap(original, 5.0f, 0.0f, null);
+
+        return  rotatedBitmap;
+    }
+
     private void updateArry(){
         int width = image.getWidth();
         int height = image.getHeight();
@@ -335,9 +433,7 @@ public class ImagePiece {
         _active = b;
     }
 
-    public int getType(){
-        return type;
-    }
+
 
 
     public static final int
