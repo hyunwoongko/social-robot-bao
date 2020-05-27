@@ -1,28 +1,25 @@
-# Social-Robot-Bao
+# AI-Social-Robot
 ### *Artificial Intelligence Cure Robot for Children with Autism*
 
-<br>
-<br>
+![image](https://user-images.githubusercontent.com/38183241/71243956-ce161480-2354-11ea-8983-faca6faaf9ac.png)
 
+![image](https://user-images.githubusercontent.com/38183241/71243971-d706e600-2354-11ea-97e8-2eff06510782.png)
 
-## Paper : [Download](https://github.com/gusdnd852/Social-Robot-Bao/raw/master/Artificial%20Intelligence%20Social%20Robot%20to%20Help%20Education.hwp)
+![image](https://user-images.githubusercontent.com/38183241/71243978-da01d680-2354-11ea-89d9-85f3956cd268.png)
 
-###### *Title : Artificial Intelligence Social Robot to Help Education and Treatment of Children with Intellectual Developmental Disabilities* 
-
-###### *Authors : Hyunwoong Go, Wonwoo Shin,HyunjuLee, Seungmin Ji, CheolJung Yoo*
-
-###### *Publishing : 2019 Korea Information Technology Society and Korea Digital Contents Society Summer Collaboration Conference*
-
-###### *Prize : Silver Prize at 2019 Korea Information Technology Society*
-<br>
-
-![paper](https://user-images.githubusercontent.com/38183241/58642180-bf73fb80-8337-11e9-8e07-b49cd770f6dc.jpg)
-
-
+![image](https://user-images.githubusercontent.com/38183241/71243980-dcfcc700-2354-11ea-9503-3b0856f2ab79.png)
 
 <br>
 <br>
 
-## Design of Social Robot 'Bao'
 
-<img src=https://user-images.githubusercontent.com/38183241/54085277-b64e4080-437f-11e9-989c-736c1881b152.png width=480></img>
+## Paper
+
+If you use this code for your research, please cite our [papers](http://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE08749986).
+
+    @inproceedings{AI Social Robot,
+      title={Artificial Intelligence Social Robot to Help Education and Treatment of Children with Intellectual Developmental Disabilities},
+      author={Hyunwoong Go, Wonwoo Shin,HyunjuLee, Seungmin Ji, CheolJung Yoo},
+      booktitle={2019 Korea Information Technology Society and Korea Digital Contents Society Summer Collaboration Conference},
+      year={2019}
+    }
