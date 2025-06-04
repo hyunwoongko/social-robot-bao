@@ -5,8 +5,20 @@ from urllib.request import urlopen, Request
 import bs4
 
 
-def wiki(question):
-    parsed_question = urllib.parse.quote(question)
+def wiki(text, language='en'):
+    # TODO: Adapt wiki search for the given language.
+    # This might involve using language-specific Wikipedia endpoints
+    # or translating search terms if the API doesn't support language parameters.
+    # For now, using default behavior.
+    if language == 'es':
+        # E.g., search es.wikipedia.org
+        pass
+    elif language == 'pt':
+        # E.g., search pt.wikipedia.org
+        pass
+    # Existing logic...
+    # 'text' parameter was 'question'
+    parsed_question = urllib.parse.quote(text) # question -> text
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
         'referer': 'http://google.com'}
@@ -25,7 +37,7 @@ def wiki(question):
         counter = False
         terminator = '설명'
 
-        if '설명' not in question:
+        if '설명' not in text: # question -> text
             for word in exp_list:
                 if '위키백과' in word:
                     counter = False

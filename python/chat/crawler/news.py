@@ -7,13 +7,30 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def get_keyword_news(keyword):
+def get_keyword_news(keyword, language='en'):
+    # TODO: Adapt keyword news search for the given language.
+    # This might involve using language-specific news search engines/APIs
+    # or translating keywords if the API doesn't support language parameters.
+    # For now, using default behavior (Naver search, likely Korean).
+    if language == 'es':
+        # Placeholder for Spanish specific logic (e.g., use Google News with region)
+        # raw = requests.get('https://news.google.com/search?q=' + keyword + '&hl=es', headers={'User-Agent': 'Mozilla/5.0'}).text
+        pass # Using default for now
+    elif language == 'pt':
+        # Placeholder for Portuguese specific logic
+        pass # Using default for now
+    # Existing logic...
+
     journal_articles = {}
     result = []
 
+    # Current implementation uses Naver, which is Korean.
+    # This part needs to be conditional on language if other sources are used.
+    search_url_base = 'https://search.naver.com/search.naver?&where=news&query='
+
     for i in range(3):
         raw = requests.get(
-            'https://search.naver.com/search.naver?&where=news&query=' + keyword + '&start=' + str(i * 10 + 1),
+            search_url_base + keyword + '&start=' + str(i * 10 + 1),
             headers={'User-Agent': 'Mozilla/5.0'}).text
         html = BeautifulSoup(raw, 'html.parser')
         articles = html.select('.type01 > li')

@@ -75,8 +75,20 @@ def get_train():
     return CoNLLDataset(config.train_filename, get_processing_word(), get_processing_tag(), config.max_iter)
 
 
-def get_song_entity(sentence, is_train):
-    if is_train:
+def get_song_entity(text, language='en', anago_on=True):
+    # TODO: Implement multilingual entity recognition.
+    # Based on the 'language' parameter (e.g., 'en', 'es', 'pt'),
+    # select the appropriate model or apply a multilingual strategy.
+    # For now, it defaults to existing behavior (likely Korean, based on file path).
+    if language == 'es':
+        # Placeholder for Spanish specific logic or model
+        pass # Using default for now
+    elif language == 'pt':
+        # Placeholder for Portuguese specific logic or model
+        pass # Using default for now
+
+    # 'text' parameter was 'sentence', 'anago_on' was 'is_train'
+    if anago_on: # if is_train
         get_vocab()
         model = NERModel(config, get_embeddings(), ntags=len(get_vocab_tags()), nchars=len(get_vocab_chars()),
                          logger=None,
@@ -84,11 +96,11 @@ def get_song_entity(sentence, is_train):
         model.build()
         model.train(get_train(), get_dev(), get_vocab_tags())
         model.evaluate(get_test(), get_vocab_tags())
-        return model.predict(get_vocab_tags(), get_processing_word(), sentence)
+        return model.predict(get_vocab_tags(), get_processing_word(), text) # sentence -> text
     else:
         tf.reset_default_graph()
         model = NERModel(config, get_embeddings(), ntags=len(get_vocab_tags()), nchars=len(get_vocab_chars()),
                          logger=None,
                          char_embed=get_char_embedding())
         model.build()
-        return model.predict(get_vocab_tags(), get_processing_word(), sentence)
+        return model.predict(get_vocab_tags(), get_processing_word(), text) # sentence -> text
