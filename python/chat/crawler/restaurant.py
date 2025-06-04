@@ -6,8 +6,30 @@ from urllib.request import urlopen, Request
 import bs4
 
 
-def recommend_restaurant(location):
-    enc_location = urllib.parse.quote(location + '맛집')
+def recommend_restaurant(text, language='en'):
+    # TODO: Adapt restaurant recommendations for the given language and location.
+    # This might involve using language-specific search engines/APIs (e.g., Yelp, Google Places API)
+    # and correctly interpreting/translating the location text.
+    # For now, using default behavior (Naver search with Korean suffix "맛집").
+    if language == 'es':
+        # Placeholder for Spanish specific logic
+        # enc_location = urllib.parse.quote(text + ' restaurante') # Example
+        pass # Using default for now
+    elif language == 'pt':
+        # Placeholder for Portuguese specific logic
+        # enc_location = urllib.parse.quote(text + ' restaurante') # Example
+        pass # Using default for now
+    # Existing logic...
+    # 'text' parameter was 'location'
+    # The suffix "맛집" is Korean for "tasty place" / "good restaurant"
+    # This should ideally be localized or made generic.
+    suffix = ' 맛집' # Default Korean suffix
+    if language == 'es':
+        suffix = ' restaurante' # Example for Spanish
+    elif language == 'pt':
+        suffix = ' restaurante' # Example for Portuguese
+
+    enc_location = urllib.parse.quote(text + suffix) # location -> text
     url = 'https://search.naver.com/search.naver?ie=utf8&query=' + enc_location
 
     rand = random.randint(0, 5)

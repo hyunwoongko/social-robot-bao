@@ -116,7 +116,18 @@ def predict(test_data):
         sess.close()
 
 
-def get_intent(text):
+def get_intent(text, language='en'):
+    # TODO: Implement multilingual intent classification.
+    # Based on the 'language' parameter (e.g., 'en', 'es', 'pt'),
+    # select the appropriate model or apply a multilingual strategy.
+    # For now, it defaults to existing behavior (likely English).
+    if language == 'es':
+        # Placeholder for Spanish specific logic or model
+        pass # Using default for now
+    elif language == 'pt':
+        # Placeholder for Portuguese specific logic or model
+        pass # Using default for now
+
     prediction = predict(np.array(inference_embed(text)).flatten())
     if prediction is None:
         return "폴백"
